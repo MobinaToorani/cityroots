@@ -1,0 +1,45 @@
+{
+  "cityId": "your-city-id",
+  "cityName": "Your City Name",
+  "province": "Ontario",
+  "country": "Canada",
+  "tagline": "A short, evocative tagline for your city",
+  "heroDescription": "2-3 sentences describing what makes this city special for residents.",
+  "coverImage": "/images/cities/your-city-id.jpg",
+  "lat": 43.0,
+  "lng": -79.0,
+  "contributors": ["Your Name"],
+  "lastUpdated": "2026-01-01",
+  "places": [
+    {
+      "id": "unique-place-slug",
+      "name": "Place Name",
+      "type": "place",
+      "category": "physical",
+      "tags": ["tag1", "tag2", "free"],
+      "cost": "free",
+      "costNote": "Optional: e.g. '$5 entry on weekends'",
+      "address": "123 Street Name, City, ON",
+      "neighborhood": "Neighbourhood Name",
+      "lat": 43.0,
+      "lng": -79.0,
+      "website": "https://example.com",
+      "phone": "905-555-0000",
+      "hours": "Mon–Fri 9am–5pm, Sat 10am–4pm",
+      "description": "2–4 sentence summary of what this place is and why it matters.",
+      "highlights": [
+        "First notable feature or fact",
+        "Second notable feature",
+        "Third notable feature",
+        "Fourth notable feature (optional)"
+      ],
+      "why": "Optional editorial note — why is this worth going to? What's the insider tip?",
+      "isRecommended": false,
+      "isFree": true,
+      "imageUrl": "/images/places/unique-place-slug.jpg",
+      "seasonal": false,
+      "seasonNote": "Optional: e.g. 'May–October only'",
+      "lastVerified": "2026-01-01"
+    }
+  ]
+}
