@@ -40,7 +40,6 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    // Hydrate from localStorage after mount — intentional setState in effect
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setSchedule(loadSchedule());
   }, []);
@@ -108,7 +107,7 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
     return (
       <button
         onClick={() => setExpanded(true)}
-        className="flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
+        className="flex items-center gap-2 text-[13px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors"
       >
         <Calendar className="w-4 h-4" />
         Plan your week
@@ -119,25 +118,25 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
   const totalScheduled = Object.values(schedule).reduce((acc, places) => acc + places.length, 0);
 
   return (
-    <div className="border border-zinc-200 rounded-xl bg-white overflow-hidden">
-      <div className="flex items-center justify-between px-5 py-4 border-b border-zinc-100">
-        <div className="flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-zinc-500" />
-          <h3 className="font-semibold text-zinc-900 text-sm">Weekly planner</h3>
+    <div className="border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl bg-white dark:bg-[#1B1916] overflow-hidden">
+      <div className="flex items-center justify-between px-5 py-4 border-b border-[#E5DED4]/60 dark:border-[#2E2A24]/60">
+        <div className="flex items-center gap-2.5">
+          <Calendar className="w-4 h-4 text-stone-400 dark:text-stone-500" />
+          <h3 className="font-medium text-stone-800 dark:text-stone-200 text-[13px]">Weekly planner</h3>
           {totalScheduled > 0 && (
-            <span className="text-xs text-zinc-400">{totalScheduled} planned</span>
+            <span className="text-[11px] text-stone-400 dark:text-stone-500">{totalScheduled} planned</span>
           )}
         </div>
         <div className="flex items-center gap-3">
           {totalScheduled > 0 && (
             <button
               onClick={exportSchedule}
-              className="flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
+              className="flex items-center gap-1.5 text-[11px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors"
             >
               {copied ? (
                 <>
-                  <Check className="w-3 h-3 text-brand" />
-                  <span className="text-brand">Copied</span>
+                  <Check className="w-3 h-3 text-brand dark:text-green-500" />
+                  <span className="text-brand dark:text-green-500">Copied</span>
                 </>
               ) : (
                 "Copy to clipboard"
@@ -146,7 +145,7 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
           )}
           <button
             onClick={() => setExpanded(false)}
-            className="text-zinc-400 hover:text-zinc-700 transition-colors"
+            className="text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors"
             aria-label="Close planner"
           >
             <X className="w-4 h-4" />
@@ -155,9 +154,9 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
       </div>
 
       {totalScheduled === 0 && (
-        <div className="px-5 py-6 text-center border-b border-zinc-100">
-          <p className="text-sm text-zinc-500">Your planner is empty.</p>
-          <p className="text-xs text-zinc-400 mt-1">Click <strong>Add</strong> in any cell to start building your routine.</p>
+        <div className="px-5 py-6 text-center border-b border-[#E5DED4]/60 dark:border-[#2E2A24]/60">
+          <p className="text-[13px] text-stone-400 dark:text-stone-500">Your planner is empty.</p>
+          <p className="text-[12px] text-stone-300 dark:text-stone-600 mt-1">Click <strong className="font-medium">Add</strong> in any cell to start building your routine.</p>
         </div>
       )}
 
@@ -166,9 +165,9 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
         <table className="w-full text-xs border-collapse">
           <thead>
             <tr>
-              <th className="p-2 text-left text-zinc-400 font-medium w-24" />
+              <th className="p-2 text-left text-stone-400 dark:text-stone-600 font-medium w-24" />
               {DAYS.map((day) => (
-                <th key={day} className="p-2 text-center text-zinc-600 font-semibold border-l border-zinc-100">
+                <th key={day} className="p-2 text-center text-stone-500 dark:text-stone-400 font-semibold border-l border-[#E5DED4]/60 dark:border-[#2E2A24]/60">
                   {day}
                 </th>
               ))}
@@ -176,30 +175,30 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
           </thead>
           <tbody>
             {TIMES.map((time) => (
-              <tr key={time} className="border-t border-zinc-100">
-                <td className="p-2 text-zinc-400 font-medium text-xs">{time}</td>
+              <tr key={time} className="border-t border-[#E5DED4]/60 dark:border-[#2E2A24]/60">
+                <td className="p-2 text-stone-400 dark:text-stone-600 font-medium text-[11px]">{time}</td>
                 {DAYS.map((day) => {
                   const key: SlotKey = `${day}-${time}`;
                   const places = schedule[key] ?? [];
                   return (
                     <td
                       key={key}
-                      className="p-1.5 align-top border-l border-zinc-100 min-w-[110px]"
+                      className="p-1.5 align-top border-l border-[#E5DED4]/60 dark:border-[#2E2A24]/60 min-w-[110px]"
                     >
                       <div className="flex flex-col gap-1 min-h-[40px]">
                         {places.map((p) => (
                           <div
                             key={p.id}
-                            className="flex items-center gap-1 bg-zinc-50 rounded-lg px-2 py-1 border border-zinc-100 group"
+                            className="flex items-center gap-1 bg-stone-50 dark:bg-stone-800 rounded-lg px-2 py-1 border border-[#E5DED4]/80 dark:border-stone-700 group"
                           >
                             <span
-                              className="w-2 h-2 rounded-full shrink-0"
+                              className="w-1.5 h-1.5 rounded-full shrink-0"
                               style={{ background: CATEGORY_COLORS[p.category] }}
                             />
-                            <span className="flex-1 text-zinc-700 truncate text-[11px]">{p.name}</span>
+                            <span className="flex-1 text-stone-600 dark:text-stone-300 truncate text-[10px]">{p.name}</span>
                             <button
                               onClick={() => removePlace(key, p.id)}
-                              className="opacity-0 group-hover:opacity-100 text-zinc-400 hover:text-red-500 transition-all"
+                              className="opacity-0 group-hover:opacity-100 text-stone-400 hover:text-red-500 transition-all"
                               aria-label={`Remove ${p.name}`}
                             >
                               <X className="w-2.5 h-2.5" />
@@ -208,7 +207,7 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
                         ))}
                         <button
                           onClick={() => { setAddingTo(key); setQuery(""); }}
-                          className="flex items-center gap-1 text-zinc-400 hover:text-brand transition-colors text-[11px]"
+                          className="flex items-center gap-1 text-stone-300 dark:text-stone-600 hover:text-brand dark:hover:text-green-500 transition-colors text-[10px]"
                         >
                           <Plus className="w-3 h-3" /> Add
                         </button>
@@ -223,17 +222,17 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
       </div>
 
       {/* Mobile accordion */}
-      <div className="md:hidden divide-y divide-zinc-100">
+      <div className="md:hidden divide-y divide-[#E5DED4]/60 dark:divide-[#2E2A24]/60">
         {DAYS.map((day) => (
           <details key={day} className="group">
             <summary className="flex items-center justify-between px-5 py-3 cursor-pointer list-none select-none">
-              <span className="font-medium text-sm text-zinc-800">{day}</span>
+              <span className="font-medium text-[13px] text-stone-700 dark:text-stone-200">{day}</span>
               {(() => {
                 const count = TIMES.reduce((acc, t) => acc + (schedule[`${day}-${t}` as SlotKey]?.length ?? 0), 0);
                 return count > 0 ? (
-                  <span className="text-xs text-zinc-500 bg-zinc-100 px-2 py-0.5 rounded-full">{count}</span>
+                  <span className="text-[11px] text-stone-500 dark:text-stone-400 bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded-full">{count}</span>
                 ) : (
-                  <span className="text-xs text-zinc-300">empty</span>
+                  <span className="text-[11px] text-stone-300 dark:text-stone-700">empty</span>
                 );
               })()}
             </summary>
@@ -243,21 +242,21 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
                 const places = schedule[key] ?? [];
                 return (
                   <div key={time}>
-                    <p className="text-xs text-zinc-400 font-medium mb-1.5">{time}</p>
+                    <p className="text-[11px] text-stone-400 dark:text-stone-500 font-medium mb-1.5">{time}</p>
                     <div className="space-y-1">
                       {places.map((p) => (
                         <div
                           key={p.id}
-                          className="flex items-center gap-2 bg-zinc-50 rounded-lg px-3 py-1.5 border border-zinc-100"
+                          className="flex items-center gap-2 bg-stone-50 dark:bg-stone-800 rounded-lg px-3 py-1.5 border border-[#E5DED4]/80 dark:border-stone-700"
                         >
                           <span
-                            className="w-2 h-2 rounded-full shrink-0"
+                            className="w-1.5 h-1.5 rounded-full shrink-0"
                             style={{ background: CATEGORY_COLORS[p.category] }}
                           />
-                          <span className="flex-1 text-xs text-zinc-700">{p.name}</span>
+                          <span className="flex-1 text-[12px] text-stone-600 dark:text-stone-300">{p.name}</span>
                           <button
                             onClick={() => removePlace(key, p.id)}
-                            className="text-zinc-400 hover:text-red-500 transition-colors"
+                            className="text-stone-400 hover:text-red-500 transition-colors"
                             aria-label={`Remove ${p.name}`}
                           >
                             <X className="w-3 h-3" />
@@ -266,7 +265,7 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
                       ))}
                       <button
                         onClick={() => { setAddingTo(key); setQuery(""); }}
-                        className="flex items-center gap-1 text-xs text-zinc-400 hover:text-brand transition-colors"
+                        className="flex items-center gap-1 text-[11px] text-stone-400 dark:text-stone-500 hover:text-brand dark:hover:text-green-500 transition-colors"
                       >
                         <Plus className="w-3 h-3" /> Add
                       </button>
@@ -281,12 +280,12 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
 
       {/* Add place search */}
       {addingTo && (
-        <div className="border-t border-zinc-200 p-4 bg-zinc-50">
+        <div className="border-t border-[#E5DED4] dark:border-[#2E2A24] p-4 bg-stone-50/60 dark:bg-stone-900/50">
           <div className="flex items-center justify-between mb-3">
-            <p className="text-xs font-medium text-zinc-600">
+            <p className="text-[12px] font-medium text-stone-500 dark:text-stone-400">
               Add to {addingTo.replace("-", ", ")}
             </p>
-            <button onClick={() => setAddingTo(null)} className="text-zinc-400 hover:text-zinc-700 transition-colors">
+            <button onClick={() => setAddingTo(null)} className="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors">
               <X className="w-4 h-4" />
             </button>
           </div>
@@ -297,11 +296,11 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search places..."
             autoFocus
-            className="w-full px-3 h-9 rounded-xl border border-zinc-200 bg-white text-sm outline-none focus:border-zinc-400 text-zinc-900 placeholder:text-zinc-400"
+            className="w-full px-3 h-9 rounded-xl border border-[#E5DED4] dark:border-stone-700 bg-white dark:bg-stone-900 text-[13px] outline-none focus:border-brand/50 focus:ring-2 focus:ring-brand/15 text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-500 transition-all"
           />
           <div className="mt-2 space-y-0.5">
             {filteredSuggestions.length === 0 ? (
-              <p className="text-xs text-zinc-400 py-2 text-center">No matches</p>
+              <p className="text-[12px] text-stone-400 dark:text-stone-500 py-2 text-center">No matches</p>
             ) : (
               filteredSuggestions.map((p) => {
                 const cat = CATEGORIES[p.category];
@@ -312,17 +311,17 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
                     onClick={() => addPlace(addingTo, p)}
                     disabled={alreadyAdded}
                     className={cn(
-                      "w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left border transition-all",
+                      "w-full flex items-center gap-2 px-3 py-2 rounded-xl text-left border transition-all",
                       alreadyAdded
-                        ? "border-transparent text-zinc-400 cursor-default"
-                        : "border-transparent hover:bg-white hover:border-zinc-200"
+                        ? "border-transparent text-stone-300 dark:text-stone-700 cursor-default"
+                        : "border-transparent hover:bg-white dark:hover:bg-stone-800 hover:border-[#E5DED4] dark:hover:border-stone-700"
                     )}
                   >
                     <span aria-hidden>{cat.emoji}</span>
-                    <span className={cn("text-sm flex-1 truncate", alreadyAdded ? "text-zinc-400" : "text-zinc-800")}>{p.name}</span>
+                    <span className={cn("text-[13px] flex-1 truncate", alreadyAdded ? "text-stone-300 dark:text-stone-700" : "text-stone-700 dark:text-stone-200")}>{p.name}</span>
                     {alreadyAdded
-                      ? <Check className="w-3.5 h-3.5 text-zinc-300 shrink-0" aria-label="Already added" />
-                      : <span className="text-xs text-zinc-400 shrink-0">{cat.shortLabel}</span>
+                      ? <Check className="w-3.5 h-3.5 text-stone-300 dark:text-stone-700 shrink-0" aria-label="Already added" />
+                      : <span className="text-[11px] text-stone-400 dark:text-stone-500 shrink-0">{cat.shortLabel}</span>
                     }
                   </button>
                 );

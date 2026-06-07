@@ -45,12 +45,15 @@ export function SearchBar({
   return (
     <div
       className={cn(
-        "flex items-center gap-2 bg-white border rounded-xl px-3 h-10 transition-all",
-        focused ? "border-brand ring-2 ring-brand/20" : "border-zinc-300",
+        "flex items-center gap-2 border rounded-xl px-3 h-9 transition-all",
+        "bg-white dark:bg-stone-900",
+        focused
+          ? "border-brand/50 ring-2 ring-brand/15 dark:ring-brand/20"
+          : "border-[#E5DED4] dark:border-stone-700 hover:border-stone-400 dark:hover:border-stone-600",
         className
       )}
     >
-      <Search className="w-4 h-4 text-zinc-400 shrink-0" aria-hidden />
+      <Search className="w-3.5 h-3.5 text-stone-400 dark:text-stone-500 shrink-0" aria-hidden />
       <input
         ref={inputRef}
         type="text"
@@ -60,16 +63,16 @@ export function SearchBar({
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         placeholder={placeholder}
-        className="flex-1 text-sm bg-transparent outline-none text-zinc-900 placeholder:text-zinc-400"
+        className="flex-1 text-[13px] bg-transparent outline-none text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-500"
         aria-label="Search places"
       />
       {value && (
         <button
           onClick={handleClear}
           aria-label="Clear search"
-          className="text-zinc-400 hover:text-zinc-700 transition-colors"
+          className="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors"
         >
-          <X className="w-4 h-4" />
+          <X className="w-3.5 h-3.5" />
         </button>
       )}
     </div>

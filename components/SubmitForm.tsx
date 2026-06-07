@@ -5,10 +5,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import { CATEGORIES } from "@/data/categories";
 import { Category } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -30,6 +27,17 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>;
 
 const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "#";
+
+const INPUT_CLS =
+  "w-full h-10 px-3 rounded-xl border border-[#E5DED4] dark:border-stone-700 bg-white dark:bg-stone-900 text-[13px] text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-500 focus:outline-none focus:border-brand/50 focus:ring-2 focus:ring-brand/15 dark:focus:ring-brand/20 transition-all";
+
+const SELECT_CLS =
+  "w-full h-10 px-3 rounded-xl border border-[#E5DED4] dark:border-stone-700 bg-white dark:bg-stone-900 text-[13px] text-stone-700 dark:text-stone-300 focus:outline-none focus:border-brand/50 focus:ring-2 focus:ring-brand/15 dark:focus:ring-brand/20 transition-all";
+
+const TEXTAREA_CLS =
+  "w-full px-3 py-2.5 rounded-xl border border-[#E5DED4] dark:border-stone-700 bg-white dark:bg-stone-900 text-[13px] text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-500 focus:outline-none focus:border-brand/50 focus:ring-2 focus:ring-brand/15 dark:focus:ring-brand/20 resize-none transition-all";
+
+const LABEL_CLS = "block text-[12px] font-medium text-stone-600 dark:text-stone-400 mb-1.5";
 
 export function SubmitForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -60,15 +68,25 @@ export function SubmitForm() {
 
   if (submitted) {
     return (
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-20">
-        <div className="flex items-center gap-3 mb-4">
-          <CheckCircle2 className="w-5 h-5 text-brand" />
-          <h1 className="text-lg font-semibold text-zinc-900">Submitted</h1>
+      <div className="max-w-xl mx-auto px-5 sm:px-8 py-24 text-center flex flex-col items-center gap-5">
+        <div className="w-14 h-14 rounded-2xl bg-brand/10 dark:bg-brand/20 border border-brand/20 flex items-center justify-center">
+          <CheckCircle2 className="w-6 h-6 text-brand dark:text-green-500" />
         </div>
-        <p className="text-zinc-500 text-sm mb-6">
-          Your submission has been received and will be reviewed before being added.
-        </p>
-        <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Back to home</Link>
+        <div className="space-y-2">
+          <h2 className="font-serif text-[24px] text-stone-800 dark:text-stone-100">
+            Thank you.
+          </h2>
+          <p className="text-[14px] text-stone-400 dark:text-stone-500 leading-relaxed">
+            Your submission has been received and will be reviewed before being added to the guide.
+          </p>
+        </div>
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 text-[13px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors mt-2"
+        >
+          Back to home
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
       </div>
     );
   }
@@ -76,177 +94,208 @@ export function SubmitForm() {
   const categories = Object.entries(CATEGORIES) as [Category, typeof CATEGORIES[Category]][];
 
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
-      <div className="mb-10">
-        <h1 className="text-2xl font-bold text-zinc-900 mb-2">Submit a place</h1>
-        <p className="text-zinc-500 text-sm leading-relaxed">
-          Know a park, café, event, program, or resource that belongs in a city guide?
-          Submissions are reviewed before being added.
-        </p>
+    <div>
+      {/* Header */}
+      <div className="relative overflow-hidden bg-white dark:bg-[#1B1916] border-b border-[#E5DED4] dark:border-[#2E2A24]">
+        <div
+          className="absolute -top-16 right-0 w-[400px] h-[400px] rounded-full pointer-events-none animate-aura-pulse"
+          style={{ background: "radial-gradient(circle, rgba(61,107,82,0.07) 0%, transparent 70%)" }}
+        />
+        <div
+          className="absolute bottom-0 left-1/4 w-[350px] h-[200px] rounded-full pointer-events-none animate-aura-drift opacity-40"
+          style={{ background: "radial-gradient(ellipse, rgba(106,173,130,0.1) 0%, transparent 70%)", animationDelay: "2s" }}
+        />
+        <div className="relative max-w-2xl mx-auto px-5 sm:px-8 pt-14 pb-12">
+          <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-4">
+            Community
+          </p>
+          <h1 className="font-serif text-[36px] sm:text-[44px] text-stone-900 dark:text-stone-50 mb-3">
+            Share a place.
+          </h1>
+          <p className="text-[14px] text-stone-400 dark:text-stone-500 leading-relaxed max-w-sm">
+            Know a park, cafe, event, program, or resource that belongs in a city guide?
+            Submissions are reviewed before being added.
+          </p>
+        </div>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        <div className="space-y-2">
-          <Label htmlFor="city">City *</Label>
-          <Input
-            id="city"
-            placeholder="e.g. Richmond Hill, Oakville, Markham..."
-            {...register("city")}
-            aria-describedby={errors.city ? "city-error" : undefined}
-          />
-          {errors.city && (
-            <p id="city-error" className="text-xs text-red-600">{errors.city.message}</p>
-          )}
-        </div>
+      <div className="max-w-2xl mx-auto px-5 sm:px-8 py-12">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
 
-        <div className="space-y-2">
-          <Label htmlFor="name">Place / Event / Resource name *</Label>
-          <Input
-            id="name"
-            placeholder="e.g. Mill Pond Park"
-            {...register("name")}
-            aria-describedby={errors.name ? "name-error" : undefined}
-          />
-          {errors.name && (
-            <p id="name-error" className="text-xs text-red-600">{errors.name.message}</p>
-          )}
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <Label htmlFor="category">Category *</Label>
-            <select
-              id="category"
-              {...register("category")}
-              className="w-full h-10 px-3 rounded-xl border border-zinc-300 bg-white text-sm text-zinc-700 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
-            >
-              <option value="">Select category</option>
-              {categories.map(([key, cat]) => (
-                <option key={key} value={key}>
-                  {cat.emoji} {cat.label}
-                </option>
-              ))}
-            </select>
-            {errors.category && (
-              <p className="text-xs text-red-600">{errors.category.message}</p>
-            )}
+          {/* Section: Location */}
+          <div className="space-y-5">
+            <p className="text-[11px] font-medium text-stone-400 dark:text-stone-500 tracking-[0.1em] uppercase">
+              Location
+            </p>
+            <div className="space-y-1.5">
+              <label htmlFor="city" className={LABEL_CLS}>City *</label>
+              <input
+                id="city"
+                placeholder="e.g. Richmond Hill, Oakville, Markham..."
+                {...register("city")}
+                className={INPUT_CLS}
+                aria-describedby={errors.city ? "city-error" : undefined}
+              />
+              {errors.city && (
+                <p id="city-error" className="text-[11px] text-red-500 mt-1">{errors.city.message}</p>
+              )}
+            </div>
+            <div className="space-y-1.5">
+              <label htmlFor="address" className={LABEL_CLS}>Address <span className="text-stone-300 dark:text-stone-700 font-normal">(optional)</span></label>
+              <input id="address" placeholder="123 Street, City, ON" {...register("address")} className={INPUT_CLS} />
+            </div>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="type">Type *</Label>
-            <select
-              id="type"
-              {...register("type")}
-              className="w-full h-10 px-3 rounded-xl border border-zinc-300 bg-white text-sm text-zinc-700 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
-            >
-              <option value="place">Place</option>
-              <option value="event">Event</option>
-              <option value="program">Program</option>
-              <option value="resource">Resource</option>
-            </select>
-          </div>
-        </div>
 
-        <fieldset>
-          <legend className="text-sm font-medium text-zinc-700 mb-2">Cost *</legend>
-          <div className="flex gap-3 flex-wrap">
-            {(["free", "low", "moderate", "varies"] as const).map((c) => {
-              const labels = { free: "Free", low: "Low Cost", moderate: "Moderate", varies: "Varies" };
-              return (
-                <label key={c} className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" value={c} {...register("cost")} className="accent-brand" />
-                  <span className="text-sm text-zinc-700">{labels[c]}</span>
+          {/* Section: Details */}
+          <div className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-8">
+            <p className="text-[11px] font-medium text-stone-400 dark:text-stone-500 tracking-[0.1em] uppercase">
+              Place details
+            </p>
+
+            <div className="space-y-1.5">
+              <label htmlFor="name" className={LABEL_CLS}>Name *</label>
+              <input
+                id="name"
+                placeholder="e.g. Mill Pond Park"
+                {...register("name")}
+                className={INPUT_CLS}
+                aria-describedby={errors.name ? "name-error" : undefined}
+              />
+              {errors.name && (
+                <p id="name-error" className="text-[11px] text-red-500 mt-1">{errors.name.message}</p>
+              )}
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-1.5">
+                <label htmlFor="category" className={LABEL_CLS}>Category *</label>
+                <select id="category" {...register("category")} className={SELECT_CLS}>
+                  <option value="">Select category</option>
+                  {categories.map(([key, cat]) => (
+                    <option key={key} value={key}>
+                      {cat.emoji} {cat.label}
+                    </option>
+                  ))}
+                </select>
+                {errors.category && (
+                  <p className="text-[11px] text-red-500 mt-1">{errors.category.message}</p>
+                )}
+              </div>
+              <div className="space-y-1.5">
+                <label htmlFor="type" className={LABEL_CLS}>Type *</label>
+                <select id="type" {...register("type")} className={SELECT_CLS}>
+                  <option value="place">Place</option>
+                  <option value="event">Event</option>
+                  <option value="program">Program</option>
+                  <option value="resource">Resource</option>
+                </select>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend className={LABEL_CLS}>Cost *</legend>
+              <div className="flex gap-4 flex-wrap pt-1">
+                {(["free", "low", "moderate", "varies"] as const).map((c) => {
+                  const labels = { free: "Free", low: "Low Cost", moderate: "Moderate", varies: "Varies" };
+                  return (
+                    <label key={c} className="flex items-center gap-2 cursor-pointer">
+                      <input type="radio" value={c} {...register("cost")} className="accent-brand" />
+                      <span className="text-[13px] text-stone-600 dark:text-stone-400">{labels[c]}</span>
+                    </label>
+                  );
+                })}
+              </div>
+            </fieldset>
+
+            <div className="space-y-1.5">
+              <div className="flex items-baseline justify-between">
+                <label htmlFor="description" className={LABEL_CLS}>Description *</label>
+                <span className={cn("text-[11px] tabular-nums", descriptionLength > 280 ? "text-amber-600" : "text-stone-400 dark:text-stone-600")}>
+                  {descriptionLength}/300
+                </span>
+              </div>
+              <textarea
+                id="description"
+                rows={3}
+                placeholder="What is this place? What makes it worth visiting?"
+                {...register("description", {
+                  onChange: (e) => setDescriptionLength(e.target.value.length),
+                })}
+                className={TEXTAREA_CLS}
+                aria-describedby={errors.description ? "desc-error" : undefined}
+              />
+              {errors.description && (
+                <p id="desc-error" className="text-[11px] text-red-500 mt-1">{errors.description.message}</p>
+              )}
+            </div>
+
+            <div className="space-y-1.5">
+              <div className="flex items-baseline justify-between">
+                <label htmlFor="why" className={LABEL_CLS}>
+                  Why should this be included? <span className="text-stone-300 dark:text-stone-700 font-normal">(optional)</span>
                 </label>
-              );
-            })}
-          </div>
-        </fieldset>
+                {whyLength > 0 && (
+                  <span className={cn("text-[11px] tabular-nums", whyLength > 280 ? "text-amber-600" : "text-stone-400 dark:text-stone-600")}>
+                    {whyLength}/300
+                  </span>
+                )}
+              </div>
+              <textarea
+                id="why"
+                rows={2}
+                placeholder="What makes this special for the community? Any insider tips?"
+                {...register("why", {
+                  onChange: (e) => setWhyLength(e.target.value.length),
+                })}
+                className={TEXTAREA_CLS}
+              />
+            </div>
 
-        <div className="space-y-2">
-          <div className="flex items-baseline justify-between">
-            <Label htmlFor="description">Brief description *</Label>
-            <span className={cn("text-xs tabular-nums", descriptionLength > 280 ? "text-amber-600" : "text-zinc-400")}>
-              {descriptionLength}/300
-            </span>
+            <div className="space-y-1.5">
+              <label htmlFor="website" className={LABEL_CLS}>Website <span className="text-stone-300 dark:text-stone-700 font-normal">(optional)</span></label>
+              <input id="website" type="url" placeholder="https://..." {...register("website")} className={INPUT_CLS} />
+              {errors.website && (
+                <p className="text-[11px] text-red-500 mt-1">{errors.website.message}</p>
+              )}
+            </div>
           </div>
-          <textarea
-            id="description"
-            rows={3}
-            placeholder="What is this place? What makes it worth visiting?"
-            {...register("description", {
-              onChange: (e) => setDescriptionLength(e.target.value.length),
-            })}
-            className="w-full px-3 py-2.5 rounded-xl border border-zinc-300 bg-white text-sm text-zinc-700 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 resize-none"
-            aria-describedby={errors.description ? "desc-error" : undefined}
-          />
-          {errors.description && (
-            <p id="desc-error" className="text-xs text-red-600">{errors.description.message}</p>
-          )}
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <Label htmlFor="website">Website</Label>
-            <Input id="website" type="url" placeholder="https://..." {...register("website")} />
-            {errors.website && (
-              <p className="text-xs text-red-600">{errors.website.message}</p>
-            )}
+          {/* Section: About you */}
+          <div className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-8">
+            <p className="text-[11px] font-medium text-stone-400 dark:text-stone-500 tracking-[0.1em] uppercase">
+              About you <span className="normal-case tracking-normal text-stone-300 dark:text-stone-700 font-normal">(optional)</span>
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-1.5">
+                <label htmlFor="yourName" className={LABEL_CLS}>Your name</label>
+                <input id="yourName" placeholder="Jane Smith" {...register("yourName")} className={INPUT_CLS} />
+              </div>
+              <div className="space-y-1.5">
+                <label htmlFor="yourEmail" className={LABEL_CLS}>Your email</label>
+                <input id="yourEmail" type="email" placeholder="you@example.com" {...register("yourEmail")} className={INPUT_CLS} />
+                {errors.yourEmail && (
+                  <p className="text-[11px] text-red-500 mt-1">{errors.yourEmail.message}</p>
+                )}
+              </div>
+            </div>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="address">Address</Label>
-            <Input id="address" placeholder="123 Street, City, ON" {...register("address")} />
-          </div>
-        </div>
 
-        <div className="space-y-2">
-          <div className="flex items-baseline justify-between">
-            <Label htmlFor="why">Why should this be included?</Label>
-            {whyLength > 0 && (
-              <span className={cn("text-xs tabular-nums", whyLength > 280 ? "text-amber-600" : "text-zinc-400")}>
-                {whyLength}/300
-              </span>
-            )}
+          {/* Submit */}
+          <div className="pt-2 flex flex-col items-start gap-3">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="inline-flex items-center gap-2 px-7 py-3 bg-brand hover:bg-brand/90 disabled:opacity-60 text-white text-[13px] font-medium rounded-full transition-colors"
+            >
+              {isSubmitting ? "Submitting..." : "Submit a place"}
+              {!isSubmitting && <ArrowRight className="w-3.5 h-3.5" />}
+            </button>
+            <p className="text-[11px] text-stone-400 dark:text-stone-500">
+              All submissions are reviewed by our community curators before being added.
+            </p>
           </div>
-          <textarea
-            id="why"
-            rows={2}
-            placeholder="What makes this place special for the community? Any insider tips?"
-            {...register("why", {
-              onChange: (e) => setWhyLength(e.target.value.length),
-            })}
-            className="w-full px-3 py-2.5 rounded-xl border border-zinc-300 bg-white text-sm text-zinc-700 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 resize-none"
-          />
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-zinc-100">
-          <div className="space-y-2">
-            <Label htmlFor="yourName">
-              Your name <span className="text-zinc-400 font-normal">(optional)</span>
-            </Label>
-            <Input id="yourName" placeholder="Jane Smith" {...register("yourName")} />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="yourEmail">
-              Your email <span className="text-zinc-400 font-normal">(optional)</span>
-            </Label>
-            <Input id="yourEmail" type="email" placeholder="you@example.com" {...register("yourEmail")} />
-            {errors.yourEmail && (
-              <p className="text-xs text-red-600">{errors.yourEmail.message}</p>
-            )}
-          </div>
-        </div>
-
-        <Button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-brand hover:bg-brand/90 text-white h-11"
-        >
-          {isSubmitting ? "Submitting..." : "Submit a Place"}
-        </Button>
-
-        <p className="text-xs text-zinc-400 text-center">
-          All submissions are reviewed by our community curators before being added.
-        </p>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

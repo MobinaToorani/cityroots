@@ -113,23 +113,23 @@ export function WellbeingWheel({ counts, activeCategory, onSelect }: WellbeingWh
           );
         })}
 
-        <circle cx={cx} cy={cy} r={rInner - 8} fill="white" />
+        <circle cx={cx} cy={cy} r={rInner - 8} fill="var(--background)" />
         {displayData ? (
           <>
             <text x={cx} y={cy - 10} textAnchor="middle" dominantBaseline="central" fontSize="22" style={{ userSelect: "none" }}>
               {displayData.emoji}
             </text>
-            <text x={cx} y={cy + 14} textAnchor="middle" fontSize="10" fill="#71717a" style={{ userSelect: "none" }}>
+            <text x={cx} y={cy + 14} textAnchor="middle" fontSize="10" fill="var(--muted-foreground)" style={{ userSelect: "none" }}>
               {displayData.shortLabel}
             </text>
             {displayCount !== null && displayCount > 0 && (
-              <text x={cx} y={cy + 28} textAnchor="middle" fontSize="9" fill="#a1a1aa" style={{ userSelect: "none" }}>
+              <text x={cx} y={cy + 28} textAnchor="middle" fontSize="9" fill="var(--muted-foreground)" style={{ userSelect: "none", opacity: 0.7 }}>
                 {displayCount} places
               </text>
             )}
           </>
         ) : (
-          <text x={cx} y={cy} textAnchor="middle" dominantBaseline="central" fontSize="10" fill="#a1a1aa" style={{ userSelect: "none" }}>
+          <text x={cx} y={cy} textAnchor="middle" dominantBaseline="central" fontSize="10" fill="var(--muted-foreground)" style={{ userSelect: "none" }}>
             all categories
           </text>
         )}

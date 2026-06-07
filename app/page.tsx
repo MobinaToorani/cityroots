@@ -9,7 +9,6 @@ import oakvilleData from "@/data/cities/oakville.json";
 import { CityGuide, Category } from "@/lib/types";
 
 const cities = [richmondhillData, newmarketData, markhamData, vaughanData, oakvilleData] as unknown as CityGuide[];
-
 const ALL_CATEGORY_KEYS = Object.keys(CATEGORIES) as Category[];
 
 function CityCard({ city }: { city: CityGuide }) {
@@ -19,141 +18,245 @@ function CityCard({ city }: { city: CityGuide }) {
   return (
     <Link
       href={`/${city.cityId}`}
-      className="group flex flex-col gap-4 p-5 bg-white border border-zinc-200 rounded-xl hover:border-zinc-300 hover:shadow-sm transition-all duration-150"
+      className="group flex flex-col gap-5 p-6 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_4px_32px_rgba(61,107,82,0.08)] dark:hover:shadow-[0_4px_32px_rgba(106,173,130,0.08)] transition-all duration-300"
     >
-      <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-zinc-900">{city.cityName}</h3>
-          <p className="text-sm text-zinc-500">{city.province}</p>
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <h3 className="text-[15px] font-semibold text-stone-800 dark:text-stone-100 leading-snug">
+            {city.cityName}
+          </h3>
+          <p className="text-[12px] text-stone-400 dark:text-stone-500 mt-0.5 tracking-wide uppercase">
+            {city.province}
+          </p>
           {city.tagline && (
-            <p className="text-xs text-zinc-400 mt-1.5 leading-relaxed line-clamp-2">{city.tagline}</p>
+            <p className="text-[12px] text-stone-400 dark:text-stone-500 mt-2 leading-relaxed">
+              {city.tagline}
+            </p>
           )}
         </div>
-        <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-zinc-600 transition-colors mt-0.5 shrink-0 ml-3" />
+        <ArrowRight className="w-3.5 h-3.5 text-stone-300 dark:text-stone-600 group-hover:text-brand dark:group-hover:text-green-500 transition-colors mt-0.5 shrink-0" />
       </div>
+
       <div className="flex items-center gap-1.5">
         {ALL_CATEGORY_KEYS.map((key) => (
           <div
             key={key}
-            className="w-2 h-2 rounded-full shrink-0 transition-opacity"
-            style={{
-              background: CATEGORY_COLORS[key],
-              opacity: coveredCategories.has(key) ? 0.85 : 0.12,
-            }}
+            className="w-2 h-2 rounded-full shrink-0 transition-opacity duration-300"
+            style={{ background: CATEGORY_COLORS[key], opacity: coveredCategories.has(key) ? 0.8 : 0.1 }}
             title={CATEGORIES[key].label}
           />
         ))}
       </div>
-      <div className="flex items-center gap-4 text-xs text-zinc-400 border-t border-zinc-100 pt-3">
+
+      <div className="flex items-center gap-4 text-[11px] text-stone-400 dark:text-stone-500 border-t border-[#E5DED4]/60 dark:border-[#2E2A24]/60 pt-4">
         <span>{city.places.length} places</span>
-        <span className="text-green-600">{freePlaces} free</span>
+        <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
+        <span className="text-brand dark:text-green-500">{freePlaces} free</span>
+        <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
         <span>{coveredCategories.size} categories</span>
       </div>
     </Link>
   );
 }
 
-function CategoryStrip() {
-  const categories = Object.entries(CATEGORIES) as [Category, typeof CATEGORIES[Category]][];
-  return (
-    <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
-      {categories.map(([key, cat]) => (
-        <div
-          key={key}
-          className="shrink-0 flex items-center gap-2 px-3 py-2 bg-white border border-zinc-200 rounded-lg text-sm"
-        >
-          <span aria-hidden>{cat.emoji}</span>
-          <span className="text-zinc-600 whitespace-nowrap">{cat.shortLabel}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 const WHY_ITEMS = [
   {
-    heading: "No ads or sponsored listings",
+    number: "01",
+    heading: "No ads. No sponsored listings.",
     body: "Every place earns its spot on merit. Nobody pays to appear here.",
   },
   {
-    heading: "Free options always first",
-    body: "Cost is shown on every listing. Free and low-cost options are easy to find.",
+    number: "02",
+    heading: "Free options, always first.",
+    body: "Cost is visible on every listing. Filtering by budget takes one tap.",
   },
   {
-    heading: "Built around real life",
-    body: "Ten categories cover everything from fitness and food to mental health and finances.",
+    number: "03",
+    heading: "Ten dimensions of daily life.",
+    body: "From fitness and food to mental health, finances, and community.",
   },
 ];
 
 export default function HomePage() {
   const totalPlaces = cities.reduce((n, c) => n + c.places.length, 0);
-  const totalFree = cities.reduce((n, c) => n + c.places.filter((p) => p.isFree).length, 0);
+  const totalFree   = cities.reduce((n, c) => n + c.places.filter((p) => p.isFree).length, 0);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-16">
-      {/* Hero */}
-      <div className="space-y-4 max-w-2xl">
-        <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight tracking-tight">
-          Local guides for real life.
-        </h1>
-        <p className="text-zinc-500 text-base leading-relaxed">
-          Free and affordable parks, community centres, cafes, thrift stores, events, and programs, organized by every part of daily life. No ads, no sponsored listings.
-        </p>
-        <div className="flex items-center gap-5 pt-1">
-          <span className="text-xs text-zinc-400">
-            <span className="font-semibold text-zinc-700">{totalPlaces}</span> places listed
-          </span>
-          <span className="text-zinc-200" aria-hidden>·</span>
-          <span className="text-xs text-zinc-400">
-            <span className="font-semibold text-green-700">{totalFree}</span> free
-          </span>
-          <span className="text-zinc-200" aria-hidden>·</span>
-          <span className="text-xs text-zinc-400">
-            <span className="font-semibold text-zinc-700">{cities.length}</span> cities
-          </span>
-        </div>
-      </div>
+    <div>
+      {/* ── HERO ── */}
+      <section className="relative overflow-hidden">
+        {/* Light mode aura orbs */}
+        <div
+          className="absolute -top-32 -left-40 w-[700px] h-[600px] rounded-full pointer-events-none animate-aura-drift"
+          style={{ background: "radial-gradient(circle, rgba(61,107,82,0.12) 0%, transparent 70%)" }}
+        />
+        <div
+          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none animate-aura-pulse"
+          style={{ background: "radial-gradient(circle, rgba(106,173,130,0.08) 0%, transparent 70%)", animationDelay: "2.5s" }}
+        />
+        <div
+          className="absolute bottom-10 left-1/3 w-[600px] h-[300px] rounded-full pointer-events-none animate-aura-breathe"
+          style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.09) 0%, transparent 70%)", animationDelay: "1s" }}
+        />
 
-      {/* Cities */}
-      <section className="space-y-4">
-        <div className="flex items-baseline justify-between">
-          <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-widest">Cities</h2>
-          <Link href="/explore" className="text-sm text-zinc-400 hover:text-zinc-700 transition-colors">
-            See all
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {cities.map((city) => (
-            <CityCard key={city.cityId} city={city} />
-          ))}
-        </div>
-      </section>
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-32 sm:pt-28 sm:pb-40">
+          <div className="max-w-3xl">
+            <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-6">
+              Community lifestyle guide
+            </p>
 
-      {/* Why CityRoots */}
-      <section className="border-t border-zinc-100 pt-14 space-y-8">
-        <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-widest">Why CityRoots</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {WHY_ITEMS.map((item) => (
-            <div key={item.heading} className="space-y-2">
-              <p className="font-semibold text-zinc-900 text-sm">{item.heading}</p>
-              <p className="text-sm text-zinc-500 leading-relaxed">{item.body}</p>
+            <h1 className="font-serif text-[44px] sm:text-[58px] leading-[1.08] tracking-[-0.025em] text-stone-900 dark:text-stone-50 mb-7">
+              Every corner of your city,<br />
+              <span
+                className="italic font-normal gradient-text"
+                style={{ backgroundImage: "linear-gradient(135deg, #3D6B52 0%, #7AB893 40%, #A8C5A0 70%, #78716C 100%)" }}
+              >
+                curated for real life.
+              </span>
+            </h1>
+
+            <p className="text-[15px] text-stone-500 dark:text-stone-400 leading-relaxed max-w-xl mb-10">
+              Free and affordable parks, cafes, thrift stores, events, and community programs,
+              organized by every dimension of daily life. No ads. No sponsored listings.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-6">
+              <Link
+                href="/explore"
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-white text-[13px] font-medium rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(61,107,82,0.3)] hover:shadow-[0_8px_36px_rgba(61,107,82,0.45)] hover:-translate-y-0.5"
+                style={{ background: "linear-gradient(135deg, #3D6B52 0%, #5A9470 100%)" }}
+              >
+                Explore cities
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <div className="flex items-center gap-5 text-[12px] text-stone-400 dark:text-stone-500">
+                <span><span className="font-semibold text-stone-700 dark:text-stone-300">{totalPlaces}</span> places</span>
+                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" />
+                <span className="text-brand dark:text-green-500"><span className="font-semibold">{totalFree}</span> free</span>
+                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" />
+                <span><span className="font-semibold text-stone-700 dark:text-stone-300">{cities.length}</span> cities</span>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
-      {/* Category strip */}
-      <section className="space-y-4">
-        <div className="flex items-baseline justify-between">
-          <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-widest">Ten categories</h2>
-          <Link href="/explore" className="text-sm text-zinc-400 hover:text-zinc-700 transition-colors">
-            Choose a city
-          </Link>
+      {/* ── CITIES ── */}
+      <section className="bg-section-cities border-y border-[#E5DED4] dark:border-[#2E2A24] py-20">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="flex items-baseline justify-between mb-10">
+            <h2 className="font-serif text-[26px] text-stone-800 dark:text-stone-100">
+              Cities
+            </h2>
+            <Link href="/explore" className="text-[12px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors tracking-wide uppercase">
+              View all
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {cities.map((city) => (
+              <CityCard key={city.cityId} city={city} />
+            ))}
+          </div>
         </div>
-        <CategoryStrip />
-        <p className="text-xs text-zinc-400">
-          Pick a city above to filter by category, cost, and more.
-        </p>
+      </section>
+
+      {/* ── WHY CITYROOTS ── */}
+      <section className="relative overflow-hidden bg-section-why py-28">
+        <div
+          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none animate-aura-breathe"
+          style={{ background: "radial-gradient(circle, rgba(61,107,82,0.05) 0%, transparent 70%)", animationDelay: "3s" }}
+        />
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="mb-14">
+            <h2 className="font-serif text-[28px] text-stone-800 dark:text-stone-100 mb-3">
+              Built differently.
+            </h2>
+            <p className="text-[14px] text-stone-400 dark:text-stone-500 max-w-sm leading-relaxed">
+              CityRoots exists because most local guides exist to sell you something.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+            {WHY_ITEMS.map((item) => (
+              <div key={item.number} className="space-y-4">
+                <p
+                  className="text-[11px] font-medium tracking-[0.12em] gradient-text"
+                  style={{ backgroundImage: "linear-gradient(90deg, #3D6B52, #7AB893)" }}
+                >
+                  {item.number}
+                </p>
+                <h3 className="text-[14px] font-semibold text-stone-800 dark:text-stone-200 leading-snug">
+                  {item.heading}
+                </h3>
+                <p className="text-[13px] text-stone-400 dark:text-stone-500 leading-relaxed">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CATEGORIES ── */}
+      <section className="relative overflow-hidden bg-section-categories border-t border-[#E5DED4] dark:border-[#2E2A24] py-20">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(61,107,82,0.04) 0%, transparent 60%)" }}
+        />
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="flex items-baseline justify-between mb-10">
+            <h2 className="font-serif text-[26px] text-stone-800 dark:text-stone-100">
+              Ten categories.
+            </h2>
+            <Link href="/explore" className="text-[12px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors tracking-wide uppercase">
+              Choose a city
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+            {(Object.entries(CATEGORIES) as [Category, typeof CATEGORIES[Category]][]).map(([key, cat]) => (
+              <div
+                key={key}
+                className="flex flex-col gap-2.5 p-4 rounded-xl border border-[#E5DED4] dark:border-[#2E2A24] bg-white dark:bg-[#1B1916] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:border-stone-300 dark:hover:border-stone-600 transition-all duration-300"
+              >
+                <span className="text-2xl">{cat.emoji}</span>
+                <div>
+                  <p className="text-[12px] font-semibold text-stone-700 dark:text-stone-300 leading-tight">{cat.shortLabel}</p>
+                  <p className="text-[11px] text-stone-400 dark:text-stone-500 mt-1 leading-tight">{cat.description}</p>
+                </div>
+                <div
+                  className="h-0.5 w-8 rounded-full mt-auto"
+                  style={{ background: `linear-gradient(to right, ${CATEGORY_COLORS[key]}, ${CATEGORY_COLORS[key]}60)` }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SUBMIT CTA ── */}
+      <section className="relative overflow-hidden bg-section-cta py-20">
+        <div
+          className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none animate-aura-pulse opacity-60"
+          style={{ background: "radial-gradient(circle, rgba(61,107,82,0.07) 0%, transparent 70%)" }}
+        />
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
+            <div className="space-y-2">
+              <h2 className="font-serif text-[24px] text-stone-800 dark:text-stone-100">
+                Know a hidden gem?
+              </h2>
+              <p className="text-[13px] text-stone-400 dark:text-stone-500 max-w-sm">
+                Submissions are reviewed before being added. Community-curated, always.
+              </p>
+            </div>
+            <Link
+              href="/submit"
+              className="inline-flex items-center gap-2 text-[13px] font-medium text-brand dark:text-green-500 hover:opacity-75 transition-opacity"
+            >
+              Submit a place
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );

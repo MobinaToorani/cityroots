@@ -11,6 +11,7 @@ import {
   SheetTitle,
   SheetDescription,
 } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
 
 const KNOWN_ROUTES = new Set(["/", "/explore", "/about", "/submit"]);
@@ -19,29 +20,31 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // City pages (e.g. /richmond-hill) are part of the Explore section
   const isCityPage = !KNOWN_ROUTES.has(pathname) && !pathname.startsWith("/_");
 
   const navLinks = [
     { href: "/explore", label: "Explore" },
     { href: "/about", label: "About" },
-    { href: "/submit", label: "Submit a Place" },
+    { href: "/submit", label: "Submit" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-zinc-200">
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-        {/* Logo */}
+    <header className="sticky top-0 z-50 bg-[#F7F4EF]/96 dark:bg-[#0F0E0C]/96 backdrop-blur border-b border-[#E5DED4]/60 dark:border-[#2E2A24]/60">
+      <nav className="max-w-6xl mx-auto px-5 sm:px-8 h-[60px] flex items-center justify-between">
+
+        {/* Wordmark */}
         <Link
           href="/"
-          className="flex items-center gap-2 font-semibold text-zinc-900 hover:text-brand transition-colors"
+          className="flex items-center gap-2.5 group"
         >
-          <Leaf className="w-5 h-5 text-brand" />
-          <span className="text-base tracking-tight">CityRoots</span>
+          <Leaf className="w-4 h-4 text-brand flex-shrink-0 transition-opacity group-hover:opacity-70" />
+          <span className="font-serif text-[17px] font-medium tracking-[-0.01em] text-stone-800 dark:text-stone-100 transition-opacity group-hover:opacity-70">
+            CityRoots
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => {
             const isActive =
               pathname === link.href ||
@@ -52,10 +55,10 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm transition-colors",
+                  "text-[13px] tracking-wide transition-all",
                   isActive
-                    ? "text-zinc-900 font-medium"
-                    : "text-zinc-500 hover:text-zinc-900"
+                    ? "text-stone-900 dark:text-stone-100 font-medium"
+                    : "text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 font-normal"
                 )}
                 aria-current={isActive ? "page" : undefined}
               >
@@ -63,24 +66,27 @@ export function Navbar() {
               </Link>
             );
           })}
+          <div className="w-px h-4 bg-stone-200 dark:bg-stone-700" aria-hidden />
+          <ThemeToggle />
         </div>
 
-        {/* Mobile hamburger */}
-        <div className="md:hidden">
+        {/* Mobile */}
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               aria-label="Open menu"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-zinc-600 hover:bg-zinc-100 transition-colors"
+              className="w-9 h-9 flex items-center justify-center rounded-xl text-stone-500 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
             >
-              {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {open ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
-              <SheetTitle className="flex items-center gap-2 mb-8 mt-2 font-semibold text-zinc-900">
-                <Leaf className="w-5 h-5 text-brand" />
+            <SheetContent side="right" className="w-72 bg-[#F7F4EF] dark:bg-[#0F0E0C] border-l border-[#E5DED4] dark:border-[#2E2A24]">
+              <SheetTitle className="flex items-center gap-2.5 mb-10 mt-2 font-serif text-[17px] font-medium text-stone-800 dark:text-stone-100">
+                <Leaf className="w-4 h-4 text-brand" />
                 CityRoots
               </SheetTitle>
               <SheetDescription className="sr-only">Site navigation</SheetDescription>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-1">
                 {navLinks.map((link) => {
                   const isActive =
                     pathname === link.href ||
@@ -92,10 +98,10 @@ export function Navbar() {
                       href={link.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "text-base transition-colors py-1",
+                        "text-[15px] px-3 py-2.5 rounded-xl transition-colors",
                         isActive
-                          ? "text-zinc-900 font-medium"
-                          : "text-zinc-600 hover:text-zinc-900"
+                          ? "text-stone-900 dark:text-stone-100 font-medium bg-stone-100 dark:bg-stone-800"
+                          : "text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 hover:bg-stone-50 dark:hover:bg-stone-800/50"
                       )}
                       aria-current={isActive ? "page" : undefined}
                     >

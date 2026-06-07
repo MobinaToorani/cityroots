@@ -44,25 +44,25 @@ export function ActiveFilters({ filters, onRemove, onClearAll }: ActiveFiltersPr
   if (activeChips.length === 0) return null;
 
   return (
-    <div className="flex items-center gap-2 flex-wrap">
+    <div className="flex items-center gap-1.5 flex-wrap">
       {activeChips.map((chip) => (
         <span
           key={chip.key}
-          className="flex items-center gap-1.5 bg-zinc-100 text-zinc-700 text-xs font-medium px-3 py-1.5 rounded-full"
+          className="flex items-center gap-1.5 bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 text-[11px] font-medium px-2.5 py-1 rounded-full border border-stone-200 dark:border-stone-700"
         >
           {chip.label}
           <button
             onClick={() => onRemove(chip.key)}
             aria-label={`Remove ${chip.label} filter`}
-            className="text-zinc-500 hover:text-zinc-900 transition-colors"
+            className="text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors"
           >
-            <X className="w-3 h-3" />
+            <X className="w-2.5 h-2.5" />
           </button>
         </span>
       ))}
       <button
         onClick={onClearAll}
-        className="text-xs text-zinc-500 hover:text-zinc-900 underline transition-colors ml-1"
+        className="text-[11px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors ml-0.5"
       >
         Clear all
       </button>

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "CityRoots — Local guides for real life.";
+export const alt = "CityRoots - Local guides for real life.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -72,7 +72,7 @@ export default function OgImage() {
             lineHeight: 1.5,
           }}
         >
-          Parks, cafes, events, programs, and community resources — organized by every part of daily life.
+          Parks, cafes, events, programs, and community resources, organized by every part of daily life.
         </div>
 
         {/* Category dots */}

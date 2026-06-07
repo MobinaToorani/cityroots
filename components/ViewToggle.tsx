@@ -18,7 +18,11 @@ const OPTIONS: { value: ViewMode; label: string; Icon: React.ElementType }[] = [
 
 export function ViewToggle({ value, onChange }: ViewToggleProps) {
   return (
-    <div className="flex items-center border border-zinc-200 rounded-xl overflow-hidden bg-white" role="group" aria-label="View mode">
+    <div
+      className="flex items-center border border-[#E5DED4] dark:border-stone-700 rounded-xl overflow-hidden bg-white dark:bg-stone-900"
+      role="group"
+      aria-label="View mode"
+    >
       {OPTIONS.map(({ value: v, label, Icon }) => (
         <button
           key={v}
@@ -26,14 +30,14 @@ export function ViewToggle({ value, onChange }: ViewToggleProps) {
           aria-pressed={value === v}
           aria-label={label}
           className={cn(
-            "h-9 px-3 flex items-center gap-1.5 text-sm font-medium transition-colors",
+            "h-9 px-3 flex items-center gap-1.5 font-medium transition-all",
             value === v
-              ? "bg-zinc-900 text-white"
-              : "text-zinc-600 hover:bg-zinc-50"
+              ? "bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900"
+              : "text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800"
           )}
         >
-          <Icon className="w-4 h-4" />
-          <span className="hidden sm:inline">{label.split(" ")[0]}</span>
+          <Icon className="w-3.5 h-3.5" />
+          <span className="hidden sm:inline text-[11px] tracking-wide">{label.split(" ")[0]}</span>
         </button>
       ))}
     </div>
