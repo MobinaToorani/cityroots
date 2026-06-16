@@ -99,14 +99,14 @@ export default function HomePage() {
           style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.09) 0%, transparent 70%)", animationDelay: "1s" }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-32 sm:pt-28 sm:pb-40">
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-14 pb-16 sm:pt-20 sm:pb-32 lg:pb-40">
           <div className="max-w-3xl">
-            <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-6">
+            <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-5 sm:mb-6">
               Community lifestyle guide
             </p>
 
-            <h1 className="font-serif text-[44px] sm:text-[58px] leading-[1.08] tracking-[-0.025em] text-stone-900 dark:text-stone-50 mb-7">
-              Every corner of your city,<br />
+            <h1 className="font-serif text-[30px] sm:text-[44px] lg:text-[58px] leading-[1.1] sm:leading-[1.08] tracking-[-0.02em] sm:tracking-[-0.025em] text-stone-900 dark:text-stone-50 mb-5 sm:mb-7">
+              <span className="block">Every corner of your city,</span>
               <span
                 className="italic font-normal gradient-text"
                 style={{ backgroundImage: "linear-gradient(135deg, #3D6B52 0%, #7AB893 40%, #A8C5A0 70%, #78716C 100%)" }}
@@ -115,25 +115,25 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="text-[15px] text-stone-500 dark:text-stone-400 leading-relaxed max-w-xl mb-10">
+            <p className="text-[14px] sm:text-[15px] text-stone-500 dark:text-stone-400 leading-relaxed max-w-xl mb-8 sm:mb-10">
               Free and affordable parks, cafes, thrift stores, events, and community programs,
               organized by every dimension of daily life. No ads. No sponsored listings.
             </p>
 
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <Link
                 href="/explore"
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-white text-[13px] font-medium rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(61,107,82,0.3)] hover:shadow-[0_8px_36px_rgba(61,107,82,0.45)] hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 text-white text-[13px] font-medium rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(61,107,82,0.3)] hover:shadow-[0_8px_36px_rgba(61,107,82,0.45)] hover:-translate-y-0.5"
                 style={{ background: "linear-gradient(135deg, #3D6B52 0%, #5A9470 100%)" }}
               >
                 Explore cities
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
-              <div className="flex items-center gap-5 text-[12px] text-stone-400 dark:text-stone-500">
+              <div className="flex items-center gap-4 text-[11px] sm:text-[12px] text-stone-400 dark:text-stone-500">
                 <span><span className="font-semibold text-stone-700 dark:text-stone-300">{totalPlaces}</span> places</span>
-                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" />
+                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
                 <span className="text-brand dark:text-green-500"><span className="font-semibold">{totalFree}</span> free</span>
-                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" />
+                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
                 <span><span className="font-semibold text-stone-700 dark:text-stone-300">{cities.length}</span> cities</span>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CITIES ── */}
-      <section className="bg-section-cities border-y border-[#E5DED4] dark:border-[#2E2A24] py-20">
+      <section className="bg-section-cities border-y border-[#E5DED4] dark:border-[#2E2A24] py-12 sm:py-20">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="flex items-baseline justify-between mb-10">
             <h2 className="font-serif text-[26px] text-stone-800 dark:text-stone-100">
@@ -161,7 +161,7 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY CITYROOTS ── */}
-      <section className="relative overflow-hidden bg-section-why py-28">
+      <section className="relative overflow-hidden bg-section-why py-14 sm:py-28">
         <div
           className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none animate-aura-breathe"
           style={{ background: "radial-gradient(circle, rgba(61,107,82,0.05) 0%, transparent 70%)", animationDelay: "3s" }}
@@ -175,7 +175,7 @@ export default function HomePage() {
               CityRoots exists because most local guides exist to sell you something.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
             {WHY_ITEMS.map((item) => (
               <div key={item.number} className="space-y-4">
                 <p
@@ -197,7 +197,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CATEGORIES ── */}
-      <section className="relative overflow-hidden bg-section-categories border-t border-[#E5DED4] dark:border-[#2E2A24] py-20">
+      <section className="relative overflow-hidden bg-section-categories border-t border-[#E5DED4] dark:border-[#2E2A24] py-12 sm:py-20">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(61,107,82,0.04) 0%, transparent 60%)" }}
@@ -233,7 +233,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SUBMIT CTA ── */}
-      <section className="relative overflow-hidden bg-section-cta py-20">
+      <section className="relative overflow-hidden bg-section-cta py-12 sm:py-20">
         <div
           className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none animate-aura-pulse opacity-60"
           style={{ background: "radial-gradient(circle, rgba(61,107,82,0.07) 0%, transparent 70%)" }}

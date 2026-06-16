@@ -219,15 +219,15 @@ export function PlaceCard({ place, variant = "grid" }: PlaceCardProps) {
       <>
         <article
           onClick={() => setDrawerOpen(true)}
-          className="group flex items-center gap-4 px-5 py-4 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl cursor-pointer hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-200"
+          className="group flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3.5 sm:py-4 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl cursor-pointer hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-200"
           aria-label={`View details for ${place.name}`}
         >
           {/* Category avatar */}
           <div
-            className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0"
             style={{ background: `${color}12` }}
           >
-            <span className="text-[18px]" aria-hidden>{category.emoji}</span>
+            <span className="text-[16px] sm:text-[18px]" aria-hidden>{category.emoji}</span>
           </div>
 
           <div className="flex-1 min-w-0">
@@ -243,7 +243,7 @@ export function PlaceCard({ place, variant = "grid" }: PlaceCardProps) {
             <p className="text-[12px] text-stone-400 dark:text-stone-500 mt-0.5 line-clamp-1">{place.description}</p>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <CostBadge cost={place.cost} />
             <ChevronRight className="w-3.5 h-3.5 text-stone-200 dark:text-stone-700 group-hover:text-stone-400 dark:group-hover:text-stone-500 transition-colors" />
           </div>

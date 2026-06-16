@@ -87,20 +87,20 @@ export function ExploreClient({ cities }: ExploreClientProps) {
           className="absolute bottom-0 left-0 w-[350px] h-[200px] rounded-full pointer-events-none animate-aura-pulse opacity-50"
           style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.08) 0%, transparent 70%)", animationDelay: "2s" }}
         />
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-14 pb-12">
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-10 pb-10 sm:pt-14 sm:pb-12">
           <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-4">
             City guides
           </p>
-          <h1 className="font-serif text-[36px] sm:text-[44px] text-stone-900 dark:text-stone-50 mb-3">
+          <h1 className="font-serif text-[28px] sm:text-[36px] lg:text-[44px] text-stone-900 dark:text-stone-50 mb-3">
             Explore cities.
           </h1>
-          <p className="text-[14px] text-stone-400 dark:text-stone-500 max-w-sm leading-relaxed">
+          <p className="text-[13px] sm:text-[14px] text-stone-400 dark:text-stone-500 max-w-sm leading-relaxed">
             Community lifestyle guides across Canada. Free and affordable options, always.
           </p>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-10 flex flex-col gap-10">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-8 sm:py-10 flex flex-col gap-8 sm:gap-10">
 
         {/* Search */}
         <div className="flex items-center gap-2 bg-white dark:bg-stone-900 border border-[#E5DED4] dark:border-stone-700 rounded-xl px-3 h-10 max-w-sm focus-within:border-brand/50 focus-within:ring-2 focus-within:ring-brand/15 transition-all">
@@ -151,7 +151,7 @@ export function ExploreClient({ cities }: ExploreClientProps) {
         )}
 
         {/* Coming soon */}
-        <section className="flex flex-col gap-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10">
+        <section className="flex flex-col gap-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-8 sm:pt-10">
           <p className="text-[11px] font-medium text-stone-400 dark:text-stone-500 tracking-[0.1em] uppercase">
             Coming soon
           </p>

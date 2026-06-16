@@ -105,22 +105,22 @@ export function SubmitForm() {
           className="absolute bottom-0 left-1/4 w-[350px] h-[200px] rounded-full pointer-events-none animate-aura-drift opacity-40"
           style={{ background: "radial-gradient(ellipse, rgba(106,173,130,0.1) 0%, transparent 70%)", animationDelay: "2s" }}
         />
-        <div className="relative max-w-2xl mx-auto px-5 sm:px-8 pt-14 pb-12">
+        <div className="relative max-w-2xl mx-auto px-5 sm:px-8 pt-10 pb-10 sm:pt-14 sm:pb-12">
           <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-4">
             Community
           </p>
-          <h1 className="font-serif text-[36px] sm:text-[44px] text-stone-900 dark:text-stone-50 mb-3">
+          <h1 className="font-serif text-[28px] sm:text-[36px] lg:text-[44px] text-stone-900 dark:text-stone-50 mb-3">
             Share a place.
           </h1>
-          <p className="text-[14px] text-stone-400 dark:text-stone-500 leading-relaxed max-w-sm">
+          <p className="text-[13px] sm:text-[14px] text-stone-400 dark:text-stone-500 leading-relaxed max-w-sm">
             Know a park, cafe, event, program, or resource that belongs in a city guide?
             Submissions are reviewed before being added.
           </p>
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto px-5 sm:px-8 py-12">
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+      <div className="max-w-2xl mx-auto px-5 sm:px-8 py-8 sm:py-12">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-7 sm:space-y-8">
 
           {/* Section: Location */}
           <div className="space-y-5">

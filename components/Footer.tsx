@@ -14,7 +14,7 @@ export function Footer() {
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] pointer-events-none"
         style={{ background: "radial-gradient(ellipse at top, rgba(61,107,82,0.04) 0%, transparent 70%)" }}
       />
-      <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-16">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
 
           {/* Brand */}
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[#E5DED4]/50 dark:border-[#2E2A24]/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-[#E5DED4]/50 dark:border-[#2E2A24]/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-[11px] text-stone-400 dark:text-stone-600 tracking-wide">
             Community-built &middot; no ads &middot; no sponsored listings
           </p>

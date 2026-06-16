@@ -188,11 +188,11 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
           className="absolute bottom-0 -left-20 w-[400px] h-[300px] rounded-full pointer-events-none animate-aura-breathe"
           style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.07) 0%, transparent 70%)", animationDelay: "3s" }}
         />
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-12 pb-14">
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-8 pb-10 sm:pt-12 sm:pb-14">
           <div className="flex items-start gap-12">
             <div className="flex-1 min-w-0">
               {/* Breadcrumb */}
-              <nav className="flex items-center gap-1.5 mb-6" aria-label="Breadcrumb">
+              <nav className="flex items-center gap-1.5 mb-5 sm:mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="text-[11px] text-stone-300 dark:text-stone-600 hover:text-stone-500 dark:hover:text-stone-400 transition-colors tracking-wide uppercase">
                   Home
                 </Link>
@@ -205,7 +205,7 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
               </nav>
 
               {/* City name */}
-              <h1 className="font-serif text-[40px] sm:text-[52px] text-stone-900 dark:text-stone-50 mb-2">
+              <h1 className="font-serif text-[32px] sm:text-[40px] lg:text-[52px] text-stone-900 dark:text-stone-50 mb-2">
                 {city.cityName}
               </h1>
               <p className="text-[12px] text-stone-400 dark:text-stone-500 tracking-[0.1em] uppercase mb-4">
@@ -390,7 +390,7 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
       </div>
 
       {/* ── RESULTS ── */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col gap-6">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-8 flex flex-col gap-5 sm:gap-6">
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
           <p className="text-[13px] text-stone-400 dark:text-stone-500">
             {filtered.length === city.places.length ? (
@@ -473,7 +473,7 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
         )}
 
         {/* Weekly planner */}
-        <div className="border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10 mt-2">
+        <div className="border-t border-[#E5DED4] dark:border-[#2E2A24] pt-7 sm:pt-10 mt-2">
           <WeeklySchedule availablePlaces={city.places} />
         </div>
       </div>

@@ -47,12 +47,12 @@ export default function AboutPage() {
           className="absolute bottom-0 -left-20 w-[400px] h-[250px] rounded-full pointer-events-none animate-aura-breathe opacity-50"
           style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.09) 0%, transparent 70%)", animationDelay: "4s" }}
         />
-        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 pt-14 pb-14">
-          <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-5">
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 pt-10 pb-10 sm:pt-14 sm:pb-14">
+          <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-4 sm:mb-5">
             The project
           </p>
-          <h1 className="font-serif text-[36px] sm:text-[48px] text-stone-900 dark:text-stone-50 mb-5">
-            Built for people,<br />
+          <h1 className="font-serif text-[30px] sm:text-[40px] lg:text-[48px] text-stone-900 dark:text-stone-50 mb-4 sm:mb-5">
+            <span className="block">Built for people,</span>
             <span
               className="italic font-normal gradient-text"
               style={{ backgroundImage: "linear-gradient(135deg, #3D6B52 0%, #7AB893 50%, #78716C 100%)" }}
@@ -67,11 +67,11 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-5 sm:px-8 py-16 space-y-20">
+      <div className="max-w-3xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-12 sm:space-y-20">
 
         {/* Principles */}
-        <section className="space-y-10">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+        <section className="space-y-8 sm:space-y-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10">
             {PRINCIPLES.map((item) => (
               <div key={item.number} className="space-y-3">
                 <p className="text-[11px] font-medium text-stone-300 dark:text-stone-700 tracking-[0.12em]">
@@ -89,7 +89,7 @@ export default function AboutPage() {
         </section>
 
         {/* How it works */}
-        <section className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-14">
+        <section className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10 sm:pt-14">
           <h2 className="font-serif text-[22px] text-stone-800 dark:text-stone-100">
             How it works
           </h2>
@@ -107,7 +107,7 @@ export default function AboutPage() {
         </section>
 
         {/* Contributing */}
-        <section className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-14">
+        <section className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10 sm:pt-14">
           <h2 className="font-serif text-[22px] text-stone-800 dark:text-stone-100">
             Contribute
           </h2>
@@ -163,7 +163,7 @@ export default function AboutPage() {
         </section>
 
         {/* Vision */}
-        <section className="space-y-4 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-14">
+        <section className="space-y-4 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10 sm:pt-14">
           <h2 className="font-serif text-[22px] text-stone-800 dark:text-stone-100">
             Long-term vision
           </h2>
