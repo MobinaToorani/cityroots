@@ -7,8 +7,9 @@ import newmarketData from "@/data/cities/newmarket.json";
 import markhamData from "@/data/cities/markham.json";
 import vaughanData from "@/data/cities/vaughan.json";
 import oakvilleData from "@/data/cities/oakville.json";
+import burlingtonData from "@/data/cities/burlington.json";
 
-const CITIES = [richmondhillData, newmarketData, markhamData, vaughanData, oakvilleData] as unknown as CityGuide[];
+const CITIES = [richmondhillData, newmarketData, markhamData, vaughanData, oakvilleData, burlingtonData] as unknown as CityGuide[];
 
 export const metadata: Metadata = {
   title: "About",

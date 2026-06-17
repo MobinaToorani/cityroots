@@ -6,9 +6,10 @@ import newmarketData from "@/data/cities/newmarket.json";
 import markhamData from "@/data/cities/markham.json";
 import vaughanData from "@/data/cities/vaughan.json";
 import oakvilleData from "@/data/cities/oakville.json";
+import burlingtonData from "@/data/cities/burlington.json";
 import { CityGuide, Category } from "@/lib/types";
 
-const cities = [richmondhillData, newmarketData, markhamData, vaughanData, oakvilleData] as unknown as CityGuide[];
+const cities = [richmondhillData, newmarketData, markhamData, vaughanData, oakvilleData, burlingtonData] as unknown as CityGuide[];
 const ALL_CATEGORY_KEYS = Object.keys(CATEGORIES) as Category[];
 
 function CityCard({ city }: { city: CityGuide }) {

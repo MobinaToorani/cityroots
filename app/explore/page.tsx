@@ -6,6 +6,7 @@ import newmarketData from "@/data/cities/newmarket.json";
 import markhamData from "@/data/cities/markham.json";
 import vaughanData from "@/data/cities/vaughan.json";
 import oakvilleData from "@/data/cities/oakville.json";
+import burlingtonData from "@/data/cities/burlington.json";
 
 export const metadata: Metadata = {
   title: "Explore Cities",
@@ -19,6 +20,7 @@ const CITIES: CityGuide[] = [
   markhamData as unknown as CityGuide,
   vaughanData as unknown as CityGuide,
   oakvilleData as unknown as CityGuide,
+  burlingtonData as unknown as CityGuide,
 ];
 
 export default function ExplorePage() {
