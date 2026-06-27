@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CATEGORIES, CATEGORY_COLORS } from "@/data/categories";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import richmondhillData from "@/data/cities/richmond-hill.json";
 import newmarketData from "@/data/cities/newmarket.json";
 import markhamData from "@/data/cities/markham.json";
@@ -19,7 +20,7 @@ function CityCard({ city }: { city: CityGuide }) {
   return (
     <Link
       href={`/${city.cityId}`}
-      className="group flex flex-col gap-5 p-6 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_4px_32px_rgba(61,107,82,0.08)] dark:hover:shadow-[0_4px_32px_rgba(106,173,130,0.08)] transition-all duration-300"
+      className="group relative overflow-hidden flex flex-col gap-5 p-6 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl transition-all duration-500 hover:border-brand/20 dark:hover:border-green-800/30 hover:shadow-[0_20px_48px_-12px_rgba(61,107,82,0.18),0_2px_8px_rgba(0,0,0,0.04)] dark:hover:shadow-[0_20px_48px_-12px_rgba(106,173,130,0.14),0_2px_8px_rgba(0,0,0,0.3)] before:content-[''] before:absolute before:-top-12 before:-right-12 before:w-40 before:h-40 before:rounded-full before:bg-[radial-gradient(circle,rgba(61,107,82,0.09)_0%,transparent_70%)] before:opacity-0 before:transition-opacity before:duration-500 before:pointer-events-none hover:before:opacity-100"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
@@ -36,17 +37,6 @@ function CityCard({ city }: { city: CityGuide }) {
           )}
         </div>
         <ArrowRight className="w-3.5 h-3.5 text-stone-300 dark:text-stone-600 group-hover:text-brand dark:group-hover:text-green-500 transition-colors mt-0.5 shrink-0" />
-      </div>
-
-      <div className="flex items-center gap-1.5">
-        {ALL_CATEGORY_KEYS.map((key) => (
-          <div
-            key={key}
-            className="w-2 h-2 rounded-full shrink-0 transition-opacity duration-300"
-            style={{ background: CATEGORY_COLORS[key], opacity: coveredCategories.has(key) ? 0.8 : 0.1 }}
-            title={CATEGORIES[key].label}
-          />
-        ))}
       </div>
 
       <div className="flex items-center gap-4 text-[11px] text-stone-400 dark:text-stone-500 border-t border-[#E5DED4]/60 dark:border-[#2E2A24]/60 pt-4">
@@ -100,43 +90,57 @@ export default function HomePage() {
           style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.09) 0%, transparent 70%)", animationDelay: "1s" }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-14 pb-16 sm:pt-20 sm:pb-32 lg:pb-40">
-          <div className="max-w-3xl">
-            <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-5 sm:mb-6">
-              Community lifestyle guide
-            </p>
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-12 pb-20 sm:pt-20 sm:pb-36 lg:pb-44">
+          {/* Eyebrow annotation */}
+          <div className="flex items-center gap-4 mb-10 sm:mb-16">
+            <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600">
+              Community Lifestyle Guide
+            </span>
+            <div className="h-px bg-stone-200 dark:bg-stone-800 w-16 sm:w-32" />
+          </div>
 
-            <h1 className="font-serif text-[30px] sm:text-[44px] lg:text-[58px] leading-[1.1] sm:leading-[1.08] tracking-[-0.02em] sm:tracking-[-0.025em] text-stone-900 dark:text-stone-50 mb-5 sm:mb-7">
-              <span className="block">Every corner of your city,</span>
-              <span
-                className="italic font-normal gradient-text"
-                style={{ backgroundImage: "linear-gradient(135deg, #3D6B52 0%, #7AB893 40%, #A8C5A0 70%, #78716C 100%)" }}
-              >
-                curated for real life.
-              </span>
-            </h1>
+          {/* Headline — typographic composition */}
+          <h1 className="mb-8 sm:mb-12">
+            <span className="block font-serif text-[54px] sm:text-[82px] lg:text-[108px] leading-[0.88] tracking-[-0.04em] font-normal text-stone-900 dark:text-stone-50">
+              Every corner
+            </span>
+            <span className="block font-serif text-[54px] sm:text-[82px] lg:text-[108px] leading-[0.88] tracking-[-0.04em] font-normal text-stone-900 dark:text-stone-50 pl-6 sm:pl-14 lg:pl-24">
+              of your city,
+            </span>
 
-            <p className="text-[14px] sm:text-[15px] text-stone-500 dark:text-stone-400 leading-relaxed max-w-xl mb-8 sm:mb-10">
-              Free and affordable parks, cafes, thrift stores, events, and community programs,
-              organized by every dimension of daily life. No ads. No sponsored listings.
-            </p>
+            <div className="flex items-center gap-3 mt-7 sm:mt-10 mb-7 sm:mb-10">
+              <div className="w-10 sm:w-20 h-px bg-stone-300 dark:bg-stone-700" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#3D6B52] dark:bg-[#7AB893]" />
+            </div>
 
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-              <Link
-                href="/explore"
-                className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 text-white text-[13px] font-medium rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(61,107,82,0.3)] hover:shadow-[0_8px_36px_rgba(61,107,82,0.45)] hover:-translate-y-0.5"
-                style={{ background: "linear-gradient(135deg, #3D6B52 0%, #5A9470 100%)" }}
-              >
-                Explore cities
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-              <div className="flex items-center gap-4 text-[11px] sm:text-[12px] text-stone-400 dark:text-stone-500">
-                <span><span className="font-semibold text-stone-700 dark:text-stone-300">{totalPlaces}</span> places</span>
-                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
-                <span className="text-brand dark:text-green-500"><span className="font-semibold">{totalFree}</span> free</span>
-                <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
-                <span><span className="font-semibold text-stone-700 dark:text-stone-300">{cities.length}</span> cities</span>
-              </div>
+            <span className="block font-serif text-[36px] sm:text-[50px] lg:text-[64px] leading-[0.92] tracking-[-0.03em] font-normal italic text-[#3D6B52] dark:text-[#7AB893] pl-4 sm:pl-10 lg:pl-18">
+              curated for
+            </span>
+            <span className="block font-serif text-[36px] sm:text-[50px] lg:text-[64px] leading-[0.92] tracking-[-0.03em] font-normal italic text-[#3D6B52] dark:text-[#7AB893] pl-12 sm:pl-24 lg:pl-40">
+              real life.
+            </span>
+          </h1>
+
+          <p className="text-[13px] sm:text-[14px] text-stone-500 dark:text-stone-400 leading-relaxed max-w-sm sm:max-w-md mb-8 sm:mb-10">
+            Free and affordable parks, cafes, thrift stores, events, and community programs,
+            organized by every dimension of daily life. No ads. No sponsored listings.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+            <Link
+              href="/explore"
+              className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 text-white text-[13px] font-medium rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(61,107,82,0.3)] hover:shadow-[0_8px_36px_rgba(61,107,82,0.45)]"
+              style={{ background: "linear-gradient(135deg, #3D6B52 0%, #5A9470 100%)" }}
+            >
+              Explore cities
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <div className="flex items-center gap-3 text-[10px] sm:text-[11px] text-stone-400 dark:text-stone-500 tracking-[0.05em]">
+              <span><span className="font-semibold text-stone-700 dark:text-stone-300">{totalPlaces}</span> places</span>
+              <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
+              <span className="text-brand dark:text-green-500"><span className="font-semibold">{totalFree}</span> free</span>
+              <span className="w-px h-3 bg-stone-200 dark:bg-stone-700" aria-hidden />
+              <span><span className="font-semibold text-stone-700 dark:text-stone-300">{cities.length}</span> cities</span>
             </div>
           </div>
         </div>
@@ -145,11 +149,16 @@ export default function HomePage() {
       {/* ── CITIES ── */}
       <section className="bg-section-cities border-y border-[#E5DED4] dark:border-[#2E2A24] py-12 sm:py-20">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="flex items-baseline justify-between mb-10">
-            <h2 className="font-serif text-[26px] text-stone-800 dark:text-stone-100">
-              Cities
-            </h2>
-            <Link href="/explore" className="text-[12px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors tracking-wide uppercase">
+          <div className="flex items-start justify-between gap-4 mb-12">
+            <div>
+              <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-2.5">
+                01 — Cities
+              </p>
+              <h2 className="font-serif text-[40px] sm:text-[54px] leading-[0.9] tracking-[-0.035em] text-stone-900 dark:text-stone-100">
+                Cities.
+              </h2>
+            </div>
+            <Link href="/explore" className="text-[11px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors tracking-[0.15em] uppercase mt-1 shrink-0">
               View all
             </Link>
           </div>
@@ -168,9 +177,12 @@ export default function HomePage() {
           style={{ background: "radial-gradient(circle, rgba(61,107,82,0.05) 0%, transparent 70%)", animationDelay: "3s" }}
         />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="mb-14">
-            <h2 className="font-serif text-[28px] text-stone-800 dark:text-stone-100 mb-3">
-              Built differently.
+          <div className="mb-16">
+            <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-3">
+              02 — Philosophy
+            </p>
+            <h2 className="font-serif text-[44px] sm:text-[62px] lg:text-[80px] leading-[0.87] tracking-[-0.04em] text-stone-900 dark:text-stone-100 mb-6">
+              Built<br />differently.
             </h2>
             <p className="text-[14px] text-stone-400 dark:text-stone-500 max-w-sm leading-relaxed">
               CityRoots exists because most local guides exist to sell you something.
@@ -204,11 +216,16 @@ export default function HomePage() {
           style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(61,107,82,0.04) 0%, transparent 60%)" }}
         />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="flex items-baseline justify-between mb-10">
-            <h2 className="font-serif text-[26px] text-stone-800 dark:text-stone-100">
-              Ten categories.
-            </h2>
-            <Link href="/explore" className="text-[12px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors tracking-wide uppercase">
+          <div className="flex items-start justify-between gap-4 mb-12">
+            <div>
+              <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-2.5">
+                03 — Browse
+              </p>
+              <h2 className="font-serif text-[40px] sm:text-[54px] leading-[0.9] tracking-[-0.035em] text-stone-900 dark:text-stone-100">
+                Ten<br />categories.
+              </h2>
+            </div>
+            <Link href="/explore" className="text-[11px] text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 transition-colors tracking-[0.15em] uppercase mt-1 shrink-0">
               Choose a city
             </Link>
           </div>
@@ -216,16 +233,22 @@ export default function HomePage() {
             {(Object.entries(CATEGORIES) as [Category, typeof CATEGORIES[Category]][]).map(([key, cat]) => (
               <div
                 key={key}
-                className="flex flex-col gap-2.5 p-4 rounded-xl border border-[#E5DED4] dark:border-[#2E2A24] bg-white dark:bg-[#1B1916] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:border-stone-300 dark:hover:border-stone-600 transition-all duration-300"
+                className="group relative overflow-hidden flex flex-col gap-2.5 p-4 rounded-xl border border-[#E5DED4] dark:border-[#2E2A24] bg-white dark:bg-[#1B1916] transition-all duration-500 hover:border-stone-300/60 dark:hover:border-stone-600/60 hover:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.4)]"
               >
-                <span className="text-2xl">{cat.emoji}</span>
+                {/* Category-tinted corner glow */}
+                <div
+                  className="absolute -top-8 -right-8 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{ background: `radial-gradient(circle, ${CATEGORY_COLORS[key]}18 0%, transparent 70%)` }}
+                  aria-hidden
+                />
+                <CategoryIcon category={key} className="w-6 h-6 relative" style={{ color: CATEGORY_COLORS[key] }} />
                 <div>
                   <p className="text-[12px] font-semibold text-stone-700 dark:text-stone-300 leading-tight">{cat.shortLabel}</p>
                   <p className="text-[11px] text-stone-400 dark:text-stone-500 mt-1 leading-tight">{cat.description}</p>
                 </div>
                 <div
-                  className="h-0.5 w-8 rounded-full mt-auto"
-                  style={{ background: `linear-gradient(to right, ${CATEGORY_COLORS[key]}, ${CATEGORY_COLORS[key]}60)` }}
+                  className="h-0.5 w-8 group-hover:w-full rounded-full mt-auto transition-[width] duration-500"
+                  style={{ background: `linear-gradient(to right, ${CATEGORY_COLORS[key]}, ${CATEGORY_COLORS[key]}50, transparent)` }}
                 />
               </div>
             ))}
@@ -241,11 +264,14 @@ export default function HomePage() {
         />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
-            <div className="space-y-2">
-              <h2 className="font-serif text-[24px] text-stone-800 dark:text-stone-100">
-                Know a hidden gem?
+            <div>
+              <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-3">
+                04 — Contribute
+              </p>
+              <h2 className="font-serif text-[36px] sm:text-[50px] lg:text-[60px] leading-[0.9] tracking-[-0.035em] text-stone-800 dark:text-stone-100 mb-3">
+                Know a<br />hidden gem?
               </h2>
-              <p className="text-[13px] text-stone-400 dark:text-stone-500 max-w-sm">
+              <p className="text-[13px] text-stone-400 dark:text-stone-500 max-w-xs">
                 Submissions are reviewed before being added. Community-curated, always.
               </p>
             </div>

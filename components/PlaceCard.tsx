@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ExternalLink, Star, MapPin, Leaf, Clock, Phone, ChevronRight, X, Check, CalendarCheck } from "lucide-react";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import {
   Drawer,
   DrawerContent,
@@ -54,7 +55,7 @@ function PlaceDetailDrawer({ place, open, onClose }: { place: Place; open: boole
             <div className="flex-1 min-w-0">
               {/* Category row */}
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-lg" aria-hidden>{category.emoji}</span>
+                <CategoryIcon category={place.category} className="w-5 h-5 shrink-0" style={{ color }} />
                 <span
                   className="text-[10px] font-semibold uppercase tracking-[0.12em]"
                   style={{ color }}
@@ -186,15 +187,21 @@ function PlaceDetailDrawer({ place, open, onClose }: { place: Place; open: boole
 
 export function PlaceCard({ place, variant = "grid" }: PlaceCardProps) {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const category = CATEGORIES[place.category];
   const color = CATEGORY_COLORS[place.category];
+
+  const hoverStyle = isHovered ? {
+    boxShadow: `0 20px 48px -12px ${color}30, 0 4px 16px -4px ${color}10`,
+    borderColor: `${color}30`,
+  } : undefined;
 
   if (variant === "map-popup") {
     return (
       <>
         <div className="min-w-[200px]">
           <div className="flex items-center gap-1.5 mb-1">
-            <span className="text-sm" aria-hidden>{category.emoji}</span>
+            <CategoryIcon category={place.category} className="w-4 h-4" style={{ color }} />
             <CostBadge cost={place.cost} />
           </div>
           <p className="font-semibold text-[13px] text-stone-900 leading-snug mb-1">{place.name}</p>
@@ -219,7 +226,10 @@ export function PlaceCard({ place, variant = "grid" }: PlaceCardProps) {
       <>
         <article
           onClick={() => setDrawerOpen(true)}
-          className="group flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3.5 sm:py-4 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl cursor-pointer hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-200"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="group flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3.5 sm:py-4 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl cursor-pointer transition-all duration-300"
+          style={hoverStyle}
           aria-label={`View details for ${place.name}`}
         >
           {/* Category avatar */}
@@ -227,7 +237,7 @@ export function PlaceCard({ place, variant = "grid" }: PlaceCardProps) {
             className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0"
             style={{ background: `${color}12` }}
           >
-            <span className="text-[16px] sm:text-[18px]" aria-hidden>{category.emoji}</span>
+            <CategoryIcon category={place.category} className="w-4 h-4" style={{ color }} />
           </div>
 
           <div className="flex-1 min-w-0">
@@ -258,23 +268,26 @@ export function PlaceCard({ place, variant = "grid" }: PlaceCardProps) {
     <>
       <article
         onClick={() => setDrawerOpen(true)}
-        className="group flex flex-col bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl overflow-hidden cursor-pointer hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_4px_20px_rgba(0,0,0,0.07)] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.35)] transition-all duration-200"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="group flex flex-col bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+        style={hoverStyle}
         aria-label={`View details for ${place.name}`}
       >
-        {/* 2px accent bar */}
+        {/* accent bar — grows from 2px to 3px height on hover */}
         <div
-          className="h-[2px] w-full shrink-0"
+          className="h-[2px] group-hover:h-[3px] w-full shrink-0 transition-[height] duration-300"
           style={{ background: `linear-gradient(to right, ${color}, ${color}80, transparent)` }}
           aria-hidden
         />
 
-        {/* Card header — subtle category tint */}
+        {/* Card header — tint deepens on hover */}
         <div
-          className="flex items-center justify-between gap-2 px-5 pt-4 pb-3"
-          style={{ background: `${color}08` }}
+          className="flex items-center justify-between gap-2 px-5 pt-4 pb-3 transition-[background] duration-300"
+          style={{ background: isHovered ? `${color}12` : `${color}08` }}
         >
           <div className="flex items-center gap-2 min-w-0">
-            <span className="text-[18px] shrink-0" aria-hidden>{category.emoji}</span>
+            <CategoryIcon category={place.category} className="w-[18px] h-[18px] shrink-0" style={{ color }} />
             <span
               className="text-[10px] font-semibold uppercase tracking-[0.1em] truncate"
               style={{ color }}

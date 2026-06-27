@@ -80,8 +80,8 @@ export function Navbar() {
             >
               {open ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </SheetTrigger>
-            <SheetContent side="right" className="w-72 bg-[#F7F4EF] dark:bg-[#0F0E0C] border-l border-[#E5DED4] dark:border-[#2E2A24]">
-              <SheetTitle className="flex items-center gap-2.5 mb-10 mt-2 font-serif text-[17px] font-medium text-stone-800 dark:text-stone-100">
+            <SheetContent side="right" className="w-72 px-6 pt-5 pb-8 bg-[#F7F4EF] dark:bg-[#0F0E0C] border-l border-[#E5DED4] dark:border-[#2E2A24]">
+              <SheetTitle className="flex items-center gap-2.5 mb-8 pr-10 font-serif text-[17px] font-medium text-stone-800 dark:text-stone-100">
                 <Leaf className="w-4 h-4 text-brand" />
                 CityRoots
               </SheetTitle>

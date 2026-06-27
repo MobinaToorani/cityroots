@@ -16,6 +16,7 @@ import { ViewToggle } from "@/components/ViewToggle";
 import { WellbeingWheel } from "@/components/WellbeingWheel";
 import { WeeklySchedule } from "@/components/WeeklySchedule";
 import { Leaf, ChevronDown, ChevronUp } from "lucide-react";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import { cn } from "@/lib/utils";
 
 const MapView = dynamic(() => import("@/components/MapView").then((m) => m.MapView), {
@@ -205,10 +206,10 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
               </nav>
 
               {/* City name */}
-              <h1 className="font-serif text-[32px] sm:text-[40px] lg:text-[52px] text-stone-900 dark:text-stone-50 mb-2">
+              <h1 className="font-serif text-[44px] sm:text-[60px] lg:text-[80px] leading-[0.88] tracking-[-0.04em] text-stone-900 dark:text-stone-50 mb-3">
                 {city.cityName}
               </h1>
-              <p className="text-[12px] text-stone-400 dark:text-stone-500 tracking-[0.1em] uppercase mb-4">
+              <p className="font-sans text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-stone-400 dark:text-stone-600 mb-4">
                 {city.province}, {city.country}
               </p>
 
@@ -285,6 +286,8 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
 
           {/* Row 2: all filter pills in one scrollable row */}
           {!filtersCollapsed && (
+            <div className="relative">
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[#F7F4EF] dark:from-[#0F0E0C] to-transparent z-10" aria-hidden />
             <div className="flex gap-1.5 overflow-x-auto scrollbar-hide pb-0.5">
 
               {/* Category: All */}
@@ -317,7 +320,7 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
                     } : undefined}
                     className={cn(PILL, isActive ? "border" : available ? PILL_INACTIVE : PILL_DISABLED)}
                   >
-                    <span aria-hidden>{cat.emoji}</span>
+                    <CategoryIcon category={key} className="w-3.5 h-3.5" />
                     <span>{cat.shortLabel}</span>
                     {count > 0 && !isActive && <span className="opacity-40">({count})</span>}
                   </button>
@@ -384,6 +387,7 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
                   </button>
                 );
               })}
+            </div>
             </div>
           )}
         </div>

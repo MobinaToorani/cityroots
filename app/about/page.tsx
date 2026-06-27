@@ -48,20 +48,20 @@ export default function AboutPage() {
           className="absolute bottom-0 -left-20 w-[400px] h-[250px] rounded-full pointer-events-none animate-aura-breathe opacity-50"
           style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.09) 0%, transparent 70%)", animationDelay: "4s" }}
         />
-        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 pt-10 pb-10 sm:pt-14 sm:pb-14">
-          <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-4 sm:mb-5">
-            The project
-          </p>
-          <h1 className="font-serif text-[30px] sm:text-[40px] lg:text-[48px] text-stone-900 dark:text-stone-50 mb-4 sm:mb-5">
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 pt-10 pb-12 sm:pt-16 sm:pb-16">
+          <div className="flex items-center gap-4 mb-8 sm:mb-12">
+            <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600">
+              The project
+            </span>
+            <div className="h-px bg-stone-200 dark:bg-stone-800 w-16 sm:w-28" />
+          </div>
+          <h1 className="font-serif text-[48px] sm:text-[68px] lg:text-[88px] leading-[0.88] tracking-[-0.04em] text-stone-900 dark:text-stone-50 mb-5 sm:mb-7">
             <span className="block">Built for people,</span>
-            <span
-              className="italic font-normal gradient-text"
-              style={{ backgroundImage: "linear-gradient(135deg, #3D6B52 0%, #7AB893 50%, #78716C 100%)" }}
-            >
+            <span className="block italic font-normal text-[#3D6B52] dark:text-[#7AB893] pl-6 sm:pl-14">
               not profit.
             </span>
           </h1>
-          <p className="text-[15px] text-stone-400 dark:text-stone-500 leading-relaxed max-w-lg">
+          <p className="text-[14px] sm:text-[15px] text-stone-400 dark:text-stone-500 leading-relaxed max-w-lg">
             CityRoots is a community-built directory of local resources: parks, libraries, cafes, events,
             thrift stores, community centres and more, organized by every dimension of daily life.
           </p>
@@ -91,9 +91,12 @@ export default function AboutPage() {
 
         {/* How it works */}
         <section className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10 sm:pt-14">
-          <h2 className="font-serif text-[22px] text-stone-800 dark:text-stone-100">
-            How it works
-          </h2>
+          <div>
+            <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-2.5">01</p>
+            <h2 className="font-serif text-[30px] sm:text-[40px] leading-[0.9] tracking-[-0.03em] text-stone-800 dark:text-stone-100">
+              How it works.
+            </h2>
+          </div>
           <div className="space-y-4">
             <p className="text-[14px] text-stone-500 dark:text-stone-400 leading-relaxed">
               Listings are submitted by local contributors and reviewed before publishing.
@@ -109,9 +112,12 @@ export default function AboutPage() {
 
         {/* Contributing */}
         <section className="space-y-5 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10 sm:pt-14">
-          <h2 className="font-serif text-[22px] text-stone-800 dark:text-stone-100">
-            Contribute
-          </h2>
+          <div>
+            <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-2.5">02</p>
+            <h2 className="font-serif text-[30px] sm:text-[40px] leading-[0.9] tracking-[-0.03em] text-stone-800 dark:text-stone-100">
+              Contribute.
+            </h2>
+          </div>
           <p className="text-[14px] text-stone-500 dark:text-stone-400 leading-relaxed">
             Anyone can submit a place. Submissions go through a quick review before appearing.
             If you know a community program, a hidden park, or a weekly market, please add it.
@@ -135,9 +141,12 @@ export default function AboutPage() {
 
         {/* Cities */}
         <section className="space-y-6 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-14">
-          <h2 className="font-serif text-[22px] text-stone-800 dark:text-stone-100">
-            Cities covered
-          </h2>
+          <div>
+            <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-2.5">03</p>
+            <h2 className="font-serif text-[30px] sm:text-[40px] leading-[0.9] tracking-[-0.03em] text-stone-800 dark:text-stone-100">
+              Cities covered.
+            </h2>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {CITIES.map((city) => {
               const freeCount = city.places.filter((p) => p.isFree).length;
@@ -145,7 +154,7 @@ export default function AboutPage() {
                 <Link
                   key={city.cityId}
                   href={`/${city.cityId}`}
-                  className="group flex items-center justify-between p-4 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-xl hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition-all duration-300"
+                  className="group relative overflow-hidden flex items-center justify-between p-4 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-xl transition-all duration-500 hover:border-brand/20 dark:hover:border-green-800/30 hover:shadow-[0_12px_32px_-8px_rgba(61,107,82,0.15),0_2px_8px_rgba(0,0,0,0.04)] dark:hover:shadow-[0_12px_32px_-8px_rgba(106,173,130,0.12),0_2px_8px_rgba(0,0,0,0.3)] before:content-[''] before:absolute before:-top-8 before:-right-8 before:w-28 before:h-28 before:rounded-full before:bg-[radial-gradient(circle,rgba(61,107,82,0.08)_0%,transparent_70%)] before:opacity-0 before:transition-opacity before:duration-500 before:pointer-events-none hover:before:opacity-100"
                 >
                   <div>
                     <p className="text-[13px] font-medium text-stone-800 dark:text-stone-200">{city.cityName}</p>
@@ -165,9 +174,12 @@ export default function AboutPage() {
 
         {/* Vision */}
         <section className="space-y-4 border-t border-[#E5DED4] dark:border-[#2E2A24] pt-10 sm:pt-14">
-          <h2 className="font-serif text-[22px] text-stone-800 dark:text-stone-100">
-            Long-term vision
-          </h2>
+          <div>
+            <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600 mb-2.5">04</p>
+            <h2 className="font-serif text-[30px] sm:text-[40px] leading-[0.9] tracking-[-0.03em] text-stone-800 dark:text-stone-100">
+              Long-term vision.
+            </h2>
+          </div>
           <p className="text-[14px] text-stone-500 dark:text-stone-400 leading-relaxed">
             The aim is a non-profit, open-data platform where each city has local curators and
             the information is freely available to anyone who wants to build on it.

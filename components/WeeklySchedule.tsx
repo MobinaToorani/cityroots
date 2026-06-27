@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X, Plus, Calendar, Check } from "lucide-react";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import { Place } from "@/lib/types";
 import { CATEGORIES, CATEGORY_COLORS } from "@/data/categories";
 import { cn, sortPlaces } from "@/lib/utils";
@@ -317,7 +318,7 @@ export function WeeklySchedule({ availablePlaces = [] }: WeeklyScheduleProps) {
                         : "border-transparent hover:bg-white dark:hover:bg-stone-800 hover:border-[#E5DED4] dark:hover:border-stone-700"
                     )}
                   >
-                    <span aria-hidden>{cat.emoji}</span>
+                    <CategoryIcon category={p.category} className="w-4 h-4" style={{ color: CATEGORY_COLORS[p.category] }} />
                     <span className={cn("text-[13px] flex-1 truncate", alreadyAdded ? "text-stone-300 dark:text-stone-700" : "text-stone-700 dark:text-stone-200")}>{p.name}</span>
                     {alreadyAdded
                       ? <Check className="w-3.5 h-3.5 text-stone-300 dark:text-stone-700 shrink-0" aria-label="Already added" />

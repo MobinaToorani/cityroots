@@ -105,12 +105,18 @@ export function SubmitForm() {
           className="absolute bottom-0 left-1/4 w-[350px] h-[200px] rounded-full pointer-events-none animate-aura-drift opacity-40"
           style={{ background: "radial-gradient(ellipse, rgba(106,173,130,0.1) 0%, transparent 70%)", animationDelay: "2s" }}
         />
-        <div className="relative max-w-2xl mx-auto px-5 sm:px-8 pt-10 pb-10 sm:pt-14 sm:pb-12">
-          <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-4">
-            Community
-          </p>
-          <h1 className="font-serif text-[28px] sm:text-[36px] lg:text-[44px] text-stone-900 dark:text-stone-50 mb-3">
-            Share a place.
+        <div className="relative max-w-2xl mx-auto px-5 sm:px-8 pt-10 pb-12 sm:pt-16 sm:pb-14">
+          <div className="flex items-center gap-4 mb-8 sm:mb-12">
+            <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600">
+              Community
+            </span>
+            <div className="h-px bg-stone-200 dark:bg-stone-800 w-16 sm:w-28" />
+          </div>
+          <h1 className="font-serif text-[44px] sm:text-[60px] lg:text-[76px] leading-[0.88] tracking-[-0.04em] text-stone-900 dark:text-stone-50 mb-5">
+            <span className="block">Share a</span>
+            <span className="block italic font-normal text-[#3D6B52] dark:text-[#7AB893] pl-6 sm:pl-14">
+              place.
+            </span>
           </h1>
           <p className="text-[13px] sm:text-[14px] text-stone-400 dark:text-stone-500 leading-relaxed max-w-sm">
             Know a park, cafe, event, program, or resource that belongs in a city guide?
@@ -173,7 +179,7 @@ export function SubmitForm() {
                   <option value="">Select category</option>
                   {categories.map(([key, cat]) => (
                     <option key={key} value={key}>
-                      {cat.emoji} {cat.label}
+                      {cat.label}
                     </option>
                   ))}
                 </select>

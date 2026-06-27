@@ -4,8 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Search } from "lucide-react";
 import { CityGuide } from "@/lib/types";
-import { CATEGORY_COLORS } from "@/data/categories";
-import { Category } from "@/lib/types";
 
 const COMING_SOON = [
   { cityName: "Barrie", province: "Ontario" },
@@ -15,13 +13,12 @@ const COMING_SOON = [
 
 function CityCard({ city }: { city: CityGuide }) {
   const freePlaces = city.places.filter((p) => p.isFree).length;
-  const coveredCategories = new Set(city.places.map((p) => p.category as Category));
-  const categoryKeys = Object.keys(CATEGORY_COLORS) as Category[];
+  const coveredCategories = new Set(city.places.map((p) => p.category));
 
   return (
     <Link
       href={`/${city.cityId}`}
-      className="group flex flex-col gap-5 p-6 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_4px_24px_rgba(0,0,0,0.3)] transition-all duration-300"
+      className="group relative overflow-hidden flex flex-col gap-5 p-6 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl transition-all duration-500 hover:border-brand/20 dark:hover:border-green-800/30 hover:shadow-[0_20px_48px_-12px_rgba(61,107,82,0.18),0_2px_8px_rgba(0,0,0,0.04)] dark:hover:shadow-[0_20px_48px_-12px_rgba(106,173,130,0.14),0_2px_8px_rgba(0,0,0,0.3)] before:content-[''] before:absolute before:-top-12 before:-right-12 before:w-40 before:h-40 before:rounded-full before:bg-[radial-gradient(circle,rgba(61,107,82,0.09)_0%,transparent_70%)] before:opacity-0 before:transition-opacity before:duration-500 before:pointer-events-none hover:before:opacity-100"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
@@ -37,18 +34,7 @@ function CityCard({ city }: { city: CityGuide }) {
             </p>
           )}
         </div>
-        <ArrowRight className="w-3.5 h-3.5 text-stone-300 dark:text-stone-600 group-hover:text-stone-500 dark:group-hover:text-stone-400 transition-colors mt-0.5 shrink-0" />
-      </div>
-
-      {/* Category dots */}
-      <div className="flex items-center gap-1.5">
-        {categoryKeys.map((key) => (
-          <div
-            key={key}
-            className="w-2 h-2 rounded-full shrink-0 transition-opacity duration-300"
-            style={{ background: CATEGORY_COLORS[key], opacity: coveredCategories.has(key) ? 0.8 : 0.1 }}
-          />
-        ))}
+        <ArrowRight className="w-3.5 h-3.5 text-stone-300 dark:text-stone-600 group-hover:text-brand dark:group-hover:text-green-500 transition-colors mt-0.5 shrink-0" />
       </div>
 
       <div className="flex items-center gap-4 text-[11px] text-stone-400 dark:text-stone-500 border-t border-[#E5DED4]/60 dark:border-[#2E2A24]/60 pt-4">
@@ -87,12 +73,18 @@ export function ExploreClient({ cities }: ExploreClientProps) {
           className="absolute bottom-0 left-0 w-[350px] h-[200px] rounded-full pointer-events-none animate-aura-pulse opacity-50"
           style={{ background: "radial-gradient(ellipse, rgba(180,160,130,0.08) 0%, transparent 70%)", animationDelay: "2s" }}
         />
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-10 pb-10 sm:pt-14 sm:pb-12">
-          <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-brand dark:text-green-500 mb-4">
-            City guides
-          </p>
-          <h1 className="font-serif text-[28px] sm:text-[36px] lg:text-[44px] text-stone-900 dark:text-stone-50 mb-3">
-            Explore cities.
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-10 pb-12 sm:pt-16 sm:pb-14">
+          <div className="flex items-center gap-4 mb-8 sm:mb-12">
+            <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.28em] uppercase text-stone-400 dark:text-stone-600">
+              City guides
+            </span>
+            <div className="h-px bg-stone-200 dark:bg-stone-800 w-16 sm:w-28" />
+          </div>
+          <h1 className="font-serif text-[44px] sm:text-[64px] lg:text-[84px] leading-[0.88] tracking-[-0.04em] text-stone-900 dark:text-stone-50 mb-5">
+            <span className="block">Explore</span>
+            <span className="block italic font-normal text-[#3D6B52] dark:text-[#7AB893] pl-6 sm:pl-14">
+              cities.
+            </span>
           </h1>
           <p className="text-[13px] sm:text-[14px] text-stone-400 dark:text-stone-500 max-w-sm leading-relaxed">
             Community lifestyle guides across Canada. Free and affordable options, always.
@@ -170,13 +162,13 @@ export function ExploreClient({ cities }: ExploreClientProps) {
             ))}
             <Link
               href="/submit"
-              className="group flex items-center justify-between p-5 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl hover:border-stone-300 dark:hover:border-stone-600 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300"
+              className="group relative overflow-hidden flex items-center justify-between p-5 bg-white dark:bg-[#1B1916] border border-[#E5DED4] dark:border-[#2E2A24] rounded-2xl transition-all duration-500 hover:border-brand/20 dark:hover:border-green-800/30 hover:shadow-[0_20px_48px_-12px_rgba(61,107,82,0.18),0_2px_8px_rgba(0,0,0,0.04)] dark:hover:shadow-[0_20px_48px_-12px_rgba(106,173,130,0.14),0_2px_8px_rgba(0,0,0,0.3)] before:content-[''] before:absolute before:-top-12 before:-right-12 before:w-40 before:h-40 before:rounded-full before:bg-[radial-gradient(circle,rgba(61,107,82,0.09)_0%,transparent_70%)] before:opacity-0 before:transition-opacity before:duration-500 before:pointer-events-none hover:before:opacity-100"
             >
               <div>
                 <p className="text-[14px] font-medium text-stone-800 dark:text-stone-200">Request a city</p>
                 <p className="text-[12px] text-stone-400 dark:text-stone-500 mt-0.5">Know a community that needs a guide?</p>
               </div>
-              <ArrowRight className="w-3.5 h-3.5 text-stone-300 dark:text-stone-600 group-hover:text-stone-500 dark:group-hover:text-stone-400 transition-colors shrink-0" />
+              <ArrowRight className="w-3.5 h-3.5 text-stone-300 dark:text-stone-600 group-hover:text-brand dark:group-hover:text-green-500 transition-colors shrink-0" />
             </Link>
           </div>
         </section>

@@ -3,6 +3,7 @@
 import { Category } from "@/lib/types";
 import { CATEGORIES } from "@/data/categories";
 import { cn } from "@/lib/utils";
+import { CategoryIcon } from "@/components/CategoryIcon";
 
 interface CategoryFilterProps {
   value: Category | "all";
@@ -14,6 +15,9 @@ export function CategoryFilter({ value, onChange, counts }: CategoryFilterProps)
   const allCount = counts?.all ?? 0;
 
   return (
+    <div className="relative">
+      {/* fade-out affordance indicating pills scroll right */}
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[#F7F4EF] dark:from-[#0F0E0C] to-transparent z-10" aria-hidden />
     <div
       className="flex gap-2 overflow-x-auto scrollbar-hide pb-1"
       role="group"
@@ -57,7 +61,7 @@ export function CategoryFilter({ value, onChange, counts }: CategoryFilterProps)
                   : "bg-white text-zinc-300 border-zinc-200 cursor-not-allowed"
               )}
             >
-              <span aria-hidden>{cat.emoji}</span>
+              <CategoryIcon category={key} className="w-3.5 h-3.5" />
               <span className="whitespace-nowrap">{cat.shortLabel}</span>
               {count > 0 && (
                 <span className="text-xs opacity-70">({count})</span>
@@ -66,6 +70,7 @@ export function CategoryFilter({ value, onChange, counts }: CategoryFilterProps)
           );
         }
       )}
+    </div>
     </div>
   );
 }

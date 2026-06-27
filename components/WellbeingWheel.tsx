@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Category } from "@/lib/types";
 import { CATEGORIES, CATEGORY_COLORS } from "@/data/categories";
+import { CategoryIcon } from "@/components/CategoryIcon";
 
 interface WellbeingWheelProps {
   counts?: Partial<Record<Category, number>>;
@@ -17,8 +18,8 @@ const ANGLE_PER_SEGMENT = 360 / TOTAL;
 function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
   const angleRad = ((angleDeg - 90) * Math.PI) / 180;
   return {
-    x: cx + r * Math.cos(angleRad),
-    y: cy + r * Math.sin(angleRad),
+    x: Math.round((cx + r * Math.cos(angleRad)) * 1e4) / 1e4,
+    y: Math.round((cy + r * Math.sin(angleRad)) * 1e4) / 1e4,
   };
 }
 
@@ -60,7 +61,6 @@ export function WellbeingWheel({ counts, activeCategory, onSelect }: WellbeingWh
       <svg
         viewBox={`0 0 ${size} ${size}`}
         width="100%"
-        height="auto"
         aria-label="Wellbeing category wheel, click a segment to filter"
         role="group"
       >
@@ -99,16 +99,17 @@ export function WellbeingWheel({ counts, activeCategory, onSelect }: WellbeingWh
                   }
                 }}
               />
-              <text
-                x={labelPos.x}
-                y={labelPos.y}
-                textAnchor="middle"
-                dominantBaseline="central"
-                fontSize="16"
-                style={{ pointerEvents: "none", userSelect: "none" }}
+              <foreignObject
+                x={labelPos.x - 10}
+                y={labelPos.y - 10}
+                width={20}
+                height={20}
+                style={{ pointerEvents: "none", userSelect: "none", overflow: "visible" }}
               >
-                {cat.emoji}
-              </text>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", color: "white" }}>
+                  <CategoryIcon category={key} className="w-4 h-4" />
+                </div>
+              </foreignObject>
             </g>
           );
         })}
@@ -116,9 +117,11 @@ export function WellbeingWheel({ counts, activeCategory, onSelect }: WellbeingWh
         <circle cx={cx} cy={cy} r={rInner - 8} fill="var(--background)" />
         {displayData ? (
           <>
-            <text x={cx} y={cy - 10} textAnchor="middle" dominantBaseline="central" fontSize="22" style={{ userSelect: "none" }}>
-              {displayData.emoji}
-            </text>
+            <foreignObject x={cx - 12} y={cy - 22} width={24} height={24} style={{ userSelect: "none" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", color: CATEGORY_COLORS[displayCategory!] }}>
+                <CategoryIcon category={displayCategory!} className="w-5 h-5" />
+              </div>
+            </foreignObject>
             <text x={cx} y={cy + 14} textAnchor="middle" fontSize="10" fill="var(--muted-foreground)" style={{ userSelect: "none" }}>
               {displayData.shortLabel}
             </text>
