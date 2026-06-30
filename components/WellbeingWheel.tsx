@@ -96,8 +96,17 @@ export function WellbeingWheel({ counts, activeCategory, onSelect }: WellbeingWh
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
                     onSelect?.(isActive ? "all" : key);
+                  } else if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+                    e.preventDefault();
+                    const dir = e.key === "ArrowRight" ? 1 : -1;
+                    const nextIdx = (i + dir + TOTAL) % TOTAL;
+                    const nextKey = CATEGORY_KEYS[nextIdx];
+                    const el = document.querySelector(`[data-wheel-idx="${nextIdx}"]`) as HTMLElement | null;
+                    el?.focus();
+                    onSelect?.(nextKey);
                   }
                 }}
+                data-wheel-idx={i}
               />
               <foreignObject
                 x={labelPos.x - 10}

@@ -15,7 +15,7 @@ import { ActiveFilters } from "@/components/ActiveFilters";
 import { ViewToggle } from "@/components/ViewToggle";
 import { WellbeingWheel } from "@/components/WellbeingWheel";
 import { WeeklySchedule } from "@/components/WeeklySchedule";
-import { Leaf, ChevronDown, ChevronUp } from "lucide-react";
+import { Leaf, ChevronDown, ChevronUp, Star, ChevronsUp } from "lucide-react";
 import { CategoryIcon } from "@/components/CategoryIcon";
 import { cn } from "@/lib/utils";
 
@@ -34,6 +34,7 @@ type FilterAction =
   | { type: "SET_COST"; value: CostLevel | "all" }
   | { type: "SET_TYPE"; value: PlaceType | "all" }
   | { type: "SET_VIEW"; value: "grid" | "list" | "map" }
+  | { type: "TOGGLE_RECOMMENDED" }
   | { type: "REMOVE"; key: keyof FilterState }
   | { type: "RESET" };
 
@@ -44,6 +45,7 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
     case "SET_COST":     return { ...state, cost: action.value };
     case "SET_TYPE":     return { ...state, type: action.value };
     case "SET_VIEW":     return { ...state, view: action.value };
+    case "TOGGLE_RECOMMENDED": return { ...state, showRecommendedOnly: !state.showRecommendedOnly };
     case "REMOVE":
       if (action.key === "category")           return { ...state, category: "all" };
       if (action.key === "cost")               return { ...state, cost: "all" };
@@ -62,6 +64,7 @@ function filtersToParams(filters: FilterState): URLSearchParams {
   if (filters.type !== "all")     p.set("type", filters.type);
   if (filters.search)             p.set("q", filters.search);
   if (filters.view !== "grid")    p.set("view", filters.view);
+  if (filters.showRecommendedOnly) p.set("picks", "1");
   return p;
 }
 
@@ -107,11 +110,18 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
   const pathname = usePathname();
   const isFirstRender = useRef(true);
   const [filtersCollapsed, setFiltersCollapsed] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("cityroots-filters-collapsed");
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (stored === "true") setFiltersCollapsed(true);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 600);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   function toggleFilters() {
@@ -127,6 +137,7 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
     type:     (searchParams.get("type")     as PlaceType | "all") ?? "all",
     search:   searchParams.get("q") ?? "",
     view:     (searchParams.get("view")     as "grid" | "list" | "map") ?? "grid",
+    showRecommendedOnly: searchParams.get("picks") === "1",
   }), []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [filters, dispatch] = useReducer(filterReducer, initialFilters);
@@ -174,10 +185,21 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
   const activeFilterCount =
     (filters.category !== "all" ? 1 : 0) +
     (filters.cost !== "all" ? 1 : 0) +
-    (filters.type !== "all" ? 1 : 0);
+    (filters.type !== "all" ? 1 : 0) +
+    (filters.showRecommendedOnly ? 1 : 0);
 
   return (
     <div>
+      {/* Scroll to top */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to top"
+          className="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-white dark:bg-stone-900 border border-[#E5DED4] dark:border-stone-700 shadow-lg flex items-center justify-center text-stone-400 dark:text-stone-500 hover:text-stone-700 dark:hover:text-stone-200 hover:border-stone-400 dark:hover:border-stone-500 transition-all"
+        >
+          <ChevronsUp className="w-4 h-4" />
+        </button>
+      )}
       {/* ── CITY HEADER ── */}
       <div className="relative overflow-hidden bg-white dark:bg-[#1B1916] border-b border-[#E5DED4] dark:border-[#2E2A24]">
         {/* Aura orbs */}
@@ -387,6 +409,24 @@ export function CityGuideClient({ city }: CityGuideClientProps) {
                   </button>
                 );
               })}
+
+              {/* Divider */}
+              <div className="shrink-0 w-px bg-[#E5DED4] dark:bg-stone-700 mx-1 self-center h-4" aria-hidden />
+
+              {/* Picks pill */}
+              <button
+                onClick={() => dispatch({ type: "TOGGLE_RECOMMENDED" })}
+                aria-pressed={filters.showRecommendedOnly}
+                className={cn(
+                  PILL,
+                  filters.showRecommendedOnly
+                    ? "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-800"
+                    : PILL_INACTIVE
+                )}
+              >
+                <Star className={cn("w-3 h-3", filters.showRecommendedOnly ? "fill-amber-500 dark:fill-amber-400" : "fill-none")} />
+                Picks
+              </button>
             </div>
             </div>
           )}
