@@ -9,6 +9,9 @@ import markhamData from "@/data/cities/markham.json";
 import vaughanData from "@/data/cities/vaughan.json";
 import oakvilleData from "@/data/cities/oakville.json";
 import burlingtonData from "@/data/cities/burlington.json";
+import kitchenerData from "@/data/cities/kitchener.json";
+import waterlooData from "@/data/cities/waterloo.json";
+import cambridgeData from "@/data/cities/cambridge.json";
 
 function CityPageSkeleton() {
   return (
@@ -56,6 +59,9 @@ const CITY_DATA: Record<string, CityGuide> = {
   "vaughan": vaughanData as unknown as CityGuide,
   "oakville": oakvilleData as unknown as CityGuide,
   "burlington": burlingtonData as unknown as CityGuide,
+  "kitchener": kitchenerData as unknown as CityGuide,
+  "waterloo": waterlooData as unknown as CityGuide,
+  "cambridge": cambridgeData as unknown as CityGuide,
 };
 
 export function generateStaticParams() {

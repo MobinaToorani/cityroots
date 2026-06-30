@@ -8,9 +8,12 @@ import markhamData from "@/data/cities/markham.json";
 import vaughanData from "@/data/cities/vaughan.json";
 import oakvilleData from "@/data/cities/oakville.json";
 import burlingtonData from "@/data/cities/burlington.json";
+import kitchenerData from "@/data/cities/kitchener.json";
+import waterlooData from "@/data/cities/waterloo.json";
+import cambridgeData from "@/data/cities/cambridge.json";
 import { CityGuide, Category } from "@/lib/types";
 
-const cities = [richmondhillData, newmarketData, markhamData, vaughanData, oakvilleData, burlingtonData] as unknown as CityGuide[];
+const cities = [richmondhillData, newmarketData, markhamData, vaughanData, oakvilleData, burlingtonData, kitchenerData, waterlooData, cambridgeData] as unknown as CityGuide[];
 const ALL_CATEGORY_KEYS = Object.keys(CATEGORIES) as Category[];
 
 function CityCard({ city }: { city: CityGuide }) {
@@ -231,8 +234,9 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
             {(Object.entries(CATEGORIES) as [Category, typeof CATEGORIES[Category]][]).map(([key, cat]) => (
-              <div
+              <Link
                 key={key}
+                href={`/explore?category=${key}`}
                 className="group relative overflow-hidden flex flex-col gap-2.5 p-4 rounded-xl border border-[#E5DED4] dark:border-[#2E2A24] bg-white dark:bg-[#1B1916] transition-all duration-500 hover:border-stone-300/60 dark:hover:border-stone-600/60 hover:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.4)]"
               >
                 {/* Category-tinted corner glow */}
@@ -250,7 +254,7 @@ export default function HomePage() {
                   className="h-0.5 w-8 group-hover:w-full rounded-full mt-auto transition-[width] duration-500"
                   style={{ background: `linear-gradient(to right, ${CATEGORY_COLORS[key]}, ${CATEGORY_COLORS[key]}50, transparent)` }}
                 />
-              </div>
+              </Link>
             ))}
           </div>
         </div>

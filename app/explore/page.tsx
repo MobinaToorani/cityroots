@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { CityGuide } from "@/lib/types";
 import { ExploreClient } from "@/components/ExploreClient";
@@ -7,6 +8,9 @@ import markhamData from "@/data/cities/markham.json";
 import vaughanData from "@/data/cities/vaughan.json";
 import oakvilleData from "@/data/cities/oakville.json";
 import burlingtonData from "@/data/cities/burlington.json";
+import kitchenerData from "@/data/cities/kitchener.json";
+import waterlooData from "@/data/cities/waterloo.json";
+import cambridgeData from "@/data/cities/cambridge.json";
 
 export const metadata: Metadata = {
   title: "Explore Cities",
@@ -21,8 +25,15 @@ const CITIES: CityGuide[] = [
   vaughanData as unknown as CityGuide,
   oakvilleData as unknown as CityGuide,
   burlingtonData as unknown as CityGuide,
+  kitchenerData as unknown as CityGuide,
+  waterlooData as unknown as CityGuide,
+  cambridgeData as unknown as CityGuide,
 ];
 
 export default function ExplorePage() {
-  return <ExploreClient cities={CITIES} />;
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <ExploreClient cities={CITIES} />
+    </Suspense>
+  );
 }

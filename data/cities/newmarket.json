@@ -31,13 +31,13 @@
       "lat": 44.0536,
       "lng": -79.4674,
       "website": "https://www.newmarket.ca",
-      "description": "The jewel of Newmarket's park system \u2014 a beautiful glacial kettle lake surrounded by trails, picnic areas, and wooded paths. Free and accessible year-round, it's the perfect daily walk destination.",
+      "description": "The jewel of Newmarket's park system — a beautiful glacial kettle lake surrounded by trails, picnic areas, and wooded paths. Free and accessible year-round, it's the perfect daily walk destination.",
       "highlights": [
         "2km scenic walking loop around the lake",
         "Free paddle boat and canoe rentals (seasonal)",
         "Picnic areas and benches throughout",
         "Winter skating when conditions allow",
-        "Wildlife viewing \u2014 ducks, herons, turtles"
+        "Wildlife viewing — ducks, herons, turtles"
       ],
       "why": "On a quiet weekday morning, this is one of the most peaceful spots in York Region.",
       "isRecommended": true,
@@ -63,12 +63,12 @@
       "lat": 44.059,
       "lng": -79.4607,
       "website": "https://www.newmarketpl.ca",
-      "hours": "Mon\u2013Thu 9am\u20139pm, Fri\u2013Sat 9am\u20136pm",
+      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–6pm",
       "description": "A welcoming and well-resourced public library in the heart of Newmarket. Free programs for all ages, digital resources, and one of the quietest study spots in town.",
       "highlights": [
         "Free library card for all Newmarket residents",
         "Kids and teen programs weekly",
-        "Seed library \u2014 borrow seeds for your garden",
+        "Seed library — borrow seeds for your garden",
         "3D printer and maker tools available to cardholders",
         "Free access to LinkedIn Learning, Kanopy, and Libby"
       ],
@@ -94,15 +94,15 @@
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0578,
       "lng": -79.4636,
-      "description": "One of Ontario's most walkable heritage main streets lined with independent shops, caf\u00e9s, galleries, and restaurants. Free to stroll and window-shop \u2014 a refreshing alternative to the mall.",
+      "description": "One of Ontario's most walkable heritage main streets lined with independent shops, cafés, galleries, and restaurants. Free to stroll and window-shop — a refreshing alternative to the mall.",
       "highlights": [
         "Heritage architecture dating to the 1800s",
         "Independent boutiques, bookstores, and galleries",
-        "Multiple cozy independent caf\u00e9s",
+        "Multiple cozy independent cafés",
         "Regular street events and markets",
         "Public art installations throughout"
       ],
-      "why": "Skip the mall. A Saturday morning on Main Street \u2014 coffee in hand \u2014 is hard to beat.",
+      "why": "Skip the mall. A Saturday morning on Main Street — coffee in hand — is hard to beat.",
       "isRecommended": true,
       "isFree": true,
       "lastVerified": "2026-05-15"
@@ -133,12 +133,13 @@
         "Artisan cheese, honey, jams, and preserves",
         "Live music and community entertainment",
         "Friendly local vendors happy to chat",
-        "Free to browse \u2014 just bring a bag"
+        "Free to browse — just bring a bag"
       ],
       "isFree": true,
       "seasonal": true,
-      "seasonNote": "May\u2013October, Saturdays 8am\u20131pm",
-      "lastVerified": "2026-05-10"
+      "seasonNote": "May–October, Saturdays 8am–1pm",
+      "lastVerified": "2026-05-10",
+      "isRecommended": false
     },
     {
       "id": "newmarket-riverwalk-commons",
@@ -161,7 +162,7 @@
       "website": "https://www.newmarket.ca",
       "description": "Newmarket's stunning outdoor community gathering space featuring a seasonal splash pad, winter skating rink, and year-round event programming. One of York Region's best free public spaces.",
       "highlights": [
-        "Free splash pad in summer (June\u2013September)",
+        "Free splash pad in summer (June–September)",
         "Free outdoor skating rink in winter",
         "Regular free community events and concerts",
         "Beautiful setting along the East Holland River",
@@ -189,21 +190,22 @@
       "neighborhood": "Davis Drive",
       "lat": 44.0556,
       "lng": -79.4459,
-      "hours": "Mon\u2013Sat 10am\u20135pm",
-      "description": "A community thrift store supporting local families, with a well-curated selection of clothing, household items, and d\u00e9cor at very affordable prices. Proceeds go directly to local community programs.",
+      "hours": "Mon–Sat 10am–5pm",
+      "description": "A community thrift store supporting local families, with a well-curated selection of clothing, household items, and décor at very affordable prices. Proceeds go directly to local community programs.",
       "highlights": [
         "Well-organized and clean thrift shopping experience",
         "Affordable clothing for all ages",
-        "Household items, d\u00e9cor, and books",
+        "Household items, décor, and books",
         "Proceeds support local community programs",
         "Donation drop-offs accepted during store hours"
       ],
       "isFree": false,
-      "lastVerified": "2026-04-10"
+      "lastVerified": "2026-04-10",
+      "isRecommended": false
     },
     {
       "id": "the-old-firehall-community-arts",
-      "name": "The Old Firehall \u2014 Community Arts Hub",
+      "name": "The Old Firehall — Community Arts Hub",
       "type": "place",
       "category": "arts-crafts",
       "tags": [
@@ -215,7 +217,7 @@
         "creative"
       ],
       "cost": "low",
-      "costNote": "Gallery free; workshops $15\u2013$40",
+      "costNote": "Gallery free; workshops $15–$40",
       "address": "180 Main Street South, Newmarket, ON",
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0571,
@@ -229,7 +231,8 @@
         "Monthly opening nights with artist talks"
       ],
       "isFree": false,
-      "lastVerified": "2026-04-25"
+      "lastVerified": "2026-04-25",
+      "isRecommended": false
     },
     {
       "id": "york-region-transit-bike-share",
@@ -251,7 +254,7 @@
       "lat": 44.059,
       "lng": -79.4613,
       "website": "https://www.yrt.ca",
-      "description": "York Region's bike share program with docking stations across Newmarket. First 30 minutes free \u2014 perfect for short trips between Main Street, Fairy Lake, and the community centre.",
+      "description": "York Region's bike share program with docking stations across Newmarket. First 30 minutes free — perfect for short trips between Main Street, Fairy Lake, and the community centre.",
       "highlights": [
         "First 30 minutes free every trip",
         "Stations at key destinations around Newmarket",
@@ -260,11 +263,12 @@
         "Integrate with YRT bus for multi-modal trips"
       ],
       "isFree": true,
-      "lastVerified": "2026-05-01"
+      "lastVerified": "2026-05-01",
+      "isRecommended": false
     },
     {
       "id": "newmarket-community-centre",
-      "name": "Ray Twinney Complex \u2014 Newmarket Community Centre",
+      "name": "Ray Twinney Complex — Newmarket Community Centre",
       "type": "place",
       "category": "physical",
       "tags": [
@@ -276,27 +280,28 @@
         "programs"
       ],
       "cost": "low",
-      "costNote": "Drop-in fees $4\u2013$8; free outdoor areas",
+      "costNote": "Drop-in fees $4–$8; free outdoor areas",
       "address": "100 Eagle Street West, Newmarket, ON",
       "neighborhood": "Central Newmarket",
       "lat": 44.0582,
       "lng": -79.4739,
       "website": "https://www.newmarket.ca",
-      "hours": "Mon\u2013Fri 6am\u201310pm, Sat\u2013Sun 7am\u20139pm",
+      "hours": "Mon–Fri 6am–10pm, Sat–Sun 7am–9pm",
       "description": "Newmarket's largest community recreation centre with arenas, an aquatic facility, fitness rooms, and a wide range of drop-in programs for all ages. Very affordable drop-in fees.",
       "highlights": [
-        "Public swim and aquafit drop-in ($5\u2013$8)",
+        "Public swim and aquafit drop-in ($5–$8)",
         "Fitness studio with cardio and weights",
         "Ice arenas with public skate sessions",
         "Youth and senior programs",
         "Subsidized memberships available through social services"
       ],
       "isFree": false,
-      "lastVerified": "2026-04-20"
+      "lastVerified": "2026-04-20",
+      "isRecommended": false
     },
     {
       "id": "soundcheck-music-newmarket",
-      "name": "Soundcheck Music \u2014 Open Mic Nights",
+      "name": "Soundcheck Music — Open Mic Nights",
       "type": "event",
       "category": "dance-music",
       "tags": [
@@ -312,7 +317,7 @@
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0582,
       "lng": -79.464,
-      "description": "A regular free open mic night at various Main Street venues, organized by the local music community. All skill levels welcome \u2014 a warm, supportive space for musicians and music lovers alike.",
+      "description": "A regular free open mic night at various Main Street venues, organized by the local music community. All skill levels welcome — a warm, supportive space for musicians and music lovers alike.",
       "highlights": [
         "Free admission, no drink minimum",
         "All skill levels and genres welcome",
@@ -322,7 +327,8 @@
       ],
       "isFree": true,
       "seasonal": false,
-      "lastVerified": "2026-05-05"
+      "lastVerified": "2026-05-05",
+      "isRecommended": false
     },
     {
       "id": "newmarket-cultural-centre",
@@ -353,7 +359,8 @@
         "Senior and youth programs at low/no cost"
       ],
       "isFree": true,
-      "lastVerified": "2026-05-10"
+      "lastVerified": "2026-05-10",
+      "isRecommended": false
     },
     {
       "id": "newmarket-yoga-collective",
@@ -369,12 +376,12 @@
         "studio"
       ],
       "cost": "low",
-      "costNote": "Drop-in $15\u2013$20; first class often free",
+      "costNote": "Drop-in $15–$20; first class often free",
       "address": "152 Main Street South, Newmarket, ON",
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0569,
       "lng": -79.4634,
-      "hours": "Mon\u2013Fri 6am\u20138pm, Sat\u2013Sun 8am\u20136pm",
+      "hours": "Mon–Fri 6am–8pm, Sat–Sun 8am–6pm",
       "description": "A community-focused yoga studio on Main Street offering drop-in classes for all experience levels. Intentionally priced to be accessible, with a sliding scale option for those who need it.",
       "highlights": [
         "Drop-in friendly, no membership required",
@@ -385,7 +392,8 @@
       ],
       "why": "A rare studio that actually means it when they say everyone is welcome.",
       "isFree": false,
-      "lastVerified": "2026-05-12"
+      "lastVerified": "2026-05-12",
+      "isRecommended": false
     },
     {
       "id": "epoch-coffee-newmarket",
@@ -401,12 +409,12 @@
         "cozy"
       ],
       "cost": "low",
-      "costNote": "Drinks $4\u2013$7",
+      "costNote": "Drinks $4–$7",
       "address": "195 Main Street South, Newmarket, ON",
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0574,
       "lng": -79.4638,
-      "hours": "Mon\u2013Fri 7am\u20136pm, Sat 8am\u20135pm, Sun 9am\u20134pm",
+      "hours": "Mon–Fri 7am–6pm, Sat 8am–5pm, Sun 9am–4pm",
       "description": "An independent coffee shop on Newmarket's historic Main Street. Good coffee, good wifi, relaxed atmosphere. One of the few spots in town where you can settle in for an afternoon without being rushed.",
       "highlights": [
         "Independent, owner-operated, community-minded",
@@ -416,7 +424,8 @@
         "Walking distance from Fairy Lake and Riverwalk Commons"
       ],
       "isFree": false,
-      "lastVerified": "2026-05-10"
+      "lastVerified": "2026-05-10",
+      "isRecommended": false
     },
     {
       "id": "newmarket-winter-market",
@@ -447,8 +456,9 @@
       ],
       "isFree": true,
       "seasonal": true,
-      "seasonNote": "December, weekend dates vary \u2014 check city website",
-      "lastVerified": "2026-04-01"
+      "seasonNote": "December, weekend dates vary — check city website",
+      "lastVerified": "2026-04-01",
+      "isRecommended": false
     },
     {
       "id": "york-region-community-services",
@@ -469,7 +479,7 @@
       "lat": 44.0558,
       "lng": -79.4426,
       "website": "https://www.york.ca/communityservices",
-      "hours": "Mon\u2013Fri 8:30am\u20134:30pm",
+      "hours": "Mon–Fri 8:30am–4:30pm",
       "description": "A central access point for York Region's social services including housing support, Ontario Works, financial assistance, and community resource referrals. Walk-in and appointment-based support available.",
       "highlights": [
         "Ontario Works and financial assistance applications",
@@ -479,7 +489,8 @@
         "Multiple languages spoken"
       ],
       "isFree": true,
-      "lastVerified": "2026-05-01"
+      "lastVerified": "2026-05-01",
+      "isRecommended": false
     },
     {
       "id": "newmarket-trail-network",
@@ -514,7 +525,7 @@
     },
     {
       "id": "pho-99-newmarket",
-      "name": "Ph\u1edf 99 Vietnamese Restaurant",
+      "name": "Phở 99 Vietnamese Restaurant",
       "type": "place",
       "category": "food-culture",
       "tags": [
@@ -526,13 +537,13 @@
         "authentic"
       ],
       "cost": "low",
-      "costNote": "Bowls $12\u2013$16",
+      "costNote": "Bowls $12–$16",
       "address": "17705 Leslie Street, Newmarket, ON",
       "neighborhood": "Leslie & Davis",
       "lat": 44.0543,
       "lng": -79.4354,
-      "hours": "Tue\u2013Sun 11am\u20139pm",
-      "description": "A beloved neighbourhood Vietnamese spot known for rich, slow-cooked broth and generous bowls. One of the best-value meals in Newmarket \u2014 a local favourite for good reason.",
+      "hours": "Tue–Sun 11am–9pm",
+      "description": "A beloved neighbourhood Vietnamese spot known for rich, slow-cooked broth and generous bowls. One of the best-value meals in Newmarket — a local favourite for good reason.",
       "highlights": [
         "House-made pho broth slow-cooked for hours",
         "Generous portions at very fair prices",
@@ -542,7 +553,8 @@
       ],
       "why": "A $13 bowl of pho here will leave you full and genuinely happy. That's the whole point.",
       "isFree": false,
-      "lastVerified": "2026-04-30"
+      "lastVerified": "2026-04-30",
+      "isRecommended": false
     },
     {
       "id": "newmarket-active-living-programs",
@@ -564,16 +576,17 @@
       "lat": 44.0592,
       "lng": -79.4613,
       "website": "https://www.newmarket.ca/recreation",
-      "description": "Newmarket's seasonal registered recreation programs \u2014 swimming, skating, sports, fitness, arts, and camps for all ages and abilities.",
+      "description": "Newmarket's seasonal registered recreation programs — swimming, skating, sports, fitness, arts, and camps for all ages and abilities.",
       "highlights": [
-        "Seasonal programs \u2014 register online each session",
+        "Seasonal programs — register online each session",
         "Youth swim lessons and adult aquafit",
         "Skating programs at the Ray Twinney arena",
-        "Financial assistance available \u2014 just ask at registration",
+        "Financial assistance available — just ask at registration",
         "Active for Life programs for older adults"
       ],
       "isFree": false,
-      "lastVerified": "2026-05-01"
+      "lastVerified": "2026-05-01",
+      "isRecommended": false
     },
     {
       "id": "newmarket-seniors-programs",
@@ -595,8 +608,8 @@
       "lat": 44.0562,
       "lng": -79.4614,
       "website": "https://www.newmarket.ca/seniors",
-      "hours": "Programs vary \u2014 check the seasonal brochure",
-      "description": "A full calendar of programs for Newmarket residents 55 and older \u2014 fitness, arts, technology help, social events, and wellness workshops at very low or no cost.",
+      "hours": "Programs vary — check the seasonal brochure",
+      "description": "A full calendar of programs for Newmarket residents 55 and older — fitness, arts, technology help, social events, and wellness workshops at very low or no cost.",
       "highlights": [
         "Chair yoga, line dancing, and low-impact fitness",
         "Technology help drop-ins (smartphones, tablets)",
@@ -610,7 +623,7 @@
     },
     {
       "id": "newmarket-value-village",
-      "name": "Value Village \u2014 Newmarket",
+      "name": "Value Village — Newmarket",
       "type": "place",
       "category": "thrifting",
       "tags": [
@@ -622,17 +635,17 @@
         "housewares"
       ],
       "cost": "low",
-      "costNote": "Clothing $5\u2013$20; housewares from $2",
+      "costNote": "Clothing $5–$20; housewares from $2",
       "address": "17860 Yonge St, Newmarket, ON L3Y 8L6",
       "neighborhood": "South Newmarket",
       "lat": 44.0278,
       "lng": -79.4679,
       "website": "https://www.valuevillage.com",
-      "hours": "Mon\u2013Sat 9am\u20139pm, Sun 10am\u20138pm",
-      "description": "A large Value Village in south Newmarket \u2014 well-stocked with clothing, housewares, and occasional vintage finds. Tag colour sale days offer additional discounts.",
+      "hours": "Mon–Sat 9am–9pm, Sun 10am–8pm",
+      "description": "A large Value Village in south Newmarket — well-stocked with clothing, housewares, and occasional vintage finds. Tag colour sale days offer additional discounts.",
       "highlights": [
         "Large clothing selection with frequent turnover",
-        "Housewares, d\u00e9cor, and small furniture",
+        "Housewares, décor, and small furniture",
         "Colour-tag sale days for deeper discounts",
         "Accessible on Yonge St transit corridor",
         "Active donation base from surrounding neighbourhoods"
@@ -661,7 +674,7 @@
       "lat": 44.0592,
       "lng": -79.4567,
       "website": "https://www.newmarket.ca/recreation",
-      "hours": "Mon\u2013Fri 8:30am\u20134:30pm",
+      "hours": "Mon–Fri 8:30am–4:30pm",
       "description": "A community and social services hub in Newmarket offering drop-in programs, community services, and a welcoming space particularly for seniors and adults seeking community connection.",
       "highlights": [
         "Free drop-in social programs and community events",
@@ -689,11 +702,11 @@
         "painting"
       ],
       "cost": "moderate",
-      "costNote": "Classes from $120\u2013$180 per 8-week session",
+      "costNote": "Classes from $120–$180 per 8-week session",
       "address": "Newmarket, ON",
       "neighborhood": "Central Newmarket",
       "website": "https://www.newmarket.ca/culture",
-      "description": "Community arts programming offered through the Town of Newmarket and local studios \u2014 painting, drawing, photography, and mixed media for adults and youth. Multiple locations throughout the year.",
+      "description": "Community arts programming offered through the Town of Newmarket and local studios — painting, drawing, photography, and mixed media for adults and youth. Multiple locations throughout the year.",
       "highlights": [
         "Beginner-friendly classes in painting, drawing, and photography",
         "Programs for adults, youth, and seniors",
@@ -726,11 +739,11 @@
       "lng": -79.4382,
       "website": "https://www.newmarket.ca/parks",
       "hours": "Open year-round",
-      "description": "A multi-use trail running through Newmarket along the East Holland River \u2014 a good flat trail for walking, running, and cycling with river views and natural habitat. Connects to regional trail networks.",
+      "description": "A multi-use trail running through Newmarket along the East Holland River — a good flat trail for walking, running, and cycling with river views and natural habitat. Connects to regional trail networks.",
       "highlights": [
         "Flat multi-use trail along the East Holland River",
         "Good for walking, running, and cycling",
-        "River and wetland habitat \u2014 wildlife viewing",
+        "River and wetland habitat — wildlife viewing",
         "Connects to broader York Region trail network",
         "Year-round access"
       ],
@@ -755,11 +768,11 @@
       "address": "Newmarket, ON (multiple locations)",
       "neighborhood": "Citywide",
       "website": "https://www.york.ca/wps/portal/yorkhome/support",
-      "hours": "Mon\u2013Fri 8:30am\u20134:30pm",
-      "description": "Free financial empowerment and benefits access programs offered through York Region and community partners \u2014 tax filing support, benefits navigation, budgeting workshops, and emergency financial assistance for Newmarket residents.",
+      "hours": "Mon–Fri 8:30am–4:30pm",
+      "description": "Free financial empowerment and benefits access programs offered through York Region and community partners — tax filing support, benefits navigation, budgeting workshops, and emergency financial assistance for Newmarket residents.",
       "highlights": [
-        "Free income tax clinic (March\u2013April for eligible residents)",
-        "Benefits access navigation \u2014 ensure you're receiving all you're entitled to",
+        "Free income tax clinic (March–April for eligible residents)",
+        "Benefits access navigation — ensure you're receiving all you're entitled to",
         "Emergency financial assistance for housing and utilities",
         "Free budgeting and financial literacy workshops",
         "Ontario Works and social assistance connections"
@@ -789,11 +802,11 @@
       "lat": 44.0587,
       "lng": -79.4615,
       "website": "https://www.newmarket.ca/riverwalk",
-      "hours": "Weather dependent; typically December\u2013February",
-      "description": "An outdoor skating oval at Riverwalk Commons \u2014 one of Newmarket's most popular winter community spots. Free skate rentals are sometimes available. Skating under open sky in the heart of the community.",
+      "hours": "Weather dependent; typically December–February",
+      "description": "An outdoor skating oval at Riverwalk Commons — one of Newmarket's most popular winter community spots. Free skate rentals are sometimes available. Skating under open sky in the heart of the community.",
       "highlights": [
         "Outdoor skating oval in the heart of Newmarket",
-        "Free to use when open \u2014 no admission",
+        "Free to use when open — no admission",
         "Illuminated for evening skating",
         "Adjacent to Newmarket's main community hub",
         "Free skate rentals available on select days"
@@ -806,7 +819,7 @@
     },
     {
       "id": "newmarket-bouldering-gym",
-      "name": "Summit Climbing \u2014 Newmarket",
+      "name": "Summit Climbing — Newmarket",
       "type": "place",
       "category": "physical",
       "tags": [
@@ -824,14 +837,14 @@
       "neighborhood": "Davis Drive",
       "lat": 44.054,
       "lng": -79.445,
-      "hours": "Mon\u2013Fri 6am\u201311pm, Sat\u2013Sun 8am\u201310pm",
-      "description": "An indoor bouldering gym that's become a social hub for Newmarket's young crowd. The community here is unusually welcoming \u2014 complete strangers will spot you and yell encouragement. First visit is often the best.",
+      "hours": "Mon–Fri 6am–11pm, Sat–Sun 8am–10pm",
+      "description": "An indoor bouldering gym that's become a social hub for Newmarket's young crowd. The community here is unusually welcoming — complete strangers will spot you and yell encouragement. First visit is often the best.",
       "highlights": [
-        "Bouldering walls for all levels \u2014 no experience required",
+        "Bouldering walls for all levels — no experience required",
         "Routes are reset regularly so regulars never get bored",
         "Gym is social in a way most fitness spaces aren't",
         "Intro lesson available for first-timers",
-        "Open early and late \u2014 fits any schedule"
+        "Open early and late — fits any schedule"
       ],
       "why": "It sounds intimidating but it's genuinely not. Everyone starts at v0 and the regulars here actually want to help you get up the wall. Best new-sport energy in Newmarket.",
       "isRecommended": true,
@@ -840,7 +853,7 @@
     },
     {
       "id": "newmarket-indie-cafe-mainst",
-      "name": "The Belfry Caf\u00e9",
+      "name": "The Belfry Café",
       "type": "place",
       "category": "cafes-spaces",
       "tags": [
@@ -853,21 +866,21 @@
         "content creator spot"
       ],
       "cost": "low",
-      "costNote": "Drinks $4.50\u2013$8; food $7\u2013$14",
+      "costNote": "Drinks $4.50–$8; food $7–$14",
       "address": "Main Street South, Newmarket, ON",
       "neighborhood": "Downtown Newmarket",
       "lat": 44.057,
       "lng": -79.4639,
-      "hours": "Daily 8am\u20136pm",
-      "description": "A moody, independent caf\u00e9 tucked along Main Street with high ceilings, exposed brick, and the kind of carefully considered design that makes you want to take photos. The matcha latte is genuinely excellent and the espresso is sourced from a small Ontario roaster.",
+      "hours": "Daily 8am–6pm",
+      "description": "A moody, independent café tucked along Main Street with high ceilings, exposed brick, and the kind of carefully considered design that makes you want to take photos. The matcha latte is genuinely excellent and the espresso is sourced from a small Ontario roaster.",
       "highlights": [
-        "Exposed brick and warm lighting \u2014 actually looks like the photos",
+        "Exposed brick and warm lighting — actually looks like the photos",
         "Excellent matcha latte and single-origin espresso drinks",
-        "Ontario roaster beans \u2014 not commodity coffee",
+        "Ontario roaster beans — not commodity coffee",
         "Big windows onto Main Street for people-watching",
         "Usually quiet enough to work in on weekday afternoons"
       ],
-      "why": "The Main Street vibes in Newmarket are underrated and this caf\u00e9 is the best example. Sit by the window on a slow Tuesday and it feels like a completely different city.",
+      "why": "The Main Street vibes in Newmarket are underrated and this café is the best example. Sit by the window on a slow Tuesday and it feels like a completely different city.",
       "isRecommended": true,
       "isFree": false,
       "lastVerified": "2026-06-06"
@@ -887,23 +900,24 @@
         "indie"
       ],
       "cost": "low",
-      "costNote": "Items $10\u2013$60; curated vintage at fair prices",
+      "costNote": "Items $10–$60; curated vintage at fair prices",
       "address": "Main Street South, Newmarket, ON",
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0576,
       "lng": -79.4637,
-      "hours": "Thu\u2013Sun 12pm\u20136pm",
-      "description": "A small curated vintage shop on Newmarket's heritage Main Street with a focus on 70s\u201390s pieces, workwear, and pre-loved denim. Run by someone who actually knows fashion \u2014 every piece on the rack was chosen intentionally.",
+      "hours": "Thu–Sun 12pm–6pm",
+      "description": "A small curated vintage shop on Newmarket's heritage Main Street with a focus on 70s–90s pieces, workwear, and pre-loved denim. Run by someone who actually knows fashion — every piece on the rack was chosen intentionally.",
       "highlights": [
-        "Curated, not bulk \u2014 a small selection that's actually good",
-        "70s\u201390s pieces, workwear, denim, and occasional gems",
+        "Curated, not bulk — a small selection that's actually good",
+        "70s–90s pieces, workwear, denim, and occasional gems",
         "Reasonable prices for the level of curation",
         "Combines well with a Main Street coffee and stroll",
         "Instagram gives you a preview of current stock"
       ],
       "why": "The kind of vintage shop that doesn't feel like a treasure hunt through garbage. Small selection but everything is actually worth considering. Budget an hour for the street and this shop together.",
       "isFree": false,
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-06-06",
+      "isRecommended": false
     },
     {
       "id": "newmarket-skate-park",
@@ -925,17 +939,18 @@
       "lat": 44.0597,
       "lng": -79.4601,
       "hours": "Dawn to dusk, year-round",
-      "description": "A public skate park adjacent to Riverwalk Commons \u2014 concrete bowls, rails, and a street section that draws both skaters and BMX riders. Free, outdoors, and lively on warm evenings.",
+      "description": "A public skate park adjacent to Riverwalk Commons — concrete bowls, rails, and a street section that draws both skaters and BMX riders. Free, outdoors, and lively on warm evenings.",
       "highlights": [
-        "Concrete skate park \u2014 no equipment fee",
+        "Concrete skate park — no equipment fee",
         "Mix of street section and bowl/transition features",
         "Friendly to beginners on off-peak hours (weekday mornings)",
-        "Adjacent to Riverwalk Commons \u2014 good spectating spot too",
-        "Busy Friday evenings \u2014 good energy if you want to watch or meet people"
+        "Adjacent to Riverwalk Commons — good spectating spot too",
+        "Busy Friday evenings — good energy if you want to watch or meet people"
       ],
       "why": "Free and actually well-built for a municipal skate park. The bowl section is legitimately fun. Grab a coffee from Epoch down the road and lap the Commons after.",
       "isFree": true,
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-06-06",
+      "isRecommended": false
     },
     {
       "id": "newmarket-open-mic-scene",
@@ -957,17 +972,18 @@
       "lat": 44.0578,
       "lng": -79.4636,
       "hours": "Typically Wednesday and Thursday evenings",
-      "description": "Newmarket's Main Street has a rotating open mic scene across a couple of local bars and venues \u2014 free to attend, sign-up at the door, and genuinely supportive. Local songwriters, spoken word artists, and the occasional stand-up comedian share the same stage.",
+      "description": "Newmarket's Main Street has a rotating open mic scene across a couple of local bars and venues — free to attend, sign-up at the door, and genuinely supportive. Local songwriters, spoken word artists, and the occasional stand-up comedian share the same stage.",
       "highlights": [
-        "Free admission \u2014 just show up",
-        "Sign-up at the door \u2014 no pre-booking required",
+        "Free admission — just show up",
+        "Sign-up at the door — no pre-booking required",
         "All genres and formats welcome including spoken word",
         "Local musicians regularly turn into regulars you start recognizing",
         "Good low-pressure performance environment for new artists"
       ],
       "why": "Went to support a friend and ended up staying for three hours because the level was genuinely impressive. Newmarket has a real music community and this is where it surfaces.",
       "isFree": true,
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-06-06",
+      "isRecommended": false
     },
     {
       "id": "newmarket-fairy-lake-kayak",
@@ -990,17 +1006,18 @@
       "lat": 44.0536,
       "lng": -79.4674,
       "hours": "Dawn to dusk",
-      "description": "Fairy Lake is one of the only spots in York Region where you can launch a kayak or SUP board within walking distance of a downtown. On a calm morning the lake mirrors the surrounding trees and it's genuinely one of the most scenic spots in the area \u2014 and totally free.",
+      "description": "Fairy Lake is one of the only spots in York Region where you can launch a kayak or SUP board within walking distance of a downtown. On a calm morning the lake mirrors the surrounding trees and it's genuinely one of the most scenic spots in the area — and totally free.",
       "highlights": [
-        "Calm, flat water \u2014 ideal for SUP and kayaking",
+        "Calm, flat water — ideal for SUP and kayaking",
         "Completely free to use the lake",
         "Golden hour on the water here is absurdly beautiful",
-        "Early morning has near-zero wind \u2014 best paddle conditions",
+        "Early morning has near-zero wind — best paddle conditions",
         "Occasional rental pop-ups on weekends in summer"
       ],
       "why": "Brought a borrowed paddleboard here at 7am on a Saturday and had the whole lake to myself for an hour. The reflection on the water is the most underrated view in York Region.",
       "isFree": true,
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-06-06",
+      "isRecommended": false
     },
     {
       "id": "newmarket-mural-arts-trail",
@@ -1021,17 +1038,18 @@
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0574,
       "lng": -79.4638,
-      "description": "Newmarket has invested in public art along Main Street and the surrounding laneways \u2014 large-scale murals celebrating the town's history, natural spaces, and cultural diversity. Easy to walk in 20 minutes and actually impressive for a town this size.",
+      "description": "Newmarket has invested in public art along Main Street and the surrounding laneways — large-scale murals celebrating the town's history, natural spaces, and cultural diversity. Easy to walk in 20 minutes and actually impressive for a town this size.",
       "highlights": [
         "Multiple large-scale murals on building exteriors along Main Street",
         "Some pieces commissioned from regional professional artists",
-        "Great backdrop for photos \u2014 actual art, not just filler",
+        "Great backdrop for photos — actual art, not just filler",
         "Laneways between Main and Park Ave have additional pieces",
         "Self-guided, free, year-round"
       ],
       "why": "Newmarket's mural program is way better than you'd expect. A few of these pieces are genuinely striking. Good 20-minute walk between coffee and the farmers market.",
       "isFree": true,
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-06-06",
+      "isRecommended": false
     },
     {
       "id": "newmarket-night-market-pop",
@@ -1053,19 +1071,3193 @@
       "neighborhood": "Downtown Newmarket",
       "lat": 44.0591,
       "lng": -79.4594,
-      "description": "A seasonal evening market that pops up at Riverwalk Commons or Market Square on summer weekends \u2014 food trucks, local vendors, live music, and fairy lights. Feels more curated than a typical town festival.",
+      "description": "A seasonal evening market that pops up at Riverwalk Commons or Market Square on summer weekends — food trucks, local vendors, live music, and fairy lights. Feels more curated than a typical town festival.",
       "highlights": [
-        "Evening hours \u2014 starts at 5pm, best after sunset",
+        "Evening hours — starts at 5pm, best after sunset",
         "Mix of food trucks, artisan vendors, and local makers",
         "Live music and ambient lighting make for great vibes",
-        "Community-organized \u2014 supports local small businesses",
+        "Community-organized — supports local small businesses",
         "Check Newmarket's events calendar or Instagram for dates"
       ],
       "why": "Stumbled on this by accident and it was the best spontaneous night out I've had in Newmarket. Better energy than most planned events. Follow the town's social media so you don't miss it.",
       "isFree": true,
       "seasonal": true,
-      "seasonNote": "Summer weekends \u2014 dates vary, check @NewmarketON on social media",
-      "lastVerified": "2026-06-06"
+      "seasonNote": "Summer weekends — dates vary, check @NewmarketON on social media",
+      "lastVerified": "2026-06-06",
+      "isRecommended": false
+    },
+    {
+      "id": "newmarket-magna-centre",
+      "name": "Magna Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "ice",
+        "pool",
+        "fitness",
+        "arena",
+        "drop-in",
+        "affordable"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in $4–$9; public swim $5; fitness studio $6",
+      "address": "800 Mulock Drive, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.0413,
+      "lng": -79.4944,
+      "website": "https://www.newmarket.ca/recreation",
+      "hours": "Mon–Fri 6am–11pm, Sat–Sun 7am–10pm",
+      "description": "Newmarket's largest multi-pad arena and recreation complex — six ice pads, a full aquatic centre, fitness studio, and year-round drop-in programming. Drop-in rates are among the most affordable in York Region.",
+      "highlights": [
+        "Six NHL-sized ice pads with public skating on select sessions",
+        "Aquatic centre with lap lanes, leisure area, and hot tub",
+        "Drop-in fitness studio with cardio and free weights",
+        "Youth and adult registered programs across ice, swim, and fitness",
+        "Subsidized ACCESS passes available for qualifying residents"
+      ],
+      "why": "The scale of this facility is genuinely surprising for a town this size. Public skate on a weekend morning with a coffee from the lobby is a proper Newmarket ritual.",
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-mulock-farm-park",
+      "name": "Mulock Farm Heritage Park",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "park",
+        "trails",
+        "open space",
+        "heritage",
+        "free",
+        "dog-friendly"
+      ],
+      "cost": "free",
+      "address": "Mulock Drive, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.0432,
+      "lng": -79.444,
+      "website": "https://www.newmarket.ca/parks",
+      "description": "A large open heritage park along Mulock Drive with meadow areas, trail connections, and space for informal recreation. The site was a working farm and the open pastoral landscape still reflects that character.",
+      "highlights": [
+        "Wide meadow space — good for kite flying, casual sports, or sitting",
+        "Walking trail loop around the park perimeter",
+        "Heritage interpretive signage about the site's farm history",
+        "Dog-friendly with open running space",
+        "Connects to the wider Newmarket trail network"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-lions-park",
+      "name": "Lions Park",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "park",
+        "tennis",
+        "playground",
+        "free",
+        "outdoors",
+        "community"
+      ],
+      "cost": "free",
+      "address": "Hazel Street, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0624,
+      "lng": -79.4712,
+      "description": "A well-established neighbourhood park with four free public tennis courts, a playground, and open green space. One of the best places in central Newmarket for a free afternoon of outdoor activity.",
+      "highlights": [
+        "Four free hard-surface public tennis courts",
+        "First-come basis, no booking or fee required",
+        "Lit courts for evening play in summer",
+        "Playground and grassy area for families",
+        "Central location — walking distance from downtown"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-disc-golf",
+      "name": "Fairy Lake Disc Golf (Informal Course)",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "disc golf",
+        "free",
+        "outdoors",
+        "casual",
+        "park activity",
+        "unique"
+      ],
+      "cost": "free",
+      "address": "Fairy Lake Park, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.054,
+      "lng": -79.4668,
+      "description": "An informal disc golf layout through the wooded sections of Fairy Lake Park, used by the local disc golf community. Not officially marked but well-known among regulars. Bring your own discs.",
+      "highlights": [
+        "Free to play — just bring your own discs",
+        "Wooded parkland setting with natural obstacles",
+        "Casual, beginner-friendly atmosphere",
+        "Combines well with a post-round walk around the lake",
+        "Weekday mornings are quietest and best for learning"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-yoga-in-park",
+      "name": "Free Outdoor Yoga at Fairy Lake",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "yoga",
+        "outdoor",
+        "free",
+        "seasonal",
+        "community",
+        "wellness"
+      ],
+      "cost": "free",
+      "address": "Fairy Lake Park, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0536,
+      "lng": -79.4674,
+      "description": "A community-organized free outdoor yoga series at Fairy Lake Park through summer. All levels welcome, drop-in format, no registration. One of the more relaxed free fitness offerings in Newmarket.",
+      "highlights": [
+        "Free outdoor yoga with the lake as backdrop",
+        "All levels welcome — no experience needed",
+        "Bring your own mat; occasional loaner mats available",
+        "Community-led by volunteer instructors",
+        "Check the town events calendar for summer schedule"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Summer months (June–August), typically weekend mornings",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-fit4less",
+      "name": "Fit4Less Newmarket",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "gym",
+        "budget",
+        "fitness",
+        "weights",
+        "cardio",
+        "affordable"
+      ],
+      "cost": "low",
+      "costNote": "Membership from $15/month; no long-term contract required",
+      "address": "17665 Yonge Street, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.0285,
+      "lng": -79.4678,
+      "website": "https://www.fit4less.ca",
+      "hours": "24/7 member access",
+      "description": "A no-frills budget gym with full cardio and weight equipment. The most affordable full-access gym membership in Newmarket — functional, well-equipped, and open around the clock.",
+      "highlights": [
+        "Full cardio and weight room equipment",
+        "Membership from $15/month with no annual contract",
+        "24/7 access on most membership tiers",
+        "Group fitness classes included on standard membership",
+        "Multiple York Region locations if you travel regularly"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-pickering-bend-trail",
+      "name": "Pickering Bend Trail Loop",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "trail",
+        "river",
+        "walking",
+        "cycling",
+        "free",
+        "nature",
+        "year-round"
+      ],
+      "cost": "free",
+      "address": "Tom Taylor Trail, East Newmarket, ON",
+      "neighborhood": "East Newmarket",
+      "lat": 44.0685,
+      "lng": -79.4365,
+      "website": "https://www.newmarket.ca/trails",
+      "description": "A roughly 6km loop following the East Holland River through the Pickering Bend natural area — one of the most scenic trail sections in Newmarket. Consistent river views, wetland habitat, and minimal road crossings.",
+      "highlights": [
+        "Approximately 6km loop with consistent river views",
+        "Wetland habitat — herons, muskrats, and kingfishers common",
+        "Minimal road crossings — feels like leaving the city",
+        "Connects to the broader Tom Taylor Trail network",
+        "Year-round access; good winter walk when packed with snow"
+      ],
+      "isRecommended": true,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-york-region-forest",
+      "name": "York Region Forest — Bogarttown Tract",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "forest",
+        "trails",
+        "nature",
+        "mountain bike",
+        "free",
+        "year-round"
+      ],
+      "cost": "free",
+      "address": "Bogarttown Road, East Gwillimbury, ON (north Newmarket)",
+      "neighborhood": "North Newmarket",
+      "lat": 44.0845,
+      "lng": -79.441,
+      "website": "https://www.york.ca/forest",
+      "description": "York Region manages several forest tracts on Newmarket's northern fringe — mixed forest with unpaved trails open to hiking, trail running, and mountain biking. No facilities, no fees, and genuinely wild compared to the town's manicured parks.",
+      "highlights": [
+        "Natural unpaved trails through mature mixed forest",
+        "Open to hiking, trail running, and mountain biking",
+        "No entrance fee — park roadside and walk in",
+        "Wildlife including deer, wild turkey, and woodland birds",
+        "Connected to a broader network of York Region Forest tracts"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-oak-ridges-trail",
+      "name": "Oak Ridges Moraine Trail — North Newmarket",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "trail",
+        "moraine",
+        "nature",
+        "hiking",
+        "free",
+        "year-round"
+      ],
+      "cost": "free",
+      "address": "Green Lane area, North Newmarket, ON",
+      "neighborhood": "North Newmarket",
+      "lat": 44.083,
+      "lng": -79.442,
+      "website": "https://www.oakridgestrail.org",
+      "description": "The Oak Ridges Moraine Trail runs along Newmarket's northern boundary, giving easy access to one of Ontario's most significant ecological corridors. Wooded, mostly flat to rolling terrain through forest and farmland — genuinely quiet.",
+      "highlights": [
+        "Part of a 160km continuous trail across the Oak Ridges Moraine",
+        "Forest and agricultural landscape far from suburban noise",
+        "Low trail traffic even on weekends",
+        "Trail maps at oakridgestrail.org and the ORTA app",
+        "Year-round access; snowshoeing viable in winter"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-volleyball-dropin",
+      "name": "Newmarket Drop-In Volleyball",
+      "type": "program",
+      "category": "physical",
+      "tags": [
+        "volleyball",
+        "drop-in",
+        "social",
+        "sport",
+        "community",
+        "affordable"
+      ],
+      "cost": "low",
+      "costNote": "$5–$8 per session",
+      "address": "Ray Twinney Complex and Community Centres, Newmarket, ON",
+      "neighborhood": "City-wide",
+      "lat": 44.0582,
+      "lng": -79.4739,
+      "website": "https://www.newmarket.ca/recreation",
+      "description": "The Town of Newmarket runs weekly drop-in recreational volleyball at community gym facilities year-round. No team required, all skill levels welcome, and the group is consistently friendly.",
+      "highlights": [
+        "No pre-registration or team needed — just show up",
+        "Mixed skill levels, welcoming atmosphere",
+        "Year-round indoor sessions at multiple locations",
+        "$5–$8 per drop-in session",
+        "Separate youth and adult session times available"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-outdoor-pool",
+      "name": "Newmarket Outdoor Pool",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "swimming",
+        "outdoor",
+        "pool",
+        "summer",
+        "affordable",
+        "seasonal"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in $4–$6; children under 3 free",
+      "address": "Fairy Lake Park, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0538,
+      "lng": -79.467,
+      "website": "https://www.newmarket.ca/recreation",
+      "hours": "June–August, hours vary — check town website",
+      "description": "A seasonal outdoor pool adjacent to Fairy Lake, open through summer. One of the last outdoor municipal pools in York Region — a genuine summer institution for Newmarket families and lap swimmers.",
+      "highlights": [
+        "Outdoor pool in a park setting beside Fairy Lake",
+        "Lap lanes and leisure swimming area",
+        "Lifeguard supervised all open hours",
+        "Very affordable drop-in rate",
+        "Combine with a walk around the lake for a full outing"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "seasonal": true,
+      "seasonNote": "Open June through August; check town website for hours",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-badminton-club",
+      "name": "Newmarket Badminton Club",
+      "type": "program",
+      "category": "physical",
+      "tags": [
+        "badminton",
+        "sport",
+        "drop-in",
+        "affordable",
+        "community",
+        "indoor"
+      ],
+      "cost": "low",
+      "costNote": "$8–$12 per session; annual membership option",
+      "address": "Recreation facilities, Newmarket, ON",
+      "neighborhood": "City-wide",
+      "lat": 44.059,
+      "lng": -79.4613,
+      "description": "A community badminton club with drop-in sessions at local recreation facilities. All skill levels welcome. Equipment available to borrow at sessions, making it easy to try before investing in gear.",
+      "highlights": [
+        "Drop-in sessions open to all skill levels",
+        "Racket and shuttle lending for newcomers",
+        "Social and competitive stream options",
+        "Affordable per-session drop-in rate",
+        "Active and welcoming adult membership community"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-aquafit-programs",
+      "name": "Newmarket Aquafit Drop-In",
+      "type": "program",
+      "category": "physical",
+      "tags": [
+        "aquafit",
+        "swimming",
+        "fitness",
+        "low-impact",
+        "seniors",
+        "affordable"
+      ],
+      "cost": "low",
+      "costNote": "$5–$8 per session",
+      "address": "Ray Twinney Aquatic Centre, 100 Eagle Street West, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0582,
+      "lng": -79.4739,
+      "website": "https://www.newmarket.ca/recreation",
+      "hours": "Various times throughout the week",
+      "description": "Drop-in aquafit classes at the Ray Twinney Aquatic Centre — water-based group fitness that's low-impact and effective. Popular with older adults and anyone managing joint issues, but open to all fitness levels.",
+      "highlights": [
+        "Low-impact pool-based fitness — easy on joints",
+        "Drop-in format with no registration required",
+        "Multiple session times throughout the week",
+        "$5–$8 per session, very affordable",
+        "Open to all fitness levels; genuinely welcoming environment"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-riverwalk-running-path",
+      "name": "Riverwalk Commons River Path",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "running",
+        "walking",
+        "free",
+        "outdoor",
+        "year-round",
+        "paved"
+      ],
+      "cost": "free",
+      "address": "Riverwalk Commons, 200 Doug Duncan Drive, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0596,
+      "lng": -79.4597,
+      "description": "A paved walking and running path around the Riverwalk Commons area along the East Holland River. Free, well-lit in the evenings, and regularly used by Newmarket's recreational running community.",
+      "highlights": [
+        "Free paved path around the Commons along the river",
+        "Flat circuit suitable for intervals or casual laps",
+        "Well-lit for evening runs year-round",
+        "Connects to the broader Newmarket trail network",
+        "Adjacent to washrooms and the splash pad area"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-mill-pond-park",
+      "name": "Mill Pond Park",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "park",
+        "pond",
+        "walking",
+        "nature",
+        "quiet",
+        "free"
+      ],
+      "cost": "free",
+      "address": "Mill Street, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0648,
+      "lng": -79.4605,
+      "description": "A quiet neighbourhood park centred around a small pond — one of Newmarket's more peaceful green spaces. Good for a slow walk, birdwatching, or sitting near the water without Fairy Lake's weekend crowds.",
+      "highlights": [
+        "Small scenic pond with resident waterfowl",
+        "Wooded perimeter with benches and picnic tables",
+        "Good seasonal songbird activity in spring and fall",
+        "Accessible paved paths around the pond",
+        "Quieter alternative to Fairy Lake on busy summer weekends"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-distress-centre",
+      "name": "Distress Centre York Region",
+      "type": "resource",
+      "category": "mental",
+      "tags": [
+        "crisis support",
+        "mental health",
+        "free",
+        "24/7",
+        "phone",
+        "confidential"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON (phone and online support)",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "website": "https://www.distresscentreyork.com",
+      "hours": "24/7, every day of the year",
+      "description": "A 24/7 crisis and distress support line serving all of York Region including Newmarket. Free, confidential, and available any time by phone, text, or chat — no appointment or referral needed.",
+      "highlights": [
+        "24/7 phone, text, and chat support — free and confidential",
+        "Crisis support and general emotional distress support",
+        "No appointment or referral required",
+        "Trained volunteer counsellors on every call",
+        "Can connect callers to local mental health resources in York Region"
+      ],
+      "isRecommended": true,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-mental-health-walkin",
+      "name": "York Region Mental Health Walk-In Clinic",
+      "type": "resource",
+      "category": "mental",
+      "tags": [
+        "mental health",
+        "walk-in",
+        "free",
+        "counselling",
+        "no referral",
+        "same-day"
+      ],
+      "cost": "free",
+      "address": "465 Davis Drive, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0558,
+      "lng": -79.4426,
+      "website": "https://www.york.ca/mentalhealth",
+      "hours": "Mon–Fri 9am–5pm; some evening availability",
+      "description": "A free, no-appointment walk-in mental health clinic for York Region residents. Offers same-day or next-day brief counselling sessions with a registered mental health clinician. No OHIP card required for most services.",
+      "highlights": [
+        "Free same-day or next-day appointments",
+        "No referral or OHIP card required for most services",
+        "Brief counselling sessions with registered clinicians",
+        "Available for both youth and adults",
+        "Multiple York Region locations if this one is full"
+      ],
+      "why": "Many people don't know this exists. If you're having a hard time and can't wait weeks for an appointment, this is the place to go.",
+      "isRecommended": true,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-adult-literacy",
+      "name": "Adult Literacy York Region",
+      "type": "resource",
+      "category": "mental",
+      "tags": [
+        "literacy",
+        "learning",
+        "free",
+        "adult education",
+        "reading",
+        "writing"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON (multiple locations)",
+      "neighborhood": "City-wide",
+      "website": "https://www.adultliteracyyorkregion.ca",
+      "hours": "Mon–Fri, by appointment",
+      "description": "A free adult literacy program serving York Region residents — one-on-one and small group support for adults looking to improve reading, writing, and numeracy skills. All sessions confidential and judgment-free.",
+      "highlights": [
+        "Free one-on-one tutoring and small group sessions",
+        "Reading, writing, numeracy, and digital literacy programs",
+        "All sessions fully confidential",
+        "Flexible scheduling around work and family",
+        "Also supports adults upgrading skills for employment"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-earlyon-family",
+      "name": "EarlyON Child and Family Centre",
+      "type": "program",
+      "category": "mental",
+      "tags": [
+        "families",
+        "children",
+        "free",
+        "early childhood",
+        "parenting",
+        "drop-in"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON (multiple locations)",
+      "neighborhood": "City-wide",
+      "website": "https://www.york.ca/earlyon",
+      "hours": "Mon–Fri, various times — check location schedule",
+      "description": "Free drop-in programs for families with children 0–6 years. Includes play-based activities, parenting support, and connections to community services. A genuinely useful resource for new parents and caregivers navigating early childhood.",
+      "highlights": [
+        "Free drop-in programs for children 0–6 and their caregivers",
+        "Play-based learning and developmental activities",
+        "Parenting support and information from early childhood professionals",
+        "Connections to local family services and supports",
+        "Multiple Newmarket locations with varied programming schedules"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-peer-support",
+      "name": "Peer Support York Region",
+      "type": "resource",
+      "category": "mental",
+      "tags": [
+        "peer support",
+        "mental health",
+        "free",
+        "community",
+        "social",
+        "wellbeing"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.cmha-yr.on.ca",
+      "hours": "Varies by program — check CMHA York Region website",
+      "description": "Peer support programs through CMHA York Region — free mental health support offered by people with lived experience. Includes one-on-one peer support, group programs, and connections to community resources.",
+      "highlights": [
+        "Free support from trained peers with lived mental health experience",
+        "One-on-one peer support and facilitated group programs",
+        "Warm, non-clinical environment",
+        "Available to York Region residents without referral",
+        "Programs for adults, youth, and seniors"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-grief-support",
+      "name": "Grief Support Group — Southlake Area",
+      "type": "program",
+      "category": "mental",
+      "tags": [
+        "grief",
+        "bereavement",
+        "support group",
+        "free",
+        "community",
+        "healing"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON (location varies by program)",
+      "neighborhood": "City-wide",
+      "website": "https://www.cmha-yr.on.ca",
+      "hours": "Check current schedule — programs run in sessions",
+      "description": "Community-based grief and bereavement support groups serving Newmarket and surrounding York Region communities. Free, facilitated by trained volunteers, and open to anyone experiencing loss.",
+      "highlights": [
+        "Free facilitated grief support groups",
+        "Open to adults experiencing any type of loss",
+        "Facilitated by trained bereavement volunteers",
+        "Small, confidential group format",
+        "Referrals available to one-on-one support if needed"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-mindfulness-studio",
+      "name": "Breathing Space Meditation Centre",
+      "type": "place",
+      "category": "mental",
+      "tags": [
+        "meditation",
+        "mindfulness",
+        "affordable",
+        "classes",
+        "drop-in",
+        "wellness"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in $10–$18; first class often free",
+      "address": "Main Street area, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0572,
+      "lng": -79.4635,
+      "hours": "Mon–Fri 7am–8pm, Sat–Sun 8am–6pm",
+      "description": "A small community meditation and mindfulness centre offering drop-in guided sessions and short courses. Intentionally kept affordable and beginner-friendly — not a wellness brand, just a quiet space for the practice.",
+      "highlights": [
+        "Drop-in guided meditation sessions — no prior experience required",
+        "Beginner-friendly introductions to mindfulness",
+        "Short 4 and 8-week courses on specific practices",
+        "Sliding scale pricing available on request",
+        "Small group sessions — never crowded or performative"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-continuing-education",
+      "name": "Seneca Newmarket Campus — Continuing Education",
+      "type": "program",
+      "category": "mental",
+      "tags": [
+        "education",
+        "courses",
+        "skills",
+        "affordable",
+        "adult learning",
+        "certificate"
+      ],
+      "cost": "moderate",
+      "costNote": "Course fees vary, typically $150–$600 per course",
+      "address": "17815 Yonge Street, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.029,
+      "lng": -79.4682,
+      "website": "https://www.senecapolytechnic.ca/ce",
+      "description": "Seneca's Newmarket campus offers continuing education and professional development courses for adults — certificates, online options, and evening classes in business, technology, health, and creative fields.",
+      "highlights": [
+        "Certificate and professional development courses for adults",
+        "Evening and weekend scheduling for working learners",
+        "Online options for most programs",
+        "Courses in business, IT, health, and creative arts",
+        "Stackable credentials toward full certificates or diplomas"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-library-digital-hub",
+      "name": "Library Digital Learning Hub",
+      "type": "program",
+      "category": "mental",
+      "tags": [
+        "digital skills",
+        "free",
+        "library",
+        "technology",
+        "learning",
+        "drop-in"
+      ],
+      "cost": "free",
+      "address": "438 Park Avenue, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.059,
+      "lng": -79.4607,
+      "website": "https://www.newmarketpl.ca",
+      "hours": "During library hours; digital help desks on select days",
+      "description": "Free digital literacy programs and tech help through the Newmarket Public Library — smartphone help, computer basics, internet safety, and access to LinkedIn Learning and other online learning platforms.",
+      "highlights": [
+        "Free one-on-one tech help sessions — no question too basic",
+        "Smartphone and tablet workshops for all ages",
+        "Free access to LinkedIn Learning and Kanopy for cardholders",
+        "Internet safety and online scam awareness sessions",
+        "Computer stations available during all library hours"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-reading-group",
+      "name": "Community Book Clubs at Newmarket Library",
+      "type": "program",
+      "category": "mental",
+      "tags": [
+        "book club",
+        "reading",
+        "social",
+        "free",
+        "community",
+        "library"
+      ],
+      "cost": "free",
+      "address": "438 Park Avenue, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.059,
+      "lng": -79.4607,
+      "website": "https://www.newmarketpl.ca",
+      "hours": "Monthly meetings — check the library events calendar",
+      "description": "The Newmarket Public Library runs multiple monthly book clubs for different reading interests — literary fiction, genre fiction, and non-fiction groups meeting at the library. Free with a library card.",
+      "highlights": [
+        "Multiple book clubs with different genre focuses",
+        "Free to join with a Newmarket library card",
+        "Books often available through the library collection",
+        "Monthly meetings at the library with facilitated discussion",
+        "A reliable way to meet people around a shared interest"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-toastmasters",
+      "name": "Newmarket Toastmasters",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "public speaking",
+        "confidence",
+        "community",
+        "affordable",
+        "networking",
+        "skills"
+      ],
+      "cost": "low",
+      "costNote": "Membership ~$60/6 months; guests attend free",
+      "address": "Newmarket, ON (meeting location varies)",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "website": "https://www.toastmasters.org",
+      "hours": "Bi-weekly evening meetings",
+      "description": "A Toastmasters chapter in Newmarket — a structured community for building public speaking and communication skills. Guests can attend meetings for free before joining. One of the most cost-effective ways to develop confidence in front of an audience.",
+      "highlights": [
+        "Bi-weekly meeting format with prepared and impromptu speaking",
+        "Guests always welcome — come and observe for free",
+        "Structured program with progressive skill development",
+        "Supportive, non-competitive group culture",
+        "Membership about $60 per six months — very affordable"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-newcomers-centre",
+      "name": "Newmarket Newcomers Services",
+      "type": "resource",
+      "category": "social",
+      "tags": [
+        "newcomers",
+        "settlement",
+        "free",
+        "language",
+        "community",
+        "integration"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.york.ca/newcomers",
+      "hours": "Mon–Fri 8:30am–4:30pm",
+      "description": "Settlement and newcomer support services for recent immigrants and refugees in Newmarket and York Region. Free programs include language support, employment help, orientation to services, and community connections.",
+      "highlights": [
+        "Free English conversation circles and language practice",
+        "Settlement assistance and orientation to Canadian systems",
+        "Employment support and credential recognition guidance",
+        "Connections to cultural community groups in York Region",
+        "Welcoming to all immigration statuses — no judgment"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-community-choir",
+      "name": "Newmarket Community Choir",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "choir",
+        "singing",
+        "community",
+        "music",
+        "affordable",
+        "social"
+      ],
+      "cost": "low",
+      "costNote": "Membership fee ~$120/season; rehearsals open to drop-in guests",
+      "address": "Newmarket, ON (rehearsal location varies)",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "description": "A community choir open to adults of all singing abilities in Newmarket — no audition required. Rehearsals run through fall and winter with seasonal concerts. A good way to be part of something musical without playing an instrument.",
+      "highlights": [
+        "No audition required — open to all voice types and abilities",
+        "Seasonal rehearsal schedule with fall/winter concerts",
+        "Repertoire ranges from classical to contemporary",
+        "Strong social component — post-rehearsal outings common",
+        "New members always welcomed at the start of each season"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-minor-hockey",
+      "name": "York Region Minor Hockey Association",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "hockey",
+        "youth",
+        "team sport",
+        "community",
+        "skating",
+        "seasonal"
+      ],
+      "cost": "moderate",
+      "costNote": "Registration fees vary by age group; financial assistance available",
+      "address": "Newmarket and surrounding area arenas",
+      "neighborhood": "City-wide",
+      "website": "https://www.yrmha.ca",
+      "description": "Youth hockey programs through York Region Minor Hockey — house league and competitive streams for players from novice through midget age groups. One of the largest minor hockey associations in Ontario.",
+      "highlights": [
+        "House league and competitive stream options",
+        "Age groups from novice (age 5+) through midget",
+        "Learn to skate and beginner programs available",
+        "Financial assistance available for families — ask when registering",
+        "Volunteer opportunities for parents and community members"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-lacrosse-club",
+      "name": "Newmarket Panthers Lacrosse",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "lacrosse",
+        "youth",
+        "sport",
+        "community",
+        "team",
+        "summer"
+      ],
+      "cost": "moderate",
+      "costNote": "Registration fees vary by program; financial assistance available",
+      "address": "Magna Centre and area facilities, Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.newmarketlacrosse.com",
+      "description": "Newmarket's community lacrosse club offering box and field lacrosse programs for youth and adults. Both house league and competitive streams available through summer and indoor winter seasons.",
+      "highlights": [
+        "Box lacrosse (indoor) and field lacrosse options",
+        "Youth programs from beginner to competitive",
+        "Adult recreational leagues available",
+        "Equipment loaner programs for new players",
+        "Strong local club with active community involvement"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-minor-baseball",
+      "name": "Newmarket Minor Baseball",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "baseball",
+        "youth",
+        "sport",
+        "community",
+        "summer",
+        "team"
+      ],
+      "cost": "low",
+      "costNote": "Registration fees $80–$200 depending on age/level",
+      "address": "Baseball diamonds throughout Newmarket",
+      "neighborhood": "City-wide",
+      "website": "https://www.newmarketbaseball.com",
+      "description": "Youth baseball programs through Newmarket Minor Baseball — house league and competitive streams for children and teens through a full summer outdoor season. One of the more affordable organized youth sports in town.",
+      "highlights": [
+        "House league and competitive stream options",
+        "Age groups from T-ball (age 4+) through junior",
+        "Equipment loaner program for families new to the sport",
+        "Summer season outdoor play at Newmarket baseball diamonds",
+        "Lower cost per season compared to most youth team sports"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-running-club",
+      "name": "Newmarket Running Club",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "running",
+        "community",
+        "free",
+        "fitness",
+        "social",
+        "outdoor"
+      ],
+      "cost": "free",
+      "address": "Various start points in Newmarket (Riverwalk Commons, Fairy Lake)",
+      "neighborhood": "City-wide",
+      "lat": 44.0595,
+      "lng": -79.4598,
+      "description": "An informal community running group that meets weekly at Newmarket's parks and trail network. Free, welcoming to all paces, and a good way to combine fitness with a social outlet — post-run coffee at Epoch is a regular tradition.",
+      "highlights": [
+        "Free weekly group runs through Newmarket's trails and parks",
+        "All paces welcome — no one gets left behind",
+        "Routes change weekly — Fairy Lake, Tom Taylor Trail, and beyond",
+        "Social post-run gathering common on weekend runs",
+        "Check local running groups on Facebook or Strava for schedule"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-community-living",
+      "name": "Community Living York South",
+      "type": "resource",
+      "category": "social",
+      "tags": [
+        "disability",
+        "community",
+        "inclusion",
+        "programs",
+        "support",
+        "social"
+      ],
+      "cost": "varies",
+      "costNote": "Many programs free or subsidized; some have fees",
+      "address": "1095 Gorham Street, Newmarket, ON",
+      "neighborhood": "North Newmarket",
+      "lat": 44.0698,
+      "lng": -79.4606,
+      "website": "https://www.communitylivingyorksouth.ca",
+      "hours": "Mon–Fri 8:30am–4:30pm",
+      "description": "An organization supporting people with intellectual disabilities and their families in York South. Offers community inclusion programs, employment support, residential services, and recreational programming.",
+      "highlights": [
+        "Community inclusion and social programs for people with disabilities",
+        "Employment and day programs for adults",
+        "Family support and respite services",
+        "Volunteer opportunities for community members",
+        "A community thrift store that also employs members"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-mens-shed",
+      "name": "Newmarket Men's Shed",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "men",
+        "community",
+        "social",
+        "crafts",
+        "mental health",
+        "drop-in"
+      ],
+      "cost": "free",
+      "costNote": "Free to attend; small membership fee optional",
+      "address": "Newmarket, ON (location varies)",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "description": "A Men's Shed chapter in Newmarket — a community space where men gather to work on projects, share skills, and connect socially. Rooted in the international Men's Shed movement for reducing isolation among adult men.",
+      "highlights": [
+        "Informal drop-in space for men to connect and work on projects",
+        "Woodworking, crafts, and practical skills sharing",
+        "No agenda or pressure — show up and get involved at your own pace",
+        "Proven model for reducing social isolation among older men",
+        "Welcoming to men of all ages and backgrounds"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-friendship-circle",
+      "name": "Newmarket International Friendship Club",
+      "type": "program",
+      "category": "social",
+      "tags": [
+        "newcomers",
+        "social",
+        "multicultural",
+        "community",
+        "free",
+        "events"
+      ],
+      "cost": "free",
+      "costNote": "Free events; some outings have small costs",
+      "address": "Newmarket Cultural Centre, 505 Pickering Crescent, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0562,
+      "lng": -79.4614,
+      "description": "A community social club connecting newcomers and long-term residents in Newmarket through regular free events, cultural potlucks, and social outings. A practical way to build social connections in a new community.",
+      "highlights": [
+        "Free monthly social events and cultural celebrations",
+        "Mix of newcomers and established residents",
+        "English conversation practice in a social setting",
+        "Potluck dinners showcasing members' home cuisines",
+        "Welcoming to anyone interested in multicultural community"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-food-bank",
+      "name": "Our Daily Bread Food Bank",
+      "type": "resource",
+      "category": "financial",
+      "tags": [
+        "food bank",
+        "free",
+        "emergency",
+        "food",
+        "community",
+        "no judgment"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.ourdailybread.ca",
+      "hours": "Check current hours — varies by program day",
+      "description": "A food bank serving Newmarket and surrounding communities. Free grocery hampers and emergency food support for individuals and families. No income documentation required to access support.",
+      "highlights": [
+        "Free grocery hampers for individuals and families in need",
+        "No income verification or documentation required",
+        "Emergency and ongoing support available",
+        "Dignified, respectful service model",
+        "Also accepts food donations from community members"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-salvation-army-programs",
+      "name": "Salvation Army Newmarket Community Programs",
+      "type": "resource",
+      "category": "financial",
+      "tags": [
+        "emergency assistance",
+        "food",
+        "free",
+        "community",
+        "support",
+        "housing"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.salvationarmy.ca",
+      "hours": "Mon–Fri 9am–4pm",
+      "description": "The Salvation Army in Newmarket offers emergency financial assistance, food support, utility help, and connections to community services. A practical first stop for residents facing financial crisis.",
+      "highlights": [
+        "Emergency food assistance and food hampers",
+        "Emergency financial help for utilities, rent, and essentials",
+        "No faith requirement to access services",
+        "Warm referral to other local support organizations",
+        "Accepts donations of food, clothing, and household items"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-restore-habitat",
+      "name": "Habitat for Humanity York ReStore",
+      "type": "place",
+      "category": "financial",
+      "tags": [
+        "affordable",
+        "home improvement",
+        "secondhand",
+        "building materials",
+        "furniture",
+        "discounted"
+      ],
+      "cost": "low",
+      "costNote": "Items deeply discounted — typically 50–80% below retail",
+      "address": "Newmarket area, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.031,
+      "lng": -79.453,
+      "website": "https://www.habitatyork.ca/restore",
+      "hours": "Tue–Sat 9am–5pm",
+      "description": "A Habitat for Humanity resale store selling donated building materials, appliances, furniture, and home goods at significantly reduced prices. Proceeds fund affordable housing projects in York Region.",
+      "highlights": [
+        "Appliances, furniture, and building materials at 50–80% off retail",
+        "Frequent turnover of inventory — worth checking regularly",
+        "Proceeds directly fund Habitat for Humanity affordable housing",
+        "Accepts donations of usable home goods and building materials",
+        "Good for DIY home projects on a tight budget"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-legal-aid",
+      "name": "Legal Aid Ontario — York Region",
+      "type": "resource",
+      "category": "financial",
+      "tags": [
+        "legal aid",
+        "free",
+        "housing",
+        "family law",
+        "immigration",
+        "support"
+      ],
+      "cost": "free",
+      "address": "Newmarket Court House area, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0571,
+      "lng": -79.4609,
+      "website": "https://www.legalaid.on.ca",
+      "hours": "Mon–Fri 9am–5pm",
+      "description": "Free and subsidized legal services for eligible low-income residents in York Region. Covers criminal, family, housing, and immigration law. Call the central intake line to check eligibility and access support.",
+      "highlights": [
+        "Free legal representation for eligible low-income residents",
+        "Criminal, family, housing, and immigration matters covered",
+        "Duty counsel available at the Newmarket courthouse",
+        "Call the 1-800 intake line to check eligibility quickly",
+        "Also offers public legal information to anyone"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-ymca-employment",
+      "name": "YMCA Employment Services Newmarket",
+      "type": "resource",
+      "category": "financial",
+      "tags": [
+        "employment",
+        "job search",
+        "free",
+        "resume",
+        "career",
+        "newcomers"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.ymcagta.org/employment",
+      "hours": "Mon–Fri 8:30am–5pm",
+      "description": "Free employment support services funded through Employment Ontario — resume help, interview coaching, job searching support, and connections to training programs. Available to any Ontario resident who is not currently employed.",
+      "highlights": [
+        "Free resume writing and review services",
+        "Interview preparation and job search coaching",
+        "Access to job boards and employer connections",
+        "Employment training programs with funded options",
+        "Specialized support for newcomers and career changers"
+      ],
+      "isRecommended": true,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-service-ontario",
+      "name": "ServiceOntario Centre — Newmarket",
+      "type": "resource",
+      "category": "financial",
+      "tags": [
+        "government",
+        "ID",
+        "health card",
+        "driver's license",
+        "free services",
+        "official"
+      ],
+      "cost": "varies",
+      "costNote": "Government fees apply for some services; many transactions are free",
+      "address": "465 Davis Drive, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0558,
+      "lng": -79.4426,
+      "website": "https://www.ontario.ca/serviceontario",
+      "hours": "Mon–Fri 8:30am–5pm",
+      "description": "A provincial government service centre for health cards, driver's licences, vehicle registration, birth certificates, and other official documents. The main point of contact for Ontario government identification needs in Newmarket.",
+      "highlights": [
+        "Health card applications and renewals (free)",
+        "Driver's licence and vehicle registration services",
+        "Birth, death, and marriage certificate requests",
+        "Business name registration and renewals",
+        "Book appointments online to avoid wait times"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-rent-bank",
+      "name": "York Region Rent Bank",
+      "type": "resource",
+      "category": "financial",
+      "tags": [
+        "rent",
+        "housing",
+        "emergency",
+        "free",
+        "financial assistance",
+        "support"
+      ],
+      "cost": "free",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.york.ca/housing",
+      "hours": "Mon–Fri 8:30am–4:30pm",
+      "description": "York Region's Rent Bank provides one-time emergency rent assistance to prevent eviction for eligible tenants. A critical safety net for renters facing a temporary financial crisis — not widely publicized but genuinely available.",
+      "highlights": [
+        "One-time emergency rent assistance to prevent eviction",
+        "Repayable interest-free loan or grant depending on situation",
+        "Available to York Region tenants facing temporary financial crisis",
+        "Application through York Region Housing Services",
+        "Can be combined with other emergency supports"
+      ],
+      "why": "Most renters in financial crisis don't know this exists until it's too late. If you're facing eviction, contact York Region Housing Services immediately.",
+      "isRecommended": true,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-tax-clinic",
+      "name": "Community Volunteer Income Tax Program",
+      "type": "program",
+      "category": "financial",
+      "tags": [
+        "tax",
+        "free",
+        "income",
+        "benefits",
+        "filing",
+        "seasonal"
+      ],
+      "cost": "free",
+      "address": "Various community locations, Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "hours": "February–April; specific clinic dates and hours vary",
+      "description": "Free income tax filing assistance offered by trained volunteer tax preparers at community locations across Newmarket each tax season. Available to eligible residents with modest income and simple tax situations.",
+      "highlights": [
+        "Free income tax filing by trained CRA-certified volunteers",
+        "Available to residents with modest income and simple tax returns",
+        "Ensures access to all eligible benefits and credits",
+        "Clinics run February through April at multiple Newmarket locations",
+        "Can unlock hundreds of dollars in missed benefits for eligible filers"
+      ],
+      "why": "The free clinic alone can unlock hundreds of dollars in refunds and benefits for eligible residents who aren't filing. The GST/HST credit, Ontario Trillium Benefit, and Canada Child Benefit all depend on a filed return.",
+      "isRecommended": true,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Tax clinics run February through April each year",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-artworks-gallery",
+      "name": "Newmarket Artworks — Town Hall Gallery",
+      "type": "place",
+      "category": "arts-crafts",
+      "tags": [
+        "gallery",
+        "local art",
+        "free",
+        "exhibitions",
+        "community",
+        "visual art"
+      ],
+      "cost": "free",
+      "address": "395 Mulock Drive, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.0442,
+      "lng": -79.4662,
+      "website": "https://www.newmarket.ca/culture",
+      "hours": "Mon–Fri 8:30am–4:30pm",
+      "description": "A rotating gallery space at Newmarket's Town Hall facility showcasing work by local and regional artists. Free, accessible during business hours, and updated with new exhibitions several times a year.",
+      "highlights": [
+        "Rotating exhibitions featuring Newmarket and York Region artists",
+        "Free admission during town hall business hours",
+        "Mix of emerging and established local artists",
+        "Juried and open-call exhibitions throughout the year",
+        "Occasional artist talks and opening receptions"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-york-arts-council",
+      "name": "York Region Arts Council",
+      "type": "resource",
+      "category": "arts-crafts",
+      "tags": [
+        "arts",
+        "grants",
+        "community",
+        "artists",
+        "support",
+        "programs"
+      ],
+      "cost": "free",
+      "address": "York Region, ON (serves Newmarket)",
+      "neighborhood": "City-wide",
+      "website": "https://www.yartscouncil.ca",
+      "description": "A regional arts development organization supporting artists and arts organizations across York Region. Offers grants, workshops, professional development, and an artist registry for Newmarket-based creators.",
+      "highlights": [
+        "Annual grants for individual artists and arts organizations",
+        "Professional development workshops and networking events",
+        "Public artist registry and resource directory",
+        "Advocacy for arts funding and cultural policy in York Region",
+        "Free information and resources for artists at any career stage"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-pottery-studio",
+      "name": "Earth & Kiln Community Pottery",
+      "type": "place",
+      "category": "arts-crafts",
+      "tags": [
+        "pottery",
+        "ceramics",
+        "classes",
+        "studio",
+        "hands-on",
+        "creative"
+      ],
+      "cost": "moderate",
+      "costNote": "Classes $160–$220 per 8-week session; drop-in studio time lower",
+      "address": "Main Street area, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0573,
+      "lng": -79.4634,
+      "hours": "Tue–Sat 10am–8pm",
+      "description": "A community pottery studio offering wheel-throwing and hand-building classes for adults and youth. Kiln access, open studio time, and small class sizes make this one of the more hands-on creative spaces in Newmarket.",
+      "highlights": [
+        "Wheel throwing and hand-building classes for all levels",
+        "Kiln access and open studio time for enrolled students",
+        "Small class sizes — max 8 per session",
+        "Beginner 8-week sessions run each season",
+        "All materials included in session fees"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-photography-club",
+      "name": "Newmarket Photography Club",
+      "type": "program",
+      "category": "arts-crafts",
+      "tags": [
+        "photography",
+        "community",
+        "affordable",
+        "learning",
+        "social",
+        "club"
+      ],
+      "cost": "low",
+      "costNote": "Annual membership ~$40; meetings free for members",
+      "address": "Newmarket Cultural Centre, 505 Pickering Crescent, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0562,
+      "lng": -79.4614,
+      "description": "A community photography club meeting monthly to share work, learn technique, and organize photo walks around Newmarket. All camera types welcome — smartphone photographers included.",
+      "highlights": [
+        "Monthly meetings with member image sharing and critique",
+        "Photo walks throughout Newmarket and York Region",
+        "Guest speakers and technique workshops",
+        "Annual club print exhibition",
+        "Welcoming to all levels and all camera types"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-stitch-chat",
+      "name": "Stitch & Chat — Community Knitting Circle",
+      "type": "program",
+      "category": "arts-crafts",
+      "tags": [
+        "knitting",
+        "crochet",
+        "crafts",
+        "social",
+        "free",
+        "community"
+      ],
+      "cost": "free",
+      "address": "Newmarket Public Library, 438 Park Avenue, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.059,
+      "lng": -79.4607,
+      "website": "https://www.newmarketpl.ca",
+      "hours": "Weekly sessions — check library program calendar",
+      "description": "A weekly drop-in knitting and crochet circle at the Newmarket Public Library. Free, casual, no experience needed — bring a project or start one. Good conversation guaranteed.",
+      "highlights": [
+        "Free weekly drop-in, no registration required",
+        "Knitting and crochet welcome — any fiber craft accepted",
+        "Beginner-friendly — members happy to help you learn",
+        "A reliable social gathering for crafters of all ages",
+        "Held at the library — grab a book after"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-art-studio-main",
+      "name": "The Studio on Main — Mixed Media Art",
+      "type": "place",
+      "category": "arts-crafts",
+      "tags": [
+        "art studio",
+        "workshops",
+        "mixed media",
+        "classes",
+        "creative",
+        "adults"
+      ],
+      "cost": "moderate",
+      "costNote": "Workshops $35–$80 per session; multi-session courses available",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0577,
+      "lng": -79.4639,
+      "hours": "Wed–Sun 10am–6pm",
+      "description": "A small independent art studio on Main Street offering drop-in workshops and multi-session courses in painting, drawing, collage, and mixed media. Aimed at adults and teens with no prior experience assumed.",
+      "highlights": [
+        "Drop-in workshops — no long-term commitment needed",
+        "Painting, drawing, collage, and mixed media options",
+        "No prior experience required for most sessions",
+        "Small group format — personal instruction guaranteed",
+        "All materials provided in workshop fees"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-outdoor-sketching",
+      "name": "Newmarket Urban Sketchers",
+      "type": "program",
+      "category": "arts-crafts",
+      "tags": [
+        "sketching",
+        "drawing",
+        "outdoors",
+        "community",
+        "free",
+        "urban sketching"
+      ],
+      "cost": "free",
+      "address": "Various locations, Newmarket, ON (Main Street, Fairy Lake, Riverwalk)",
+      "neighborhood": "City-wide",
+      "lat": 44.0574,
+      "lng": -79.4638,
+      "description": "An informal group of urban sketchers who meet to draw Newmarket's streets, parks, and architecture together. Drop-in, free, and welcoming to any skill level — the point is being out and observing, not technical perfection.",
+      "highlights": [
+        "Free drop-in sketching meetups — any drawing medium welcome",
+        "Rotating locations around Newmarket",
+        "All skill levels, from absolute beginners to experienced illustrators",
+        "Post-sketch sharing and light critique if wanted",
+        "Connected to the international Urban Sketchers community"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-screen-print",
+      "name": "Community Screen Print Nights",
+      "type": "event",
+      "category": "arts-crafts",
+      "tags": [
+        "screen printing",
+        "craft",
+        "DIY",
+        "workshop",
+        "affordable",
+        "hands-on"
+      ],
+      "cost": "low",
+      "costNote": "$25–$45 per session including materials",
+      "address": "Newmarket, ON (location varies — check event listing)",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0572,
+      "lng": -79.4637,
+      "description": "Pop-up screen printing workshops organized through local arts venues — print your own design onto fabric, tote bags, or paper in a casual evening setting. Materials provided, no experience required.",
+      "highlights": [
+        "Print your own design onto fabric or paper",
+        "All materials and equipment provided",
+        "No experience needed — guided step-by-step",
+        "Take home a finished, wearable piece each session",
+        "Small group format for personal attention"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-art-in-park",
+      "name": "Art in the Park — Fairy Lake (Summer Event)",
+      "type": "event",
+      "category": "arts-crafts",
+      "tags": [
+        "art show",
+        "outdoor",
+        "free",
+        "seasonal",
+        "local artists",
+        "community"
+      ],
+      "cost": "free",
+      "address": "Fairy Lake Park, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0536,
+      "lng": -79.4674,
+      "description": "An annual summer outdoor art show at Fairy Lake Park featuring local and regional artists displaying and selling original work. Free to attend and browse — one of Newmarket's genuinely enjoyable summer days.",
+      "highlights": [
+        "Dozens of local artists exhibiting original work outdoors",
+        "Painting, sculpture, jewelry, ceramics, and photography",
+        "Free admission to browse all exhibitors",
+        "Opportunity to buy directly from the artist",
+        "Beautiful lakeside setting — pair with a walk around the park"
+      ],
+      "isRecommended": true,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Summer event — typically July or August; check town events calendar for dates",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-watercolour-society",
+      "name": "Newmarket Watercolour Society",
+      "type": "program",
+      "category": "arts-crafts",
+      "tags": [
+        "watercolour",
+        "painting",
+        "art club",
+        "community",
+        "affordable",
+        "workshops"
+      ],
+      "cost": "low",
+      "costNote": "Annual membership ~$60; workshops additional",
+      "address": "Newmarket Cultural Centre, 505 Pickering Crescent, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0562,
+      "lng": -79.4614,
+      "description": "A community society for watercolour painters of all levels meeting regularly at the Newmarket Cultural Centre. Monthly workshops led by local and visiting artists, plus member exhibitions throughout the year.",
+      "highlights": [
+        "Monthly member meetings and guided workshops",
+        "Guest artist demonstrations and technique sessions",
+        "Annual member exhibition at a local venue",
+        "Welcoming to beginners and intermediate painters",
+        "Affordable annual membership with access to all regular programming"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-library-makerspace",
+      "name": "Newmarket Library Maker Space",
+      "type": "resource",
+      "category": "arts-crafts",
+      "tags": [
+        "maker space",
+        "3D printing",
+        "free",
+        "library",
+        "technology",
+        "crafts"
+      ],
+      "cost": "free",
+      "costNote": "Free to use for library cardholders; small material fees for 3D printing",
+      "address": "438 Park Avenue, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.059,
+      "lng": -79.4607,
+      "website": "https://www.newmarketpl.ca",
+      "hours": "During library hours; maker equipment on specific booking schedule",
+      "description": "A maker space at the Newmarket Public Library with a 3D printer, craft supplies, and digital creation tools available to library cardholders. Free to use for basic projects — a surprising resource tucked into the library.",
+      "highlights": [
+        "3D printer available to cardholders — small material fee applies",
+        "Craft and maker supplies for library programs",
+        "Digital creation tools including design software",
+        "Book the space for short sessions through the library",
+        "Free for cardholders — get a library card on the spot"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-woodworking-workshop",
+      "name": "Community Woodworking Workshop",
+      "type": "program",
+      "category": "arts-crafts",
+      "tags": [
+        "woodworking",
+        "workshop",
+        "skills",
+        "hands-on",
+        "community",
+        "crafts"
+      ],
+      "cost": "low",
+      "costNote": "Sessions $20–$40 including material use",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "description": "Community woodworking workshops offered periodically at local recreation and community facilities — basic joinery, small furniture, and decorative projects. No experience required and all tools provided.",
+      "highlights": [
+        "Introductory and intermediate woodworking projects",
+        "All tools and materials provided in session fee",
+        "Small group instruction — hands-on from the first session",
+        "Project-based: finish something you can take home",
+        "Sessions vary by season — check town and community centre calendars"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-concert-band",
+      "name": "Newmarket Community Concert Band",
+      "type": "program",
+      "category": "dance-music",
+      "tags": [
+        "band",
+        "music",
+        "community",
+        "wind instruments",
+        "concerts",
+        "affordable"
+      ],
+      "cost": "low",
+      "costNote": "Membership fee per season; free public concerts",
+      "address": "Newmarket, ON (rehearsals at various community venues)",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "description": "A community concert band for adult wind and percussion players in Newmarket and York Region. Rehearsals weekly through fall and spring seasons, with free public concerts. No audition — open to all competent adult players.",
+      "highlights": [
+        "Open to adult wind and percussion players — no audition",
+        "Weekly rehearsals through fall and spring seasons",
+        "Free public concerts at Newmarket venues",
+        "Repertoire ranges from classical to popular arrangements",
+        "Active social calendar alongside the music"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-harmony-chorus",
+      "name": "York Harmony Barbershop Chorus",
+      "type": "program",
+      "category": "dance-music",
+      "tags": [
+        "barbershop",
+        "choral",
+        "singing",
+        "community",
+        "performance",
+        "affordable"
+      ],
+      "cost": "low",
+      "costNote": "Membership fee per season; guests attend rehearsals free",
+      "address": "Newmarket and surrounding area",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "description": "A barbershop chorus serving York Region including Newmarket — four-part a cappella singing in the barbershop style. No prior choral experience required; the group actively welcomes new male voices.",
+      "highlights": [
+        "Four-part a cappella singing — barbershop style",
+        "Open to adult males of any singing experience level",
+        "Guests always welcome at rehearsals — come and try it",
+        "Seasonal public performances and competition shows",
+        "International Barbershop Harmony Society affiliated"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-dance-smart",
+      "name": "Dance Smart Studio",
+      "type": "place",
+      "category": "dance-music",
+      "tags": [
+        "dance",
+        "classes",
+        "studio",
+        "community",
+        "affordable",
+        "all ages"
+      ],
+      "cost": "moderate",
+      "costNote": "Classes $15–$25 per session; monthly packages reduce cost",
+      "address": "Davis Drive area, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0555,
+      "lng": -79.457,
+      "hours": "Mon–Sat, various class times",
+      "description": "A community dance studio offering group classes in ballet, jazz, hip-hop, and contemporary for adults and youth. Deliberately kept accessible with drop-in options and sliding scale considerations.",
+      "highlights": [
+        "Group classes in ballet, jazz, hip-hop, and contemporary",
+        "Programs for children, teens, and adults",
+        "Drop-in classes available alongside enrolled sessions",
+        "Beginner-friendly with no prior dance experience assumed",
+        "Annual recital for enrolled students"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-allegra-dance",
+      "name": "Allegra School of Dance",
+      "type": "place",
+      "category": "dance-music",
+      "tags": [
+        "dance",
+        "ballet",
+        "classes",
+        "youth",
+        "studio",
+        "performance"
+      ],
+      "cost": "moderate",
+      "costNote": "Enrolled classes $150–$300/semester; drop-in available",
+      "address": "Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0562,
+      "lng": -79.458,
+      "hours": "Mon–Sat; schedule varies by program",
+      "description": "An established dance school in Newmarket offering structured programs in classical ballet, pointe, musical theatre dance, and jazz. Well-regarded in the York Region dance community for quality instruction.",
+      "highlights": [
+        "Classical ballet, pointe, jazz, and musical theatre programs",
+        "Structured RAD syllabus-based ballet stream",
+        "Programs for ages 3 through adult",
+        "Annual performance showcase for enrolled students",
+        "Summer intensive programs available"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-music-together",
+      "name": "Music Together Newmarket",
+      "type": "program",
+      "category": "dance-music",
+      "tags": [
+        "music",
+        "early childhood",
+        "families",
+        "toddlers",
+        "singing",
+        "movement"
+      ],
+      "cost": "moderate",
+      "costNote": "Semester registration ~$200; includes all materials",
+      "address": "Newmarket, ON (various community venues)",
+      "neighborhood": "City-wide",
+      "website": "https://www.musictogether.com",
+      "description": "Music Together is a research-based early childhood music program for children 0–5 and their caregivers — singing, movement, and rhythm exploration in a joyful group setting. Registered programs run each semester.",
+      "highlights": [
+        "Research-based early childhood music and movement program",
+        "Open to children 0–5 with a parent or caregiver",
+        "Builds music foundations through play and participation",
+        "Semester-based with take-home CD and songbook",
+        "Welcoming to children with varying abilities"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-salsa-social",
+      "name": "Salsa & Bachata Social Dancing",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "salsa",
+        "bachata",
+        "social dancing",
+        "community",
+        "affordable",
+        "latin dance"
+      ],
+      "cost": "low",
+      "costNote": "$10–$15 at the door including beginner lesson",
+      "address": "Various venues, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0578,
+      "lng": -79.4636,
+      "description": "Regular social dance nights for salsa and bachata hosted at local venues in Newmarket — beginner lesson at the start, then open social dancing. No partner required, no experience assumed, very welcoming community.",
+      "highlights": [
+        "Beginner lesson included before the social dancing",
+        "No partner required — switches are the norm",
+        "Affordable cover charge including the lesson",
+        "Welcoming Latin dance community in York Region",
+        "Check local Facebook dance groups for current schedule"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-live-music-series",
+      "name": "Main Street Live Music Series",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "live music",
+        "free",
+        "outdoor",
+        "community",
+        "seasonal",
+        "local artists"
+      ],
+      "cost": "free",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0578,
+      "lng": -79.4636,
+      "description": "A summer live music series running along Newmarket's Main Street — local artists performing on temporary outdoor stages on select weekends. Free, casual, and a good reason to spend a summer evening downtown.",
+      "highlights": [
+        "Free outdoor live music on select summer weekends",
+        "Rotating lineup of local and regional musicians",
+        "Pairs well with Main Street dining and patio drinks",
+        "Family and dog friendly",
+        "Check Newmarket's events calendar for summer dates"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Summer series, typically June–September — check town events calendar",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-youth-choir",
+      "name": "Newmarket Youth Choir",
+      "type": "program",
+      "category": "dance-music",
+      "tags": [
+        "choir",
+        "youth",
+        "singing",
+        "music",
+        "performance",
+        "community"
+      ],
+      "cost": "low",
+      "costNote": "Seasonal membership fee; financial assistance available",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "lat": 44.0592,
+      "lng": -79.4613,
+      "description": "A choral program for children and youth in Newmarket — singing, sight-reading, and ensemble performance. Open to youth of all experience levels with two seasonal concerts each year.",
+      "highlights": [
+        "Open to youth singers from beginner to experienced",
+        "Develops sight-reading, vocal technique, and ensemble skills",
+        "Two major seasonal concerts per year",
+        "Repertoire spanning classical, folk, and contemporary",
+        "Financial assistance available — ask when registering"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-hip-hop-class",
+      "name": "Community Hip-Hop Fundamentals",
+      "type": "program",
+      "category": "dance-music",
+      "tags": [
+        "hip-hop",
+        "dance",
+        "youth",
+        "community centre",
+        "affordable",
+        "beginner"
+      ],
+      "cost": "low",
+      "costNote": "$8–$12 per drop-in session; registered class options cheaper",
+      "address": "Newmarket Recreation Centres, Newmarket, ON",
+      "neighborhood": "City-wide",
+      "lat": 44.0582,
+      "lng": -79.4739,
+      "website": "https://www.newmarket.ca/recreation",
+      "description": "Hip-hop dance classes through Newmarket's community recreation programs — foundational movement, freestyle, and choreography for teens and adults. Drop-in options available for casual participants.",
+      "highlights": [
+        "Beginner-accessible hip-hop movement and choreography",
+        "Drop-in and registered class options",
+        "For teens and adults — youth-specific classes also available",
+        "High-energy and social — one of the more popular community programs",
+        "Community centre pricing — significantly cheaper than private studios"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-drum-circle",
+      "name": "Summer Drum Circle at Fairy Lake",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "drum circle",
+        "percussion",
+        "free",
+        "outdoor",
+        "community",
+        "seasonal"
+      ],
+      "cost": "free",
+      "address": "Fairy Lake Park, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0536,
+      "lng": -79.4674,
+      "description": "A community-organized seasonal drum circle at Fairy Lake Park — open, participatory, and free. Percussion instruments welcome, but showing up and moving to the rhythm is enough. Runs through summer on periodic evenings.",
+      "highlights": [
+        "Free, open drum circle — all are welcome",
+        "Bring percussion or just your presence and movement",
+        "Held at Fairy Lake for the lake and tree backdrop",
+        "Community-organized — grassroots and informal",
+        "Check local community boards or Facebook for dates"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Summer evenings — dates posted on community boards and social media",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-siam-thai",
+      "name": "Siam Thai Kitchen",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "thai",
+        "noodles",
+        "curry",
+        "affordable",
+        "lunch",
+        "dine-in"
+      ],
+      "cost": "low",
+      "costNote": "Mains $13–$19",
+      "address": "Davis Drive corridor, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0555,
+      "lng": -79.4488,
+      "hours": "Tue–Sun 11:30am–9pm",
+      "description": "A Thai restaurant on the Davis Drive corridor with consistent pad thai, curries, and noodle dishes at fair prices. One of the more reliable lunch options in the area — generous portions and fast service.",
+      "highlights": [
+        "Consistent pad thai and green curry — both worth ordering",
+        "Generous portions at fair prices",
+        "Quick lunch service on weekdays",
+        "Vegetarian and vegan options well-marked on the menu",
+        "BYOB-friendly — no corkage fee"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-pho-kim",
+      "name": "Pho Kim Vietnamese Restaurant",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "vietnamese",
+        "pho",
+        "noodles",
+        "affordable",
+        "lunch",
+        "family-run"
+      ],
+      "cost": "low",
+      "costNote": "Bowls $12–$17",
+      "address": "Leslie Street corridor, Newmarket, ON",
+      "neighborhood": "East Newmarket",
+      "lat": 44.0548,
+      "lng": -79.4348,
+      "hours": "Mon–Sun 10am–9pm",
+      "description": "A family-run Vietnamese restaurant on the Leslie Street corridor with solid pho, vermicelli bowls, and banh mi. Generous portions at honest prices — a dependable neighbourhood staple for over a decade.",
+      "highlights": [
+        "Slow-cooked pho broth — the standard here is high",
+        "Vermicelli bowls and spring rolls as reliable alternatives",
+        "Family-run, consistent quality across years",
+        "Very generous bowl sizes for the price",
+        "Cash preferred; ATM nearby"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-osmow-shawarma",
+      "name": "Osmow's Shawarma",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "shawarma",
+        "middle eastern",
+        "fast casual",
+        "affordable",
+        "halal",
+        "quick"
+      ],
+      "cost": "low",
+      "costNote": "Wraps and plates $10–$16",
+      "address": "Yonge Street, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.031,
+      "lng": -79.468,
+      "website": "https://www.osmows.com",
+      "hours": "Daily 10am–10pm",
+      "description": "A popular Canadian shawarma chain with a Newmarket location — consistent chicken and beef shawarma wraps and platters at fast-food prices without fast-food quality. Halal certified.",
+      "highlights": [
+        "Consistent, fresh shawarma wraps and plates",
+        "Halal certified — chicken and beef options",
+        "Fast service and large portions",
+        "Garlic sauce is excellent — ask for extra",
+        "One of the better value quick meals on the Yonge corridor"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-el-camino-mexican",
+      "name": "El Camino Mexican Grill",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "mexican",
+        "tacos",
+        "burrito",
+        "affordable",
+        "quick",
+        "casual"
+      ],
+      "cost": "low",
+      "costNote": "Tacos $5–$7 each; burritos $13–$16",
+      "address": "Main Street area, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0575,
+      "lng": -79.4638,
+      "hours": "Mon–Sun 11am–9pm",
+      "description": "A casual Mexican grill in Newmarket's downtown area — tacos, burritos, and bowls made to order with fresh ingredients. Straightforward, flavourful, and one of the better quick-meal options on Main Street.",
+      "highlights": [
+        "Tacos, burritos, and bowls — made fresh to order",
+        "Al pastor and carnitas consistently good",
+        "Vegetarian and vegan options clearly marked",
+        "Fast service — good for a lunch break",
+        "One of the more casual-friendly options on Main Street"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-saffron-persian",
+      "name": "Saffron Persian Kitchen",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "persian",
+        "iranian",
+        "rice dishes",
+        "kebabs",
+        "affordable",
+        "dine-in"
+      ],
+      "cost": "low",
+      "costNote": "Mains $15–$22",
+      "address": "Davis Drive area, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0553,
+      "lng": -79.4475,
+      "hours": "Tue–Sun 11:30am–9:30pm",
+      "description": "A Persian restaurant serving classic Iranian dishes — saffron rice, stews like ghormeh sabzi and fesenjan, and charcoal kebabs. Generous portions, warm service, and one of the most culturally distinctive dining options in Newmarket.",
+      "highlights": [
+        "Charcoal-grilled kebabs with saffron rice",
+        "Classic Persian stews: ghormeh sabzi, fesenjan, and gheyimeh",
+        "Family-friendly and welcoming to Persian and non-Persian diners",
+        "Portions are generous — sharing is easy",
+        "Rice quality here is exceptional — properly crusted at the bottom"
+      ],
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-breadsmith-bakery",
+      "name": "The Breadsmith Artisan Bakery",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "bakery",
+        "sourdough",
+        "artisan",
+        "bread",
+        "pastries",
+        "local"
+      ],
+      "cost": "low",
+      "costNote": "Loaves $7–$12; pastries $3–$6",
+      "address": "Main Street area, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0576,
+      "lng": -79.4637,
+      "hours": "Wed–Sun 7am–2pm (or sold out)",
+      "description": "A small artisan bakery on the Main Street corridor producing naturally leavened sourdough, rye, and seasonal loaves alongside croissants and pastries. Sells out regularly — best to arrive before 10am on weekends.",
+      "highlights": [
+        "Naturally leavened sourdough and whole grain loaves",
+        "Croissants and seasonal pastries made fresh daily",
+        "Sells out regularly — arrive early on weekends",
+        "Grain sourced from Ontario farms where possible",
+        "Good coffee pairing with pastries at the counter"
+      ],
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-main-kitchen-bar",
+      "name": "Main Street Kitchen & Bar",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "bar",
+        "kitchen",
+        "casual dining",
+        "local",
+        "evening",
+        "drinks"
+      ],
+      "cost": "moderate",
+      "costNote": "Mains $18–$28; drinks $7–$14",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.058,
+      "lng": -79.4639,
+      "hours": "Tue–Sun 4pm–11pm",
+      "description": "A casual bar and kitchen on Main Street with a solid short menu, decent cocktail program, and a proper patio in summer. One of the better spots for a weeknight dinner or post-walk drink on Main Street without a long reservation wait.",
+      "highlights": [
+        "Short, considered menu that changes with the season",
+        "Decent cocktail selection and local Ontario beer on tap",
+        "Covered patio in summer — one of the better Main Street patios",
+        "Reliably good service on weekday evenings",
+        "Walk-in friendly most weeknights"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-brewing-company",
+      "name": "Newmarket Brewing Company",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "brewery",
+        "craft beer",
+        "local",
+        "taproom",
+        "community",
+        "food"
+      ],
+      "cost": "moderate",
+      "costNote": "Pints $7–$10; food plates $14–$24",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0569,
+      "lng": -79.4635,
+      "website": "https://www.newmarketbrewing.ca",
+      "hours": "Wed–Sun from 12pm",
+      "description": "Newmarket's own craft brewery and taproom on Main Street — brewing a rotating lineup of ales, lagers, and seasonal releases on-site. The taproom has food and a great atmosphere, and the beer is genuinely good.",
+      "highlights": [
+        "Craft beer brewed on-site — rotating taps throughout the year",
+        "Local hops and Ontario grain used in seasonal releases",
+        "Taproom food menu pairs well with the beer lineup",
+        "Relaxed atmosphere — good for an afternoon or evening",
+        "Growlers and cans available to take home"
+      ],
+      "why": "The fact that Newmarket has its own brewery that's actually good is underappreciated. A Saturday afternoon pint here before a walk down Main Street is a solid plan.",
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-habesha-ethiopian",
+      "name": "House of Habesha Ethiopian Restaurant",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "ethiopian",
+        "african",
+        "vegetarian friendly",
+        "communal dining",
+        "unique",
+        "affordable"
+      ],
+      "cost": "moderate",
+      "costNote": "Mains $16–$24; sharing platters $28–$45",
+      "address": "Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.056,
+      "lng": -79.45,
+      "hours": "Tue–Sun 12pm–10pm",
+      "description": "An Ethiopian restaurant serving traditional injera-based dishes — tibs, stews, and vegetable combinations eaten communally from a shared platter. One of the most culturally distinctive dining experiences in York Region.",
+      "highlights": [
+        "Traditional injera with a range of meat and vegetable combinations",
+        "Communal sharing platter format — great for groups",
+        "Excellent vegetarian options including misir and gomen",
+        "One of very few Ethiopian restaurants in York Region",
+        "Spice level adjustable — ask if you're new to the cuisine"
+      ],
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-jerusalem-grill",
+      "name": "Jerusalem Middle Eastern Grill",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "middle eastern",
+        "falafel",
+        "hummus",
+        "halal",
+        "affordable",
+        "fast casual"
+      ],
+      "cost": "low",
+      "costNote": "Plates $12–$18; wraps $10–$14",
+      "address": "Yonge Street corridor, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.03,
+      "lng": -79.4675,
+      "hours": "Mon–Sat 10am–9pm",
+      "description": "A casual Middle Eastern spot with house-made falafel, hummus, and shawarma wraps. One of the most affordable lunch options in the Yonge corridor — honest, fresh ingredients and quick service.",
+      "highlights": [
+        "House-made falafel — crispy outside, herbaceous inside",
+        "Fresh hummus made daily — far above the supermarket version",
+        "Generous wraps and plate combinations",
+        "Halal certified",
+        "One of the better-value lunch stops on the south Yonge corridor"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-sea-salt-fish-chips",
+      "name": "Sea Salt Fish & Chips",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "fish and chips",
+        "british",
+        "casual",
+        "comfort food",
+        "affordable",
+        "takeout"
+      ],
+      "cost": "low",
+      "costNote": "Fish and chips $13–$18",
+      "address": "Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0568,
+      "lng": -79.4565,
+      "hours": "Tue–Sun 11am–8pm",
+      "description": "A straightforward fish and chips spot in Newmarket — proper battered fish, good chips, and no fuss. One of those places that does one thing well and keeps coming back to it reliably.",
+      "highlights": [
+        "Classic beer-battered fish — haddock and cod options",
+        "Thick-cut chips cooked properly",
+        "Simple menu with no distractions from the main event",
+        "Good takeout packaging if you're heading to Fairy Lake",
+        "Consistent quality across visits"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-breadcrumbs-pastry",
+      "name": "Breadcrumbs Bakery & Café",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "bakery",
+        "café",
+        "pastries",
+        "coffee",
+        "breakfast",
+        "local"
+      ],
+      "cost": "low",
+      "costNote": "Pastries $3–$7; drinks $4–$7",
+      "address": "Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0574,
+      "lng": -79.464,
+      "hours": "Tue–Sat 7am–4pm, Sun 8am–2pm",
+      "description": "A neighbourhood bakery-café with house-made pastries, good coffee, and a short lunch menu. The kind of place that builds a loyal regular crowd because everything is made properly and the staff remember your name.",
+      "highlights": [
+        "House-baked pastries and bread daily",
+        "Strong coffee from a local Ontario roaster",
+        "Egg-based breakfast items on weekends",
+        "Short rotating lunch menu",
+        "Gets busy on Saturday mornings — worth the wait"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-cork-wine-bar",
+      "name": "The Cork Wine Bar",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "wine bar",
+        "evening",
+        "date night",
+        "drinks",
+        "small plates",
+        "local"
+      ],
+      "cost": "moderate",
+      "costNote": "Wine by glass $12–$18; small plates $14–$22",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0581,
+      "lng": -79.4639,
+      "hours": "Wed–Sun from 5pm",
+      "description": "A wine-focused bar on Main Street with a curated by-the-glass list and small plates designed for sharing. The best place in Newmarket for a quiet evening drink without a nightclub vibe.",
+      "highlights": [
+        "Rotating by-the-glass selection with knowledgeable staff",
+        "Small plates designed for pairing and sharing",
+        "Quiet, intimate atmosphere — good for conversation",
+        "Ontario and international wine selection well-balanced",
+        "Walk-in friendly most evenings except Friday and Saturday"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-davis-diner",
+      "name": "Davis Drive Diner",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "diner",
+        "breakfast",
+        "affordable",
+        "casual",
+        "local favourite",
+        "all day"
+      ],
+      "cost": "low",
+      "costNote": "Breakfast $9–$16; lunch $10–$18",
+      "address": "Davis Drive, Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0557,
+      "lng": -79.451,
+      "hours": "Daily 7am–3pm",
+      "description": "A no-frills all-day breakfast and lunch diner on Davis Drive. The type of place that's been there a long time because the eggs are cooked properly and the coffee is always hot. A local favourite that hasn't changed in the right ways.",
+      "highlights": [
+        "Classic diner breakfast done properly — eggs, bacon, toast",
+        "All-day breakfast served until close",
+        "Bottomless coffee and genuine diner hospitality",
+        "One of the better value meals in Newmarket",
+        "Lineup on weekend mornings — worth it"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-harvest-table",
+      "name": "The Harvest Table",
+      "type": "place",
+      "category": "food-culture",
+      "tags": [
+        "farm-to-table",
+        "local",
+        "seasonal",
+        "dinner",
+        "Ontario produce",
+        "elevated casual"
+      ],
+      "cost": "moderate",
+      "costNote": "Mains $22–$34",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0577,
+      "lng": -79.4638,
+      "hours": "Tue–Sun 5pm–10pm",
+      "description": "A farm-to-table restaurant on Main Street focused on seasonal Ontario produce with a menu that changes monthly. The most thoughtful dinner option in Newmarket's downtown — not flashy, just genuinely good food made with care.",
+      "highlights": [
+        "Menu changes monthly to reflect Ontario seasonal produce",
+        "Relationships with local farms named on the menu",
+        "Reasonable corkage fee if you bring your own wine",
+        "Knowledgeable staff who can explain the sourcing",
+        "Reservation recommended on weekends"
+      ],
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-good-earth-cafe",
+      "name": "Good Earth Coffeehouse",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "coffee",
+        "work-friendly",
+        "wifi",
+        "quiet",
+        "cafe",
+        "afternoon"
+      ],
+      "cost": "low",
+      "costNote": "Drinks $4.50–$7; food $6–$13",
+      "address": "Yonge Street, Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.029,
+      "lng": -79.4679,
+      "website": "https://www.goodearthcoffeehouse.com",
+      "hours": "Mon–Fri 7am–7pm, Sat–Sun 8am–6pm",
+      "description": "A Canadian coffeehouse chain with a Newmarket location — reliable espresso drinks, good wifi, and comfortable seating. One of the better work-from-café options in the south Newmarket area.",
+      "highlights": [
+        "Reliable espresso and specialty coffee drinks",
+        "Comfortable seating with tables suited to laptop work",
+        "Free wifi and adequate power outlets",
+        "Food menu including sandwiches and baked items",
+        "Quieter than most chains — good weekday afternoon workspace"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-pressed-coffee",
+      "name": "Pressed Coffee Bar",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "coffee",
+        "independent",
+        "espresso",
+        "local",
+        "quick",
+        "specialty"
+      ],
+      "cost": "low",
+      "costNote": "Drinks $4–$7",
+      "address": "Main Street area, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0573,
+      "lng": -79.4636,
+      "hours": "Mon–Fri 7am–5pm, Sat 8am–4pm",
+      "description": "A compact independent coffee bar on Main Street focused on quality espresso and a tight seasonal menu. Standing room and a small counter — designed for a quick excellent coffee rather than lingering, though the window ledge seats are good for people-watching.",
+      "highlights": [
+        "Serious single-origin espresso from a rotating roaster",
+        "Compact and quick — the right place for a focused coffee",
+        "Seasonal latte menu with non-syrup flavour options",
+        "Counter seating for people-watching on Main Street",
+        "Friendly if you're interested in the coffee; efficient if you're not"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-workshop-coworking",
+      "name": "The Workshop Coworking Space",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "coworking",
+        "work",
+        "desk",
+        "freelance",
+        "remote work",
+        "community"
+      ],
+      "cost": "moderate",
+      "costNote": "Day pass $25–$35; monthly memberships available",
+      "address": "Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0568,
+      "lng": -79.4628,
+      "hours": "Mon–Fri 8am–6pm",
+      "description": "A dedicated coworking space in Newmarket with private desks, meeting rooms, printing, and reliable high-speed internet. A practical workspace for remote workers and freelancers who need more structure than a café.",
+      "highlights": [
+        "Dedicated desk and hot-desking options",
+        "Private meeting rooms available for hourly booking",
+        "High-speed internet and printing included",
+        "Community of local remote workers and entrepreneurs",
+        "Day passes available — try before committing to a monthly plan"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-library-study-rooms",
+      "name": "Newmarket Library Study Rooms",
+      "type": "resource",
+      "category": "cafes-spaces",
+      "tags": [
+        "study",
+        "quiet",
+        "free",
+        "library",
+        "rooms",
+        "focus"
+      ],
+      "cost": "free",
+      "address": "438 Park Avenue, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.059,
+      "lng": -79.4607,
+      "website": "https://www.newmarketpl.ca",
+      "hours": "During library hours — book online in advance",
+      "description": "The Newmarket Public Library has bookable study rooms available free to library cardholders — private, quiet spaces for individual study or small group work. Consistently the best free quiet workspace in Newmarket.",
+      "highlights": [
+        "Private bookable rooms — free with library card",
+        "Quiet, consistent environment with no noise or disruption",
+        "Reserve online up to 7 days in advance",
+        "High-speed wifi throughout the library",
+        "The best free focused workspace in Newmarket — bar none"
+      ],
+      "why": "If you need to actually concentrate on something, the study rooms here are better than any café. Free, private, and you can walk to Epoch after.",
+      "isRecommended": true,
+      "isFree": true,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-culture-coffee",
+      "name": "Culture Coffee & Craft",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "coffee",
+        "craft",
+        "community",
+        "local",
+        "work-friendly",
+        "indie"
+      ],
+      "cost": "low",
+      "costNote": "Drinks $4–$8; food items $5–$12",
+      "address": "Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0576,
+      "lng": -79.464,
+      "hours": "Mon–Sat 8am–6pm, Sun 9am–5pm",
+      "description": "An independent café with a craft-focused identity — good coffee, a small selection of local handmade goods, and a relaxed atmosphere with genuine character. One of the better cafés in Newmarket for an afternoon spent reading or working.",
+      "highlights": [
+        "Good coffee from a local Ontario roaster",
+        "Curated selection of locally made goods for browsing and buying",
+        "Relaxed atmosphere — not rushed or performative",
+        "Comfortable for laptop work and longer stays",
+        "Weekend pop-up maker events throughout the year"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-steep-tea-house",
+      "name": "Steep Tea House",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "tea",
+        "café",
+        "calm",
+        "afternoon",
+        "independent",
+        "community"
+      ],
+      "cost": "low",
+      "costNote": "Teas $4–$8; light food $6–$12",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0575,
+      "lng": -79.4637,
+      "hours": "Tue–Sun 10am–6pm",
+      "description": "A loose-leaf tea house on Main Street with a wide selection of single-origin and blended teas served by the pot or the cup. Slower-paced than a coffee shop — deliberately designed for sitting, sipping, and not being rushed.",
+      "highlights": [
+        "Wide selection of loose-leaf teas — single-origin and blended",
+        "Tea served by the pot, properly brewed to time and temperature",
+        "Calm, unhurried atmosphere — the antidote to busy cafés",
+        "Light food menu including tea sandwiches and baked goods",
+        "Good for a long, quiet afternoon on Main Street"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-perk-page",
+      "name": "Perk & Page",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "café",
+        "bookshop",
+        "indie",
+        "reading",
+        "community",
+        "cozy"
+      ],
+      "cost": "low",
+      "costNote": "Coffee $4–$7; used books $3–$18",
+      "address": "Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0572,
+      "lng": -79.4636,
+      "hours": "Mon–Sat 9am–7pm, Sun 10am–5pm",
+      "description": "A hybrid café and used bookshop in Newmarket's downtown — good coffee alongside a rotating selection of secondhand books. The rare combination that actually works when both sides are done well.",
+      "highlights": [
+        "Good coffee alongside a curated used book selection",
+        "Comfortable seating for reading — the whole point",
+        "Used books at affordable prices with frequent new stock",
+        "Reading events and occasional author visits",
+        "A proper independent that feels like it's been there forever"
+      ],
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-commons-cowork",
+      "name": "The Commons — Community Co-working",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "coworking",
+        "community",
+        "affordable",
+        "work",
+        "freelance",
+        "flexible"
+      ],
+      "cost": "low",
+      "costNote": "Day pass $15; weekly and monthly options available",
+      "address": "Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0585,
+      "lng": -79.461,
+      "hours": "Mon–Fri 8am–7pm",
+      "description": "A more affordable co-working option in Newmarket focused on community over polish. Open desk setup, good internet, and a friendly membership community — better value than the premium coworking spaces for people who just need a desk.",
+      "highlights": [
+        "Affordable day pass — significantly cheaper than premium coworking",
+        "Good wifi and basic printing included",
+        "Community events and casual networking built in",
+        "Flexible options — daily, weekly, or monthly access",
+        "Quieter than working from a café, less formal than an office"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-salvation-army-thrift",
+      "name": "Salvation Army Thrift Store — Newmarket",
+      "type": "place",
+      "category": "thrifting",
+      "tags": [
+        "thrift",
+        "secondhand",
+        "clothing",
+        "affordable",
+        "charity",
+        "housewares"
+      ],
+      "cost": "low",
+      "costNote": "Clothing $3–$15; housewares from $1",
+      "address": "Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.0555,
+      "lng": -79.449,
+      "website": "https://www.salvationarmy.ca",
+      "hours": "Mon–Sat 9am–6pm",
+      "description": "The Salvation Army thrift store in Newmarket — a large secondhand shop with consistent stock of clothing, housewares, books, and furniture. Regular colour-tag sale days for deeper discounts.",
+      "highlights": [
+        "Large, well-organized clothing section with frequent turnover",
+        "Housewares, books, and small furniture",
+        "Colour-tag sale days for deeper discounts",
+        "Proceeds support Salvation Army community programs",
+        "Donation drop-offs accepted during store hours"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-diabetes-clothesline",
+      "name": "Canadian Diabetes Society Clothesline",
+      "type": "place",
+      "category": "thrifting",
+      "tags": [
+        "thrift",
+        "clothing",
+        "affordable",
+        "charity",
+        "secondhand",
+        "donations"
+      ],
+      "cost": "low",
+      "costNote": "Clothing and items priced from $2",
+      "address": "Newmarket, ON",
+      "neighborhood": "City-wide",
+      "website": "https://www.clotheslinecharity.ca",
+      "hours": "Mon–Sat 9am–5pm",
+      "description": "A charity thrift store operated through the Canadian Diabetes Society — clothing and household donations sold to support diabetes programs. One of the more affordable and frequently restocked thrift options in the area.",
+      "highlights": [
+        "Clothing from $2 — one of the lowest-priced thrift options",
+        "Household items, accessories, and small goods",
+        "Proceeds support diabetes research and programs",
+        "Regular restocking from ongoing donation donations",
+        "Clean, organized store layout"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-community-living-thrift",
+      "name": "Community Living York South Thrift Shoppe",
+      "type": "place",
+      "category": "thrifting",
+      "tags": [
+        "thrift",
+        "secondhand",
+        "community",
+        "affordable",
+        "charity",
+        "clothing"
+      ],
+      "cost": "low",
+      "costNote": "Items from $2; clothing typically $4–$12",
+      "address": "Newmarket, ON",
+      "neighborhood": "Central Newmarket",
+      "lat": 44.059,
+      "lng": -79.458,
+      "hours": "Mon–Fri 10am–4pm",
+      "description": "A community thrift store operated by Community Living York South — a social enterprise that provides employment and skills training for adults with developmental disabilities. Good stock, community mission, and genuinely friendly.",
+      "highlights": [
+        "Clothing, housewares, books, and miscellaneous goods",
+        "Operated as an employment training program for adults with disabilities",
+        "Affordable pricing with good quality items",
+        "Friendly and welcoming store environment",
+        "Donation drop-offs accepted during store hours"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-vintage-thread",
+      "name": "Vintage Thread Consignment",
+      "type": "place",
+      "category": "thrifting",
+      "tags": [
+        "vintage",
+        "consignment",
+        "clothing",
+        "affordable",
+        "curated",
+        "fashion"
+      ],
+      "cost": "low",
+      "costNote": "Items $15–$80; curated vintage at fair market prices",
+      "address": "Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0575,
+      "lng": -79.4638,
+      "hours": "Wed–Sat 11am–6pm, Sun 12pm–5pm",
+      "description": "A small consignment and vintage clothing shop in Newmarket's downtown area — curated rather than bulk, with a focus on quality secondhand pieces that are actually worth buying. Prices are fair for the level of curation.",
+      "highlights": [
+        "Curated consignment clothing — small selection, chosen carefully",
+        "Vintage and near-vintage pieces from the 60s onward",
+        "Fair pricing for the quality and curation level",
+        "Consignment accepted by appointment — ask in store",
+        "Located near Main Street — good to pair with a coffee walk"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-goodwill",
+      "name": "Goodwill Newmarket",
+      "type": "place",
+      "category": "thrifting",
+      "tags": [
+        "thrift",
+        "secondhand",
+        "clothing",
+        "housewares",
+        "affordable",
+        "large selection"
+      ],
+      "cost": "low",
+      "costNote": "Clothing $4–$18; housewares from $2",
+      "address": "South Newmarket, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.0285,
+      "lng": -79.468,
+      "website": "https://www.goodwill.on.ca",
+      "hours": "Mon–Sat 9am–9pm, Sun 10am–7pm",
+      "description": "A large Goodwill store in south Newmarket with a wide selection of clothing, housewares, books, and electronics. One of the highest-volume thrift stores in the area — good for browsing and finding unexpected items.",
+      "highlights": [
+        "Large clothing section with high turnover",
+        "Books, housewares, electronics, and small furniture",
+        "Colour-tag weekly sale for additional discounts",
+        "Accessible location on the south Yonge corridor",
+        "Proceeds support Goodwill's employment training programs"
+      ],
+      "isRecommended": false,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-restore",
+      "name": "Habitat for Humanity ReStore — York",
+      "type": "place",
+      "category": "thrifting",
+      "tags": [
+        "restore",
+        "building materials",
+        "furniture",
+        "affordable",
+        "habitat",
+        "home improvement"
+      ],
+      "cost": "low",
+      "costNote": "Appliances and materials 50–80% off retail",
+      "address": "South Newmarket area, ON",
+      "neighborhood": "South Newmarket",
+      "lat": 44.031,
+      "lng": -79.453,
+      "website": "https://www.habitatyork.ca/restore",
+      "hours": "Tue–Sat 9am–5pm",
+      "description": "The Habitat for Humanity ReStore carries donated and surplus building materials, appliances, fixtures, and furniture at significantly reduced prices. An essential stop for anyone doing home renovation on a budget.",
+      "highlights": [
+        "Cabinetry, tiles, flooring, and building materials at major discount",
+        "Appliances and fixtures — rotating inventory worth checking regularly",
+        "Proceeds fund Habitat for Humanity affordable housing in York Region",
+        "Accepts donations of usable home goods and materials",
+        "Inventory changes constantly — follow on social media for finds"
+      ],
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-popup-vintage-market",
+      "name": "Newmarket Pop-Up Vintage Market",
+      "type": "event",
+      "category": "thrifting",
+      "tags": [
+        "vintage",
+        "market",
+        "pop-up",
+        "seasonal",
+        "vendors",
+        "community"
+      ],
+      "cost": "free",
+      "costNote": "Free to attend; vendor prices vary",
+      "address": "Riverwalk Commons / Market Square, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0591,
+      "lng": -79.4594,
+      "description": "A periodic vintage and secondhand market popping up at Riverwalk Commons or Market Square — individual vendors selling curated vintage, retro goods, and secondhand finds. Free to browse, and much more interesting than a standard flea market.",
+      "highlights": [
+        "Free admission — just show up",
+        "Individual curated vintage vendors rather than bulk resellers",
+        "Clothing, vinyl, art, and miscellaneous curated goods",
+        "Pairs naturally with the surrounding Newmarket market events",
+        "Check Newmarket events calendar and local Instagram for dates"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Periodic dates through spring, summer, and fall — check event calendar",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-jazz-blues-festival",
+      "name": "Newmarket Jazz & Blues Festival",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "jazz",
+        "blues",
+        "festival",
+        "free",
+        "outdoor",
+        "community",
+        "summer"
+      ],
+      "cost": "free",
+      "address": "Riverwalk Commons / Market Square, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0591,
+      "lng": -79.4594,
+      "description": "An annual free outdoor jazz and blues festival held at Newmarket's downtown commons — multiple stages, local and regional musicians, and a consistently good atmosphere. One of the highlights of Newmarket's summer events calendar.",
+      "highlights": [
+        "Free outdoor festival with multiple stages",
+        "Local and regional jazz and blues musicians",
+        "Family-friendly atmosphere throughout the day",
+        "Food and drink vendors on-site",
+        "Best evening sessions as the light fades — plan to stay"
+      ],
+      "isRecommended": true,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Annual summer event — typically July or August; check newmarket.ca for dates",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-canada-day",
+      "name": "Canada Day at Riverwalk Commons",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Canada Day",
+        "free",
+        "fireworks",
+        "community",
+        "outdoor",
+        "family"
+      ],
+      "cost": "free",
+      "address": "Riverwalk Commons, 200 Doug Duncan Drive, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0595,
+      "lng": -79.4598,
+      "website": "https://www.newmarket.ca",
+      "description": "Newmarket's annual Canada Day celebration at Riverwalk Commons — family programming through the day and fireworks in the evening. One of York Region's better Canada Day events for the atmosphere and location.",
+      "highlights": [
+        "Free family activities throughout the day",
+        "Live music, entertainment, and community programming",
+        "Fireworks display in the evening",
+        "Beautiful setting at Riverwalk Commons along the river",
+        "Free admission throughout — arrive early for the best spot for fireworks"
+      ],
+      "isRecommended": true,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "July 1st annually; some programming begins June 30th",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-sidewalk-sale",
+      "name": "Main Street Sidewalk Sale",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "sale",
+        "main street",
+        "shopping",
+        "community",
+        "annual",
+        "summer"
+      ],
+      "cost": "free",
+      "costNote": "Free to attend; deals on goods from participating shops",
+      "address": "Main Street South, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0578,
+      "lng": -79.4636,
+      "website": "https://www.newmarket.ca",
+      "description": "An annual summer sidewalk sale stretching along Newmarket's Main Street — independent shops set up outdoor displays and offer sale pricing. A free, leisurely way to support local businesses and find genuine deals.",
+      "highlights": [
+        "Independent shops with outdoor sale displays along Main Street",
+        "Genuine deals from locally-owned businesses",
+        "Lively summer street atmosphere",
+        "Combine with lunch or coffee on the street",
+        "Free to attend — browse without obligation"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Annual summer event — typically July or August; check Main Street BIA calendar",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-doors-open",
+      "name": "Doors Open Newmarket",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "heritage",
+        "architecture",
+        "free",
+        "community",
+        "history",
+        "annual"
+      ],
+      "cost": "free",
+      "address": "Various heritage sites, Newmarket, ON",
+      "neighborhood": "City-wide",
+      "lat": 44.0574,
+      "lng": -79.4638,
+      "website": "https://www.newmarket.ca",
+      "description": "An annual event opening Newmarket's heritage buildings, historic sites, and community spaces to the public for free. A rare chance to get inside the buildings and spaces that usually aren't accessible — a genuinely interesting way to spend a spring day.",
+      "highlights": [
+        "Free access to Newmarket's heritage and historic buildings",
+        "Behind-the-scenes access to sites not normally open to the public",
+        "Guided tours and interpreted presentations at select sites",
+        "Self-guided walking route through the historic district",
+        "Annual spring event — typically a single weekend"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Annual spring event — check newmarket.ca for dates",
+      "lastVerified": "2026-06-29"
+    },
+    {
+      "id": "newmarket-ribfest",
+      "name": "Newmarket Ribfest",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "ribfest",
+        "food",
+        "community",
+        "summer",
+        "family",
+        "outdoor"
+      ],
+      "cost": "free",
+      "costNote": "Free to attend; food from vendors",
+      "address": "Riverwalk Commons, Newmarket, ON",
+      "neighborhood": "Downtown Newmarket",
+      "lat": 44.0595,
+      "lng": -79.4598,
+      "description": "Newmarket's annual summer Ribfest at Riverwalk Commons — ribbers from across Ontario competing for the best rack, alongside live music, kids' activities, and community entertainment. Free to enter, vendors sell food.",
+      "highlights": [
+        "Multiple competing BBQ ribbers — try more than one",
+        "Live music throughout the multi-day event",
+        "Kids' activities and family-friendly atmosphere",
+        "Free admission to the grounds",
+        "Funds raised for local community organizations"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Annual summer event — typically late July or August; check newmarket.ca",
+      "lastVerified": "2026-06-29"
     }
   ]
 }

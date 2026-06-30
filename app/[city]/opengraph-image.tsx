@@ -5,6 +5,9 @@ import markhamData from "@/data/cities/markham.json";
 import vaughanData from "@/data/cities/vaughan.json";
 import oakvilleData from "@/data/cities/oakville.json";
 import burlingtonData from "@/data/cities/burlington.json";
+import kitchenerData from "@/data/cities/kitchener.json";
+import waterlooData from "@/data/cities/waterloo.json";
+import cambridgeData from "@/data/cities/cambridge.json";
 
 export const runtime = "edge";
 export const alt = "City guide on CityRoots";
@@ -18,6 +21,9 @@ const CITY_DATA: Record<string, { cityName: string; province: string; places: un
   "vaughan": vaughanData,
   "oakville": oakvilleData,
   "burlington": burlingtonData,
+  "kitchener": kitchenerData,
+  "waterloo": waterlooData,
+  "cambridge": cambridgeData,
 };
 
 export default async function OgImage({ params }: { params: Promise<{ city: string }> }) {
