@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local embedded Postgres (PGlite)
+/.data
+
+# test output
+/playwright-report
+/test-results
+/.lighthouseci
+
+# local scratch
+/.playwright-mcp
+/screenshots
+
+# Chrome profiles that Lighthouse creates under WSL
+/C:*

@@ -1,0 +1,78 @@
+import { z } from "zod";
+
+/**
+ * Server environment, validated once at boot (see src/instrumentation.ts).
+ * Optional integrations degrade to a clear "not configured" state instead of failing.
+ */
+const flag = z
+  .enum(["true", "false", "1", "0"])
+  .optional()
+  .transform((v) => v === "true" || v === "1");
+
+const serverSchema = z
+  .object({
+    NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
+    VERCEL: z.string().optional(),
+    DATABASE_URL: z.url().optional(),
+    PGLITE_DIR: z.string().min(1).default(".data/pglite"),
+    AUTH_SECRET: z.string().min(32, "AUTH_SECRET must be at least 32 characters"),
+    AUTH_GOOGLE_ID: z.string().min(1).optional(),
+    AUTH_GOOGLE_SECRET: z.string().min(1).optional(),
+    RESEND_API_KEY: z.string().min(1).optional(),
+    EMAIL_FROM: z.string().min(3).default("CityRoots <hello@cityroots.ca>"),
+    SLACK_WEBHOOK_URL: z.url().optional(),
+    NEXT_PUBLIC_SITE_URL: z.url().default("http://localhost:3000"),
+    FEATURE_PARTNERS: flag,
+    FEATURE_BUSINESS: flag,
+    /** CI and preview builds only: write magic links to the log instead of emailing them. */
+    EMAIL_LOG_ONLY: flag,
+    VERCEL_ENV: z.enum(["production", "preview", "development"]).optional(),
+    LOG_LEVEL: z.enum(["debug", "info", "warn", "error"]).default("info"),
+  })
+  .superRefine((env, ctx) => {
+    if (Boolean(env.AUTH_GOOGLE_ID) !== Boolean(env.AUTH_GOOGLE_SECRET)) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["AUTH_GOOGLE_SECRET"],
+        message: "Set both AUTH_GOOGLE_ID and AUTH_GOOGLE_SECRET, or neither",
+      });
+    }
+    if (env.EMAIL_LOG_ONLY && env.VERCEL_ENV === "production") {
+      ctx.addIssue({
+        code: "custom",
+        path: ["EMAIL_LOG_ONLY"],
+        message: "EMAIL_LOG_ONLY must never be set on the production deployment",
+      });
+    }
+    if (env.VERCEL && !env.DATABASE_URL) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["DATABASE_URL"],
+        message: "DATABASE_URL is required on Vercel (PGlite is for local development only)",
+      });
+    }
+  });
+
+export type ServerEnv = z.infer<typeof serverSchema>;
+
+let cached: ServerEnv | undefined;
+
+export function env(): ServerEnv {
+  if (cached) return cached;
+  // Treat `KEY=` lines in .env files as unset.
+  const raw = Object.fromEntries(Object.entries(process.env).filter(([, v]) => v !== ""));
+  const parsed = serverSchema.safeParse(raw);
+  if (!parsed.success) {
+    const details = parsed.error.issues
+      .map((i) => `  ${i.path.join(".") || "(root)"}: ${i.message}`)
+      .join("\n");
+    throw new Error(`Invalid environment configuration:\n${details}`);
+  }
+  cached = parsed.data;
+  return cached;
+}
+
+export const features = {
+  partners: () => env().FEATURE_PARTNERS,
+  business: () => env().FEATURE_BUSINESS,
+};

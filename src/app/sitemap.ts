@@ -1,0 +1,29 @@
+import type { MetadataRoute } from "next";
+import { listLiveCities } from "@/lib/data/cities";
+import { listPlaceIds } from "@/lib/data/places";
+import { absoluteUrl } from "@/lib/site";
+
+export const revalidate = 3600;
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [cities, places] = await Promise.all([listLiveCities(), listPlaceIds()]);
+  return [
+    { url: absoluteUrl("/"), changeFrequency: "daily", priority: 1 },
+    { url: absoluteUrl("/explore"), changeFrequency: "daily", priority: 0.9 },
+    { url: absoluteUrl("/about"), changeFrequency: "monthly", priority: 0.4 },
+    ...cities.flatMap((c) => [
+      { url: absoluteUrl(`/city/${c.slug}`), changeFrequency: "weekly" as const, priority: 0.8 },
+      {
+        url: absoluteUrl(`/explore?city=${c.slug}`),
+        changeFrequency: "daily" as const,
+        priority: 0.7,
+      },
+    ]),
+    ...places.map((p) => ({
+      url: absoluteUrl(`/places/${p.id}`),
+      lastModified: p.updatedAt,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ];
+}

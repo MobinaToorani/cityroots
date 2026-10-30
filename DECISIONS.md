@@ -1,0 +1,144 @@
+# Decisions
+
+Every judgment call made during the rebuild, with the reason. Newest phase at the bottom of each section. Spec references are to the CityRoots Rebuild Specification.
+
+## Process
+
+**Rebuilt in place on the `rebuild` branch.** The old site stays on `main` and in git history. Only data was ported: the nine city JSON files moved to `scripts/seed-data/cities/`. No old code was carried over.
+
+**Phase 1 only, then review.** The spec is five phases. This branch delivers Phase 1 (foundation) plus a server-rendered baseline of the explorer and place pages, so that nothing on the site links to a page that does not exist yet.
+
+## Stack
+
+**Next.js 16, not 15.** The spec says 15+. 16.4 was current and already in use. Notable differences honoured: async `params`/`searchParams`, `proxy.ts` replaces `middleware.ts` (not needed yet), top-level `typedRoutes`, and `images.qualities` must list every quality used.
+
+**`typedRoutes: true`.** Every `<Link>` and `redirect()` is checked at compile time against real routes. This is the first line of defence for "no dead links".
+
+**TypeScript 6 strict, plus `noUncheckedIndexedAccess`.** ESLint bans `any`, non-null assertions, `console`, and empty `catch` blocks. The logger and CLI scripts are the only places allowed to write to the console.
+
+**`nuqs` for URL state.** One set of parsers (`src/lib/domain/explore-params.ts`) runs on the server for the first render and will run on the client in Phase 2. Multi-value filters are comma lists (`cost=free,low`).
+
+## Data
+
+**PGlite locally, any Postgres in production.** No Docker or Postgres was available, and no credentials. `src/lib/db/create.ts` uses embedded Postgres (PGlite, real Postgres compiled to WASM) when `DATABASE_URL` is unset, and `node-postgres` when it is set (Neon, Supabase, or any Postgres). The same migrations run on both, including enums, the generated `tsvector`, and the GIN index. On Vercel, `DATABASE_URL` is required: env validation fails the boot without it.
+
+**Builds use one worker when on PGlite.** PGlite is single-process, so `next.config.ts` sets `experimental.cpus: 1` only when `DATABASE_URL` is unset. Production builds against Neon use the normal worker count.
+
+**401 source places became 400.** The working tree had 56 new Richmond Hill places (you chose to include them). Markham listed `markham-unionville-festival` twice. The seed keeps the most recently verified record and logs the merge. Final counts: 205 Free, 144 Low cost, 41 Moderate, 10 Varies. The seed checks these counts against the database after every run and fails on a mismatch.
+
+**Deterministic ids.** Place, city, and category ids are UUID v5 hashes of stable keys (`place/<city>/<legacy-id>`). Re-seeding upserts by id, so it never duplicates rows or breaks `/places/[id]` links, and it never wipes community data that references places.
+
+**Category slugs shortened to the spec's.** `arts-crafts`, `food-culture`, and `cafes-spaces` became `arts`, `food`, and `cafes`, matching the spec's accent list and its example URL (`cat=cafes`). The legacy mapping lives in `LEGACY_CATEGORY_MAP`.
+
+**Schema additions beyond the spec's list.**
+
+- `places.kind` (place, event, program, resource): needed for the type filter. The spec lists the filter but not the column.
+- `places.highlights`, `tags`, `curator_note`, `season_note`, `seasonal`, `phone`, `last_verified_at`: carried from the legacy data, all shown on the place page.
+- `cities.region`, `tagline`, `curator_note`; `categories.short_name`, `position`.
+- Auth.js tables (`accounts`, `sessions`, `verification_tokens`) and `users.email_verified`/`image`, required by the Drizzle adapter.
+- `submissions.contact_email` and `submissions.place_id` (for corrections); `partner_keys.key_prefix` and `last_used_at`.
+
+**Foreign-key rules.** Places restrict deleting their city or category (no silent mass deletes). User-owned rows (collections, claims, subscriptions, sessions) cascade with the user. Authorship references (`submitted_by`, `claimed_by`, `reviewer_id`, `tips.user_id`) are set to null so content outlives accounts.
+
+**Map index.** A plain B-tree on `(lat, lng)` serves bounding-box queries at this scale (400 rows). PostGIS was not added; revisit past roughly 50k places.
+
+**Hours stay as text for now.** `hours` is JSON shaped `{ text, weekly? }`. The legacy hours are free-form ("Tue to Sat 11am to 5pm; closed Sun to Mon"). Parsing them into `weekly` for the "open now" computation is Phase 2 work, delivered as `scripts/backfill.ts`.
+
+**Events.** The legacy data has 52 recurring events and festivals but no dates, so the `events` table starts empty. City pages show the event-type listings as "Festivals and events" with their season notes, and the copy tells people to check this year's dates. The dated calendar arrives in Phase 2.
+
+## Copy
+
+**Legacy copy is cleaned at seed time, not hand-edited.** `cleanCopy()` in `src/lib/domain/copy.ts` turns a paired em dash aside into commas and a single em dash into a colon ("summer weekends: food trucks, local vendors"). It also replaces "hidden gem" with "local favorite", and "unlock", "elevate", and "seamless" with plain words. The same function will clean community submissions in Phase 2. 797 em dashes were removed.
+
+**Card hooks are the first sentence of the description.** The legacy data has no one-line summary field.
+
+**The copy check scans source and built output.** `npm run check:copy` covers em dashes (including the `&mdash;` entities), `animate-ping` and `animate-pulse`, monospace fonts, emoji, TODO comments, lorem ipsum, and the banned phrases. It found real problems on its first run (em dashes in neighborhood names, "unlock" in a description), and both were fixed at the source.
+
+**Typical spend estimates.** The home page's sample day shows an estimated total. Bands have no prices, so `TYPICAL_SPEND` (Free $0, Low cost $10, Moderate $30, Varies $15) is used, and the UI always labels the result "Estimated".
+
+## Design
+
+**Contrast on glass.** The spec's `--color-text-muted: #6B675F` and `--color-free: #1E7A46` measure 2.8:1 and 2.7:1 on 72% white glass over a black photo, failing WCAG AA. Changes:
+
+- Muted text is `#5F5B54`, and free green is `#176B3C` (light) / `#6FD39A` (dark).
+- Glass that carries text over photography uses `glass-strong` (88% light, 86% dark). On that surface, every text token passes 4.5:1 against a pure black or pure white photo (worst case).
+- The 72% `glass` is used only over the paper background or color fields.
+
+**Hero text sits on a scrim, not glass.** Headline text on photos sits over a black gradient of at least 60% where the text is, which keeps white text at 7:1 or higher over any photo.
+
+**Dark mode follows the OS.** There is no toggle yet, since the spec does not ask for one. In dark mode, active controls invert (light pill, dark text) rather than staying matte black on a near-black background, where the active state would disappear.
+
+**Theme tokens are always emitted (`@theme static`).** Category accents are referenced from inline styles, which Tailwind cannot see, so without `static` it dropped them.
+
+**Fraunces uses `display: optional`.** As `swap`, the display serif re-painted the headline late and set LCP. As `optional`, a slow first visit keeps the fallback serif for that page view. The optical-size axis was dropped too (67 KB to 37 KB).
+
+**Hero photos are served at quality 60.** They sit under a dark scrim, and the saving goes straight to LCP. Everything else uses 75.
+
+**No route `loading.tsx` files.** A route-level `loading.tsx` wraps the page in Suspense. The real content then ships inside `<div hidden>`, and an inline script reveals it. That broke the no-JS requirement (the explorer showed only a skeleton without JavaScript) and caused a 0.18 CLS as the footer jumped. Server-rendered pages now arrive complete. Pending states for in-app navigation will come from client components (`useLinkStatus`) in Phase 2, when the explorer gets optimistic filtering.
+
+**Photography is from Wikimedia Commons.** It is licensed CC BY, CC BY-SA, or public domain, and every photo shows a linked credit (artist and license) where it appears. The sources and licenses are in `scripts/seed-data/photo-credits.json`. `scripts/photos.ts` resizes the originals to 2400px and generates the blur placeholders into `src/content/photos.json`. The home hero is Lake Wilcox at sunset (Richmond Hill), the golden-hour shot the spec asks for. Individual place photos are not sourced yet; place pages use a category-tinted color field instead.
+
+**Data license: CC BY 4.0.** It is simple and allows commercial reuse with attribution, which suits partners. ODbL's share-alike would have discouraged municipal and campus reuse.
+
+## Navigation
+
+**Two shells.** Marketing and guide pages (home, city, about, sign in) use a floating glass header. App pages (explore, places, account) use the persistent left rail on desktop. Both use a bottom tab bar on mobile.
+
+**Only shipped routes appear in navigation.** The footer's partner link (spec section 4) is left out until `/partners` exists in Phase 4.
+
+**The Day Planner teaser links to the explorer, not `/planner`.** The planner is Phase 3. The teaser shows a real plan assembled from live data and says the planner is coming to Pro.
+
+**The header shows a static "Account" link, not session state.** Reading the session in the shared layout would make every marketing page dynamic, and cost LCP. `/account` redirects signed-out visitors to sign in and back.
+
+## Auth
+
+**Database sessions, not JWT.** The cookie is an opaque random token, HTTP-only, Secure in production, and SameSite=Lax. The session and the user's role are read from Postgres on each request, so a revoked role takes effect immediately. A signed or encrypted JWT would keep stale roles until expiry.
+
+**Magic links without an email provider.**
+
+- With `RESEND_API_KEY` set, links are sent through Resend.
+- In development without a key, the link is written to the server log.
+- In production without a key, email sign-in is hidden.
+- `EMAIL_LOG_ONLY=true` logs links in production builds, for CI and previews only. Env validation refuses to boot with it on Vercel production.
+
+**Email sign-in redirects in the server action.** Auth.js's own redirect points at `/api/auth/verify-request`, and the router's soft navigation stopped there. The action passes `redirect: false` and then redirects to `/signin/check-email` itself.
+
+**Post-sign-in redirects are same-site only.** `safeRedirectPath()` rejects absolute URLs, `//host`, and `/\host`.
+
+**Google sign-in appears only when both `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` are set.** Setting just one fails validation.
+
+## Ranking
+
+**Free first means different things per sort.**
+
+- Relevance (the default) puts every free listing ahead of every paid one, then orders by score.
+- Cost uses the full band order (free, low, moderate, varies).
+- Newest is chronological, because a user who picks "newest" asked for chronology.
+
+**The signals are curator pick, tips, saves, recency of verification, and text match.** Curator picks are editorial, not paid. `tests/unit/ranking-integrity.test.ts` asserts the signal type's exact keys. It also fails if `ranking.ts`, or the explorer's signal construction, mentions payment, subscription, tier, partner, claim, sponsorship, or promotion.
+
+**Ranking runs in TypeScript after a SQL filter.** At 400 rows, this keeps one tested implementation. Move scoring into SQL once a city passes about 5k listings.
+
+## Performance (current state)
+
+Lighthouse, mobile, simulated slow 4G, median of 3 runs:
+
+| Page    | Perf | A11y | Best practices | SEO | LCP    | TBT    | CLS |
+| ------- | ---- | ---- | -------------- | --- | ------ | ------ | --- |
+| Home    | 97   | 100  | 100            | 100 | 2.56 s | 78 ms  | 0   |
+| City    | 95   | 100  | 100            | 100 | 2.92 s | 79 ms  | 0   |
+| About   | 98   | 100  | 100            | 100 | 2.11 s | 82 ms  | 0   |
+| Explore | 94   | 100  | 100            | 100 | 2.11 s | 197 ms | 0   |
+
+The LCP budget (2.0 s) is not met yet, so the Lighthouse CI step fails today. The budget is left enforced rather than loosened. The work is scheduled for Phase 5, as the spec plans it; candidates are smaller mobile hero crops and reviewing the base JavaScript (about 156 KB gzip, under the 180 KB budget).
+
+**Lighthouse runs on Linux Chromium.** Under WSL, Lighthouse otherwise launches Windows Chrome and fails. Point `CHROME_PATH` at Playwright's Chromium. CI on Ubuntu needs nothing extra.
+
+## Deferred, by phase
+
+- **Phase 2:** map (MapLibre GL, chosen for no billing dependency), command palette, client-side optimistic filters, submit flow and moderation queue, hours parsing and "open now", event calendar, rate limiting.
+- **Phase 3:** collections, Day Planner, Stripe.
+- **Phase 4:** partners, embed, business claims, admin.
+- **Phase 5:** guides, OG images per city and place, analytics, Lighthouse budgets.
+
+The schema for all of them already exists.
