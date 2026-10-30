@@ -7,6 +7,7 @@ import {
   Lightbulb,
   MapPin,
   MessageSquareText,
+  PencilLine,
   Phone,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -14,6 +15,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { JsonLd } from "@/components/features/json-ld";
+import { OpenNow } from "@/components/features/open-now";
 import { PlaceCard } from "@/components/features/place-card";
 import { CategoryTag, CostBadge, PickBadge } from "@/components/ui/badges";
 import { ButtonLink, buttonClasses } from "@/components/ui/button";
@@ -219,6 +221,7 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
             )}
             {place.hours && (
               <Detail icon={Clock} label="Hours">
+                {place.hours.weekly && <OpenNow weekly={place.hours.weekly} />}
                 {place.hours.text}
               </Detail>
             )}
@@ -268,6 +271,13 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
               Details checked {formatDate(place.lastVerifiedAt)}.
             </p>
           )}
+          <Link
+            href={`/submit?type=correction&place=${place.id}`}
+            className="inline-flex items-center gap-1.5 text-meta font-semibold text-primary-text quiet-link"
+          >
+            <Icon icon={PencilLine} size={16} />
+            Suggest a correction
+          </Link>
         </aside>
       </div>
 

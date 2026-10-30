@@ -10,7 +10,7 @@ Next.js 16 (App Router), TypeScript, Tailwind CSS v4, Drizzle ORM on Postgres, a
 npm install
 cp .env.example .env.local      # then set AUTH_SECRET (command is in the file)
 npm run db:migrate              # creates an embedded Postgres in .data/pglite
-npm run db:seed                 # 9 cities, 10 categories, 400 places
+npm run db:seed                 # 9 cities, 10 categories, 400 places, 31 events
 npm run dev
 ```
 
@@ -27,6 +27,7 @@ To reset the local database, run `npm run db:reset`. It refuses to run when `DAT
 | `npm run check:copy`                  | Hard copy rules: no em dash, ping indicators, monospace, emoji, or banned phrases. Checks the built HTML too |
 | `npm run db:generate`                 | New migration from `src/lib/db/schema.ts`                                                                    |
 | `npm run db:dry-run`                  | Applies every migration to a throwaway database and checks for schema drift                                  |
+| `npm run db:backfill`                 | Re-parses every place's hours text into a weekly schedule, after changes to the hours parser                 |
 | `npx tsx scripts/photos.ts <dir>`     | Resizes photography into `public/` and rebuilds the blur and credit manifest                                 |
 
 ## Layout
@@ -45,7 +46,9 @@ tests/unit, tests/e2e
 
 ## Deploying
 
-Set `DATABASE_URL` (Neon or Supabase), `AUTH_SECRET`, `NEXT_PUBLIC_SITE_URL`, and `RESEND_API_KEY`. Run `npm run db:migrate && npm run db:seed` against that database once, then deploy. Google sign-in is enabled when `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` are both set.
+Set `DATABASE_URL` (Neon or Supabase), `AUTH_SECRET`, `NEXT_PUBLIC_SITE_URL`, and `RESEND_API_KEY`. Run `npm run db:migrate && npm run db:seed` against that database once, then deploy. Google sign-in is enabled when `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` are both set. Set `SLACK_WEBHOOK_URL` to get a message for each new suggestion; without it, suggestions are logged.
+
+Map tiles come from OpenFreeMap and need no key. `npm run build` copies MapLibre's worker into `public/maplibre/` first.
 
 ## Data and photo licenses
 

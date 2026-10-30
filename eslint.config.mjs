@@ -28,6 +28,7 @@ export default defineConfig([
   },
   globalIgnores([
     ".next/**",
+    "public/maplibre/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

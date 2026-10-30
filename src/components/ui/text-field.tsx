@@ -1,4 +1,6 @@
 import { useId, type ComponentProps } from "react";
+import { describedBy, fieldControlClasses } from "./field-parts";
+import { FieldMessages } from "./field-messages";
 import { cn } from "@/lib/cn";
 
 type TextFieldProps = Omit<ComponentProps<"input">, "id" | "placeholder"> & {
@@ -13,8 +15,6 @@ type TextFieldProps = Omit<ComponentProps<"input">, "id" | "placeholder"> & {
  */
 export function TextField({ label, description, error, className, ...props }: TextFieldProps) {
   const id = useId();
-  const descriptionId = description ? `${id}-description` : undefined;
-  const errorId = error ? `${id}-error` : undefined;
   return (
     <div className={cn("grid gap-1.5", className)}>
       <div className="relative">
@@ -22,12 +22,8 @@ export function TextField({ label, description, error, className, ...props }: Te
           id={id}
           placeholder=" "
           aria-invalid={error ? true : undefined}
-          aria-describedby={[descriptionId, errorId].filter(Boolean).join(" ") || undefined}
-          className={cn(
-            "peer h-14 w-full rounded-2xl border bg-surface-solid px-4 pt-5 pb-1.5 text-body text-text transition-colors outline-none",
-            "focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus",
-            error ? "border-danger" : "border-divider hover:border-text-muted",
-          )}
+          aria-describedby={describedBy(id, description, error)}
+          className={fieldControlClasses(error, "h-14 pt-5 pb-1.5")}
           {...props}
         />
         <label
@@ -37,16 +33,7 @@ export function TextField({ label, description, error, className, ...props }: Te
           {label}
         </label>
       </div>
-      {description && (
-        <p id={descriptionId} className="px-1 text-meta text-text-muted">
-          {description}
-        </p>
-      )}
-      {error && (
-        <p id={errorId} className="px-1 text-meta font-medium text-danger">
-          {error}
-        </p>
-      )}
+      <FieldMessages id={id} description={description} error={error} />
     </div>
   );
 }

@@ -26,6 +26,16 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link className="quiet-link" href="/events">
+                Events calendar
+              </Link>
+            </li>
+            <li>
+              <Link className="quiet-link" href="/submit">
+                Suggest a place
+              </Link>
+            </li>
+            <li>
               <Link className="quiet-link" href="/about">
                 How CityRoots works
               </Link>

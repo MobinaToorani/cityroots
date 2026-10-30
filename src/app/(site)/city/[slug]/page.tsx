@@ -2,6 +2,7 @@ import { CalendarDays, Sparkles } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CategoryTile } from "@/components/features/category-tile";
+import { EventCard } from "@/components/features/event-card";
 import { JsonLd } from "@/components/features/json-ld";
 import { Photo, PhotoCredit } from "@/components/features/photo";
 import { PlaceCard } from "@/components/features/place-card";
@@ -10,7 +11,8 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Container, SectionHeading } from "@/components/ui/section";
 import { getCategoryCounts, getCityBySlug, listLiveCities } from "@/lib/data/cities";
-import { listCityEvents, listPicks } from "@/lib/data/places";
+import { listUpcomingFreeFirst } from "@/lib/data/events";
+import { listPicks } from "@/lib/data/places";
 import { firstSentence } from "@/lib/domain/copy";
 import { exploreHref } from "@/lib/domain/explore-params";
 import { photo } from "@/lib/photos";
@@ -50,7 +52,7 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
 
   const [picks, events, categoryCounts] = await Promise.all([
     listPicks(city.slug, 6),
-    listCityEvents(city.slug, 8),
+    listUpcomingFreeFirst(city.slug, 8),
     getCategoryCounts(city.id),
   ]);
   const hero = photo(city.heroImage);
@@ -218,17 +220,13 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
         <Container>
           <SectionHeading
             id="events"
-            eyebrow="Through the year"
+            eyebrow="Coming up"
             title="Festivals and events"
-            description="Recurring events and seasonal festivals, free ones first. Check each listing for this year's dates."
+            description="Festivals and markets on now or coming up, free ones first. Check each listing for exact dates."
             action={
               events.length > 0 ? (
-                <ButtonLink
-                  href={exploreHref({ city: city.slug, type: ["event"] })}
-                  variant="secondary"
-                  size="sm"
-                >
-                  See all events
+                <ButtonLink href={`/events?city=${city.slug}`} variant="secondary" size="sm">
+                  See the events calendar
                 </ButtonLink>
               ) : undefined
             }
@@ -236,9 +234,9 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
           {events.length > 0 ? (
             <div className="-mx-5 no-scrollbar overflow-x-auto px-5 sm:-mx-8 sm:px-8">
               <ul className="flex w-max snap-x snap-mandatory gap-4 pb-4">
-                {events.map((place) => (
-                  <li key={place.id} className="w-[78vw] max-w-[320px] shrink-0 snap-start">
-                    <PlaceCard place={place} />
+                {events.map((event) => (
+                  <li key={event.id} className="w-[78vw] max-w-[320px] shrink-0 snap-start">
+                    <EventCard event={event} showCity={false} />
                   </li>
                 ))}
               </ul>

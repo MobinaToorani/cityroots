@@ -9,10 +9,20 @@ type EmptyStateProps = {
   children: ReactNode;
   /** Every empty state offers a next step. */
   action: ReactNode;
+  /** Use "h1" when the empty state is the whole page. */
+  headingLevel?: "h1" | "h2";
   className?: string;
 };
 
-export function EmptyState({ icon, title, children, action, className }: EmptyStateProps) {
+export function EmptyState({
+  icon,
+  title,
+  children,
+  action,
+  headingLevel = "h2",
+  className,
+}: EmptyStateProps) {
+  const Heading = headingLevel;
   return (
     <div
       className={cn(
@@ -23,7 +33,7 @@ export function EmptyState({ icon, title, children, action, className }: EmptySt
       <span className="grid size-11 place-items-center rounded-full bg-free-soft text-free">
         <Icon icon={icon} />
       </span>
-      <h2 className="text-card font-semibold">{title}</h2>
+      <Heading className="text-card font-semibold">{title}</Heading>
       <div className="text-body text-text-muted">{children}</div>
       <div className="mt-2">{action}</div>
     </div>

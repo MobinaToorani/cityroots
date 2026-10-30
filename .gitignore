@@ -54,3 +54,4 @@ next-env.d.ts
 
 # Chrome profiles that Lighthouse creates under WSL
 /C:*
+/public/maplibre

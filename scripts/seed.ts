@@ -8,10 +8,12 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { sql } from "drizzle-orm";
 import { z } from "zod";
-import { categories, cities, places } from "../src/lib/db/schema";
+import { categories, cities, events, places } from "../src/lib/db/schema";
 import { CATEGORIES, LEGACY_CATEGORY_MAP } from "../src/lib/domain/categories";
 import { COST_BANDS } from "../src/lib/domain/cost";
 import { cleanCopy, firstSentence, slugify } from "../src/lib/domain/copy";
+import { deriveEventDates } from "../src/lib/domain/event-dates";
+import { parseWeeklyHours } from "../src/lib/domain/hours";
 import { describeTarget, scriptDatabase } from "./db-config";
 
 const DATA_DIR = path.join(import.meta.dirname, "seed-data", "cities");
@@ -89,6 +91,11 @@ function dedupe(list: LegacyPlace[]): { kept: LegacyPlace[]; dropped: string[] }
   return { kept: [...byId.values()], dropped };
 }
 
+function hoursFromText(text: string) {
+  const weekly = parseWeeklyHours(text);
+  return weekly ? { text, weekly } : { text };
+}
+
 function optionalClean(value: string | undefined): string | null {
   return value ? cleanCopy(value) : null;
 }
@@ -116,7 +123,7 @@ async function main() {
   const files = readdirSync(DATA_DIR)
     .filter((f) => f.endsWith(".json"))
     .sort();
-  const expected = { total: 0, byCost: { free: 0, low: 0, moderate: 0, varies: 0 } };
+  const expected = { total: 0, events: 0, byCost: { free: 0, low: 0, moderate: 0, varies: 0 } };
 
   for (const file of files) {
     const city = legacyCity.parse(JSON.parse(readFileSync(path.join(DATA_DIR, file), "utf8")));
@@ -173,7 +180,7 @@ async function main() {
         lng: p.lng ?? null,
         costBand: p.cost,
         priceNote: optionalClean(p.costNote),
-        hours: p.hours ? { text: cleanCopy(p.hours) } : null,
+        hours: p.hours ? hoursFromText(cleanCopy(p.hours)) : null,
         seasonal: p.seasonal ?? false,
         seasonNote: optionalClean(p.seasonNote),
         phone: p.phone ?? null,
@@ -185,6 +192,34 @@ async function main() {
         createdAt: new Date(`${p.lastVerified}T12:00:00Z`),
       };
       await db.insert(places).values(row).onConflictDoUpdate({ target: places.id, set: row });
+
+      // Recurring events with a named month go on the calendar.
+      if (p.type === "event") {
+        const dates = deriveEventDates(
+          [p.seasonNote, p.hours].filter(Boolean).join(" | "),
+          new Date(),
+        );
+        if (dates) {
+          const event = {
+            id: stableId(`event/${citySlug}/${p.id}`),
+            placeId: row.id,
+            cityId,
+            title: row.name,
+            description: row.summary,
+            startAt: dates.startAt,
+            endAt: dates.endAt,
+            datePrecision: dates.precision,
+            costBand: p.cost,
+            url: p.website ?? null,
+            recurrenceRule: "FREQ=YEARLY",
+          };
+          await db
+            .insert(events)
+            .values(event)
+            .onConflictDoUpdate({ target: events.id, set: event });
+          expected.events++;
+        }
+      }
       expected.total++;
       expected.byCost[p.cost]++;
     }
@@ -209,6 +244,7 @@ async function main() {
     `Seeded ${files.length} cities, ${CATEGORIES.length} categories, ${expected.total} places`,
   );
   console.log(`  by cost: ${JSON.stringify(expected.byCost)}`);
+  console.log(`  ${expected.events} calendar events`);
   process.exit(0);
 }
 

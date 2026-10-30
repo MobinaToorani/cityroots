@@ -46,13 +46,15 @@ test.describe("explorer", () => {
     const before = Number((await status.textContent())?.match(/\d+/)?.[0]);
 
     await page
-      .getByRole("group", { name: "Cost" })
+      .getByRole("group", { name: "Cost and type" })
       .getByRole("link", { name: "Free", exact: true })
       .click();
     await expect(page).toHaveURL(/cost=free/);
-    const after = Number((await status.textContent())?.match(/\d+/)?.[0]);
-    expect(after).toBeGreaterThan(0);
-    expect(after).toBeLessThan(before);
+    // The URL updates optimistically; results follow once the server responds.
+    const count = async () => Number((await status.textContent())?.match(/\d+/)?.[0]);
+    await expect.poll(count).toBeLessThan(before);
+    expect(await count()).toBeGreaterThan(0);
+    await expect(page.locator("main [aria-busy='true']")).toHaveCount(0);
     for (const badge of await page
       .locator("main article")
       .getByText(/^(Free|Low cost|Moderate|Varies)$/)

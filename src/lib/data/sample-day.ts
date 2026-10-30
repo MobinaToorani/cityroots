@@ -1,5 +1,6 @@
 import "server-only";
 import type { CategorySlug } from "@/lib/domain/categories";
+import { defaultExploreState } from "@/lib/domain/explore-params";
 import { queryPlaces } from "./places";
 import type { PlaceCard } from "./types";
 
@@ -20,17 +21,14 @@ const SLOTS: { time: string; label: string; cat: CategorySlug }[] = [
 export async function sampleDay(citySlug: string): Promise<SampleStop[]> {
   const stops = await Promise.all(
     SLOTS.map(async (slot) => {
-      const { items } = await queryPlaces({
-        city: citySlug,
-        cat: [slot.cat],
-        cost: ["free", "low"],
-        type: ["place"],
-        q: "",
-        sort: "relevance",
-        view: "list",
-        picks: false,
-        page: 1,
-      });
+      const { items } = await queryPlaces(
+        defaultExploreState({
+          city: citySlug,
+          cat: [slot.cat],
+          cost: ["free", "low"],
+          type: ["place"],
+        }),
+      );
       const place = items[0];
       return place ? { time: slot.time, label: slot.label, place } : null;
     }),

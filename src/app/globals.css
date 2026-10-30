@@ -175,20 +175,25 @@
   }
 }
 
-/* Route crossfade with a 12px rise. Applied by the template wrapper. */
-@keyframes page-enter {
+/* Route crossfade, run by the app template's view transition. */
+@keyframes page-fade-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
   }
 }
 
-.page-enter {
-  animation: page-enter 180ms var(--ease-out-expo) both;
+@keyframes page-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+::view-transition-old(.page-exit) {
+  animation: page-fade-out 120ms ease-out both;
+}
+
+::view-transition-new(.page-enter) {
+  animation: page-fade-in 180ms var(--ease-out-expo) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -200,11 +205,45 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .page-enter {
-    animation: none;
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
   .motion-lift:hover,
   .motion-press:active {
     transform: none !important;
+  }
+}
+
+/* Map detail card rises from below on selection. */
+@keyframes sheet-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sheet-up {
+  animation: sheet-up 220ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet-up {
+    animation: none;
+  }
+}
+
+/* Command palette opens with a short rise. */
+.palette[open] {
+  animation: sheet-up 180ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .palette[open] {
+    animation: none;
   }
 }

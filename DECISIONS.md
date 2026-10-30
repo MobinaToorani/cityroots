@@ -6,7 +6,7 @@ Every judgment call made during the rebuild, with the reason. Newest phase at th
 
 **Rebuilt in place on the `rebuild` branch.** The old site stays on `main` and in git history. Only data was ported: the nine city JSON files moved to `scripts/seed-data/cities/`. No old code was carried over.
 
-**Phase 1 only, then review.** The spec is five phases. This branch delivers Phase 1 (foundation) plus a server-rendered baseline of the explorer and place pages, so that nothing on the site links to a page that does not exist yet.
+**One phase at a time, with a review after each.** The spec is five phases. Phase 1 delivered the foundation plus a server-rendered baseline of the explorer and place pages, so that nothing on the site links to a page that does not exist yet. Phase 2 delivered the explorer (map, client filters, command palette), the submit flow, hours parsing, and the event calendar.
 
 ## Stack
 
@@ -16,7 +16,7 @@ Every judgment call made during the rebuild, with the reason. Newest phase at th
 
 **TypeScript 6 strict, plus `noUncheckedIndexedAccess`.** ESLint bans `any`, non-null assertions, `console`, and empty `catch` blocks. The logger and CLI scripts are the only places allowed to write to the console.
 
-**`nuqs` for URL state.** One set of parsers (`src/lib/domain/explore-params.ts`) runs on the server for the first render and will run on the client in Phase 2. Multi-value filters are comma lists (`cost=free,low`).
+**`nuqs` for URL state.** One set of parsers (`src/lib/domain/explore-params.ts`) runs on the server for the first render and on the client for updates. Multi-value filters are comma lists (`cost=free,low`). Map bounds are `bbox=west,south,east,north`; invalid boxes are dropped, not errors.
 
 ## Data
 
@@ -42,15 +42,21 @@ Every judgment call made during the rebuild, with the reason. Newest phase at th
 
 **Map index.** A plain B-tree on `(lat, lng)` serves bounding-box queries at this scale (400 rows). PostGIS was not added; revisit past roughly 50k places.
 
-**Hours stay as text for now.** `hours` is JSON shaped `{ text, weekly? }`. The legacy hours are free-form ("Tue to Sat 11am to 5pm; closed Sun to Mon"). Parsing them into `weekly` for the "open now" computation is Phase 2 work, delivered as `scripts/backfill.ts`.
+**Hours: a strict parser, and text as the fallback.** `hours` is JSON shaped `{ text, weekly? }`. `parseWeeklyHours()` only fills `weekly` when the text is an unambiguous weekly schedule ("Tue to Sat 11am to 5pm; closed Sun to Mon"). It refuses anything seasonal, month-specific, weather-dependent, "varies", "check website", or parenthetical. 143 of the 274 places with hours parse; the rest keep showing their text and get no "Open now" badge. A wrong "Open now" sends someone to a locked door, so a missing badge is the better failure. The seed parses on insert, and `npm run db:backfill` re-derives existing rows after parser changes.
 
-**Events.** The legacy data has 52 recurring events and festivals but no dates, so the `events` table starts empty. City pages show the event-type listings as "Festivals and events" with their season notes, and the copy tells people to check this year's dates. The dated calendar arrives in Phase 2.
+**"Open now" is computed in the browser, in America/Toronto time.** Computing it on the server would freeze it into cached HTML. The badge renders after hydration and refreshes every minute.
+
+**Events have a date precision.** The legacy data has 52 recurring events and festivals but no exact dates. `events.date_precision` is `day` or `month`. The seed derives the next occurrence only when a season note names a month ("Saturdays May through October", "Annual event in June"), giving 31 calendar events. An explicit day ("July 1st") gives day precision. Vague notes ("summer weekends") produce no event rather than an invented date, and those listings stay in the explorer under Events.
+
+Month-precision events always display as "Usually in June" or "Usually May to October", never as a specific date. The calendar's first group is "In season now", not "On now", because a month-precision event cannot promise it is running today.
 
 ## Copy
 
 **Legacy copy is cleaned at seed time, not hand-edited.** `cleanCopy()` in `src/lib/domain/copy.ts` turns a paired em dash aside into commas and a single em dash into a colon ("summer weekends: food trucks, local vendors"). It also replaces "hidden gem" with "local favorite", and "unlock", "elevate", and "seamless" with plain words. The same function will clean community submissions in Phase 2. 797 em dashes were removed.
 
 **Card hooks are the first sentence of the description.** The legacy data has no one-line summary field.
+
+**Community text goes through the same cleaner.** Submitted names, descriptions, and corrections pass through `cleanCopy()` during validation, so an em dash or "hidden gem" in a suggestion never reaches a curator's queue in a form that would fail the copy check later.
 
 **The copy check scans source and built output.** `npm run check:copy` covers em dashes (including the `&mdash;` entities), `animate-ping` and `animate-pulse`, monospace fonts, emoji, TODO comments, lorem ipsum, and the banned phrases. It found real problems on its first run (em dashes in neighborhood names, "unlock" in a description), and both were fixed at the source.
 
@@ -82,6 +88,8 @@ Every judgment call made during the rebuild, with the reason. Newest phase at th
 
 ## Navigation
 
+**Route crossfade uses React view transitions.** The app template wraps pages in `<ViewTransition enter exit default="none">`, so the crossfade runs only on navigation. The Phase 1 version faded every page in from transparent with a CSS animation, including the first load. Removing that cut about 100 ms of TBT and 350 ms of LCP on Explore. The earlier transform-based fade also made the template the containing block for `position: fixed` children, which broke the full-screen map on phones. `default="none"` keeps filter updates from crossfading the whole page.
+
 **Two shells.** Marketing and guide pages (home, city, about, sign in) use a floating glass header. App pages (explore, places, account) use the persistent left rail on desktop. Both use a bottom tab bar on mobile.
 
 **Only shipped routes appear in navigation.** The footer's partner link (spec section 4) is left out until `/partners` exists in Phase 4.
@@ -107,6 +115,50 @@ Every judgment call made during the rebuild, with the reason. Newest phase at th
 
 **Google sign-in appears only when both `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` are set.** Setting just one fails validation.
 
+## Explorer
+
+**Every filter is a real link.** Chips, sort, and the list/map switch render as `<a href>` with the full URL, so the explorer works without JavaScript. With JavaScript, clicks are intercepted and update the URL through `nuqs` in a React transition. Controls change at once, while results dim (`aria-busy`) until the server responds. There are no skeletons or spinners in the explorer.
+
+**Infinite scroll keeps its button.** "Show 24 more" is a GET form. With JavaScript, an IntersectionObserver also submits it 600px before the end of the list. Pages are cumulative (`page=3` renders results 1 to 72), so a shared or reloaded link shows the same list.
+
+**List view is the default; the map loads on request.** MapLibre is about 280 KB gzip, plus a 145 KB worker. Both load only when `view=map` (the library through `next/dynamic`), keeping the explorer's first load at about 177 KB of script against its 300 KB budget.
+
+**MapLibre with OpenFreeMap tiles.** MapLibre is open source with no billing dependency (spec section 2 allowed it). OpenFreeMap serves vector tiles with no API key or account, using its Positron style in light mode and Dark in dark mode. Swapping to a paid provider later only means changing the URLs in `src/lib/map/config.ts`.
+
+**MapLibre's worker is copied into `public/`.** MapLibre 6 finds its worker through `import.meta.url`, which the bundler cannot follow. `scripts/copy-map-worker.mjs` runs before `dev` and `build` and copies it to `/maplibre/maplibre-gl-worker-<version>.mjs`. The versioned name makes it safe to cache forever. The copy is gitignored.
+
+**Pins are map layers, and the list is the accessible path.** Clustering and pins are drawn by MapLibre, which has no per-pin DOM. Every pin's place is also in the results list next to the map, and a "Skip the map, go to results" link comes first. Selecting a pin opens a glass card and moves focus to its "View details" link; Escape closes it.
+
+**Map bounds only change the URL when the person moves the map.** The initial fit to results does not write `bbox`. Panning or zooming does, and limits results to that area ("114 results in this map area"), with a "Show results everywhere" button to undo it. Places without coordinates (18 of 133 in Newmarket, mostly city-wide services) appear in the list but not on the map; the overlay says how many are on the map.
+
+**On phones the results are a bottom sheet over a full-screen map.** It snaps between peek, half, and full. Selecting a pin drops it to peek so the card and the pin stay visible. The map's initial fit is padded by the sheet height so pins do not start out hidden under it.
+
+## Search
+
+**The command palette scores in TypeScript.** `/api/search` loads published places and live cities, and scores them with `fuzzyScore()`, which accepts exact words, prefixes, substrings, one typo ("libray", "musuem"), and in-word abbreviations. Name matches count double, and free listings win ties. At 400 rows this takes a few milliseconds. Switch to `pg_trgm` past a few thousand rows.
+
+**One palette, many triggers.** The dialog is mounted once in the root layout. The rail, header, and mobile header render `PaletteTrigger` links to `/explore`, which open the palette with JavaScript and still go somewhere useful without it. It is a native `<dialog>` (focus trap, Escape, and inert background for free) with the ARIA combobox pattern. The last five picks are kept in `localStorage`; nothing about searches is sent anywhere else.
+
+## Submissions
+
+**No account needed to suggest a place or a correction.** Email is optional and used only to say the suggestion was reviewed. It is stored in `submissions.contact_email`, separate from the payload, so it can be purged without touching the suggestion.
+
+**Spam defences are a honeypot and a rate limit.** A visually hidden `company` field must stay empty, and each client can send 5 submissions per hour. There is no CAPTCHA. Revisit if the review queue fills with spam.
+
+**Everything slow happens after the response.** The action validates, stores the submission as `pending`, and redirects to `/submit/thanks` (post, redirect, get). The reviewer notification (Slack webhook when `SLACK_WEBHOOK_URL` is set, otherwise the server log) and the optional receipt email run in `after()`. Their failures are logged and never shown to the person.
+
+**Corrections start from the listing.** Every place page has "Suggest a correction", which opens the form with the place filled in. `/submit?type=correction` without a place asks the person to open the listing first, rather than offering a place picker that could pick the wrong branch.
+
+**Reviewing is database-only until Phase 4.** Submissions land in the queue and notify reviewers, but approving one currently means editing the database. The review screen is part of the admin work in Phase 4.
+
+## Rate limiting
+
+**A sliding window stored in Postgres.** The `rate_limits` table keeps a count per key and fixed window, and the limit uses the weighted sum of the current and previous windows. This needs no Redis and works across serverless instances. Limits: 5 submissions per hour, 60 palette searches per minute. Old windows are deleted on about 2% of calls.
+
+**The client key is a keyed hash of the IP.** It is `sha256(AUTH_SECRET:ip)`, taken from `x-forwarded-for`, which Vercel sets. Raw IPs are never stored.
+
+**The limiter fails open.** If the rate limit query fails, the request goes through and the error is logged. A database hiccup should not block every visitor's search, and the submit form still has its honeypot.
+
 ## Ranking
 
 **Free first means different things per sort.**
@@ -121,22 +173,33 @@ Every judgment call made during the rebuild, with the reason. Newest phase at th
 
 ## Performance (current state)
 
-Lighthouse, mobile, simulated slow 4G, median of 3 runs:
+Lighthouse, mobile, simulated slow 4G, median of 3 runs, after Phase 2:
 
-| Page    | Perf | A11y | Best practices | SEO | LCP    | TBT    | CLS |
-| ------- | ---- | ---- | -------------- | --- | ------ | ------ | --- |
-| Home    | 97   | 100  | 100            | 100 | 2.56 s | 78 ms  | 0   |
-| City    | 95   | 100  | 100            | 100 | 2.92 s | 79 ms  | 0   |
-| About   | 98   | 100  | 100            | 100 | 2.11 s | 82 ms  | 0   |
-| Explore | 94   | 100  | 100            | 100 | 2.11 s | 197 ms | 0   |
+| Page    | Perf | A11y | Best practices | SEO | LCP    | TBT    | CLS | Script |
+| ------- | ---- | ---- | -------------- | --- | ------ | ------ | --- | ------ |
+| Home    | 92   | 100  | 100            | 100 | 3.28 s | 85 ms  | 0   | 160 KB |
+| City    | 98   | 100  | 100            | 100 | 2.24 s | 105 ms | 0   | 160 KB |
+| About   | 96   | 100  | 100            | 100 | 2.55 s | 98 ms  | 0   | 160 KB |
+| Explore | 91   | 100  | 100            | 100 | 2.96 s | 224 ms | 0   | 177 KB |
+| Events  | 92   | 100  | 100            | 100 | 2.62 s | 240 ms | 0   | 164 KB |
+| Submit  | 93   | 100  | 100            | 100 | 2.71 s | 208 ms | 0   | 164 KB |
 
-The LCP budget (2.0 s) is not met yet, so the Lighthouse CI step fails today. The budget is left enforced rather than loosened. The work is scheduled for Phase 5, as the spec plans it; candidates are smaller mobile hero crops and reviewing the base JavaScript (about 156 KB gzip, under the 180 KB budget).
+The LCP budget (2.0 s) is still not met, so the Lighthouse CI step fails. TBT on the app pages sits around the 200 ms budget and crosses it in some runs. Both budgets stay enforced rather than loosened, and the work is scheduled for Phase 5. Candidates: smaller mobile hero crops, fewer backdrop-filter surfaces on long pages, and the app shell's base JavaScript.
+
+On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP, so compare medians, not single runs. Phase 2 changes that moved the numbers:
+
+- The command palette is in the root layout: about 4 KB on every page.
+- The first-load fade on app pages was removed (see Navigation), which cut about 100 ms of TBT and 350 ms of LCP on Explore.
+- Correction labels moved out of the Zod schema module, which took the submit page from 196 KB to 164 KB.
+- Month sections on the events page use `content-visibility: auto`.
+
+`/events` and `/submit` were added to the Lighthouse URLs and to the same budgets as the marketing pages.
 
 **Lighthouse runs on Linux Chromium.** Under WSL, Lighthouse otherwise launches Windows Chrome and fails. Point `CHROME_PATH` at Playwright's Chromium. CI on Ubuntu needs nothing extra.
 
 ## Deferred, by phase
 
-- **Phase 2:** map (MapLibre GL, chosen for no billing dependency), command palette, client-side optimistic filters, submit flow and moderation queue, hours parsing and "open now", event calendar, rate limiting.
+- **Phase 2 (delivered):** map, command palette, optimistic filters, submit flow, hours parsing and "Open now", event calendar, rate limiting. The review screen for the moderation queue moves to Phase 4 with the rest of admin.
 - **Phase 3:** collections, Day Planner, Stripe.
 - **Phase 4:** partners, embed, business claims, admin.
 - **Phase 5:** guides, OG images per city and place, analytics, Lighthouse budgets.

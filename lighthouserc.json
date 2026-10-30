@@ -7,7 +7,9 @@
         "http://localhost:3200/",
         "http://localhost:3200/city/newmarket",
         "http://localhost:3200/about",
-        "http://localhost:3200/explore?city=waterloo"
+        "http://localhost:3200/explore?city=waterloo",
+        "http://localhost:3200/events",
+        "http://localhost:3200/submit"
       ],
       "numberOfRuns": 3,
       "settings": {
@@ -17,7 +19,7 @@
     "assert": {
       "assertMatrix": [
         {
-          "matchingUrlPattern": "http://localhost:3200/(city/.*|about)?$",
+          "matchingUrlPattern": "http://localhost:3200/(city/.*|about|events.*|submit)?$",
           "assertions": {
             "categories:performance": [
               "error",

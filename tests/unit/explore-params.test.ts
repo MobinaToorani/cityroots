@@ -53,6 +53,14 @@ describe("explore URL state", () => {
     expect(back.cat).toEqual(["arts", "cafes"]);
   });
 
+  it("accepts only sensible map bounds", () => {
+    const ok = normalizeExploreState(loadExploreState("?bbox=-79.6,43.9,-79.3,44.1"));
+    expect(ok.bbox).toEqual([-79.6, 43.9, -79.3, 44.1]);
+    for (const bad of ["?bbox=1,2,3", "?bbox=-79,44,-80,43", "?bbox=a,b,c,d", "?bbox=0,-95,1,1"]) {
+      expect(normalizeExploreState(loadExploreState(bad)).bbox).toBeNull();
+    }
+  });
+
   it("counts active filters", () => {
     expect(activeFilterCount(loadExploreState("?city=x"))).toBe(0);
     expect(activeFilterCount(loadExploreState("?cost=free,low&picks=true&q=hi"))).toBe(4);

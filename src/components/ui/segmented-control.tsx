@@ -1,5 +1,7 @@
 "use client";
 
+import type { Route } from "next";
+import Link from "next/link";
 import { useLayoutEffect, useRef, useState, type KeyboardEvent } from "react";
 import { cn } from "@/lib/cn";
 
@@ -10,6 +12,8 @@ type SegmentedControlProps<T extends string> = {
   options: readonly Option<T>[];
   value: T;
   onChange: (value: T) => void;
+  /** When set, segments are real links (working without JavaScript); clicks still call onChange. */
+  hrefFor?: (value: T) => Route;
   className?: string;
 };
 
@@ -22,9 +26,10 @@ export function SegmentedControl<T extends string>({
   options,
   value,
   onChange,
+  hrefFor,
   className,
 }: SegmentedControlProps<T>) {
-  const refs = useRef<(HTMLButtonElement | null)[]>([]);
+  const refs = useRef<(HTMLButtonElement | HTMLAnchorElement | null)[]>([]);
   const [indicator, setIndicator] = useState<{ left: number; width: number } | null>(null);
   const activeIndex = Math.max(
     0,
@@ -63,6 +68,37 @@ export function SegmentedControl<T extends string>({
       )}
       {options.map((option, i) => {
         const checked = option.value === value;
+        const className = cn(
+          "relative z-10 inline-flex h-9 items-center rounded-full px-4 text-meta font-semibold transition-colors duration-200",
+          checked ? "text-on-ink" : "text-text-muted hover:text-text",
+          !indicator && checked && "bg-ink",
+        );
+        const common = {
+          role: "radio" as const,
+          "aria-checked": checked,
+          tabIndex: checked ? 0 : -1,
+          className,
+        };
+        if (hrefFor) {
+          return (
+            <Link
+              key={option.value}
+              ref={(el) => {
+                refs.current[i] = el;
+              }}
+              href={hrefFor(option.value)}
+              scroll={false}
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+                e.preventDefault();
+                onChange(option.value);
+              }}
+              {...common}
+            >
+              {option.label}
+            </Link>
+          );
+        }
         return (
           <button
             key={option.value}
@@ -70,15 +106,8 @@ export function SegmentedControl<T extends string>({
               refs.current[i] = el;
             }}
             type="button"
-            role="radio"
-            aria-checked={checked}
-            tabIndex={checked ? 0 : -1}
             onClick={() => onChange(option.value)}
-            className={cn(
-              "relative z-10 h-9 rounded-full px-4 text-meta font-semibold transition-colors duration-200",
-              checked ? "text-on-ink" : "text-text-muted hover:text-text",
-              !indicator && checked && "bg-ink",
-            )}
+            {...common}
           >
             {option.label}
           </button>

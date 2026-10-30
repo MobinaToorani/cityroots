@@ -7,6 +7,9 @@ const PAGES = [
   { name: "explorer", path: "/explore?city=markham" },
   { name: "about", path: "/about" },
   { name: "sign in", path: "/signin" },
+  { name: "events", path: "/events" },
+  { name: "submit", path: "/submit" },
+  { name: "explorer map", path: "/explore?city=newmarket&view=map" },
 ];
 
 for (const { name, path } of PAGES) {
@@ -23,6 +26,9 @@ test("place detail has no WCAG 2.2 AA violations", async ({ page }) => {
   await page.goto("/explore?city=burlington");
   await page.locator("main article a").first().click();
   await page.waitForURL(/\/places\//);
+  // Audit the settled page, not the moment of the route swap.
+  await expect(page).toHaveTitle(/\| CityRoots$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
     .analyze();
@@ -36,4 +42,16 @@ test("skip link moves focus to main content", async ({ page }) => {
   await expect(skip).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main")).toBeFocused();
+});
+
+test("command palette has no WCAG 2.2 AA violations", async ({ page }) => {
+  await page.goto("/");
+  await page.keyboard.press("ControlOrMeta+k");
+  await page.getByRole("combobox").fill("park");
+  await expect(page.getByRole("option").first()).toBeVisible();
+  const results = await new AxeBuilder({ page })
+    .include("dialog")
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
+    .analyze();
+  expect(results.violations.map((v) => `${v.id}: ${v.nodes.length} (${v.help})`)).toEqual([]);
 });

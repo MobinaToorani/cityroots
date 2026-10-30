@@ -1,14 +1,64 @@
 import "server-only";
-import { and, desc, eq, ilike, inArray, or, sql, type SQL } from "drizzle-orm";
+import { and, between, desc, eq, ilike, inArray, isNotNull, or, sql, type SQL } from "drizzle-orm";
 import { db } from "@/lib/db/client";
 import { categories, cities, collectionItems, places, tips } from "@/lib/db/schema";
 import type { CategorySlug } from "@/lib/domain/categories";
-import type { ExploreState } from "@/lib/domain/explore-params";
+import { defaultExploreState, validBbox, type ExploreState } from "@/lib/domain/explore-params";
 import { rank, type RankingSignals } from "@/lib/domain/ranking";
 import { DataError } from "@/lib/errors";
 import type { PlaceCard, PlaceDetail } from "./types";
 
 export const PAGE_SIZE = 24;
+
+export type MapPoint = Pick<
+  PlaceCard,
+  "id" | "name" | "summary" | "category" | "costBand" | "neighborhood" | "cityName" | "isPick"
+> & { lat: number; lng: number };
+
+/**
+ * Every place that matches the filters and has coordinates, for the map.
+ * Ignores paging and the map's own bounds, so panning never hides pins.
+ */
+export async function listMapPoints(state: ExploreState): Promise<MapPoint[]> {
+  const { items } = await queryPlaces({ ...state, bbox: null, page: Number.POSITIVE_INFINITY });
+  if (items.length === 0) return [];
+  try {
+    const coords = await db()
+      .select({ id: places.id, lat: places.lat, lng: places.lng })
+      .from(places)
+      .where(
+        and(
+          inArray(
+            places.id,
+            items.map((i) => i.id),
+          ),
+          isNotNull(places.lat),
+          isNotNull(places.lng),
+        ),
+      );
+    const byId = new Map(coords.map((c) => [c.id, c]));
+    return items.flatMap((p) => {
+      const c = byId.get(p.id);
+      if (!c?.lat || !c.lng) return [];
+      return [
+        {
+          id: p.id,
+          name: p.name,
+          summary: p.summary,
+          category: p.category,
+          costBand: p.costBand,
+          neighborhood: p.neighborhood,
+          cityName: p.cityName,
+          isPick: p.isPick,
+          lat: c.lat,
+          lng: c.lng,
+        },
+      ];
+    });
+  } catch (cause) {
+    throw new DataError("Could not load map points", { cause });
+  }
+}
 
 const cardColumns = {
   id: places.id,
@@ -48,6 +98,11 @@ export async function queryPlaces(state: ExploreState): Promise<PlaceQueryResult
   if (state.cost.length > 0) conditions.push(inArray(places.costBand, state.cost));
   if (state.type.length > 0) conditions.push(inArray(places.kind, state.type));
   if (state.picks) conditions.push(eq(places.isPick, true));
+  const bbox = validBbox(state.bbox);
+  if (bbox) {
+    const [w, s, e, n] = bbox;
+    conditions.push(and(between(places.lng, w, e), between(places.lat, s, n)) as SQL);
+  }
 
   let textScore: SQL<number> = sql<number>`0`;
   if (state.q) {
@@ -123,33 +178,7 @@ export async function queryPlaces(state: ExploreState): Promise<PlaceQueryResult
 
 /** Curator picks for a city, free first. */
 export async function listPicks(citySlug: string, limit = 6): Promise<PlaceCard[]> {
-  const result = await queryPlaces({
-    city: citySlug,
-    cat: [],
-    cost: [],
-    type: [],
-    q: "",
-    sort: "relevance",
-    view: "list",
-    picks: true,
-    page: 1,
-  });
-  return result.items.slice(0, limit);
-}
-
-/** Festivals and recurring events listed for a city, free first. */
-export async function listCityEvents(citySlug: string, limit = 8): Promise<PlaceCard[]> {
-  const result = await queryPlaces({
-    city: citySlug,
-    cat: [],
-    cost: [],
-    type: ["event"],
-    q: "",
-    sort: "relevance",
-    view: "list",
-    picks: false,
-    page: 1,
-  });
+  const result = await queryPlaces(defaultExploreState({ city: citySlug, picks: true }));
   return result.items.slice(0, limit);
 }
 
@@ -192,17 +221,9 @@ export async function getPlace(id: string): Promise<PlaceDetail | null> {
 
 /** Same city and category, free first, excluding the place itself. */
 export async function listSimilarPlaces(place: PlaceDetail, limit = 4): Promise<PlaceCard[]> {
-  const result = await queryPlaces({
-    city: place.citySlug,
-    cat: [place.category],
-    cost: [],
-    type: [],
-    q: "",
-    sort: "relevance",
-    view: "list",
-    picks: false,
-    page: 1,
-  });
+  const result = await queryPlaces(
+    defaultExploreState({ city: place.citySlug, cat: [place.category] }),
+  );
   return result.items.filter((p) => p.id !== place.id).slice(0, limit);
 }
 

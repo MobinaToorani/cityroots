@@ -64,6 +64,8 @@ export const claimStatus = pgEnum("claim_status", ["pending", "verified", "rejec
 export const submissionType = pgEnum("submission_type", ["new_place", "correction"]);
 export const reviewStatus = pgEnum("review_status", ["pending", "approved", "rejected"]);
 export const tipStatus = pgEnum("tip_status", ["pending", "published", "rejected"]);
+/** "month" means only the month is known ("usually in July"); never shown as a day. */
+export const datePrecision = pgEnum("date_precision", ["day", "month"]);
 export const subscriptionStatus = pgEnum("subscription_status", [
   "trialing",
   "active",
@@ -233,6 +235,7 @@ export const events = pgTable(
     description: text().notNull(),
     startAt: timestamp({ withTimezone: true }).notNull(),
     endAt: timestamp({ withTimezone: true }),
+    datePrecision: datePrecision().notNull().default("day"),
     costBand: costBand().notNull(),
     url: text(),
     recurrenceRule: text(),
@@ -351,3 +354,19 @@ export const partnerKeys = pgTable("partner_keys", {
   lastUsedAt: timestamp({ withTimezone: true }),
   ...timestamps,
 });
+
+/* ------------------------------------------------------------------ */
+/* Operations                                                          */
+/* ------------------------------------------------------------------ */
+
+/** Fixed-window counters for the sliding-window rate limiter (src/lib/rate-limit.ts). */
+export const rateLimits = pgTable(
+  "rate_limits",
+  {
+    key: text().notNull(),
+    windowStart: timestamp({ withTimezone: true }).notNull(),
+    count: integer().notNull().default(0),
+    ...timestamps,
+  },
+  (t) => [primaryKey({ columns: [t.key, t.windowStart] })],
+);
