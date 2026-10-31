@@ -55,6 +55,8 @@ export type PlaceDetail = PlaceCard & {
   sourceUrl: string | null;
   accessibility: PlaceAccessibility | null;
   lastVerifiedAt: string | null;
+  /** The people who run the place confirmed its details. Display only; never ranked. */
+  ownerConfirmed: boolean;
   tips: { id: string; body: string; createdAt: Date }[];
 };
 

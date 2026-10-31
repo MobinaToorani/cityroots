@@ -1,4 +1,4 @@
-import { Bookmark, Route as RouteIcon } from "lucide-react";
+import { Bookmark, Route as RouteIcon, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { openPortalAction } from "@/app/(site)/pricing/actions";
@@ -6,7 +6,7 @@ import { Button, ButtonLink } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Icon } from "@/components/ui/icon";
 import { signOut } from "@/lib/auth";
-import { requireUser } from "@/lib/auth/session";
+import { hasRole, requireUser } from "@/lib/auth/session";
 import { getMembership, type Membership } from "@/lib/data/subscriptions";
 import { periodForLookupKey } from "@/lib/domain/subscription";
 import { stripeConfigured } from "@/lib/stripe/client";
@@ -108,6 +108,11 @@ export default async function AccountPage(props: PageProps<"/account">) {
         <AccountLink href="/planner" icon={RouteIcon} title="Day plans">
           {membership.pro ? "Plan a day, or open one you saved" : "See how the Day Planner works"}
         </AccountLink>
+        {hasRole(user, "curator") && (
+          <AccountLink href="/admin" icon={ShieldCheck} title="Admin">
+            Review suggestions and claims
+          </AccountLink>
+        )}
       </nav>
     </div>
   );
@@ -119,7 +124,7 @@ function AccountLink({
   title,
   children,
 }: {
-  href: "/collections" | "/planner";
+  href: "/collections" | "/planner" | "/admin";
   icon: typeof Bookmark;
   title: string;
   children: string;

@@ -1,4 +1,6 @@
 import {
+  BadgeCheck,
+  Store,
   Accessibility,
   ArrowLeft,
   CalendarClock,
@@ -10,7 +12,7 @@ import {
   PencilLine,
   Phone,
 } from "lucide-react";
-import type { Metadata } from "next";
+import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
@@ -28,6 +30,7 @@ import type { PlaceDetail } from "@/lib/data/types";
 import { categoryMeta } from "@/lib/domain/categories";
 import { COST_HINTS, COST_LABELS } from "@/lib/domain/cost";
 import { exploreHref } from "@/lib/domain/explore-params";
+import { features } from "@/lib/env";
 import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -275,6 +278,12 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
               Details checked {formatDate(place.lastVerifiedAt)}.
             </p>
           )}
+          {place.ownerConfirmed && (
+            <p className="inline-flex items-center gap-1.5 text-meta text-text-muted">
+              <Icon icon={BadgeCheck} size={16} />
+              Details confirmed by the people who run it.
+            </p>
+          )}
           <Link
             href={`/submit?type=correction&place=${place.id}`}
             className="inline-flex items-center gap-1.5 text-meta font-semibold text-primary-text quiet-link"
@@ -282,6 +291,15 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
             <Icon icon={PencilLine} size={16} />
             Suggest a correction
           </Link>
+          {features.business() && !place.ownerConfirmed && (
+            <Link
+              href={`/business/claim/${place.id}` as Route}
+              className="inline-flex items-center gap-1.5 text-meta font-semibold text-primary-text quiet-link"
+            >
+              <Icon icon={Store} size={16} />
+              Run this place? Claim it
+            </Link>
+          )}
         </aside>
       </div>
 

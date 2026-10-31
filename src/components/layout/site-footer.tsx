@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { LogoMark } from "./logo";
 import { Container } from "@/components/ui/section";
+import { features } from "@/lib/env";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -45,6 +46,20 @@ export function SiteFooter() {
                 Suggest a place
               </Link>
             </li>
+            {features.business() && (
+              <li>
+                <Link className="quiet-link" href="/business">
+                  Claim your listing
+                </Link>
+              </li>
+            )}
+            {features.partners() && (
+              <li>
+                <Link className="quiet-link" href="/partners">
+                  For partners
+                </Link>
+              </li>
+            )}
             <li>
               <Link className="quiet-link" href="/about">
                 How CityRoots works

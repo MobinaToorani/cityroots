@@ -55,4 +55,11 @@ describe("ranking integrity", () => {
     expect(signalBlock).not.toMatch(FORBIDDEN);
     expect(code).not.toMatch(/subscriptions|claims|partnerKeys/);
   });
+
+  it("claims and partner code never write ranking inputs", () => {
+    for (const file of ["src/lib/data/claims.ts", "src/lib/data/partners.ts"]) {
+      const code = codeWithoutComments(file);
+      expect(code, file).not.toMatch(/lastVerifiedAt|isPick|tips\b|collectionItems/);
+    }
+  });
 });

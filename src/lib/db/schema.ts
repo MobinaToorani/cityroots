@@ -282,6 +282,16 @@ export const collectionItems = pgTable(
   ],
 );
 
+/** What a claimant asks a curator to confirm or change. */
+export type ClaimProposal = {
+  hoursText?: string;
+  costBand?: "free" | "low" | "moderate" | "varies";
+  priceNote?: string;
+  sourceUrl?: string;
+  accessibility?: PlaceAccessibility;
+  message?: string;
+};
+
 export const claims = pgTable(
   "claims",
   {
@@ -293,10 +303,21 @@ export const claims = pgTable(
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     status: claimStatus().notNull().default("pending"),
+    /** owner, manager, staff, or other. */
+    relationship: text().notNull().default("owner"),
+    proposal: jsonb().$type<ClaimProposal>().notNull().default({}),
+    /** Fields a curator confirmed when approving. */
     verifiedFields: jsonb().$type<Record<string, unknown>>(),
+    /** True when the claimant signed in with an email at the listing's website domain. */
+    domainMatch: boolean().notNull().default(false),
+    reviewerId: text().references(() => users.id, { onDelete: "set null" }),
+    reviewNotes: text(),
     ...timestamps,
   },
-  (t) => [index("claims_place_idx").on(t.placeId)],
+  (t) => [
+    index("claims_place_idx").on(t.placeId),
+    index("claims_status_idx").on(t.status, t.createdAt),
+  ],
 );
 
 export const submissions = pgTable(
@@ -388,14 +409,19 @@ export const plans = pgTable(
 export const partnerKeys = pgTable("partner_keys", {
   id: uuid().primaryKey().defaultRandom(),
   orgName: text().notNull(),
+  contactEmail: text(),
+  /** First characters of the key, shown so admins can tell keys apart. */
   keyPrefix: text().notNull(),
+  /** SHA-256 of the full key. The key itself is shown once and never stored. */
   keyHash: text().notNull().unique(),
   scopes: text()
     .array()
     .notNull()
     .default(sql`'{}'::text[]`),
   active: boolean().notNull().default(true),
+  createdBy: text().references(() => users.id, { onDelete: "set null" }),
   lastUsedAt: timestamp({ withTimezone: true }),
+  revokedAt: timestamp({ withTimezone: true }),
   ...timestamps,
 });
 

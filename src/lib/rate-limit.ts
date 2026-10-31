@@ -13,6 +13,8 @@ export type RateLimitResult = { allowed: true } | { allowed: false; retryAfterSe
 export const LIMITS = {
   submit: { limit: 5, windowSeconds: 60 * 60 },
   search: { limit: 60, windowSeconds: 60 },
+  partner: { limit: 1000, windowSeconds: 60 * 60 },
+  claim: { limit: 10, windowSeconds: 24 * 60 * 60 },
 } as const;
 
 /**

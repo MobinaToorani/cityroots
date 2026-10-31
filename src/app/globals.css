@@ -118,6 +118,15 @@
     text-wrap: pretty;
   }
 
+  /* Code samples use the same sans face as everything else. */
+  pre,
+  code,
+  kbd,
+  samp,
+  textarea {
+    font-family: var(--font-sans);
+  }
+
   :focus-visible {
     outline: 2px solid var(--color-focus);
     outline-offset: 3px;

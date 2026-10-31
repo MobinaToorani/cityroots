@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { PaletteTrigger } from "@/components/features/command-palette";
+import { CommandPalette, PaletteTrigger } from "@/components/features/command-palette";
+import { SaveDialogHost } from "@/components/features/save-dialog-host";
 import { AppRail } from "@/components/layout/app-rail";
 import { Logo } from "@/components/layout/logo";
 import { MobileTabBar } from "@/components/layout/mobile-tab-bar";
@@ -18,6 +19,8 @@ export default function AppLayout({ children }: { children: ReactNode }) {
         </main>
       </div>
       <MobileTabBar hideFrom="lg" />
+      <CommandPalette />
+      <SaveDialogHost />
     </div>
   );
 }

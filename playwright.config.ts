@@ -1,5 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
-import { E2E_OUTBOX, E2E_WEBHOOK_SECRET } from "./tests/e2e/constants";
+import { E2E_ADMIN, E2E_OUTBOX, E2E_WEBHOOK_SECRET } from "./tests/e2e/constants";
 
 const PORT = Number(process.env.E2E_PORT ?? 3100);
 
@@ -27,6 +27,10 @@ export default defineConfig({
       // Webhook tests sign their own events; checkout itself is never called.
       STRIPE_SECRET_KEY: "sk_test_e2e_not_a_real_key",
       STRIPE_WEBHOOK_SECRET: E2E_WEBHOOK_SECRET,
+      // Phase 4 surfaces. Static pages read flags at build time, so CI builds with these too.
+      FEATURE_PARTNERS: "true",
+      FEATURE_BUSINESS: "true",
+      ADMIN_EMAILS: E2E_ADMIN,
     },
   },
 });

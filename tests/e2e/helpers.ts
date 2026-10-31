@@ -96,3 +96,20 @@ export async function postSubscriptionEvent(
   });
   return { res, event };
 }
+
+/** The first link in the latest test-outbox email to an address whose subject or text matches. */
+export async function emailLinkFor(email: string, matching: RegExp): Promise<string | null> {
+  let text = "";
+  try {
+    text = await readFile(E2E_OUTBOX, "utf8");
+  } catch {
+    return null;
+  }
+  for (const line of text.trim().split("\n").reverse()) {
+    const entry = JSON.parse(line) as { to: string; text: string };
+    if (entry.to === email && matching.test(entry.text)) {
+      return /https?:\/\/\S+/.exec(entry.text)?.[0] ?? null;
+    }
+  }
+  return null;
+}

@@ -228,6 +228,38 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **Ranking runs in TypeScript after a SQL filter.** At 400 rows, this keeps one tested implementation. Move scoring into SQL once a city passes about 5k listings.
 
+## Staff and review
+
+**Roles live on the user row; `ADMIN_EMAILS` bootstraps the first admins.** Listed emails are treated as admin on every request. Promote curators with `npx tsx scripts/set-role.ts <email> curator`. Curators review suggestions, corrections, and claims; only admins issue partner keys.
+
+**Staff pages answer 404 to members without the role.** Signed-out visitors are sent to sign in. Every page and every server action checks the role again; the admin layout only draws the tabs. `/admin` is disallowed in robots.txt and noindex.
+
+**Publishing a suggestion is one transaction.** The place is inserted (with a unique slug in its city) and the submission closed together; a second curator acting on the same suggestion gets "already reviewed". Corrections are applied by editing the listing in a form prefilled with its current values, or marked done without changes, or the listing is taken down.
+
+**Contributors hear back.** The submission receipt promised a reply, so publishing, correcting, and rejecting each email the contributor when they left an address. Emails go out after the response, and a failed email never undoes the review.
+
+## Business claims
+
+**Claiming is free and changes facts, never order.** A claimant proposes hours, cost band, prices, website, and accessibility. A curator ticks which of those to apply. Approval sets `claimedBy` and the ticked fields only. It never touches `isPick` or `lastVerifiedAt`, both ranking inputs; `tests/unit/ranking-integrity.test.ts` fails if claims or partner code mention them.
+
+**Verification is by a person, helped by one signal.** If the claimant signed in with an email at the listing's website domain (subdomains included, free mail providers never), the claim says so. Otherwise the curator calls the listed number. Claims are rate limited to 10 per member per day.
+
+**Listings show "Details confirmed by the people who run it."** once claimed, and offer "Run this place? Claim it" until then. The $29 Presence tier is described as coming later and is not built.
+
+## Partners
+
+**Keys are shown once and stored as SHA-256 hashes.** Format `cr_live_` plus 32 random characters; the first 12 are kept to tell keys apart. Revoking is immediate. `lastUsedAt` is written at most every five minutes per key, so the API does not write on every request.
+
+**The API is read only.** `/api/v1/places`, `/api/v1/cities`, `/api/v1/events`, with scopes `places:read` and `events:read` (cities needs any valid key). Responses use the same order as the site and carry CC BY 4.0 attribution. Errors are JSON with a stable `code`: 400 `invalid_query`, 401 `missing_key` or `invalid_key`, 403 `missing_scope`, 429 `rate_limited` with `Retry-After` (1,000 requests per key per hour, in Postgres like the other limits). With the partner flag off, every endpoint is a 404.
+
+**The embed is its own route group.** `/embed/[city]` renders with no header, footer, navigation, palette, or save dialog; those moved from the root layout into the site and app layouts. It sends `frame-ancestors *` while every other path keeps `frame-ancestors 'none'` and `X-Frame-Options: DENY`. Nothing on it changes state, and every link opens CityRoots in a new tab.
+
+**Partners are invoiced by email.** No billing code; the page offers a mailto.
+
+**Feature flags are deployment settings.** `FEATURE_PARTNERS` and `FEATURE_BUSINESS` gate `/partners`, `/embed`, the API, `/business`, the claim link, admin tabs, footer links, and sitemap entries. Static pages read them at build time, so set them for both build and runtime (Vercel does). CI builds and tests with both on so every gated surface is checked.
+
+**Code samples use the sans face.** The spec bans monospace; a base rule sets `pre`, `code`, and `textarea` to the sans font.
+
 ## Performance (current state)
 
 Lighthouse, mobile, simulated slow 4G, median of 3 runs, after Phase 3:
@@ -242,6 +274,8 @@ Lighthouse, mobile, simulated slow 4G, median of 3 runs, after Phase 3:
 | Submit  | 96   | 100  | 100            | 100 | 2.77 s | 87 ms  | 0   | 166 KB |
 | Pricing | 94   | 100  | 100            | 100 | 2.78 s | 168 ms | 0   | 162 KB |
 | Planner | 94   | 100  | 100            | 100 | 2.78 s | 145 ms | 0   | 170 KB |
+
+Phase 4 added `/partners` (95, LCP 2.45 s, TBT 188 ms) and `/business` (95, LCP 2.79 s, TBT 106 ms) to the Lighthouse URLs, both 100 on accessibility, best practices, and SEO.
 
 Phase 3 added about 2 KB to every page (the save button and the dialog host; the dialog itself loads on first use). Explore and Events measured 224 and 240 ms of TBT after Phase 2 and 256 and 287 ms in this run, inside this machine's noise but over budget either way.
 
@@ -262,7 +296,7 @@ On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP
 
 - **Phase 2 (delivered):** map, command palette, optimistic filters, submit flow, hours parsing and "Open now", event calendar, rate limiting. The review screen for the moderation queue moves to Phase 4 with the rest of admin.
 - **Phase 3 (delivered):** collections, Day Planner, shareable plans, Stripe subscription with webhooks and the customer portal, `/pricing`. Still to come for Pro: event reminders, the "new near you" digest, and saved collections in the command palette.
-- **Phase 4:** partners, embed, business claims, admin.
+- **Phase 4 (delivered):** admin review queue, business claims, partner keys and API, embed widget, `/partners`, `/business`. Still to come: the Presence tier, and a business dashboard for editing details directly.
 - **Phase 5:** guides, OG images per city and place, analytics, Lighthouse budgets.
 
 The schema for all of them already exists.

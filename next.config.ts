@@ -24,7 +24,19 @@ const nextConfig: NextConfig = {
   // generation never opens the local data directory twice.
   experimental: usingPglite ? { cpus: 1, workerThreads: false } : {},
   async headers() {
-    return [{ source: "/((?!embed/).*)", headers: securityHeaders }];
+    return [
+      { source: "/((?!embed/).*)", headers: securityHeaders },
+      {
+        // Partner widgets: any site may frame them. Nothing on these pages
+        // changes state, and they open CityRoots in a new tab for anything else.
+        source: "/embed/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Content-Security-Policy", value: "frame-ancestors *" },
+        ],
+      },
+    ];
   },
 };
 

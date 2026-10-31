@@ -200,6 +200,7 @@ export async function getPlace(id: string): Promise<PlaceDetail | null> {
         sourceUrl: places.sourceUrl,
         accessibility: places.accessibility,
         lastVerifiedAt: places.lastVerifiedAt,
+        ownerConfirmed: sql<boolean>`${places.claimedBy} is not null`,
       })
       .from(places)
       .innerJoin(cities, eq(cities.id, places.cityId))
@@ -255,5 +256,63 @@ export async function getPlaceCards(ids: readonly string[]): Promise<PlaceCard[]
     return valid.flatMap((id) => byId.get(id) ?? []);
   } catch (cause) {
     throw new DataError("Could not load places", { cause });
+  }
+}
+
+export type PartnerPlace = PlaceCard & {
+  url: string;
+  address: string | null;
+  lat: number | null;
+  lng: number | null;
+  hours: string | null;
+  website: string | null;
+  updatedAt: Date;
+};
+
+/** One page of explorer results with the extra fields the partner API returns. */
+export async function listPlacesForPartners(
+  state: ExploreState,
+  offset: number,
+  limit: number,
+): Promise<{ items: Omit<PartnerPlace, "url">[]; total: number }> {
+  const { items, total } = await queryPlaces({ ...state, page: Number.POSITIVE_INFINITY });
+  const slice = items.slice(offset, offset + limit);
+  if (slice.length === 0) return { items: [], total };
+  try {
+    const extra = await db()
+      .select({
+        id: places.id,
+        address: places.address,
+        lat: places.lat,
+        lng: places.lng,
+        hours: places.hours,
+        website: places.sourceUrl,
+        updatedAt: places.updatedAt,
+      })
+      .from(places)
+      .where(
+        inArray(
+          places.id,
+          slice.map((p) => p.id),
+        ),
+      );
+    const byId = new Map(extra.map((e) => [e.id, e]));
+    return {
+      total,
+      items: slice.map((p) => {
+        const e = byId.get(p.id);
+        return {
+          ...p,
+          address: e?.address ?? null,
+          lat: e?.lat ?? null,
+          lng: e?.lng ?? null,
+          hours: e?.hours?.text ?? null,
+          website: e?.website ?? null,
+          updatedAt: e?.updatedAt ?? new Date(0),
+        };
+      }),
+    };
+  } catch (cause) {
+    throw new DataError("Could not load places for the partner API", { cause });
   }
 }

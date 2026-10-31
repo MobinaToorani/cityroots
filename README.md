@@ -50,6 +50,8 @@ Set `DATABASE_URL` (Neon or Supabase), `AUTH_SECRET`, `NEXT_PUBLIC_SITE_URL`, an
 
 Payments need `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`. Create the Pro product and prices once with `STRIPE_SECRET_KEY=sk_test_... npx tsx scripts/stripe-setup.ts` (test mode; set up live prices with the same lookup keys by hand), then point a Stripe webhook at `/api/stripe/webhook` for `checkout.session.completed` and `customer.subscription.*`. Locally, `stripe listen --forward-to localhost:3000/api/stripe/webhook` prints the webhook secret. Without the keys, the pricing page explains that payments are off.
 
+Staff: set `ADMIN_EMAILS` to bootstrap admins, then promote curators with `npx tsx scripts/set-role.ts <email> curator`. The review queue is at `/admin`. Partners and business claims stay off until `FEATURE_PARTNERS=true` and `FEATURE_BUSINESS=true` are set for both the build and the runtime; partner keys are issued at `/admin/partners`.
+
 Map tiles come from OpenFreeMap and need no key. `npm run build` copies MapLibre's worker into `public/maplibre/` first.
 
 ## Data and photo licenses

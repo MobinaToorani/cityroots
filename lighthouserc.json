@@ -11,7 +11,9 @@
         "http://localhost:3200/events",
         "http://localhost:3200/submit",
         "http://localhost:3200/pricing",
-        "http://localhost:3200/planner"
+        "http://localhost:3200/planner",
+        "http://localhost:3200/partners",
+        "http://localhost:3200/business"
       ],
       "numberOfRuns": 3,
       "settings": {
@@ -21,7 +23,7 @@
     "assert": {
       "assertMatrix": [
         {
-          "matchingUrlPattern": "http://localhost:3200/(city/.*|about|events.*|submit|pricing|planner)?$",
+          "matchingUrlPattern": "http://localhost:3200/(city/.*|about|events.*|submit|pricing|planner|partners|business)?$",
           "assertions": {
             "categories:performance": [
               "error",

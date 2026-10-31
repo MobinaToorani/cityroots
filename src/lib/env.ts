@@ -23,6 +23,16 @@ const serverSchema = z
     SLACK_WEBHOOK_URL: z.url().optional(),
     NEXT_PUBLIC_SITE_URL: z.url().default("http://localhost:3000"),
     FEATURE_PARTNERS: flag,
+    /** Comma-separated emails that always get the admin role, to bootstrap the first admins. */
+    ADMIN_EMAILS: z
+      .string()
+      .optional()
+      .transform((v) =>
+        (v ?? "")
+          .split(",")
+          .map((e) => e.trim().toLowerCase())
+          .filter(Boolean),
+      ),
     FEATURE_BUSINESS: flag,
     /** CI and preview builds only: write magic links to the log instead of emailing them. */
     EMAIL_LOG_ONLY: flag,
