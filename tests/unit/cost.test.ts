@@ -3,7 +3,6 @@ import {
   COST_BANDS,
   COST_LABELS,
   compareCostBands,
-  estimateSpend,
   freeShare,
   isCostBand,
 } from "@/lib/domain/cost";
@@ -32,10 +31,5 @@ describe("cost bands", () => {
   it("computes the free share as a whole percent", () => {
     expect(freeShare([])).toBe(0);
     expect(freeShare(["free", "low", "free"])).toBe(67);
-  });
-
-  it("estimates spend from typical amounts", () => {
-    expect(estimateSpend(["free", "free"])).toBe(0);
-    expect(estimateSpend(["free", "low", "moderate"])).toBe(40);
   });
 });

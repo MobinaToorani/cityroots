@@ -5,6 +5,7 @@ import { GlassCard } from "@/components/ui/glass-card";
 import { Icon } from "@/components/ui/icon";
 import type { PlaceCard as PlaceCardData } from "@/lib/data/types";
 import { cn } from "@/lib/cn";
+import { SaveButton } from "./save-button";
 
 type PlaceCardProps = {
   place: PlaceCardData;
@@ -44,16 +45,19 @@ export function PlaceCard({
         </Link>
       </Heading>
       <p className="line-clamp-2 text-body text-text-muted">{place.summary}</p>
-      <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-1 text-meta text-text-muted">
-        {where && (
-          <span className="inline-flex items-center gap-1">
-            <Icon icon={MapPin} size={16} />
-            {where}
-          </span>
-        )}
-        {place.priceNote && place.costBand !== "free" && (
-          <span className="line-clamp-1">{place.priceNote}</span>
-        )}
+      <div className="mt-auto flex items-end justify-between gap-2 pt-1">
+        <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-meta text-text-muted">
+          {where && (
+            <span className="inline-flex items-center gap-1">
+              <Icon icon={MapPin} size={16} />
+              {where}
+            </span>
+          )}
+          {place.priceNote && place.costBand !== "free" && (
+            <span className="line-clamp-1">{place.priceNote}</span>
+          )}
+        </div>
+        <SaveButton placeId={place.id} placeName={place.name} className="-mr-2 -mb-2 shrink-0" />
       </div>
     </GlassCard>
   );

@@ -86,6 +86,10 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **Data license: CC BY 4.0.** It is simple and allows commercial reuse with attribution, which suits partners. ODbL's share-alike would have discouraged municipal and campus reuse.
 
+## Home page
+
+**No numbers strip, and no three-card feature rows.** The spec's live counter strip (cities, places, free share) was removed at the owner's request, as was the three icon-card layout under "Nobody pays for placement". Those three points are now a plain single-column list. The hero still names the city count.
+
 ## Navigation
 
 **Route crossfade uses React view transitions.** The app template wraps pages in `<ViewTransition enter exit default="none">`, so the crossfade runs only on navigation. The Phase 1 version faded every page in from transparent with a CSS animation, including the first load. Removing that cut about 100 ms of TBT and 350 ms of LCP on Explore. The earlier transform-based fade also made the template the containing block for `position: fixed` children, which broke the full-screen map on phones. `default="none"` keeps filter updates from crossfading the whole page.
@@ -94,7 +98,9 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **Only shipped routes appear in navigation.** The footer's partner link (spec section 4) is left out until `/partners` exists in Phase 4.
 
-**The Day Planner teaser links to the explorer, not `/planner`.** The planner is Phase 3. The teaser shows a real plan assembled from live data and says the planner is coming to Pro.
+**The Day Planner teaser shows what the planner would build.** The home page and the planner intro run the real assembly for the coming Saturday in Newmarket on a $25 budget, so the preview is never a mock-up.
+
+**Navigation per surface.** The phone tab bar holds five items: Explore, Events, Planner, Saved, Account. The logo goes home. The marketing header drops Home and Saved; the desktop rail shows everything.
 
 **The header shows a static "Account" link, not session state.** Reading the session in the shared layout would make every marketing page dynamic, and cost LCP. `/account` redirects signed-out visitors to sign in and back.
 
@@ -159,6 +165,57 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **The limiter fails open.** If the rate limit query fails, the request goes through and the error is logged. A database hiccup should not block every visitor's search, and the submit form still has its honeypot.
 
+## Collections
+
+**Free members keep up to 3 collections; Pro has no limit.** The spec makes "unlimited collections" a Pro feature, so free needs some limit. Three covers "this weekend", "with the kids", and "someday" without nagging. Every collection holds up to 200 places for everyone. Nothing is deleted when Pro ends: existing collections stay readable and editable, and only new ones are blocked.
+
+**Saving works without JavaScript.** The bookmark on every card is a link to `/collections/save?place=`, a server-rendered form. With JavaScript it opens a dialog instead. The dialog's code loads on the first save only (`next/dynamic` in a host mounted once in the root layout), so pages that never save ship about 1 KB for it.
+
+**The bookmark does not show saved state on first render.** Place, city, and home pages are statically generated, and reading the session would make them dynamic. The icon fills in once the member saves in the dialog.
+
+**Collections are private until shared.** "Share with a link" makes `/collections/[id]` readable by anyone with the URL. Shared collections are `noindex`.
+
+**Reordering uses Move up and Move down buttons, not drag and drop.** They work with a keyboard and a screen reader, and need no JavaScript (each is a form). The same pattern is used in the plan editor.
+
+## Day Planner
+
+**Assembly is a pure function** (`src/lib/domain/planner.ts`, unit tested). Five slots, each with allowed categories: morning coffee, something free, lunch, an afternoon stop, and the evening.
+
+- Candidates come in ranked order (free first, then community signals), so the planner inherits ranking integrity.
+- Interests move matching places to the front of a slot; they never add places a slot would not allow.
+- A place with a reliable weekly schedule must be open at the slot time on that weekday. Places without one are allowed, and the plan says "Check the hours before you go".
+- Events are only used when a known run covers the day.
+- Each slot keeps money back for the cheapest option in the slots after it, so an early splurge never leaves the evening empty. A slot that cannot fit is left out and named.
+- "Shuffle the plan" rotates through the top three choices in each slot (`seed` in the URL).
+
+**Costs are estimates per person.** The first dollar amount in a listing's price note wins, unless the note is about memberships or passes; otherwise the band's typical spend (low $10, moderate $30, varies $15). Every estimate is labelled "About", and saved plans recompute costs on the server, never trusting the browser.
+
+**The stepper shows all four steps at once.** Each step is a numbered card in one GET form. Hiding steps until hydration would shift the layout and break without JavaScript; one page of four short questions is quick either way.
+
+**Saved plans live in a `plans` table** (not in the spec's data model). The share link uses a random 11-character id, not the row id. Shared plans are public, server-rendered with Open Graph tags for link previews, and `noindex`, because they are personal. They are not blocked in robots.txt, because some link-preview bots honour it.
+
+**Plan times follow position.** Reordering moves a stop to that position's time (9:30am, 11am, 1pm, 3pm, 6:30pm); the stop keeps its label.
+
+## Payments
+
+**Stripe Checkout and the customer portal, no custom card forms.** Prices are found by lookup key (`cityroots_pro_monthly`, `cityroots_pro_yearly`), so no price ids live in env. `scripts/stripe-setup.ts` creates the product, both prices, and a portal configuration in test mode.
+
+**Pro is decided on the server, every request.** `getMembership()` reads the `subscriptions` row. Active, trialing, and past due count as Pro (past due keeps Pro while Stripe retries the card). If webhooks ever stop, Pro still ends three days after the paid period.
+
+**Webhooks are idempotent and order-safe.**
+
+- The signature is checked against the raw body before anything else.
+- Payloads are parsed with Zod.
+- Each event id is inserted into `stripe_events` in the same transaction as its effects. A retry after success is a no-op; a failure rolls back both and returns 500 so Stripe retries.
+- Each subscription row stores the creation time of the last event applied, and older events never overwrite newer state.
+- The member id travels in `subscription_data.metadata.userId` and in `client_reference_id`, so subscription events can be matched even if they arrive before `checkout.session.completed`.
+
+**Returning from checkout syncs immediately.** `/api/stripe/checkout-return` retrieves the session and applies it, so Pro is on when the member lands, even if the webhook is late. If that fails, the account page says the webhook will finish the job.
+
+**Without Stripe keys, nothing breaks.** The pricing page says payments are not switched on, and checkout cannot be started. Both keys or neither, enforced by env validation.
+
+**The browser tests sign in for real and send signed webhooks.** `EMAIL_OUTBOX_FILE` makes log-only email also append to a file, which the tests read for the magic link (refused on Vercel production). The tests sign their own Stripe events with a local test secret. Checkout itself is not exercised in CI, because it needs a live test-mode account; run `stripe listen` against a test key to try it end to end.
+
 ## Ranking
 
 **Free first means different things per sort.**
@@ -173,16 +230,20 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 ## Performance (current state)
 
-Lighthouse, mobile, simulated slow 4G, median of 3 runs, after Phase 2:
+Lighthouse, mobile, simulated slow 4G, median of 3 runs, after Phase 3:
 
 | Page    | Perf | A11y | Best practices | SEO | LCP    | TBT    | CLS | Script |
 | ------- | ---- | ---- | -------------- | --- | ------ | ------ | --- | ------ |
-| Home    | 92   | 100  | 100            | 100 | 3.28 s | 85 ms  | 0   | 160 KB |
-| City    | 98   | 100  | 100            | 100 | 2.24 s | 105 ms | 0   | 160 KB |
-| About   | 96   | 100  | 100            | 100 | 2.55 s | 98 ms  | 0   | 160 KB |
-| Explore | 91   | 100  | 100            | 100 | 2.96 s | 224 ms | 0   | 177 KB |
-| Events  | 92   | 100  | 100            | 100 | 2.62 s | 240 ms | 0   | 164 KB |
-| Submit  | 93   | 100  | 100            | 100 | 2.71 s | 208 ms | 0   | 164 KB |
+| Home    | 96   | 100  | 100            | 100 | 2.56 s | 84 ms  | 0   | 162 KB |
+| City    | 98   | 100  | 100            | 100 | 2.26 s | 81 ms  | 0   | 162 KB |
+| About   | 95   | 100  | 100            | 100 | 2.75 s | 159 ms | 0   | 162 KB |
+| Explore | 89   | 100  | 100            | 100 | 2.99 s | 256 ms | 0   | 178 KB |
+| Events  | 88   | 100  | 100            | 100 | 3.04 s | 287 ms | 0   | 166 KB |
+| Submit  | 96   | 100  | 100            | 100 | 2.77 s | 87 ms  | 0   | 166 KB |
+| Pricing | 94   | 100  | 100            | 100 | 2.78 s | 168 ms | 0   | 162 KB |
+| Planner | 94   | 100  | 100            | 100 | 2.78 s | 145 ms | 0   | 170 KB |
+
+Phase 3 added about 2 KB to every page (the save button and the dialog host; the dialog itself loads on first use). Explore and Events measured 224 and 240 ms of TBT after Phase 2 and 256 and 287 ms in this run, inside this machine's noise but over budget either way.
 
 The LCP budget (2.0 s) is still not met, so the Lighthouse CI step fails. TBT on the app pages sits around the 200 ms budget and crosses it in some runs. Both budgets stay enforced rather than loosened, and the work is scheduled for Phase 5. Candidates: smaller mobile hero crops, fewer backdrop-filter surfaces on long pages, and the app shell's base JavaScript.
 
@@ -200,7 +261,7 @@ On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP
 ## Deferred, by phase
 
 - **Phase 2 (delivered):** map, command palette, optimistic filters, submit flow, hours parsing and "Open now", event calendar, rate limiting. The review screen for the moderation queue moves to Phase 4 with the rest of admin.
-- **Phase 3:** collections, Day Planner, Stripe.
+- **Phase 3 (delivered):** collections, Day Planner, shareable plans, Stripe subscription with webhooks and the customer portal, `/pricing`. Still to come for Pro: event reminders, the "new near you" digest, and saved collections in the command palette.
 - **Phase 4:** partners, embed, business claims, admin.
 - **Phase 5:** guides, OG images per city and place, analytics, Lighthouse budgets.
 

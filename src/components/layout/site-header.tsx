@@ -10,7 +10,7 @@ export function SiteHeader() {
         <Logo />
         <div className="flex items-center gap-2">
           <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
-            <PrimaryNavLinks variant="header" skip={["/"]} />
+            <PrimaryNavLinks variant="header" />
           </nav>
           <PaletteTrigger compact />
         </div>

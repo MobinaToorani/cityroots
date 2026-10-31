@@ -6,18 +6,21 @@ type ChoiceChipsProps = {
   legend: string;
   name: string;
   options: readonly { value: string; label: string; accent?: string }[];
-  defaultValue?: string;
+  defaultValue?: string | readonly string[];
+  /** Checkboxes instead of radios, for picking any number. */
+  multiple?: boolean;
   required?: boolean;
   description?: string;
   error?: string;
 };
 
-/** Single choice shown as chips. Real radio inputs, so it works without JavaScript. */
+/** Single choice (or several, with `multiple`) shown as chips. Real radio inputs, so it works without JavaScript. */
 export function ChoiceChips({
   legend,
   name,
   options,
   defaultValue,
+  multiple = false,
   required,
   description,
   error,
@@ -37,10 +40,14 @@ export function ChoiceChips({
         {options.map((o) => (
           <label key={o.value} className="relative">
             <input
-              type="radio"
+              type={multiple ? "checkbox" : "radio"}
               name={name}
               value={o.value}
-              defaultChecked={defaultValue === o.value}
+              defaultChecked={
+                Array.isArray(defaultValue)
+                  ? defaultValue.includes(o.value)
+                  : defaultValue === o.value
+              }
               required={required}
               className="peer sr-only"
             />

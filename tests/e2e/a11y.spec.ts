@@ -10,6 +10,8 @@ const PAGES = [
   { name: "events", path: "/events" },
   { name: "submit", path: "/submit" },
   { name: "explorer map", path: "/explore?city=newmarket&view=map" },
+  { name: "pricing", path: "/pricing" },
+  { name: "planner intro", path: "/planner" },
 ];
 
 for (const { name, path } of PAGES) {

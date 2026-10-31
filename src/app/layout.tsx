@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Instrument_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import { CommandPalette } from "@/components/features/command-palette";
+import { SaveDialogHost } from "@/components/features/save-dialog-host";
 import { SkipLink } from "@/components/ui/visually-hidden";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <SkipLink />
         {children}
         <CommandPalette />
+        <SaveDialogHost />
       </body>
     </html>
   );

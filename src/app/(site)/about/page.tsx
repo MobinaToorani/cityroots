@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { ButtonLink } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
@@ -37,7 +38,11 @@ export default async function AboutPage() {
           <ul className="mt-4 grid gap-3">
             <Item title="CityRoots Pro, for people">
               Browsing, search, filters, and the map stay free. Pro adds planning tools like the Day
-              Planner and unlimited collections.
+              Planner and unlimited collections, for $4.99 a month.{" "}
+              <Link href="/pricing" className="text-primary-text quiet-link">
+                See what Pro includes
+              </Link>
+              .
             </Item>
             <Item title="Partners, for organizations">
               Libraries, municipalities, and student unions can license our data and embed city

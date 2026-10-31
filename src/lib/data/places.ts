@@ -239,3 +239,21 @@ export async function listPlaceIds(): Promise<{ id: string; updatedAt: Date }[]>
     throw new DataError("Could not list places", { cause });
   }
 }
+
+/** Cards for specific places, in the order given. Unpublished places are left out. */
+export async function getPlaceCards(ids: readonly string[]): Promise<PlaceCard[]> {
+  const valid = ids.filter((id) => /^[0-9a-f-]{36}$/i.test(id));
+  if (valid.length === 0) return [];
+  try {
+    const rows = await db()
+      .select(cardColumns)
+      .from(places)
+      .innerJoin(cities, eq(cities.id, places.cityId))
+      .innerJoin(categories, eq(categories.id, places.categoryId))
+      .where(and(visible(), inArray(places.id, valid)));
+    const byId = new Map(rows.map((r) => [r.id, toCard(r)]));
+    return valid.flatMap((id) => byId.get(id) ?? []);
+  } catch (cause) {
+    throw new DataError("Could not load places", { cause });
+  }
+}

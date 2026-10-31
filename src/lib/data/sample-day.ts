@@ -1,37 +1,41 @@
 import "server-only";
-import type { CategorySlug } from "@/lib/domain/categories";
-import { defaultExploreState } from "@/lib/domain/explore-params";
-import { queryPlaces } from "./places";
-import type { PlaceCard } from "./types";
+import {
+  assemblePlan,
+  nextSaturday,
+  timeLabel,
+  torontoDay,
+  weekdayOf,
+  type PlannerCandidate,
+} from "@/lib/domain/planner";
+import { listPlannerCandidates } from "./planner";
 
-export type SampleStop = { time: string; label: string; place: PlaceCard };
+export type SampleStop = {
+  time: string;
+  label: string;
+  estimate: number;
+  place: Pick<PlannerCandidate, "id" | "name" | "costBand">;
+};
 
-const SLOTS: { time: string; label: string; cat: CategorySlug }[] = [
-  { time: "9:30", label: "Morning coffee", cat: "cafes" },
-  { time: "11:00", label: "Get outside", cat: "physical" },
-  { time: "13:00", label: "Lunch", cat: "food" },
-  { time: "15:00", label: "Afternoon stop", cat: "arts" },
-  { time: "18:30", label: "Evening", cat: "social" },
-];
+export type SampleDay = { stops: SampleStop[]; total: number; budget: number };
 
-/**
- * A simple preview of a day out, built from the top-ranked listing in each
- * slot. The full Day Planner (budget, interests, reordering) builds on this.
- */
-export async function sampleDay(citySlug: string): Promise<SampleStop[]> {
-  const stops = await Promise.all(
-    SLOTS.map(async (slot) => {
-      const { items } = await queryPlaces(
-        defaultExploreState({
-          city: citySlug,
-          cat: [slot.cat],
-          cost: ["free", "low"],
-          type: ["place"],
-        }),
-      );
-      const place = items[0];
-      return place ? { time: slot.time, label: slot.label, place } : null;
-    }),
-  );
-  return stops.filter((s): s is SampleStop => s !== null);
+/** What the Day Planner builds for the coming Saturday, for previews on public pages. */
+export async function sampleDay(citySlug: string, budget = 25): Promise<SampleDay> {
+  const day = nextSaturday(torontoDay(new Date()));
+  const candidates = await listPlannerCandidates(citySlug, day);
+  const plan = assemblePlan({ candidates, budget, interests: [], weekday: weekdayOf(day) });
+  const byId = new Map(candidates.map((c) => [c.id, c]));
+  const stops = plan.stops.flatMap((s) => {
+    const c = byId.get(s.placeId);
+    return c
+      ? [
+          {
+            time: timeLabel(s.time),
+            label: s.label,
+            estimate: s.estimate,
+            place: { id: c.id, name: c.name, costBand: c.costBand },
+          },
+        ]
+      : [];
+  });
+  return { stops, total: plan.total, budget };
 }

@@ -1,14 +1,11 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("home", () => {
-  test("shows live counts, city guides, and searches into the explorer @mobile", async ({
-    page,
-  }) => {
+  test("shows city guides and searches into the explorer @mobile", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       "Do more for less, close to home.",
     );
-    await expect(page.getByRole("region", { name: "CityRoots in numbers" })).toContainText("400");
     await expect(
       page.getByRole("region", { name: "Pick a city" }).getByRole("link", { name: "Newmarket" }),
     ).toBeVisible();

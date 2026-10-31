@@ -1,0 +1,94 @@
+import { ArrowLeft } from "lucide-react";
+import type { Metadata, Route } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { GlassCard } from "@/components/ui/glass-card";
+import { Icon } from "@/components/ui/icon";
+import { requireUser } from "@/lib/auth/session";
+import { collectionsForPlace, countCollections } from "@/lib/data/collections";
+import { getPlaceCards } from "@/lib/data/places";
+import { getMembership } from "@/lib/data/subscriptions";
+import { FREE_COLLECTION_LIMIT } from "@/lib/domain/subscription";
+import { saveToCollectionsAction } from "../actions";
+import { CreateCollectionForm } from "../create-collection-form";
+
+export const metadata: Metadata = { title: "Save a place", robots: { index: false } };
+
+/** The save dialog as a page, for links opened without JavaScript or in a new tab. */
+export default async function SavePlacePage(props: PageProps<"/collections/save">) {
+  const { place: placeParam } = await props.searchParams;
+  const placeId = typeof placeParam === "string" ? placeParam : "";
+  const user = await requireUser(`/collections/save?place=${encodeURIComponent(placeId)}`);
+  const [place] = await getPlaceCards([placeId]);
+  if (!place) notFound();
+  const [choices, membership, total] = await Promise.all([
+    collectionsForPlace(user.id, place.id),
+    getMembership(user.id),
+    countCollections(user.id),
+  ]);
+  const canCreate = membership.pro || total < FREE_COLLECTION_LIMIT;
+  const back = `/places/${place.id}`;
+
+  return (
+    <div className="mx-auto max-w-xl px-5 pt-4 sm:px-8 lg:pt-8">
+      <Link
+        href={back as Route}
+        className="mb-5 inline-flex items-center gap-1.5 text-meta font-semibold text-text-muted quiet-link"
+      >
+        <Icon icon={ArrowLeft} size={16} />
+        Back to {place.name}
+      </Link>
+      <h1 className="text-section font-semibold tracking-tight">Save {place.name}</h1>
+
+      {choices.length > 0 && (
+        <GlassCard as="form" action={saveToCollectionsAction} className="mt-6 grid gap-4 p-5">
+          <input type="hidden" name="placeId" value={place.id} />
+          <input type="hidden" name="returnTo" value={back} />
+          <fieldset className="grid gap-2">
+            <legend className="mb-2 text-meta font-semibold">Keep it in</legend>
+            {choices.map((c) => (
+              <label
+                key={c.id}
+                className="flex min-h-11 items-center gap-3 rounded-2xl border border-divider bg-surface-solid/70 px-3.5"
+              >
+                <input
+                  type="checkbox"
+                  name="collection"
+                  value={c.id}
+                  defaultChecked={c.hasPlace}
+                  className="size-4 accent-[var(--color-primary)]"
+                />
+                <span className="flex-1 font-semibold">{c.title}</span>
+                <span className="text-meta text-text-muted">
+                  {c.itemCount} {c.itemCount === 1 ? "place" : "places"}
+                </span>
+              </label>
+            ))}
+          </fieldset>
+          <Button type="submit" className="justify-self-start">
+            Save changes
+          </Button>
+        </GlassCard>
+      )}
+
+      <section aria-labelledby="new" className="mt-8">
+        <h2 id="new" className="text-card font-semibold">
+          {choices.length > 0 ? "Or start a new collection" : "Start your first collection"}
+        </h2>
+        <div className="mt-3">
+          {canCreate ? (
+            <CreateCollectionForm placeId={place.id} returnTo={back} />
+          ) : (
+            <p className="text-body text-text-muted">
+              Free accounts keep up to {FREE_COLLECTION_LIMIT} collections.{" "}
+              <Link href="/pricing" className="font-semibold text-primary-text quiet-link">
+                See what Pro adds
+              </Link>
+            </p>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+}

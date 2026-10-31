@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import { E2E_OUTBOX, E2E_WEBHOOK_SECRET } from "./tests/e2e/constants";
 
 const PORT = Number(process.env.E2E_PORT ?? 3100);
 
@@ -19,6 +20,13 @@ export default defineConfig({
     port: PORT,
     reuseExistingServer: !process.env.CI,
     timeout: 60_000,
-    env: { EMAIL_LOG_ONLY: "true" },
+    env: {
+      EMAIL_LOG_ONLY: "true",
+      // Sign-in links land here so tests can follow them (see tests/e2e/helpers.ts).
+      EMAIL_OUTBOX_FILE: E2E_OUTBOX,
+      // Webhook tests sign their own events; checkout itself is never called.
+      STRIPE_SECRET_KEY: "sk_test_e2e_not_a_real_key",
+      STRIPE_WEBHOOK_SECRET: E2E_WEBHOOK_SECRET,
+    },
   },
 });

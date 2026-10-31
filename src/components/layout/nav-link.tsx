@@ -27,10 +27,10 @@ const styles: Record<Variant, { base: string; active: string; idle: string }> = 
 };
 
 /** Renders the primary navigation in one of three shapes. */
-export function PrimaryNavLinks({ variant, skip = [] }: { variant: Variant; skip?: string[] }) {
+export function PrimaryNavLinks({ variant }: { variant: Variant }) {
   const pathname = usePathname();
   const s = styles[variant];
-  return PRIMARY_NAV.filter((item) => !skip.includes(item.href)).map((item) => {
+  return PRIMARY_NAV.filter((item) => item.on.includes(variant)).map((item) => {
     const active = item.match(pathname);
     return (
       <Link

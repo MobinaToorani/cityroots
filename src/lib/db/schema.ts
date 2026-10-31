@@ -337,9 +337,53 @@ export const subscriptions = pgTable("subscriptions", {
   stripeCustomerId: text().notNull().unique(),
   stripeSubscriptionId: text().unique(),
   status: subscriptionStatus().notNull(),
+  priceLookupKey: text(),
   currentPeriodEnd: timestamp({ withTimezone: true }),
+  cancelAtPeriodEnd: boolean().notNull().default(false),
+  /** Creation time of the Stripe event last applied, so late, older events never win. */
+  stripeEventAt: timestamp({ withTimezone: true }),
   ...timestamps,
 });
+
+/** One row per Stripe event handled. Makes webhook retries no-ops. */
+export const stripeEvents = pgTable("stripe_events", {
+  id: text().primaryKey(),
+  type: text().notNull(),
+  ...timestamps,
+});
+
+/** A stop in a saved day plan. Cost is an estimate in whole dollars. */
+export type PlanStop = {
+  placeId: string;
+  slot: string;
+  time: string;
+  estimate: number;
+};
+
+export const plans = pgTable(
+  "plans",
+  {
+    id: uuid().primaryKey().defaultRandom(),
+    /** Short, unguessable id used in the public share link. */
+    shareId: text().notNull().unique(),
+    userId: text()
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    cityId: uuid()
+      .notNull()
+      .references(() => cities.id, { onDelete: "cascade" }),
+    title: text().notNull(),
+    day: date({ mode: "string" }).notNull(),
+    budget: integer().notNull(),
+    interests: text()
+      .array()
+      .notNull()
+      .default(sql`'{}'::text[]`),
+    stops: jsonb().$type<PlanStop[]>().notNull(),
+    ...timestamps,
+  },
+  (t) => [index("plans_user_idx").on(t.userId, t.createdAt)],
+);
 
 export const partnerKeys = pgTable("partner_keys", {
   id: uuid().primaryKey().defaultRandom(),

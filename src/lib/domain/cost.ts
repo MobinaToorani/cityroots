@@ -40,8 +40,8 @@ export function freeShare(bands: readonly CostBand[]): number {
 }
 
 /**
- * Typical spend per person, used only for estimates such as a day plan's
- * running total. Always presented as an estimate, never as a price.
+ * Typical spend per person when a listing gives no price, used only for
+ * estimates such as a day plan's running total. Always presented as an estimate, never as a price.
  */
 export const TYPICAL_SPEND: Record<CostBand, number> = {
   free: 0,
@@ -49,7 +49,3 @@ export const TYPICAL_SPEND: Record<CostBand, number> = {
   moderate: 30,
   varies: 15,
 };
-
-export function estimateSpend(bands: readonly CostBand[]): number {
-  return bands.reduce((sum, band) => sum + TYPICAL_SPEND[band], 0);
-}

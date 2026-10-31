@@ -48,6 +48,8 @@ tests/unit, tests/e2e
 
 Set `DATABASE_URL` (Neon or Supabase), `AUTH_SECRET`, `NEXT_PUBLIC_SITE_URL`, and `RESEND_API_KEY`. Run `npm run db:migrate && npm run db:seed` against that database once, then deploy. Google sign-in is enabled when `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` are both set. Set `SLACK_WEBHOOK_URL` to get a message for each new suggestion; without it, suggestions are logged.
 
+Payments need `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`. Create the Pro product and prices once with `STRIPE_SECRET_KEY=sk_test_... npx tsx scripts/stripe-setup.ts` (test mode; set up live prices with the same lookup keys by hand), then point a Stripe webhook at `/api/stripe/webhook` for `checkout.session.completed` and `customer.subscription.*`. Locally, `stripe listen --forward-to localhost:3000/api/stripe/webhook` prints the webhook secret. Without the keys, the pricing page explains that payments are off.
+
 Map tiles come from OpenFreeMap and need no key. `npm run build` copies MapLibre's worker into `public/maplibre/` first.
 
 ## Data and photo licenses

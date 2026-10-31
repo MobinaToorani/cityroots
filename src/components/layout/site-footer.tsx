@@ -31,6 +31,16 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link className="quiet-link" href="/planner">
+                Day Planner
+              </Link>
+            </li>
+            <li>
+              <Link className="quiet-link" href="/pricing">
+                CityRoots Pro
+              </Link>
+            </li>
+            <li>
               <Link className="quiet-link" href="/submit">
                 Suggest a place
               </Link>

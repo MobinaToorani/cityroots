@@ -26,6 +26,16 @@ const serverSchema = z
     FEATURE_BUSINESS: flag,
     /** CI and preview builds only: write magic links to the log instead of emailing them. */
     EMAIL_LOG_ONLY: flag,
+    /** Tests only: also append undelivered emails to this file as JSON lines. */
+    EMAIL_OUTBOX_FILE: z.string().min(1).optional(),
+    STRIPE_SECRET_KEY: z
+      .string()
+      .startsWith("sk_", "STRIPE_SECRET_KEY must start with sk_")
+      .optional(),
+    STRIPE_WEBHOOK_SECRET: z
+      .string()
+      .startsWith("whsec_", "STRIPE_WEBHOOK_SECRET must start with whsec_")
+      .optional(),
     VERCEL_ENV: z.enum(["production", "preview", "development"]).optional(),
     LOG_LEVEL: z.enum(["debug", "info", "warn", "error"]).default("info"),
   })
@@ -42,6 +52,20 @@ const serverSchema = z
         code: "custom",
         path: ["EMAIL_LOG_ONLY"],
         message: "EMAIL_LOG_ONLY must never be set on the production deployment",
+      });
+    }
+    if (env.EMAIL_OUTBOX_FILE && env.VERCEL_ENV === "production") {
+      ctx.addIssue({
+        code: "custom",
+        path: ["EMAIL_OUTBOX_FILE"],
+        message: "EMAIL_OUTBOX_FILE must never be set on the production deployment",
+      });
+    }
+    if (Boolean(env.STRIPE_SECRET_KEY) !== Boolean(env.STRIPE_WEBHOOK_SECRET)) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["STRIPE_WEBHOOK_SECRET"],
+        message: "Set both STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET, or neither",
       });
     }
     if (env.VERCEL && !env.DATABASE_URL) {

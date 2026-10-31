@@ -1,7 +1,7 @@
 import type { PlaceHours } from "@/lib/db/schema";
 
 /** ISO weekday: 1 = Monday ... 7 = Sunday. */
-type Weekday = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+export type Weekday = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 type WeekdayKey = "1" | "2" | "3" | "4" | "5" | "6" | "7";
 export type WeeklyHours = NonNullable<PlaceHours["weekly"]>;
 
@@ -195,6 +195,18 @@ export function openStatus(
     if (first !== undefined) return { state: "closed", opensAt: label(first), opensDay: d };
   }
   return { state: "closed", opensAt: null, opensDay: null };
+}
+
+/** Whether the schedule has the place open at a given weekday and minute of the day. */
+export function isOpenAt(weekly: WeeklyHours, day: Weekday, minutes: number): boolean {
+  const yesterday = (((day + 5) % 7) + 1) as Weekday;
+  for (const [, close] of weekly[String(yesterday) as WeekdayKey] ?? []) {
+    const c = toMinutes(close);
+    if (c > 24 * 60 && minutes < c - 24 * 60) return true;
+  }
+  return (weekly[String(day) as WeekdayKey] ?? []).some(
+    ([open, close]) => minutes >= toMinutes(open) && minutes < toMinutes(close),
+  );
 }
 
 export const WEEKDAY_LABELS: Record<Weekday, string> = {

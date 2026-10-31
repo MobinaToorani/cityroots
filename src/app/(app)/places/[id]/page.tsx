@@ -17,6 +17,7 @@ import type { ReactNode } from "react";
 import { JsonLd } from "@/components/features/json-ld";
 import { OpenNow } from "@/components/features/open-now";
 import { PlaceCard } from "@/components/features/place-card";
+import { SaveButton } from "@/components/features/save-button";
 import { CategoryTag, CostBadge, PickBadge } from "@/components/ui/badges";
 import { ButtonLink, buttonClasses } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
@@ -136,6 +137,9 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
         <div className="mt-6 inline-flex flex-wrap items-center gap-3 rounded-2xl px-4 py-3 glass-strong">
           <CostBadge band={place.costBand} className="h-7 px-3 text-body" />
           <span className="text-body">{place.priceNote ?? COST_HINTS[place.costBand]}</span>
+        </div>
+        <div className="mt-4">
+          <SaveButton placeId={place.id} placeName={place.name} variant="full" />
         </div>
       </header>
 

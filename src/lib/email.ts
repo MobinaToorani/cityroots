@@ -1,4 +1,5 @@
 import "server-only";
+import { appendFile } from "node:fs/promises";
 import { env } from "@/lib/env";
 import { logger } from "@/lib/logger";
 
@@ -14,13 +15,19 @@ export function emailDeliveryConfigured(): boolean {
  * the server log instead (development, CI, previews).
  */
 export async function sendEmail(email: Email): Promise<void> {
-  const { RESEND_API_KEY, EMAIL_FROM } = env();
+  const { RESEND_API_KEY, EMAIL_FROM, EMAIL_OUTBOX_FILE } = env();
   if (!emailDeliveryConfigured() || !RESEND_API_KEY) {
     logger.info("Email (delivery not configured)", {
       to: email.to,
       subject: email.subject,
       text: email.text,
     });
+    if (EMAIL_OUTBOX_FILE) {
+      await appendFile(
+        EMAIL_OUTBOX_FILE,
+        `${JSON.stringify({ to: email.to, text: email.text })}\n`,
+      );
+    }
     return;
   }
   const res = await fetch("https://api.resend.com/emails", {
