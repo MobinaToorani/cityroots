@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { GUIDES } from "@/content/guides";
 import { listLiveCities } from "@/lib/data/cities";
 import { listPlaceIds } from "@/lib/data/places";
 import { features } from "@/lib/env";
@@ -12,6 +13,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: absoluteUrl("/"), changeFrequency: "daily", priority: 1 },
     { url: absoluteUrl("/explore"), changeFrequency: "daily", priority: 0.9 },
     { url: absoluteUrl("/events"), changeFrequency: "weekly", priority: 0.7 },
+    { url: absoluteUrl("/guides"), changeFrequency: "weekly", priority: 0.7 },
+    ...GUIDES.map((g) => ({
+      url: absoluteUrl(`/guides/${g.slug}`),
+      lastModified: g.updatedAt,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     { url: absoluteUrl("/planner"), changeFrequency: "monthly", priority: 0.5 },
     { url: absoluteUrl("/pricing"), changeFrequency: "monthly", priority: 0.5 },
     { url: absoluteUrl("/submit"), changeFrequency: "monthly", priority: 0.3 },

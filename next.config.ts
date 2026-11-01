@@ -1,3 +1,4 @@
+import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
 const usingPglite = !process.env.DATABASE_URL;
@@ -40,4 +41,7 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Guides are MDX bodies imported by /guides/[slug]; their metadata is typed in TypeScript.
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);

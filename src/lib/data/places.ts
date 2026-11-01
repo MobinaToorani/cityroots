@@ -316,3 +316,25 @@ export async function listPlacesForPartners(
     throw new DataError("Could not load places for the partner API", { cause });
   }
 }
+
+export type GuideStop = PlaceCard & { hours: string | null };
+
+/** The places a guide visits, by slug, in one city. Missing slugs are simply absent. */
+export async function getGuideStops(
+  citySlug: string,
+  slugs: readonly string[],
+): Promise<Map<string, GuideStop>> {
+  try {
+    const rows = await db()
+      .select({ ...cardColumns, hours: places.hours })
+      .from(places)
+      .innerJoin(cities, eq(cities.id, places.cityId))
+      .innerJoin(categories, eq(categories.id, places.categoryId))
+      .where(and(visible(), eq(cities.slug, citySlug), inArray(places.slug, [...slugs])));
+    return new Map(
+      rows.map(({ hours, ...row }) => [row.slug, { ...toCard(row), hours: hours?.text ?? null }]),
+    );
+  } catch (cause) {
+    throw new DataError(`Could not load guide stops in ${citySlug}`, { cause });
+  }
+}

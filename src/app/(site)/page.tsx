@@ -32,7 +32,7 @@ export default async function HomePage() {
       >
         {hero && (
           <>
-            <Photo photo={hero} alt="" sizes="100vw" priority quality={60} className="-z-20" />
+            <Photo photo={hero} alt="" sizes="100vw" preload quality={60} className="-z-20" />
             <div
               aria-hidden="true"
               className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-black/45 to-black/10"

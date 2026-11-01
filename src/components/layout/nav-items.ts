@@ -4,6 +4,7 @@ import {
   Compass,
   House,
   Info,
+  NotebookText,
   Route as RouteIcon,
   UserRound,
   type LucideIcon,
@@ -47,6 +48,13 @@ export const PRIMARY_NAV: readonly NavItem[] = [
     on: ALL,
   },
   {
+    href: "/guides",
+    label: "Guides",
+    icon: NotebookText,
+    match: (p) => p.startsWith("/guides"),
+    on: ["rail", "header"],
+  },
+  {
     href: "/planner",
     label: "Planner",
     icon: RouteIcon,
@@ -65,7 +73,7 @@ export const PRIMARY_NAV: readonly NavItem[] = [
     label: "About",
     icon: Info,
     match: (p) => p.startsWith("/about") || p.startsWith("/pricing"),
-    on: ["rail", "header"],
+    on: ["rail"],
   },
   {
     href: "/account",

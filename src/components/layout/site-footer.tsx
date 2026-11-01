@@ -32,6 +32,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link className="quiet-link" href="/guides">
+                Guides
+              </Link>
+            </li>
+            <li>
               <Link className="quiet-link" href="/planner">
                 Day Planner
               </Link>

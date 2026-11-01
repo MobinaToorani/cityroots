@@ -9,7 +9,6 @@ import { CostBadge } from "@/components/ui/badges";
 import { Icon } from "@/components/ui/icon";
 import type { SearchHit, SearchResults } from "@/lib/data/search";
 import { cn } from "@/lib/cn";
-import { exploreHref } from "@/lib/domain/explore-params";
 import { logger } from "@/lib/logger";
 
 const OPEN_EVENT = "cityroots:open-palette";
@@ -19,9 +18,15 @@ const MAX_RECENT = 5;
 
 type Option = { key: string; hit: SearchHit | null; href: Route; label: string; detail: string };
 
+// Built by hand rather than with exploreHref: the palette is on every page, and
+// the explorer's URL parsers would add nuqs to every page's JavaScript.
+function exploreLink(param: "cat" | "q", value: string): Route {
+  return `/explore?${new URLSearchParams({ [param]: value })}` as Route;
+}
+
 function hrefFor(hit: SearchHit): Route {
   if (hit.kind === "city") return `/city/${hit.slug}` as Route;
-  if (hit.kind === "category") return exploreHref({ cat: [hit.slug] });
+  if (hit.kind === "category") return exploreLink("cat", hit.slug);
   return `/places/${hit.id}` as Route;
 }
 
@@ -181,7 +186,7 @@ export function CommandPalette() {
         {
           key: "all",
           hit: null,
-          href: exploreHref({ q: query.trim() }),
+          href: exploreLink("q", query.trim()),
           label: `Search all listings for "${query.trim()}"`,
           detail: "Open the explorer",
         },

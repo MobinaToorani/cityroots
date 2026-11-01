@@ -1,6 +1,8 @@
 import { CalendarDays, Sparkles } from "lucide-react";
-import type { Metadata } from "next";
+import type { Metadata, Route } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { guidesForCity } from "@/content/guides";
 import { CategoryTile } from "@/components/features/category-tile";
 import { EventCard } from "@/components/features/event-card";
 import { JsonLd } from "@/components/features/json-ld";
@@ -31,7 +33,6 @@ export async function generateMetadata(props: PageProps<"/city/[slug]">): Promis
   if (!city) return { title: "City not found" };
   const freeShare = city.placeCount ? Math.round((city.freeCount / city.placeCount) * 100) : 0;
   const description = `${city.placeCount} free and low-cost places, programs, and events in ${city.name}, ${freeShare}% of them free. ${city.tagline}.`;
-  const hero = photo(city.heroImage);
   return {
     title: `Free things to do in ${city.name}`,
     description,
@@ -40,7 +41,6 @@ export async function generateMetadata(props: PageProps<"/city/[slug]">): Promis
       title: `Free things to do in ${city.name}`,
       description,
       url: `/city/${city.slug}`,
-      images: hero ? [{ url: hero.src, width: hero.width, height: hero.height }] : undefined,
     },
   };
 }
@@ -56,6 +56,7 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
     getCategoryCounts(city.id),
   ]);
   const hero = photo(city.heroImage);
+  const guides = guidesForCity(city.slug);
   const freeShare = city.placeCount ? Math.round((city.freeCount / city.placeCount) * 100) : 0;
   const note = city.curatorNote ?? city.description;
   const lead = firstSentence(note);
@@ -97,7 +98,7 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
               photo={hero}
               alt={`${city.name}, Ontario`}
               sizes="100vw"
-              priority
+              preload
               quality={60}
               className="-z-20"
             />
@@ -155,6 +156,23 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
               Show all {city.placeCount}
             </ButtonLink>
           </div>
+          {guides.length > 0 && (
+            <div className="mt-5 border-t border-divider pt-4">
+              <h3 className="text-meta font-semibold text-text-muted">A day already planned</h3>
+              <ul className="mt-1 grid gap-1">
+                {guides.map((g) => (
+                  <li key={g.slug}>
+                    <Link
+                      href={`/guides/${g.slug}` as Route}
+                      className="font-semibold text-primary-text quiet-link"
+                    >
+                      {g.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </GlassCard>
       </Container>
 

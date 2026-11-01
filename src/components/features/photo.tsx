@@ -6,21 +6,22 @@ type PhotoProps = {
   photo: PhotoInfo;
   alt: string;
   sizes: string;
-  priority?: boolean;
+  /** For the LCP hero only: preloads the image from the document head. */
+  preload?: boolean;
   /** Lower quality for full-bleed heroes, where the photo sits under a scrim. */
   quality?: 60 | 75;
   className?: string;
 };
 
 /** Full-cover photograph with its generated blur placeholder. */
-export function Photo({ photo, alt, sizes, priority, quality = 75, className }: PhotoProps) {
+export function Photo({ photo, alt, sizes, preload, quality = 75, className }: PhotoProps) {
   return (
     <Image
       src={photo.src}
       alt={alt}
       fill
       sizes={sizes}
-      priority={priority}
+      preload={preload}
       quality={quality}
       placeholder="blur"
       blurDataURL={photo.blurDataURL}
