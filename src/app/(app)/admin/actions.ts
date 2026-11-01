@@ -13,7 +13,7 @@ import {
   rejectSubmission,
   resolveCorrection,
 } from "@/lib/data/review";
-import { emailHtml, sendEmail } from "@/lib/email";
+import { emailHtml, escapeHtml, sendEmail } from "@/lib/email";
 import { features } from "@/lib/env";
 import { isPartnerScope } from "@/lib/domain/partner-keys";
 import { placeEditSchema, reviewNotesSchema } from "@/lib/domain/review";
@@ -39,8 +39,14 @@ function stringValues(formData: FormData): Record<string, string> {
   );
 }
 
-function escapeHtml(value: string): string {
-  return value.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+/**
+ * A changed or closed place also shows on city pages and the home page, which
+ * are cached for an hour. The edit may move it between cities, so refresh all.
+ */
+function revalidatePlace(placeId: string) {
+  revalidatePath(`/places/${placeId}`);
+  revalidatePath("/city/[slug]", "page");
+  revalidatePath("/");
 }
 
 /** Tells a contributor what happened, after the response is sent. */
@@ -147,7 +153,7 @@ export async function applyCorrectionAction(
     logger.error("Correction failed", { error, submissionId: submission.id });
     return { status: "error", message: "Saving failed. Try again.", values };
   }
-  revalidatePath(`/places/${submission.placeId}`);
+  revalidatePlace(submission.placeId);
   emailOutcome(
     submission.contactEmail,
     `Your correction to ${submission.placeName ?? "a listing"}`,
@@ -210,7 +216,7 @@ export async function approveClaimAction(formData: FormData): Promise<void> {
     notes: notes.success ? notes.data : null,
   });
   if (result) {
-    revalidatePath(`/places/${result.placeId}`);
+    revalidatePlace(result.placeId);
     emailOutcome(
       result.claimantEmail,
       `You manage ${result.placeName} on CityRoots`,

@@ -184,8 +184,9 @@ export function openStatus(
       return { state: "open", closesAt: label(toMinutes(close)) };
     }
   }
-  // Next opening: later today, then the following six days.
-  for (let offset = 0; offset < 7; offset++) {
+  // Next opening: later today, then the following seven days (a place open
+  // one day a week reopens on the same weekday next week).
+  for (let offset = 0; offset <= 7; offset++) {
     const d = (((day - 1 + offset) % 7) + 1) as Weekday;
     const slots = (weekly[String(d) as WeekdayKey] ?? [])
       .map(([o]) => toMinutes(o))

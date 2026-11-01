@@ -31,10 +31,13 @@ export type DerivedEventDates = {
  * vague notes ("summer weekends") are never given invented dates.
  */
 export function deriveEventDates(text: string, today: Date): DerivedEventDates | null {
-  const found = [...text.matchAll(MONTH_RE)].map((m) => ({
-    month: MONTHS.indexOf((m[1] ?? "").toLowerCase() as (typeof MONTHS)[number]),
-    day: m[2] ? Number(m[2]) : null,
-  }));
+  const found = [...text.matchAll(MONTH_RE)]
+    // Lowercase "may" is the verb ("hours may vary"), not the month.
+    .filter((m) => m[1] !== "may")
+    .map((m) => ({
+      month: MONTHS.indexOf((m[1] ?? "").toLowerCase() as (typeof MONTHS)[number]),
+      day: m[2] ? Number(m[2]) : null,
+    }));
   const first = found[0];
   const last = found[found.length - 1];
   if (!first || !last || first.month < 0) return null;

@@ -183,8 +183,10 @@ export async function approveClaim(input: {
   apply: readonly ClaimField[];
   notes: string | null;
 }): Promise<{ placeId: string; claimantEmail: string; placeName: string } | null> {
+  if (!UUID.test(input.claimId)) return null;
   return wrap("approve the claim", () =>
     db().transaction(async (tx) => {
+      // Lock the claim so two curators approving at once cannot both apply it.
       const [claim] = await tx
         .select({
           placeId: claims.placeId,
@@ -193,8 +195,16 @@ export async function approveClaim(input: {
           status: claims.status,
         })
         .from(claims)
-        .where(eq(claims.id, input.claimId));
+        .where(eq(claims.id, input.claimId))
+        .for("update");
       if (!claim || claim.status !== "pending") return null;
+      // A place someone else already manages is never silently handed over.
+      const [target] = await tx
+        .select({ claimedBy: places.claimedBy })
+        .from(places)
+        .where(eq(places.id, claim.placeId))
+        .for("update");
+      if (target?.claimedBy && target.claimedBy !== claim.userId) return null;
       const p = claim.proposal;
       const patch: Partial<typeof places.$inferInsert> = { claimedBy: claim.userId };
       const verified: Record<string, unknown> = {};

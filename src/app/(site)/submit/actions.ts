@@ -9,7 +9,7 @@ import {
   submissionSchema,
   type FieldErrors,
 } from "@/lib/domain/submission";
-import { emailHtml, sendEmail } from "@/lib/email";
+import { emailHtml, escapeHtml, sendEmail } from "@/lib/email";
 import { logger } from "@/lib/logger";
 import { notifyReviewers } from "@/lib/notify";
 import { clientFingerprint, consumeRateLimit } from "@/lib/rate-limit";
@@ -107,8 +107,4 @@ export async function submitListing(_prev: SubmitState, formData: FormData): Pro
   });
 
   redirect(`/submit/thanks?type=${input.type}`);
-}
-
-function escapeHtml(value: string): string {
-  return value.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 }
