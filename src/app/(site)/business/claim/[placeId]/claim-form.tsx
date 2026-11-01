@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import { GOALS, goal } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { ChoiceChips } from "@/components/ui/choice-chips";
 import { SelectField } from "@/components/ui/select-field";
@@ -129,7 +130,12 @@ export function ClaimForm({ placeId }: { placeId: string }) {
         defaultValue={v.message}
         error={e.message}
       />
-      <Button type="submit" size="lg" disabled={pending} className="justify-self-start">
+      <Button
+        type="submit"
+        size="lg"
+        disabled={pending}
+        className={`justify-self-start ${goal(GOALS.claimSent)}`}
+      >
         Send my claim
       </Button>
     </form>

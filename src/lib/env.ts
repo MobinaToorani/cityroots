@@ -22,6 +22,15 @@ const serverSchema = z
     EMAIL_FROM: z.string().min(3).default("CityRoots <hello@cityroots.ca>"),
     SLACK_WEBHOOK_URL: z.url().optional(),
     NEXT_PUBLIC_SITE_URL: z.url().default("http://localhost:3000"),
+    /** Plausible site domain, like cityroots.ca. Unset means no analytics script at all. */
+    PLAUSIBLE_DOMAIN: z
+      .string()
+      .regex(/^[a-z0-9.-]+$/, "Use a bare domain like cityroots.ca")
+      .optional(),
+    /** Script URL, for a self-hosted Plausible or a proxy. */
+    PLAUSIBLE_SCRIPT_SRC: z
+      .url()
+      .default("https://plausible.io/js/script.outbound-links.tagged-events.js"),
     FEATURE_PARTNERS: flag,
     /** Comma-separated emails that always get the admin role, to bootstrap the first admins. */
     ADMIN_EMAILS: z

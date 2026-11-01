@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GOALS, goal } from "@/lib/analytics";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { buttonClasses } from "@/components/ui/button";
@@ -34,7 +35,10 @@ export default function PartnersPage() {
           because a community keeps them that way, and they are ordered the same way as on
           CityRoots: free first, and nobody pays for placement, partners included.
         </p>
-        <a href={CONTACT} className={buttonClasses("primary", "lg", "mt-8")}>
+        <a
+          href={CONTACT}
+          className={buttonClasses("primary", "lg", `mt-8 ${goal(GOALS.partnerContact)}`)}
+        >
           Talk to us about partnering
         </a>
 
@@ -119,7 +123,10 @@ export default function PartnersPage() {
             </li>
             <li>Widgets and the API include only published listings, never ads.</li>
           </ul>
-          <a href={CONTACT} className={buttonClasses("secondary", "md", "mt-6")}>
+          <a
+            href={CONTACT}
+            className={buttonClasses("secondary", "md", `mt-6 ${goal(GOALS.partnerContact)}`)}
+          >
             Email us about your city
           </a>
         </Block>

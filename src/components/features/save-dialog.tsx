@@ -1,5 +1,6 @@
 "use client";
 
+import { GOALS, track } from "@/lib/analytics";
 import { Check, Plus, X } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
@@ -65,10 +66,9 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
     });
     startTransition(async () => {
       try {
-        apply(
-          await toggleSavedAction(collectionId, placeId, saved),
-          saved ? `Saved to ${title}` : `Removed from ${title}`,
-        );
+        const next = await toggleSavedAction(collectionId, placeId, saved);
+        apply(next, saved ? `Saved to ${title}` : `Removed from ${title}`);
+        if (saved && next.signedIn && !next.error) track(GOALS.placeSaved);
       } catch (error) {
         logger.warn("Save toggle failed", { error });
         setStatus("That did not save. Try again.");

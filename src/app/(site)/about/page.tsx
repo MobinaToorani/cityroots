@@ -98,6 +98,15 @@ export default async function AboutPage() {
           </p>
         </Block>
 
+        <Block id="privacy" title="Privacy">
+          <p>
+            CityRoots sets no advertising or tracking cookies. Visits are counted with Plausible,
+            which keeps no personal data and does not follow you across sites. If you sign in, your
+            email is used only to send sign-in links and replies about things you sent us. We never
+            sell or share it. Payments go through Stripe; we never see your card.
+          </p>
+        </Block>
+
         <div className="mt-12 flex flex-wrap gap-3">
           <ButtonLink href="/explore">Start exploring</ButtonLink>
           <ButtonLink href="/" variant="secondary">

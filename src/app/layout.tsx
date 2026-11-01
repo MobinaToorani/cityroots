@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Instrument_Sans } from "next/font/google";
 import type { ReactNode } from "react";
+import { Analytics } from "@/components/features/analytics";
 import { SkipLink } from "@/components/ui/visually-hidden";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="min-h-dvh">
         <SkipLink />
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { GOALS, goal } from "@/lib/analytics";
 import { useActionState, useEffect, useRef } from "react";
 import { submitListing, type SubmitState } from "./actions";
 import { Button } from "@/components/ui/button";
@@ -171,7 +172,12 @@ export function NewPlaceForm({
         description={EMAIL_HELP}
         error={e.email}
       />
-      <Button type="submit" size="lg" disabled={pending} className="justify-self-start">
+      <Button
+        type="submit"
+        size="lg"
+        disabled={pending}
+        className={`justify-self-start ${goal(GOALS.suggestionSent)}`}
+      >
         {pending ? "Sending" : "Send for review"}
       </Button>
     </form>
@@ -217,7 +223,12 @@ export function CorrectionForm({ placeId }: { placeId: string }) {
         description={EMAIL_HELP}
         error={e.email}
       />
-      <Button type="submit" size="lg" disabled={pending} className="justify-self-start">
+      <Button
+        type="submit"
+        size="lg"
+        disabled={pending}
+        className={`justify-self-start ${goal(GOALS.correctionSent)}`}
+      >
         {pending ? "Sending" : "Send the correction"}
       </Button>
     </form>

@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { GOALS, goal } from "@/lib/analytics";
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -227,7 +228,7 @@ function ProAction({
   return (
     <form action={startCheckoutAction} className="grid gap-2">
       <input type="hidden" name="period" value={period} />
-      <Button type="submit" className="justify-self-start">
+      <Button type="submit" className={`justify-self-start ${goal(GOALS.checkoutStarted)}`}>
         Start Pro, {price(PRO_PLANS[period].amount)} a {PRO_PLANS[period].interval}
       </Button>
       <p className="text-meta text-text-muted">Secure checkout by Stripe.</p>

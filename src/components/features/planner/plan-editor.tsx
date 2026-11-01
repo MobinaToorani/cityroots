@@ -1,5 +1,6 @@
 "use client";
 
+import { GOALS, goal } from "@/lib/analytics";
 import { ArrowDown, ArrowUp, Clock, RefreshCw, Share2, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useActionState, useState } from "react";
@@ -210,7 +211,7 @@ export function PlanEditor({ stops: initialStops, places, budget, city, day, int
           type="submit"
           size="lg"
           disabled={saving || stops.length === 0}
-          className="justify-self-start"
+          className={`justify-self-start ${goal(GOALS.planSaved)}`}
         >
           <Icon icon={Share2} size={16} />
           Save and get a share link
