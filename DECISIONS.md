@@ -104,6 +104,8 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **The header shows a static "Account" link, not session state.** Reading the session in the shared layout would make every marketing page dynamic, and cost LCP. `/account` redirects signed-out visitors to sign in and back.
 
+**Guides joined the header in Phase 5.** The header keeps five items (Explore, Events, Guides, Planner, Account); About moved to the rail and the footer, where it already was.
+
 ## Auth
 
 **Database sessions, not JWT.** The cookie is an opaque random token, HTTP-only, Secure in production, and SameSite=Lax. The session and the user's role are read from Postgres on each request, so a revoked role takes effect immediately. A signed or encrypted JWT would keep stale roles until expiry.
@@ -260,43 +262,65 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **Code samples use the sans face.** The spec bans monospace; a base rule sets `pre`, `code`, and `textarea` to the sans font.
 
+## Guides
+
+**Metadata in TypeScript, bodies in MDX.** `@next/mdx` has no frontmatter, so each guide's metadata (title, city, budget, season, dates, stops) lives in `src/content/guides/index.ts`. It is type-checked and validated with Zod in a unit test, and the body is `src/content/guides/<slug>.mdx`. The test also checks that the `<Stop>` elements in each body match the metadata, in order.
+
+**Every stop is a live listing.** `<Stop slug="...">` renders the listing's cost, price note, neighbourhood, and hours from the database, followed by the guide's own words. If a listing disappears, the guide build fails instead of shipping a gap. The prose only states what the listing data supports; hours and prices are never retyped in the body.
+
+**Six guides, one per major city at launch:** Waterloo, Newmarket, Richmond Hill, Markham, Oakville, and Vaughan, the six cities with the most listings plus the spec's own Waterloo example. Free guides contain no dollar amounts (tested).
+
+**The index is a single-column list**, not a card grid, to stay consistent with the home page change away from three-card layouts. Thumbnails carry their photo credits like every other photo.
+
+## Link previews
+
+**Generated OG images for the site, every city, every guide, and every place.** City and guide cards use the city photo under a dark scrim with the title in Fraunces. Places have no photos yet, so their card uses the category colour, the cost, and the category. Fonts are static TTF cuts of Fraunces and Instrument Sans (OFL) in `assets/fonts`, because the image renderer cannot read the woff2 files `next/font` serves.
+
+**Cities and guides are rendered at build; places on first request.** That keeps 400 image renders out of the build. Place images are cached after first render (an empty `generateStaticParams` with a one-day revalidate).
+
+## Analytics
+
+**Plausible, and only when configured.** No cookies and no personal data; nothing loads unless `PLAUSIBLE_DOMAIN` is set, so local, preview, and test runs make no analytics requests (tested). The script URL is configurable for a proxy or self-hosting.
+
+**Goals are CSS classes, not code.** Plausible's tagged events count clicks on buttons and links marked with `goal(...)`, so goals add no JavaScript. Saving a place is the one goal fired from code, after the server confirms it. Goal names live in `src/lib/analytics.ts`; none carries free text, emails, or names. The About page has a short privacy section saying so.
+
 ## Performance (current state)
 
-Lighthouse, mobile, simulated slow 4G, median of 3 runs, after Phase 3:
+Lighthouse, mobile, simulated Slow 4G with 4x CPU slowdown, median of 3 runs, after Phase 5:
 
-| Page    | Perf | A11y | Best practices | SEO | LCP    | TBT    | CLS | Script |
-| ------- | ---- | ---- | -------------- | --- | ------ | ------ | --- | ------ |
-| Home    | 96   | 100  | 100            | 100 | 2.56 s | 84 ms  | 0   | 162 KB |
-| City    | 98   | 100  | 100            | 100 | 2.26 s | 81 ms  | 0   | 162 KB |
-| About   | 95   | 100  | 100            | 100 | 2.75 s | 159 ms | 0   | 162 KB |
-| Explore | 89   | 100  | 100            | 100 | 2.99 s | 256 ms | 0   | 178 KB |
-| Events  | 88   | 100  | 100            | 100 | 3.04 s | 287 ms | 0   | 166 KB |
-| Submit  | 96   | 100  | 100            | 100 | 2.77 s | 87 ms  | 0   | 166 KB |
-| Pricing | 94   | 100  | 100            | 100 | 2.78 s | 168 ms | 0   | 162 KB |
-| Planner | 94   | 100  | 100            | 100 | 2.78 s | 145 ms | 0   | 170 KB |
+| Page     | Perf | LCP    | TBT    | Script |
+| -------- | ---- | ------ | ------ | ------ |
+| Home     | 97   | 2.56 s | 82 ms  | 166 KB |
+| City     | 96   | 2.33 s | 165 ms | 166 KB |
+| About    | 93   | 2.80 s | 195 ms | 171 KB |
+| Explore  | 90   | 2.89 s | 245 ms | 184 KB |
+| Events   | 91   | 2.94 s | 213 ms | 170 KB |
+| Submit   | 96   | 2.71 s | 172 ms | 171 KB |
+| Pricing  | 95   | 2.78 s | 85 ms  | 166 KB |
+| Planner  | 94   | 2.78 s | 169 ms | 174 KB |
+| Partners | 96   | 2.56 s | 130 ms | 174 KB |
+| Business | 96   | 2.78 s | 85 ms  | 166 KB |
+| Guides   | 93   | 2.86 s | 170 ms | 170 KB |
+| A guide  | 93   | 2.86 s | 171 ms | 170 KB |
 
-Phase 4 added `/partners` (95, LCP 2.45 s, TBT 188 ms) and `/business` (95, LCP 2.79 s, TBT 106 ms) to the Lighthouse URLs, both 100 on accessibility, best practices, and SEO.
+Accessibility, best practices, and SEO are 100 on every page, and CLS is 0. The spec's acceptance bar (90+ in all four categories on mobile marketing pages, explorer accessibility 95+) is met everywhere.
 
-Phase 3 added about 2 KB to every page (the save button and the dialog host; the dialog itself loads on first use). Explore and Events measured 224 and 240 ms of TBT after Phase 2 and 256 and 287 ms in this run, inside this machine's noise but over budget either way.
+**The 2.0 s LCP budget is not met, and the reason is the measurement as much as the pages.** Observed LCP on these pages is 0.1 to 0.2 s; the 2.3 to 2.9 s figures come from Lighthouse's simulation. That model charges every script downloaded before the paint to LCP, even though none of them block rendering. Under its Slow 4G profile (1.6 Mbps, 150 ms RTT, 4x CPU), React and the Next runtime alone (about 125 KB of the 166 KB) cost roughly 2.5 s. The spec says "LCP under 2.0s on 4G"; Lighthouse's default is Slow 4G. Measuring the same budget on a regular 4G profile would pass. The budget stays enforced on Slow 4G until the owner decides which profile the spec means.
 
-The LCP budget (2.0 s) is still not met, so the Lighthouse CI step fails. TBT on the app pages sits around the 200 ms budget and crosses it in some runs. Both budgets stay enforced rather than loosened, and the work is scheduled for Phase 5. Candidates: smaller mobile hero crops, fewer backdrop-filter surfaces on long pages, and the app shell's base JavaScript.
+Phase 5 changes:
 
-On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP, so compare medians, not single runs. Phase 2 changes that moved the numbers:
+- The command palette builds its two explorer links by hand instead of importing the explorer's URL parsers, which took nuqs out of every page's JavaScript (shared app chunk 14.5 KB to 12 KB).
+- Inlining CSS (`experimental.inlineCss`) was tried and reverted. It removed the render-blocking stylesheet but delayed the hero image enough that home LCP went from 2.56 s to 3.59 s.
+- Images use Next 16's `preload` instead of the deprecated `priority`. The guides index preloads its first thumbnail, which is the LCP on phones (3.40 s to 2.86 s).
+- TBT on Explore and Events sits around the 200 ms budget and crosses it in some runs; noise on this machine is about 100 ms.
 
-- The command palette is in the root layout: about 4 KB on every page.
-- The first-load fade on app pages was removed (see Navigation), which cut about 100 ms of TBT and 350 ms of LCP on Explore.
-- Correction labels moved out of the Zod schema module, which took the submit page from 196 KB to 164 KB.
-- Month sections on the events page use `content-visibility: auto`.
+On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP, so compare medians, not single runs.
 
-`/events` and `/submit` were added to the Lighthouse URLs and to the same budgets as the marketing pages.
-
-**Lighthouse runs on Linux Chromium.** Under WSL, Lighthouse otherwise launches Windows Chrome and fails. Point `CHROME_PATH` at Playwright's Chromium. CI on Ubuntu needs nothing extra.
+**Lighthouse runs on Linux Chromium.** Under WSL, Lighthouse otherwise launches Windows Chrome and fails. Point `CHROME_PATH` at Playwright's Chromium, and run it from outside the repo: it can leave `C:\Users\...` profile folders in the working directory, which break Turbopack. CI on Ubuntu needs nothing extra.
 
 ## Deferred, by phase
 
 - **Phase 2 (delivered):** map, command palette, optimistic filters, submit flow, hours parsing and "Open now", event calendar, rate limiting. The review screen for the moderation queue moves to Phase 4 with the rest of admin.
 - **Phase 3 (delivered):** collections, Day Planner, shareable plans, Stripe subscription with webhooks and the customer portal, `/pricing`. Still to come for Pro: event reminders, the "new near you" digest, and saved collections in the command palette.
 - **Phase 4 (delivered):** admin review queue, business claims, partner keys and API, embed widget, `/partners`, `/business`. Still to come: the Presence tier, and a business dashboard for editing details directly.
-- **Phase 5:** guides, OG images per city and place, analytics, Lighthouse budgets.
-
-The schema for all of them already exists.
+- **Phase 5 (delivered):** six guides, OG images for the site, cities, guides, and places, Plausible analytics with goals, a launch checklist (`LAUNCH.md`), and performance work. Open: the LCP measurement profile (see Performance), place photography, and Pro event reminders and digests.
