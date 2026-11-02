@@ -318,6 +318,12 @@ On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP
 
 **Lighthouse runs on Linux Chromium.** Under WSL, Lighthouse otherwise launches Windows Chrome and fails. Point `CHROME_PATH` at Playwright's Chromium, and run it from outside the repo: it can leave `C:\Users\...` profile folders in the working directory, which break Turbopack. CI on Ubuntu needs nothing extra.
 
+## Deployment
+
+- **The database is Neon, installed through the Vercel Marketplace** (free plan, `iad1` to sit next to Vercel's default function region). The integration sets `DATABASE_URL` for the project. Builds need it: city pages and OG images read the database while prerendering.
+- **Without `NEXT_PUBLIC_SITE_URL`, the site URL falls back to Vercel's own URLs**: the production domain on production, the deployment URL on previews. Set `NEXT_PUBLIC_SITE_URL=https://cityroots.ca` once the domain points at Vercel.
+- **`esbuild` is a direct dev dependency** so vite's optional peer (`^0.27 || ^0.28`) resolves at the root. Without it, npm 11 writes a lockfile that npm 10's `npm ci` in CI rejects.
+
 ## Deferred, by phase
 
 - **Phase 2 (delivered):** map, command palette, optimistic filters, submit flow, hours parsing and "Open now", event calendar, rate limiting. The review screen for the moderation queue moves to Phase 4 with the rest of admin.
