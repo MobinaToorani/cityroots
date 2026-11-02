@@ -19,7 +19,12 @@
       ],
       "numberOfRuns": 3,
       "settings": {
-        "throttlingMethod": "simulate"
+        "throttlingMethod": "simulate",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 9000,
+          "cpuSlowdownMultiplier": 4
+        }
       }
     },
     "assert": {

@@ -46,7 +46,7 @@ Feature flags and `PLAUSIBLE_DOMAIN` are read at build time by static pages, so 
 - [x] Copy and design rules on source and built pages: no em dashes, no banned phrases, no monospace, no `animate-ping`.
 - [x] Playwright (77 tests): explorer with and without JavaScript, sign-in, collections, the planner, signed Stripe webhooks (idempotent and order-safe), admin review, claims, partner keys, the embed, guides, OG images, and axe WCAG 2.2 AA checks on every public page type.
 - [x] Ranking integrity: tests fail if ranking reads payment, tier, partner, or claim state, or if claims and partner code write ranking inputs.
-- [x] Lighthouse CI on 12 URLs (see "Performance" in DECISIONS.md for the current numbers and the open LCP question).
+- [x] Lighthouse CI on 12 URLs (see "Performance" in DECISIONS.md for the current numbers; LCP is measured on regular 4G).
 
 ## 5. Launch day
 
