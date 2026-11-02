@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+/*
+ * CityRoots design tokens.
+ * Light values are the default; dark values follow the OS setting.
+ * Text tokens are tuned to keep 4.5:1 on glass with a black photo behind it
+ * (see DECISIONS.md, "Contrast on glass").
+ */
+@theme static {
+  --font-*: initial;
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --color-bg: #f4f2ed;
+  --color-surface: rgba(255, 255, 255, 0.72);
+  --color-surface-strong: rgba(255, 255, 255, 0.88);
+  --color-surface-solid: #ffffff;
+  --color-border-glass: rgba(255, 255, 255, 0.45);
+  --color-divider: #e3dfd7;
+  --color-text: #141412;
+  --color-text-muted: #5f5b54;
+  --color-primary: #1e4d36;
+  --color-primary-hover: #173f2c;
+  --color-primary-text: #1e4d36;
+  --color-accent: #3e7a56;
+  --color-free: #176b3c;
+  --color-free-soft: rgba(30, 122, 70, 0.12);
+  --color-pick: #8a5a0b;
+  --color-pick-soft: rgba(176, 116, 20, 0.12);
+  --color-ink: #141412;
+  --color-on-ink: #ffffff;
+  --color-focus: #1e4d36;
+  --color-danger: #a8322c;
+
+  --color-cat-physical: #0e7a5f;
+  --color-cat-mental: #5e56a8;
+  --color-cat-social: #1d6fa5;
+  --color-cat-financial: #b07414;
+  --color-cat-arts: #7c4fb8;
+  --color-cat-dance-music: #c2453f;
+  --color-cat-food: #c25e1e;
+  --color-cat-cafes: #6b5f4e;
+  --color-cat-thrifting: #0e7a8a;
+  --color-cat-events: #b03e76;
+
+  --radius-card: 20px;
+  --radius-modal: 28px;
+
+  --shadow-glass: 0 8px 32px rgba(20, 20, 18, 0.12);
+  --shadow-lift: 0 14px 40px rgba(20, 20, 18, 0.16);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --text-display: clamp(2.75rem, 1.9rem + 3.6vw, 4.5rem);
+  --text-display--line-height: 1.1;
+  --text-section: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  --text-section--line-height: 1.2;
+  --text-card: 1.0625rem;
+  --text-card--line-height: 1.35;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.6;
+  --text-meta: 0.8125rem;
+  --text-meta--line-height: 1.45;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0c120e;
+    --color-surface: rgba(28, 38, 30, 0.55);
+    --color-surface-strong: rgba(28, 38, 30, 0.86);
+    --color-surface-solid: #151d17;
+    --color-border-glass: rgba(255, 255, 255, 0.08);
+    --color-divider: #233027;
+    --color-text: #edebe6;
+    --color-text-muted: #c4c0b7;
+    --color-primary-text: #8fcba7;
+    --color-accent: #8fcba7;
+    --color-free: #6fd39a;
+    --color-free-soft: rgba(111, 211, 154, 0.14);
+    --color-pick: #f0c36b;
+    --color-pick-soft: rgba(240, 195, 107, 0.14);
+    --color-ink: #edebe6;
+    --color-on-ink: #0c120e;
+    --color-focus: #8fcba7;
+    --color-danger: #f08a80;
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-lift: 0 14px 40px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Code samples use the same sans face as everything else. */
+  pre,
+  code,
+  kbd,
+  samp,
+  textarea {
+    font-family: var(--font-sans);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-free-soft);
+  }
+}
+
+/* Frosted glass. Use over photography or a colour field, never flat emptiness. */
+@utility glass {
+  background: var(--color-surface);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--color-border-glass);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Glass that carries text over photography: stronger fill for 4.5:1 contrast. */
+@utility glass-strong {
+  background: var(--color-surface-strong);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--color-border-glass);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Soft colour field that gives glass something to blur when there is no photo. */
+@utility color-field {
+  background:
+    radial-gradient(60% 80% at 15% 20%, rgba(62, 122, 86, 0.28), transparent 70%),
+    radial-gradient(50% 70% at 85% 10%, rgba(29, 111, 165, 0.18), transparent 70%),
+    radial-gradient(70% 60% at 70% 90%, rgba(176, 116, 20, 0.16), transparent 70%), var(--color-bg);
+}
+
+@utility quiet-link {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+  transition:
+    text-decoration-color 200ms var(--ease-out-expo),
+    text-underline-offset 200ms var(--ease-out-expo);
+  &:hover {
+    text-decoration-color: currentColor;
+    text-underline-offset: 6px;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Route crossfade, run by the app template's view transition. */
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes page-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+::view-transition-old(.page-exit) {
+  animation: page-fade-out 120ms ease-out both;
+}
+
+::view-transition-new(.page-enter) {
+  animation: page-fade-in 180ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+  .motion-lift:hover,
+  .motion-press:active {
+    transform: none !important;
+  }
+}
+
+/* Map detail card rises from below on selection. */
+@keyframes sheet-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sheet-up {
+  animation: sheet-up 220ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet-up {
+    animation: none;
+  }
+}
+
+/* Command palette opens with a short rise. */
+.palette[open] {
+  animation: sheet-up 180ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .palette[open] {
+    animation: none;
+  }
+}

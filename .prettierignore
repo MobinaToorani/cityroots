@@ -1,0 +1,15 @@
+.next
+node_modules
+drizzle
+.data
+scripts/seed-data
+package-lock.json
+playwright-report
+test-results
+.lighthouseci
+C:*
+.github
+AGENTS.md
+CLAUDE.md
+.claude
+public/maplibre

@@ -1,0 +1,254 @@
+/**
+ * Seeds cities, categories, and places from the legacy CityRoots dataset.
+ * Idempotent: ids are derived from stable keys, and rows are upserted, so
+ * re-running never duplicates data or breaks links.
+ */
+import { createHash } from "node:crypto";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { sql } from "drizzle-orm";
+import { z } from "zod";
+import { categories, cities, events, places } from "../src/lib/db/schema";
+import { CATEGORIES, LEGACY_CATEGORY_MAP } from "../src/lib/domain/categories";
+import { COST_BANDS } from "../src/lib/domain/cost";
+import { cleanCopy, firstSentence, slugify } from "../src/lib/domain/copy";
+import { deriveEventDates } from "../src/lib/domain/event-dates";
+import { parseWeeklyHours } from "../src/lib/domain/hours";
+import { describeTarget, scriptDatabase } from "./db-config";
+
+const DATA_DIR = path.join(import.meta.dirname, "seed-data", "cities");
+
+const legacyPlace = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  type: z.enum(["place", "event", "program", "resource"]),
+  category: z.string().refine((c) => c in LEGACY_CATEGORY_MAP, "unknown category"),
+  tags: z.array(z.string()).default([]),
+  cost: z.enum(COST_BANDS),
+  costNote: z.string().optional(),
+  address: z.string().optional(),
+  neighborhood: z.string().optional(),
+  lat: z.number().optional(),
+  lng: z.number().optional(),
+  website: z.url().optional(),
+  phone: z.string().optional(),
+  hours: z.string().optional(),
+  description: z.string().min(1),
+  highlights: z.array(z.string()).default([]),
+  why: z.string().optional(),
+  isRecommended: z.boolean().default(false),
+  seasonal: z.boolean().optional(),
+  seasonNote: z.string().optional(),
+  lastVerified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+});
+
+const legacyCity = z.object({
+  cityId: z.string().min(1),
+  cityName: z.string().min(1),
+  province: z.string().min(1),
+  tagline: z.string().min(1),
+  heroDescription: z.string().min(1),
+  lat: z.number(),
+  lng: z.number(),
+  places: z.array(legacyPlace),
+});
+
+type LegacyPlace = z.infer<typeof legacyPlace>;
+
+const REGIONS: Record<string, string> = {
+  newmarket: "York Region",
+  "richmond-hill": "York Region",
+  markham: "York Region",
+  vaughan: "York Region",
+  oakville: "Halton Region",
+  burlington: "Halton Region",
+  kitchener: "Waterloo Region",
+  waterloo: "Waterloo Region",
+  cambridge: "Waterloo Region",
+};
+
+/** RFC 4122 version 5 UUID, so the same input always yields the same id. */
+function stableId(key: string): string {
+  const hash = createHash("sha1").update(`cityroots:${key}`).digest();
+  hash[6] = ((hash[6] ?? 0) & 0x0f) | 0x50;
+  hash[8] = ((hash[8] ?? 0) & 0x3f) | 0x80;
+  const hex = hash.subarray(0, 16).toString("hex");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
+/** Keeps the most recently verified record when the legacy data lists a place twice. */
+function dedupe(list: LegacyPlace[]): { kept: LegacyPlace[]; dropped: string[] } {
+  const byId = new Map<string, LegacyPlace>();
+  const dropped: string[] = [];
+  for (const p of list) {
+    const existing = byId.get(p.id);
+    if (!existing) byId.set(p.id, p);
+    else {
+      dropped.push(p.id);
+      if (p.lastVerified > existing.lastVerified) byId.set(p.id, p);
+    }
+  }
+  return { kept: [...byId.values()], dropped };
+}
+
+function hoursFromText(text: string) {
+  const weekly = parseWeeklyHours(text);
+  return weekly ? { text, weekly } : { text };
+}
+
+function optionalClean(value: string | undefined): string | null {
+  return value ? cleanCopy(value) : null;
+}
+
+async function main() {
+  const db = scriptDatabase();
+  console.log(`Seeding ${describeTarget()}`);
+
+  const categoryIds = new Map<string, string>();
+  for (const [position, c] of CATEGORIES.entries()) {
+    const id = stableId(`category/${c.slug}`);
+    categoryIds.set(c.slug, id);
+    const row = {
+      id,
+      slug: c.slug,
+      name: c.name,
+      shortName: c.shortName,
+      accentColor: c.accent,
+      description: c.description,
+      position,
+    };
+    await db.insert(categories).values(row).onConflictDoUpdate({ target: categories.id, set: row });
+  }
+
+  const files = readdirSync(DATA_DIR)
+    .filter((f) => f.endsWith(".json"))
+    .sort();
+  const expected = { total: 0, events: 0, byCost: { free: 0, low: 0, moderate: 0, varies: 0 } };
+
+  for (const file of files) {
+    const city = legacyCity.parse(JSON.parse(readFileSync(path.join(DATA_DIR, file), "utf8")));
+    const citySlug = city.cityId;
+    const cityId = stableId(`city/${citySlug}`);
+    const heroPath = `/cities/${citySlug}/hero.jpg`;
+    const cityRow = {
+      id: cityId,
+      slug: citySlug,
+      name: city.cityName,
+      province: city.province,
+      region: REGIONS[citySlug] ?? "Ontario",
+      tagline: cleanCopy(city.tagline),
+      description: cleanCopy(city.heroDescription),
+      heroImage: existsSync(path.join("public", heroPath)) ? heroPath : null,
+      lat: city.lat,
+      lng: city.lng,
+      status: "live" as const,
+      publishedAt: new Date("2026-06-01T00:00:00Z"),
+    };
+    await db.insert(cities).values(cityRow).onConflictDoUpdate({ target: cities.id, set: cityRow });
+
+    const { kept, dropped } = dedupe(city.places);
+    if (dropped.length > 0)
+      console.log(`  ${citySlug}: merged duplicate ids ${dropped.join(", ")}`);
+
+    const usedSlugs = new Set<string>();
+    for (const p of kept) {
+      let slug = slugify(p.name);
+      for (let n = 2; usedSlugs.has(slug); n++) slug = `${slugify(p.name)}-${n}`;
+      usedSlugs.add(slug);
+
+      const categorySlug = LEGACY_CATEGORY_MAP[p.category];
+      const categoryId = categorySlug ? categoryIds.get(categorySlug) : undefined;
+      if (!categoryId) throw new Error(`No category for ${p.id} (${p.category})`);
+
+      const description = cleanCopy(p.description);
+      const imagePath = `/cities/${citySlug}/places/${slug}.jpg`;
+      const row = {
+        id: stableId(`place/${citySlug}/${p.id}`),
+        cityId,
+        categoryId,
+        kind: p.type,
+        name: cleanCopy(p.name),
+        slug,
+        summary: firstSentence(description),
+        description,
+        highlights: p.highlights.map(cleanCopy),
+        tags: p.tags.map(cleanCopy),
+        curatorNote: optionalClean(p.why),
+        neighborhood: optionalClean(p.neighborhood),
+        address: optionalClean(p.address),
+        lat: p.lat ?? null,
+        lng: p.lng ?? null,
+        costBand: p.cost,
+        priceNote: optionalClean(p.costNote),
+        hours: p.hours ? hoursFromText(cleanCopy(p.hours)) : null,
+        seasonal: p.seasonal ?? false,
+        seasonNote: optionalClean(p.seasonNote),
+        phone: p.phone ?? null,
+        sourceUrl: p.website ?? null,
+        image: existsSync(path.join("public", imagePath)) ? imagePath : null,
+        isPick: p.isRecommended,
+        status: "published" as const,
+        lastVerifiedAt: p.lastVerified,
+        createdAt: new Date(`${p.lastVerified}T12:00:00Z`),
+      };
+      await db.insert(places).values(row).onConflictDoUpdate({ target: places.id, set: row });
+
+      // Recurring events with a named month go on the calendar.
+      if (p.type === "event") {
+        const dates = deriveEventDates(
+          [p.seasonNote, p.hours].filter(Boolean).join(" | "),
+          new Date(),
+        );
+        if (dates) {
+          const event = {
+            id: stableId(`event/${citySlug}/${p.id}`),
+            placeId: row.id,
+            cityId,
+            title: row.name,
+            description: row.summary,
+            startAt: dates.startAt,
+            endAt: dates.endAt,
+            datePrecision: dates.precision,
+            costBand: p.cost,
+            url: p.website ?? null,
+            recurrenceRule: "FREQ=YEARLY",
+          };
+          await db
+            .insert(events)
+            .values(event)
+            .onConflictDoUpdate({ target: events.id, set: event });
+          expected.events++;
+        }
+      }
+      expected.total++;
+      expected.byCost[p.cost]++;
+    }
+    console.log(`  ${citySlug}: ${kept.length} places`);
+  }
+
+  // Verify the database matches the source data exactly.
+  const counts = await db
+    .select({ cost: places.costBand, n: sql<number>`count(*)::int` })
+    .from(places)
+    .where(sql`${places.status} = 'published'`)
+    .groupBy(places.costBand);
+  const actual = Object.fromEntries(counts.map((c) => [c.cost, c.n]));
+  for (const band of COST_BANDS) {
+    if ((actual[band] ?? 0) < expected.byCost[band]) {
+      throw new Error(
+        `Cost band ${band}: expected ${expected.byCost[band]}, found ${actual[band] ?? 0}`,
+      );
+    }
+  }
+  console.log(
+    `Seeded ${files.length} cities, ${CATEGORIES.length} categories, ${expected.total} places`,
+  );
+  console.log(`  by cost: ${JSON.stringify(expected.byCost)}`);
+  console.log(`  ${expected.events} calendar events`);
+  process.exit(0);
+}
+
+main().catch((err: unknown) => {
+  console.error(err);
+  process.exit(1);
+});

@@ -1,0 +1,82 @@
+{
+  "/home/hero.jpg": {
+    "sourceFile": "home.jpg",
+    "title": "Lake Wilcox Sunset - 42214148955.jpg",
+    "artist": "David Zhang",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Wilcox_Sunset_-_42214148955.jpg"
+  },
+  "/cities/newmarket/hero.jpg": {
+    "sourceFile": "nm1.jpg",
+    "title": "Newmarket, Ontario (19108744151).jpg",
+    "artist": "Reg Natarajan from Vancouver, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Newmarket,_Ontario_(19108744151).jpg"
+  },
+  "/cities/richmond-hill/hero.jpg": {
+    "sourceFile": "richmond-hill.jpg",
+    "title": "Lake Wilcox aerial view 2024.jpg",
+    "artist": "Canmenwalker",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Wilcox_aerial_view_2024.jpg"
+  },
+  "/cities/markham/hero.jpg": {
+    "sourceFile": "markham.jpg",
+    "title": "Fall at Toogood Pond (52484723192).jpg",
+    "artist": "Enoch Leung",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fall_at_Toogood_Pond_(52484723192).jpg"
+  },
+  "/cities/vaughan/hero.jpg": {
+    "sourceFile": "v1.jpg",
+    "title": "Vaughan Metropolitan Centre Skyline, August 7 2025.jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vaughan_Metropolitan_Centre_Skyline,_August_7_2025.jpg"
+  },
+  "/cities/oakville/hero.jpg": {
+    "sourceFile": "oak2.jpg",
+    "title": "Oakville Harbour.JPG",
+    "artist": "Ibagli",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Oakville_Harbour.JPG"
+  },
+  "/cities/burlington/hero.jpg": {
+    "sourceFile": "burlington.jpg",
+    "title": "View at the Brant Street Pier, Burlington, Ontario, Canada.jpg",
+    "artist": "Maksim Sokolov (maxergon.com)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_at_the_Brant_Street_Pier,_Burlington,_Ontario,_Canada.jpg"
+  },
+  "/cities/kitchener/hero.jpg": {
+    "sourceFile": "kitchener.jpg",
+    "title": "Victoria-park-kitchener-lake.jpg",
+    "artist": "Lupin at en.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Victoria-park-kitchener-lake.jpg"
+  },
+  "/cities/waterloo/hero.jpg": {
+    "sourceFile": "waterloo.jpg",
+    "title": "Uptown Waterloo (Aerial) - Waterloo, ON.jpg",
+    "artist": "JFVoll",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Uptown_Waterloo_(Aerial)_-_Waterloo,_ON.jpg"
+  },
+  "/cities/cambridge/hero.jpg": {
+    "sourceFile": "cambridge.jpg",
+    "title": "Central Presbyterian Church and Grand River (Galt, Ontario, Canada).jpg",
+    "artist": "Maksim Sokolov (maxergon.com)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Central_Presbyterian_Church_and_Grand_River_(Galt,_Ontario,_Canada).jpg"
+  }
+}

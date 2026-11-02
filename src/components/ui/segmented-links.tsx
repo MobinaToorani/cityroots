@@ -1,0 +1,31 @@
+import Link from "next/link";
+import type { Route } from "next";
+import { cn } from "@/lib/cn";
+
+type SegmentedLinksProps = {
+  label: string;
+  items: readonly { href: Route; label: string; active: boolean }[];
+  className?: string;
+};
+
+/** Server-rendered segmented control where each segment is a URL. Works without JavaScript. */
+export function SegmentedLinks({ label, items, className }: SegmentedLinksProps) {
+  return (
+    <nav aria-label={label} className={cn("inline-flex rounded-full p-1 glass", className)}>
+      {items.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          aria-current={item.active ? "page" : undefined}
+          scroll={false}
+          className={cn(
+            "inline-flex h-9 items-center rounded-full px-4 text-meta font-semibold transition-colors duration-200",
+            item.active ? "bg-ink text-on-ink" : "text-text-muted hover:text-text",
+          )}
+        >
+          {item.label}
+        </Link>
+      ))}
+    </nav>
+  );
+}
