@@ -113,3 +113,8 @@ export async function emailLinkFor(email: string, matching: RegExp): Promise<str
   }
   return null;
 }
+
+/** Opens a filter menu by the text on its button, like "Cost" or "All cities". */
+export async function openMenu(page: Page, buttonText: string) {
+  await page.locator("summary", { hasText: new RegExp(`^${buttonText}`) }).click();
+}

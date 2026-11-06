@@ -143,7 +143,7 @@ test("Pro member plans a day, edits it, and shares it", async ({ page, browser }
   await page.goto("/planner");
   await expect(page.getByRole("heading", { level: 1, name: "Plan a day out" })).toBeVisible();
   await expectNoAxeViolations(page);
-  await page.getByText("Newmarket", { exact: true }).click();
+  await page.getByLabel("Which city?").selectOption("newmarket");
   await page.getByText("$25", { exact: true }).click();
   await page.getByRole("button", { name: "Plan my day" }).click();
 

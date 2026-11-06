@@ -112,7 +112,9 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
         <div className="mx-auto max-w-[1600px] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-6 lg:px-8 lg:pt-8">
           <ResultsSheet>
             {header}
-            <FilterTray cities={cities} />
+            <div className="relative z-20">
+              <FilterTray cities={cities} />
+            </div>
             <div className="mt-5">{results}</div>
           </ResultsSheet>
           <div className="fixed inset-0 z-0 lg:sticky lg:top-8 lg:z-auto lg:h-[calc(100dvh-4rem)]">
@@ -122,7 +124,8 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
       ) : (
         <div className="mx-auto max-w-[1400px] px-5 pt-4 sm:px-8 lg:pt-8">
           {header}
-          <div className="sticky top-3 z-30 mb-6">
+          {/* Above the result cards, so an open filter menu is never painted under them. */}
+          <div className="relative z-20 mb-6">
             <FilterTray cities={cities} />
           </div>
           {results}

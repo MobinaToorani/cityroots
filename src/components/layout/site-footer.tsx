@@ -20,7 +20,7 @@ export function SiteFooter() {
         </div>
         <nav aria-label="Footer">
           <h2 className="text-meta font-semibold">Product</h2>
-          <ul className="mt-3 grid gap-2 text-meta text-text-muted">
+          <ul className="mt-3 grid gap-3.5 text-meta text-text-muted md:gap-2">
             <li>
               <Link className="quiet-link" href="/explore">
                 Explore places
@@ -97,8 +97,22 @@ export function SiteFooter() {
           </p>
         </div>
       </Container>
-      <Container className="mt-10 text-meta text-text-muted">
+      <Container className="mt-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-meta text-text-muted">
         <p>&copy; {year} CityRoots. Made in Ontario.</p>
+        <nav aria-label="Legal">
+          <ul className="flex gap-5">
+            <li>
+              <Link className="quiet-link" href="/privacy">
+                Privacy
+              </Link>
+            </li>
+            <li>
+              <Link className="quiet-link" href="/terms">
+                Terms
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </Container>
     </footer>
   );

@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { openMenu } from "./helpers";
 
 test.describe("home", () => {
   test("shows city guides and searches into the explorer @mobile", async ({ page }) => {
@@ -42,8 +43,9 @@ test.describe("explorer", () => {
     const status = page.getByRole("status").first();
     const before = Number((await status.textContent())?.match(/\d+/)?.[0]);
 
+    await openMenu(page, "Cost");
     await page
-      .getByRole("group", { name: "Cost and type" })
+      .getByRole("group", { name: "Cost", exact: true })
       .getByRole("link", { name: "Free", exact: true })
       .click();
     await expect(page).toHaveURL(/cost=free/);
@@ -85,6 +87,7 @@ test.describe("without JavaScript", () => {
 
   test("explorer filters, search, and load more all work", async ({ page }) => {
     await page.goto("/explore");
+    await openMenu(page, "All cities");
     await page
       .getByRole("group", { name: "City" })
       .getByRole("link", { name: "Newmarket" })

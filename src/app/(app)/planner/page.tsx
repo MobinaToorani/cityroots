@@ -6,6 +6,7 @@ import { PlanEditor, type EditorPlace } from "@/components/features/planner/plan
 import { SamplePlan } from "@/components/features/planner/sample-plan";
 import { ButtonLink, buttonClasses } from "@/components/ui/button";
 import { ChoiceChips } from "@/components/ui/choice-chips";
+import { SelectField } from "@/components/ui/select-field";
 import { EmptyState } from "@/components/ui/empty-state";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Icon } from "@/components/ui/icon";
@@ -240,8 +241,8 @@ function PlannerForm({
         </p>
       )}
       <Step n={1}>
-        <ChoiceChips
-          legend="Which city?"
+        <SelectField
+          label="Which city?"
           name="city"
           required
           defaultValue={str(query.city) ?? cities[0]?.slug}

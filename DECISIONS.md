@@ -318,6 +318,18 @@ On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP
 
 **Lighthouse runs on Linux Chromium.** Under WSL, Lighthouse otherwise launches Windows Chrome and fails. Point `CHROME_PATH` at Playwright's Chromium, and run it from outside the repo: it can leave `C:\Users\...` profile folders in the working directory, which break Turbopack. CI on Ubuntu needs nothing extra.
 
+## Filters and menus
+
+- **Filters are compact dropdown menus, not rows of chips.** The explorer had four rows of chips in a sticky card that filled most of a phone screen and overflowed it. Each facet (City, Cost, Type, Category, Sort) is now one button that opens a small menu; the filter row is no longer sticky. "Picks only" and "Free only" stay one-tap toggles.
+- **Menus are `<details>` and `<summary>`**, so they open, and every option is still a link, without JavaScript. With JavaScript, Escape closes a menu and returns focus to its button, a click outside closes it, and picking a single choice (a city, a sort order) closes it. Menus in one row share a `name`, so only one is open at a time. Multi-select menus stay open so several options can be ticked, and each has its own Clear link.
+- **On phones a menu spans the filter row**, so it never runs off the screen. From `sm` up it sits under its own button.
+- **The planner's city step is a native select.** Nine cities as chips was a wall of buttons; a select is the standard control for one choice from many.
+
+## Privacy and terms
+
+- **`/privacy` and `/terms` describe what the code actually does**: the tables in the schema, the processors in `LAUNCH.md`, 30-day database sessions, hashed IPs for rate limits, cookieless Plausible, and the cascade rules above for account deletion. There is no self-serve account deletion yet, so the policy asks people to email. If any of those behaviours change, update the policy in the same change.
+- They are linked from the footer, the sign-in page, and the about page's privacy summary.
+
 ## Deployment
 
 - **The database is Neon, installed through the Vercel Marketplace** (free plan, `iad1` to sit next to Vercel's default function region). The integration sets `DATABASE_URL` for the project. Builds need it: city pages and OG images read the database while prerendering.

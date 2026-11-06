@@ -15,6 +15,7 @@ Everything here is either done in code (checked) or a step only the owner can ta
   - Set `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`.
 - [ ] **Plausible.** Add the site, then set `PLAUSIBLE_DOMAIN=cityroots.ca`. In Plausible, create these goals by name: Suggestion sent, Correction sent, Claim sent, Checkout started, Plan saved, Place saved, Partner contact. They are listed in `src/lib/analytics.ts`.
 - [ ] **Slack (optional).** Set `SLACK_WEBHOOK_URL` so curators hear about new suggestions and claims.
+- [ ] **Privacy policy and terms.** Have `/privacy` and `/terms` reviewed by someone qualified before launch, and make sure `hello@cityroots.ca` is a monitored inbox: both pages send access, deletion, and billing questions there.
 - [ ] **Google sign-in (optional).** Set `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET`, or leave both unset for email-only sign-in.
 
 ## 2. Secrets and settings on Vercel

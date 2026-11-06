@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { openMenu } from "./helpers";
 
 // A fresh client address per test, so repeated local runs stay under the rate limit.
 test.use({
@@ -64,6 +65,7 @@ test.describe("events", () => {
 
   test("filters to free events in one city", async ({ page }) => {
     await page.goto("/events");
+    await openMenu(page, "All cities");
     await page
       .getByRole("group", { name: "City" })
       .getByRole("link", { name: "Richmond Hill" })

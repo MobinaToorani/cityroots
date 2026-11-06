@@ -5,7 +5,7 @@ import { EventCard } from "@/components/features/event-card";
 import { ButtonLink } from "@/components/ui/button";
 import { ChipLink } from "@/components/ui/chip";
 import { EmptyState } from "@/components/ui/empty-state";
-import { GlassCard } from "@/components/ui/glass-card";
+import { FilterDropdown, FilterOption } from "@/components/ui/filter-dropdown";
 import { listLiveCities } from "@/lib/data/cities";
 import { listUpcomingEvents, type EventItem } from "@/lib/data/events";
 import { compareCostBands } from "@/lib/domain/cost";
@@ -71,27 +71,30 @@ export default async function EventsPage(props: PageProps<"/events">) {
         </p>
       </header>
 
-      <GlassCard strength="strong" className="mb-8 grid gap-3 p-3 sm:p-4">
-        <div
-          role="group"
-          aria-label="City"
-          className="-mx-1 no-scrollbar flex gap-2 overflow-x-auto px-1"
-        >
-          <ChipLink href={eventsHref(null, freeOnly)} active={!city}>
+      <div
+        role="group"
+        aria-label="Filters"
+        className="relative z-20 mb-8 flex flex-wrap items-center gap-2"
+      >
+        <FilterDropdown label="City" summary={cityName ?? "All cities"} active={Boolean(city)}>
+          <FilterOption mode="single" href={eventsHref(null, freeOnly)} selected={!city}>
             All cities
-          </ChipLink>
+          </FilterOption>
           {cities.map((c) => (
-            <ChipLink key={c.slug} href={eventsHref(c.slug, freeOnly)} active={city === c.slug}>
+            <FilterOption
+              key={c.slug}
+              mode="single"
+              href={eventsHref(c.slug, freeOnly)}
+              selected={city === c.slug}
+            >
               {c.name}
-            </ChipLink>
+            </FilterOption>
           ))}
-        </div>
-        <div role="group" aria-label="Cost" className="flex gap-2">
-          <ChipLink href={eventsHref(city, !freeOnly)} active={freeOnly}>
-            Free only
-          </ChipLink>
-        </div>
-      </GlassCard>
+        </FilterDropdown>
+        <ChipLink href={eventsHref(city, !freeOnly)} active={freeOnly}>
+          Free only
+        </ChipLink>
+      </div>
 
       {items.length === 0 ? (
         <EmptyState
@@ -106,7 +109,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
           Some events do not have dates yet. Their listings are still worth a look.
         </EmptyState>
       ) : (
-        <div className="grid gap-12">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-12">
           {happening.length > 0 && (
             <section aria-labelledby="now">
               <h2 id="now" className="mb-4 text-card font-semibold">
@@ -127,7 +130,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
               key={month.toISOString()}
               aria-labelledby={`m-${month.toISOString().slice(0, 7)}`}
               // Later months skip layout and paint until scrolled near (first-load TBT).
-              className="[contain-intrinsic-size:auto_640px] [content-visibility:auto]"
+              className="[contain-intrinsic-block-size:auto_640px] [content-visibility:auto]"
             >
               <h2
                 id={`m-${month.toISOString().slice(0, 7)}`}

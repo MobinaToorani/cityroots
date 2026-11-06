@@ -103,7 +103,11 @@ export default async function AboutPage() {
             CityRoots sets no advertising or tracking cookies. Visits are counted with Plausible,
             which keeps no personal data and does not follow you across sites. If you sign in, your
             email is used only to send sign-in links and replies about things you sent us. We never
-            sell or share it. Payments go through Stripe; we never see your card.
+            sell or share it. Payments go through Stripe; we never see your card. The{" "}
+            <Link href="/privacy" className="text-primary-text quiet-link">
+              privacy policy
+            </Link>{" "}
+            has the details.
           </p>
         </Block>
 

@@ -1,4 +1,5 @@
 import type { Metadata, Route } from "next";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { signInWithGoogle } from "./actions";
 import { SignInForm } from "./signin-form";
@@ -71,6 +72,17 @@ export default async function SignInPage(props: PageProps<"/signin">) {
             </>
           )}
         </div>
+        <p className="mt-6 text-meta text-text-muted">
+          By signing in you agree to the{" "}
+          <Link href="/terms" className="font-semibold text-text quiet-link">
+            terms of use
+          </Link>
+          . The{" "}
+          <Link href="/privacy" className="font-semibold text-text quiet-link">
+            privacy policy
+          </Link>{" "}
+          explains what we keep.
+        </p>
       </GlassCard>
     </div>
   );

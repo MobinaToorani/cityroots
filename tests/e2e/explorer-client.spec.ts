@@ -1,14 +1,13 @@
 import { expect, test } from "@playwright/test";
+import { openMenu } from "./helpers";
 
 test.describe("explorer with JavaScript", () => {
   test("filters update in place, without a full page load", async ({ page }) => {
     await page.goto("/explore?city=markham");
     await page.evaluate(() => ((window as unknown as { marker: number }).marker = 1));
     const before = (await page.getByRole("status").first().textContent()) ?? "";
-    await page
-      .getByRole("group", { name: "Cost and type" })
-      .getByRole("link", { name: "Free" })
-      .click();
+    await openMenu(page, "Cost");
+    await page.getByRole("group", { name: "Cost" }).getByRole("link", { name: "Free" }).click();
     await expect(page).toHaveURL(/cost=free/);
     await expect(page.getByRole("status").first()).not.toHaveText(before);
     await expect(page.locator("main [aria-busy='true']")).toHaveCount(0);
@@ -18,6 +17,24 @@ test.describe("explorer with JavaScript", () => {
     expect(badges.every(Boolean)).toBe(true);
     // Same document: the marker survives because this was not a full navigation.
     expect(await page.evaluate(() => (window as unknown as { marker?: number }).marker)).toBe(1);
+  });
+
+  test("filter menus open one at a time and close with Escape", async ({ page }) => {
+    await page.goto("/explore");
+    const city = page.locator("summary", { hasText: /^All cities/ });
+    await city.click();
+    await expect(page.getByRole("group", { name: "City" })).toBeVisible();
+    await openMenu(page, "Cost");
+    await expect(page.getByRole("group", { name: "City" })).toBeHidden();
+    await expect(page.getByRole("group", { name: "Cost" })).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("group", { name: "Cost" })).toBeHidden();
+    await expect(page.locator("summary", { hasText: /^Cost/ })).toBeFocused();
+    // Picking a city closes its menu.
+    await city.click();
+    await page.getByRole("group", { name: "City" }).getByRole("link", { name: "Oakville" }).click();
+    await expect(page).toHaveURL(/city=oakville/);
+    await expect(page.getByRole("group", { name: "City" })).toBeHidden();
   });
 
   test("search as you type narrows results", async ({ page }) => {
