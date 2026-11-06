@@ -10,7 +10,7 @@ Next.js 16 (App Router), TypeScript, Tailwind CSS v4, Drizzle ORM on Postgres, a
 npm install
 cp .env.example .env.local      # then set AUTH_SECRET (command is in the file)
 npm run db:migrate              # creates an embedded Postgres in .data/pglite
-npm run db:seed                 # 9 cities, 10 categories, 400 places, 31 events
+npm run db:seed                 # 10 cities, 10 categories, 1118 places, 360 events
 npm run dev
 ```
 
@@ -20,21 +20,22 @@ To reset the local database, run `npm run db:reset`. It refuses to run when `DAT
 
 ## Scripts
 
-| Command                               | What it does                                                                                                 |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `npm run lint` / `typecheck` / `test` | ESLint, TypeScript, and Vitest unit tests                                                                    |
-| `npm run test:e2e`                    | Playwright tests, with axe accessibility checks, against a production build                                  |
-| `npm run check:copy`                  | Hard copy rules: no em dash, ping indicators, monospace, emoji, or banned phrases. Checks the built HTML too |
-| `npm run db:generate`                 | New migration from `src/lib/db/schema.ts`                                                                    |
-| `npm run db:dry-run`                  | Applies every migration to a throwaway database and checks for schema drift                                  |
-| `npm run db:backfill`                 | Re-parses every place's hours text into a weekly schedule, after changes to the hours parser                 |
-| `npx tsx scripts/photos.ts <dir>`     | Resizes photography into `public/` and rebuilds the blur and credit manifest                                 |
+| Command                               | What it does                                                                                                               |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `npm run lint` / `typecheck` / `test` | ESLint, TypeScript, and Vitest unit tests                                                                                  |
+| `npm run test:e2e`                    | Playwright tests, with axe accessibility checks, against a production build                                                |
+| `npm run check:copy`                  | Hard copy rules: no em dash, ping indicators, monospace, emoji, or banned phrases. Checks the built HTML too               |
+| `npm run db:generate`                 | New migration from `src/lib/db/schema.ts`                                                                                  |
+| `npm run db:dry-run`                  | Applies every migration to a throwaway database and checks for schema drift                                                |
+| `npm run db:backfill`                 | Re-parses every place's hours text into a weekly schedule, after changes to the hours parser                               |
+| `npm run data:toronto`                | Rebuilds Toronto's listings from the City's open data and the hand-written list. Then `tsx scripts/seed.ts --city=toronto` |
+| `npx tsx scripts/photos.ts <dir>`     | Resizes photography into `public/` and rebuilds the blur and credit manifest                                               |
 
 ## Layout
 
 ```
-src/app/(site)       marketing and guide pages (floating header)
-src/app/(app)        explorer, place pages, account (left rail)
+src/app/(site)       home, city, guides, pricing, and other content pages
+src/app/(app)        explorer, events, planner, saved, place pages, account
 src/components/ui    design system primitives, with no data or app logic
 src/components/features, layout
 src/lib/data         every database query lives here
@@ -58,4 +59,4 @@ Map tiles come from OpenFreeMap and need no key. `npm run build` copies MapLibre
 
 ## Data and photo licenses
 
-Listings: CC BY 4.0. City photographs come from Wikimedia Commons under their own licenses, credited on each image and listed in `scripts/seed-data/photo-credits.json`.
+Listings: CC BY 4.0. Toronto's listings also contain information licensed under the [Open Government Licence - Toronto](https://open.toronto.ca/open-data-license/). City photographs come from Wikimedia Commons under their own licenses, credited on each image and listed in `scripts/seed-data/photo-credits.json`.
