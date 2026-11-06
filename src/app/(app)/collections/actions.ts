@@ -11,6 +11,7 @@ import {
   countCollections,
   createCollection,
   deleteCollection,
+  listCollections,
   moveInCollection,
   removeFromCollection,
   setItemNote,
@@ -61,6 +62,29 @@ export async function createCollectionAction(
     redirect(safeRedirectPath(formData.get("returnTo"), `/collections/${id}`) as Route);
   }
   redirect(`/collections/${id}` as Route);
+}
+
+const DEVICE_LIST_TITLE = "Saved places";
+
+/** Moves places saved on this device into the member's account, so they follow them around. */
+export async function keepSavedPlacesAction(formData: FormData): Promise<void> {
+  const user = await requireUser("/saved");
+  const ids = String(formData.get("ids") ?? "")
+    .split(",")
+    .filter(Boolean)
+    .slice(0, 200);
+  const [existing, membership] = await Promise.all([
+    listCollections(user.id),
+    getMembership(user.id),
+  ]);
+  const target =
+    existing.find((c) => c.title === DEVICE_LIST_TITLE) ??
+    (membership.pro || existing.length < FREE_COLLECTION_LIMIT
+      ? await createCollection(user.id, DEVICE_LIST_TITLE)
+      : existing[0]);
+  if (!target) redirect("/collections");
+  for (const id of ids) await addToCollection(user.id, target.id, id);
+  redirect(`/collections/${target.id}` as Route);
 }
 
 export async function renameCollectionAction(formData: FormData): Promise<void> {

@@ -3,7 +3,7 @@ import type { Metadata, Route } from "next";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/section";
 import { requireUser } from "@/lib/auth/session";
 import { getClaimTarget, hasPendingClaim } from "@/lib/data/claims";
@@ -23,7 +23,7 @@ export default async function ClaimPage(props: PageProps<"/business/claim/[place
   const match = emailMatchesWebsite(user.email, place.sourceUrl);
 
   return (
-    <div className="pt-32 pb-8 color-field">
+    <div className="pt-10 pb-8">
       <Container className="max-w-2xl">
         {query.sent || pending ? (
           <EmptyState
@@ -59,11 +59,11 @@ export default async function ClaimPage(props: PageProps<"/business/claim/[place
             <h1 className="mt-2 font-display text-section font-medium tracking-tight">
               {place.name}, {place.cityName}
             </h1>
-            <GlassCard className="mt-5 p-4 text-body">
+            <Card className="mt-5 p-4 text-body">
               {match
                 ? `You are signed in as ${user.email}, which matches the listing's website. That usually means we can confirm you quickly.`
                 : `You are signed in as ${user.email}. A curator will confirm you by calling the number on the listing, or sign in with an address at your website's domain to speed that up.`}
-            </GlassCard>
+            </Card>
             <div className="mt-8">
               <ClaimForm placeId={place.id} />
             </div>

@@ -3,7 +3,7 @@ import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { requireUser } from "@/lib/auth/session";
 import { collectionsForPlace, countCollections } from "@/lib/data/collections";
@@ -42,7 +42,7 @@ export default async function SavePlacePage(props: PageProps<"/collections/save"
       <h1 className="text-section font-semibold tracking-tight">Save {place.name}</h1>
 
       {choices.length > 0 && (
-        <GlassCard as="form" action={saveToCollectionsAction} className="mt-6 grid gap-4 p-5">
+        <Card as="form" action={saveToCollectionsAction} className="mt-6 grid gap-4 p-5">
           <input type="hidden" name="placeId" value={place.id} />
           <input type="hidden" name="returnTo" value={back} />
           <fieldset className="grid gap-2">
@@ -69,7 +69,7 @@ export default async function SavePlacePage(props: PageProps<"/collections/save"
           <Button type="submit" className="justify-self-start">
             Save changes
           </Button>
-        </GlassCard>
+        </Card>
       )}
 
       <section aria-labelledby="new" className="mt-8">

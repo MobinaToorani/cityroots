@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Button, ButtonLink } from "@/components/ui/button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { Container } from "@/components/ui/section";
 import { SegmentedLinks } from "@/components/ui/segmented-links";
@@ -41,16 +41,11 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
   const payments = stripeConfigured();
 
   return (
-    <div className="pt-32 pb-8 color-field">
+    <div className="pt-10 pb-8">
       <Container className="max-w-4xl">
-        <p className="text-meta font-semibold text-primary-text">CityRoots Pro</p>
-        <h1 className="mt-2 font-display text-display font-medium tracking-tight">
-          Free to browse. Pro when you want a plan.
+        <h1 className="font-display text-display font-medium tracking-tight">
+          Everything is free. Pro keeps your plans.
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-text-muted">
-          Every listing, the map, search, and the events calendar stay free for everyone. Pro is for
-          people who want CityRoots to line up their day for them.
-        </p>
 
         {notice && (
           <p role="status" className="mt-6 rounded-2xl px-4 py-3 text-body glass-strong">
@@ -72,11 +67,7 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
         />
 
         <div className="mt-6 grid gap-5 md:grid-cols-2">
-          <GlassCard
-            as="section"
-            aria-labelledby="free-plan"
-            className="grid content-start gap-5 p-6"
-          >
+          <Card as="section" aria-labelledby="free-plan" className="grid content-start gap-5 p-6">
             <div>
               <h2 id="free-plan" className="text-card font-semibold">
                 Free
@@ -87,22 +78,21 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
               <p className="mt-1 text-meta text-text-muted">Always, for everyone</p>
             </div>
             <ul className="grid gap-2.5">
-              <Feature>Every listing, with what it costs</Feature>
-              <Feature>The map, search, and filters</Feature>
-              <Feature>The events calendar</Feature>
-              <Feature>Up to {FREE_COLLECTION_LIMIT} collections of saved places</Feature>
-              <Feature>Suggest places and corrections</Feature>
+              <Feature>Every listing, the map, and events</Feature>
+              <Feature>Plan a day, with no account</Feature>
+              <Feature>Save places with one tap</Feature>
+              <Feature>Up to {FREE_COLLECTION_LIMIT} collections</Feature>
             </ul>
             {!user && (
               <ButtonLink href="/explore" variant="secondary" className="justify-self-start">
                 Start exploring
               </ButtonLink>
             )}
-          </GlassCard>
+          </Card>
 
-          <GlassCard
+          <Card
             as="section"
-            strength="strong"
+
             aria-labelledby="pro-plan"
             className="grid content-start gap-5 p-6 ring-2 ring-primary-text/30"
           >
@@ -123,10 +113,9 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
               </p>
             </div>
             <ul className="grid gap-2.5">
-              <Feature>The Day Planner: a full day out, built around your budget</Feature>
-              <Feature>Share any plan with a link</Feature>
+              <Feature>Save your plans, edits included</Feature>
+              <Feature>A permanent link for each plan</Feature>
               <Feature>Unlimited collections</Feature>
-              <Feature>Everything in Free</Feature>
             </ul>
             <ProAction
               signedIn={Boolean(user)}
@@ -135,13 +124,10 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
               payments={payments}
               period={period}
             />
-          </GlassCard>
+          </Card>
         </div>
 
-        <p className="mt-4 text-meta text-text-muted">
-          Coming to Pro next: event reminders, a weekly note about new places near you, and early
-          access to new cities. Prices are in Canadian dollars.
-        </p>
+        <p className="mt-4 text-meta text-text-muted">Prices are in Canadian dollars.</p>
 
         <section aria-labelledby="faq" className="mt-16 max-w-2xl">
           <h2 id="faq" className="font-display text-section font-medium tracking-tight">
@@ -162,7 +148,7 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
             </Question>
             <Question q="What happens to my plans and collections if I stop Pro?">
               Nothing is deleted. Shared plans keep working, and you can still open every
-              collection. You just cannot start new plans, or more than {FREE_COLLECTION_LIMIT}{" "}
+              collection. You just cannot save new plans, or more than {FREE_COLLECTION_LIMIT}{" "}
               collections, until you come back.
             </Question>
             <Question q="Who handles the payment?">

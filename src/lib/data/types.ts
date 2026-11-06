@@ -1,6 +1,7 @@
 import type { PlaceAccessibility, PlaceHours } from "@/lib/db/schema";
 import type { CategorySlug } from "@/lib/domain/categories";
 import type { CostBand } from "@/lib/domain/cost";
+import type { WeeklyHours } from "@/lib/domain/hours";
 
 export type PlaceKind = "place" | "event" | "program" | "resource";
 
@@ -40,6 +41,8 @@ export type PlaceCard = {
   isPick: boolean;
   image: string | null;
   seasonNote: string | null;
+  /** Reliable weekly schedule, when there is one. Drives "Open now". */
+  weekly: WeeklyHours | null;
 };
 
 export type PlaceDetail = PlaceCard & {

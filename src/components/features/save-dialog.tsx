@@ -16,7 +16,6 @@ import { Button, ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { cn } from "@/lib/cn";
 import { logger } from "@/lib/logger";
-import { SAVED_EVENT, type SavedChange } from "./save-button";
 
 type Props = { placeId: string; placeName: string; onClose: () => void };
 
@@ -49,10 +48,6 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
   function apply(next: SaveDialogState, announce?: string) {
     setState(next);
     if (next.signedIn) {
-      const saved = next.choices.some((c) => c.hasPlace);
-      window.dispatchEvent(
-        new CustomEvent<SavedChange>(SAVED_EVENT, { detail: { placeId, saved } }),
-      );
       setStatus(next.error ?? next.message ?? announce ?? "");
     }
   }

@@ -4,6 +4,7 @@ import { db } from "@/lib/db/client";
 import { categories, cities, events, places } from "@/lib/db/schema";
 import type { CategorySlug } from "@/lib/domain/categories";
 import { compareCostBands, type CostBand } from "@/lib/domain/cost";
+import { buildAgenda, type AgendaEntry } from "@/lib/domain/event-dates";
 import { DataError } from "@/lib/errors";
 
 export type EventItem = {
@@ -18,6 +19,9 @@ export type EventItem = {
   cityName: string;
   placeId: string | null;
   category: CategorySlug | null;
+  occurrences: string[] | null;
+  neighborhood: string | null;
+  priceNote: string | null;
 };
 
 type EventQuery = { city?: string | null; freeOnly?: boolean; now?: Date; limit?: number };
@@ -46,6 +50,9 @@ export async function listUpcomingEvents({
         cityName: cities.name,
         placeId: events.placeId,
         category: categories.slug,
+        occurrences: events.occurrences,
+        neighborhood: places.neighborhood,
+        priceNote: places.priceNote,
       })
       .from(events)
       .innerJoin(cities, eq(cities.id, events.cityId))
@@ -61,17 +68,29 @@ export async function listUpcomingEvents({
   }
 }
 
-/** For strips: free first, then the soonest. */
-export async function listUpcomingFreeFirst(
-  city: string,
+/** For strips on the home and city pages: this week's dated events, free first. */
+export async function listThisWeek(
   limit: number,
+  city: string | null = null,
   now = new Date(),
-): Promise<EventItem[]> {
+): Promise<AgendaEntry<EventItem>[]> {
   const items = await listUpcomingEvents({ city, now });
-  return items
+  const { days, running } = buildAgenda(items, "week", now);
+  const dated = days
+    .flatMap((d) => d.entries)
     .sort(
       (a, b) =>
-        compareCostBands(a.costBand, b.costBand) || a.startAt.getTime() - b.startAt.getTime(),
-    )
-    .slice(0, limit);
+        compareCostBands(a.event.costBand, b.event.costBand) || a.at.getTime() - b.at.getTime(),
+    );
+  // At most two of a kind per pass, so one busy category does not fill the strip.
+  const picked: AgendaEntry<EventItem>[] = [];
+  const seen = new Map<string | null, number>();
+  for (const entry of dated) {
+    const n = seen.get(entry.event.category) ?? 0;
+    if (n < 2) {
+      picked.push(entry);
+      seen.set(entry.event.category, n + 1);
+    }
+  }
+  return [...picked, ...dated.filter((e) => !picked.includes(e)), ...running].slice(0, limit);
 }

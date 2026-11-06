@@ -22,7 +22,7 @@ export function LegalPage({
   children: ReactNode;
 }) {
   return (
-    <div className="pt-32 pb-8 color-field">
+    <div className="pt-10 pb-8">
       <Container className="max-w-3xl">
         <h1 className="font-display text-display font-medium tracking-tight">{title}</h1>
         <p className="mt-3 text-meta text-text-muted">

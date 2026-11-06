@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { requireUser } from "@/lib/auth/session";
 import { listCollections } from "@/lib/data/collections";
@@ -39,7 +39,7 @@ export default async function CollectionsPage(props: PageProps<"/collections">) 
         <ul className="mt-6 grid gap-3 sm:grid-cols-2">
           {list.map((c) => (
             <li key={c.id}>
-              <GlassCard as="article" interactive className="relative grid gap-1 p-5">
+              <Card as="article" interactive className="relative grid gap-1 p-5">
                 <h2 className="text-card font-semibold">
                   <Link
                     href={`/collections/${c.id}`}
@@ -57,7 +57,7 @@ export default async function CollectionsPage(props: PageProps<"/collections">) 
                     {c.isPublic ? "Shared" : "Private"}
                   </span>
                 </p>
-              </GlassCard>
+              </Card>
             </li>
           ))}
         </ul>
@@ -81,7 +81,7 @@ export default async function CollectionsPage(props: PageProps<"/collections">) 
           Start a collection
         </h2>
         {atLimit ? (
-          <GlassCard className="mt-3 grid gap-3 p-5">
+          <Card className="mt-3 grid gap-3 p-5">
             <p className="text-body">
               You are using all {FREE_COLLECTION_LIMIT} free collections. Add places to the ones you
               have, delete one you are done with, or go Pro to keep as many as you like.
@@ -89,7 +89,7 @@ export default async function CollectionsPage(props: PageProps<"/collections">) 
             <ButtonLink href="/pricing" size="sm" className="justify-self-start">
               See what Pro adds
             </ButtonLink>
-          </GlassCard>
+          </Card>
         ) : (
           <div className="mt-3">
             <CreateCollectionForm />

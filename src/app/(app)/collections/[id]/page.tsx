@@ -6,7 +6,7 @@ import { PlaceCard } from "@/components/features/place-card";
 import { CategoryTag, CostBadge } from "@/components/ui/badges";
 import { Button, ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { TextField } from "@/components/ui/text-field";
 import { currentUser } from "@/lib/auth/session";
@@ -68,13 +68,13 @@ function PublicView({ collection }: { collection: CollectionDetail }) {
           This collection is empty for now.
         </EmptyState>
       )}
-      <GlassCard className="mt-10 grid gap-3 p-6 sm:grid-cols-[1fr_auto] sm:items-center">
+      <Card className="mt-10 grid gap-3 p-6 sm:grid-cols-[1fr_auto] sm:items-center">
         <p className="text-body">
           CityRoots lists free and low-cost things to do across the GTA and Waterloo Region, free
           things first. Anyone can save places into collections like this one.
         </p>
         <ButtonLink href="/collections">Start your own collection</ButtonLink>
-      </GlassCard>
+      </Card>
     </div>
   );
 }
@@ -106,7 +106,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
         <ol className="mt-6 grid gap-3">
           {collection.items.map(({ place, note }, i) => (
             <li key={place.id}>
-              <GlassCard className="grid gap-3 p-4 sm:p-5">
+              <Card className="grid gap-3 p-4 sm:p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
@@ -161,7 +161,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
                     </Button>
                   </form>
                 </details>
-              </GlassCard>
+              </Card>
             </li>
           ))}
         </ol>
@@ -184,7 +184,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
         <h2 id="settings" className="text-card font-semibold">
           Collection settings
         </h2>
-        <GlassCard className="grid gap-5 p-5">
+        <Card className="grid gap-5 p-5">
           <form action={renameCollectionAction} className="grid gap-2 sm:flex">
             <input type="hidden" name="id" value={collection.id} />
             <TextField
@@ -238,7 +238,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
               </Button>
             </form>
           </details>
-        </GlassCard>
+        </Card>
       </section>
     </div>
   );

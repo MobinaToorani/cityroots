@@ -6,8 +6,8 @@ test.describe("explorer with JavaScript", () => {
     await page.goto("/explore?city=markham");
     await page.evaluate(() => ((window as unknown as { marker: number }).marker = 1));
     const before = (await page.getByRole("status").first().textContent()) ?? "";
-    await openMenu(page, "Cost");
-    await page.getByRole("group", { name: "Cost" }).getByRole("link", { name: "Free" }).click();
+    await openMenu(page, "Budget");
+    await page.getByRole("group", { name: "Budget" }).getByRole("link", { name: /^Free/ }).click();
     await expect(page).toHaveURL(/cost=free/);
     await expect(page.getByRole("status").first()).not.toHaveText(before);
     await expect(page.locator("main [aria-busy='true']")).toHaveCount(0);
@@ -21,20 +21,34 @@ test.describe("explorer with JavaScript", () => {
 
   test("filter menus open one at a time and close with Escape", async ({ page }) => {
     await page.goto("/explore");
-    const city = page.locator("summary", { hasText: /^All cities/ });
-    await city.click();
-    await expect(page.getByRole("group", { name: "City" })).toBeVisible();
-    await openMenu(page, "Cost");
-    await expect(page.getByRole("group", { name: "City" })).toBeHidden();
-    await expect(page.getByRole("group", { name: "Cost" })).toBeVisible();
+    await openMenu(page, "Category");
+    await expect(page.getByRole("group", { name: "Category" })).toBeVisible();
+    await openMenu(page, "Budget");
+    await expect(page.getByRole("group", { name: "Category" })).toBeHidden();
+    await expect(page.getByRole("group", { name: "Budget" })).toBeVisible();
     await page.keyboard.press("Escape");
-    await expect(page.getByRole("group", { name: "Cost" })).toBeHidden();
-    await expect(page.locator("summary", { hasText: /^Cost/ })).toBeFocused();
-    // Picking a city closes its menu.
-    await city.click();
-    await page.getByRole("group", { name: "City" }).getByRole("link", { name: "Oakville" }).click();
-    await expect(page).toHaveURL(/city=oakville/);
-    await expect(page.getByRole("group", { name: "City" })).toBeHidden();
+    await expect(page.getByRole("group", { name: "Budget" })).toBeHidden();
+    await expect(page.locator("summary", { hasText: /^Budget/ })).toBeFocused();
+  });
+
+  test("the header city picker changes the city in place", async ({ page }) => {
+    await page.goto("/explore");
+    await openMenu(page, "All cities");
+    await page
+      .getByRole("group", { name: "Your city" })
+      .getByRole("link", { name: "Oakville" })
+      .click();
+    await expect(page).toHaveURL(/\/explore\?.*city=oakville/);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Things to do in Oakville");
+    await expect(page.getByRole("group", { name: "Your city" })).toBeHidden();
+  });
+
+  test("one-tap filters and Surprise me respect the city", async ({ page }) => {
+    await page.goto("/explore?city=oakville");
+    await page.getByRole("link", { name: "Free", exact: true }).click();
+    await expect(page).toHaveURL(/cost=free/);
+    await page.getByRole("link", { name: "Surprise me" }).click();
+    await page.waitForURL(/\/places\//);
   });
 
   test("search as you type narrows results", async ({ page }) => {
@@ -45,7 +59,7 @@ test.describe("explorer with JavaScript", () => {
   });
 
   test("map view shows pins and a card for the selected place", async ({ page }) => {
-    await page.goto("/explore?city=newmarket");
+    await page.goto("/explore?city=newmarket&cat=physical");
     const href = await page.locator("main article a").first().getAttribute("href");
     const id = href?.split("/").pop() ?? "";
     await page.goto(`/explore?city=newmarket&view=map&place=${id}`);
@@ -75,7 +89,7 @@ test.describe("command palette", () => {
     const box = page.getByRole("combobox", { name: "Search places, cities, and categories" });
     await expect(box).toBeFocused();
     await box.fill("libray");
-    await expect(page.getByRole("option").first()).toContainText(/Library/);
+    await expect(page.getByRole("dialog").getByRole("option").first()).toContainText(/Library/);
     await page.keyboard.press("Enter");
     await page.waitForURL(/\/places\//);
     await expect(page.getByRole("heading", { level: 1 })).toContainText("Library");

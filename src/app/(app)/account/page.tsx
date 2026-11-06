@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { openPortalAction } from "@/app/(site)/pricing/actions";
 import { Button, ButtonLink } from "@/components/ui/button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { signOut } from "@/lib/auth";
 import { hasRole, requireUser } from "@/lib/auth/session";
@@ -63,7 +63,7 @@ export default async function AccountPage(props: PageProps<"/account">) {
           The billing page did not open. Try again in a minute.
         </p>
       )}
-      <GlassCard strength="strong" className="mt-6 grid gap-5 p-6">
+      <Card className="mt-6 grid gap-5 p-6">
         <dl className="grid gap-4 sm:grid-cols-2">
           <div>
             <dt className="text-meta text-text-muted">Email</dt>
@@ -99,7 +99,7 @@ export default async function AccountPage(props: PageProps<"/account">) {
             </Button>
           </form>
         </div>
-      </GlassCard>
+      </Card>
 
       <nav aria-label="Your things" className="mt-6 grid gap-3 sm:grid-cols-2">
         <AccountLink href="/collections" icon={Bookmark} title="Collections">
@@ -130,7 +130,7 @@ function AccountLink({
   children: string;
 }) {
   return (
-    <GlassCard interactive className="relative flex items-center gap-3 p-4">
+    <Card interactive className="relative flex items-center gap-3 p-4">
       <Icon icon={icon} className="shrink-0 text-primary-text" />
       <div>
         <Link
@@ -141,6 +141,6 @@ function AccountLink({
         </Link>
         <p className="text-meta text-text-muted">{children}</p>
       </div>
-    </GlassCard>
+    </Card>
   );
 }

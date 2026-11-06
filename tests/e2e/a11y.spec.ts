@@ -11,7 +11,8 @@ const PAGES = [
   { name: "submit", path: "/submit" },
   { name: "explorer map", path: "/explore?city=newmarket&view=map" },
   { name: "pricing", path: "/pricing" },
-  { name: "planner intro", path: "/planner" },
+  { name: "planner", path: "/planner" },
+  { name: "saved", path: "/saved" },
   { name: "privacy", path: "/privacy" },
   { name: "terms", path: "/terms" },
 ];
@@ -61,8 +62,8 @@ test("skip link moves focus to main content", async ({ page }) => {
 test("command palette has no WCAG 2.2 AA violations", async ({ page }) => {
   await page.goto("/");
   await page.keyboard.press("ControlOrMeta+k");
-  await page.getByRole("combobox").fill("park");
-  await expect(page.getByRole("option").first()).toBeVisible();
+  await page.getByRole("combobox", { name: /Search places/ }).fill("park");
+  await expect(page.getByRole("dialog").getByRole("option").first()).toBeVisible();
   const results = await new AxeBuilder({ page })
     .include("dialog")
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])

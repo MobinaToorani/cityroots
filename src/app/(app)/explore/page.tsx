@@ -9,6 +9,7 @@ import { PendingRegion } from "@/components/features/explorer/pending-region";
 import { ResultsSheet } from "@/components/features/explorer/results-sheet";
 import { ResultsToolbar } from "@/components/features/explorer/results-toolbar";
 import { PlaceCard } from "@/components/features/place-card";
+import { RememberCity } from "@/components/layout/city-picker";
 import { ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { listLiveCities } from "@/lib/data/cities";
@@ -33,7 +34,7 @@ export async function generateMetadata(props: PageProps<"/explore">): Promise<Me
     state.view !== "list" ||
     state.bbox !== null;
   return {
-    title: `Explore free and low-cost things to do in ${where}`,
+    title: `Free and low-cost things to do in ${where}`,
     description: `Search and filter free and affordable places, programs, and events in ${where}. Free listings first.`,
     alternates: { canonical: exploreHref({ city: state.city }) },
     // Filtered variants are shareable but not separate pages for search engines.
@@ -46,32 +47,27 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
   const isMap = state.view === "map";
   const [cities, result, points] = await Promise.all([
     listLiveCities(),
-    queryPlaces(state),
-    isMap ? listMapPoints(state) : Promise.resolve([]),
+    queryPlaces(state, { hideEvents: true }),
+    isMap ? listMapPoints(state, { hideEvents: true }) : Promise.resolve([]),
   ]);
   const city = cities.find((c) => c.slug === state.city) ?? null;
 
   const header = (
-    <header className="mb-5">
-      <h1 className="text-section font-semibold tracking-tight">
-        {city ? `Explore ${city.name}` : "Explore every city"}
-      </h1>
-      <p className="mt-1 text-body text-text-muted">
-        Free listings come first. Nobody pays to appear here.
-      </p>
-    </header>
+    <h1 className="mb-4 text-section font-semibold tracking-tight">
+      {city ? `Things to do in ${city.name}` : "Things to do"}
+    </h1>
   );
 
   const results = (
-    <div id="results" tabIndex={-1} className="scroll-mt-6 outline-none">
+    <div id="results" tabIndex={-1} className="scroll-mt-20 outline-none">
       <ResultsToolbar total={result.total} />
       <PendingRegion className="mt-4">
         {result.items.length > 0 ? (
           <>
             <ul
               className={cn(
-                "grid gap-4",
-                isMap ? "xl:grid-cols-2" : "sm:grid-cols-2 xl:grid-cols-3",
+                "grid gap-3",
+                isMap ? "min-[1800px]:grid-cols-2" : "sm:grid-cols-2 xl:grid-cols-3",
               )}
             >
               {result.items.map((place) => (
@@ -94,8 +90,9 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
               </ButtonLink>
             }
           >
-            Try fewer filters or a broader search
-            {state.bbox ? ", or zoom the map out" : ""}. Know a place that belongs here?{" "}
+            {state.open ? "Most places do not list exact hours. " : ""}
+            Try fewer filters{state.bbox ? " or zoom the map out" : ""}. Know a place that belongs
+            here?{" "}
             <Link href="/submit" className="font-semibold text-primary-text quiet-link">
               Suggest it
             </Link>
@@ -108,25 +105,26 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
 
   return (
     <ExplorerProvider>
+      <RememberCity slug={state.city} clearWhenEmpty />
       {isMap ? (
-        <div className="mx-auto max-w-[1600px] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-6 lg:px-8 lg:pt-8">
+        <div className="mx-auto max-w-[1600px] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-6 lg:px-6 lg:pt-6">
           <ResultsSheet>
             {header}
             <div className="relative z-20">
-              <FilterTray cities={cities} />
+              <FilterTray />
             </div>
             <div className="mt-5">{results}</div>
           </ResultsSheet>
-          <div className="fixed inset-0 z-0 lg:sticky lg:top-8 lg:z-auto lg:h-[calc(100dvh-4rem)]">
+          <div className="fixed inset-x-0 top-16 bottom-0 z-0 lg:sticky lg:top-22 lg:z-auto lg:h-[calc(100dvh-7rem)]">
             <MapPane points={points} />
           </div>
         </div>
       ) : (
-        <div className="mx-auto max-w-[1400px] px-5 pt-4 sm:px-8 lg:pt-8">
+        <div className="mx-auto max-w-[1400px] px-4 pt-6 sm:px-6">
           {header}
           {/* Above the result cards, so an open filter menu is never painted under them. */}
-          <div className="relative z-20 mb-6">
-            <FilterTray cities={cities} />
+          <div className="relative z-20 mb-5">
+            <FilterTray />
           </div>
           {results}
         </div>

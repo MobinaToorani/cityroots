@@ -19,9 +19,23 @@ async function openFirstPlace(page: Page, city = "oakville") {
 }
 
 test.describe("collections", () => {
-  test("signed-out save asks to sign in", async ({ page }) => {
+  test("the heart saves with no account, and survives a reload", async ({ page }) => {
+    const name = await openFirstPlace(page);
+    await page.getByRole("button", { name: /^Save/ }).first().click();
+    await expect(page.getByRole("button", { name: /Saved|Remove/ }).first()).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+    await page.goto("/saved");
+    await expect(page.getByRole("heading", { level: 2, name })).toBeVisible();
+    await page.reload();
+    await expect(page.getByRole("heading", { level: 2, name })).toBeVisible();
+    await expectNoAxeViolations(page);
+  });
+
+  test("signed-out collection asks to sign in", async ({ page }) => {
     await openFirstPlace(page);
-    await page.getByRole("link", { name: "Save this place" }).click();
+    await page.getByRole("link", { name: "Add to a collection" }).click();
     const dialog = page.getByRole("dialog", { name: "Save to a collection" });
     await expect(dialog.getByRole("link", { name: "Sign in to save" })).toBeVisible();
   });
@@ -30,7 +44,7 @@ test.describe("collections", () => {
     await signIn(page, uniqueEmail("collections"));
     const name = await openFirstPlace(page);
 
-    await page.getByRole("link", { name: "Save this place" }).click();
+    await page.getByRole("link", { name: "Add to a collection" }).click();
     const dialog = page.getByRole("dialog", { name: "Save to a collection" });
     await dialog.getByLabel("New collection name").fill("Weekend list");
     await dialog.getByRole("button", { name: "Create" }).click();
@@ -39,17 +53,18 @@ test.describe("collections", () => {
     await expectNoAxeViolations(page);
     await dialog.getByRole("button", { name: "Done" }).click();
     await expect(dialog).toBeHidden();
-    await expect(page.getByRole("main").getByRole("link", { name: "Saved" })).toBeFocused();
+    await expect(page.getByRole("link", { name: "Add to a collection" })).toBeFocused();
 
-    // A second place, saved from a card in the explorer.
+    // A second place, added from its own page.
     await page.goto("/explore?city=oakville");
     const second = page.locator("main article").nth(1);
     const secondName = (await second.locator(":is(h2, h3) a").textContent())?.trim() ?? "";
-    await second.getByRole("link", { name: `Save: ${secondName}` }).click();
+    await second.locator(":is(h2, h3) a").click();
+    await page.waitForURL(/\/places\//);
+    await page.getByRole("link", { name: "Add to a collection" }).click();
     const saveDialog = page.getByRole("dialog", { name: "Save to a collection" });
     await saveDialog.locator("label", { hasText: "Weekend list" }).click();
     await expect(saveDialog.getByRole("status")).toHaveText("Saved to Weekend list");
-    await expect(second.getByRole("link", { name: `Saved: ${secondName}` })).toBeVisible();
     await page.keyboard.press("Escape");
 
     await page.goto("/collections");
@@ -131,8 +146,26 @@ test.describe("Stripe webhooks", () => {
       created: first.event.created + 5,
     });
     await page.goto("/planner");
-    await expect(page.getByRole("link", { name: "Start Pro to plan a day" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Save with Pro" })).toBeVisible();
   });
+});
+
+test("anyone can plan a day, and Pro is what keeps the edits", async ({ page }) => {
+  await page.goto("/planner?city=newmarket");
+  const stops = page.getByRole("list", { name: "Your day" }).getByRole("listitem");
+  expect(await stops.count()).toBeGreaterThanOrEqual(3);
+  await expect(page.getByRole("button", { name: "Share this plan" })).toBeVisible();
+  await page.getByRole("link", { name: "Shuffle" }).click();
+  await expect(page).toHaveURL(/seed=1/);
+  await page
+    .getByRole("button", { name: /^Remove / })
+    .first()
+    .click();
+  await expect(page.getByRole("button", { name: "Share this plan" })).toBeHidden();
+  await expect(page.getByRole("link", { name: "Keep your changes with Pro" })).toHaveAttribute(
+    "href",
+    "/pricing",
+  );
 });
 
 test("Pro member plans a day, edits it, and shares it", async ({ page, browser }) => {
@@ -141,13 +174,12 @@ test("Pro member plans a day, edits it, and shares it", async ({ page, browser }
   await postSubscriptionEvent(page.request, { userId, status: "active" });
 
   await page.goto("/planner");
-  await expect(page.getByRole("heading", { level: 1, name: "Plan a day out" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Plan a day" })).toBeVisible();
   await expectNoAxeViolations(page);
-  await page.getByLabel("Which city?").selectOption("newmarket");
-  await page.getByText("$25", { exact: true }).click();
-  await page.getByRole("button", { name: "Plan my day" }).click();
+  await page.getByLabel("City", { exact: true }).selectOption("newmarket");
+  await expect(page).toHaveURL(/city=newmarket/);
 
-  await expect(page.getByRole("heading", { level: 1, name: /in Newmarket$/ })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 2, name: /in Newmarket$/ })).toBeVisible();
   const stops = page.getByRole("list", { name: "Your day" }).getByRole("listitem");
   const count = await stops.count();
   expect(count).toBeGreaterThanOrEqual(3);

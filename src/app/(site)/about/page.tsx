@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ButtonLink } from "@/components/ui/button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/section";
 import { getSiteStats } from "@/lib/data/cities";
 
@@ -18,11 +18,10 @@ export const metadata: Metadata = {
 export default async function AboutPage() {
   const stats = await getSiteStats();
   return (
-    <div className="pt-32 pb-8 color-field">
+    <div className="pt-10 pb-8">
       <Container className="max-w-3xl">
-        <p className="text-meta font-semibold text-primary-text">About CityRoots</p>
-        <h1 className="mt-2 font-display text-display font-medium tracking-tight">
-          Your city has more to offer than you think, and a lot of it is free.
+        <h1 className="font-display text-display font-medium tracking-tight">
+          Your city has more to offer than you think.
         </h1>
         <p className="mt-6 text-lg text-text-muted">
           CityRoots lists {stats.places} places, programs, and events across {stats.cities} Ontario
@@ -37,8 +36,8 @@ export default async function AboutPage() {
           </p>
           <ul className="mt-4 grid gap-3">
             <Item title="CityRoots Pro, for people">
-              Browsing, search, filters, and the map stay free. Pro adds planning tools like the Day
-              Planner and unlimited collections, for $4.99 a month.{" "}
+              Browsing, the map, and planning a day stay free. Pro keeps your plans and adds
+              unlimited collections, for $4.99 a month.{" "}
               <Link href="/pricing" className="text-primary-text quiet-link">
                 See what Pro includes
               </Link>
@@ -73,8 +72,21 @@ export default async function AboutPage() {
           </p>
         </Block>
 
-        <Block id="data" title="Open data license">
+        <Block id="data" title="Where the data comes from">
           <p>
+            Listings are written by hand or built from public sources and checked. Toronto draws on
+            the City&apos;s open data and contains information licensed under the{" "}
+            <a
+              className="text-primary-text quiet-link"
+              href="https://open.toronto.ca/open-data-license/"
+              rel="license noopener"
+              target="_blank"
+            >
+              Open Government Licence &ndash; Toronto
+            </a>
+            .
+          </p>
+          <p className="mt-3">
             Listings are published under the{" "}
             <a
               className="text-primary-text quiet-link"
@@ -136,10 +148,10 @@ function Block({ id, title, children }: { id: string; title: string; children: R
 function Item({ title, children }: { title: string; children: ReactNode }) {
   return (
     <li>
-      <GlassCard className="p-4">
+      <Card className="p-4">
         <h3 className="font-semibold">{title}</h3>
         <p className="mt-1 text-text-muted">{children}</p>
-      </GlassCard>
+      </Card>
     </li>
   );
 }

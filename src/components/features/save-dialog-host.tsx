@@ -2,9 +2,9 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import { SAVE_EVENT, type SaveRequest } from "./save-button";
+import { SAVE_EVENT, type SaveRequest } from "./add-to-collection";
 
-// Loaded on the first save, so pages that never save pay nothing for it.
+// Loaded on first use, so pages that never open it pay nothing for it.
 const SaveDialog = dynamic(() => import("./save-dialog").then((m) => m.SaveDialog), {
   ssr: false,
 });
