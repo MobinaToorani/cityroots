@@ -78,5 +78,13 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Central_Presbyterian_Church_and_Grand_River_(Galt,_Ontario,_Canada).jpg"
+  },
+  "/cities/toronto/hero.jpg": {
+    "sourceFile": "toronto.jpg",
+    "title": "Toronto Waterfront, CN Tower 6277.jpg",
+    "artist": "ImagePerson",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Toronto_Waterfront,_CN_Tower_6277.jpg"
   }
 }
