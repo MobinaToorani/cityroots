@@ -108,15 +108,20 @@ function format(minutes: number): string {
  */
 export function parseWeeklyHours(text: string): WeeklyHours | null {
   if (UNRELIABLE.test(text)) return null;
-  const [main, ...notes] = text.split(";").map((s) => s.trim());
+  const parts = text
+    .replace(/\b([ap])\.m\b\.?/gi, "$1m")
+    .split(";")
+    .map((s) => s.trim());
+  const [main, ...rest] = parts;
   if (!main) return null;
-  // Notes after a semicolon are fine only if they restate closures.
-  if (notes.some((n) => n && !/^closed\b/i.test(n) && !/hours vary$/i.test(n))) return null;
+  // After a semicolon comes either more hours or a note that restates closures.
+  const more = rest.filter((n) => n && !/^closed\b/i.test(n) && !/hours vary$/i.test(n));
 
-  const body = main.replace(/^year-round:\s*/i, "");
   const weekly: WeeklyHours = {};
-  // Segments are "DAYS TIME-TIME", separated by commas.
-  const segments = body.split(/,\s*(?=[A-Za-z])/);
+  // Segments are "DAYS TIME-TIME", separated by commas or semicolons.
+  const segments = [main.replace(/^year-round:\s*/i, ""), ...more].flatMap((s) =>
+    s.split(/,\s*(?=[A-Za-z])/),
+  );
   for (const segment of segments) {
     const m = /^([A-Za-z][A-Za-z\s,&\-–]*?)\s+(\d.*|noon.*|midnight.*)$/.exec(segment.trim());
     if (!m) return null;
