@@ -1,18 +1,27 @@
-import { PaletteTrigger } from "@/components/features/command-palette";
+import { PaletteTrigger } from "@/components/features/palette-trigger";
+import { listLiveCities } from "@/lib/data/cities";
+import { CityPicker } from "./city-picker";
 import { Logo } from "./logo";
 import { PrimaryNavLinks } from "./nav-link";
 
-/** Floating glass header for marketing and guide pages. */
-export function SiteHeader() {
+/** The one header on every page: where you are, search, and the four things the site does. */
+export async function SiteHeader() {
+  const cities = await listLiveCities().catch(() => []);
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-40 px-3 pt-3 sm:px-5 sm:pt-4">
-      <div className="pointer-events-auto mx-auto flex h-14 max-w-[1200px] items-center justify-between gap-4 rounded-full pr-2 pl-4 glass-strong">
+    <header className="sticky top-0 z-40 border-b border-divider bg-bg/95 backdrop-blur-md">
+      <div className="relative mx-auto flex h-16 max-w-[1400px] items-center gap-2 px-4 sm:gap-3 sm:px-6">
         <Logo />
-        <div className="flex items-center gap-2">
-          <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
+        <CityPicker cities={cities.map((c) => ({ slug: c.slug, name: c.name }))} />
+        <div className="ml-auto flex items-center gap-1">
+          <div className="mr-2 hidden w-64 xl:block">
+            <PaletteTrigger />
+          </div>
+          <div className="xl:hidden">
+            <PaletteTrigger compact />
+          </div>
+          <nav aria-label="Primary" className="hidden items-center gap-0.5 lg:flex">
             <PrimaryNavLinks variant="header" />
           </nav>
-          <PaletteTrigger compact />
         </div>
       </div>
     </header>

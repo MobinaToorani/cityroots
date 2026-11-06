@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Star } from "lucide-react";
 import type { CategorySlug } from "@/lib/domain/categories";
 import { categoryMeta } from "@/lib/domain/categories";
 import { COST_LABELS, type CostBand } from "@/lib/domain/cost";
@@ -41,21 +41,8 @@ export function PickBadge({ className }: { className?: string }) {
         className,
       )}
     >
-      <Icon icon={Sparkles} size={16} />
-      Pick
-    </span>
-  );
-}
-
-/** Quiet numeric badge. The product never uses pulsing or "ping" indicators. */
-export function CountBadge({ count, label }: { count: number; label: string }) {
-  if (count <= 0) return null;
-  return (
-    <span
-      className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-ink px-1.5 text-[11px] font-semibold text-on-ink"
-      aria-label={label}
-    >
-      {count}
+      <Icon icon={Star} size={16} fill="currentColor" />
+      Local pick
     </span>
   );
 }

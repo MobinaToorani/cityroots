@@ -26,7 +26,7 @@ export function EmptyState({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-md justify-items-center gap-3 rounded-[var(--radius-card)] px-6 py-10 text-center glass",
+        "mx-auto grid max-w-md justify-items-center gap-3 rounded-[var(--radius-card)] px-6 py-10 text-center card",
         className,
       )}
     >

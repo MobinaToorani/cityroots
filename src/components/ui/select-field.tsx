@@ -31,7 +31,7 @@ export function SelectField({
           id={id}
           aria-invalid={error ? true : undefined}
           aria-describedby={describedBy(id, description, error)}
-          className={fieldControlClasses(error, "h-14 appearance-none pt-5 pr-10 pb-1.5")}
+          className={fieldControlClasses(error, "h-14 appearance-none pt-6 pr-10 pb-1")}
           {...props}
         >
           {placeholder !== undefined && <option value="">{placeholder}</option>}

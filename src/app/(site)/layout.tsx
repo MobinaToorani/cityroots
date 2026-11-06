@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
-import { CommandPalette } from "@/components/features/command-palette";
+import { PaletteHost } from "@/components/features/palette-trigger";
 import { SaveDialogHost } from "@/components/features/save-dialog-host";
 import { MobileTabBar } from "@/components/layout/mobile-tab-bar";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
   return (
@@ -14,8 +15,9 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       </main>
       <SiteFooter />
       <MobileTabBar />
-      <CommandPalette />
+      <PaletteHost />
       <SaveDialogHost />
+      <Toaster />
     </>
   );
 }
