@@ -31,6 +31,8 @@ export const exploreParsers = {
   sort: parseAsStringLiteral(SORTS).withDefault("relevance"),
   view: parseAsStringLiteral(VIEWS).withDefault("list"),
   picks: parseAsBoolean.withDefault(false),
+  /** Only places whose known weekly hours say they are open right now. */
+  open: parseAsBoolean.withDefault(false),
   page: parseAsInteger.withDefault(1),
   /** Map bounds as west,south,east,north. Results are limited to them when set. */
   bbox: parseAsArrayOf(parseAsFloat),
@@ -51,6 +53,7 @@ export function defaultExploreState(patch: Partial<ExploreState> = {}): ExploreS
     sort: "relevance",
     view: "list",
     picks: false,
+    open: false,
     page: 1,
     bbox: null,
     place: null,
@@ -97,6 +100,7 @@ export function activeFilterCount(state: ExploreState): number {
     state.cost.length +
     state.type.length +
     (state.picks ? 1 : 0) +
+    (state.open ? 1 : 0) +
     (state.q ? 1 : 0)
   );
 }

@@ -9,7 +9,9 @@ const chipBase =
 export function chipClasses(active: boolean, className?: string) {
   return cn(
     chipBase,
-    active ? "bg-ink text-on-ink" : "glass text-text hover:bg-surface-strong",
+    active
+      ? "bg-ink text-on-ink"
+      : "border border-divider bg-surface-solid text-text hover:border-text-muted/50",
     className,
   );
 }
@@ -41,21 +43,5 @@ export function ChipLink({ href, active, accent, className, children, ...props }
       <Dot accent={accent} />
       {children}
     </Link>
-  );
-}
-
-type ChipButtonProps = ComponentProps<"button"> & { active: boolean; accent?: string };
-
-export function ChipButton({ active, accent, className, children, ...props }: ChipButtonProps) {
-  return (
-    <button
-      type="button"
-      aria-pressed={active}
-      className={chipClasses(active, className)}
-      {...props}
-    >
-      <Dot accent={accent} />
-      {children}
-    </button>
   );
 }

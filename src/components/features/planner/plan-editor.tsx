@@ -1,13 +1,14 @@
 "use client";
 
 import { GOALS, goal } from "@/lib/analytics";
-import { ArrowDown, ArrowUp, Clock, RefreshCw, Share2, Trash2 } from "lucide-react";
+import { ArrowDown, ArrowUp, Bookmark, RefreshCw, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useActionState, useState } from "react";
 import { savePlanAction, type SavePlanState } from "@/app/(app)/planner/actions";
 import { CategoryTag, CostBadge } from "@/components/ui/badges";
-import { Button } from "@/components/ui/button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { ShareButton } from "@/components/features/share-button";
+import { Button, ButtonLink } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import type { PlanOption } from "@/lib/domain/planner";
 import { SLOT_TIMES, timeLabel, type SlotKey } from "@/lib/domain/plan-slots";
@@ -40,6 +41,8 @@ type Props = {
   city: string;
   day: string;
   interests: string[];
+  /** Keeping a plan is the Pro feature. Building and sharing one is free. */
+  canSave: boolean;
 };
 
 const initial: SavePlanState = { status: "idle" };
@@ -49,10 +52,19 @@ function money(n: number): string {
 }
 
 /** The assembled day: reorder, swap, or drop stops, watch the total, then save to share. */
-export function PlanEditor({ stops: initialStops, places, budget, city, day, interests }: Props) {
+export function PlanEditor({
+  stops: initialStops,
+  places,
+  budget,
+  city,
+  day,
+  interests,
+  canSave,
+}: Props) {
   const [stops, setStops] = useState(initialStops);
   const [announcement, setAnnouncement] = useState("");
   const [state, save, saving] = useActionState(savePlanAction, initial);
+  const edited = stops !== initialStops;
   const total = stops.reduce((sum, s) => sum + s.estimate, 0);
   const over = total > budget;
   const share = budget === 0 ? (total > 0 ? 1 : 0) : Math.min(1, total / budget);
@@ -91,9 +103,9 @@ export function PlanEditor({ stops: initialStops, places, budget, city, day, int
 
   return (
     <div className="grid gap-5">
-      <GlassCard strength="strong" className="grid gap-3 p-5">
+      <Card className="grid gap-3 p-4">
         <div className="flex items-baseline justify-between gap-3">
-          <h2 className="text-card font-semibold">Estimated total</h2>
+          <h3 className="text-card font-semibold">Estimated total</h3>
           <p className="text-meta text-text-muted">
             <span className={cn("text-card font-semibold", over ? "text-danger" : "text-text")}>
               {money(total)}
@@ -120,25 +132,27 @@ export function PlanEditor({ stops: initialStops, places, budget, city, day, int
         </div>
         <p className="text-meta text-text-muted">
           {over
-            ? "Over budget. Try another option for a paid stop, or remove one."
-            : "Per person, from listed prices. Free stops cost nothing."}
+            ? "Over budget. Swap or remove a paid stop."
+            : stops.some((s) => !places[s.placeId]?.hoursKnown)
+              ? "Per person, from listed prices. Check hours before you go."
+              : "Per person, from listed prices."}
         </p>
-      </GlassCard>
+      </Card>
 
       {stops.length > 0 ? (
-        <ol className="grid gap-3" aria-label="Your day">
+        <ol className="grid gap-2" aria-label="Your day">
           {stops.map((stop, i) => {
             const place = places[stop.placeId];
             if (!place) return null;
             const time = SLOT_TIMES[i] ?? SLOT_TIMES[SLOT_TIMES.length - 1] ?? "18:30";
             return (
               <li key={`${stop.slot}-${stop.placeId}`}>
-                <GlassCard className="grid gap-3 p-4 sm:grid-cols-[4.5rem_1fr_auto] sm:items-start sm:p-5">
+                <Card className="grid gap-x-3 gap-y-2 p-4 sm:grid-cols-[4.5rem_1fr_auto] sm:items-center">
                   <p className="text-card font-semibold">{timeLabel(time)}</p>
                   <div className="min-w-0">
                     <p className="text-meta font-semibold text-text-muted">{stop.label}</p>
                     <h3 className="text-card font-semibold">
-                      <Link href={`/places/${place.id}`} className="quiet-link">
+                      <Link href={`/places/${place.id}`} className="hover:underline">
                         {place.name}
                       </Link>
                     </h3>
@@ -148,12 +162,6 @@ export function PlanEditor({ stops: initialStops, places, budget, city, day, int
                       {stop.estimate > 0 && <span>About {money(stop.estimate)}</span>}
                       {place.neighborhood && <span>{place.neighborhood}</span>}
                     </div>
-                    {!place.hoursKnown && (
-                      <p className="mt-1.5 inline-flex items-center gap-1 text-meta text-text-muted">
-                        <Icon icon={Clock} size={16} />
-                        Check the hours before you go
-                      </p>
-                    )}
                   </div>
                   <div className="flex gap-1 sm:justify-end">
                     <StopButton
@@ -180,48 +188,56 @@ export function PlanEditor({ stops: initialStops, places, budget, city, day, int
                       onClick={() => remove(i)}
                     />
                   </div>
-                </GlassCard>
+                </Card>
               </li>
             );
           })}
         </ol>
       ) : (
-        <p className="text-body text-text-muted">
-          Every stop is gone. Shuffle the plan or change the details to start again.
-        </p>
+        <p className="text-body text-text-muted">Every stop is gone. Shuffle to start again.</p>
       )}
 
       <p role="status" className="sr-only">
         {announcement}
       </p>
 
-      <form action={save} className="grid gap-2">
-        <input type="hidden" name="city" value={city} />
-        <input type="hidden" name="day" value={day} />
-        <input type="hidden" name="budget" value={budget} />
-        {interests.map((i) => (
-          <input key={i} type="hidden" name="interests" value={i} />
-        ))}
-        <input
-          type="hidden"
-          name="stops"
-          value={JSON.stringify(stops.map((s) => ({ placeId: s.placeId, slot: s.slot })))}
-        />
-        <Button
-          type="submit"
-          size="lg"
-          disabled={saving || stops.length === 0}
-          className={`justify-self-start ${goal(GOALS.planSaved)}`}
-        >
-          <Icon icon={Share2} size={16} />
-          Save and get a share link
-        </Button>
-        {state.status === "error" && (
-          <p role="alert" className="text-body text-danger">
-            {state.message}
-          </p>
+      <div className="flex flex-wrap items-center gap-2">
+        {/* The address rebuilds the plan as first made, so it cannot carry later edits. */}
+        {!edited && <ShareButton title="A day out" label="Share this plan" />}
+        {canSave ? (
+          <form action={save} className="contents">
+            <input type="hidden" name="city" value={city} />
+            <input type="hidden" name="day" value={day} />
+            <input type="hidden" name="budget" value={budget} />
+            {interests.map((i) => (
+              <input key={i} type="hidden" name="interests" value={i} />
+            ))}
+            <input
+              type="hidden"
+              name="stops"
+              value={JSON.stringify(stops.map((s) => ({ placeId: s.placeId, slot: s.slot })))}
+            />
+            <Button
+              type="submit"
+              disabled={saving || stops.length === 0}
+              className={goal(GOALS.planSaved)}
+            >
+              <Icon icon={Bookmark} size={16} />
+              Save and get a share link
+            </Button>
+          </form>
+        ) : (
+          <ButtonLink href="/pricing" variant={edited ? "primary" : "secondary"}>
+            <Icon icon={Bookmark} size={16} />
+            {edited ? "Keep your changes with Pro" : "Save with Pro"}
+          </ButtonLink>
         )}
-      </form>
+      </div>
+      {state.status === "error" && (
+        <p role="alert" className="text-body text-danger">
+          {state.message}
+        </p>
+      )}
     </div>
   );
 }

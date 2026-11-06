@@ -15,6 +15,7 @@ Everything here is either done in code (checked) or a step only the owner can ta
   - Set `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`.
 - [ ] **Plausible.** Add the site, then set `PLAUSIBLE_DOMAIN=cityroots.ca`. In Plausible, create these goals by name: Suggestion sent, Correction sent, Claim sent, Checkout started, Plan saved, Place saved, Partner contact. They are listed in `src/lib/analytics.ts`.
 - [ ] **Slack (optional).** Set `SLACK_WEBHOOK_URL` so curators hear about new suggestions and claims.
+- [ ] **Privacy policy and terms.** Have `/privacy` and `/terms` reviewed by someone qualified before launch, and make sure `hello@cityroots.ca` is a monitored inbox: both pages send access, deletion, and billing questions there.
 - [ ] **Google sign-in (optional).** Set `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET`, or leave both unset for email-only sign-in.
 
 ## 2. Secrets and settings on Vercel
@@ -40,11 +41,13 @@ Feature flags and `PLAUSIBLE_DOMAIN` are read at build time by static pages, so 
 - [ ] Spot-check five places per city against their official websites (hours and prices change).
 - [ ] Read all six guides on a phone and confirm each stop is still open and priced as written.
 
+- [ ] Turn on the weekly Toronto refresh: `gh secret set DATABASE_URL` with the Neon connection string. Until then `.github/workflows/refresh-toronto.yml` skips itself, and Toronto's events run out about 90 days after the last manual refresh (`npm run data:toronto`, then `npx tsx scripts/seed.ts --city=toronto`).
+
 ## 4. Quality gates (already in CI)
 
-- [x] Format, lint, typecheck, unit tests (125), and the migration dry-run.
+- [x] Format, lint, typecheck, unit tests (131), and the migration dry-run.
 - [x] Copy and design rules on source and built pages: no em dashes, no banned phrases, no monospace, no `animate-ping`.
-- [x] Playwright (77 tests): explorer with and without JavaScript, sign-in, collections, the planner, signed Stripe webhooks (idempotent and order-safe), admin review, claims, partner keys, the embed, guides, OG images, and axe WCAG 2.2 AA checks on every public page type.
+- [x] Playwright (92 tests): explorer with and without JavaScript, sign-in, collections, the planner, signed Stripe webhooks (idempotent and order-safe), admin review, claims, partner keys, the embed, guides, OG images, and axe WCAG 2.2 AA checks on every public page type.
 - [x] Ranking integrity: tests fail if ranking reads payment, tier, partner, or claim state, or if claims and partner code write ranking inputs.
 - [x] Lighthouse CI on 12 URLs (see "Performance" in DECISIONS.md for the current numbers; LCP is measured on regular 4G).
 

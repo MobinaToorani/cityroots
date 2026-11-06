@@ -1,22 +1,23 @@
-import { CalendarDays, RefreshCw, Route as RouteIcon, SlidersHorizontal } from "lucide-react";
+import { RefreshCw, Route as RouteIcon } from "lucide-react";
 import type { Metadata, Route } from "next";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { AutoSubmitForm } from "@/components/features/planner/auto-submit-form";
 import { PlanEditor, type EditorPlace } from "@/components/features/planner/plan-editor";
-import { SamplePlan } from "@/components/features/planner/sample-plan";
+import { RememberCity } from "@/components/layout/city-picker";
 import { ButtonLink, buttonClasses } from "@/components/ui/button";
 import { ChoiceChips } from "@/components/ui/choice-chips";
+import { SelectField } from "@/components/ui/select-field";
 import { EmptyState } from "@/components/ui/empty-state";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { TextField } from "@/components/ui/text-field";
 import { currentUser } from "@/lib/auth/session";
 import { listLiveCities } from "@/lib/data/cities";
 import { listPlannerCandidates, listPlans, type PlanSummary } from "@/lib/data/planner";
-import { sampleDay } from "@/lib/data/sample-day";
 import { getMembership } from "@/lib/data/subscriptions";
 import type { CitySummary } from "@/lib/data/types";
 import { CATEGORIES } from "@/lib/domain/categories";
+import { exploreHref } from "@/lib/domain/explore-params";
 import {
   addDays,
   assemblePlan,
@@ -32,14 +33,15 @@ import {
   type PlannerParams,
 } from "@/lib/domain/planner";
 
+const DEFAULT_CITY = "toronto";
+const DEFAULT_BUDGET = 25;
+
 export const metadata: Metadata = {
-  title: "Day Planner",
+  title: "Plan a day out",
   description:
-    "Pick a city, a day, and a budget, and CityRoots lines up a full day out with a running cost total and a link to share.",
+    "Pick a city, a day, and a budget, and get a full day out with a running cost total. Free, no account needed.",
   alternates: { canonical: "/planner" },
 };
-
-type Query = Awaited<PageProps<"/planner">["searchParams"]>;
 
 function list(value: string | string[] | undefined): string[] {
   if (value === undefined) return [];
@@ -59,56 +61,49 @@ function plannerHref(params: PlannerParams, extra: Record<string, string> = {}):
 }
 
 export default async function PlannerPage(props: PageProps<"/planner">) {
-  const [user, query] = await Promise.all([currentUser(), props.searchParams]);
-  const membership = user ? await getMembership(user.id) : null;
-  const plans = user ? await listPlans(user.id) : [];
-
-  if (!membership?.pro) {
-    return <PlannerIntro signedIn={Boolean(user)} plans={plans} deleted={Boolean(query.deleted)} />;
-  }
+  const [user, query, cities] = await Promise.all([
+    currentUser(),
+    props.searchParams,
+    listLiveCities(),
+  ]);
+  const [membership, plans] = user
+    ? await Promise.all([getMembership(user.id), listPlans(user.id)])
+    : [null, []];
 
   const today = torontoDay(new Date());
-  const cities = await listLiveCities();
-  const requested = typeof query.city === "string";
-  const parsed = requested
-    ? plannerParamsSchema(today).safeParse({
-        city: query.city,
-        day: query.day,
-        budget: query.budget,
-        interests: list(query.interests),
-        seed: query.seed,
-      })
-    : null;
-  const city = parsed?.success ? cities.find((c) => c.slug === parsed.data.city) : undefined;
+  const fallback: PlannerParams = {
+    city: DEFAULT_CITY,
+    day: nextSaturday(today),
+    budget: DEFAULT_BUDGET,
+    interests: [],
+    seed: 0,
+  };
+  const parsed = plannerParamsSchema(today).safeParse({
+    city: typeof query.city === "string" ? query.city : fallback.city,
+    day: query.day ?? fallback.day,
+    budget: query.budget ?? fallback.budget,
+    interests: list(query.interests),
+    seed: query.seed,
+  });
+  const params = parsed.success ? parsed.data : fallback;
+  const city = cities.find((c) => c.slug === params.city) ?? cities[0];
 
   return (
-    <div className="mx-auto max-w-3xl px-5 pt-4 sm:px-8 lg:pt-8">
+    <div className="mx-auto max-w-3xl px-4 pt-6 sm:px-6">
+      <RememberCity slug={city?.slug ?? null} />
       {query.deleted && (
         <p role="status" className="mb-4 text-body font-semibold">
           Plan deleted.
         </p>
       )}
-      {parsed?.success && city && !query.edit ? (
-        <AssembledPlan params={parsed.data} city={city} />
-      ) : (
+      <h1 className="mb-4 text-section font-semibold tracking-tight">Plan a day</h1>
+      {city && (
         <>
-          <p className="text-meta font-semibold text-primary-text">Day Planner</p>
-          <h1 className="mt-1 text-section font-semibold tracking-tight">Plan a day out</h1>
-          <p className="mt-2 text-body text-text-muted">
-            Four quick answers, and CityRoots lines up coffee, something free, lunch, an afternoon
-            stop, and an evening plan that fit your budget.
-          </p>
-          <PlannerForm
-            cities={cities}
-            today={today}
-            query={query}
-            error={
-              parsed && !parsed.success
-                ? (parsed.error.issues[0]?.message ?? "Check your answers")
-                : parsed?.success && !city
-                  ? "Choose a city from the list"
-                  : undefined
-            }
+          <PlannerForm cities={cities} params={{ ...params, city: city.slug }} today={today} />
+          <AssembledPlan
+            params={{ ...params, city: city.slug }}
+            city={city}
+            canSave={membership?.pro ?? false}
           />
         </>
       )}
@@ -117,7 +112,15 @@ export default async function PlannerPage(props: PageProps<"/planner">) {
   );
 }
 
-async function AssembledPlan({ params, city }: { params: PlannerParams; city: CitySummary }) {
+async function AssembledPlan({
+  params,
+  city,
+  canSave,
+}: {
+  params: PlannerParams;
+  city: CitySummary;
+  canSave: boolean;
+}) {
   const candidates = await listPlannerCandidates(city.slug, params.day);
   const plan = assemblePlan({
     candidates,
@@ -146,35 +149,22 @@ async function AssembledPlan({ params, city }: { params: PlannerParams; city: Ci
 
   return (
     <>
-      <p className="text-meta font-semibold text-primary-text">Your plan</p>
-      <h1 className="mt-1 text-section font-semibold tracking-tight">
-        {planTitle(params.day, city.name)}
-      </h1>
-      <p className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-body text-text-muted">
-        <span className="inline-flex items-center gap-1.5">
-          <Icon icon={CalendarDays} size={16} />
-          {dayLabel(params.day)}
-        </span>
-        <span>Budget {params.budget === 0 ? "$0, free only" : `$${params.budget} a person`}</span>
-      </p>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-6 flex flex-wrap items-center justify-between gap-2">
+        <h2 className="text-card font-semibold tracking-tight">
+          {planTitle(params.day, city.name)}
+        </h2>
         <Link
           href={plannerHref(params, { seed: String((params.seed + 1) % 100) })}
+          replace
+          scroll={false}
           className={buttonClasses("secondary", "sm")}
         >
           <Icon icon={RefreshCw} size={16} />
-          Shuffle the plan
-        </Link>
-        <Link
-          href={plannerHref(params, { edit: "1" })}
-          className={buttonClasses("secondary", "sm")}
-        >
-          <Icon icon={SlidersHorizontal} size={16} />
-          Change the details
+          Shuffle
         </Link>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-3">
         {plan.stops.length > 0 ? (
           <PlanEditor
             key={plannerHref(params)}
@@ -190,6 +180,7 @@ async function AssembledPlan({ params, city }: { params: PlannerParams; city: Ci
             city={city.slug}
             day={params.day}
             interests={params.interests}
+            canSave={canSave}
           />
         ) : (
           <EmptyState
@@ -197,18 +188,17 @@ async function AssembledPlan({ params, city }: { params: PlannerParams; city: Ci
             title="Nothing fits that day yet"
             className="max-w-none"
             action={
-              <ButtonLink href={plannerHref(params, { edit: "1" })} size="sm">
-                Change the details
+              <ButtonLink href={exploreHref({ city: city.slug })} size="sm">
+                See everything in {city.name}
               </ButtonLink>
             }
           >
-            Nothing listed in {city.name} is open and within budget for that day. Try a bigger
-            budget, another day, or another city.
+            Try a bigger budget, another day, or another city.
           </EmptyState>
         )}
         {plan.skipped.length > 0 && plan.stops.length > 0 && (
           <p className="mt-4 text-meta text-text-muted">
-            Left out to stay within budget, or because nothing is open then:{" "}
+            Left out to stay on budget or because nothing is open:{" "}
             {plan.skipped.map((s) => s.label.toLowerCase()).join(", ")}.
           </p>
         )}
@@ -219,83 +209,66 @@ async function AssembledPlan({ params, city }: { params: PlannerParams; city: Ci
 
 function PlannerForm({
   cities,
+  params,
   today,
-  query,
-  error,
 }: {
   cities: CitySummary[];
+  params: PlannerParams;
   today: string;
-  query: Query;
-  error?: string;
 }) {
-  const str = (v: unknown) => (typeof v === "string" ? v : undefined);
   return (
-    <form method="get" action="/planner" className="mt-6 grid gap-6">
-      {error && (
-        <p
-          role="alert"
-          className="rounded-2xl px-4 py-3 text-body font-semibold text-danger glass-strong"
-        >
-          {error}
-        </p>
-      )}
-      <Step n={1}>
+    <Card className="p-4">
+      {/* Keyed so the answers follow the URL when the header's city picker changes it. */}
+      <AutoSubmitForm
+        key={`${params.city}-${params.day}-${params.budget}`}
+        method="get"
+        action="/planner"
+        className="grid gap-4"
+      >
+        <div className="grid gap-3 sm:grid-cols-2">
+          <SelectField
+            label="City"
+            name="city"
+            required
+            defaultValue={params.city}
+            options={cities.map((c) => ({ value: c.slug, label: c.name }))}
+          />
+          <TextField
+            type="date"
+            name="day"
+            label="Day"
+            required
+            min={today}
+            max={addDays(today, MAX_DAYS_AHEAD)}
+            defaultValue={params.day}
+          />
+        </div>
         <ChoiceChips
-          legend="Which city?"
-          name="city"
-          required
-          defaultValue={str(query.city) ?? cities[0]?.slug}
-          options={cities.map((c) => ({ value: c.slug, label: c.name }))}
-        />
-      </Step>
-      <Step n={2}>
-        <TextField
-          type="date"
-          name="day"
-          label="Which day?"
-          required
-          min={today}
-          max={addDays(today, MAX_DAYS_AHEAD)}
-          defaultValue={str(query.day) ?? nextSaturday(today)}
-          description="Hours and seasonal events are checked for this day."
-        />
-      </Step>
-      <Step n={3}>
-        <ChoiceChips
-          legend="What can you spend, per person?"
+          legend="Budget per person"
           name="budget"
           required
-          defaultValue={str(query.budget) ?? "25"}
+          defaultValue={String(params.budget)}
           options={BUDGET_CHOICES.map((b) => ({
             value: String(b),
-            label: b === 0 ? "Free only" : `$${b}`,
+            label: b === 0 ? "Free" : `$${b}`,
           }))}
         />
-      </Step>
-      <Step n={4}>
         <ChoiceChips
-          legend="What are you into? Pick any, or none."
+          legend="Into (optional)"
           name="interests"
           multiple
-          defaultValue={list(query.interests)}
+          defaultValue={params.interests}
           options={CATEGORIES.filter((c) =>
             (PLANNER_INTERESTS as readonly string[]).includes(c.slug),
           ).map((c) => ({ value: c.slug, label: c.shortName, accent: c.accent }))}
         />
-      </Step>
-      <button type="submit" className={buttonClasses("primary", "lg", "justify-self-start")}>
-        Plan my day
-      </button>
-    </form>
-  );
-}
-
-function Step({ n, children }: { n: number; children: ReactNode }) {
-  return (
-    <GlassCard className="grid gap-1 p-5">
-      <p className="text-meta font-semibold text-text-muted">Step {n} of 4</p>
-      {children}
-    </GlassCard>
+        <noscript>
+          <button type="submit" className={buttonClasses("primary")}>
+            Plan my day
+          </button>
+        </noscript>
+      </AutoSubmitForm>
+    </Card>
   );
 }
 
@@ -309,7 +282,7 @@ function SavedPlans({ plans }: { plans: PlanSummary[] }) {
       <ul className="mt-3 grid gap-2">
         {plans.map((p) => (
           <li key={p.shareId}>
-            <GlassCard
+            <Card
               interactive
               className="relative flex items-center justify-between gap-3 px-4 py-3"
             >
@@ -322,68 +295,10 @@ function SavedPlans({ plans }: { plans: PlanSummary[] }) {
               <span className="text-meta text-text-muted">
                 {dayLabel(p.day)}, {p.stopCount} stops
               </span>
-            </GlassCard>
+            </Card>
           </li>
         ))}
       </ul>
     </section>
-  );
-}
-
-async function PlannerIntro({
-  signedIn,
-  plans,
-  deleted,
-}: {
-  signedIn: boolean;
-  plans: PlanSummary[];
-  deleted: boolean;
-}) {
-  const day = await sampleDay("newmarket");
-  return (
-    <div className="mx-auto max-w-[1100px] px-5 pt-4 sm:px-8 lg:pt-8">
-      {deleted && (
-        <p role="status" className="mb-4 text-body font-semibold">
-          Plan deleted.
-        </p>
-      )}
-      <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
-        <div>
-          <p className="text-meta font-semibold text-primary-text">Day Planner, part of Pro</p>
-          <h1 className="mt-1 font-display text-section font-medium tracking-tight">
-            Tell it your budget. Get a whole day out.
-          </h1>
-          <p className="mt-4 max-w-md text-body text-text-muted">
-            Pick a city, a day, a budget, and what you are into. The planner lines up coffee,
-            something free, lunch, an afternoon stop, and an evening plan, checks that each place is
-            open, and keeps a running total. Move stops around, swap any of them, and share the plan
-            with a link.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {signedIn ? (
-              <ButtonLink href="/pricing">Start Pro to plan a day</ButtonLink>
-            ) : (
-              <>
-                <ButtonLink href="/pricing">See Pro plans</ButtonLink>
-                <ButtonLink href="/signin?callbackUrl=%2Fplanner" variant="secondary">
-                  Sign in
-                </ButtonLink>
-              </>
-            )}
-          </div>
-          <p className="mt-3 text-meta text-text-muted">
-            $4.99 a month or $39 a year. Every place in a plan stays free to browse.
-          </p>
-        </div>
-        {day.stops.length > 0 && (
-          <SamplePlan
-            day={day}
-            title={`This Saturday in Newmarket, $${day.budget} budget`}
-            headingLevel="h2"
-          />
-        )}
-      </div>
-      <SavedPlans plans={plans} />
-    </div>
   );
 }

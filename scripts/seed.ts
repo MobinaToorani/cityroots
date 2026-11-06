@@ -6,7 +6,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { sql } from "drizzle-orm";
+import { and, eq, notInArray, sql } from "drizzle-orm";
 import { z } from "zod";
 import { categories, cities, events, places } from "../src/lib/db/schema";
 import { CATEGORIES, LEGACY_CATEGORY_MAP } from "../src/lib/domain/categories";
@@ -39,6 +39,9 @@ const legacyPlace = z.object({
   isRecommended: z.boolean().default(false),
   seasonal: z.boolean().optional(),
   seasonNote: z.string().optional(),
+  /** Exact showings, from a feed that has them. Takes priority over parsing season notes. */
+  occurrences: z.array(z.iso.datetime()).optional(),
+  endsAt: z.iso.datetime().optional(),
   lastVerified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
 });
 
@@ -65,7 +68,11 @@ const REGIONS: Record<string, string> = {
   kitchener: "Waterloo Region",
   waterloo: "Waterloo Region",
   cambridge: "Waterloo Region",
+  toronto: "City of Toronto",
 };
+
+/** `--city=toronto` seeds one city and leaves every other row untouched. */
+const ONLY_CITY = process.argv.find((a) => a.startsWith("--city="))?.slice("--city=".length);
 
 /** RFC 4122 version 5 UUID, so the same input always yields the same id. */
 function stableId(key: string): string {
@@ -128,6 +135,7 @@ async function main() {
   for (const file of files) {
     const city = legacyCity.parse(JSON.parse(readFileSync(path.join(DATA_DIR, file), "utf8")));
     const citySlug = city.cityId;
+    if (ONLY_CITY && citySlug !== ONLY_CITY) continue;
     const cityId = stableId(`city/${citySlug}`);
     const heroPath = `/cities/${citySlug}/hero.jpg`;
     const cityRow = {
@@ -151,6 +159,7 @@ async function main() {
       console.log(`  ${citySlug}: merged duplicate ids ${dropped.join(", ")}`);
 
     const usedSlugs = new Set<string>();
+    const keptIds = new Set<string>();
     for (const p of kept) {
       let slug = slugify(p.name);
       for (let n = 2; usedSlugs.has(slug); n++) slug = `${slugify(p.name)}-${n}`;
@@ -192,13 +201,22 @@ async function main() {
         createdAt: new Date(`${p.lastVerified}T12:00:00Z`),
       };
       await db.insert(places).values(row).onConflictDoUpdate({ target: places.id, set: row });
+      keptIds.add(row.id);
 
       // Recurring events with a named month go on the calendar.
       if (p.type === "event") {
-        const dates = deriveEventDates(
-          [p.seasonNote, p.hours].filter(Boolean).join(" | "),
-          new Date(),
-        );
+        const exact = p.occurrences?.[0]
+          ? {
+              startAt: new Date(p.occurrences[0]),
+              endAt: new Date(
+                p.endsAt ?? p.occurrences[p.occurrences.length - 1] ?? p.occurrences[0],
+              ),
+              precision: "day" as const,
+            }
+          : null;
+        const dates =
+          exact ??
+          deriveEventDates([p.seasonNote, p.hours].filter(Boolean).join(" | "), new Date());
         if (dates) {
           const event = {
             id: stableId(`event/${citySlug}/${p.id}`),
@@ -211,7 +229,8 @@ async function main() {
             datePrecision: dates.precision,
             costBand: p.cost,
             url: p.website ?? null,
-            recurrenceRule: "FREQ=YEARLY",
+            occurrences: p.occurrences ?? null,
+            recurrenceRule: exact ? null : "FREQ=YEARLY",
           };
           await db
             .insert(events)
@@ -222,6 +241,25 @@ async function main() {
       }
       expected.total++;
       expected.byCost[p.cost]++;
+    }
+    // Feed events that have dropped out of the source are over or cancelled.
+    if (city.places.some((p) => p.occurrences)) {
+      const stale = await db
+        .select({ id: places.id })
+        .from(places)
+        .where(
+          and(
+            eq(places.cityId, cityId),
+            eq(places.kind, "event"),
+            eq(places.status, "published"),
+            notInArray(places.id, [...keptIds]),
+          ),
+        );
+      for (const { id } of stale) {
+        await db.delete(events).where(eq(events.placeId, id));
+        await db.update(places).set({ status: "rejected" }).where(eq(places.id, id));
+      }
+      if (stale.length > 0) console.log(`  ${citySlug}: retired ${stale.length} finished events`);
     }
     console.log(`  ${citySlug}: ${kept.length} places`);
   }

@@ -55,22 +55,28 @@ test.describe("submit", () => {
 });
 
 test.describe("events", () => {
-  test("groups dated events by month with honest date labels", async ({ page }) => {
-    await page.goto("/events");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Events and festivals");
-    await expect(page.getByRole("heading", { name: /^Starting in / }).first()).toBeVisible();
-    await expect(page.getByText(/^Usually /).first()).toBeVisible();
+  test("opens on the soonest day with something on, and tabs change the day", async ({ page }) => {
+    await page.goto("/events?city=toronto");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("What's on in Toronto");
+    await expect(page.locator("main article").first()).toBeVisible();
+    await page.getByRole("link", { name: "This weekend" }).click();
+    await expect(page).toHaveURL(/when=weekend/);
+    await expect(page.getByRole("link", { name: "This weekend" })).toHaveAttribute(
+      "aria-current",
+      "true",
+    );
+  });
+
+  test("seasonal events never claim an exact day", async ({ page }) => {
+    await page.goto("/events?city=richmond-hill&when=later");
+    await expect(page.getByRole("heading", { name: /later in the year/ })).toBeVisible();
   });
 
   test("filters to free events in one city", async ({ page }) => {
-    await page.goto("/events");
-    await page
-      .getByRole("group", { name: "City" })
-      .getByRole("link", { name: "Richmond Hill" })
-      .click();
+    await page.goto("/events?city=richmond-hill&when=later");
     await page.getByRole("link", { name: "Free only" }).click();
     await expect(page).toHaveURL(/city=richmond-hill/);
     await expect(page).toHaveURL(/cost=free/);
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Events in Richmond Hill");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("What's on in Richmond Hill");
   });
 });

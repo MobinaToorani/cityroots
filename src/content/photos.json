@@ -108,5 +108,16 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Central_Presbyterian_Church_and_Grand_River_(Galt,_Ontario,_Canada).jpg"
     }
+  },
+  "/cities/toronto/hero.jpg": {
+    "width": 2400,
+    "height": 1597,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgEE/8QAHxABAQABBAIDAAAAAAAAAAAAAQIAAxESMQQFE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8ASz7HRoPjuEet3M9+08fnxvU0CqXiNd7YM01nahROvzJVNU2q09v3ipX/2Q==",
+    "credit": {
+      "artist": "ImagePerson",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Toronto_Waterfront,_CN_Tower_6277.jpg"
+    }
   }
 }

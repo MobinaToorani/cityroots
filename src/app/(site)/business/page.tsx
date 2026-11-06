@@ -26,7 +26,7 @@ export default async function BusinessPage(props: PageProps<"/business">) {
     : [];
 
   return (
-    <div className="pt-32 pb-8 color-field">
+    <div className="pt-10 pb-8">
       <Container className="max-w-3xl">
         <p className="text-meta font-semibold text-primary-text">For places on CityRoots</p>
         <h1 className="mt-2 font-display text-display font-medium tracking-tight">

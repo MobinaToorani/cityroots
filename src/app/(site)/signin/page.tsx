@@ -1,9 +1,10 @@
 import type { Metadata, Route } from "next";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { signInWithGoogle } from "./actions";
 import { SignInForm } from "./signin-form";
 import { Button } from "@/components/ui/button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { googleSignInAvailable } from "@/lib/auth";
 import { emailSignInAvailable } from "@/lib/auth/email";
 import { safeRedirectPath } from "@/lib/auth/redirect";
@@ -30,11 +31,8 @@ export default async function SignInPage(props: PageProps<"/signin">) {
     : null;
 
   return (
-    <div className="flex min-h-[90svh] items-center justify-center px-5 pt-28 pb-16 color-field">
-      <GlassCard
-        strength="strong"
-        className="w-full max-w-md rounded-[var(--radius-modal)] p-6 sm:p-8"
-      >
+    <div className="flex min-h-[90svh] items-center justify-center px-5 pt-10 pb-16">
+      <Card className="w-full max-w-md rounded-[var(--radius-modal)] p-6 sm:p-8">
         <h1 className="font-display text-section font-medium tracking-tight">
           Sign in to CityRoots
         </h1>
@@ -71,7 +69,18 @@ export default async function SignInPage(props: PageProps<"/signin">) {
             </>
           )}
         </div>
-      </GlassCard>
+        <p className="mt-6 text-meta text-text-muted">
+          By signing in you agree to the{" "}
+          <Link href="/terms" className="font-semibold text-text quiet-link">
+            terms of use
+          </Link>
+          . The{" "}
+          <Link href="/privacy" className="font-semibold text-text quiet-link">
+            privacy policy
+          </Link>{" "}
+          explains what we keep.
+        </p>
+      </Card>
     </div>
   );
 }

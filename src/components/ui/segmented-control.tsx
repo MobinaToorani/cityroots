@@ -57,19 +57,22 @@ export function SegmentedControl<T extends string>({
       role="radiogroup"
       aria-label={label}
       onKeyDown={onKeyDown}
-      className={cn("relative inline-flex rounded-full p-1 glass", className)}
+      className={cn(
+        "relative inline-flex rounded-full border border-divider bg-surface-solid p-0.5",
+        className,
+      )}
     >
       {indicator && (
         <span
           aria-hidden="true"
-          className="absolute top-1 bottom-1 rounded-full bg-ink transition-[left,width] duration-250 ease-[var(--ease-out-expo)]"
+          className="absolute top-0.5 bottom-0.5 rounded-full bg-ink transition-[left,width] duration-250 ease-[var(--ease-out-expo)]"
           style={{ left: indicator.left, width: indicator.width }}
         />
       )}
       {options.map((option, i) => {
         const checked = option.value === value;
         const className = cn(
-          "relative z-10 inline-flex h-9 items-center rounded-full px-4 text-meta font-semibold transition-colors duration-200",
+          "relative z-10 inline-flex h-8 items-center rounded-full px-4 text-meta font-semibold transition-colors duration-200",
           checked ? "text-on-ink" : "text-text-muted hover:text-text",
           !indicator && checked && "bg-ink",
         );

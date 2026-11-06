@@ -236,6 +236,8 @@ export const events = pgTable(
     startAt: timestamp({ withTimezone: true }).notNull(),
     endAt: timestamp({ withTimezone: true }),
     datePrecision: datePrecision().notNull().default("day"),
+    /** Every known showing (ISO), when the source lists them. startAt is the first. */
+    occurrences: jsonb().$type<string[]>(),
     costBand: costBand().notNull(),
     url: text(),
     recurrenceRule: text(),

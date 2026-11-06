@@ -1,9 +1,30 @@
 import "server-only";
-import { and, between, desc, eq, ilike, inArray, isNotNull, or, sql, type SQL } from "drizzle-orm";
+import {
+  and,
+  between,
+  desc,
+  eq,
+  ilike,
+  inArray,
+  isNotNull,
+  ne,
+  or,
+  sql,
+  type SQL,
+} from "drizzle-orm";
 import { db } from "@/lib/db/client";
-import { categories, cities, collectionItems, places, tips } from "@/lib/db/schema";
+import {
+  categories,
+  cities,
+  collectionItems,
+  events,
+  places,
+  tips,
+  type PlaceHours,
+} from "@/lib/db/schema";
 import type { CategorySlug } from "@/lib/domain/categories";
 import { defaultExploreState, validBbox, type ExploreState } from "@/lib/domain/explore-params";
+import { openStatus } from "@/lib/domain/hours";
 import { rank, type RankingSignals } from "@/lib/domain/ranking";
 import { DataError } from "@/lib/errors";
 import type { PlaceCard, PlaceDetail } from "./types";
@@ -19,8 +40,14 @@ export type MapPoint = Pick<
  * Every place that matches the filters and has coordinates, for the map.
  * Ignores paging and the map's own bounds, so panning never hides pins.
  */
-export async function listMapPoints(state: ExploreState): Promise<MapPoint[]> {
-  const { items } = await queryPlaces({ ...state, bbox: null, page: Number.POSITIVE_INFINITY });
+export async function listMapPoints(
+  state: ExploreState,
+  options: PlaceQueryOptions = {},
+): Promise<MapPoint[]> {
+  const { items } = await queryPlaces(
+    { ...state, bbox: null, page: Number.POSITIVE_INFINITY },
+    options,
+  );
   if (items.length === 0) return [];
   try {
     const coords = await db()
@@ -75,24 +102,51 @@ const cardColumns = {
   isPick: places.isPick,
   image: places.image,
   seasonNote: places.seasonNote,
+  hours: places.hours,
 };
 
 const tipCount = sql<number>`(select count(*) from ${tips} where ${tips.placeId} = ${places.id} and ${tips.status} = 'published')::int`;
 const saveCount = sql<number>`(select count(*) from ${collectionItems} where ${collectionItems.placeId} = ${places.id})::int`;
 
-function toCard(row: Omit<PlaceCard, "category"> & { category: string }): PlaceCard {
-  return { ...row, category: row.category as CategorySlug };
+function toCard({
+  hours,
+  ...row
+}: Omit<PlaceCard, "category" | "weekly"> & {
+  category: string;
+  hours: PlaceHours | null;
+}): PlaceCard {
+  return { ...row, category: row.category as CategorySlug, weekly: hours?.weekly ?? null };
 }
 
+/** A feed event whose last showing has passed is no longer a thing you can do. */
+const notFinished = sql`not exists (
+  select 1 from ${events} e
+  where e.place_id = ${places.id} and e.occurrences is not null and e.end_at < now()
+)`;
+
 function visible(): SQL {
-  return and(eq(places.status, "published"), eq(cities.status, "live")) as SQL;
+  return and(eq(places.status, "published"), eq(cities.status, "live"), notFinished) as SQL;
 }
 
 export type PlaceQueryResult = { items: PlaceCard[]; total: number; hasMore: boolean };
 
+export type PlaceQueryOptions = {
+  /**
+   * Keeps dated events out of a browse with no search or event filter. They live
+   * on the Events page, and hundreds of one-off shows would bury the places.
+   */
+  hideEvents?: boolean;
+};
+
 /** The explorer query. Filtering happens in SQL; ordering uses the domain ranking. */
-export async function queryPlaces(state: ExploreState): Promise<PlaceQueryResult> {
+export async function queryPlaces(
+  state: ExploreState,
+  { hideEvents = false }: PlaceQueryOptions = {},
+): Promise<PlaceQueryResult> {
   const conditions: SQL[] = [visible()];
+  if (hideEvents && !state.q && state.type.length === 0 && !state.cat.includes("events")) {
+    conditions.push(ne(places.kind, "event"));
+  }
   if (state.city) conditions.push(eq(cities.slug, state.city));
   if (state.cat.length > 0) conditions.push(inArray(categories.slug, state.cat));
   if (state.cost.length > 0) conditions.push(inArray(places.costBand, state.cost));
@@ -133,8 +187,12 @@ export async function queryPlaces(state: ExploreState): Promise<PlaceQueryResult
       .innerJoin(categories, eq(categories.id, places.categoryId))
       .where(and(...conditions));
 
+    const now = new Date();
+    const open = state.open
+      ? rows.filter((r) => r.hours?.weekly && openStatus(r.hours.weekly, now).state === "open")
+      : rows;
     const ranked = rank(
-      rows.map((r) => {
+      open.map((r) => {
         const signals: RankingSignals = {
           costBand: r.costBand,
           isPick: r.isPick,
@@ -148,9 +206,23 @@ export async function queryPlaces(state: ExploreState): Promise<PlaceQueryResult
       }),
       state.sort,
     );
+    // Helplines and benefit programs are found by searching or by category. They should
+    // not open a list of things to do, so on a plain browse they follow the other free
+    // listings. Free listings still all come first.
+    const plainBrowse =
+      hideEvents && !state.q && state.cat.length === 0 && state.sort === "relevance";
+    const isFreeResource = (r: { kind: string; costBand: string }) =>
+      r.kind === "resource" && r.costBand === "free";
+    const ordered = plainBrowse
+      ? [
+          ...ranked.filter(({ row }) => row.costBand === "free" && !isFreeResource(row)),
+          ...ranked.filter(({ row }) => isFreeResource(row)),
+          ...ranked.filter(({ row }) => row.costBand !== "free"),
+        ]
+      : ranked;
     const end = state.page * PAGE_SIZE;
     return {
-      items: ranked.slice(0, end).map(({ row }) =>
+      items: ordered.slice(0, end).map(({ row }) =>
         toCard({
           id: row.id,
           slug: row.slug,
@@ -166,6 +238,7 @@ export async function queryPlaces(state: ExploreState): Promise<PlaceQueryResult
           isPick: row.isPick,
           image: row.image,
           seasonNote: row.seasonNote,
+          hours: row.hours,
         }),
       ),
       total: ranked.length,
@@ -236,6 +309,22 @@ export async function listPlaceIds(): Promise<{ id: string; updatedAt: Date }[]>
       .from(places)
       .innerJoin(cities, eq(cities.id, places.cityId))
       .where(visible());
+  } catch (cause) {
+    throw new DataError("Could not list places", { cause });
+  }
+}
+
+/**
+ * Pages worth building ahead of time. Dated events come and go too fast, so
+ * their pages render on first visit instead.
+ */
+export async function listPrerenderedPlaceIds(): Promise<{ id: string }[]> {
+  try {
+    return await db()
+      .select({ id: places.id })
+      .from(places)
+      .innerJoin(cities, eq(cities.id, places.cityId))
+      .where(and(visible(), ne(places.kind, "event")));
   } catch (cause) {
     throw new DataError("Could not list places", { cause });
   }
@@ -332,7 +421,10 @@ export async function getGuideStops(
       .innerJoin(categories, eq(categories.id, places.categoryId))
       .where(and(visible(), eq(cities.slug, citySlug), inArray(places.slug, [...slugs])));
     return new Map(
-      rows.map(({ hours, ...row }) => [row.slug, { ...toCard(row), hours: hours?.text ?? null }]),
+      rows.map(({ hours, ...row }) => [
+        row.slug,
+        { ...toCard({ ...row, hours }), hours: hours?.text ?? null },
+      ]),
     );
   } catch (cause) {
     throw new DataError(`Could not load guide stops in ${citySlug}`, { cause });

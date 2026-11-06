@@ -29,6 +29,13 @@
       "when": 1793406995682,
       "tag": "0003_partners-claims",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1793937732952,
+      "tag": "0004_event-occurrences",
+      "breakpoints": true
     }
   ]
 }

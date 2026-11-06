@@ -1,184 +1,139 @@
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { CategoryTile } from "@/components/features/category-tile";
 import { CityCard } from "@/components/features/city-card";
-import { SamplePlan } from "@/components/features/planner/sample-plan";
+import { EventCard } from "@/components/features/event-card";
+import { HeroQuery } from "@/components/features/hero-query";
 import { Photo, PhotoCredit } from "@/components/features/photo";
+import { SamplePlan } from "@/components/features/planner/sample-plan";
 import { ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { Container, SectionHeading } from "@/components/ui/section";
-import { getSiteStats, listLiveCities } from "@/lib/data/cities";
+import { listLiveCities } from "@/lib/data/cities";
+import { listThisWeek } from "@/lib/data/events";
 import { sampleDay } from "@/lib/data/sample-day";
+import { CATEGORIES } from "@/lib/domain/categories";
+import { showingDay } from "@/lib/domain/event-dates";
 import { exploreHref } from "@/lib/domain/explore-params";
 import { photo } from "@/lib/photos";
 
 export const revalidate = 3600;
 
-const SAMPLE_CITY = { slug: "newmarket", name: "Newmarket" };
+const SAMPLE_CITY = { slug: "toronto", name: "Toronto" };
 
 export default async function HomePage() {
-  const [stats, cities, day] = await Promise.all([
-    getSiteStats(),
+  const [cities, day, week] = await Promise.all([
     listLiveCities(),
     sampleDay(SAMPLE_CITY.slug),
+    listThisWeek(10),
   ]);
   const hero = photo("/home/hero.jpg");
 
   return (
     <>
-      {/* Hero */}
       <section
         aria-labelledby="hero-title"
-        className="relative isolate flex min-h-[92svh] items-end overflow-hidden bg-primary pt-28 pb-14 sm:pb-20"
+        className="relative isolate flex min-h-[min(68svh,620px)] items-end overflow-hidden bg-primary pt-16 pb-10 sm:pb-14"
       >
         {hero && (
           <>
             <Photo photo={hero} alt="" sizes="100vw" preload quality={60} className="-z-20" />
             <div
               aria-hidden="true"
-              className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-black/45 to-black/10"
+              className="absolute inset-0 -z-10 bg-gradient-to-t from-black/85 via-black/55 to-black/25"
             />
           </>
         )}
         <Container>
-          <p className="mb-4 text-meta font-semibold text-white/90">
-            {stats.cities} cities across the GTA and Waterloo Region
-          </p>
           <h1
             id="hero-title"
             className="max-w-3xl font-display text-display font-medium tracking-tight text-white"
           >
-            Do more for less, close to home.
+            Free things to do, close to home.
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
-            Free and low-cost places, programs, and events, picked by people who live here. Every
-            listing tells you what it costs before you go.
-          </p>
-          <form
-            action="/explore"
-            method="get"
-            role="search"
-            className="mt-8 flex max-w-xl items-center gap-2 rounded-full p-1.5 pl-5 glass-strong"
-          >
-            <Icon icon={Search} className="shrink-0 text-text-muted" />
-            <label htmlFor="hero-search" className="sr-only">
-              Search places, cities, and categories
-            </label>
-            <input
-              id="hero-search"
-              name="q"
-              type="search"
-              autoComplete="off"
-              placeholder="Try: free things in Newmarket"
-              className="h-11 min-w-0 flex-1 bg-transparent text-base text-text outline-none placeholder:text-text-muted"
-            />
-            <button
-              type="submit"
-              className="motion-press inline-flex h-11 shrink-0 items-center rounded-full bg-primary px-5 font-semibold text-white transition-colors hover:bg-primary-hover active:translate-y-px"
-            >
-              Search
-            </button>
-          </form>
+          <HeroQuery cities={cities.map((c) => ({ slug: c.slug, name: c.name }))} />
         </Container>
         {hero && <PhotoCredit photo={hero} className="absolute right-4 bottom-3 text-white/80" />}
       </section>
 
-      {/* City guides */}
-      <section aria-labelledby="cities" className="pt-16">
+      {week.length > 0 && (
+        <section aria-labelledby="this-week" className="pt-12">
+          <Container>
+            <SectionHeading
+              id="this-week"
+              title="On this week"
+              className="mb-4"
+              action={
+                <ButtonLink href="/events" variant="secondary" size="sm">
+                  All events
+                  <Icon icon={ArrowRight} size={16} />
+                </ButtonLink>
+              }
+            />
+          </Container>
+          <div className="no-scrollbar overflow-x-auto">
+            <ul className="flex w-max snap-x snap-mandatory gap-3 px-5 pb-2 sm:px-8 xl:px-[max(2rem,calc((100vw-1200px)/2+2rem))]">
+              {week.map(({ event, at, timed }) => (
+                <li key={event.id} className="w-[72vw] max-w-[280px] shrink-0 snap-start">
+                  <EventCard event={event} when={timed ? showingDay(at) : "This week"} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      <section aria-labelledby="browse" className="pt-12">
         <Container>
-          <SectionHeading
-            id="cities"
-            eyebrow="City guides"
-            title="Pick a city"
-            description="Each guide starts with a few favorites, then everything else sorted with free first."
-            action={
-              <ButtonLink href="/explore" variant="secondary" size="sm">
-                See every place
-                <Icon icon={ArrowRight} size={16} />
-              </ButtonLink>
-            }
-          />
+          <SectionHeading id="browse" title="What are you up for?" className="mb-4" />
+          <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
+            {CATEGORIES.map((c) => (
+              <li key={c.slug}>
+                <CategoryTile slug={c.slug} href={exploreHref({ cat: [c.slug] })} />
+              </li>
+            ))}
+          </ul>
         </Container>
-        <div className="no-scrollbar overflow-x-auto scroll-smooth">
-          <ul className="mx-auto flex w-max max-w-none snap-x snap-mandatory gap-4 px-5 pb-4 sm:px-8 xl:px-[max(2rem,calc((100vw-1200px)/2+2rem))]">
+      </section>
+
+      <section aria-labelledby="cities" className="pt-12">
+        <Container>
+          <SectionHeading id="cities" title="Pick a city" className="mb-4" />
+          <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
             {cities.map((city) => (
-              <li key={city.id} className="w-[70vw] max-w-[280px] shrink-0 snap-start">
+              <li key={city.id}>
                 <CityCard city={city} />
               </li>
             ))}
           </ul>
-        </div>
+        </Container>
       </section>
 
-      {/* Day Planner teaser */}
       {day.stops.length > 0 && (
-        <section aria-labelledby="planner-title" className="pt-20">
-          <Container className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
+        <section aria-labelledby="planner-title" className="pt-14">
+          <Container className="grid items-center gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div>
-              <p className="mb-1 text-meta font-semibold text-primary-text">Day Planner</p>
               <h2
                 id="planner-title"
                 className="font-display text-section font-medium tracking-tight"
               >
                 A whole Saturday in {SAMPLE_CITY.name}, for about ${day.total}.
               </h2>
-              <p className="mt-4 max-w-md text-body text-text-muted">
-                Tell CityRoots your budget and what you like, and it lines up a day: coffee,
-                something free, lunch, an afternoon stop, and an evening plan, with a running total
-                and a link to share it. The Day Planner is part of CityRoots Pro. Every place in it
-                is free to browse.
+              <p className="mt-3 max-w-md text-body text-text-muted">
+                Set a budget and get a full day out. Swap anything you like.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <ButtonLink href="/planner">Plan a Saturday</ButtonLink>
-                <ButtonLink
-                  href={exploreHref({ city: SAMPLE_CITY.slug, cost: ["free"] })}
-                  variant="secondary"
-                >
-                  Find free things in {SAMPLE_CITY.name}
-                </ButtonLink>
-              </div>
+              <ButtonLink href={`/planner?city=${SAMPLE_CITY.slug}`} className="mt-5">
+                Plan a day
+              </ButtonLink>
             </div>
             <SamplePlan day={day} />
           </Container>
         </section>
       )}
 
-      {/* Model transparency */}
-      <section aria-labelledby="model-title" className="pt-24">
-        <Container>
-          <h2
-            id="model-title"
-            className="max-w-3xl font-display text-section font-medium tracking-tight"
-          >
-            Free to browse. Free things first. Nobody pays for placement.
-          </h2>
-          <dl className="mt-8 max-w-3xl divide-y divide-divider border-y border-divider">
-            {[
-              {
-                title: "Free to browse",
-                body: "Search, filters, maps, and every listing are free with no account. Pro adds planning tools, never more places.",
-              },
-              {
-                title: "Free things first",
-                body: "The default order always puts free listings ahead of paid ones, in every city and every category.",
-              },
-              {
-                title: "Nobody pays for placement",
-                body: "Ranking reads only community signals: tips, saves, and how recently details were checked. Money is not an input.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="grid gap-1 py-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
-                <dt className="text-card font-semibold">{item.title}</dt>
-                <dd className="text-body text-text-muted">{item.body}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="mt-6">
-            <Link href="/about" className="font-semibold text-primary-text quiet-link">
-              Read how CityRoots is funded
-            </Link>
-          </p>
-        </Container>
-      </section>
+      <p className="sr-only">
+        <Link href="/about">About CityRoots</Link>
+      </p>
     </>
   );
 }

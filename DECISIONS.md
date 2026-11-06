@@ -88,23 +88,23 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 ## Home page
 
-**No numbers strip, and no three-card feature rows.** The spec's live counter strip (cities, places, free share) was removed at the owner's request, as was the three icon-card layout under "Nobody pays for placement". Those three points are now a plain single-column list. The hero still names the city count.
+**No numbers strip, and no three-card feature rows.** The spec's live counter strip (cities, places, free share) was removed at the owner's request, as was the three icon-card layout under "Nobody pays for placement".
+
+**The home page shows the product instead of describing it (November 2026).** The hero is one sentence you can change ("Show me free things to do in Toronto this weekend"), a plain GET form to `/go`, so it works without JavaScript. Below it: what is on this week, moods, cities, and a real sample plan. The "how we make money" section moved to About, with one line in the footer.
 
 ## Navigation
 
 **Route crossfade uses React view transitions.** The app template wraps pages in `<ViewTransition enter exit default="none">`, so the crossfade runs only on navigation. The Phase 1 version faded every page in from transparent with a CSS animation, including the first load. Removing that cut about 100 ms of TBT and 350 ms of LCP on Explore. The earlier transform-based fade also made the template the containing block for `position: fixed` children, which broke the full-screen map on phones. `default="none"` keeps filter updates from crossfading the whole page.
 
-**Two shells.** Marketing and guide pages (home, city, about, sign in) use a floating glass header. App pages (explore, places, account) use the persistent left rail on desktop. Both use a bottom tab bar on mobile.
+**One shell (November 2026).** Every page has the same solid sticky header: logo, city picker, search, and Explore, Events, Plan a day, Saved, Account. Phones get the same five as a tab bar. The earlier pair of a floating header and a left rail made the same site feel like two products, with two searches. The chosen city is remembered in the browser and carried by the nav links.
 
 **Only shipped routes appear in navigation.** The footer's partner link (spec section 4) is left out until `/partners` exists in Phase 4.
 
-**The Day Planner teaser shows what the planner would build.** The home page and the planner intro run the real assembly for the coming Saturday in Newmarket on a $25 budget, so the preview is never a mock-up.
-
-**Navigation per surface.** The phone tab bar holds five items: Explore, Events, Planner, Saved, Account. The logo goes home. The marketing header drops Home and Saved; the desktop rail shows everything.
+**The Day Planner teaser shows what the planner would build.** The home page runs the real assembly for the coming Saturday in Toronto on a $25 budget, so the preview is never a mock-up.
 
 **The header shows a static "Account" link, not session state.** Reading the session in the shared layout would make every marketing page dynamic, and cost LCP. `/account` redirects signed-out visitors to sign in and back.
 
-**Guides joined the header in Phase 5.** The header keeps five items (Explore, Events, Guides, Planner, Account); About moved to the rail and the footer, where it already was.
+**Guides live in the footer and on city pages.** They are content, not one of the things the site does.
 
 ## Auth
 
@@ -171,9 +171,9 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **Free members keep up to 3 collections; Pro has no limit.** The spec makes "unlimited collections" a Pro feature, so free needs some limit. Three covers "this weekend", "with the kids", and "someday" without nagging. Every collection holds up to 200 places for everyone. Nothing is deleted when Pro ends: existing collections stay readable and editable, and only new ones are blocked.
 
-**Saving works without JavaScript.** The bookmark on every card is a link to `/collections/save?place=`, a server-rendered form. With JavaScript it opens a dialog instead. The dialog's code loads on the first save only (`next/dynamic` in a host mounted once in the root layout), so pages that never save ship about 1 KB for it.
+**Saving takes one tap and no account (November 2026).** The heart stores the place in this browser and shows it on `/saved`. Asking for an email before someone has saved anything lost the moment. "Keep on all my devices" signs them in and moves the list into a collection. The heart needs JavaScript.
 
-**The bookmark does not show saved state on first render.** Place, city, and home pages are statically generated, and reading the session would make them dynamic. The icon fills in once the member saves in the dialog.
+**Collections are the sorting tool.** "Add to a collection" on a place page opens the dialog, and is a link to `/collections/save?place=`, a server-rendered form, without JavaScript. The dialog's code loads on first use only.
 
 **Collections are private until shared.** "Share with a link" makes `/collections/[id]` readable by anyone with the URL. Shared collections are `noindex`.
 
@@ -185,14 +185,16 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 - Candidates come in ranked order (free first, then community signals), so the planner inherits ranking integrity.
 - Interests move matching places to the front of a slot; they never add places a slot would not allow.
-- A place with a reliable weekly schedule must be open at the slot time on that weekday. Places without one are allowed, and the plan says "Check the hours before you go".
+- A place with a reliable weekly schedule must be open at the slot time on that weekday. Places without one are allowed, and the plan says once to check hours before going.
 - Events are only used when a known run covers the day.
 - Each slot keeps money back for the cheapest option in the slots after it, so an early splurge never leaves the evening empty. A slot that cannot fit is left out and named.
-- "Shuffle the plan" rotates through the top three choices in each slot (`seed` in the URL).
+- "Shuffle" rotates through the top three choices in each slot (`seed` in the URL).
 
 **Costs are estimates per person.** The first dollar amount in a listing's price note wins, unless the note is about memberships or passes; otherwise the band's typical spend (low $10, moderate $30, varies $15). Every estimate is labelled "About", and saved plans recompute costs on the server, never trusting the browser.
 
-**The stepper shows all four steps at once.** Each step is a numbered card in one GET form. Hiding steps until hydration would shift the layout and break without JavaScript; one page of four short questions is quick either way.
+**Open to everyone, with no account (November 2026; owner to confirm).** This reverses the original plan, where the planner was the paid feature. A locked planner cannot show why it is good, and research points to budget-conscious people who will not pay before seeing value. Now anyone gets a plan on arrival, can change it, and can share it by its address (which rebuilds the plan as first made). Pro keeps a plan, with edits, at a permanent link, and adds unlimited collections. To restore the old gate, put back the `membership.pro` check at the top of `planner/page.tsx`.
+
+**The form answers as you change it.** A plan appears on arrival from sensible defaults, and each change re-plans. It is still a GET form, with a button for people without JavaScript.
 
 **Saved plans live in a `plans` table** (not in the spec's data model). The share link uses a random 11-character id, not the row id. Shared plans are public, server-rendered with Open Graph tags for link previews, and `noindex`, because they are personal. They are not blocked in robots.txt, because some link-preview bots honour it.
 
@@ -317,6 +319,43 @@ Phase 5 changes:
 On this machine (WSL), run-to-run noise is about 100 ms of TBT and 500 ms of LCP, so compare medians, not single runs.
 
 **Lighthouse runs on Linux Chromium.** Under WSL, Lighthouse otherwise launches Windows Chrome and fails. Point `CHROME_PATH` at Playwright's Chromium, and run it from outside the repo: it can leave `C:\Users\...` profile folders in the working directory, which break Turbopack. CI on Ubuntu needs nothing extra.
+
+## Who it is for (November 2026 research)
+
+Budget-conscious locals, newcomers, families, and young adults looking to meet people. The job: "what can I do today or this weekend, near me, and what will it cost?"
+
+- Two-thirds of Canadians plan to cut spending, and 44% plan to spend less on entertainment ([TD/Harris, 2026](https://www.bnnbloomberg.ca/business/2026/01/13/td-report-says-two-thirds-of-canadians-surveyed-plan-to-cut-spending-this-year/)). So cost is the first thing on every card and free is one tap away.
+- 89% want events that connect them to a community, and 74% say in-person matters more now (Eventbrite 2026 Social Study). So Meet people is a top-level category.
+- Only 4% buy tickets in the week of an event, but 64% of Gen Z find things to do on social feeds (Eventbrite TRNDS 2025, via ArtsHub). So Events opens on the soonest day with something on, and plans share by link.
+- Free museum nights and swim times are scattered across conflicting blog lists. Neighbours like GetMovingTO and the Toronto Event Generator newsletter each cover one slice. One checked source, with the cost on every line, is the gap.
+
+## Toronto data
+
+**Built by a script, not by hand.** `npm run data:toronto` combines a hand-written list (`scripts/seed-data/toronto-curated.json`, 50 places with facts checked by hand) with City of Toronto open data: festivals and events, museums, places of interest, music venues, cultural hotspots, libraries, parks, and community centres. It dedupes by name within 120 m, assigns official neighbourhoods by point in polygon, checks links, and drops virtual events and tickets starting above $50. Hand-written entries win.
+
+**Exact dates.** Feed events carry `events.occurrences`, a list of showings. Seeding retires feed events that have left the source. Other cities keep their month-level seasonal dates, and those never appear under a specific day.
+
+**Explore lists places; Events lists dates.** A plain browse hides dated events, or hundreds of one-off shows would bury the places. Searching, or filtering to events, brings them back. The partner API is unaffected.
+
+**Helplines do not open a list of things to do.** On a plain browse they follow the other free listings. Free listings still all come first. They are unchanged in search and in their categories.
+
+## Design direction (November 2026)
+
+**Solid surfaces replace glass.** A warm neutral background, white cards with a hairline border, and a soft shadow. Translucent cards on a gradient looked muddy and reduced contrast. Glass stays only over photos and the map.
+
+**Cards read in one order:** kind of thing, name, what it is, then cost and where. "Free" is the one coloured label; "Local pick" stays secondary.
+
+## Filters and menus
+
+- **Filters are compact dropdown menus, not rows of chips.** The explorer had four rows of chips in a sticky card that filled most of a phone screen and overflowed it. Each facet (City, Cost, Type, Category, Sort) is now one button that opens a small menu; the filter row is no longer sticky. "Picks only" and "Free only" stay one-tap toggles.
+- **Menus are `<details>` and `<summary>`**, so they open, and every option is still a link, without JavaScript. With JavaScript, Escape closes a menu and returns focus to its button, a click outside closes it, and picking a single choice (a city, a sort order) closes it. Menus in one row share a `name`, so only one is open at a time. Multi-select menus stay open so several options can be ticked, and each has its own Clear link.
+- **On phones a menu spans the filter row**, so it never runs off the screen. From `sm` up it sits under its own button.
+- **The planner's city step is a native select.** Ten cities as chips was a wall of buttons; a select is the standard control for one choice from many.
+
+## Privacy and terms
+
+- **`/privacy` and `/terms` describe what the code actually does**: the tables in the schema, the processors in `LAUNCH.md`, 30-day database sessions, hashed IPs for rate limits, cookieless Plausible, and the cascade rules above for account deletion. There is no self-serve account deletion yet, so the policy asks people to email. If any of those behaviours change, update the policy in the same change.
+- They are linked from the footer, the sign-in page, and the about page's privacy summary.
 
 ## Deployment
 

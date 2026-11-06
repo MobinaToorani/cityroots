@@ -1,8 +1,12 @@
 "use client";
 
+import { Dices } from "lucide-react";
 import { useExplorer } from "./explorer-state";
+import { chipClasses } from "@/components/ui/chip";
+import { Icon } from "@/components/ui/icon";
+import { FilterDropdown, FilterOption } from "@/components/ui/filter-dropdown";
 import { SegmentedControl } from "@/components/ui/segmented-control";
-import { exploreHref } from "@/lib/domain/explore-params";
+import { exploreHref, type ExploreState } from "@/lib/domain/explore-params";
 import type { Sort } from "@/lib/domain/ranking";
 
 const SORT_OPTIONS = [
@@ -16,12 +20,20 @@ const VIEW_OPTIONS = [
   { value: "map", label: "Map" },
 ] as const;
 
+/** The current filters, so a surprise respects them. */
+function surpriseQuery(state: ExploreState): string {
+  const href = exploreHref({ ...state, page: 1, place: null, bbox: null, view: "list" });
+  return href.slice("/explore".length);
+}
+
 export function ResultsToolbar({ total }: { total: number }) {
   const { state, update } = useExplorer();
+  const sortLabel = SORT_OPTIONS.find((o) => o.value === state.sort)?.label ?? "Best match";
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3">
+    // Positioned, so the sort menu spans this row on phones.
+    <div className="relative z-10 flex flex-wrap items-center justify-between gap-3">
       <p className="text-body" role="status" aria-live="polite">
-        <span className="font-semibold">{total}</span> {total === 1 ? "result" : "results"}
+        <span className="font-semibold">{total}</span> {total === 1 ? "place" : "places"}
         {state.q && (
           <>
             {" "}
@@ -30,14 +42,34 @@ export function ResultsToolbar({ total }: { total: number }) {
         )}
         {state.bbox && <span className="text-text-muted"> in this map area</span>}
       </p>
-      <div className="flex flex-wrap gap-2">
-        <SegmentedControl
+      <div className="flex flex-wrap items-center gap-2">
+        {total > 1 && (
+          <a href={`/explore/surprise${surpriseQuery(state)}`} className={chipClasses(false)}>
+            <Icon icon={Dices} size={16} />
+            Surprise me
+          </a>
+        )}
+        <FilterDropdown
           label="Sort results"
-          options={SORT_OPTIONS}
-          value={state.sort}
-          hrefFor={(sort) => exploreHref({ ...state, sort, page: 1, place: null })}
-          onChange={(sort) => void update({ sort })}
-        />
+          summary={
+            <>
+              <span className="text-text-muted">Sort:</span> {sortLabel}
+            </>
+          }
+          align="end"
+        >
+          {SORT_OPTIONS.map((o) => (
+            <FilterOption
+              key={o.value}
+              mode="single"
+              selected={state.sort === o.value}
+              href={exploreHref({ ...state, sort: o.value, page: 1, place: null })}
+              onSelect={() => void update({ sort: o.value })}
+            >
+              {o.label}
+            </FilterOption>
+          ))}
+        </FilterDropdown>
         <SegmentedControl
           label="View"
           options={VIEW_OPTIONS}

@@ -28,6 +28,28 @@ describe("parseWeeklyHours", () => {
     expect(w?.["5"]).toEqual([["11:00", "24:00"]]);
   });
 
+  it("parses days separated by semicolons, as the City's open data writes them", () => {
+    const w = parseWeeklyHours(
+      "Tue 10am to 5:30pm; Wed 10am to 8pm; Thu to Sun 10am to 5:30pm; closed Mon",
+    );
+    expect(w?.["1"]).toBeUndefined();
+    expect(w?.["3"]).toEqual([["10:00", "20:00"]]);
+    expect(w?.["7"]).toEqual([["10:00", "17:30"]]);
+    expect(parseWeeklyHours("Mon to Fri 10am to 6pm; Sat to Sun 10am to 5pm")?.["6"]).toEqual([
+      ["10:00", "17:00"],
+    ]);
+  });
+
+  it("reads dotted meridiems", () => {
+    expect(parseWeeklyHours("Wed 9am to 8:30 p.m")?.["3"]).toEqual([["09:00", "20:30"]]);
+    expect(parseWeeklyHours("Wed 9 a.m. to 8:30 p.m.")?.["3"]).toEqual([["09:00", "20:30"]]);
+  });
+
+  it("gives up on the whole schedule when any part after a semicolon is not hours", () => {
+    expect(parseWeeklyHours("Mon 9am to 5pm; by appointment")).toBeNull();
+    expect(parseWeeklyHours("Mon 9am to 5pm; Tue by appointment")).toBeNull();
+  });
+
   it("accepts closure notes and a year-round prefix", () => {
     expect(parseWeeklyHours(`Tue${EN}Sun 10am${EN}5pm; closed Mondays`)?.["1"]).toBeUndefined();
     expect(parseWeeklyHours(`Year-round: Saturday 7am${EN}2pm`)).toEqual({

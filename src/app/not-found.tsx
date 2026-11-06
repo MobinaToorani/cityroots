@@ -8,10 +8,7 @@ export const metadata: Metadata = { title: "Page not found" };
 
 export default function NotFound() {
   return (
-    <main
-      id="main"
-      className="flex min-h-dvh flex-col items-center justify-center gap-8 px-5 color-field"
-    >
+    <main id="main" className="flex min-h-dvh flex-col items-center justify-center gap-8 px-5">
       <Logo />
       <EmptyState
         icon={Compass}

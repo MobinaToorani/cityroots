@@ -2,7 +2,6 @@
 
 import { Clock, Compass, MapPin, Search, Shapes, X } from "lucide-react";
 import type { Route } from "next";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 import { CostBadge } from "@/components/ui/badges";
@@ -10,8 +9,7 @@ import { Icon } from "@/components/ui/icon";
 import type { SearchHit, SearchResults } from "@/lib/data/search";
 import { cn } from "@/lib/cn";
 import { logger } from "@/lib/logger";
-
-const OPEN_EVENT = "cityroots:open-palette";
+import { OPEN_EVENT } from "./palette-trigger";
 
 const RECENT_KEY = "cityroots:recent-searches";
 const MAX_RECENT = 5;
@@ -57,46 +55,6 @@ function saveRecent(hit: SearchHit) {
 
 const ICONS = { city: MapPin, category: Shapes, place: Compass } as const;
 
-/**
- * Opens the palette. A link to the explorer, so it still goes somewhere useful
- * without JavaScript.
- */
-export function PaletteTrigger({
-  className,
-  compact = false,
-}: {
-  className?: string;
-  compact?: boolean;
-}) {
-  return (
-    <Link
-      href="/explore"
-      onClick={(e) => {
-        if (e.metaKey || e.ctrlKey || e.shiftKey) return;
-        e.preventDefault();
-        window.dispatchEvent(new Event(OPEN_EVENT));
-      }}
-      aria-haspopup="dialog"
-      aria-keyshortcuts="Meta+K Control+K"
-      className={cn(
-        "motion-press inline-flex h-10 items-center gap-2 rounded-full text-meta font-semibold text-text-muted hover:text-text",
-        compact
-          ? "w-10 justify-center hover:bg-divider/60"
-          : "border border-divider bg-surface-solid/60 px-3.5",
-        className,
-      )}
-    >
-      <Icon icon={Search} size={16} />
-      <span className={compact ? "sr-only" : undefined}>Search</span>
-      {!compact && (
-        <kbd className="ml-auto hidden rounded-md border border-divider px-1.5 font-sans text-[0.75rem] lg:inline">
-          Ctrl K
-        </kbd>
-      )}
-    </Link>
-  );
-}
-
 /** Cmd+K / Ctrl+K search across cities, categories, and places. Mounted once, in the root layout. */
 export function CommandPalette() {
   const router = useRouter();
@@ -105,7 +63,7 @@ export function CommandPalette() {
   const listId = useId();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResults | null>(null);
-  const [recent, setRecent] = useState<SearchHit[]>([]);
+  const [recent, setRecent] = useState<SearchHit[]>(readRecent);
   const [active, setActive] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -131,6 +89,9 @@ export function CommandPalette() {
     }
     window.addEventListener("keydown", onKey);
     window.addEventListener(OPEN_EVENT, open);
+    // This code loads on the first request to open, so that request is answered here.
+    dialog.current?.showModal();
+    input.current?.focus();
     return () => {
       window.removeEventListener("keydown", onKey);
       window.removeEventListener(OPEN_EVENT, open);

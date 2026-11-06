@@ -1,105 +1,50 @@
+import type { Route } from "next";
 import Link from "next/link";
-import { LogoMark } from "./logo";
-import { Container } from "@/components/ui/section";
+import { Logo } from "./logo";
 import { features } from "@/lib/env";
 
+const LINKS: { href: Route; label: string; show?: () => boolean }[] = [
+  { href: "/guides", label: "Guides" },
+  { href: "/submit", label: "Suggest a place" },
+  { href: "/pricing", label: "Pro" },
+  { href: "/about", label: "About" },
+  { href: "/business", label: "Claim your listing", show: features.business },
+  { href: "/partners", label: "For partners", show: features.partners },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+];
+
 export function SiteFooter() {
-  const year = new Date().getFullYear();
   return (
-    <footer className="mt-24 border-t border-divider pt-12 pb-32 md:pb-12">
-      <Container className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
-        <div className="max-w-sm">
-          <div className="flex items-center gap-2.5">
-            <LogoMark />
-            <span className="font-bold">CityRoots</span>
-          </div>
-          <p className="mt-3 text-meta text-text-muted">
-            Free and low-cost things to do across the GTA and Waterloo Region, curated by people who
-            live here. No ads, and nobody pays for placement.
-          </p>
+    <footer className="mt-20 border-t border-divider pt-8 pb-28 lg:pb-8">
+      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-x-8 gap-y-4 px-5 sm:px-6">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <Logo />
+          <p className="text-meta text-text-muted">No ads. Nobody pays for placement.</p>
         </div>
         <nav aria-label="Footer">
-          <h2 className="text-meta font-semibold">Product</h2>
-          <ul className="mt-3 grid gap-2 text-meta text-text-muted">
-            <li>
-              <Link className="quiet-link" href="/explore">
-                Explore places
-              </Link>
-            </li>
-            <li>
-              <Link className="quiet-link" href="/events">
-                Events calendar
-              </Link>
-            </li>
-            <li>
-              <Link className="quiet-link" href="/guides">
-                Guides
-              </Link>
-            </li>
-            <li>
-              <Link className="quiet-link" href="/planner">
-                Day Planner
-              </Link>
-            </li>
-            <li>
-              <Link className="quiet-link" href="/pricing">
-                CityRoots Pro
-              </Link>
-            </li>
-            <li>
-              <Link className="quiet-link" href="/submit">
-                Suggest a place
-              </Link>
-            </li>
-            {features.business() && (
-              <li>
-                <Link className="quiet-link" href="/business">
-                  Claim your listing
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-meta text-text-muted">
+            {LINKS.filter((l) => !l.show || l.show()).map((l) => (
+              <li key={l.href}>
+                <Link className="hover:text-text" href={l.href} prefetch={false}>
+                  {l.label}
                 </Link>
               </li>
-            )}
-            {features.partners() && (
-              <li>
-                <Link className="quiet-link" href="/partners">
-                  For partners
-                </Link>
-              </li>
-            )}
-            <li>
-              <Link className="quiet-link" href="/about">
-                How CityRoots works
-              </Link>
-            </li>
-            <li>
-              <Link className="quiet-link" href="/account">
-                Your account
-              </Link>
-            </li>
+            ))}
           </ul>
         </nav>
-        <div>
-          <h2 className="text-meta font-semibold">Open data</h2>
-          <p className="mt-3 text-meta text-text-muted">
-            Listings are published under{" "}
-            <a
-              className="text-text quiet-link"
-              href="https://creativecommons.org/licenses/by/4.0/"
-              rel="license noopener"
-              target="_blank"
-            >
-              CC BY 4.0
-            </a>
-            . Use them, cite CityRoots, and tell us what you build.{" "}
-            <Link className="text-text quiet-link" href="/about#data">
-              Read the data license
-            </Link>
-            .
-          </p>
-        </div>
-      </Container>
-      <Container className="mt-10 text-meta text-text-muted">
-        <p>&copy; {year} CityRoots. Made in Ontario.</p>
-      </Container>
+        <p className="w-full text-meta text-text-muted">
+          Contains information licensed under the{" "}
+          <a
+            className="underline hover:text-text"
+            href="https://open.toronto.ca/open-data-license/"
+            rel="license noopener"
+          >
+            Open Government Licence &ndash; Toronto
+          </a>
+          .
+        </p>
+      </div>
     </footer>
   );
 }

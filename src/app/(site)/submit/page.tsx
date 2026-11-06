@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CorrectionForm, NewPlaceForm } from "./submit-form";
 import { ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { SegmentedLinks } from "@/components/ui/segmented-links";
 import { listLiveCities } from "@/lib/data/cities";
@@ -28,7 +28,7 @@ export default async function SubmitPage(props: PageProps<"/submit">) {
   ]);
 
   return (
-    <div className="px-5 pt-28 pb-8 color-field sm:px-8">
+    <div className="px-5 pt-10 pb-8 sm:px-8">
       <div className="mx-auto grid max-w-[1100px] gap-8 lg:grid-cols-[1.5fr_1fr]">
         <div>
           <h1 className="font-display text-section font-medium tracking-tight">
@@ -53,7 +53,7 @@ export default async function SubmitPage(props: PageProps<"/submit">) {
               },
             ]}
           />
-          <GlassCard strength="strong" className="mt-6 rounded-[var(--radius-modal)] p-5 sm:p-8">
+          <Card className="mt-6 rounded-[var(--radius-modal)] p-5 sm:p-8">
             {!isCorrection && <NewPlaceForm cities={cities} defaultCity={defaultCity} />}
             {isCorrection && place && (
               <>
@@ -82,21 +82,19 @@ export default async function SubmitPage(props: PageProps<"/submit">) {
                 exactly which place you mean.
               </EmptyState>
             )}
-          </GlassCard>
+          </Card>
         </div>
         <aside aria-labelledby="review-title" className="lg:pt-24">
-          <GlassCard className="p-5">
+          <Card className="p-5">
             <h2 id="review-title" className="flex items-center gap-2 text-card font-semibold">
               <Icon icon={ShieldCheck} className="text-free" />
               Every suggestion is reviewed
             </h2>
             <ul className="mt-3 grid gap-2 text-body text-text-muted">
-              <li>A curator checks it against the official source before anything goes live.</li>
-              <li>Reviews usually happen within a week.</li>
-              <li>Leave an email if you want to hear back. It is optional.</li>
-              <li>Suggestions are never paid and never change how listings rank.</li>
+              <li>Usually within a week.</li>
+              <li>Nothing goes live until it is checked.</li>
             </ul>
-          </GlassCard>
+          </Card>
         </aside>
       </div>
     </div>

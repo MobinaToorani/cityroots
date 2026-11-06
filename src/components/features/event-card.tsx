@@ -1,24 +1,32 @@
-import { CalendarDays, MapPin } from "lucide-react";
 import Link from "next/link";
-import { CategoryTag, CostBadge } from "@/components/ui/badges";
-import { GlassCard } from "@/components/ui/glass-card";
-import { Icon } from "@/components/ui/icon";
+import { CostBadge } from "@/components/ui/badges";
+import { Card } from "@/components/ui/card";
+import { CategoryIcon } from "@/components/ui/category-icon";
 import type { EventItem } from "@/lib/data/events";
-import { eventDateLabel } from "@/lib/domain/event-dates";
 
-export function EventCard({ event, showCity = true }: { event: EventItem; showCity?: boolean }) {
+/** Compact card for a horizontal strip of events. */
+export function EventCard({
+  event,
+  when,
+  showCity = true,
+}: {
+  event: EventItem;
+  when: string;
+  showCity?: boolean;
+}) {
   const href = event.placeId ? (`/places/${event.placeId}` as const) : null;
+  const where = [event.neighborhood, showCity ? event.cityName : null].filter(Boolean).join(", ");
   return (
-    <GlassCard
+    <Card
       as="article"
       interactive={Boolean(href)}
-      className="relative flex h-full flex-col gap-2 p-5"
+      className="relative flex h-full flex-col gap-2 p-4"
     >
-      <div className="flex items-center justify-between gap-3">
-        {event.category ? <CategoryTag slug={event.category} /> : <span />}
+      <div className="flex items-center justify-between gap-2">
+        <p className="text-meta font-semibold text-primary-text">{when}</p>
         <CostBadge band={event.costBand} />
       </div>
-      <h3 className="text-card font-semibold tracking-tight">
+      <h3 className="line-clamp-2 text-card font-semibold tracking-tight">
         {href ? (
           <Link
             href={href}
@@ -30,19 +38,12 @@ export function EventCard({ event, showCity = true }: { event: EventItem; showCi
           event.title
         )}
       </h3>
-      <p className="line-clamp-2 text-body text-text-muted">{event.description}</p>
-      <div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-1 text-meta text-text-muted">
-        <span className="inline-flex items-center gap-1 font-semibold text-text">
-          <Icon icon={CalendarDays} size={16} />
-          {eventDateLabel(event.startAt, event.endAt, event.precision)}
-        </span>
-        {showCity && (
-          <span className="inline-flex items-center gap-1">
-            <Icon icon={MapPin} size={16} />
-            {event.cityName}
-          </span>
+      <div className="mt-auto flex items-center gap-2 pt-1 text-meta text-text-muted">
+        {event.category && (
+          <CategoryIcon slug={event.category} className="size-7 rounded-lg [&_svg]:size-4" />
         )}
+        <span className="min-w-0 truncate">{where}</span>
       </div>
-    </GlassCard>
+    </Card>
   );
 }

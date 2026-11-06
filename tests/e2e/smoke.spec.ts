@@ -1,19 +1,22 @@
 import { expect, test } from "@playwright/test";
+import { openMenu } from "./helpers";
 
 test.describe("home", () => {
-  test("shows city guides and searches into the explorer @mobile", async ({ page }) => {
+  test("answers the question in the hero and links every city @mobile", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-      "Do more for less, close to home.",
+      "Free things to do, close to home.",
     );
     await expect(
       page.getByRole("region", { name: "Pick a city" }).getByRole("link", { name: "Newmarket" }),
     ).toBeVisible();
 
-    await page.getByRole("searchbox", { name: /search places/i }).fill("market");
-    await page.getByRole("button", { name: "Search" }).click();
-    await expect(page).toHaveURL(/\/explore\?q=market/);
-    await expect(page.getByRole("status").first()).toContainText("market");
+    await page.locator("select[name=city]").selectOption("newmarket");
+    await page.locator("select[name=when]").selectOption("anytime");
+    await page.getByRole("button", { name: "Go" }).click();
+    await expect(page).toHaveURL(/\/explore\?.*city=newmarket/);
+    await expect(page).toHaveURL(/cost=free/);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Things to do in Newmarket");
   });
 });
 
@@ -23,10 +26,9 @@ test.describe("city page", () => {
     await expect(page.getByRole("heading", { level: 1, name: "Newmarket" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Start with these" })).toBeVisible();
 
-    await page.getByRole("link", { name: "Cafes and third spaces" }).click();
+    await page.getByRole("link", { name: "Cafes and hangouts" }).click();
     await expect(page).toHaveURL(/\/explore\?city=newmarket&cat=cafes/);
-    const firstCard = page.locator("main article").first();
-    await expect(firstCard).toContainText("Cafes");
+    await expect(page.locator("main article").first()).toBeVisible();
   });
 
   test("unknown city is a real 404", async ({ page }) => {
@@ -42,9 +44,10 @@ test.describe("explorer", () => {
     const status = page.getByRole("status").first();
     const before = Number((await status.textContent())?.match(/\d+/)?.[0]);
 
+    await openMenu(page, "Budget");
     await page
-      .getByRole("group", { name: "Cost and type" })
-      .getByRole("link", { name: "Free", exact: true })
+      .getByRole("group", { name: "Budget", exact: true })
+      .getByRole("link", { name: /^Free/ })
       .click();
     await expect(page).toHaveURL(/cost=free/);
     // The URL updates optimistically; results follow once the server responds.
@@ -84,16 +87,21 @@ test.describe("without JavaScript", () => {
   test.use({ javaScriptEnabled: false });
 
   test("explorer filters, search, and load more all work", async ({ page }) => {
-    await page.goto("/explore");
-    await page
-      .getByRole("group", { name: "City" })
-      .getByRole("link", { name: "Newmarket" })
-      .click();
-    await expect(page).toHaveURL(/city=newmarket/);
+    await page.goto("/explore?city=newmarket");
     await expect(page.locator("main article")).toHaveCount(24);
     await page.getByRole("button", { name: /Show \d+ more/ }).click();
     await expect(page).toHaveURL(/page=2/);
     await expect(page.locator("main article")).toHaveCount(48);
+    await page.getByRole("link", { name: "Free", exact: true }).click();
+    await expect(page).toHaveURL(/cost=free/);
+  });
+
+  test("the home page question and the planner work", async ({ page }) => {
+    await page.goto("/");
+    await page.getByRole("button", { name: "Go" }).click();
+    await expect(page).toHaveURL(/\/events\?when=weekend/);
+    await page.goto("/planner?city=newmarket&budget=25");
+    await expect(page.getByRole("list", { name: "Your day" })).toBeVisible();
   });
 
   test("city and place pages render their full content", async ({ page }) => {

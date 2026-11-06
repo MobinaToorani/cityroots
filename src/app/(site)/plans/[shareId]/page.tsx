@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { deletePlanAction } from "@/app/(app)/planner/actions";
 import { CategoryTag, CostBadge } from "@/components/ui/badges";
 import { ButtonLink } from "@/components/ui/button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { Container } from "@/components/ui/section";
 import { currentUser } from "@/lib/auth/session";
@@ -42,7 +42,7 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
   const shareUrl = absoluteUrl(`/plans/${plan.shareId}`);
 
   return (
-    <div className="pt-32 pb-8 color-field">
+    <div className="pt-10 pb-8">
       <Container className="max-w-3xl">
         {isOwner && query.saved && (
           <p role="status" className="mb-6 rounded-2xl px-4 py-3 text-body glass-strong">
@@ -65,10 +65,7 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
         <ol className="mt-8 grid gap-3">
           {plan.stops.map((stop) => (
             <li key={stop.placeId}>
-              <GlassCard
-                strength="strong"
-                className="grid gap-2 p-4 sm:grid-cols-[4.5rem_1fr_auto] sm:items-start sm:p-5"
-              >
+              <Card className="grid gap-2 p-4 sm:grid-cols-[4.5rem_1fr_auto] sm:items-start sm:p-5">
                 <p className="inline-flex items-center gap-1.5 text-card font-semibold">
                   <Icon icon={Clock} size={16} className="text-text-muted sm:hidden" />
                   {timeLabel(stop.time)}
@@ -96,7 +93,7 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
                     <span className="text-meta text-text-muted">About {money(stop.estimate)}</span>
                   )}
                 </div>
-              </GlassCard>
+              </Card>
             </li>
           ))}
         </ol>
@@ -105,7 +102,7 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
         </p>
 
         {isOwner && (
-          <GlassCard className="mt-8 grid gap-4 p-5">
+          <Card className="mt-8 grid gap-4 p-5">
             <div className="grid gap-1">
               <label htmlFor="plan-link" className="text-meta font-semibold">
                 Share link
@@ -128,10 +125,10 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
                 </button>
               </form>
             </div>
-          </GlassCard>
+          </Card>
         )}
 
-        <GlassCard strength="strong" className="mt-10 grid gap-4 p-6">
+        <Card className="mt-10 grid gap-4 p-6">
           <h2 className="font-display text-section font-medium tracking-tight">
             Free and low-cost things to do in {plan.cityName}
           </h2>
@@ -147,7 +144,7 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
               Plan your own day
             </ButtonLink>
           </div>
-        </GlassCard>
+        </Card>
       </Container>
     </div>
   );

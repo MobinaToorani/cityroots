@@ -78,7 +78,7 @@ export function ResultsSheet({ children }: { children: ReactNode }) {
             : `translateY(${OFFSET[snap]})`,
       }}
       className={cn(
-        "fixed inset-x-0 top-[6dvh] bottom-0 z-30 flex flex-col rounded-t-[var(--radius-modal)] glass-strong",
+        "fixed inset-x-0 top-16 bottom-0 z-30 flex flex-col rounded-t-[var(--radius-modal)] glass-strong",
         drag === null && "transition-transform duration-250 ease-[var(--ease-out-expo)]",
         "lg:static lg:z-auto lg:block lg:![transform:none] lg:rounded-none lg:border-0 lg:bg-transparent lg:shadow-none lg:backdrop-blur-none lg:transition-none",
       )}

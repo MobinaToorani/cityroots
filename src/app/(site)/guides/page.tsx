@@ -19,17 +19,12 @@ export const metadata: Metadata = {
 export default async function GuidesPage() {
   const cities = new Map((await listLiveCities()).map((c) => [c.slug, c]));
   return (
-    <div className="pt-32 pb-8 color-field">
+    <div className="pt-10 pb-8">
       <Container className="max-w-4xl">
-        <p className="text-meta font-semibold text-primary-text">Guides</p>
-        <h1 className="mt-2 font-display text-display font-medium tracking-tight">
+        <h1 className="font-display text-display font-medium tracking-tight">
           A day out, already planned.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-text-muted">
-          Each guide is one specific day in one city, with a budget you can hold to. Every stop is a
-          CityRoots listing, so hours and prices stay as current as the listings themselves.
-        </p>
-        <ol className="mt-12 divide-y divide-divider border-y border-divider">
+        <ol className="mt-8 divide-y divide-divider border-y border-divider">
           {GUIDES.map((g, i) => {
             const city = cities.get(g.city);
             const hero = photo(city?.heroImage ?? null);

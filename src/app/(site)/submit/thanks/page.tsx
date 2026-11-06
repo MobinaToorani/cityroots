@@ -9,7 +9,7 @@ export default async function ThanksPage(props: PageProps<"/submit/thanks">) {
   const { type } = await props.searchParams;
   const correction = type === "correction";
   return (
-    <div className="flex min-h-[80svh] items-center justify-center px-5 pt-28 pb-16 color-field">
+    <div className="flex min-h-[80svh] items-center justify-center px-5 pt-10 pb-16">
       <EmptyState
         icon={CircleCheck}
         headingLevel="h1"
