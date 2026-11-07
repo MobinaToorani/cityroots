@@ -1,0 +1,504 @@
+{
+  "cityId": "vaughan",
+  "cityName": "Vaughan",
+  "province": "Ontario",
+  "country": "Canada",
+  "tagline": "Conservation lands, cultural villages, and a community built around family life",
+  "heroDescription": "Vaughan sits at the northern edge of the GTA, where ravines and conservation areas give way to neighbourhoods that feel liveable. From the village of Kleinburg to the Kortright Centre's forest trails and a strong network of recreation facilities, Vaughan has more to offer than its suburban reputation suggests.",
+  "lat": 43.8361,
+  "lng": -79.4983,
+  "contributors": [
+    "CityRoots Community"
+  ],
+  "lastUpdated": "2026-06-06",
+  "places": [
+    {
+      "id": "vaughan-kortright-centre",
+      "name": "Kortright Centre for Conservation",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "nature",
+        "trails",
+        "conservation",
+        "family",
+        "outdoors",
+        "seasonal"
+      ],
+      "cost": "low",
+      "costNote": "Adults $10, youth $7, children under 5 free; lower in off-season",
+      "address": "9550 Pine Valley Dr, Woodbridge, ON L4L 1A6",
+      "neighborhood": "Woodbridge",
+      "lat": 43.8364,
+      "lng": -79.5686,
+      "website": "https://kortright.org",
+      "description": "An environmental education centre with 325 hectares of Humber River valley with 16km of trails through forests, wetlands, and meadows. Excellent programming year-round including winter snowshoe trails and a working maple syrup operation.",
+      "highlights": [
+        "16km of mapped trails through forest, meadow, and wetland",
+        "Maple syrup season tours in March (family favourite)",
+        "Renewable energy demonstrations and eco-education exhibits",
+        "Snowshoe trail network in winter",
+        "Regular guided walks, family programs, and seasonal events"
+      ],
+      "why": "The maple syrup season in March is spectacular — book in advance. The off-season is quieter and trails are far less crowded.",
+      "isRecommended": true,
+      "isFree": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-boyd-conservation",
+      "name": "Boyd Conservation Park",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "outdoors",
+        "trails",
+        "nature",
+        "free",
+        "walking",
+        "river",
+        "year-round"
+      ],
+      "cost": "free",
+      "address": "8739 Islington Ave, Woodbridge, ON L4L 1V9",
+      "neighborhood": "Woodbridge",
+      "lat": 43.8184,
+      "lng": -79.5699,
+      "website": "https://trca.ca/parks/boyd-conservation-area/",
+      "description": "A free conservation area along the Humber River with walking trails through woodland and open meadow. Less structured than Kortright but also free — a good everyday trail option for Woodbridge and Vaughan residents.",
+      "highlights": [
+        "Walking trails along the Humber River",
+        "Mature forest and open meadow habitat",
+        "Bird and wildlife watching",
+        "Picnic areas and open green space",
+        "Easily accessible from Woodbridge neighbourhoods"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06",
+      "seasonal": true,
+      "seasonNote": "Closed for the season. Check back in early 2027 for opening dates."
+    },
+    {
+      "id": "vaughan-kleinburg-village",
+      "name": "Kleinburg Village",
+      "type": "place",
+      "category": "social",
+      "tags": [
+        "historic",
+        "village",
+        "shopping",
+        "food",
+        "community",
+        "free"
+      ],
+      "cost": "free",
+      "costNote": "Free to explore; shops and restaurants at own cost",
+      "address": "Islington Ave, Kleinburg, ON L0J 1C0",
+      "neighborhood": "Kleinburg",
+      "lat": 43.8595,
+      "lng": -79.6278,
+      "website": "https://downtownkleinburg.ca",
+      "description": "A heritage village embedded within Vaughan — one of the few historic streetscapes in York Region. Independent restaurants, art galleries, and shops set along a short main street above the Humber valley. Best visited alongside the McMichael gallery.",
+      "highlights": [
+        "Heritage architecture dating to the 1800s",
+        "Independent restaurants and specialty shops",
+        "Art galleries and craft studios",
+        "Overlooks the Humber River valley",
+        "Seasonal Kleinburg Binder Twine Festival (September)"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-public-library-civic-centre",
+      "name": "Vaughan Public Libraries — Civic Centre Branch",
+      "type": "resource",
+      "category": "mental",
+      "tags": [
+        "free",
+        "library",
+        "quiet",
+        "study",
+        "wifi",
+        "programs",
+        "digital"
+      ],
+      "cost": "free",
+      "address": "2141 Major Mackenzie Dr W, Vaughan, ON L6A 4H8",
+      "neighborhood": "Maple",
+      "lat": 43.8358,
+      "lng": -79.4978,
+      "website": "https://www.vaughanpl.info",
+      "description": "Vaughan's main library branch at Vaughan City Hall — bright and modern, with extensive digital access, study rooms, and community programming across multiple languages.",
+      "highlights": [
+        "Free library card and digital access — Libby, Kanopy, LinkedIn Learning",
+        "Study rooms and quiet reading areas",
+        "Programs in English, Italian, and other community languages",
+        "Maker space and digital media lab",
+        "Convenient location at Vaughan City Hall"
+      ],
+      "why": "Vaughan's library system is underused. The Civic Centre branch in particular has maker-space resources most people don't know about.",
+      "isRecommended": true,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-woodbridge-farmers-market",
+      "name": "Woodbridge Farmers' Market",
+      "type": "event",
+      "category": "food-culture",
+      "tags": [
+        "farmers market",
+        "local food",
+        "seasonal",
+        "saturday",
+        "free",
+        "community"
+      ],
+      "cost": "free",
+      "costNote": "Free to attend; produce and goods at vendors' prices",
+      "address": "Islington Ave & Woodbridge Ave, Woodbridge, ON",
+      "neighborhood": "Woodbridge",
+      "lat": 43.7886,
+      "lng": -79.5974,
+      "website": "https://www.york.ca/yorkregion/facilities/woodbridge-village-farmers-market",
+      "description": "A Saturday morning farmers' market in Woodbridge with local produce, Italian specialty foods, baked goods, and artisan vendors — reflecting the neighbourhood's strong Italian heritage.",
+      "highlights": [
+        "Local produce from regional farms",
+        "Italian specialty foods and baked goods",
+        "Artisan vendors and prepared foods",
+        "Saturday morning community atmosphere",
+        "May through October on Woodbridge's main street"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "seasonal": true,
+      "seasonNote": "Saturdays from June to October, 9am to 1pm. Check this year's dates.",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "vaughan-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "vaughan-kids-help-phone",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "vaughan-connexontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "211 Ontario",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "vaughan-211-ontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Community Volunteer Income Tax Program",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "vaughan-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "York Region crisis line (310-COPE)",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://yssn.ca",
+      "phone": "1-855-310-2673",
+      "description": "Free crisis support for York Region residents by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "vaughan-york-region-crisis-line-310-cope",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Vaughan Food Bank",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.vaughanfoodbank.ca",
+      "description": "The food bank serving Vaughan. Its site has current hours and how to get help.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "vaughan-vaughan-food-bank",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Vaughan Public Libraries",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://www.vaughanpl.info",
+      "description": "Free cards, study space, and programs at branches across Vaughan. See branch hours on its site.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "vaughan-vaughan-public-libraries",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-ansley-grove-library",
+      "name": "Ansley Grove Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Ansley Grove Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/1",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-bathurst-clark-resource-library",
+      "name": "Bathurst Clark Resource Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/2",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-carrville-library",
+      "name": "Carrville Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Carrville Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/18",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-civic-centre-resource-library",
+      "name": "Civic Centre Resource Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/11",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-dufferin-clark-library",
+      "name": "Dufferin Clark Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Dufferin Clark Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/3",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-kleinburg-library",
+      "name": "Kleinburg Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Kleinburg Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/5",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-mackenzie-health-vaughan-library",
+      "name": "Mackenzie Health Vaughan Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Mackenzie Health Vaughan Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/14",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-maple-library",
+      "name": "Maple Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Maple Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/6",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-pierre-berton-resource-library",
+      "name": "Pierre Berton Resource Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/7",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-pleasant-ridge-library",
+      "name": "Pleasant Ridge Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pleasant Ridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/10",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-vellore-village-library",
+      "name": "Vellore Village Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Vellore Village Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/12",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-vmc-library",
+      "name": "VMC Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/13",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-woodbridge-library",
+      "name": "Woodbridge Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Woodbridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/8",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    }
+  ]
+}

@@ -4,18 +4,29 @@
   "province": "Ontario",
   "country": "Canada",
   "tagline": "Conservation lands, cultural villages, and a community built around family life",
-  "heroDescription": "Vaughan sits at the northern edge of the GTA, where ravines and conservation areas give way to neighbourhoods that feel genuinely liveable. From the McMichael art collection in Kleinburg to the Kortright Centre's forest trails and a strong network of recreation facilities, Vaughan has more to offer than its suburban reputation suggests.",
+  "heroDescription": "Vaughan sits at the northern edge of the GTA, where ravines and conservation areas give way to neighbourhoods that feel liveable. From the village of Kleinburg to the Kortright Centre's forest trails and a strong network of recreation facilities, Vaughan has more to offer than its suburban reputation suggests.",
   "lat": 43.8361,
   "lng": -79.4983,
-  "contributors": ["CityRoots Community"],
-  "lastUpdated": "2026-06-06",
+  "contributors": [
+    "CityRoots Community",
+    "Public library calendars",
+    "Statistics Canada Open Licence"
+  ],
+  "lastUpdated": "2026-11-06",
   "places": [
     {
       "id": "vaughan-kortright-centre",
       "name": "Kortright Centre for Conservation",
       "type": "place",
       "category": "physical",
-      "tags": ["nature", "trails", "conservation", "family", "outdoors", "seasonal"],
+      "tags": [
+        "nature",
+        "trails",
+        "conservation",
+        "family",
+        "outdoors",
+        "seasonal"
+      ],
       "cost": "low",
       "costNote": "Adults $10, youth $7, children under 5 free; lower in off-season",
       "address": "9550 Pine Valley Dr, Woodbridge, ON L4L 1A6",
@@ -23,8 +34,7 @@
       "lat": 43.8364,
       "lng": -79.5686,
       "website": "https://kortright.org",
-      "hours": "Daily 10am–4pm",
-      "description": "One of Ontario's premier environmental education centres — 325 hectares of Humber River valley with 16km of trails through forests, wetlands, and meadows. Excellent programming year-round including winter snowshoe trails and a working maple syrup operation.",
+      "description": "An environmental education centre with 325 hectares of Humber River valley with 16km of trails through forests, wetlands, and meadows. Excellent programming year-round including winter snowshoe trails and a working maple syrup operation.",
       "highlights": [
         "16km of mapped trails through forest, meadow, and wetland",
         "Maple syrup season tours in March (family favourite)",
@@ -35,48 +45,28 @@
       "why": "The maple syrup season in March is spectacular — book in advance. The off-season is quieter and trails are far less crowded.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-05-30"
-    },
-    {
-      "id": "vaughan-mcmichael-gallery",
-      "name": "McMichael Canadian Art Collection",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": ["art", "gallery", "Group of Seven", "Canadian art", "nature", "heritage"],
-      "cost": "moderate",
-      "costNote": "Adults $18, youth $12, children under 6 free; free on some Sundays",
-      "address": "10365 Islington Ave, Kleinburg, ON L0J 1C0",
-      "neighborhood": "Kleinburg",
-      "lat": 43.8606,
-      "lng": -79.6266,
-      "website": "https://mcmichael.com",
-      "hours": "Daily 10am–5pm",
-      "description": "Canada's definitive collection of Group of Seven paintings — housed in a stunning log and stone building set into a hillside above the Humber River valley in historic Kleinburg. The grounds, gallery, and village together make this one of the most distinctive cultural destinations in the GTA.",
-      "highlights": [
-        "Largest collection of Group of Seven paintings in the world",
-        "Beautiful grounds with walking paths overlooking the valley",
-        "Historic Kleinburg village for lunch or browsing after",
-        "Rotating exhibitions of contemporary Canadian art",
-        "Sculpture garden and outdoor art installations"
-      ],
-      "why": "The building and setting are as impressive as the collection. Go in autumn when the surrounding forest is at its best.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-25"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "vaughan-boyd-conservation",
-      "name": "Boyd Conservation Area",
+      "name": "Boyd Conservation Park",
       "type": "place",
       "category": "physical",
-      "tags": ["outdoors", "trails", "nature", "free", "walking", "river", "year-round"],
+      "tags": [
+        "outdoors",
+        "trails",
+        "nature",
+        "free",
+        "walking",
+        "river",
+        "year-round"
+      ],
       "cost": "free",
       "address": "8739 Islington Ave, Woodbridge, ON L4L 1V9",
       "neighborhood": "Woodbridge",
       "lat": 43.8184,
       "lng": -79.5699,
-      "website": "https://trca.ca/parks-and-green-spaces/boyd-conservation-area/",
-      "hours": "Open year-round, dawn to dusk",
+      "website": "https://trca.ca/parks/boyd-conservation-area/",
       "description": "A free conservation area along the Humber River with walking trails through woodland and open meadow. Less structured than Kortright but also free — a good everyday trail option for Woodbridge and Vaughan residents.",
       "highlights": [
         "Walking trails along the Humber River",
@@ -87,22 +77,31 @@
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06",
+      "seasonal": true,
+      "seasonNote": "Closed for the season. Check back in early 2027 for opening dates."
     },
     {
       "id": "vaughan-kleinburg-village",
       "name": "Kleinburg Village",
       "type": "place",
       "category": "social",
-      "tags": ["historic", "village", "shopping", "food", "community", "free"],
+      "tags": [
+        "historic",
+        "village",
+        "shopping",
+        "food",
+        "community",
+        "free"
+      ],
       "cost": "free",
       "costNote": "Free to explore; shops and restaurants at own cost",
       "address": "Islington Ave, Kleinburg, ON L0J 1C0",
       "neighborhood": "Kleinburg",
       "lat": 43.8595,
       "lng": -79.6278,
-      "website": "https://kleinburg.ca",
-      "description": "A heritage village embedded within Vaughan — one of the few genuinely historic streetscapes in York Region. Independent restaurants, art galleries, and shops set along a short main street above the Humber valley. Best visited alongside the McMichael gallery.",
+      "website": "https://downtownkleinburg.ca",
+      "description": "A heritage village embedded within Vaughan — one of the few historic streetscapes in York Region. Independent restaurants, art galleries, and shops set along a short main street above the Humber valley. Best visited alongside the McMichael gallery.",
       "highlights": [
         "Heritage architecture dating to the 1800s",
         "Independent restaurants and specialty shops",
@@ -112,22 +111,29 @@
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-25"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "vaughan-public-library-civic-centre",
       "name": "Vaughan Public Libraries — Civic Centre Branch",
       "type": "resource",
       "category": "mental",
-      "tags": ["free", "library", "quiet", "study", "wifi", "programs", "digital"],
+      "tags": [
+        "free",
+        "library",
+        "quiet",
+        "study",
+        "wifi",
+        "programs",
+        "digital"
+      ],
       "cost": "free",
       "address": "2141 Major Mackenzie Dr W, Vaughan, ON L6A 4H8",
       "neighborhood": "Maple",
       "lat": 43.8358,
       "lng": -79.4978,
       "website": "https://www.vaughanpl.info",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–5pm, Sun 1pm–5pm",
-      "description": "Vaughan's main library branch at Vaughan City Hall — bright, modern, and well-resourced with extensive digital access, study rooms, and community programming across multiple languages.",
+      "description": "Vaughan's main library branch at Vaughan City Hall — bright and modern, with extensive digital access, study rooms, and community programming across multiple languages.",
       "highlights": [
         "Free library card and digital access — Libby, Kanopy, LinkedIn Learning",
         "Study rooms and quiet reading areas",
@@ -138,649 +144,1866 @@
       "why": "Vaughan's library system is underused. The Civic Centre branch in particular has maker-space resources most people don't know about.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "vaughan-maple-community-centre",
-      "name": "Maple Community Centre",
-      "type": "place",
-      "category": "physical",
-      "tags": ["fitness", "pool", "ice", "community", "programs", "family"],
-      "cost": "low",
-      "costNote": "Drop-in from $4–$7; recreation passes available",
-      "address": "10190 Keele St, Maple, ON L6A 1G3",
-      "neighborhood": "Maple",
-      "lat": 43.8523,
-      "lng": -79.499,
-      "website": "https://www.vaughan.ca/recreation",
-      "hours": "Mon–Fri 6am–10pm, Sat–Sun 7am–9pm",
-      "description": "A full-service community centre in central Vaughan with an indoor pool, fitness centre, twin ice pads, and gymnasium. Well-used by the Maple and Vaughan community for recreation programs across all age groups.",
-      "highlights": [
-        "Indoor pool with public swim sessions",
-        "Twin ice pads — public skating daily",
-        "Fitness centre and group fitness classes",
-        "Gymnasium for drop-in sports",
-        "Full calendar of registered programs for all ages"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "vaughan-recreation-programs",
-      "name": "City of Vaughan Recreation Programs",
-      "type": "program",
-      "category": "physical",
-      "tags": ["programs", "swimming", "skating", "fitness", "affordable", "family", "seniors"],
-      "cost": "low",
-      "costNote": "Programs from $30 per session; subsidy available through Leisure Access Program",
-      "address": "Multiple community centres across Vaughan",
-      "neighborhood": "Citywide",
-      "website": "https://www.vaughan.ca/recreation",
-      "description": "City of Vaughan recreation programs run across five community centres — swimming, skating, fitness, youth sports, and senior programs. The Leisure Access Program offers subsidized access for qualifying residents.",
-      "highlights": [
-        "Swimming lessons and public swims at multiple pools",
-        "Learn-to-skate and recreational skating programs",
-        "Fitness and wellness programs for adults and seniors",
-        "Youth drop-in and structured activities",
-        "Leisure Access Program for financial assistance"
-      ],
-      "why": "Apply for the Leisure Access Program before registering — it can significantly reduce program costs.",
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "vaughan-woodbridge-farmers-market",
       "name": "Woodbridge Farmers' Market",
       "type": "event",
       "category": "food-culture",
-      "tags": ["farmers market", "local food", "seasonal", "saturday", "free", "community"],
+      "tags": [
+        "farmers market",
+        "local food",
+        "seasonal",
+        "saturday",
+        "free",
+        "community"
+      ],
       "cost": "free",
       "costNote": "Free to attend; produce and goods at vendors' prices",
       "address": "Islington Ave & Woodbridge Ave, Woodbridge, ON",
       "neighborhood": "Woodbridge",
       "lat": 43.7886,
       "lng": -79.5974,
-      "website": "https://www.woodbridgebusiness.com/farmers-market",
-      "hours": "Saturdays 8am–1pm, May through October",
+      "website": "https://www.york.ca/yorkregion/facilities/woodbridge-village-farmers-market",
       "description": "A Saturday morning farmers' market in Woodbridge with local produce, Italian specialty foods, baked goods, and artisan vendors — reflecting the neighbourhood's strong Italian heritage.",
       "highlights": [
         "Local produce from regional farms",
         "Italian specialty foods and baked goods",
         "Artisan vendors and prepared foods",
-        "Vibrant Saturday morning community atmosphere",
+        "Saturday morning community atmosphere",
         "May through October on Woodbridge's main street"
       ],
       "isRecommended": false,
       "isFree": true,
       "seasonal": true,
-      "seasonNote": "Saturdays May through October",
-      "lastVerified": "2026-05-28"
+      "seasonNote": "Saturdays from June to October, 9am to 1pm. Check this year's dates.",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "vaughan-humber-arboretum",
-      "name": "Humber Arboretum",
-      "type": "place",
-      "category": "physical",
-      "tags": ["nature", "trails", "garden", "free", "walking", "education", "year-round"],
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
       "cost": "free",
-      "address": "205 Humber College Blvd, Etobicoke/North Humber, ON M9W 5L7",
-      "neighborhood": "Humber College (Etobicoke/Vaughan border)",
-      "lat": 43.7275,
-      "lng": -79.6082,
-      "website": "https://humberarboretum.on.ca",
-      "hours": "Grounds open daily dawn to dusk; Centre open Mon–Fri 8am–6pm",
-      "description": "100 acres of designed garden, natural forest, and wetland at the Humber College campus — free to visit year-round. One of the best free green spaces near the Vaughan/Etobicoke border with a genuine arboretum collection and well-maintained trails.",
-      "highlights": [
-        "100 acres of free accessible green space",
-        "Native plant garden, wetland, and designed landscape collections",
-        "4km of walking trails through forest and meadow",
-        "Environmental education programs and guided walks",
-        "Year-round access — beautiful in all four seasons"
-      ],
-      "why": "Accessible by transit (bus from Humber College terminal) and completely free — one of the most underrated green spaces near Vaughan.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-28"
-    },
-    {
-      "id": "vaughan-salvation-army-woodbridge",
-      "name": "Salvation Army Thrift Store — Woodbridge",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "affordable", "clothing", "housewares"],
-      "cost": "low",
-      "costNote": "Clothing from $2; housewares from $1",
-      "address": "4040 Hwy 7, Woodbridge, ON L4L 1V4",
-      "neighborhood": "Woodbridge",
-      "lat": 43.7894,
-      "lng": -79.5913,
-      "website": "https://www.thriftstore.ca",
-      "hours": "Mon–Sat 9am–8pm, Sun 11am–6pm",
-      "description": "A well-stocked Salvation Army thrift location serving the Woodbridge community — clothing, housewares, books, and furniture at low prices.",
-      "highlights": [
-        "Wide selection of clothing for all ages",
-        "Regular colour-tag sale days",
-        "Housewares, books, and small furniture",
-        "Accessible location on Hwy 7",
-        "Proceeds support Salvation Army programs"
-      ],
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "hours": "Open 24 hours",
+      "id": "vaughan-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "vaughan-value-village-maple",
-      "name": "Value Village — Maple",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "clothing", "affordable", "vintage"],
-      "cost": "low",
-      "costNote": "Clothing $5–$20; housewares from $2",
-      "address": "9255 Jane St, Maple, ON L6A 4G8",
-      "neighborhood": "Maple",
-      "lat": 43.855,
-      "lng": -79.5227,
-      "website": "https://www.valuevillage.com",
-      "hours": "Mon–Sat 9am–9pm, Sun 10am–8pm",
-      "description": "A large Value Village in Maple — good clothing selection with frequent new arrivals. Active community donation base means inventory turns over quickly.",
-      "highlights": [
-        "Large clothing section with frequent new arrivals",
-        "Tag colour sale days for extra savings",
-        "Housewares, décor, and small furniture",
-        "Maple GO area for easy transit access",
-        "Active donation base — good finds for regular visitors"
-      ],
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "hours": "Open 24 hours",
+      "id": "vaughan-kids-help-phone",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "vaughan-employment-centre",
-      "name": "Vaughan Employment Centre",
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "vaughan-connexontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "211 Ontario",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "vaughan-211-ontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Community Volunteer Income Tax Program",
       "type": "resource",
       "category": "financial",
-      "tags": ["employment", "free", "resume", "career", "newcomer", "programs"],
       "cost": "free",
-      "address": "3601 Hwy 7 W, Unit 121, Vaughan, ON L4L 8L5",
-      "neighborhood": "Woodbridge",
-      "lat": 43.7938,
-      "lng": -79.5765,
-      "website": "https://www.vaughanemploymentcentre.ca",
-      "hours": "Mon–Fri 8:30am–4:30pm",
-      "description": "A free government-funded employment centre offering job search support, resume and interview help, career planning, and connections to local employers. Serves Vaughan's diverse community including newcomers.",
-      "highlights": [
-        "Free resume review and cover letter support",
-        "One-on-one employment counselling",
-        "Job search workshops and networking events",
-        "Newcomer-specific employment programs",
-        "Local employer connections and job board"
-      ],
-      "why": "Vaughan's employment centre is under-promoted — the one-on-one counselling is genuinely useful and completely free.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "vaughan-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "vaughan-ontario-works-newcomer",
-      "name": "Newcomer Centre of Peel — Vaughan",
-      "type": "program",
-      "category": "social",
-      "tags": ["newcomer", "settlement", "free", "language", "community", "support"],
-      "cost": "free",
-      "address": "Vaughan, ON (call for location)",
-      "neighborhood": "Citywide",
-      "website": "https://www.ncop.ca",
-      "description": "Free settlement and integration services for newcomers to Vaughan and York Region — language classes, system navigation, community connections, and employment support.",
-      "highlights": [
-        "Free English language and literacy programs",
-        "Orientation to Canadian systems — healthcare, schools, banking",
-        "Community connections and peer support groups",
-        "Youth and senior newcomer programs",
-        "Multilingual staff and programming"
-      ],
-      "why": "Vaughan has a large newcomer population and these services are genuinely geared to the scale of that need.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "vaughan-mackenzie-health-wellness",
-      "name": "Mackenzie Health Wellness Programs",
-      "type": "program",
+      "name": "York Region crisis line (310-COPE)",
+      "type": "resource",
       "category": "mental",
-      "tags": ["mental health", "wellness", "free", "programs", "community", "support"],
       "cost": "free",
-      "address": "10 Trench St, Richmond Hill, ON (serves Vaughan)",
-      "neighborhood": "Citywide",
-      "website": "https://www.mackenziehealth.ca/community-programs",
-      "description": "Community mental health and wellness programs offered through Mackenzie Health — free group programs, support groups, and mental health navigation for York Region residents including Vaughan.",
-      "highlights": [
-        "Free community mental health programs",
-        "Peer support groups and self-management workshops",
-        "Mental health navigation and system connections",
-        "Programs for youth, adults, and seniors",
-        "Accessible across York Region including Vaughan"
-      ],
+      "website": "https://yssn.ca",
+      "phone": "1-855-310-2673",
+      "description": "Free crisis support for York Region residents by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "hours": "Open 24 hours",
+      "id": "vaughan-york-region-crisis-line-310-cope",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "vaughan-canada-day-festival",
-      "name": "Vaughan Canada Day Festival",
+      "name": "Vaughan Food Bank",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.vaughanfoodbank.ca",
+      "description": "The food bank serving Vaughan. Its site has current hours and how to get help.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "vaughan-vaughan-food-bank",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Vaughan Public Libraries",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://www.vaughanpl.info",
+      "description": "Free cards, study space, and programs at branches across Vaughan. See branch hours on its site.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "vaughan-vaughan-public-libraries",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-ansley-grove-library",
+      "name": "Ansley Grove Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Ansley Grove Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/1",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-bathurst-clark-resource-library",
+      "name": "Bathurst Clark Resource Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/2",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-carrville-library",
+      "name": "Carrville Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Carrville Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/18",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-civic-centre-resource-library",
+      "name": "Civic Centre Resource Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/11",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-dufferin-clark-library",
+      "name": "Dufferin Clark Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Dufferin Clark Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/3",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-kleinburg-library",
+      "name": "Kleinburg Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Kleinburg Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/5",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-mackenzie-health-vaughan-library",
+      "name": "Mackenzie Health Vaughan Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Mackenzie Health Vaughan Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/14",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-maple-library",
+      "name": "Maple Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Maple Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/6",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-pierre-berton-resource-library",
+      "name": "Pierre Berton Resource Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/7",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-pleasant-ridge-library",
+      "name": "Pleasant Ridge Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pleasant Ridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/10",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-vellore-village-library",
+      "name": "Vellore Village Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Vellore Village Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/12",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-vmc-library",
+      "name": "VMC Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/13",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-branch-woodbridge-library",
+      "name": "Woodbridge Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Woodbridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/events_calendars/calendar/library/8",
+      "description": "A Vaughan Public Libraries branch, free to visit. The linked calendar shows what is on there.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-event-stories-come-alive-bathurst-clark-resource-library",
+      "name": "Stories Come Alive",
       "type": "event",
-      "category": "events",
-      "tags": ["festival", "free", "community", "annual", "family", "fireworks"],
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
       "cost": "free",
-      "address": "Vaughan City Hall, 2141 Major Mackenzie Dr W, Vaughan, ON",
-      "neighborhood": "Maple",
-      "lat": 43.8358,
-      "lng": -79.4978,
-      "website": "https://www.vaughan.ca/events",
-      "hours": "July 1 annually",
-      "description": "Vaughan's signature annual community festival — free admission, live entertainment across multiple stages, family activities, food vendors, and fireworks. Held at Vaughan City Hall.",
-      "highlights": [
-        "Free admission all day",
-        "Live music on multiple stages",
-        "Family activities and children's entertainment",
-        "Food vendors and community organizations",
-        "Fireworks display at dusk"
-      ],
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3821",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
       "isRecommended": false,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual — July 1 (Canada Day)",
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:00:00.000Z",
+        "2026-11-13T15:00:00.000Z",
+        "2026-11-20T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T15:00:00.000Z"
     },
     {
-      "id": "vaughan-thornhill-community-centre",
-      "name": "Thornhill Community Centre",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["community", "quiet", "meeting", "programs", "seniors", "free"],
+      "id": "vaughan-event-baby-adventures-storytime-woodbridge-library",
+      "name": "Baby Adventures Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
       "cost": "free",
-      "costNote": "Free drop-in programs; some registered programs have fees",
-      "address": "7755 Bayview Ave, Thornhill, ON L3T 4P1",
-      "neighborhood": "Thornhill",
-      "lat": 43.8077,
-      "lng": -79.4156,
-      "website": "https://www.vaughan.ca/recreation/community-centres",
-      "hours": "Mon–Fri 9am–9pm, Sat–Sun 10am–5pm",
-      "description": "A community centre in Thornhill offering meeting rooms, drop-in programs, and a welcoming social space. The senior drop-in programs and social clubs are particularly active.",
-      "highlights": [
-        "Senior drop-in programs and social clubs",
-        "Meeting rooms available for community groups",
-        "Free drop-in programs on select days",
-        "Comfortable, welcoming environment",
-        "Active community calendar"
-      ],
+      "address": "Woodbridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2865",
+      "description": "A free program at Woodbridge Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
       "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "vaughan-coffee-culture-woodbridge",
-      "name": "Café culture in Woodbridge",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["cafe", "coffee", "community", "italian", "espresso", "low key"],
-      "cost": "low",
-      "costNote": "Espresso $2–$4; light food $5–$12",
-      "address": "Woodbridge Ave, Woodbridge, ON",
-      "neighborhood": "Woodbridge",
-      "lat": 43.7886,
-      "lng": -79.5913,
-      "description": "Woodbridge has a quietly excellent café culture rooted in its Italian community — independent espresso bars and Italian bakeries along Woodbridge Ave that are unpretentious, inexpensive, and genuinely good.",
-      "highlights": [
-        "Independent Italian-owned espresso bars with authentic café culture",
-        "Baked goods, pastries, and light lunches",
-        "Low-pressure, community-oriented atmosphere",
-        "Much less crowded than equivalent spots in Toronto",
-        "Reflects Woodbridge's Italian heritage authentically"
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T19:00:00.000Z",
+        "2026-11-13T19:00:00.000Z",
+        "2026-11-20T19:00:00.000Z",
+        "2026-11-27T19:00:00.000Z",
+        "2026-12-04T19:00:00.000Z",
+        "2026-12-11T19:00:00.000Z",
+        "2026-12-18T19:00:00.000Z"
       ],
-      "why": "Skip the chain cafes. Woodbridge's Italian espresso bars are the real thing — and cheaper.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "endsAt": "2026-12-18T19:00:00.000Z"
     },
     {
-      "id": "vaughan-dance-vaughan",
-      "name": "Dance Vaughan",
-      "type": "place",
+      "id": "vaughan-event-little-explorers-storytime-civic-centre-resource-library",
+      "name": "Little Explorers Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2924",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:00:00.000Z",
+        "2026-11-14T15:00:00.000Z",
+        "2026-11-21T15:00:00.000Z",
+        "2026-11-28T15:00:00.000Z",
+        "2026-12-05T15:00:00.000Z",
+        "2026-12-12T15:00:00.000Z",
+        "2027-01-02T15:00:00.000Z"
+      ],
+      "endsAt": "2027-01-02T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-vaughan-fan-fest-pierre-berton-resource-library",
+      "name": "Vaughan Fan Fest",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2387",
+      "description": "A free program at Pierre Berton Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-paws-4-stories-vmc-library",
+      "name": "Paws 4 Stories",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/1853",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T16:00:00.000Z",
+        "2026-12-05T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-05T16:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-chess-club-vellore-village-library",
+      "name": "Chess Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Vellore Village Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/735",
+      "description": "A free program at Vellore Village Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T18:00:00.000Z",
+        "2026-11-14T18:00:00.000Z",
+        "2026-11-21T18:00:00.000Z",
+        "2026-11-28T18:00:00.000Z",
+        "2026-12-05T18:00:00.000Z",
+        "2026-12-12T18:00:00.000Z"
+      ],
+      "endsAt": "2026-12-12T18:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-lets-build-bathurst-clark-resource-library",
+      "name": "Let's Build!",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3660",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-creative-age-drum-percussion-circle-civic-centre-resource-library",
+      "name": "Creative Age: Drum & Percussion Circle",
+      "type": "event",
       "category": "dance-music",
-      "tags": ["dance", "classes", "community", "adult", "kids", "beginners"],
-      "cost": "moderate",
-      "costNote": "Classes from $90–$160/month depending on program",
-      "address": "Vaughan, ON (multiple locations)",
-      "neighborhood": "Citywide",
-      "website": "https://www.dancevaughan.com",
-      "description": "A community dance school offering programs across multiple Vaughan locations — ballet, contemporary, jazz, hip hop, and ballroom for all ages and levels. Adult beginner programs run each season.",
-      "highlights": [
-        "Programs for ages 2 to adult",
-        "Adult beginner and recreational classes",
-        "Multiple Vaughan locations convenient to residents",
-        "Annual showcase performances",
-        "Trial classes available before committing"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "vaughan-sports-dome",
-      "name": "Vaughan Sports Dome",
-      "type": "place",
-      "category": "physical",
-      "tags": ["sports", "fitness", "indoor", "soccer", "basketball", "community"],
-      "cost": "moderate",
-      "costNote": "Drop-in varies; league registration from $80/season",
-      "address": "Kirby Road, Vaughan, ON",
-      "neighborhood": "Maple",
-      "lat": 43.8647,
-      "lng": -79.4819,
-      "website": "https://www.vaughan.ca/recreation",
-      "description": "A large indoor sports facility in Vaughan with fields, courts, and programming for soccer, basketball, and other sports. Popular for adult recreational leagues.",
-      "highlights": [
-        "Indoor soccer fields — adult and youth leagues",
-        "Basketball courts and multi-sport programming",
-        "Adult recreational leagues at various skill levels",
-        "Year-round indoor sports regardless of weather",
-        "Open community play sessions on select days"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "vaughan-emily-carr-secondary",
-      "name": "Vaughan Public Art Trail",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": ["public art", "free", "outdoors", "walking", "community"],
-      "cost": "free",
-      "address": "Various locations, Vaughan, ON",
-      "neighborhood": "Citywide",
-      "website": "https://www.vaughan.ca/culture/public-art",
-      "description": "A growing collection of public art installations across Vaughan's parks, streetscapes, and civic spaces — free to view anytime. The City of Vaughan has been building out its public art program with works that reflect the community's multicultural character.",
-      "highlights": [
-        "Free public artworks across Vaughan parks and civic spaces",
-        "Growing collection reflecting Vaughan's multicultural community",
-        "Accessible year-round during daylight hours",
-        "Interactive and community-designed installations",
-        "Self-guided walking opportunities"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "vaughan-bouldering-gym",
-      "name": "Beta Boulders — Vaughan",
-      "type": "place",
-      "category": "physical",
       "tags": [
-        "bouldering",
-        "climbing",
-        "fitness",
-        "social",
-        "beginner friendly",
-        "vibe check",
-        "local favourite"
-      ],
-      "cost": "moderate",
-      "costNote": "Day pass ~$22; shoe rental $5; monthly membership ~$65",
-      "address": "Vaughan, ON (Jane St / Hwy 400 area)",
-      "neighborhood": "Concord",
-      "lat": 43.797,
-      "lng": -79.524,
-      "hours": "Mon–Fri 6am–11pm, Sat–Sun 8am–10pm",
-      "description": "An indoor bouldering gym in Vaughan that's become a go-to for the young professional crowd in the 400-corridor area. No ropes required — just shoes, chalk, and determination. The routes are reset frequently so regulars always have new problems to work on.",
-      "highlights": [
-        "Bouldering walls at all difficulty levels",
-        "Routes reset weekly — always something new",
-        "Intro sessions for complete beginners — no shame in v0",
-        "Strong community vibe — people help each other with problems",
-        "Open long hours to fit around any schedule"
-      ],
-      "why": "There aren't many good third-place options in Vaughan that aren't malls. This fills that gap. You'll spend three hours without noticing and leave feeling genuinely accomplished.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "vaughan-woodbridge-italian-bakery",
-      "name": "Italian Bakery Row — Woodbridge",
-      "type": "place",
-      "category": "food-culture",
-      "tags": [
-        "italian",
-        "bakery",
-        "aesthetic",
-        "local favourite",
-        "hidden gem",
-        "authentic",
-        "content creator spot"
-      ],
-      "cost": "low",
-      "costNote": "Pastries $2–$5; espresso $2–$3.50; bread $4–$8",
-      "address": "Woodbridge Ave, Woodbridge, Vaughan, ON",
-      "neighborhood": "Woodbridge",
-      "lat": 43.7886,
-      "lng": -79.5913,
-      "hours": "Most open 6am–6pm, closed Sunday afternoons",
-      "description": "Woodbridge's Italian bakeries have been operating for decades and remain the real thing — sfogliatelle, cornetti, proper cannoli, and espresso pulled by people who've been doing it their whole lives. The morning rush at 7am is half the experience.",
-      "highlights": [
-        "Sfogliatelle, cornetti, and brioche that will end your Starbucks era",
-        "Proper Italian espresso — short, strong, and under $3",
-        "Baked fresh daily — go early for the best selection",
-        "The 7am crowd of retirees who've been coming for 30 years is part of the vibe",
-        "Bread loaves for $5 that belong on a different continent"
-      ],
-      "why": "This is one of the most authentic food experiences in the GTA and almost nobody under 30 knows about it. A cornetto and espresso here costs $5 and it's better than anything in Toronto's Queen West at $14.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "vaughan-vintage-concord",
-      "name": "Concord Vintage Market",
-      "type": "place",
-      "category": "thrifting",
-      "tags": [
-        "vintage",
-        "secondhand",
-        "thrift flip",
-        "hidden gem",
-        "local favourite",
-        "clothing",
-        "aesthetic"
-      ],
-      "cost": "low",
-      "costNote": "Items $10–$50; mix of curated and bulk vintage",
-      "address": "Jane St / Hwy 400 corridor, Vaughan, ON",
-      "neighborhood": "Concord",
-      "lat": 43.799,
-      "lng": -79.5201,
-      "hours": "Fri–Sun 11am–7pm",
-      "description": "A weekend vintage market in the Concord area of Vaughan drawing sellers from across York Region. Mix of curated vintage clothing, furniture, and collectibles. The Saturday turnover is particularly good — get there before noon for first pick.",
-      "highlights": [
-        "Multiple sellers under one roof — range of styles and eras",
-        "Saturday morning has the freshest stock",
-        "Vintage 80s–90s sportswear, denim, leather jackets",
-        "Haggling is expected and usually works",
-        "Vaughan's answer to the Kensington Market vintage scene"
-      ],
-      "why": "I drove 20 minutes to get here and found a vintage Maple Leafs jacket for $30. The Saturday morning selection is legitimately better than most dedicated vintage shops in Toronto.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "vaughan-mills-pop-culture",
-      "name": "Pop Culture & Geek Shops — Vaughan Mills",
-      "type": "place",
-      "category": "social",
-      "tags": [
-        "anime",
-        "gaming",
-        "pop culture",
-        "figures",
-        "shopping",
-        "local favourite",
-        "indoor"
-      ],
-      "cost": "low",
-      "costNote": "Free to browse; merch varies $5–$150+",
-      "address": "Vaughan Mills Mall, 1 Bass Pro Mills Dr, Vaughan, ON L4K 5W4",
-      "neighborhood": "Concord",
-      "lat": 43.8243,
-      "lng": -79.5406,
-      "website": "https://www.vaughanmills.com",
-      "hours": "Mon–Sat 10am–9pm, Sun 11am–7pm",
-      "description": "Vaughan Mills has carved out an interesting niche with several pop culture, gaming, and hobby shops alongside the usual mall tenants — Newbies Toys, specialty game shops, and the occasional pop-up selling anime merchandise, trading cards, and collectibles.",
-      "highlights": [
-        "Specialty toy and collectible shops with rotating inventory",
-        "Gaming and TCG shops — good for Pokémon and MTG cards",
-        "Bass Pro is unironically great for a free wander",
-        "Pop-up vendors change seasonally — check before you go",
-        "Outlet mall format means some genuinely good deals mixed in"
-      ],
-      "why": "Vaughan Mills gets dismissed as just another mall but the pop culture corner genuinely delivers. Good for rainy days when you want to browse without spending much.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "vaughan-kleinburg-mural-trail",
-      "name": "Kleinburg Village Art Walk",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": [
-        "art",
-        "murals",
-        "galleries",
-        "free",
-        "aesthetic",
-        "instagram worthy",
-        "content creator spot"
+        "Vaughan Public Libraries"
       ],
       "cost": "free",
-      "address": "Islington Ave, Kleinburg, Vaughan, ON",
-      "neighborhood": "Kleinburg",
-      "lat": 43.8595,
-      "lng": -79.6278,
-      "hours": "Open year-round; galleries have their own hours",
-      "description": "Kleinburg village has a surprising concentration of independent art galleries and public art within its small heritage streetscape — all walkable, most free to enter. Combined with McMichael next door, it's a genuine arts afternoon without spending much.",
-      "highlights": [
-        "Independent galleries on Islington Ave — mostly free entry",
-        "Public sculpture and installation art along the main street",
-        "McMichael Canadian Art Collection is steps away",
-        "The village streetscape itself is photogenic year-round",
-        "Best in autumn when the valley colours are at peak"
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3569",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T19:00:00.000Z"
       ],
-      "why": "Kleinburg feels like a completely different world from the rest of Vaughan. The gallery-hop is free, the views over the Humber valley are genuinely beautiful, and you can add McMichael if you're in the mood to spend.",
-      "isFree": true,
-      "lastVerified": "2026-06-06"
+      "endsAt": "2026-11-08T19:00:00.000Z"
     },
     {
-      "id": "vaughan-disc-golf-boyd",
-      "name": "Boyd Conservation Disc Golf",
-      "type": "place",
-      "category": "physical",
-      "tags": [
-        "disc golf",
-        "outdoors",
-        "free",
-        "nature",
-        "underrated",
-        "social",
-        "hidden gem"
-      ],
-      "cost": "free",
-      "costNote": "Free to play; bring your own discs",
-      "address": "Boyd Conservation Area, 8739 Islington Ave, Woodbridge, ON",
-      "neighborhood": "Woodbridge",
-      "lat": 43.8184,
-      "lng": -79.5699,
-      "hours": "Dawn to dusk, year-round",
-      "description": "The Boyd Conservation Area doubles as an informal disc golf spot used by the local Vaughan disc golf community. The wooded terrain along the Humber makes it more interesting than a flat-field course. Free, uncrowded, and a great excuse to be in the forest.",
-      "highlights": [
-        "Free to use — just bring discs (starter set ~$30 if you need to buy)",
-        "Wooded, hilly terrain makes for more interesting play than flat courses",
-        "Community-maintained informal course — UDisc may have a map",
-        "Wildlife sightings common along the Humber corridor",
-        "Almost never crowded — very local knowledge"
-      ],
-      "why": "Disc golf in a real forest conservation area is categorically better than disc golf in a field. Boyd is genuinely beautiful and this is a good reason to actually use it. Start with a driver and a putter.",
-      "isFree": true,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "vaughan-craft-beer-local",
-      "name": "Local Brewery Taproom — Vaughan",
-      "type": "place",
-      "category": "social",
-      "tags": [
-        "craft beer",
-        "brewery",
-        "taproom",
-        "social",
-        "local",
-        "vibe check",
-        "date spot"
-      ],
-      "cost": "moderate",
-      "costNote": "Pints $7–$10; flights $14–$18",
-      "address": "Vaughan, ON (Concord / Maple industrial area)",
-      "neighborhood": "Concord",
-      "lat": 43.802,
-      "lng": -79.5156,
-      "hours": "Wed–Thu 4pm–10pm, Fri 3pm–11pm, Sat–Sun 12pm–10pm",
-      "description": "Vaughan's industrial zones have quietly developed a small brewery taproom scene — a handful of local craft breweries with on-site taprooms that are infinitely more interesting than a bar. Dog-friendly patios, board games on tables, and beer actually made on the premises.",
-      "highlights": [
-        "Beer brewed on-site — actually fresh and rotating seasonally",
-        "Dog-friendly patio on warmer days",
-        "Board games and casual atmosphere — not trying too hard",
-        "Flights let you try multiple styles without committing",
-        "Way less crowded than equivalent spots in the city"
-      ],
-      "why": "Vaughan taprooms feel like a secret. The industrial setting sounds unappealing but the actual experience is cozy, unpretentious, and genuinely better than a loud bar. Saturday afternoon patio is the move.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "vaughan-night-market-event",
-      "name": "Vaughan Night Market (Pop-Up)",
+      "id": "vaughan-event-korean-storytime-bathurst-clark-resource-library",
+      "name": "(한국어 스토리타임) / Korean Storytime",
       "type": "event",
-      "category": "events",
+      "category": "social",
       "tags": [
-        "night market",
-        "food trucks",
-        "free",
-        "summer",
-        "community",
-        "vendors",
-        "tiktok spot"
+        "Vaughan Public Libraries"
       ],
       "cost": "free",
-      "costNote": "Free to attend; food and vendor goods at own cost",
-      "address": "Vaughan City Hall grounds / Vaughan Mills area, Vaughan, ON",
-      "neighborhood": "Maple / Concord",
-      "lat": 43.8358,
-      "lng": -79.4978,
-      "description": "Seasonal evening market pop-ups that rotate around Vaughan — food trucks, artisan vendors, and live entertainment. The City of Vaughan and local BIAs have been growing the night market scene, with events usually announced a few weeks ahead on city social media.",
-      "highlights": [
-        "Food trucks with rotating vendors each event",
-        "Local artisan goods and pop-up sellers",
-        "Live music or DJ depending on the event",
-        "Free to attend — just eat your way through it",
-        "Follow @CityofVaughan on Instagram for event announcements"
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2753",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T15:00:00.000Z",
+        "2026-12-14T15:00:00.000Z"
       ],
-      "why": "Vaughan doesn't have a ton of spontaneous nightlife options so when these pop up, they're worth going. The food truck selection has gotten better each year. Follow city social media so you don't miss the good ones.",
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Summer and early fall — dates vary, follow city social channels",
-      "lastVerified": "2026-06-06"
+      "endsAt": "2026-12-14T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-visit-the-therapy-dogs-mackenzie-health-vaughan-library",
+      "name": "Visit the Therapy Dogs",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Mackenzie Health Vaughan Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2397",
+      "description": "A free program at Mackenzie Health Vaughan Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T17:00:00.000Z",
+        "2026-12-14T17:00:00.000Z"
+      ],
+      "endsAt": "2026-12-14T17:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-lets-go-to-the-movies-dufferin-clark-library",
+      "name": "Let's Go to the Movies",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Dufferin Clark Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/832",
+      "description": "A free program at Dufferin Clark Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T18:30:00.000Z",
+        "2026-11-16T18:30:00.000Z",
+        "2026-11-23T18:30:00.000Z",
+        "2026-11-30T18:30:00.000Z",
+        "2026-12-07T18:30:00.000Z",
+        "2026-12-14T18:30:00.000Z",
+        "2027-01-04T18:30:00.000Z"
+      ],
+      "endsAt": "2027-01-04T18:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-zumbini-maple-library",
+      "name": "Zumbini",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Maple Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3551",
+      "description": "A free program at Maple Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T18:30:00.000Z",
+        "2026-11-16T18:30:00.000Z",
+        "2026-11-23T18:30:00.000Z",
+        "2026-11-30T18:30:00.000Z",
+        "2026-12-07T18:30:00.000Z",
+        "2026-12-14T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-14T18:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-english-conversation-circle-maple-library",
+      "name": "English Conversation Circle",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Maple Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2377",
+      "description": "A free program at Maple Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:00:00.000Z",
+        "2026-11-23T23:00:00.000Z",
+        "2026-12-07T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-07T23:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-robotics-club-bathurst-clark-resource-library",
+      "name": "Robotics Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2494",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z",
+        "2026-11-16T23:30:00.000Z",
+        "2026-11-23T23:30:00.000Z",
+        "2026-11-30T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-30T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-reading-buddies-en-fran-ais-pierre-berton-resource-library",
+      "name": "Reading Buddies… en français",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4062",
+      "description": "A free program at Pierre Berton Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z",
+        "2026-11-16T23:30:00.000Z",
+        "2026-11-23T23:30:00.000Z",
+        "2026-11-30T23:30:00.000Z",
+        "2026-12-07T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-07T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-cercle-de-discussion-french-meetup-for-adults-itc",
+      "name": "Cercle de discussion / French Meetup for Adults",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "ITC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2830",
+      "description": "A free program at ITC, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T00:00:00.000Z",
+        "2026-11-17T00:00:00.000Z",
+        "2026-11-24T00:00:00.000Z",
+        "2026-12-01T00:00:00.000Z",
+        "2026-12-08T00:00:00.000Z",
+        "2026-12-15T00:00:00.000Z",
+        "2027-01-05T00:00:00.000Z"
+      ],
+      "endsAt": "2027-01-05T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-snacking-on-stories-for-homeschoolers-vmc-library",
+      "name": "Snacking on Stories for Homeschoolers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4048",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:30:00.000Z",
+        "2026-12-08T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-08T15:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-meetonthespectrum-job-fair-civic-centre-resource-library",
+      "name": "Meetonthespectrum Job Fair",
+      "type": "event",
+      "category": "financial",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4101",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T17:00:00.000Z"
+      ],
+      "endsAt": "2026-11-10T17:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-d-d-club-carrville-library",
+      "name": "D&D Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Carrville Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2528",
+      "description": "A free program at Carrville Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:00:00.000Z",
+        "2026-11-24T23:00:00.000Z",
+        "2026-12-08T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-08T23:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-romance-book-club-civic-centre-resource-library",
+      "name": "Romance Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3110",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T00:00:00.000Z",
+        "2026-12-09T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-coffee-conversation-civic-centre-resource-library",
+      "name": "Coffee & Conversation",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3974",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T15:00:00.000Z",
+        "2026-11-18T15:00:00.000Z",
+        "2026-11-25T15:00:00.000Z",
+        "2026-12-02T15:00:00.000Z",
+        "2026-12-09T15:00:00.000Z",
+        "2026-12-16T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-16T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-lheure-du-conte-french-storytime-bathurst-clark-resource-library",
+      "name": "L'Heure du conte / French Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2321",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T15:00:00.000Z",
+        "2026-12-09T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-scholars-hub-home-itc",
+      "name": "Scholars' Hub @ Home",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "ITC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3531",
+      "description": "A free program at ITC, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T17:00:00.000Z",
+        "2026-11-18T17:00:00.000Z",
+        "2026-11-25T17:00:00.000Z",
+        "2026-12-02T17:00:00.000Z",
+        "2026-12-09T17:00:00.000Z",
+        "2026-12-16T17:00:00.000Z"
+      ],
+      "endsAt": "2026-12-16T17:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-baby-music-and-movement-kleinburg-library",
+      "name": "Baby Music and Movement",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Kleinburg Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/1810",
+      "description": "A free program at Kleinburg Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T18:30:00.000Z",
+        "2026-11-18T18:30:00.000Z",
+        "2026-11-25T18:30:00.000Z",
+        "2026-12-02T18:30:00.000Z",
+        "2026-12-09T18:30:00.000Z",
+        "2026-12-16T18:30:00.000Z",
+        "2026-12-23T18:30:00.000Z",
+        "2026-12-30T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-30T18:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-reading-buddies-dufferin-clark-library",
+      "name": "Reading Buddies",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Dufferin Clark Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3240",
+      "description": "A free program at Dufferin Clark Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-02T23:30:00.000Z",
+        "2026-12-09T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-09T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-little-kitchen-time-vmc-library",
+      "name": "Little Kitchen Time",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3508",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T15:00:00.000Z",
+        "2026-11-19T15:00:00.000Z",
+        "2026-11-26T15:00:00.000Z",
+        "2026-12-03T15:00:00.000Z",
+        "2026-12-10T15:00:00.000Z",
+        "2026-12-17T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-cooking-with-diabetes-vmc-library",
+      "name": "Cooking with Diabetes",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3720",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T16:00:00.000Z",
+        "2026-11-19T16:00:00.000Z",
+        "2026-11-26T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T16:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-coding-buddies-ansley-grove-library",
+      "name": "Coding Buddies",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Ansley Grove Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3085",
+      "description": "A free program at Ansley Grove Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z",
+        "2026-11-19T23:30:00.000Z",
+        "2026-11-26T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-26T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-code-a-traffic-light-with-arduino-pierre-berton-resource-library",
+      "name": "Code a Traffic Light with Arduino!",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3917",
+      "description": "A free program at Pierre Berton Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-home-energy-saving-workshop-dufferin-clark-library",
+      "name": "Home Energy Saving Workshop",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Dufferin Clark Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4094",
+      "description": "A free program at Dufferin Clark Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-pok-mon-league-woodbridge-library",
+      "name": "Pokémon League",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Woodbridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2279",
+      "description": "A free program at Woodbridge Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z",
+        "2026-12-10T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-10T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-babysitting-course-with-heart2heart-civic-centre-resource-library",
+      "name": "Babysitting Course with Heart2Heart",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3228",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T14:30:00.000Z"
+      ],
+      "endsAt": "2026-11-14T14:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-cardboard-fort-fun-ansley-grove-library",
+      "name": "Cardboard Fort Fun",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Ansley Grove Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2320",
+      "description": "A free program at Ansley Grove Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-bhajan-jamming-session-dufferin-clark-library",
+      "name": "Bhajan Jamming Session",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Dufferin Clark Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4095",
+      "description": "A free program at Dufferin Clark Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T20:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T20:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-mini-makers-dufferin-clark-library",
+      "name": "Mini Makers",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Dufferin Clark Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3981",
+      "description": "A free program at Dufferin Clark Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T16:00:00.000Z",
+        "2026-11-29T16:00:00.000Z",
+        "2026-12-13T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-13T16:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-sensory-social-pierre-berton-resource-library",
+      "name": "Sensory Social",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2425",
+      "description": "A free program at Pierre Berton Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T16:00:00.000Z",
+        "2026-12-20T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-20T16:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-recording-studio-101-civic-centre-resource-library",
+      "name": "Recording Studio 101",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2639",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-16T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-16T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-sci-fi-book-club-pierre-berton-resource-library",
+      "name": "Sci-Fi Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3258",
+      "description": "A free program at Pierre Berton Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T00:00:00.000Z",
+        "2026-12-22T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-22T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-hora-de-cuentos-spanish-storytime-pierre-berton-resource-library",
+      "name": "Hora de cuentos / Spanish Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2630",
+      "description": "A free program at Pierre Berton Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T15:00:00.000Z",
+        "2026-12-08T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-08T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-steam-club-for-homeschoolers-bathurst-clark-resource-library",
+      "name": "STEAM Club for Homeschoolers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2484",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T19:00:00.000Z",
+        "2026-12-01T19:00:00.000Z",
+        "2026-12-15T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-writers-room-civic-centre-resource-library",
+      "name": "Writers' Room",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2431",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T00:00:00.000Z",
+        "2026-12-16T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-16T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-baby-social-ansley-grove-library",
+      "name": "Baby Social",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Ansley Grove Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2573",
+      "description": "A free program at Ansley Grove Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T15:00:00.000Z",
+        "2026-12-16T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-16T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-real-talk-carrville-library",
+      "name": "Real Talk",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Carrville Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3739",
+      "description": "A free program at Carrville Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T22:30:00.000Z"
+      ],
+      "endsAt": "2026-11-18T22:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-hebrew-storytime-bathurst-clark-resource-library",
+      "name": "שעת סיפור בעברית / Hebrew Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3004",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T22:30:00.000Z",
+        "2026-12-09T22:30:00.000Z"
+      ],
+      "endsAt": "2026-12-09T22:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-minecrafters-club-vellore-village-library",
+      "name": "Minecrafters Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Vellore Village Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2214",
+      "description": "A free program at Vellore Village Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T23:00:00.000Z",
+        "2026-11-25T23:00:00.000Z",
+        "2026-12-02T23:00:00.000Z",
+        "2026-12-09T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T23:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-cooking-in-french-vmc-library",
+      "name": "Cooking in French",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3960",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T23:15:00.000Z"
+      ],
+      "endsAt": "2026-11-18T23:15:00.000Z"
+    },
+    {
+      "id": "vaughan-event-mystery-book-club-mackenzie-health-vaughan-library",
+      "name": "Mystery Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Mackenzie Health Vaughan Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3734",
+      "description": "A free program at Mackenzie Health Vaughan Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-19T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-steam-club-maple-library",
+      "name": "STEAM Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Maple Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2278",
+      "description": "A free program at Maple Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T00:00:00.000Z",
+        "2026-12-03T00:00:00.000Z",
+        "2026-12-17T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-home-equity-retirement-bathurst-clark-resource-library",
+      "name": "Home Equity & Retirement",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4100",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-19T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-living-well-club-woodbridge-library",
+      "name": "Living Well Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Woodbridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3346",
+      "description": "A free program at Woodbridge Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T19:00:00.000Z",
+        "2026-12-17T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-custom-ornament-with-laser-cutter-pierre-berton-resource-library",
+      "name": "Custom Ornament with Laser Cutter",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Pierre Berton Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2911",
+      "description": "A free program at Pierre Berton Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-19T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-p-a-day-camp-maker-lab-civic-centre-resource-library",
+      "name": "P.A. Day Camp: Maker Lab",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4104",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T14:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T14:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-p-a-day-fun-at-the-library-ansley-grove-library",
+      "name": "P.A. Day Fun at the Library!",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Ansley Grove Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4044",
+      "description": "A free program at Ansley Grove Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-bilingual-steam-tour-eiffel-bathurst-clark-resource-library",
+      "name": "Bilingual STEAM: Tour Eiffel!",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4080",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T19:30:00.000Z"
+      ],
+      "endsAt": "2026-11-20T19:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-baking-arabic-pastries-vmc-library",
+      "name": "Baking Arabic Pastries",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4088",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-intermediate-3d-design-bathurst-clark-resource-library",
+      "name": "Intermediate 3D Design",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4064",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-puppet-show-fun-civic-centre-resource-library",
+      "name": "Puppet Show Fun",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/2193",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T16:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-bake-club-for-adults-vmc-library",
+      "name": "Bake Club for Adults",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3337",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T18:00:00.000Z",
+        "2026-12-20T18:00:00.000Z"
+      ],
+      "endsAt": "2026-12-20T18:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-connected-through-love-mackenzie-health-vaughan-library",
+      "name": "Connected Through Love",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Mackenzie Health Vaughan Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4098",
+      "description": "A free program at Mackenzie Health Vaughan Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-makers-with-a-cause-vellore-village-library",
+      "name": "Makers With a Cause",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Vellore Village Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3299",
+      "description": "A free program at Vellore Village Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-stans-in-the-stacks-k-pop-maple-library",
+      "name": "Stans in the Stacks: K-Pop",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Maple Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4076",
+      "description": "A free program at Maple Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-russian-storytime-bathurst-clark-resource-library",
+      "name": "Рассказы на русском языке / Russian Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3328",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-23T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-23T15:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-photo-club-civic-centre-resource-library",
+      "name": "Photo Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4041",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-23T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-23T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-event-7-keys-for-navigating-illness-itc",
+      "name": "7 Keys for Navigating Illness",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "ITC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4093",
+      "description": "A free program at ITC, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-24T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-kitchen-steam-club-vmc-library",
+      "name": "Kitchen STEAM Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "VMC Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4049",
+      "description": "A free program at VMC Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-25T23:15:00.000Z",
+        "2026-12-16T23:15:00.000Z"
+      ],
+      "endsAt": "2026-12-16T23:15:00.000Z"
+    },
+    {
+      "id": "vaughan-event-great-novels-book-club-bathurst-clark-resource-library",
+      "name": "Great Novels Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3255",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T00:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-community-connections-civic-centre-resource-library",
+      "name": "Community Connections",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Civic Centre Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/4107",
+      "description": "A free program at Civic Centre Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T18:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T18:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-creative-age-orizomegami-bathurst-clark-resource-library",
+      "name": "Creative Age: Orizomegami",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Bathurst Clark Resource Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3878",
+      "description": "A free program at Bathurst Clark Resource Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-introduction-to-diabetes-and-healthy-eating-ansley-grove-library",
+      "name": "Introduction to Diabetes and Healthy Eating",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Ansley Grove Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3441",
+      "description": "A free program at Ansley Grove Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T19:00:00.000Z"
+    },
+    {
+      "id": "vaughan-event-storie-in-italiano-italian-storytime-woodbridge-library",
+      "name": "Storie in Italiano / Italian Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Vaughan Public Libraries"
+      ],
+      "cost": "free",
+      "address": "Woodbridge Library, Vaughan",
+      "website": "https://www.vaughanpl.info/programs/view/3262",
+      "description": "A free program at Woodbridge Library, part of Vaughan Public Libraries. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T23:30:00.000Z",
+        "2026-12-17T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-17T23:30:00.000Z"
     }
   ]
 }

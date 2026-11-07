@@ -9,26 +9,23 @@ async function axe(page: import("@playwright/test").Page) {
 }
 
 test.describe("guides", () => {
-  test("the index lists six guides and each opens with numbered stops @mobile", async ({
+  test("the index lists every city guide and each opens with numbered stops @mobile", async ({
     page,
   }) => {
     await page.goto("/guides");
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("A day out, already planned.");
     const links = page.locator("main ol h2 a");
-    await expect(links).toHaveCount(6);
+    await expect(links).toHaveCount(10);
     expect(await axe(page)).toEqual([]);
 
-    await page.getByRole("link", { name: "A rainy Sunday in Waterloo under $15" }).click();
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-      "A rainy Sunday in Waterloo under $15",
-    );
+    await page.getByRole("link", { name: "A rainy Sunday in Waterloo" }).click();
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("A rainy Sunday in Waterloo");
     await expect(page.getByText("Under $15", { exact: true })).toBeVisible();
-    await expect(page.getByText(/^Stop \d$/)).toHaveCount(5);
+    await expect(page.getByText(/^Stop \d$/)).toHaveCount(4);
     expect(await axe(page)).toEqual([]);
 
-    await page.getByRole("link", { name: "Smile Tiger Coffee" }).click();
-    await page.waitForURL(/\/places\//);
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Smile Tiger");
+    await page.getByRole("link", { name: "Canadian Clay and Glass Gallery" }).click();
+    await expect(page.getByRole("dialog").getByRole("heading")).toContainText("Clay and Glass");
   });
 
   test("city pages link to their guide", async ({ page }) => {
@@ -60,6 +57,7 @@ test.describe("link previews", () => {
   test("place pages have a generated preview image", async ({ page, request }) => {
     await page.goto("/explore?city=markham");
     await page.locator("main :is(h2, h3) a").first().click();
+    await page.getByRole("dialog").getByRole("link", { name: "See full details" }).click();
     await page.waitForURL(/\/places\//);
     const content = await page.locator('meta[property="og:image"]').first().getAttribute("content");
     const image = await request.get(new URL(content as string).pathname);

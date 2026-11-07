@@ -4,13 +4,15 @@
   "province": "Ontario",
   "country": "Canada",
   "tagline": "Parks, culture and community, all within reach",
-  "heroDescription": "Richmond Hill is one of York Region's most diverse and welcoming communities. From sprawling parks to cultural festivals, free programs and a thriving caf\u00e9 scene, there's more to discover here than most people realize.",
+  "heroDescription": "Richmond Hill is one of York Region's most diverse and welcoming communities. Large parks, cultural festivals, free programs, and plenty of cafes.",
   "lat": 43.8828,
   "lng": -79.4403,
   "contributors": [
-    "CityRoots Community"
+    "CityRoots Community",
+    "Public library calendars",
+    "Statistics Canada Open Licence"
   ],
-  "lastUpdated": "2026-06-01",
+  "lastUpdated": "2026-11-06",
   "places": [
     {
       "id": "mill-pond-park",
@@ -30,19 +32,19 @@
       "neighborhood": "Mill Pond",
       "lat": 43.87,
       "lng": -79.4367,
-      "website": "https://www.richmondhill.ca/en/things-to-do/parks/mill-pond-park.aspx",
-      "description": "Richmond Hill's most beloved park \u2014 a scenic millpond surrounded by trails, benches, and greenery. Summer home of the free Concerts in the Park series every Thursday evening.",
+      "website": "https://www.richmondhill.ca/en/things-to-do/Mill-Pond-Park.aspx",
+      "description": "A millpond surrounded by trails, benches, and greenery. Summer home of the free Concerts in the Park series every Thursday evening.",
       "highlights": [
-        "Free Concerts in the Park every Thursday July\u2013August",
+        "Free Concerts in the Park every Thursday July–August",
         "Outdoor ice skating on the pond in winter",
         "Mill Pond Gallery on-site (Richmond Hill Group of Artists)",
         "Peaceful walking trails year-round",
         "Community BBQ events and seasonal festivities"
       ],
-      "why": "Make this your Thursday evening summer ritual \u2014 live music, community, and no admission.",
+      "why": "Make this your Thursday evening summer ritual — live music, community, and no admission.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "richmond-hill-public-library",
@@ -63,11 +65,10 @@
       "lat": 43.8697,
       "lng": -79.4347,
       "website": "https://www.rhpl.ca",
-      "hours": "Mon\u2013Thu 9am\u20139pm, Fri\u2013Sat 9am\u20136pm, Sun 1pm\u20135pm",
       "description": "A welcoming community hub with books, digital resources, free programs, and quiet study spaces. Cardholders get access to online learning platforms, newspapers, and e-books at no cost.",
       "highlights": [
         "Free library card for all Richmond Hill residents",
-        "Free programs for all ages \u2014 crafts, talks, workshops",
+        "Free programs for all ages — crafts, talks, workshops",
         "Digital access: Libby, Kanopy streaming, LinkedIn Learning",
         "Cozy reading nooks and free WiFi throughout",
         "Meeting rooms available for community groups"
@@ -75,7 +76,7 @@
       "why": "A Richmond Hill library card is one of the best free resources in the city. Don't sleep on it.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "david-dunlap-observatory",
@@ -90,13 +91,13 @@
         "family"
       ],
       "cost": "low",
-      "costNote": "Public nights ~$15\u2013$20/person",
+      "costNote": "Public nights ~$15–$20/person",
       "address": "123 Hillsview Drive, Richmond Hill, ON",
       "neighborhood": "Observatory Hill",
       "lat": 43.8627,
       "lng": -79.4222,
       "website": "https://www.dunlap.utoronto.ca",
-      "description": "Home to Canada's largest optical telescope, this heritage observatory hosts public stargazing nights, guided tours, and science education programs in a stunning hilltop setting.",
+      "description": "Home to Canada's largest optical telescope, this heritage observatory hosts public stargazing nights, guided tours, and science education programs on a hilltop.",
       "highlights": [
         "Public stargazing nights with Canada's largest optical telescope",
         "Guided tours of the historic 1935 heritage building",
@@ -104,10 +105,10 @@
         "150+ acres of protected forest and trails",
         "Free daytime access to the grounds and walking paths"
       ],
-      "why": "A truly unique Richmond Hill experience \u2014 stargazing with a telescope the size of a small building.",
+      "why": "A truly unique Richmond Hill experience — stargazing with a telescope the size of a small building.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-05-10"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "richmond-hill-centre-performing-arts",
@@ -138,38 +139,7 @@
         "Regular folk, jazz, and world music series"
       ],
       "isFree": false,
-      "lastVerified": "2026-04-30"
-    },
-    {
-      "id": "viva-dance-studios",
-      "name": "Viva Dance Studios",
-      "type": "place",
-      "category": "dance-music",
-      "tags": [
-        "dance",
-        "salsa",
-        "swing",
-        "beginner",
-        "classes",
-        "social"
-      ],
-      "cost": "low",
-      "costNote": "Drop-in ~$15\u2013$22/class, monthly passes available",
-      "address": "10720 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "lat": 43.8841,
-      "lng": -79.4401,
-      "description": "A community-beloved dance studio offering social dancing, beginner-friendly classes, and regular dance nights. Specializing in salsa, swing, tango, and bachata.",
-      "highlights": [
-        "Beginner salsa and swing classes \u2014 no partner needed",
-        "Regular social dance nights open to all levels",
-        "Welcoming, non-intimidating atmosphere",
-        "Seasonal free intro workshops",
-        "Multiple class styles including Argentine tango and bachata"
-      ],
-      "why": "Best place in the area to meet people and move. First class is often discounted.",
-      "isFree": false,
-      "lastVerified": "2026-05-01"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "richmond-green-sports-centre",
@@ -190,8 +160,8 @@
       "neighborhood": "Richmond Green",
       "lat": 43.9097,
       "lng": -79.4092,
-      "website": "https://www.richmondhill.ca",
-      "description": "A world-class sports complex featuring an aquatic centre, gymnasium, fitness facilities, and a huge outdoor park with trails, splash pad, and sports fields \u2014 all free to enjoy outdoors.",
+      "website": "https://www.richmondhill.ca/en/things-to-do/richmond-green-sports-dome.aspx",
+      "description": "A large sports complex featuring an aquatic centre, gymnasium, fitness facilities, and a huge outdoor park with trails, splash pad, and sports fields — all free to enjoy outdoors.",
       "highlights": [
         "Massive outdoor park with splash pad (free in summer)",
         "12km of scenic trails connecting to the park",
@@ -201,38 +171,7 @@
       ],
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "cafe-1842",
-      "name": "Caf\u00e9 1842",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": [
-        "cafe",
-        "quiet",
-        "wifi",
-        "work",
-        "local",
-        "cozy"
-      ],
-      "cost": "low",
-      "costNote": "Coffee $3.50\u2013$6.50",
-      "address": "9350 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge & Major Mackenzie",
-      "lat": 43.8771,
-      "lng": -79.4391,
-      "description": "A charming independent caf\u00e9 in a heritage-style setting near downtown Richmond Hill. Known for quality espresso drinks, homemade pastries, and a genuinely welcoming atmosphere.",
-      "highlights": [
-        "Excellent pour-over and espresso made by passionate baristas",
-        "Free WiFi and comfortable seating for work or reading",
-        "Locally sourced pastries and light bites",
-        "Quiet enough for focused work, lively enough to feel social",
-        "Dog-friendly patio in warmer months"
-      ],
-      "why": "Skip the chain caf\u00e9 \u2014 this one actually cares about your coffee.",
-      "isFree": false,
-      "lastVerified": "2026-04-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "talize-richmond-hill",
@@ -253,7 +192,6 @@
       "lat": 43.8742,
       "lng": -79.4382,
       "website": "https://www.talize.com",
-      "hours": "Mon\u2013Sat 9am\u20139pm, Sun 10am\u20137pm",
       "description": "One of York Region's largest thrift stores with a constantly rotating inventory of clothing, housewares, books, and furniture. Clean, organized, and regularly stocked.",
       "highlights": [
         "Huge selection of clothing for all sizes and styles",
@@ -263,196 +201,7 @@
         "Accepts donations of gently used items"
       ],
       "isFree": false,
-      "lastVerified": "2026-05-05"
-    },
-    {
-      "id": "richmond-hill-farmers-market",
-      "name": "Richmond Hill Farmers' Market",
-      "type": "event",
-      "category": "food-culture",
-      "tags": [
-        "farmers market",
-        "local",
-        "food",
-        "seasonal",
-        "outdoor",
-        "free"
-      ],
-      "cost": "free",
-      "costNote": "Free to attend; vendors accept cash and card",
-      "address": "Mill Pond Park, Richmond Hill, ON",
-      "neighborhood": "Mill Pond",
-      "lat": 43.87,
-      "lng": -79.4367,
-      "website": "https://www.richmondhill.ca",
-      "description": "Richmond Hill's beloved seasonal farmers' market running on Saturday mornings from May through October. Local produce, artisan goods, baked items, and community vendors all in one beautiful outdoor setting.",
-      "highlights": [
-        "Fresh local produce directly from Ontario farms",
-        "Artisan honey, jams, and preserves",
-        "Baked goods, cheese, and specialty foods",
-        "Live music and family activities on market days",
-        "Free admission \u2014 just bring your reusable bag"
-      ],
-      "why": "Saturday morning at the farmers' market is one of Richmond Hill's best traditions. Go before 10am for the best selection.",
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "May\u2013October, Saturdays 8am\u20131pm",
-      "lastVerified": "2026-05-18"
-    },
-    {
-      "id": "ymca-richmond-hill",
-      "name": "YMCA of Greater Toronto \u2014 Richmond Hill",
-      "type": "place",
-      "category": "physical",
-      "tags": [
-        "gym",
-        "pool",
-        "fitness",
-        "programs",
-        "community",
-        "subsidized"
-      ],
-      "cost": "moderate",
-      "costNote": "Memberships from ~$45\u2013$65/month; subsidy available for qualifying families",
-      "address": "50 Wright Street, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "lat": 43.8705,
-      "lng": -79.4368,
-      "website": "https://www.ymcagta.org",
-      "hours": "Mon\u2013Fri 5:30am\u201310pm, Sat\u2013Sun 7am\u20138pm",
-      "description": "A full-service community fitness centre with pool, gym, group fitness classes, and youth programs. Financial assistance is available for those who qualify \u2014 no one is turned away.",
-      "highlights": [
-        "Olympic-size pool with lane swimming and family swims",
-        "Group fitness classes included with membership",
-        "Youth programs, sports leagues, and day camps",
-        "Financial assistance program \u2014 ask at the front desk",
-        "Community showers and lockers available"
-      ],
-      "isFree": false,
-      "lastVerified": "2026-04-15"
-    },
-    {
-      "id": "markham-stouffville-hospital-wellness",
-      "name": "Oak Valley Health \u2014 Community Mental Health",
-      "type": "resource",
-      "category": "mental",
-      "tags": [
-        "mental health",
-        "free",
-        "counselling",
-        "support",
-        "community",
-        "health"
-      ],
-      "cost": "free",
-      "address": "10 Trench Street, Richmond Hill, ON",
-      "neighborhood": "Healthcare District",
-      "lat": 43.8647,
-      "lng": -79.4256,
-      "website": "https://www.oakvalleyhealth.ca",
-      "description": "Free community mental health programs offered through Oak Valley Health, including workshops on stress, anxiety, and resilience. No referral required for most programs.",
-      "highlights": [
-        "Free mental wellness workshops open to the community",
-        "Peer support programs for anxiety and depression",
-        "Caregiver support resources",
-        "Youth mental health programs",
-        "No referral required for most community programs"
-      ],
-      "isFree": true,
-      "lastVerified": "2026-04-10"
-    },
-    {
-      "id": "york-region-employment-centre",
-      "name": "York Region Employment Centre",
-      "type": "resource",
-      "category": "financial",
-      "tags": [
-        "free",
-        "employment",
-        "resume",
-        "job search",
-        "workshops",
-        "career"
-      ],
-      "cost": "free",
-      "address": "50 High Tech Road, Richmond Hill, ON",
-      "neighborhood": "High Tech Business Park",
-      "lat": 43.8763,
-      "lng": -79.3804,
-      "website": "https://www.york.ca/employment",
-      "hours": "Mon\u2013Fri 8:30am\u20134:30pm",
-      "description": "Fully funded employment services including resume help, job search support, interview coaching, and workshops on financial literacy and career planning. Free for all York Region residents.",
-      "highlights": [
-        "Free one-on-one career counselling",
-        "Resume and cover letter workshops",
-        "Job search computers and printing",
-        "Referrals to subsidized training programs",
-        "Financial literacy workshops"
-      ],
-      "isFree": true,
-      "lastVerified": "2026-05-01"
-    },
-    {
-      "id": "roots-studio-ceramics",
-      "name": "Roots Studio \u2014 Community Ceramics",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": [
-        "pottery",
-        "ceramics",
-        "studio",
-        "creative",
-        "classes",
-        "hands-on"
-      ],
-      "cost": "moderate",
-      "costNote": "8-week sessions ~$175\u2013$220; includes clay and firing",
-      "address": "780 Elgin Mills Road West, Richmond Hill, ON",
-      "neighborhood": "Elgin Mills",
-      "lat": 43.9034,
-      "lng": -79.4621,
-      "description": "A community ceramics studio offering wheel-throwing and hand-building classes for adults and teens. A genuinely therapeutic, creative space where beginners are warmly welcomed.",
-      "highlights": [
-        "8-week wheel-throwing courses for total beginners",
-        "Open studio time for enrolled students",
-        "All materials (clay, glaze, firing) included in course fees",
-        "Small class sizes for personal instruction",
-        "Teen programs on weekends"
-      ],
-      "why": "Making something with your hands is quietly life-changing. This studio is the place to start.",
-      "isFree": false,
-      "lastVerified": "2026-03-20"
-    },
-    {
-      "id": "heritage-square-food-hall",
-      "name": "Heritage Square Food Hall",
-      "type": "place",
-      "category": "food-culture",
-      "tags": [
-        "food",
-        "multicultural",
-        "halal",
-        "asian",
-        "affordable",
-        "lunch"
-      ],
-      "cost": "low",
-      "costNote": "Meals $10\u2013$18",
-      "address": "9200 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge & Major Mackenzie",
-      "lat": 43.8778,
-      "lng": -79.4393,
-      "description": "A vibrant indoor food hall celebrating Richmond Hill's multicultural food scene. Vendors representing Persian, Chinese, Korean, Lebanese, and Caribbean cuisines under one roof.",
-      "highlights": [
-        "10+ vendors representing diverse global cuisines",
-        "Affordable lunch options from $10",
-        "Halal-certified vendors available",
-        "Regular food pop-ups and new vendor rotations",
-        "Comfortable communal seating area"
-      ],
-      "isFree": false,
-      "lastVerified": "2026-04-25"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "thursday-concerts-mill-pond",
@@ -472,7 +221,7 @@
       "neighborhood": "Mill Pond",
       "lat": 43.87,
       "lng": -79.4367,
-      "website": "https://www.richmondhill.ca",
+      "website": "https://www.richmondhill.ca/en/things-to-do/concerts-in-the-park.aspx",
       "description": "Richmond Hill's free outdoor concert series every Thursday evening through July and August. Local and regional musicians perform in the Mill Pond Park setting. Bring a blanket.",
       "highlights": [
         "Free admission, no tickets required",
@@ -485,8 +234,8 @@
       "isRecommended": true,
       "isFree": true,
       "seasonal": true,
-      "seasonNote": "July\u2013August, every Thursday 7pm\u20139pm",
-      "lastVerified": "2026-05-01"
+      "seasonNote": "July–August, every Thursday 7pm–9pm",
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "lake-wilcox-park",
@@ -506,7 +255,7 @@
       "neighborhood": "Oak Ridges",
       "lat": 43.9476,
       "lng": -79.4397,
-      "website": "https://www.richmondhill.ca",
+      "website": "https://www.richmondhill.ca/en/things-to-do/Lake-Wilcox-Park.aspx",
       "description": "A natural lake in Richmond Hill's Oak Ridges neighbourhood with sandy beaches, a boat launch, and scenic walking trails through Oak Ridges Moraine terrain. Free parking available.",
       "highlights": [
         "Designated swimming area with lifeguards in summer",
@@ -518,38 +267,7 @@
       "why": "Richmond Hill's best-kept secret for a summer swim without the long drive north.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-22"
-    },
-    {
-      "id": "press-coffee-richmond-hill",
-      "name": "Press Coffee",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": [
-        "coffee",
-        "wifi",
-        "work",
-        "cozy",
-        "independent",
-        "local"
-      ],
-      "cost": "low",
-      "costNote": "Coffee $4\u2013$7",
-      "address": "10376 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "lat": 43.8812,
-      "lng": -79.4402,
-      "hours": "Mon\u2013Fri 7am\u20136pm, Sat\u2013Sun 8am\u20135pm",
-      "description": "A focused, no-frills independent coffee shop on Yonge. Single-origin pour-overs, excellent espresso, and a quiet enough environment to actually think. No chain caf\u00e9 vibes.",
-      "highlights": [
-        "Single-origin coffees on rotation",
-        "Plenty of seating for laptop work",
-        "Friendly staff who actually know their coffee",
-        "Simple food: pastries and a few sandwiches",
-        "Dog-friendly"
-      ],
-      "isFree": false,
-      "lastVerified": "2026-05-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "richmond-hill-doors-open",
@@ -569,7 +287,7 @@
       "neighborhood": "City-wide",
       "lat": 43.8828,
       "lng": -79.4403,
-      "website": "https://www.richmondhill.ca",
+      "website": "https://www.richmondhill.ca/en/things-to-do/events.aspx",
       "description": "An annual free event where Richmond Hill's most significant heritage buildings open their doors to the public. Self-guided tours of sites normally closed to visitors, guided walking tours, and local history exhibits.",
       "highlights": [
         "Free access to heritage sites normally closed to the public",
@@ -581,68 +299,7 @@
       "isFree": true,
       "seasonal": true,
       "seasonNote": "Annual spring event, check city website for dates",
-      "lastVerified": "2026-04-01"
-    },
-    {
-      "id": "community-living-york-south",
-      "name": "Community Living York South",
-      "type": "resource",
-      "category": "social",
-      "tags": [
-        "community",
-        "support",
-        "inclusion",
-        "free",
-        "social",
-        "programs"
-      ],
-      "cost": "free",
-      "address": "220 East Beaver Creek Road, Richmond Hill, ON",
-      "neighborhood": "East Richmond Hill",
-      "lat": 43.8645,
-      "lng": -79.3841,
-      "website": "https://www.communitylivingyorksouth.ca",
-      "hours": "Mon\u2013Fri 9am\u20135pm",
-      "description": "A non-profit supporting adults with intellectual disabilities in Richmond Hill through community inclusion programs, employment support, and social activities. Volunteer opportunities are open to the public.",
-      "highlights": [
-        "Community inclusion and social programs",
-        "Volunteer opportunities for individuals and groups",
-        "Employment support services",
-        "Recreational and social activities",
-        "Open to community members who want to connect and volunteer"
-      ],
-      "isFree": true,
-      "lastVerified": "2026-04-15"
-    },
-    {
-      "id": "richmond-hill-drop-in-centre",
-      "name": "Southlake Community Health Centre",
-      "type": "resource",
-      "category": "financial",
-      "tags": [
-        "health",
-        "community",
-        "free",
-        "social services",
-        "support",
-        "referrals"
-      ],
-      "cost": "free",
-      "address": "190 High Street, Richmond Hill, ON",
-      "neighborhood": "Central Richmond Hill",
-      "lat": 43.8701,
-      "lng": -79.4358,
-      "hours": "Mon\u2013Fri 9am\u20134:30pm",
-      "description": "A community health centre offering free primary health care, social services navigation, and referrals to community supports regardless of OHIP status. Sliding scale fees for some services.",
-      "highlights": [
-        "Free primary care for uninsured and underinsured residents",
-        "Social worker access and social services navigation",
-        "Food bank referrals and basic needs support",
-        "Mental health and addiction counselling",
-        "Health programs in multiple languages"
-      ],
-      "isFree": true,
-      "lastVerified": "2026-04-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "rh-recreation-programs",
@@ -663,7 +320,7 @@
       "neighborhood": "City-wide",
       "lat": 43.8828,
       "lng": -79.4403,
-      "website": "https://www.richmondhill.ca/recreation",
+      "website": "https://www.richmondhill.ca/en/things-to-do/Adult-Programs.aspx",
       "description": "Richmond Hill's seasonal recreation program guide covering hundreds of registered activities including swimming lessons, skating, sports, fitness, and arts programs for all ages.",
       "highlights": [
         "Hundreds of programs each season for all ages",
@@ -673,39 +330,7 @@
         "Register online via the Active Richmond Hill portal"
       ],
       "isFree": false,
-      "lastVerified": "2026-05-01"
-    },
-    {
-      "id": "rh-english-language-programs",
-      "name": "LINC \u2014 Language Instruction for Newcomers",
-      "type": "program",
-      "category": "social",
-      "tags": [
-        "english",
-        "language",
-        "newcomers",
-        "free",
-        "settlement",
-        "classes"
-      ],
-      "cost": "free",
-      "address": "Multiple locations, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "lat": 43.8828,
-      "lng": -79.4403,
-      "website": "https://www.york.ca/newcomers",
-      "hours": "Varies by location and level",
-      "description": "Free federally funded English language classes for adult newcomers to Canada. Offered at multiple sites across Richmond Hill with childcare support available at select locations.",
-      "highlights": [
-        "Free English instruction at all levels, beginner to advanced",
-        "Childcare available at select locations",
-        "Classes offered mornings, afternoons, and evenings",
-        "Includes Canadian orientation and settlement support",
-        "Certificate recognized by employers and institutions"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-04-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "rh-elgin-mills-community-centre",
@@ -721,13 +346,12 @@
         "family"
       ],
       "cost": "low",
-      "costNote": "Drop-in from $4\u2013$7; recreation passes available",
+      "costNote": "Drop-in from $4–$7; recreation passes available",
       "address": "10401 Yonge St, Richmond Hill, ON L4C 3B8",
       "neighborhood": "Elgin Mills",
       "lat": 43.9077,
       "lng": -79.4423,
-      "website": "https://www.richmondhill.ca/recreation",
-      "hours": "Mon\u2013Fri 6am\u201310pm, Sat\u2013Sun 7am\u20139pm",
+      "website": "https://www.richmondhill.ca/en/things-to-do/Get-Active.aspx",
       "description": "A full community centre in north Richmond Hill with an indoor pool, fitness centre, gymnasium, and a calendar of registered programs for all ages. Quieter than the Richmond Green centre and well-suited for regulars.",
       "highlights": [
         "Indoor leisure pool with public swim sessions",
@@ -738,7 +362,7 @@
       ],
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "rh-bayview-regional-park",
@@ -761,1076 +385,36 @@
       "lng": -79.4006,
       "website": "https://www.richmondhill.ca/parks",
       "hours": "Open year-round",
-      "description": "A linear trail corridor running through Richmond Hill along Bayview Avenue \u2014 good for walking and cycling year-round, connecting neighbourhoods to parks and amenities along a scenic wooded route.",
+      "description": "A linear trail corridor running through Richmond Hill along Bayview Avenue — good for walking and cycling year-round, connecting neighbourhoods to parks and amenities along a scenic wooded route.",
       "highlights": [
         "Multi-use paved trail for walking and cycling",
         "Connects multiple parks and green spaces",
-        "Year-round access \u2014 cleared in winter",
+        "Year-round access — cleared in winter",
         "Wildlife and bird viewing along the corridor",
         "Accessible from multiple neighbourhood entry points"
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-winter-farmers-market",
-      "name": "Richmond Hill Winter Farmers' Market",
-      "type": "event",
-      "category": "food-culture",
-      "tags": [
-        "farmers market",
-        "local food",
-        "seasonal",
-        "saturday",
-        "free",
-        "winter",
-        "community"
-      ],
-      "cost": "free",
-      "costNote": "Free to attend; produce and goods at vendors' prices",
-      "address": "Richmond Hill Centre for the Performing Arts, 10268 Yonge St",
-      "neighborhood": "Downtown Richmond Hill",
-      "lat": 43.8711,
-      "lng": -79.4381,
-      "website": "https://www.rhfm.ca",
-      "hours": "Saturdays 9am\u20131pm, October through April",
-      "description": "An indoor Saturday farmers' market running through the winter months \u2014 local produce, preserves, baked goods, and artisan vendors when outdoor markets are closed for the season. One of the few winter markets in York Region.",
-      "highlights": [
-        "Runs October through April \u2014 fills the gap when outdoor markets close",
-        "Local produce, preserves, baked goods, and artisan goods",
-        "Indoor and warm \u2014 good for cold Saturdays",
-        "Community atmosphere with familiar vendors",
-        "Located at the Centre for the Performing Arts"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Saturdays October through April (indoor winter market)",
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-york-region-financial-support",
-      "name": "York Region Financial Assistance Programs",
-      "type": "resource",
-      "category": "financial",
-      "tags": [
-        "financial assistance",
-        "free",
-        "benefits",
-        "support",
-        "community",
-        "emergency"
-      ],
-      "cost": "free",
-      "address": "50 High Tech Rd, Richmond Hill, ON L4B 4N7",
-      "neighborhood": "Hi-Tech District",
-      "website": "https://www.york.ca/wps/portal/yorkhome/support",
-      "hours": "Mon\u2013Fri 8:30am\u20134:30pm",
-      "description": "York Region's hub for social assistance, housing support, and financial programs \u2014 Ontario Works, emergency assistance, housing supports, and connections to community resources for residents facing financial hardship.",
-      "highlights": [
-        "Ontario Works income and employment support",
-        "Emergency financial assistance for housing and utilities",
-        "Housing support and affordable housing connections",
-        "Connections to food banks and community resources",
-        "Newcomer and family-specific support programs"
-      ],
-      "why": "York Region's support services are less well-known than Toronto's \u2014 many eligible residents don't know what's available.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "richmond-hill-bouldering",
-      "name": "Basecamp Climbing \u2014 Richmond Hill",
-      "type": "place",
-      "category": "physical",
-      "tags": [
-        "bouldering",
-        "climbing",
-        "fitness",
-        "social",
-        "beginner friendly",
-        "aesthetic",
-        "vibe check"
-      ],
-      "cost": "moderate",
-      "costNote": "Day pass ~$22; shoe rental $5; monthly membership ~$65",
-      "address": "Yonge & 16th Ave area, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "lat": 43.8839,
-      "lng": -79.4401,
-      "description": "An indoor bouldering gym that's quietly become one of the most social spots in Richmond Hill for the under-30 crowd. No ropes, no harnesses \u2014 just problems, chalk, and people cheering you on.",
-      "highlights": [
-        "Bouldering walls set at all difficulty levels \u2014 v0 to v10+",
-        "New routes set regularly so it never gets stale",
-        "Super beginner-friendly \u2014 staff will teach you the basics for free",
-        "Great social scene; people actually talk to strangers here",
-        "Day pass includes shoe rental option"
-      ],
-      "why": "Showed up knowing nothing and left with sore fingers and three new friends. This is genuinely the most fun workout you can do in Richmond Hill right now.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "richmond-hill-bubble-tea-row",
-      "name": "Bubble Tea Row \u2014 Times Square Plaza",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": [
-        "bubble tea",
-        "boba",
-        "aesthetic",
-        "asian",
-        "tiktok spot",
-        "local favourite",
-        "instagram worthy"
-      ],
-      "cost": "low",
-      "costNote": "Drinks $7\u2013$12 depending on shop",
-      "address": "Times Square Blvd, Richmond Hill, ON L4C 0T6",
-      "neighborhood": "Bayview & Highway 7",
-      "lat": 43.8431,
-      "lng": -79.4081,
-      "hours": "Most shops open 11am\u20139:30pm daily",
-      "description": "A cluster of independent bubble tea shops along Times Square Blvd in Richmond Hill's most Asian-Canadian commercial strip. Tiger sugar brown sugar boba, fresh taro drinks, cheese tea \u2014 the real stuff, not the watered-down mall versions.",
-      "highlights": [
-        "Multiple competing bubble tea shops in one plaza \u2014 try them all",
-        "Tiger Sugar-style brown sugar boba that's actually worth the hype",
-        "Cheese tea, taro slush, and seasonal specials",
-        "Busy on Friday nights \u2014 great for people-watching",
-        "Instagram-worthy drinks without a downtown price tag"
-      ],
-      "why": "This strip has better boba than most of Scarborough and nobody outside Richmond Hill seems to know about it. Brown sugar tiger milk tea here hits different.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "richmond-hill-vintage-exchange",
-      "name": "Vintage Exchange RH",
-      "type": "place",
-      "category": "thrifting",
-      "tags": [
-        "vintage",
-        "thrift flip",
-        "secondhand",
-        "aesthetic",
-        "hidden gem",
-        "local favourite",
-        "y2k"
-      ],
-      "cost": "low",
-      "costNote": "Items typically $8\u2013$45; curated so priced above Talize but far below retail",
-      "address": "Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "lat": 43.876,
-      "lng": -79.439,
-      "hours": "Wed\u2013Sun 12pm\u20137pm",
-      "description": "A small curated vintage shop on Yonge run by a local reseller with a genuinely good eye. Y2K pieces, 90s streetwear, vintage athletic gear, and the occasional designer find mixed in. Cash only, follow their Instagram for new drops.",
-      "highlights": [
-        "Curated vintage \u2014 not the bulk thrift experience, actually edited",
-        "Y2K, 90s streetwear, vintage Adidas and Nike, denim",
-        "New drops announced on Instagram before they hit the floor",
-        "Owner knows the provenance of most pieces \u2014 fun to ask",
-        "Hidden in a strip mall \u2014 easy to walk past if you're not looking"
-      ],
-      "why": "Walked in for a browse and spent $60 on the most-complimented jacket I own. Check their Instagram before you go so you know what just dropped.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "richmond-hill-korean-bbq-strip",
-      "name": "Korean BBQ Strip \u2014 Highway 7 East",
-      "type": "place",
-      "category": "food-culture",
-      "tags": [
-        "korean bbq",
-        "kbbq",
-        "asian",
-        "social",
-        "late night",
-        "local favourite",
-        "group dining"
-      ],
-      "cost": "moderate",
-      "costNote": "KBBQ per person ~$25\u2013$40 all-in with meat and sides",
-      "address": "Highway 7 East, Richmond Hill, ON",
-      "neighborhood": "Highway 7 Corridor",
-      "lat": 43.8424,
-      "lng": -79.3916,
-      "hours": "Most spots open until 11pm or midnight on weekends",
-      "description": "A dense cluster of Korean BBQ restaurants along Highway 7 East in Richmond Hill \u2014 the real suburban KBBQ scene that Torontonians drive out for. Tabletop grills, banchan, and the kind of group meal that takes three hours minimum.",
-      "highlights": [
-        "Multiple KBBQ spots to choose from \u2014 each with slightly different menus",
-        "Marinated beef short rib and samgyeopsal are the moves",
-        "Late-night hours on weekends \u2014 groups roll in after midnight",
-        "Way less packed than Koreatown in Toronto on a Friday",
-        "Bring 4+ people for the full experience"
-      ],
-      "why": "Richmond Hill's Highway 7 KBBQ scene is genuinely slept on. Better value than downtown, later hours, and you can actually get a table without a 90-minute wait.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "richmond-hill-disc-golf-oak-ridges",
-      "name": "Oak Ridges Disc Golf Course",
-      "type": "place",
-      "category": "physical",
-      "tags": [
-        "disc golf",
-        "outdoors",
-        "free",
-        "hidden gem",
-        "underrated",
-        "nature",
-        "social"
-      ],
-      "cost": "free",
-      "costNote": "Free to play; bring your own discs or borrow from friends",
-      "address": "Oak Ridges Community Park area, Richmond Hill, ON",
-      "neighborhood": "Oak Ridges",
-      "lat": 43.9451,
-      "lng": -79.4378,
-      "hours": "Dawn to dusk, year-round",
-      "description": "An informal disc golf layout through Oak Ridges park space that the local disc golf community has been quietly using for years. Bring a driver and a putter, download the UDisc app, and figure it out. Free, fun, and weirdly addictive.",
-      "highlights": [
-        "Free to use \u2014 just bring discs",
-        "Oak Ridges Moraine terrain makes it more scenic than most Ontario courses",
-        "UDisc app has a course map if one's been registered",
-        "Growing local community \u2014 find groups on Facebook or Reddit",
-        "Good gateway sport if you're bored of regular frisbee"
-      ],
-      "why": "Went once as a joke and now I own four discs. It's embarrassingly fun and completely free. The Oak Ridges terrain actually makes it feel like a real course.",
-      "isFree": true,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "richmond-hill-mural-trail",
-      "name": "Richmond Hill Street Mural Walk",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": [
-        "street art",
-        "murals",
-        "free",
-        "instagram worthy",
-        "content creator spot",
-        "walking",
-        "aesthetic"
-      ],
-      "cost": "free",
-      "address": "Downtown Richmond Hill \u2014 Yonge St between Major Mackenzie & Centre St",
-      "neighborhood": "Downtown Richmond Hill",
-      "lat": 43.8714,
-      "lng": -79.438,
-      "description": "Richmond Hill has been quietly building out a collection of large-scale murals on building exteriors in the downtown core. Not officially mapped, but a 20-minute walk along Yonge and the adjacent laneways hits most of them.",
-      "highlights": [
-        "Large-scale murals by local and regional artists",
-        "New pieces commissioned each year \u2014 changes seasonally",
-        "Great content if you're a photographer or just want nice photos",
-        "Self-guided and completely free",
-        "Best light on the east-facing walls in the morning"
-      ],
-      "why": "Nobody talks about Richmond Hill as a street art city but honestly the downtown mural collection is solid. Worth a 20-minute walk, especially if you're already at Mill Pond.",
-      "isFree": true,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "richmond-hill-plant-shop",
-      "name": "Local Roots Plant Co.",
-      "type": "place",
-      "category": "social",
-      "tags": [
-        "plants",
-        "houseplants",
-        "aesthetic",
-        "indie",
-        "local favourite",
-        "tiktok spot",
-        "instagram worthy"
-      ],
-      "cost": "low",
-      "costNote": "Small starter plants $5\u2013$15; larger specimens $25\u2013$80",
-      "address": "Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "lat": 43.877,
-      "lng": -79.4392,
-      "hours": "Tue\u2013Sun 11am\u20136pm",
-      "description": "A small independent plant shop that's become a genuine local favourite \u2014 monsteras, pothos, rare aroids, succulents, and a knowledgeable owner who actually helps you keep things alive. The kind of place you follow on Instagram.",
-      "highlights": [
-        "Rotating stock of common and hard-to-find houseplants",
-        "Owner gives real care advice, not generic instructions",
-        "Rare aroid drops announced on Instagram \u2014 sells out fast",
-        "Beautiful shop to just browse even if you're not buying",
-        "Plant propagations and cuttings available at lower prices"
-      ],
-      "why": "Finally a plant shop where the person behind the counter can tell you why your monstera looks sad. Bought a prop cutting for $8 and it's now massive. Genuinely great spot.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "richmond-hill-board-game-cafe",
-      "name": "Roll & Brew \u2014 Board Game Caf\u00e9",
-      "type": "place",
-      "category": "social",
-      "tags": [
-        "board games",
-        "cafe",
-        "social",
-        "date spot",
-        "local favourite",
-        "indoor",
-        "vibe check"
-      ],
-      "cost": "low",
-      "costNote": "Table fee ~$5/person; drinks $4\u2013$8",
-      "address": "Yonge St area, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "lat": 43.875,
-      "lng": -79.4388,
-      "hours": "Mon\u2013Thu 12pm\u201311pm, Fri\u2013Sat 12pm\u2013midnight, Sun 12pm\u201310pm",
-      "description": "A cozy board game caf\u00e9 with hundreds of games to borrow, decent food, and an atmosphere that's comfortable enough to spend three hours in without feeling rushed. Great for a first date or a friend group that's tired of bars.",
-      "highlights": [
-        "500+ games to choose from \u2014 staff help you pick based on group size",
-        "Catan, Ticket to Ride, Codenames, Wingspan \u2014 the classics plus weird gems",
-        "Table fee covers unlimited game access for the session",
-        "Food is actually good \u2014 not just nachos and fries",
-        "Reservations recommended Friday and Saturday evenings"
-      ],
-      "why": "Perfect first date spot if you want to actually talk to someone instead of shouting over club music. The table fee is worth it \u2014 way cheaper than a bar night.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "rh-bhangra-dance",
-      "name": "Bhangra & Bollywood Dance Academy",
-      "type": "place",
-      "category": "dance-music",
-      "tags": ["dance", "bollywood", "bhangra", "south asian", "classes", "beginner"],
-      "cost": "low",
-      "costNote": "Classes from $15/session; monthly packages available",
-      "address": "9600 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "description": "A vibrant dance academy rooted in Richmond Hill's large South Asian community, offering Bhangra and Bollywood classes for all ages and experience levels. Performance groups participate in local cultural festivals throughout the year.",
-      "highlights": [
-        "Beginner Bhangra and Bollywood classes for adults and teens",
-        "No prior dance experience required",
-        "Performance groups for cultural events and festivals",
-        "Energetic cardio workout through cultural dance forms"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-music-together-rh",
-      "name": "Music Together York Region",
-      "type": "program",
-      "category": "dance-music",
-      "tags": ["music", "children", "toddlers", "parents", "early childhood", "singing"],
-      "cost": "moderate",
-      "costNote": "Semester registration ~$200–$250; instruments and materials included",
-      "address": "Various community centres, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "description": "Research-based early childhood music program for children 0–8 and their caregivers, offered at multiple community centres across Richmond Hill. Classes involve singing, movement, and instrument play in a joyful group setting — all materials included.",
-      "highlights": [
-        "Music development for babies through age 8",
-        "Caregivers participate alongside children",
-        "Instruments, recordings, and songbooks included",
-        "Multiple time slots and neighbourhood locations"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-open-mic-night",
-      "name": "Open Mic Night — Local Venues",
-      "type": "event",
-      "category": "dance-music",
-      "tags": ["open mic", "live music", "local artists", "free", "social", "weekly"],
-      "cost": "free",
-      "address": "Rotating venues, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "description": "Weekly open mic nights at local cafés and bars across Richmond Hill give emerging musicians and spoken word artists a platform — typically Thursday or Friday evenings, free to attend. A good way to discover local talent and meet the creative community.",
-      "highlights": [
-        "Free to attend — tip jar for performers",
-        "Live music, spoken word, and original songs",
-        "Welcoming to first-time performers",
-        "Check local venue boards and Instagram for weekly schedules"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-piano-academy",
-      "name": "Richmond Hill Piano Academy",
-      "type": "place",
-      "category": "dance-music",
-      "tags": ["piano", "music lessons", "classical", "beginner", "adults", "kids"],
-      "cost": "moderate",
-      "costNote": "Private lessons from $55/hour; group intro sessions available at lower cost",
-      "address": "10800 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Elgin Mills",
-      "description": "A well-established music school offering piano instruction for all ages and skill levels, from total beginners to advanced students. Adult learners are actively welcomed — instructors are experienced in teaching people picking up piano later in life.",
-      "highlights": [
-        "Piano instruction from beginner to advanced level",
-        "Adult learners and seniors actively welcomed",
-        "Classical, jazz, and contemporary styles available",
-        "Trial lesson available before committing to a term"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-kpop-dance-studio",
-      "name": "K-Pop & Contemporary Dance Studio",
-      "type": "place",
-      "category": "dance-music",
-      "tags": ["k-pop", "dance", "contemporary", "hip hop", "classes", "teens", "social"],
-      "cost": "low",
-      "costNote": "Drop-in ~$18; 4-week session packages from $60",
-      "address": "Highway 7 East, Richmond Hill, ON",
-      "neighborhood": "Highway 7 Corridor",
-      "description": "A popular dance studio along Highway 7 specializing in K-Pop choreography and contemporary styles, catering to Richmond Hill's significant Korean-Canadian community and anyone who has spent time on YouTube dance tutorials. Beginner through advanced streams with freestyle sessions on weekends.",
-      "highlights": [
-        "K-Pop choreography classes for all levels",
-        "Contemporary, hip-hop, and street styles",
-        "Teen and adult class streams",
-        "Weekend freestyle practice sessions and community showcases"
-      ],
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-guitar-collective",
-      "name": "Guitar & Ukulele Collective",
-      "type": "program",
-      "category": "dance-music",
-      "tags": ["guitar", "ukulele", "music", "beginner", "group lessons", "affordable"],
-      "cost": "low",
-      "costNote": "6-week group courses ~$80–$110; instruments can be borrowed for first session",
-      "address": "Richmond Hill Public Library, 1 Atkinson Street, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "description": "Community guitar and ukulele courses run through the library and community centres for beginner adults. Small group format keeps costs low while still allowing for personal attention. Ukulele instruments available to borrow for the first session.",
-      "highlights": [
-        "Beginner-friendly 6-week group courses",
-        "Guitar and ukulele streams available",
-        "Instruments can be borrowed for first session",
-        "Affordable alternative to private instruction"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-gospel-choir",
-      "name": "Hope Community Gospel Choir",
-      "type": "program",
-      "category": "dance-music",
-      "tags": ["choir", "singing", "gospel", "community", "free", "social", "weekly"],
-      "cost": "free",
-      "address": "120 Major Mackenzie Drive East, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "description": "A community gospel choir welcoming singers of all backgrounds, faiths, and ability levels — no audition required. Weekly Tuesday evening rehearsals are free, with performances at community events and seasonal concerts.",
-      "highlights": [
-        "Free to join — no audition, no fees",
-        "Weekly Tuesday evening rehearsals",
-        "Open to all backgrounds and faith traditions",
-        "Performs at community events and seasonal concerts"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-salsa-sundays",
-      "name": "Salsa Sundays — Social Dance Night",
-      "type": "event",
-      "category": "dance-music",
-      "tags": ["salsa", "social dance", "latin", "dancing", "weekly", "beginner", "affordable"],
-      "cost": "low",
-      "costNote": "~$10 door; free beginner lesson usually included before social dancing",
-      "address": "10268 Yonge Street area, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "description": "A weekly Sunday social salsa night with a free beginner lesson before the main social dancing session. No partner required — the rotational format means you'll dance with many different people. One of the more consistent social dance events in York Region.",
-      "highlights": [
-        "Free beginner lesson before the social each Sunday",
-        "Open dance floor — all levels welcome",
-        "No partner required — rotational format",
-        "Latin music: salsa, bachata, merengue"
-      ],
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-mindful-yoga",
-      "name": "Mindful Living Yoga & Wellness Centre",
-      "type": "place",
-      "category": "mental",
-      "tags": ["yoga", "meditation", "wellness", "stress relief", "classes", "community"],
-      "cost": "low",
-      "costNote": "Drop-in ~$18; unlimited monthly from $75; community classes at reduced rates",
-      "address": "9050 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge & Major Mackenzie",
-      "description": "A welcoming community yoga studio with an emphasis on accessibility and mental wellness, offering hatha, restorative, and mindfulness meditation classes throughout the week. Community pricing and new student intro offers make it accessible without a big upfront commitment.",
-      "highlights": [
-        "Classes for complete beginners through advanced practitioners",
-        "Hatha, restorative, yin, and meditation formats",
-        "Community pricing to keep classes accessible",
-        "New student intro offer — first week discounted"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-walk-in-counselling",
-      "name": "Walk-In Counselling Clinic — York Region",
-      "type": "resource",
-      "category": "mental",
-      "tags": ["mental health", "counselling", "free", "walk-in", "no referral", "immediate support"],
-      "cost": "free",
-      "address": "200 Mulock Drive, Newmarket, ON (serves all of York Region)",
-      "neighborhood": "York Region (accessible from Richmond Hill)",
-      "website": "https://www.cmha-yr.on.ca",
-      "hours": "Mon–Fri; specific walk-in hours vary — check website",
-      "description": "Free walk-in counselling sessions for York Region residents, including Richmond Hill, with no appointment or referral required. Single-session counselling for anxiety, stress, grief, relationship challenges, or crisis — provided by CMHA York Region.",
-      "highlights": [
-        "Free counselling — no referral, no appointment needed",
-        "Available to all York Region residents",
-        "Single-session model for immediate support without a waitlist",
-        "Can connect to longer-term services if needed"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-peer-support-network",
-      "name": "York Region Peer Support Network",
-      "type": "program",
-      "category": "mental",
-      "tags": ["mental health", "peer support", "free", "community", "group", "recovery"],
-      "cost": "free",
-      "address": "Multiple locations, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "description": "Free peer support groups for adults in York Region living with mental health challenges, facilitated by trained peer supporters with lived experience. Drop-in friendly format with consistent weekly meeting times at multiple Richmond Hill locations.",
-      "highlights": [
-        "Free peer support groups facilitated by trained peers",
-        "Drop-in — no registration or commitment required",
-        "Weekly groups across multiple Richmond Hill locations",
-        "Builds genuine community with others who understand"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-therapeutic-art",
-      "name": "Creative Healing Art Therapy Studio",
-      "type": "place",
-      "category": "mental",
-      "tags": ["art therapy", "mental health", "creative", "healing", "workshops", "stress relief"],
-      "cost": "moderate",
-      "costNote": "Group workshops ~$45–$70; sliding scale available for financial need",
-      "address": "780 Elgin Mills Road West, Richmond Hill, ON",
-      "neighborhood": "Elgin Mills",
-      "description": "A registered art therapist offering group art therapy workshops and individual sessions in Richmond Hill. No artistic skill required — the focus is on using creative expression as a tool for mental wellness, stress relief, and emotional processing.",
-      "highlights": [
-        "Facilitated by a registered art therapist",
-        "No artistic skill required — process-focused, not product",
-        "Group workshops and individual sessions available",
-        "Sliding scale fees available for financial need"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-breathing-room",
-      "name": "The Breathing Room — Meditation & Mindfulness",
-      "type": "place",
-      "category": "mental",
-      "tags": ["meditation", "mindfulness", "anxiety", "breathing", "classes", "drop-in"],
-      "cost": "low",
-      "costNote": "Drop-in meditation ~$10; free intro sessions periodically",
-      "address": "Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "description": "A dedicated meditation and mindfulness studio offering drop-in sessions and short 4-week courses with a secular, non-religious approach. Good for people who want to try meditation without committing to a yoga studio membership.",
-      "highlights": [
-        "Drop-in meditation sessions — no commitment needed",
-        "Secular, non-religious approach to mindfulness",
-        "Guided breathing and body scan practices",
-        "Beginner-welcoming — staff introduce basics before each session"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-grief-support",
-      "name": "Grief & Loss Support Group — Richmond Hill",
-      "type": "program",
-      "category": "mental",
-      "tags": ["grief", "loss", "support", "free", "community", "bereavement"],
-      "cost": "free",
-      "address": "1 Atkinson Street, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "hours": "Bi-weekly evenings; check community board for dates",
-      "description": "Free grief support group for adults navigating bereavement, loss, and major life transitions, facilitated by a trained counsellor. Meets bi-weekly at a community space in central Richmond Hill — no registration required for first attendance.",
-      "highlights": [
-        "Free group facilitated by a trained counsellor",
-        "Open to anyone experiencing grief or significant loss",
-        "No registration required — drop in for first session",
-        "Safe, confidential, peer-supported environment"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-nature-therapy-walks",
-      "name": "Therapeutic Nature Walk Program",
-      "type": "program",
-      "category": "mental",
-      "tags": ["nature", "walking", "mental health", "free", "outdoors", "therapeutic", "wellness"],
-      "cost": "free",
-      "address": "Lake Wilcox Park, 230 Lake Drive South, Richmond Hill, ON",
-      "neighborhood": "Oak Ridges",
-      "description": "Free guided therapeutic walk program through Richmond Hill's Oak Ridges trail network, facilitated by a wellness practitioner. Combines mindful movement in nature with peer connection — evidence-supported for reducing anxiety and improving mood. No fitness requirement.",
-      "highlights": [
-        "Free weekly walks through Oak Ridges Moraine trails",
-        "Facilitated by a wellness practitioner",
-        "Combines nature exposure with mindful awareness",
-        "No fitness level requirement — relaxed, supportive pace"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-goodwill-langstaff",
-      "name": "Goodwill Thrift Store — Langstaff",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "clothing", "affordable", "books", "housewares"],
-      "cost": "low",
-      "costNote": "Clothing $2–$15; housewares from $1",
-      "address": "9737 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Langstaff",
-      "website": "https://www.goodwill.on.ca",
-      "hours": "Mon–Sat 9am–9pm, Sun 10am–7pm",
-      "description": "A well-stocked Goodwill in the Langstaff area with good clothing turnover, books, and household goods at budget prices. Accessible from the Langstaff transit hub, and proceeds fund employment training programs for people with barriers to work.",
-      "highlights": [
-        "Large clothing section with regular new arrivals",
-        "Books, media, and housewares at very low prices",
-        "Accessible from Langstaff transit hub",
-        "Consistent quality and clean, organized store"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-salvation-army-thrift",
-      "name": "Salvation Army Thrift Store — Richmond Hill",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "clothing", "affordable", "furniture", "housewares"],
-      "cost": "low",
-      "costNote": "Clothing from $2; furniture and housewares at low prices",
-      "address": "10070 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "website": "https://www.thriftstore.ca",
-      "hours": "Mon–Sat 9am–8pm, Sun 11am–6pm",
-      "description": "A centrally located Salvation Army thrift store on Yonge with a broad selection of clothing, books, housewares, and furniture. Colour-tag sale system offers rotating extra discounts throughout the month.",
-      "highlights": [
-        "Full-size store with clothing, furniture, and housewares",
-        "Colour-tag sale system for additional discounts",
-        "Books, records, and media for under $2",
-        "Central Yonge Street location"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-church-rummage",
-      "name": "Community Church Rummage & Garage Sales",
-      "type": "event",
-      "category": "thrifting",
-      "tags": ["rummage sale", "church sale", "secondhand", "free admission", "seasonal", "community"],
-      "cost": "free",
-      "costNote": "Free to browse; items at donation-level pricing",
-      "address": "Various churches, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "description": "Seasonal rummage and garage sales hosted by churches and community organizations across Richmond Hill offer some of the best-value secondhand shopping in the city. Prices are usually donation-level, with excellent-condition household goods and clothing. Check local Facebook community groups for dates.",
-      "highlights": [
-        "Donation-level prices — often far cheaper than thrift stores",
-        "Great for household goods, books, clothing, and toys",
-        "Seasonal — spring, summer, and fall editions",
-        "Follow local Facebook groups for event announcements"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Spring through fall — check local listings for dates",
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-oak-ridges-swap",
-      "name": "Oak Ridges Community Swap Shop",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["free", "swap", "community", "secondhand", "reuse", "household items"],
-      "cost": "free",
-      "address": "Oak Ridges Community Centre, Richmond Hill, ON",
-      "neighborhood": "Oak Ridges",
-      "hours": "Check community board for hours — typically Saturday mornings",
-      "description": "A community-run swap shop where residents drop off items they no longer need and take items others have left — no money exchanged. Clothing, books, toys, and small household items are most commonly available, run by local volunteers.",
-      "highlights": [
-        "Free to take and free to give — no money involved",
-        "Clothing, books, toys, and household goods available",
-        "Run by local volunteers in Oak Ridges",
-        "Good for reducing waste and saving money simultaneously"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-antique-market",
-      "name": "Richmond Hill Antique & Collectibles Market",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["antiques", "collectibles", "vintage", "browsing", "treasure hunting", "low cost"],
-      "cost": "low",
-      "costNote": "Free to browse; items priced by vendor — wide range from affordable to collector-grade",
-      "address": "7900 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "hours": "Weekends 10am–5pm",
-      "description": "A multi-vendor antique and collectibles market on Yonge with dealers selling vintage furniture, glassware, art, vinyl records, and collectibles. Free to browse, with negotiating expected and welcomed by most vendors.",
-      "highlights": [
-        "Multi-vendor format — many dealers under one roof",
-        "Vinyl records, vintage clothing, furniture, and art",
-        "Free to browse — only pay if you buy",
-        "Negotiating is expected and welcome"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-kids-consignment",
-      "name": "Little Sprouts Kids Consignment",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["consignment", "kids clothing", "children", "secondhand", "affordable", "toys"],
-      "cost": "low",
-      "costNote": "Children's clothing from $3; toys and gear at significant discounts vs retail",
-      "address": "9450 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge & Major Mackenzie",
-      "hours": "Tue–Sat 10am–6pm",
-      "description": "A consignment shop focused on children's clothing, toys, gear, and books where quality is vetted before items go on the floor. Far cheaper than retail and more reliable than a rummage sale — a genuine money-saver for families with growing kids.",
-      "highlights": [
-        "Quality-checked children's clothing in excellent condition",
-        "Toys, books, and baby gear at fraction of retail cost",
-        "Items are vetted — no damaged or poor-quality goods",
-        "Can consign your own children's items for store credit"
-      ],
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-urban-roots-vintage",
-      "name": "Urban Roots Vintage & Resale",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["vintage", "resale", "secondhand", "clothing", "curated", "affordable"],
-      "cost": "low",
-      "costNote": "Items $8–$55; curated but more affordable than downtown vintage shops",
-      "address": "10390 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "hours": "Wed–Sun 11am–7pm",
-      "description": "A curated vintage and resale shop on Yonge with a good eye for quality — denim, vintage outerwear, 80s and 90s sportswear, and the occasional home goods find. More affordable than equivalent downtown Toronto vintage shops, with new arrivals posted to Instagram.",
-      "highlights": [
-        "Curated vintage with a consistent aesthetic",
-        "Denim, vintage outerwear, and 80s/90s sportswear",
-        "More affordable than equivalent downtown shops",
-        "New arrivals posted to Instagram before hitting the floor"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-canada-day-mill-pond",
-      "name": "Canada Day Celebration at Mill Pond",
-      "type": "event",
-      "category": "events",
-      "tags": ["canada day", "free", "community", "annual", "fireworks", "outdoor", "family"],
-      "cost": "free",
-      "address": "Mill Pond Park, 321 Mill Street, Richmond Hill, ON",
-      "neighborhood": "Mill Pond",
-      "description": "Richmond Hill's annual Canada Day celebration at Mill Pond Park with live music, community activities, food vendors, and a fireworks display over the pond at dusk. One of York Region's more festive July 1 events, drawing thousands of residents to the park grounds.",
-      "highlights": [
-        "Free fireworks display over Mill Pond at dusk",
-        "Live music on the main stage throughout the day",
-        "Food vendors, artisan markets, and family activities",
-        "Community morning parade",
-        "Annual tradition drawing thousands of residents"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual July 1 event",
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-lunar-new-year-festival",
-      "name": "Lunar New Year Festival — Richmond Hill",
-      "type": "event",
-      "category": "events",
-      "tags": ["lunar new year", "chinese new year", "free", "cultural", "community", "annual", "food"],
-      "cost": "free",
-      "address": "Richmond Hill Centre for the Performing Arts, 10268 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "description": "A large-scale Lunar New Year celebration reflecting Richmond Hill's significant East Asian community, with lion dancing, cultural performances, traditional food vendors, and artisan stalls. One of the largest Lunar New Year events in York Region and free to attend.",
-      "highlights": [
-        "Lion and dragon dancing performances",
-        "Traditional food vendors and cultural stalls",
-        "Cultural performances — music, martial arts, and dance",
-        "Free admission — community-supported event",
-        "One of the largest Lunar New Year events in York Region"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual event in January or February",
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-multicultural-festival",
-      "name": "Richmond Hill Multicultural Festival",
-      "type": "event",
-      "category": "events",
-      "tags": ["multicultural", "festival", "free", "community", "cultural", "food", "annual"],
-      "cost": "free",
-      "address": "Richmond Green Sports Centre, 1300 Elgin Mills Road East, Richmond Hill, ON",
-      "neighborhood": "Richmond Green",
-      "description": "An annual summer festival celebrating Richmond Hill's diverse cultural communities through food, performance, and programming representing 20+ cultural groups. One of the city's most attended annual events with free admission throughout.",
-      "highlights": [
-        "Performances representing 20+ cultural communities",
-        "Food from global cuisines served by community groups",
-        "Cultural crafts, clothing, and goods on display",
-        "Children's programming and family activities",
-        "Free admission throughout the full event"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual summer event",
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-movies-under-stars",
-      "name": "Movies Under the Stars",
-      "type": "event",
-      "category": "events",
-      "tags": ["movies", "outdoor", "free", "summer", "family", "community", "seasonal"],
-      "cost": "free",
-      "address": "Richmond Green Park, 1300 Elgin Mills Road East, Richmond Hill, ON",
-      "neighborhood": "Richmond Green",
-      "description": "Free outdoor movie screenings at Richmond Green Park on select summer Friday evenings at dusk, with family-friendly titles and community food vendors on site. Bring a blanket and chairs — it's grass lawn seating under the open sky.",
-      "highlights": [
-        "Free outdoor film screenings at Richmond Green",
-        "Family-friendly titles and occasional cult classics",
-        "Bring a blanket and chairs — grass lawn seating",
-        "Community food vendors usually on site",
-        "Runs select Fridays through July and August"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Select summer Friday evenings, July–August",
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-spring-art-show",
-      "name": "Richmond Hill Spring Art Show",
-      "type": "event",
-      "category": "events",
-      "tags": ["art show", "local artists", "free", "annual", "community", "visual arts"],
-      "cost": "free",
-      "address": "Richmond Hill Centre for the Performing Arts, 10268 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "description": "An annual juried art show by the Richmond Hill Group of Artists showcasing original paintings, photography, and mixed media from local and regional artists. Free to attend, with work available for purchase directly from artists and an opening reception included.",
-      "highlights": [
-        "Original work from local and regional artists",
-        "Juried show — consistently high standard of work",
-        "Free admission throughout the run",
-        "Art available for purchase directly from artists",
-        "Opening night reception included in free admission"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual spring event",
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-lantern-festival",
-      "name": "Mid-Autumn Lantern Festival at Mill Pond",
-      "type": "event",
-      "category": "events",
-      "tags": ["lantern festival", "mid-autumn", "cultural", "free", "community", "evening", "family"],
-      "cost": "free",
-      "address": "Mill Pond Park, 321 Mill Street, Richmond Hill, ON",
-      "neighborhood": "Mill Pond",
-      "description": "Richmond Hill's Mid-Autumn Lantern Festival at Mill Pond Park, organized by local Chinese Canadian community associations. The pond setting is beautiful with lanterns reflected on the water, alongside cultural performances, mooncakes, and community programming.",
-      "highlights": [
-        "Beautiful lantern displays reflected along Mill Pond",
-        "Cultural performances — music, dance, and storytelling",
-        "Mooncakes and traditional seasonal foods",
-        "Family-friendly evening event with community warmth",
-        "Free admission organized by community associations"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual event in September or October",
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-holiday-market",
-      "name": "Richmond Hill Holiday Market",
-      "type": "event",
-      "category": "events",
-      "tags": ["holiday market", "winter", "free admission", "artisan", "community", "seasonal", "christmas"],
-      "cost": "free",
-      "costNote": "Free admission; artisan goods at vendor prices",
-      "address": "Mill Pond Park area, Richmond Hill, ON",
-      "neighborhood": "Mill Pond",
-      "description": "A seasonal holiday market in late November and December with local artisan vendors, seasonal food, handmade gifts, and holiday community programming. Free to attend and a good local alternative to mall shopping for thoughtful gifts.",
-      "highlights": [
-        "Local artisan vendors with handmade gifts and crafts",
-        "Seasonal food — hot cider, baked goods, and preserves",
-        "Free admission — accessible to the whole community",
-        "Holiday entertainment and family programming"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Late November through December",
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-teastea-cafe",
-      "name": "Tea&Tea — Times Square Plaza",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["tea", "bubble tea", "cafe", "asian", "seating", "relaxed"],
-      "cost": "low",
-      "costNote": "Drinks $6–$11; no table fee",
-      "address": "Times Square Blvd, Richmond Hill, ON",
-      "neighborhood": "Bayview & Highway 7",
-      "hours": "Daily 11am–10pm",
-      "description": "A proper Taiwanese-style tea house at Times Square Plaza with brewed loose-leaf teas, traditional milk teas, and fruit infusions alongside bubble tea. Unlike most boba shops, this one has genuine sit-down seating and a slower atmosphere — good for long conversations over a pot of tea.",
-      "highlights": [
-        "Full menu of brewed loose-leaf teas and traditional styles",
-        "Comfortable seating for lingering — not chasing table turnover",
-        "Seasonal tea menus and traditional Taiwanese drinks",
-        "Better for a real sit-down than most boba shops"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-the-common-cowork",
-      "name": "The Common — Co-Working & Creative Space",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["co-working", "work space", "wifi", "quiet", "freelancers", "cafe"],
-      "cost": "low",
-      "costNote": "Day passes from $15; coffee membership plans available",
-      "address": "10200 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "hours": "Mon–Fri 8am–7pm, Sat 9am–5pm",
-      "description": "A shared co-working and creative space in Richmond Hill for freelancers, remote workers, and small businesses with reliable internet and a quiet working environment. Day passes give full access without a monthly membership commitment.",
-      "highlights": [
-        "Dedicated co-working space with fast internet",
-        "Day passes available without monthly commitment",
-        "Quiet working environment — not a noisy coffee shop",
-        "Private booths and communal tables available"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-levant-cafe",
-      "name": "Levant Café & Bakery",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["cafe", "middle eastern", "bakery", "coffee", "wifi", "persian", "warm"],
-      "cost": "low",
-      "costNote": "Coffee and tea $3–$6; pastries $3–$7",
-      "address": "9750 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "hours": "Mon–Sat 8am–8pm, Sun 9am–6pm",
-      "description": "A warm Middle Eastern-style café and bakery with Persian pastries, freshly brewed tea, and good espresso — reflecting Richmond Hill's significant Iranian-Canadian community. Saffron rice cookies, baklava, and Persian sweets made in-house alongside excellent loose-leaf chai.",
-      "highlights": [
-        "Persian pastries and sweets made in-house daily",
-        "Excellent loose-leaf chai and saffron tea",
-        "Free WiFi and comfortable, unhurried seating",
-        "One of the few authentically Middle Eastern cafés in Richmond Hill"
-      ],
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-atelier-coffee",
-      "name": "Atelier Coffee & Studio",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["coffee", "specialty", "cafe", "quiet", "aesthetic", "creative", "work"],
-      "cost": "low",
-      "costNote": "Specialty coffee $5–$8; pastries $4–$7",
-      "address": "10050 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "hours": "Mon–Fri 7:30am–6pm, Sat–Sun 8am–5pm",
-      "description": "A specialty coffee bar and occasional pop-up gallery space on Yonge, good for quiet morning work or an afternoon coffee with something more intentional than a chain. Single-origin pour-overs and seasonal drinks alongside local baked goods.",
-      "highlights": [
-        "Specialty coffee — single-origin pour-overs and espresso",
-        "Occasional art and photography pop-up exhibitions",
-        "Quiet work-friendly atmosphere without being sterile",
-        "Local bakery collaboration for daily pastries"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "rh-oak-ridges-library",
       "name": "Oak Ridges Library Branch",
       "type": "place",
       "category": "cafes-spaces",
-      "tags": ["library", "free", "quiet", "work", "reading", "community", "wifi"],
+      "tags": [
+        "library",
+        "free",
+        "quiet",
+        "work",
+        "reading",
+        "community",
+        "wifi"
+      ],
       "cost": "free",
       "address": "12895 Yonge Street, Richmond Hill, ON",
       "neighborhood": "Oak Ridges",
       "website": "https://www.rhpl.ca",
-      "hours": "Mon–Thu 10am–8pm, Fri–Sat 10am–5pm, Sun 1pm–5pm",
       "description": "The Oak Ridges branch of Richmond Hill Public Library — a quieter, neighbourhood-scale branch in the north end with comfortable reading areas, free internet, community meeting rooms, and regular programming. Less busy than the main branch and adjacent to Oak Ridges Moraine trails.",
       "highlights": [
         "Free internet and quiet reading and study space",
@@ -1840,131 +424,25 @@
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-garden-tea-house",
-      "name": "Garden Tea House",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["tea", "cafe", "garden", "relaxed", "afternoon tea", "community", "senior-friendly"],
-      "cost": "low",
-      "costNote": "Afternoon tea sets $15–$22; individual drinks $4–$7",
-      "address": "9300 Bayview Avenue, Richmond Hill, ON",
-      "neighborhood": "Bayview",
-      "hours": "Tue–Sun 10am–5pm",
-      "description": "A charming independent tea house near Bayview Avenue offering afternoon tea sets, 30+ varieties of loose-leaf brews, and a garden patio in warmer months. Popular with seniors and book club groups for its unhurried pace — reservations recommended for weekend tea.",
-      "highlights": [
-        "Full afternoon tea sets available on weekends",
-        "Extensive loose-leaf tea menu — 30+ varieties",
-        "Garden patio in summer — pleasant for outdoor relaxation",
-        "Senior-friendly pace — no rush, no noise"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-york-food-network",
-      "name": "York Region Food Network",
-      "type": "resource",
-      "category": "financial",
-      "tags": ["food bank", "free", "food security", "community", "support", "emergency"],
-      "cost": "free",
-      "address": "10945 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "website": "https://www.yrfoodnetwork.ca",
-      "hours": "Check website for distribution hours",
-      "description": "York Region Food Network provides free food access to Richmond Hill residents experiencing food insecurity, including food bank access, prepared meal programs, and community kitchen programming. No ID or residency documentation required for emergency access.",
-      "highlights": [
-        "Free food bank access without residency documentation",
-        "Emergency food access available within 24 hours if needed",
-        "Community kitchen programs and cooking classes",
-        "Connections to other food security resources in York Region",
-        "Dignified and confidential service"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-free-tax-clinic",
-      "name": "Community Volunteer Income Tax Program",
-      "type": "program",
-      "category": "financial",
-      "tags": ["taxes", "free", "income tax", "volunteer", "returns", "newcomer", "seniors"],
-      "cost": "free",
-      "address": "Richmond Hill Public Library, 1 Atkinson Street, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "hours": "February through April; check library website for schedule",
-      "description": "Free income tax filing assistance for eligible Richmond Hill residents through the CRA Community Volunteer Income Tax Program, with trained volunteers who file returns for people with modest incomes. Particularly helpful for newcomers and seniors unfamiliar with the Canadian tax system.",
-      "highlights": [
-        "Free income tax filing for eligible residents",
-        "Particularly useful for newcomers to Canada",
-        "Trained CRA-certified volunteers",
-        "Available at the library and community locations",
-        "File on time to access benefits — runs February through April"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "February through April",
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-housing-help",
-      "name": "Housing Help Centre — York Region",
-      "type": "resource",
-      "category": "financial",
-      "tags": ["housing", "free", "rental support", "eviction prevention", "newcomers", "community"],
-      "cost": "free",
-      "address": "50 High Tech Road, Richmond Hill, ON",
-      "neighborhood": "High Tech Business Park",
-      "website": "https://www.york.ca/housing",
-      "hours": "Mon–Fri 8:30am–4:30pm",
-      "description": "Free housing support services for York Region residents including eviction prevention, rental support, social housing applications, and emergency shelter referrals. Accessible to everyone regardless of immigration status.",
-      "highlights": [
-        "Eviction prevention and tenant support services",
-        "Social housing application assistance",
-        "Emergency housing referrals",
-        "Accessible to all regardless of immigration status"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-micro-enterprise-support",
-      "name": "Newcomer Micro-Enterprise Support Program",
-      "type": "program",
-      "category": "financial",
-      "tags": ["business", "newcomers", "free", "entrepreneurship", "support", "training", "multilingual"],
-      "cost": "free",
-      "address": "Various locations, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "description": "Free business startup and micro-enterprise support specifically for newcomers to Canada in Richmond Hill and York Region, covering business planning, marketing fundamentals, legal basics, and connections to microloan programs. Offered in multiple languages.",
-      "highlights": [
-        "Free business training workshops for newcomers",
-        "Business plan development support",
-        "Connections to microfinancing and startup funding",
-        "Available in Mandarin, Farsi, Spanish, and more",
-        "Follow-up mentorship with local business owners"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "rh-credit-counselling",
       "name": "Credit Counselling Society — York Region",
       "type": "resource",
       "category": "financial",
-      "tags": ["debt", "credit", "counselling", "free", "budgeting", "financial literacy"],
+      "tags": [
+        "debt",
+        "credit",
+        "counselling",
+        "free",
+        "budgeting",
+        "financial literacy"
+      ],
       "cost": "free",
       "address": "Serves Richmond Hill and York Region (phone and in-person)",
       "neighborhood": "City-wide",
       "website": "https://www.nomoredebts.org",
-      "hours": "Mon–Fri 8am–8pm, Sat 10am–4pm",
       "description": "Free non-profit credit and debt counselling for Richmond Hill residents through the Credit Counselling Society, with phone and in-person sessions covering budgeting, debt management plans, and navigating financial hardship. Completely free and confidential.",
       "highlights": [
         "Free debt and budget counselling — no fees, no pressure",
@@ -1981,7 +459,14 @@
       "name": "Richmond Hill Group of Artists — Mill Pond Gallery",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["art gallery", "local artists", "free", "paintings", "community", "exhibitions"],
+      "tags": [
+        "art gallery",
+        "local artists",
+        "free",
+        "paintings",
+        "community",
+        "exhibitions"
+      ],
       "cost": "free",
       "address": "321 Mill Street (Mill Pond Park), Richmond Hill, ON",
       "neighborhood": "Mill Pond",
@@ -1992,194 +477,31 @@
         "Permanent gallery in the historic Mill Pond Park building",
         "Original paintings, watercolours, and mixed media",
         "Art available for purchase directly from artists",
-        "Run by volunteer artists — genuinely community-driven"
+        "Run by volunteer artists — community-driven"
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-craft-circle",
-      "name": "Community Stitch & Craft Circle",
-      "type": "program",
-      "category": "arts-crafts",
-      "tags": ["knitting", "crochet", "sewing", "crafts", "community", "free", "social"],
-      "cost": "free",
-      "address": "Richmond Hill Public Library, 1 Atkinson Street, Richmond Hill, ON",
-      "neighborhood": "Downtown Richmond Hill",
-      "hours": "Weekly drop-in — Wednesday afternoons",
-      "description": "A free weekly drop-in craft group at the Richmond Hill Public Library where knitters, crocheters, sewers, and other crafters work on projects and share skills. Beginners are welcome — experienced members are happy to teach the basics to anyone who shows up with curiosity.",
-      "highlights": [
-        "Free weekly drop-in — no registration required",
-        "Knitting, crochet, sewing, and mixed crafts",
-        "Experienced crafters share skills with beginners",
-        "Bring your own project or learn from scratch"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-printmaking-workshop",
-      "name": "Richmond Hill Printmaking Workshops",
-      "type": "program",
-      "category": "arts-crafts",
-      "tags": ["printmaking", "art", "workshop", "lino cut", "screen printing", "creative", "beginner"],
-      "cost": "low",
-      "costNote": "Single workshops ~$45–$65 including all materials",
-      "address": "Elgin Mills Community Centre, 10401 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Elgin Mills",
-      "description": "Occasional single-session printmaking workshops covering linocut, mono-printing, and basic screen printing at Richmond Hill community centres. All materials provided, suitable for complete beginners, and you take home your prints at the end of the session.",
-      "highlights": [
-        "Single-session workshops — no long-term commitment",
-        "All materials and tools provided",
-        "Linocut, mono-print, and screen print techniques",
-        "Suitable for complete beginners",
-        "Take your prints home at the end of the session"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-mosaic-project",
-      "name": "Richmond Hill Community Mosaic Project",
-      "type": "program",
-      "category": "arts-crafts",
-      "tags": ["mosaic", "community art", "public art", "free", "volunteer", "creative", "hands-on"],
-      "cost": "free",
-      "address": "Various public sites, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "description": "A community public art initiative where residents contribute to large-scale mosaic installations in public spaces — all materials provided, no artistic skill required. Completed work is installed permanently in public locations around the city.",
-      "highlights": [
-        "Free participation — all materials provided",
-        "Your work becomes permanent public art in the community",
-        "Open to all ages and experience levels",
-        "Training provided — no art background required"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-sketch-night",
-      "name": "Sketch Night — Richmond Hill",
-      "type": "event",
-      "category": "arts-crafts",
-      "tags": ["sketching", "drawing", "art", "free", "social", "drop-in", "beginner"],
-      "cost": "free",
-      "address": "Various cafés and community spaces, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "description": "A monthly casual sketching and drawing meetup at rotating venues in Richmond Hill — drop in with your sketchbook and pencils, sometimes with a live model, sometimes open drawing, sometimes a theme. Free to attend and welcoming to anyone who hasn't drawn since grade school.",
-      "highlights": [
-        "Free monthly drop-in — no registration required",
-        "Rotating venues — check social media for locations",
-        "Beginners warmly welcomed",
-        "Sometimes live model drawing, sometimes open theme"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "rh-persian-supermarket",
-      "name": "Persian Supermarket & Bakery — Yonge Corridor",
-      "type": "place",
-      "category": "food-culture",
-      "tags": ["persian", "iranian", "grocery", "bakery", "halal", "food", "community"],
-      "cost": "low",
-      "address": "9630 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "hours": "Daily 9am–9pm",
-      "description": "One of several Persian supermarkets on the Yonge Corridor serving Richmond Hill's large Iranian-Canadian community, with fresh sangak flatbread baked on-site, saffron, specialty grains, dried fruits, and prepared Persian foods. Worth a visit even if you're not doing a full grocery run.",
-      "highlights": [
-        "Sangak flatbread baked fresh daily on-site",
-        "Saffron, dried limes, barberries, and Persian spice blends",
-        "Prepared Persian foods — soups, dips, and pastries",
-        "Affordable prices compared to specialty stores in Toronto"
-      ],
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-weekend-dim-sum",
-      "name": "Weekend Dim Sum — Highway 7 East",
-      "type": "place",
-      "category": "food-culture",
-      "tags": ["dim sum", "chinese", "cantonese", "brunch", "group dining", "affordable", "family"],
-      "cost": "low",
-      "costNote": "~$15–$25/person for a full dim sum spread",
-      "address": "Highway 7 East, Richmond Hill, ON",
-      "neighborhood": "Highway 7 Corridor",
-      "hours": "Sat–Sun 9am–3pm; arrive before 10:30am for best cart selection",
-      "description": "Richmond Hill's Highway 7 corridor has some of the best Cantonese dim sum in the GTA — multiple full-service restaurants with weekend cart service, fresh-made dumplings, and proper har gow. Significantly less crowded than Toronto's dim sum spots on weekends.",
-      "highlights": [
-        "Full cart-style dim sum service on weekends",
-        "Har gow, siu mai, cheung fun, and seasonal specialties",
-        "Less crowded than Toronto dim sum spots — real tables",
-        "Arrive before 10:30am for the freshest cart items",
-        "~$20–$25/person leaves everyone full"
-      ],
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-pho-strip",
-      "name": "Vietnamese Pho & Noodle Strip — Yonge Corridor",
-      "type": "place",
-      "category": "food-culture",
-      "tags": ["vietnamese", "pho", "noodles", "affordable", "lunch", "soup", "quick"],
-      "cost": "low",
-      "costNote": "Pho bowls $12–$18; bánh mì $6–$9",
-      "address": "Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "description": "A cluster of Vietnamese restaurants along Yonge offering pho, bun bo hue, vermicelli bowls, and bánh mì at genuinely affordable prices. These spots have been serving the community for years and are reliable rather than trendy — good for a quick weekday lunch.",
-      "highlights": [
-        "Proper bone-broth pho with full garnish tray",
-        "Bánh mì at some of the best prices in York Region",
-        "Multiple spots to compare — each broth is slightly different",
-        "Quick service — good for a weekday lunch"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-hotpot-strip",
-      "name": "Hotpot Alley — Times Square Area",
-      "type": "place",
-      "category": "food-culture",
-      "tags": ["hot pot", "chinese", "group dining", "social", "affordable", "spicy", "shabu shabu"],
-      "cost": "moderate",
-      "costNote": "$25–$40/person all-in for hotpot with meat and vegetables",
-      "address": "Times Square Blvd area, Richmond Hill, ON",
-      "neighborhood": "Bayview & Highway 7",
-      "hours": "Daily 11am–11pm, later on weekends",
-      "description": "A cluster of hotpot restaurants near Times Square Blvd serving Sichuan-style spicy broth, Japanese shabu shabu, and Taiwanese variants. The group dining format is interactive and unhurried — you cook everything at the table over a shared pot. Best with a group of four or more.",
-      "highlights": [
-        "Multiple hotpot styles — Sichuan mala, shabu shabu, Taiwanese",
-        "Group dining format — bring 4+ for the best experience",
-        "AYCE (all you can eat) options at several locations",
-        "Late hours on weekends for a leisurely group meal"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "rh-seniors-active-living",
       "name": "Richmond Hill Seniors Active Living Centre",
       "type": "place",
       "category": "social",
-      "tags": ["seniors", "social", "programs", "community", "free", "older adults", "activities"],
+      "tags": [
+        "seniors",
+        "social",
+        "programs",
+        "community",
+        "free",
+        "older adults",
+        "activities"
+      ],
       "cost": "free",
       "costNote": "Core programs free; some special activities have small fees",
       "address": "200 East Beaver Creek Road, Richmond Hill, ON",
       "neighborhood": "East Richmond Hill",
       "website": "https://www.richmondhill.ca",
-      "hours": "Mon–Fri 9am–4pm",
       "description": "The City of Richmond Hill's senior active living centre offers free social programs, fitness activities, and community events for adults 55 and older. Programs include yoga, art, music, games, and multicultural programming — a genuine hub for older adult social connection.",
       "highlights": [
         "Free drop-in and registered programs for adults 55+",
@@ -2189,137 +511,1454 @@
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "rh-youth-zone",
-      "name": "Youth Zone Richmond Hill",
-      "type": "place",
-      "category": "social",
-      "tags": ["youth", "teens", "free", "drop-in", "social", "community", "programs"],
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
       "cost": "free",
-      "address": "Richmond Hill Community Centre, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "hours": "Weekday afternoons and some evenings; check city website",
-      "description": "Free drop-in youth programs for teens aged 13–17 at Richmond Hill community centres, with a safe social space, recreation, arts programs, and mentorship. No registration required for drop-in — just show up.",
-      "highlights": [
-        "Free drop-in for teens aged 13–17",
-        "Safe and welcoming space after school",
-        "Sports, gaming, arts, and leadership programs",
-        "Mentorship and positive adult connections"
-      ],
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-15"
+      "hours": "Open 24 hours",
+      "id": "richmond-hill-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "rh-newcomer-hub",
-      "name": "Richmond Hill Newcomer Hub",
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "richmond-hill-kids-help-phone",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "richmond-hill-connexontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "211 Ontario",
       "type": "resource",
       "category": "social",
-      "tags": ["newcomer", "settlement", "community", "free", "support", "connections", "multilingual"],
       "cost": "free",
-      "address": "10945 Yonge Street, Richmond Hill, ON",
-      "neighborhood": "Yonge Corridor",
-      "hours": "Mon–Fri 9am–5pm",
-      "description": "A free drop-in settlement hub for newcomers to Richmond Hill offering community connections, navigation support, English conversation groups, and referrals to services. Staff speak multiple languages including Mandarin, Farsi, Tagalog, and Arabic.",
-      "highlights": [
-        "Free drop-in — no appointment required",
-        "Staff speak Mandarin, Farsi, Tagalog, Arabic, and more",
-        "Settlement navigation and service referrals",
-        "English conversation circles and community connection programs"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "rh-dog-park-community",
-      "name": "Dog Park Community — Lake Wilcox Off-Leash Area",
-      "type": "place",
-      "category": "social",
-      "tags": ["dogs", "off-leash", "dog park", "social", "free", "outdoor", "community"],
-      "cost": "free",
-      "address": "230 Lake Drive South, Richmond Hill, ON",
-      "neighborhood": "Oak Ridges",
-      "hours": "Dawn to dusk year-round",
-      "description": "The off-leash dog area near Lake Wilcox has developed a genuine daily community of regular owners who meet each morning and evening. The social dynamic is multi-generational, multicultural, and reliably friendly — the kind of community that forms naturally around a shared love of dogs and a beautiful trail.",
-      "highlights": [
-        "Fenced off-leash area with lake trail access",
-        "Regular morning and evening dog owner community",
-        "Multi-generational, multicultural, genuinely friendly group",
-        "Beautiful natural setting on the Oak Ridges Moraine"
-      ],
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "hours": "Open 24 hours",
+      "id": "richmond-hill-211-ontario",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "rh-free-tennis-courts",
-      "name": "Free Tennis Courts — Richmond Hill Parks",
-      "type": "place",
-      "category": "physical",
-      "tags": ["tennis", "free", "outdoor", "parks", "sport", "first-come-first-served"],
+      "name": "Community Volunteer Income Tax Program",
+      "type": "resource",
+      "category": "financial",
       "cost": "free",
-      "address": "Elgin West Community Park and multiple locations, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "hours": "Dawn to dusk, year-round",
-      "description": "Richmond Hill maintains free public tennis courts at multiple parks throughout the city with no booking required, first-come-first-served. Courts at Elgin West Community Park, Bayview Hill Community Park, and several other locations — most are well-maintained and some are lit for evening play.",
-      "highlights": [
-        "Free to use — no booking or permit required",
-        "Multiple locations across the city",
-        "Some courts lit for evening play in summer",
-        "Well-maintained hard courts in most locations"
-      ],
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "id": "richmond-hill-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "rh-outdoor-skating",
-      "name": "Free Outdoor Skating — Richmond Hill Rinks",
-      "type": "place",
-      "category": "physical",
-      "tags": ["skating", "free", "outdoor", "winter", "ice rink", "family", "community"],
+      "name": "York Region crisis line (310-COPE)",
+      "type": "resource",
+      "category": "mental",
       "cost": "free",
-      "address": "Mill Pond Park and multiple rinks, Richmond Hill, ON",
-      "neighborhood": "City-wide",
-      "hours": "When ice conditions allow, typically December–February",
-      "description": "Richmond Hill maintains free outdoor skating surfaces at Mill Pond Park and other locations through the winter months. The Mill Pond rink is particularly atmospheric — skating on a frozen pond surrounded by trees and park is one of the better seasonal experiences in the city.",
-      "highlights": [
-        "Free outdoor skating at Mill Pond and other city rinks",
-        "Mill Pond skating is especially scenic in winter",
-        "City-maintained and regularly groomed",
-        "Family-friendly and always free"
-      ],
-      "isRecommended": true,
-      "isFree": true,
+      "website": "https://yssn.ca",
+      "phone": "1-855-310-2673",
+      "description": "Free crisis support for York Region residents by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "richmond-hill-york-region-crisis-line-310-cope",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Moonlight Movies",
+      "type": "event",
+      "category": "dance-music",
+      "cost": "free",
+      "website": "https://www.richmondhill.ca/en/things-to-do/moonlight-movies.aspx",
+      "description": "The Town's free outdoor movie nights. Dates are on the Town's site each summer.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
       "seasonal": true,
-      "seasonNote": "Winter — typically December through February, weather permitting",
-      "lastVerified": "2026-05-15"
+      "seasonNote": "Summer",
+      "id": "richmond-hill-moonlight-movies",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "rh-moraine-trail-network",
-      "name": "Oak Ridges Moraine Trail Network",
+      "name": "Richmond Hill Art Walk",
+      "type": "place",
+      "category": "arts",
+      "cost": "free",
+      "website": "https://www.richmondhill.ca/en/things-to-do/artwalk.aspx",
+      "description": "A self-guided walk past public art in Richmond Hill.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "richmond-hill-richmond-hill-art-walk",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Ribfest Richmond Hill",
+      "type": "event",
+      "category": "social",
+      "cost": "varies",
+      "website": "https://www.richmondhill.ca/en/things-to-do/ribfest.aspx",
+      "description": "The Town's yearly ribfest, with food and live music.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "seasonal": true,
+      "seasonNote": "Summer",
+      "costNote": "Free to enter. Food is extra.",
+      "id": "richmond-hill-ribfest-richmond-hill",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "The Wave Pool",
       "type": "place",
       "category": "physical",
-      "tags": ["trails", "nature", "hiking", "free", "oak ridges", "moraine", "year-round", "wildlife"],
-      "cost": "free",
-      "address": "Oak Ridges Corridor Conservation Reserve, Richmond Hill, ON",
-      "neighborhood": "Oak Ridges",
-      "website": "https://www.oakridgesmoraine.org",
-      "hours": "Open year-round, dawn to dusk",
-      "description": "The Oak Ridges Moraine trail network accessible from Richmond Hill's northern neighbourhoods offers 160+ km of connected natural trails through forests, wetlands, and glacial ridge terrain — free to access year-round with multiple entry points from Lake Wilcox Park.",
-      "highlights": [
-        "160+ km of connected natural trails free to access",
-        "Ecologically significant glacial ridge landscape",
-        "Wildlife viewing — deer, fox, and over 100 bird species",
-        "Multiple difficulty levels from easy walks to longer hikes",
-        "Best fall colours in York Region along the ridge trails"
+      "cost": "low",
+      "website": "https://www.richmondhill.ca/en/things-to-do/The-Wave-Pool.aspx",
+      "address": "5 Hopkins St, Richmond Hill",
+      "description": "The Town's indoor wave pool.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "costNote": "Drop-in fee.",
+      "id": "richmond-hill-the-wave-pool",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-bayview-hill-community-centre",
+      "name": "Bayview Hill Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
       ],
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "114 Spadina Road, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/bayview-hill-community-centre",
+      "description": "A community centre in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-bond-lake-arena",
+      "name": "Bond Lake Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "70 Old Colony Road, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/bond-lake-arena",
+      "description": "An arena with public skating in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-centennial-pool",
+      "name": "Centennial Pool",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in fee. Check the schedule.",
+      "address": "161 Newkirk Road, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/centennial-pool",
+      "description": "A public pool in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-ed-sackfield-arena",
+      "name": "Ed Sackfield Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "311 Valleymede Drive, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/ed-sackfield-arena",
+      "description": "An arena with public skating in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-elgin-barrow-arena",
+      "name": "Elgin Barrow Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "43 Church Street South, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/elgin-barrow-arena",
+      "description": "An arena with public skating in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-elgin-west-community-centre",
+      "name": "Elgin West Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "11099 Bathurst Street, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/elgin-west-community-centre",
+      "phone": "905-508-7012",
+      "description": "A community centre in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-elvis-stojko-arena",
+      "name": "Elvis Stojko Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "350 16th Avenue, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/elvis-stojko-arena",
+      "description": "An arena with public skating in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-langstaff-community-centre",
+      "name": "Langstaff Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "155 Red Maple Road, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/langstaff-community-centre",
+      "description": "A community centre in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-richvale-community-centre",
+      "name": "Richvale Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "160 Avenue Road, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/richvale-community-centre",
+      "description": "A community centre in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-rouge-woods-community-centre",
+      "name": "Rouge Woods Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "110 Shirley Drive, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/rouge-woods-community-centre",
+      "description": "A community centre in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-facility-tom-graham-arena",
+      "name": "Tom Graham Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "1300 Elgin Mills Road East, Richmond Hill",
+      "website": "https://www.york.ca/yorkregion/facilities/tom-graham-arena",
+      "description": "An arena with public skating in Richmond Hill. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "richmond-hill-event-sewing-made-simple-central-branch",
+      "name": "Sewing Made Simple",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abaacda9dbc2b002c8acd53",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T19:00:00.000Z",
+        "2026-11-13T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-creative-studio-open-house-central-branch",
+      "name": "Creative Studio Open House",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab53cf7f69b501a0e4644f4",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:00:00.000Z",
+        "2026-12-05T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-05T15:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-miskwaadesi-studio-beaded-poppy-workshop-central-branch",
+      "name": "Miskwaadesi Studio: Beaded Poppy Workshop",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab5854194b74515467b69ab",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-dance-together-young-at-heart-edition-central-branch",
+      "name": "Dance Together: Young at Heart Edition",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab52afbc9d1b8187a993135",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T19:00:00.000Z",
+        "2026-11-12T19:00:00.000Z",
+        "2026-11-16T19:00:00.000Z",
+        "2026-11-19T19:00:00.000Z",
+        "2026-11-23T19:00:00.000Z",
+        "2026-11-26T19:00:00.000Z",
+        "2026-11-30T19:00:00.000Z",
+        "2026-12-03T19:00:00.000Z",
+        "2026-12-07T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-07T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-one-on-one-tech-help-central-branch",
+      "name": "One-on-One Tech Help",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab52c3c94b74515467b5b6d",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T21:00:00.000Z",
+        "2026-11-16T21:00:00.000Z",
+        "2026-11-23T21:00:00.000Z",
+        "2026-11-30T21:00:00.000Z",
+        "2026-12-07T21:00:00.000Z",
+        "2026-12-14T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-14T21:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-paint-a-piggy-6-8-yrs-central-branch",
+      "name": "Paint-a-Piggy (6–8 yrs)",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab528d3ed69cc15475c4d9c",
+      "description": "A program at Central Branch, part of Richmond Hill Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-09T21:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-fabric-printing-101-central-branch",
+      "name": "Fabric Printing 101",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab532940c7bf418f4e3d142",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T21:00:00.000Z",
+        "2026-11-16T21:00:00.000Z",
+        "2026-11-23T21:00:00.000Z",
+        "2026-11-30T21:00:00.000Z",
+        "2026-12-07T21:00:00.000Z",
+        "2026-12-14T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-14T21:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-english-conversation-circle-central-branch",
+      "name": "English Conversation Circle",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab52e8b0c7bf418f4e3d109",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z",
+        "2026-11-16T23:30:00.000Z",
+        "2026-11-23T23:30:00.000Z",
+        "2026-11-30T23:30:00.000Z",
+        "2026-12-07T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-07T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-reading-buddies-6-8-yrs-richmond-green-branch",
+      "name": "Reading Buddies (6–8 yrs)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richmond Green Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3ddd2a472a016061f3042",
+      "description": "A free program at Richmond Green Branch, part of Richmond Hill Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z",
+        "2026-11-16T23:30:00.000Z",
+        "2026-11-23T23:30:00.000Z",
+        "2026-11-30T23:30:00.000Z",
+        "2026-12-07T23:30:00.000Z",
+        "2026-12-14T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-14T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-family-storytime-0-6-yrs-central-branch",
+      "name": "Family Storytime (0–6 yrs)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab57a374852aa18b5b09f27",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Babies, Toddlers & Preschool, Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:30:00.000Z",
+        "2026-11-17T15:30:00.000Z",
+        "2026-11-24T15:30:00.000Z",
+        "2026-11-28T15:30:00.000Z",
+        "2026-12-01T15:30:00.000Z",
+        "2026-12-08T15:30:00.000Z",
+        "2026-12-12T15:30:00.000Z",
+        "2026-12-15T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-15T15:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-babytime-0-12-months-central-branch",
+      "name": "Babytime (0–12 months)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab56c3494b74515467b6542",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Babies, Toddlers & Preschool. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T18:00:00.000Z",
+        "2026-11-17T18:00:00.000Z",
+        "2026-11-24T18:00:00.000Z",
+        "2026-12-01T18:00:00.000Z",
+        "2026-12-08T18:00:00.000Z",
+        "2026-12-15T18:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T18:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-music-and-movement-0-6-yrs-oak-ridges-branch",
+      "name": "Music and Movement (0–6 yrs)",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Oak Ridges Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab56e21ed69cc15475c547a",
+      "description": "A program at Oak Ridges Branch, part of Richmond Hill Public Library. Ages: Babies, Toddlers & Preschool, Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T18:30:00.000Z",
+        "2026-11-17T18:30:00.000Z",
+        "2026-11-24T18:30:00.000Z",
+        "2026-12-01T18:30:00.000Z",
+        "2026-12-08T18:30:00.000Z",
+        "2026-12-15T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-15T18:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-steam-stations-oak-ridges-branch",
+      "name": "STEAM Stations",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Oak Ridges Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab572cbf69b501a0e464b07",
+      "description": "A free program at Oak Ridges Branch, part of Richmond Hill Public Library. Ages: Families, Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T21:00:00.000Z",
+        "2026-11-17T21:00:00.000Z",
+        "2026-11-24T21:00:00.000Z",
+        "2026-12-01T21:00:00.000Z",
+        "2026-12-08T21:00:00.000Z",
+        "2026-12-15T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T21:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-science-club-with-students4students-13-17-yrs-central-branch",
+      "name": "Science Club with Students4Students (13–17 yrs)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab18100d6577100383dc4f9",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T21:30:00.000Z",
+        "2026-12-08T21:30:00.000Z"
+      ],
+      "endsAt": "2026-12-08T21:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-3d-printing-101-hardware-central-branch",
+      "name": "3D Printing 101: Hardware",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab53fc431e9a41a0fbc6832",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T22:00:00.000Z",
+        "2026-11-17T22:00:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-21T15:00:00.000Z",
+        "2026-11-24T22:00:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-01T22:00:00.000Z",
+        "2026-12-02T23:30:00.000Z",
+        "2026-12-08T22:00:00.000Z",
+        "2026-12-09T23:30:00.000Z",
+        "2026-12-15T22:00:00.000Z",
+        "2026-12-16T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-16T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-chess-classes-6-8-yrs-richvale-branch",
+      "name": "Chess Classes ( 6–8 yrs)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Richvale Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3df1ba472a016061f30d5",
+      "description": "A program at Richvale Branch, part of Richmond Hill Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:30:00.000Z",
+        "2026-11-17T23:30:00.000Z",
+        "2026-11-24T23:30:00.000Z",
+        "2026-12-01T23:30:00.000Z",
+        "2026-12-08T23:30:00.000Z",
+        "2026-12-15T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-15T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-baby-music-and-movement-0-12-months-richvale-branch",
+      "name": "Baby Music and Movement (0–12 months)",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Richvale Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab56d9131e9a41a0fbc6ec0",
+      "description": "A program at Richvale Branch, part of Richmond Hill Public Library. Ages: Babies, Toddlers & Preschool. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T18:30:00.000Z",
+        "2026-11-18T18:30:00.000Z",
+        "2026-11-25T18:30:00.000Z",
+        "2026-12-02T18:30:00.000Z",
+        "2026-12-09T18:30:00.000Z",
+        "2026-12-16T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-16T18:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-wellness-wednesdays-book-social-central-branch",
+      "name": "Wellness Wednesdays: Book Social",
+      "type": "event",
+      "category": "mental",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abaaac2035faf0033d8da22",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T19:00:00.000Z",
+        "2026-12-09T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-writing-circle-central-branch",
+      "name": "Writing Circle",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab5479cf69b501a0e4645f7",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-02T23:30:00.000Z",
+        "2026-12-09T23:30:00.000Z",
+        "2026-12-16T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-16T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-the-wonderful-world-of-plants-with-frankie-flowers-central-branch",
+      "name": "The Wonderful World of Plants with Frankie Flowers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba86f9101eb7003f33886d",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-stories-and-crafts-2-5-yrs-oak-ridges-branch",
+      "name": "Stories and Crafts (2–5 yrs)",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Oak Ridges Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab56ff031e9a41a0fbc6f10",
+      "description": "A free program at Oak Ridges Branch, part of Richmond Hill Public Library. Ages: Babies, Toddlers & Preschool. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T15:30:00.000Z",
+        "2026-11-19T15:30:00.000Z",
+        "2026-11-26T15:30:00.000Z",
+        "2026-12-03T15:30:00.000Z",
+        "2026-12-10T15:30:00.000Z",
+        "2026-12-17T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-17T15:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-chit-chat-socials-richvale-branch",
+      "name": "Chit Chat Socials",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richvale Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab54838c9d1b8187a993311",
+      "description": "A free program at Richvale Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T18:30:00.000Z",
+        "2026-11-19T18:30:00.000Z",
+        "2026-11-26T18:30:00.000Z",
+        "2026-12-03T18:30:00.000Z",
+        "2026-12-10T18:30:00.000Z",
+        "2026-12-17T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-17T18:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-create-a-custom-mug-13-17-yrs-oak-ridges-branch",
+      "name": "Create a Custom Mug (13–17 yrs)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Oak Ridges Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aad6911b19bb10d7c331751",
+      "description": "A program at Oak Ridges Branch, part of Richmond Hill Public Library. Ages: Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T21:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T21:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-film-club-central-branch",
+      "name": "Film Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abab5819dbc2b002c8ad011",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:00:00.000Z",
+        "2026-12-10T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-10T23:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-chess-classes-9-12-yrs-richmond-green-branch",
+      "name": "Chess Classes ( 9–12 yrs)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Richmond Green Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3e061ed69cc15475c2f3a",
+      "description": "A program at Richmond Green Branch, part of Richmond Hill Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z",
+        "2026-11-19T23:30:00.000Z",
+        "2026-11-26T23:30:00.000Z",
+        "2026-12-03T23:30:00.000Z",
+        "2026-12-10T23:30:00.000Z",
+        "2026-12-17T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-17T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-lets-talk-english-central-branch",
+      "name": "Let's Talk English",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab57e13ed69cc15475c56da",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z",
+        "2026-11-19T23:30:00.000Z",
+        "2026-11-26T23:30:00.000Z",
+        "2026-12-03T23:30:00.000Z",
+        "2026-12-10T23:30:00.000Z",
+        "2026-12-17T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-17T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-super-simple-storytime-with-caitie-central-branch",
+      "name": "Super Simple Storytime with Caitie",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba6684f69b501a0e46a476",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-14T15:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-holiday-arrangement-workshop-central-branch",
+      "name": "Holiday Arrangement Workshop",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abaae479dbc2b002c8acdd9",
+      "description": "A program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-snow-much-fun-richmond-hill-public-library",
+      "name": "Snow Much Fun",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richmond Hill Public Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba67ce94b74515467bc1f7",
+      "description": "A free program at Richmond Hill Public Library. Ages: Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-16T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-16T15:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-lets-explore-art-6-8-yrs-central-branch",
+      "name": "Let's Explore Art! (6–8 yrs)",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3d98a825ea713bf678ee6",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-16T21:00:00.000Z",
+        "2026-11-23T21:00:00.000Z",
+        "2026-11-30T21:00:00.000Z",
+        "2026-12-07T21:00:00.000Z",
+        "2026-12-14T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-14T21:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-tween-hub-9-12-yrs-central-branch",
+      "name": "Tween Hub (9–12 yrs)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab5280d94b74515467b5b1a",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T21:30:00.000Z",
+        "2026-12-15T21:30:00.000Z"
+      ],
+      "endsAt": "2026-12-15T21:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-mindful-moments-gift-tag-creations-richmond-hill-public-library",
+      "name": "Mindful Moments: Gift Tag Creations",
+      "type": "event",
+      "category": "mental",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richmond Hill Public Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abab7279dbc2b002c8ad04e",
+      "description": "A free program at Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-18T15:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-richvale-book-club-richvale-branch",
+      "name": "Richvale Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richvale Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abaa9979dbc2b002c8acc08",
+      "description": "A free program at Richvale Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-19T16:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-art-and-memories-central-branch",
+      "name": "Art and Memories",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba698bf69b501a0e46a592",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-19T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-mindful-moments-shine-and-share-richmond-hill-public-library",
+      "name": "Mindful Moments: Shine and Share",
+      "type": "event",
+      "category": "mental",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richmond Hill Public Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abab7f59dbc2b002c8ad05b",
+      "description": "A free program at Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-19T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-human-library-with-the-rotary-club-central-branch",
+      "name": "Human Library with the Rotary Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ababc22035faf0033d8dee9",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T16:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-wonders-of-quilting-central-branch",
+      "name": "Wonders of Quilting",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba6a98c9d1b8187a99933f",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T17:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T17:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-miskwaadesi-studio-indigenous-dot-painting-central-branch",
+      "name": "Miskwaadesi Studio: Indigenous Dot Painting",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab58366d6cf1f1a037dc0eb",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-richmond-green-evening-book-club-richmond-green-branch",
+      "name": "Richmond Green Evening Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richmond Green Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6abaa8709d27a000454d2629",
+      "description": "A free program at Richmond Green Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-24T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-24T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-creating-comics-page-turner-ii-central-branch",
+      "name": "Creating Comics: Page Turner II",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab5822e31e9a41a0fbc72a8",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-25T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-25T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-bring-your-own-book-club-richmond-hill-public-library",
+      "name": "Bring Your Own Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richmond Hill Public Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba8dbb9dbc2b002c8ac43f",
+      "description": "A free program at Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T00:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-small-business-market-central-branch",
+      "name": "Small Business Market",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab2a0ddb19bb10d7c337e0b",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-28T18:00:00.000Z"
+      ],
+      "endsAt": "2026-11-28T18:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-central-book-club-central-branch",
+      "name": "Central Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba8add96ec3a003ad6be69",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-04T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-04T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-miskwaadesi-studio-dreamcatchers-for-all-ages-central-branch",
+      "name": "Miskwaadesi Studio: Dreamcatchers for All Ages",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba6fde31e9a41a0fbccb04",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-05T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-05T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-spice-club-oak-ridges-branch",
+      "name": "Spice Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Oak Ridges Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab42b1119094f0c693967d7",
+      "description": "A free program at Oak Ridges Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-09T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T00:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-board-game-night-out-richvale-branch",
+      "name": "Board Game Night Out",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richvale Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3f67f6059b704112ba049",
+      "description": "A free program at Richvale Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-09T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-09T23:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-repair-caf-richvale-branch",
+      "name": "Repair Café",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richvale Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3f49ca472a016061f33ae",
+      "description": "A free program at Richvale Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-12T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-12T15:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-living-well-managing-pain-richvale-branch",
+      "name": "Living Well: Managing Pain",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Richvale Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3f5b36059b704112ba03a",
+      "description": "A free program at Richvale Branch, part of Richmond Hill Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-18T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-18T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-musical-afternoons-central-branch",
+      "name": "Musical Afternoons",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6ab3f21e6059b704112b9fd6",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Adults, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-19T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-19T19:00:00.000Z"
+    },
+    {
+      "id": "richmond-hill-event-noon-years-eve-family-rave-central-branch",
+      "name": "Noon Years Eve: Family Rave",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Richmond Hill Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Richmond Hill",
+      "website": "https://rhpl.bibliocommons.com/events/6aba76d694b74515467bc32f",
+      "description": "A free program at Central Branch, part of Richmond Hill Public Library. Ages: Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-31T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-31T15:30:00.000Z"
     }
   ]
 }
