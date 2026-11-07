@@ -119,5 +119,126 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Toronto_Waterfront,_CN_Tower_6277.jpg"
     }
+  },
+  "/categories/physical.jpg": {
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAKABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAEF/8QAHhAAAgIDAQADAAAAAAAAAAAAAQIDEQAEIRIFMYH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAGREAAgMBAAAAAAAAAAAAAAAAAQIAAxET/9oADAMBAAIRAxEAPwBs3y0yREjTUGj336r8GY0zbG3G87kuB00v1kQksbJ5gJ5HG+QHaivReA1hsbDE5hBs/9k=",
+    "credit": {
+      "artist": "Diego Torres Silvestre from Sao Paulo, Brazil",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGrenadier_Pond_2007_Toronto.jpg"
+    }
+  },
+  "/categories/mental.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgIE/8QAIxAAAgEEAQMFAAAAAAAAAAAAAQIDAAQRIQUGEhMUIjFRYf/EABUBAQEAAAAAAAAAAAAAAAAAAAEE/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARAv/aAAwDAQACEQMRAD8AvhOTNvdpJ3kxYIYEnGPykEnUtk1qzwyDylfajg/P0aDcXiQKWUHOiMarb6aGe8dHiUBRorqpReNIy//Z",
+    "credit": {
+      "artist": "Acediscovery",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AToronto-Music-Garden-June-2024.jpg"
+    }
+  },
+  "/categories/social.jpg": {
+    "width": 1600,
+    "height": 1138,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAIBAAAgICAgIDAAAAAAAAAAAAAQIDEQAEE0EFEiExYf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ACj8brSOuu240qCHkQ2RRP133mP54pHKmsZGYRRqQSfhbqxgvK8k2kHYkcaE/ps5OWbg5LPubBJ7wNQdP//Z",
+    "credit": {
+      "artist": "Nick Hillier nhillier",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChatting_in_a_coffee_shop_%28Unsplash%29.jpg"
+    }
+  },
+  "/categories/financial.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgEE/8QAIRAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIxQSEicbH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIRAxEAPwDPp+qyRbEcmWPgEvuYEfAM0murU3El1OBJI5O1Twn55q2yLCMRqo64pw20E9/FC8ShXRzlPUjAz1UCKX//2Q==",
+    "credit": {
+      "artist": "Canmenwalker",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AToronto_Public_Library_-_Fairview_Branch_interior_2023.jpg"
+    }
+  },
+  "/categories/arts.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwb/xAAfEAADAAMAAQUAAAAAAAAAAAABAgMABBEhEhNBUfH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACESH/2gAMAwEAAhEDEQA/AAlCnuCLFgpPQwAP5lFDehrTWVKKvoXwpPkj7A+Tk9v7NJGTLzpXuEmy92WlApaZ4p5hDjhFe11n/9k=",
+    "credit": {
+      "artist": "bobistraveling",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AStaircase_spiral_at_Art_Gallery_of_Ontario_in_2009.jpg"
+    }
+  },
+  "/categories/dance-music.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAjEAEAAQMDAwUAAAAAAAAAAAABAgMEEQAFEhMhIjFRYXGR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAMAwEAAhEDEQA/AE3Xermla0JWlSRNCMziKvuag324Xd5KkXFXqRDPcwRcffrqWrLqcnOCOPx0ZJfFexGLj5xqrCZHf//Z",
+    "credit": {
+      "artist": "Chicken4War",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATemerty_Foundation_Stage%2C_Toronto_Ukrainian_Festival_2025.jpg"
+    }
+  },
+  "/categories/food.jpg": {
+    "width": 1600,
+    "height": 1288,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMEBf/EACAQAAIBBAMAAwAAAAAAAAAAAAIDAQAEETEFEiETUaH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABgRAAMBAQAAAAAAAAAAAAAAAAABAjER/9oADAMBAAIRAxEAPwDI4dYLO5Yd+61eJCCxWXpZLVJdw13D3PM8CJd5I5mZn3f7Vz8cfYwzHzGRgU98YjGdfVHdci5XcUYAobAQW5jzdSp0sFPHp//Z",
+    "credit": {
+      "artist": "Archives of Ontario",
+      "license": "Open Government Licence - Ontario",
+      "licenseUrl": "https://www.ontario.ca/page/open-government-licence-ontario",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFarm_produce%2C_Kensington_Market%2C_Toronto_%28I0003235%29.jpg"
+    }
+  },
+  "/categories/cafes.jpg": {
+    "width": 1600,
+    "height": 911,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAiEAABBAAFBQAAAAAAAAAAAAABAAIDEgQRITFyIiMyscH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABcRAAMBAAAAAAAAAAAAAAAAAAABEiH/2gAMAwEAAhEDEQA/AJcfVJ2RYDKwDqhwz31U+SRrsQbucGk6WSGbN4fUObwj4H2pp6OT/9k=",
+    "credit": {
+      "artist": "marc falardeau from toronto",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3APatrician_cafe%2C_King%2C_near_Sherbourne.jpg"
+    }
+  },
+  "/categories/thrifting.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwUG/8QAIhAAAgEDBAIDAAAAAAAAAAAAAgMBAAQRBRIhMQZBUWGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABgRAQADAQAAAAAAAAAAAAAAAAEAAhFR/9oADAMBAAIRAxEAPwC5Za8d6hjBCAkByPOc8T3+Vm2eStSomFaQRbsbiKZKY+vjujZdtVplkasATSKD2+4z1QaS87y6cD8SIL3REcc5ppyKiG6bP//Z",
+    "credit": {
+      "artist": "vincelaconte from Winston-Salem, NC, USA",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKensington_thrift_store_shopping%2C_Toronto_%2851351227%29.jpg"
+    }
+  },
+  "/categories/volunteer.jpg": {
+    "width": 1600,
+    "height": 1077,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQME/8QAIRAAAgIBAwUBAAAAAAAAAAAAAQIDEQATITEEBRIiQWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AKdC+tAk5AHrVMOM0ziLUdgiOQCvmUreuBhXYpHWKMKauMk/pvGHdtBhtQjvj7gsF//Z",
+    "credit": {
+      "artist": "Archives of Ontario",
+      "license": "Open Government Licence - Ontario",
+      "licenseUrl": "https://www.ontario.ca/page/open-government-licence-ontario",
+      "source": "https://commons.wikimedia.org/wiki/File%3APeople_working_a_community_garden_%28I0004490%29.jpg"
+    }
+  },
+  "/categories/events.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEF/8QAIBAAAgICAgIDAAAAAAAAAAAAAQIDEQATEiEEYRQicf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGREAAgMBAAAAAAAAAAAAAAAAAQIAERIx/9oADAMBAAIRAxEAPwDHQ6wCs0cbEd99Xj7pQw2GMgA8qIv9yJEh+Vaj6xNXqqxZvHiRE4oBsj5v7Jsk4F0vDLvljRE//9k=",
+    "credit": {
+      "artist": "Allen McGregor from Brampton, Canada",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADistillery_District_Christmas_Market_%285257526487%29.jpg"
+    }
   }
 }

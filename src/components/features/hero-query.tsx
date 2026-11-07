@@ -19,7 +19,7 @@ const tones = {
   paper: {
     text: "text-text",
     select: "border-accent text-primary-text hover:border-primary-text focus-visible:outline-focus",
-    button: "primary" as const,
+    button: "ink" as const,
   },
 };
 

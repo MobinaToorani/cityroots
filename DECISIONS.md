@@ -505,3 +505,15 @@ The owner said the site felt claustrophobic and its point was not clear at first
 - Categories come second, each with its colour, icon, and one-line lede (shared with the category pages), on a solid band so the page has rhythm.
 - More air everywhere: `PageSection` spacing went from 3.5rem to 4rem/6rem, and the footer gap grew. The home week list shows six rows, not eight.
 - Feature flags are read at build time, so local Playwright runs need `FEATURE_PARTNERS=true FEATURE_BUSINESS=true` on the build too, as in CI.
+
+## Home page modelled on an editorial city-portal layout (November 2026)
+
+The owner shared a reference layout (a city portal shot) and asked for the home page to be similar. It follows that layout, using CityRoots' own name, content and photos:
+
+- Warm `sand` hero band with the hero sentence, a small "10 Ontario cities, no ads" label, a landscape photo fading in at the bottom left, and three overlapping city photo cards. Which cities appear rotates daily, so no city always leads.
+- Intro paragraph beside a large heading, then four fact cards. These are real counts (places, free share, cities, events this week), each with a line saying what it means. The owner's earlier "no vanity stats" brief is met by keeping them true and explained.
+- Categories as photo cards with three real places each (`listCategorySamples`, picks first, otherwise rotating daily). The eleven category photos are from Wikimedia Commons, credited in `scripts/seed-data/photo-credits.json`.
+- Cities in a white panel over a full-bleed photo, with a rotating "Today's city" card.
+- This week as ticket rows on sand, guides as a 2x2 list with round photos, and the sample day as a dark card beside the plan.
+- Site footer is dark in both themes, with a suggest-a-place card, link columns, and a large wordmark.
+- The rounded "see all" links (`PillLink`) and round arrows (`CircleArrow`) come from the reference. Use them for section-level moves, not as status badges.
