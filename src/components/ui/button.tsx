@@ -6,7 +6,7 @@ type Variant = "primary" | "secondary" | "ink" | "quiet" | "photo" | "photo-outl
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "motion-press inline-flex items-center justify-center gap-2 rounded-control font-semibold whitespace-nowrap transition-[background-color,color,box-shadow,transform] duration-200 ease-[var(--ease-out-expo)] active:translate-y-px disabled:pointer-events-none disabled:opacity-50";
+  "motion-press relative touch-target inline-flex items-center justify-center gap-2 rounded-control font-semibold whitespace-nowrap transition-[background-color,color,box-shadow,transform] duration-200 ease-[var(--ease-out-expo)] active:translate-y-px disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
   primary: "bg-primary text-white hover:bg-primary-hover",
@@ -23,6 +23,14 @@ const sizes: Record<Size, string> = {
   md: "h-11 px-5 text-body",
   lg: "h-13 px-7 text-base",
 };
+
+/** A control that is only an icon, such as Close. Needs an aria-label. */
+export function iconButtonClasses(className?: string) {
+  return cn(
+    "motion-press touch-target relative grid size-10 shrink-0 place-items-center rounded-control text-text-muted transition-colors hover:bg-divider/60 hover:text-text disabled:opacity-35",
+    className,
+  );
+}
 
 export function buttonClasses(variant: Variant = "primary", size: Size = "md", className?: string) {
   return cn(base, variants[variant], variant !== "quiet" && sizes[size], className);

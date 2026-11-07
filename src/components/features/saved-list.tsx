@@ -47,7 +47,7 @@ export function SavedList() {
         <EmptyState
           icon={Heart}
           title="Nothing saved yet"
-          action={<ButtonLink href="/explore">Explore</ButtonLink>}
+          action={<ButtonLink href="/explore">See things to do</ButtonLink>}
         >
           Tap the heart on anything you like.
         </EmptyState>

@@ -14,6 +14,7 @@ import { features } from "@/lib/env";
 import { RELATIONSHIP_LABELS } from "@/lib/domain/claim";
 import { COST_LABELS } from "@/lib/domain/cost";
 import { approveClaimAction, rejectClaimAction } from "../actions";
+import { Notice } from "@/components/ui/notice";
 
 export const metadata: Metadata = { title: "Claims" };
 
@@ -43,11 +44,7 @@ export default async function ClaimsPage(props: PageProps<"/admin/claims">) {
         Confirm the person runs the place before verifying: a matching email domain, or a call to
         the number on the listing. Verifying never changes ranking or Picks.
       </p>
-      {done && (
-        <p role="status" className="mt-3 text-body font-semibold">
-          {done}
-        </p>
-      )}
+      {done && <Notice className="mt-3">{done}</Notice>}
       <nav aria-label="Filter by status" className="mt-4 flex gap-4 border-b border-divider">
         {TABS.map((t) => (
           <Link

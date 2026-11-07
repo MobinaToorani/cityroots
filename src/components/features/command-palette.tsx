@@ -10,6 +10,7 @@ import type { SearchHit, SearchResults } from "@/lib/data/search";
 import { cn } from "@/lib/cn";
 import { logger } from "@/lib/logger";
 import { OPEN_EVENT } from "./palette-trigger";
+import { iconButtonClasses } from "@/components/ui/button";
 
 const RECENT_KEY = "cityroots:recent-searches";
 const MAX_RECENT = 5;
@@ -212,9 +213,9 @@ export function CommandPalette() {
             type="button"
             onClick={() => dialog.current?.close()}
             aria-label="Close search"
-            className="grid size-8 shrink-0 place-items-center rounded-control hover:bg-divider/60"
+            className={iconButtonClasses()}
           >
-            <Icon icon={X} size={16} />
+            <Icon icon={X} />
           </button>
         </div>
 

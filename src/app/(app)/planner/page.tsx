@@ -1,4 +1,4 @@
-import { RefreshCw, Route as RouteIcon } from "lucide-react";
+import { ChevronDown, RefreshCw, Route as RouteIcon } from "lucide-react";
 import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { AutoSubmitForm } from "@/components/features/planner/auto-submit-form";
@@ -32,6 +32,7 @@ import {
   weekdayOf,
   type PlannerParams,
 } from "@/lib/domain/planner";
+import { Notice } from "@/components/ui/notice";
 
 const DEFAULT_CITY = "toronto";
 const DEFAULT_BUDGET = 25;
@@ -89,13 +90,9 @@ export default async function PlannerPage(props: PageProps<"/planner">) {
   const city = cities.find((c) => c.slug === params.city) ?? cities[0];
 
   return (
-    <div className="page-frame reading pt-8">
+    <div className="page-frame reading page-top">
       <RememberCity slug={city?.slug ?? null} />
-      {query.deleted && (
-        <p role="status" className="mb-4 text-body font-semibold">
-          Plan deleted.
-        </p>
-      )}
+      {query.deleted && <Notice className="mb-4">Plan deleted.</Notice>}
       <h1 className="mb-4 page-title">Plan a day</h1>
       {city && (
         <>
@@ -221,11 +218,13 @@ function PlannerForm({
       {/* Keyed so the answers follow the URL when the header's city picker changes it. */}
       <AutoSubmitForm
         key={`${params.city}-${params.day}-${params.budget}`}
+        city={params.city}
         method="get"
         action="/planner"
         className="grid gap-4"
       >
-        <div className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
+        {/* The header's picker sets the city, except without JavaScript. */}
+        <noscript>
           <SelectField
             label="City"
             name="city"
@@ -233,6 +232,8 @@ function PlannerForm({
             defaultValue={params.city}
             options={cities.map((c) => ({ value: c.slug, label: c.name }))}
           />
+        </noscript>
+        <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-[13rem_minmax(0,1fr)]">
           <TextField
             type="date"
             name="day"
@@ -242,26 +243,40 @@ function PlannerForm({
             max={addDays(today, MAX_DAYS_AHEAD)}
             defaultValue={params.day}
           />
+          <ChoiceChips
+            legend="Budget per person"
+            name="budget"
+            even
+            required
+            defaultValue={String(params.budget)}
+            options={BUDGET_CHOICES.map((b) => ({
+              value: String(b),
+              label: b === 0 ? "Free" : `$${b}`,
+            }))}
+          />
         </div>
-        <ChoiceChips
-          legend="Budget per person"
-          name="budget"
-          required
-          defaultValue={String(params.budget)}
-          options={BUDGET_CHOICES.map((b) => ({
-            value: String(b),
-            label: b === 0 ? "Free" : `$${b}`,
-          }))}
-        />
-        <ChoiceChips
-          legend="Into (optional)"
-          name="interests"
-          multiple
-          defaultValue={params.interests}
-          options={CATEGORIES.filter((c) =>
-            (PLANNER_INTERESTS as readonly string[]).includes(c.slug),
-          ).map((c) => ({ value: c.slug, label: c.shortName, accent: c.accent }))}
-        />
+        <details className="group" open={params.interests.length > 0}>
+          <summary className="flex min-h-11 cursor-pointer list-none items-center gap-1.5 text-meta font-semibold select-none [&::-webkit-details-marker]:hidden">
+            What are you into?
+            <span className="font-normal text-text-muted">
+              {params.interests.length > 0 ? `${params.interests.length} chosen` : "Optional"}
+            </span>
+            <Icon
+              icon={ChevronDown}
+              size={16}
+              className="transition-transform duration-150 group-open:rotate-180 motion-reduce:transition-none"
+            />
+          </summary>
+          <ChoiceChips
+            legend="Pick any"
+            name="interests"
+            multiple
+            defaultValue={params.interests}
+            options={CATEGORIES.filter((c) =>
+              (PLANNER_INTERESTS as readonly string[]).includes(c.slug),
+            ).map((c) => ({ value: c.slug, label: c.name, category: c.slug }))}
+          />
+        </details>
         <noscript>
           <button type="submit" className={buttonClasses("primary")}>
             Plan my day

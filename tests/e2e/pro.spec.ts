@@ -164,10 +164,48 @@ test("anyone can plan a day, and Pro is what keeps the edits", async ({ page }) 
     .first()
     .click();
   await expect(page.getByRole("button", { name: "Share this plan" })).toBeHidden();
+  await expect(page.getByText("Your changes last until you leave this page.")).toBeVisible();
   await expect(page.getByRole("link", { name: "Keep your changes with Pro" })).toHaveAttribute(
     "href",
     "/pricing",
   );
+});
+
+test("removing a stop can be undone", async ({ page }) => {
+  await page.goto("/planner?city=newmarket");
+  const stops = page.getByRole("list", { name: "Your day" }).getByRole("listitem");
+  const count = await stops.count();
+  await page
+    .getByRole("button", { name: /^Remove / })
+    .first()
+    .click();
+  await expect(stops).toHaveCount(count - 1);
+  await page.getByRole("button", { name: "Undo" }).click();
+  await expect(stops).toHaveCount(count);
+  await expect(page.getByRole("button", { name: "Share this plan" })).toBeVisible();
+});
+
+test("undoing a removal keeps edits made since", async ({ page }) => {
+  await page.goto("/planner?city=newmarket");
+  const stops = page.getByRole("list", { name: "Your day" }).getByRole("listitem");
+  const count = await stops.count();
+  await page
+    .getByRole("button", { name: /^Remove / })
+    .first()
+    .click();
+  // The last stop's place changes, then the removal is undone. Its time moves back, so compare names.
+  const lastName = stops.last().getByRole("heading");
+  const before = await lastName.innerText();
+  await page
+    .getByRole("button", { name: /^Try another place instead of / })
+    .last()
+    .click();
+  await expect(lastName).not.toHaveText(before);
+  const edited = await lastName.innerText();
+  await page.getByRole("button", { name: "Undo" }).click();
+  await expect(stops).toHaveCount(count);
+  await expect(lastName).toHaveText(edited);
+  await expect(page.getByRole("button", { name: "Undo" })).toHaveCount(0);
 });
 
 test("Pro member plans a day, edits it, and shares it", async ({ page, browser }) => {
@@ -178,7 +216,12 @@ test("Pro member plans a day, edits it, and shares it", async ({ page, browser }
   await page.goto("/planner");
   await expect(page.getByRole("heading", { level: 1, name: "Plan a day" })).toBeVisible();
   await expectNoAxeViolations(page);
-  await page.getByLabel("City", { exact: true }).selectOption("newmarket");
+  // The header's picker is the one place to change city, and the plan follows it.
+  await page.getByRole("banner").locator("summary").click();
+  await page
+    .getByRole("group", { name: "Your city" })
+    .getByRole("link", { name: "Newmarket" })
+    .click();
   await expect(page).toHaveURL(/city=newmarket/);
 
   await expect(page.getByRole("heading", { level: 2, name: /in Newmarket$/ })).toBeVisible();

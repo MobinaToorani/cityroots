@@ -23,7 +23,7 @@ export default function PartnersPage() {
   const curl = `curl -H "Authorization: Bearer cr_live_..." "${absoluteUrl("/api/v1/places?city=newmarket&cost=free&per_page=20")}"`;
 
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container className="reading">
         <p className="text-meta font-semibold text-primary-text">Partner program</p>
         <h1 className="mt-2 page-title">Put free things to do on your own site.</h1>

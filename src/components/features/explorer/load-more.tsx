@@ -1,31 +1,18 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { buttonClasses } from "@/components/ui/button";
 import { useExplorer } from "./explorer-state";
 
-type LoadMoreProps = { remaining: number; pageSize: number };
+type LoadMoreProps = { shown: number; total: number; pageSize: number };
 
 /**
  * A real form button that loads the next page, which also works without
- * JavaScript. With JavaScript it also loads automatically near the end of the list.
+ * JavaScript. It never loads on its own: that would keep the footer out of reach.
  */
-export function LoadMore({ remaining, pageSize }: LoadMoreProps) {
+export function LoadMore({ shown, total, pageSize }: LoadMoreProps) {
+  const remaining = total - shown;
   const { state, setState, isPending } = useExplorer();
-  const ref = useRef<HTMLFormElement>(null);
   const next = state.page + 1;
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || isPending) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) void setState({ page: next });
-      },
-      { rootMargin: "600px 0px" },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [next, isPending, setState]);
 
   const hidden: Record<string, string> = {
     city: state.city ?? "",
@@ -42,14 +29,13 @@ export function LoadMore({ remaining, pageSize }: LoadMoreProps) {
 
   return (
     <form
-      ref={ref}
       action="/explore"
       method="get"
       onSubmit={(e) => {
         e.preventDefault();
         void setState({ page: next });
       }}
-      className="mt-8 flex justify-center"
+      className="mt-8 grid justify-items-center gap-2"
     >
       {Object.entries(hidden)
         .filter(([, v]) => v)
@@ -57,11 +43,10 @@ export function LoadMore({ remaining, pageSize }: LoadMoreProps) {
           <input key={name} type="hidden" name={name} value={value} />
         ))}
       <input type="hidden" name="page" value={next} />
-      <button
-        type="submit"
-        disabled={isPending}
-        className="motion-press h-11 rounded-control border border-divider bg-surface-solid px-6 font-semibold hover:border-text-muted/50 active:translate-y-px disabled:opacity-60"
-      >
+      <p className="text-meta text-text-muted">
+        Showing {shown} of {total}
+      </p>
+      <button type="submit" disabled={isPending} className={buttonClasses("secondary")}>
         {isPending ? "Loading more" : `Show ${Math.min(pageSize, remaining)} more`}
       </button>
     </form>

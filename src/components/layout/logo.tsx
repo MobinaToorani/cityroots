@@ -22,7 +22,13 @@ export function LogoMark({ className }: { className?: string }) {
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={cn("inline-flex items-center gap-2.5 rounded-control", className)}>
+    <Link
+      href="/"
+      className={cn(
+        "touch-target relative inline-flex items-center gap-2.5 rounded-control",
+        className,
+      )}
+    >
       <LogoMark />
       <span className="text-[17px] font-bold tracking-tight">CityRoots</span>
     </Link>

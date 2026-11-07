@@ -13,7 +13,7 @@ test.describe("guides", () => {
     page,
   }) => {
     await page.goto("/guides");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("A day out, already planned.");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Guides");
     const links = page.locator("main ol h2 a");
     await expect(links).toHaveCount(10);
     expect(await axe(page)).toEqual([]);

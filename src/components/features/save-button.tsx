@@ -25,7 +25,7 @@ export function SaveButton({ placeId, placeName, variant = "icon", className }: 
     if (nowSaved) {
       setPop((n) => n + 1);
       track(GOALS.placeSaved);
-      toast("Saved", { label: "View saved", href: "/saved" });
+      toast("Saved", { label: "See saved", href: "/saved" });
     } else {
       toast("Removed", { label: "Undo", onClick: () => toggleSaved(placeId) });
     }
@@ -38,7 +38,7 @@ export function SaveButton({ placeId, placeName, variant = "icon", className }: 
       aria-pressed={saved}
       aria-label={variant === "icon" ? `Save ${placeName}` : undefined}
       className={cn(
-        "motion-press relative z-10 inline-flex items-center justify-center gap-2 rounded-control font-semibold transition-colors duration-200",
+        "motion-press touch-target relative z-10 inline-flex items-center justify-center gap-2 rounded-control font-semibold transition-colors duration-200",
         variant === "icon"
           ? "size-10 text-text-muted hover:bg-bg hover:text-text"
           : "h-11 border border-divider bg-surface-solid px-5 text-body hover:border-text-muted/50",

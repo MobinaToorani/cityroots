@@ -2,7 +2,6 @@ import {
   BadgeCheck,
   Store,
   Accessibility,
-  ArrowLeft,
   CalendarClock,
   Navigation,
   Clock,
@@ -35,6 +34,7 @@ import { exploreHref } from "@/lib/domain/explore-params";
 import { features } from "@/lib/env";
 import { mapsUrl } from "@/lib/domain/maps";
 import { absoluteUrl } from "@/lib/site";
+import { BackLink } from "@/components/ui/back-link";
 
 export const revalidate = 3600;
 
@@ -81,7 +81,7 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
   const price = costNote(place.costBand, place.priceNote);
 
   return (
-    <article className="page-frame pt-8">
+    <article className="page-frame page-top">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -108,13 +108,9 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
         }}
       />
 
-      <Link
-        href={exploreHref({ city: place.citySlug })}
-        className="mb-5 inline-flex items-center gap-1.5 text-meta font-semibold text-text-muted quiet-link"
-      >
-        <Icon icon={ArrowLeft} size={16} />
+      <BackLink href={exploreHref({ city: place.citySlug })}>
         Everything in {place.cityName}
-      </Link>
+      </BackLink>
 
       <header>
         <p className="flex items-center gap-1.5 text-meta text-text-muted">

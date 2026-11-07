@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default async function AboutPage() {
   const stats = await getSiteStats();
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container className="reading">
         <h1 className="page-title">Your city has more to offer than you think.</h1>
         <p className="mt-6 text-lg text-text-muted">
@@ -133,7 +133,7 @@ export default async function AboutPage() {
         </Block>
 
         <div className="mt-12 flex flex-wrap gap-3">
-          <ButtonLink href="/explore">Start exploring</ButtonLink>
+          <ButtonLink href="/explore">See things to do</ButtonLink>
           <ButtonLink href="/" variant="secondary">
             Pick a city
           </ButtonLink>

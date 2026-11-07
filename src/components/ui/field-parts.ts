@@ -10,6 +10,10 @@ export function fieldControlClasses(error?: string, extra?: string) {
   );
 }
 
+/** A bare input, such as a share link to copy. */
+export const plainInputClasses =
+  "h-11 rounded-control border border-divider bg-surface-solid px-4 text-body";
+
 export const floatingLabelClasses =
   "pointer-events-none absolute top-3.5 left-4 text-[11px] font-semibold text-text-muted";
 

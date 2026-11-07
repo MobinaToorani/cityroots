@@ -4,7 +4,9 @@ import { Check, ChevronDown } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
 import { useEffect, useRef, type MouseEvent, type ReactNode } from "react";
+import { CategoryIcon } from "@/components/ui/category-icon";
 import { chipClasses } from "@/components/ui/chip";
+import type { CategorySlug } from "@/lib/domain/categories";
 import { Icon } from "@/components/ui/icon";
 import { cn } from "@/lib/cn";
 
@@ -94,8 +96,8 @@ type FilterOptionProps = {
   selected: boolean;
   /** "single" closes the menu after a choice; "multi" keeps it open for more. */
   mode: "single" | "multi";
-  /** Category colour dot. */
-  accent?: string;
+  /** Shows the category's icon. */
+  category?: CategorySlug;
   /** Optimistic update instead of navigating. Modified clicks still open the link. */
   onSelect?: () => void;
   children: ReactNode;
@@ -106,7 +108,7 @@ export function FilterOption({
   href,
   selected,
   mode,
-  accent,
+  category,
   onSelect,
   children,
 }: FilterOptionProps) {
@@ -126,7 +128,7 @@ export function FilterOption({
       scroll={false}
       aria-current={selected ? "true" : undefined}
       className={cn(
-        "flex min-h-11 items-center gap-3 rounded-card px-3 py-2 text-body outline-none hover:bg-bg focus-visible:bg-bg focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus",
+        "flex min-h-11 items-center gap-3 rounded-control px-3 py-2 text-body outline-none hover:bg-bg focus-visible:bg-bg focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus",
         selected && "font-semibold",
       )}
     >
@@ -145,19 +147,17 @@ export function FilterOption({
           {selected && <Icon icon={Check} size={16} />}
         </span>
       )}
-      {accent && (
-        <span
-          aria-hidden="true"
-          className="size-2.5 shrink-0 rounded-full"
-          style={{ backgroundColor: accent }}
-        />
-      )}
+      {category && <CategoryIcon slug={category} size={16} />}
       <span className="min-w-0 flex-1">{children}</span>
     </Link>
   );
 }
 
-/** A "Clear" link at the foot of a multi-select menu. */
+/** The foot of a multi-select menu, kept in view while the options scroll. */
 export function FilterMenuFooter({ children }: { children: ReactNode }) {
-  return <div className="mt-1 border-t border-divider px-1 pt-1.5 pb-0.5">{children}</div>;
+  return (
+    <div className="sticky -bottom-1.5 mt-1 -mb-1.5 flex items-center justify-between gap-2 border-t border-divider bg-surface-solid px-1 py-1.5">
+      {children}
+    </div>
+  );
 }

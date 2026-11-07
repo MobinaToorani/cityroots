@@ -61,7 +61,7 @@ export default async function HomePage() {
           title="On this week"
           action={
             <ButtonLink href="/events" variant="quiet" className="text-meta">
-              All events
+              See what&apos;s on
               <Icon icon={ArrowRight} size={16} />
             </ButtonLink>
           }

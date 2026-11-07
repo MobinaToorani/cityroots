@@ -6,9 +6,10 @@ import { useActionState, useState } from "react";
 import { savePlanAction, type SavePlanState } from "@/app/(app)/planner/actions";
 import { CategoryTag, CostBadge } from "@/components/ui/badges";
 import { ShareButton } from "@/components/features/share-button";
-import { Button, ButtonLink } from "@/components/ui/button";
+import { Button, ButtonLink, iconButtonClasses } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
+import { toast } from "@/components/ui/toaster";
 import type { PlanOption } from "@/lib/domain/planner";
 import { SLOT_TIMES, timeLabel, type SlotKey } from "@/lib/domain/plan-slots";
 import type { CategorySlug } from "@/lib/domain/categories";
@@ -97,8 +98,21 @@ export function PlanEditor({
 
   function remove(index: number) {
     const stop = stops[index];
-    setStops(stops.filter((_, i) => i !== index));
-    setAnnouncement(`${places[stop?.placeId ?? ""]?.name ?? "Stop"} removed`);
+    if (!stop) return;
+    const name = places[stop.placeId]?.name ?? "Stop";
+    const before = stops;
+    const after = stops.filter((_, i) => i !== index);
+    setStops(after);
+    toast(`${name} removed`, {
+      label: "Undo",
+      onClick: () => {
+        // Keeps edits made since. With none, this is the plan as it was, so it can be shared again.
+        setStops((now) =>
+          now === after ? before : [...now.slice(0, index), stop, ...now.slice(index)],
+        );
+        setAnnouncement(`${name} is back`);
+      },
+    });
   }
 
   return (
@@ -130,13 +144,7 @@ export function PlanEditor({
             style={{ width: `${Math.round(share * 100)}%` }}
           />
         </div>
-        <p className="text-meta text-text-muted">
-          {over
-            ? "Over budget. Swap or remove a paid stop."
-            : stops.some((s) => !places[s.placeId]?.hoursKnown)
-              ? "Per person, from listed prices. Check hours before you go."
-              : "Per person, from listed prices."}
-        </p>
+        {over && <p className="text-meta text-danger">Over budget. Swap or remove a paid stop.</p>}
       </Card>
 
       {stops.length > 0 ? (
@@ -147,7 +155,7 @@ export function PlanEditor({
             const time = SLOT_TIMES[i] ?? SLOT_TIMES[SLOT_TIMES.length - 1] ?? "18:30";
             return (
               <li key={`${stop.slot}-${stop.placeId}`}>
-                <Card className="grid gap-x-3 gap-y-2 p-4 sm:grid-cols-[4.5rem_1fr_auto] sm:items-center">
+                <Card className="grid grid-cols-[4rem_minmax(0,1fr)] gap-x-3 gap-y-2 p-4 sm:grid-cols-[4.5rem_minmax(0,1fr)_auto] sm:items-center">
                   <p className="text-card font-semibold">{timeLabel(time)}</p>
                   <div className="min-w-0">
                     <p className="text-meta font-semibold text-text-muted">{stop.label}</p>
@@ -163,7 +171,18 @@ export function PlanEditor({
                       {place.neighborhood && <span>{place.neighborhood}</span>}
                     </div>
                   </div>
-                  <div className="flex gap-1 sm:justify-end">
+                  <div className="col-span-2 flex items-center gap-1 sm:col-span-1 sm:justify-end">
+                    <Button
+                      variant="secondary"
+                      size="sm"
+                      aria-label={`Try another place instead of ${place.name}`}
+                      disabled={stop.options.length === 0}
+                      onClick={() => swap(i)}
+                      className="mr-auto sm:mr-2"
+                    >
+                      <Icon icon={RefreshCw} size={16} />
+                      Try another
+                    </Button>
                     <StopButton
                       label={`Move ${place.name} earlier`}
                       icon={ArrowUp}
@@ -175,12 +194,6 @@ export function PlanEditor({
                       icon={ArrowDown}
                       disabled={i === stops.length - 1}
                       onClick={() => move(i, 1)}
-                    />
-                    <StopButton
-                      label={`Try another place instead of ${place.name}`}
-                      icon={RefreshCw}
-                      disabled={stop.options.length === 0}
-                      onClick={() => swap(i)}
                     />
                     <StopButton
                       label={`Remove ${place.name}`}
@@ -200,6 +213,21 @@ export function PlanEditor({
       <p role="status" className="sr-only">
         {announcement}
       </p>
+
+      {stops.length > 0 && (
+        <p className="text-meta text-text-muted">
+          {stops.some((s) => !places[s.placeId]?.hoursKnown)
+            ? "Prices are per person, as listed. Check hours before you go."
+            : "Prices are per person, as listed."}
+        </p>
+      )}
+
+      {edited && !canSave && (
+        <p className="text-meta text-text-muted">
+          Your changes last until you leave this page. The share link only carries the plan as it
+          was first made.
+        </p>
+      )}
 
       <div className="flex flex-wrap items-center gap-2">
         {/* The address rebuilds the plan as first made, so it cannot carry later edits. */}
@@ -260,7 +288,7 @@ function StopButton({
       title={label}
       disabled={disabled}
       onClick={onClick}
-      className="grid size-10 place-items-center rounded-control text-text-muted transition-colors hover:bg-divider/60 hover:text-text disabled:opacity-35"
+      className={iconButtonClasses()}
     >
       <Icon icon={icon} size={16} />
     </button>

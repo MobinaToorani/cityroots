@@ -1,6 +1,6 @@
-import { ArrowDown, ArrowLeft, ArrowUp, Bookmark, Globe, Lock, Trash2 } from "lucide-react";
+import { plainInputClasses } from "@/components/ui/field-parts";
+import { ArrowDown, ArrowUp, Bookmark, Globe, Lock, Trash2 } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PlaceCard } from "@/components/features/place-card";
 import { CategoryTag, CostBadge } from "@/components/ui/badges";
@@ -19,6 +19,7 @@ import {
   setCollectionVisibilityAction,
 } from "../actions";
 import { PlaceLink } from "@/components/features/place-link";
+import { BackLink } from "@/components/ui/back-link";
 
 export async function generateMetadata(props: PageProps<"/collections/[id]">): Promise<Metadata> {
   const { id } = await props.params;
@@ -41,7 +42,7 @@ export default async function CollectionPage(props: PageProps<"/collections/[id]
 
 function PublicView({ collection }: { collection: CollectionDetail }) {
   return (
-    <div className="page-frame pt-8">
+    <div className="page-frame page-top">
       <p className="text-meta font-semibold text-primary-text">
         A collection by {collection.ownerName ?? "a CityRoots member"}
       </p>
@@ -84,14 +85,8 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
   const shareUrl = absoluteUrl(`/collections/${collection.id}`);
   const last = collection.items.length - 1;
   return (
-    <div className="page-frame reading pt-8">
-      <Link
-        href="/collections"
-        className="mb-5 inline-flex items-center gap-1.5 text-meta font-semibold text-text-muted quiet-link"
-      >
-        <Icon icon={ArrowLeft} size={16} />
-        All collections
-      </Link>
+    <div className="page-frame reading page-top">
+      <BackLink href="/collections">All collections</BackLink>
       <h1 className="page-title">{collection.title}</h1>
       <p className="mt-1 flex items-center gap-3 text-meta text-text-muted">
         <span>
@@ -215,12 +210,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
                 <label htmlFor="share-url" className="text-meta font-semibold">
                   Share link
                 </label>
-                <input
-                  id="share-url"
-                  readOnly
-                  value={shareUrl}
-                  className="h-11 rounded-control border border-divider bg-surface-solid px-4 text-body"
-                />
+                <input id="share-url" readOnly value={shareUrl} className={plainInputClasses} />
               </div>
             )}
           </div>

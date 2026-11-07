@@ -68,7 +68,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
       compareCostBands(get(a).costBand, get(b).costBand);
 
   return (
-    <div className="page-frame pt-8">
+    <div className="page-frame page-top">
       <RememberCity slug={city} clearWhenEmpty />
       <h1 className="mb-4 page-title">{cityName ? `What's on in ${cityName}` : "What's on"}</h1>
 
@@ -78,9 +78,9 @@ export default async function EventsPage(props: PageProps<"/events">) {
             {EVENT_WHEN_LABELS[w]}
           </ChipLink>
         ))}
-        <span aria-hidden="true" className="mx-1 hidden h-5 w-px bg-divider sm:block" />
+        <span aria-hidden="true" className="mx-1 h-5 w-px bg-divider" />
         <ChipLink href={eventsHref(city, !freeOnly, when)} active={freeOnly}>
-          Free only
+          Free
         </ChipLink>
       </div>
 
@@ -126,7 +126,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
 
           {running.length > 0 && (
             <details className="group">
-              <summary className="flex cursor-pointer list-none items-center gap-2 text-card font-semibold [&::-webkit-details-marker]:hidden">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center gap-2 text-card font-semibold [&::-webkit-details-marker]:hidden">
                 Exhibits and markets running now
                 <span className="text-meta font-normal text-text-muted">{running.length}</span>
                 <Icon
@@ -177,7 +177,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
               href={exploreHref({ city, type: ["event"] })}
               className="font-semibold text-primary-text quiet-link"
             >
-              Every event listing
+              All event listings
             </Link>
           </p>
         </div>

@@ -10,6 +10,7 @@ import { listCollections } from "@/lib/data/collections";
 import { getMembership } from "@/lib/data/subscriptions";
 import { FREE_COLLECTION_LIMIT } from "@/lib/domain/subscription";
 import { CreateCollectionForm } from "./create-collection-form";
+import { Notice } from "@/components/ui/notice";
 
 export const metadata: Metadata = { title: "Your collections", robots: { index: false } };
 
@@ -23,17 +24,13 @@ export default async function CollectionsPage(props: PageProps<"/collections">) 
   const atLimit = !membership.pro && list.length >= FREE_COLLECTION_LIMIT;
 
   return (
-    <div className="page-frame reading pt-8">
+    <div className="page-frame reading page-top">
       <h1 className="page-title">Your collections</h1>
       <p className="mt-2 text-body text-text-muted">
         Keep places together for a weekend, a visit, or a rainy day. Collections are private until
         you share one.
       </p>
-      {query.deleted && (
-        <p role="status" className="mt-4 text-body font-semibold">
-          Collection deleted.
-        </p>
-      )}
+      {query.deleted && <Notice className="mt-4">Collection deleted.</Notice>}
 
       {list.length > 0 ? (
         <ul className="mt-6 grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">

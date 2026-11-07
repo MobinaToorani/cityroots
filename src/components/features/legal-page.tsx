@@ -22,7 +22,7 @@ export function LegalPage({
   children: ReactNode;
 }) {
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container className="reading">
         <h1 className="page-title">{title}</h1>
         <p className="mt-3 text-meta text-text-muted">

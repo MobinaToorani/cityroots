@@ -16,6 +16,7 @@ import { Button, ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { cn } from "@/lib/cn";
 import { logger } from "@/lib/logger";
+import { iconButtonClasses } from "@/components/ui/button";
 
 type Props = { placeId: string; placeName: string; onClose: () => void };
 
@@ -107,7 +108,7 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
           type="button"
           onClick={() => dialog.current?.close()}
           aria-label="Close"
-          className="grid size-9 shrink-0 place-items-center rounded-control text-text-muted hover:bg-divider/60 hover:text-text"
+          className={iconButtonClasses()}
         >
           <Icon icon={X} />
         </button>

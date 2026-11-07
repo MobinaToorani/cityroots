@@ -13,6 +13,7 @@ import { getMembership } from "@/lib/data/subscriptions";
 import { FREE_COLLECTION_LIMIT, PRO_PLANS, yearlySavingPercent } from "@/lib/domain/subscription";
 import { stripeConfigured } from "@/lib/stripe/client";
 import { openPortalAction, startCheckoutAction } from "./actions";
+import { Notice } from "@/components/ui/notice";
 
 export const metadata: Metadata = {
   title: "CityRoots Pro",
@@ -41,15 +42,11 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
   const payments = stripeConfigured();
 
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container className="reading">
         <h1 className="page-title">Everything is free. Pro keeps your plans.</h1>
 
-        {notice && (
-          <p role="status" className="mt-6 rounded-card px-4 py-3 text-body card">
-            {notice}
-          </p>
-        )}
+        {notice && <Notice className="mt-6">{notice}</Notice>}
 
         <SegmentedLinks
           label="Billing period"
@@ -83,7 +80,7 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
             </ul>
             {!user && (
               <ButtonLink href="/explore" variant="secondary" className="justify-self-start">
-                Start exploring
+                See things to do
               </ButtonLink>
             )}
           </Card>

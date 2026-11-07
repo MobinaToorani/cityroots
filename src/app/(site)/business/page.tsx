@@ -1,3 +1,4 @@
+import { buttonClasses } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import type { Metadata, Route } from "next";
 import Link from "next/link";
@@ -26,7 +27,7 @@ export default async function BusinessPage(props: PageProps<"/business">) {
     : [];
 
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container className="reading">
         <p className="text-meta font-semibold text-primary-text">For places on CityRoots</p>
         <h1 className="mt-2 page-title">Claim your listing. It is free.</h1>
@@ -58,10 +59,7 @@ export default async function BusinessPage(props: PageProps<"/business">) {
               placeholder="Name of your place"
               className="h-11 min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-text-muted"
             />
-            <button
-              type="submit"
-              className="h-11 shrink-0 rounded-control bg-primary px-5 font-semibold text-white hover:bg-primary-hover"
-            >
+            <button type="submit" className={buttonClasses("primary", "md", "shrink-0")}>
               Search
             </button>
           </form>

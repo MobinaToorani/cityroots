@@ -1,3 +1,4 @@
+import { plainInputClasses } from "@/components/ui/field-parts";
 import { CalendarDays, Clock } from "lucide-react";
 import type { Metadata, Route } from "next";
 import { notFound } from "next/navigation";
@@ -13,6 +14,7 @@ import { exploreHref } from "@/lib/domain/explore-params";
 import { dayLabel, timeLabel } from "@/lib/domain/planner";
 import { absoluteUrl } from "@/lib/site";
 import { PlaceLink } from "@/components/features/place-link";
+import { Notice } from "@/components/ui/notice";
 
 function money(n: number): string {
   return `$${n}`;
@@ -42,12 +44,10 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
   const shareUrl = absoluteUrl(`/plans/${plan.shareId}`);
 
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container className="reading">
         {isOwner && query.saved && (
-          <p role="status" className="mb-6 rounded-card px-4 py-3 text-body card">
-            Plan saved. Anyone with the link below can see it.
-          </p>
+          <Notice className="mb-6">Plan saved. Anyone with the link below can see it.</Notice>
         )}
         <p className="text-meta font-semibold text-primary-text">A CityRoots day plan</p>
         <h1 className="mt-1 page-title">{plan.title}</h1>
@@ -107,12 +107,7 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
               <label htmlFor="plan-link" className="text-meta font-semibold">
                 Share link
               </label>
-              <input
-                id="plan-link"
-                readOnly
-                value={shareUrl}
-                className="h-11 rounded-control border border-divider bg-surface-solid px-4 text-body"
-              />
+              <input id="plan-link" readOnly value={shareUrl} className={plainInputClasses} />
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <ButtonLink href="/planner" variant="secondary" size="sm">

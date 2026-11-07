@@ -9,6 +9,7 @@ import { CategoryTag, CostBadge, PickBadge } from "@/components/ui/badges";
 import { Icon } from "@/components/ui/icon";
 import type { MapPoint } from "@/lib/data/places";
 import { validBbox } from "@/lib/domain/explore-params";
+import { iconButtonClasses } from "@/components/ui/button";
 
 const ExplorerMap = dynamic(() => import("./explorer-map"), {
   ssr: false,
@@ -87,9 +88,9 @@ export function MapPane({ points }: { points: MapPoint[] }) {
               type="button"
               onClick={() => void setShallow({ place: null })}
               aria-label="Close place card"
-              className="-m-1 grid size-8 shrink-0 place-items-center rounded-control hover:bg-divider/60"
+              className={iconButtonClasses("-m-2")}
             >
-              <Icon icon={X} size={16} />
+              <Icon icon={X} />
             </button>
           </div>
           <h2 className="mt-2 text-card font-semibold tracking-tight">{selected.name}</h2>
@@ -99,7 +100,7 @@ export function MapPane({ points }: { points: MapPoint[] }) {
             placeId={selected.id}
             className="mt-3 inline-flex items-center gap-1.5 font-semibold text-primary-text quiet-link"
           >
-            View details
+            See details
             <Icon icon={ArrowRight} size={16} />
           </PlaceLink>
         </div>

@@ -12,8 +12,12 @@ export type CitySummary = {
   region: string;
   tagline: string;
   heroImage: string | null;
+  /** Every published listing, events included. */
   placeCount: number;
   freeCount: number;
+  /** What Explore lists by default: events live on the Events page. */
+  browseCount: number;
+  browseFreeCount: number;
 };
 
 export type CityDetail = CitySummary & {

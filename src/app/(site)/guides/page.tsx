@@ -19,9 +19,10 @@ export const metadata: Metadata = {
 export default async function GuidesPage() {
   const cities = new Map((await listLiveCities()).map((c) => [c.slug, c]));
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container>
-        <h1 className="page-title">A day out, already planned.</h1>
+        <h1 className="page-title">Guides</h1>
+        <p className="mt-2 text-body text-text-muted">A day out, already planned.</p>
         <ol className="mt-8 grid grid-cols-1 gap-x-12 lg:grid-cols-2">
           {GUIDES.map((g, i) => {
             const city = cities.get(g.city);
@@ -42,6 +43,7 @@ export default async function GuidesPage() {
                   <h2 className="mt-0.5 text-card font-semibold tracking-tight">
                     <Link
                       href={`/guides/${g.slug}` as Route}
+                      prefetch={false}
                       className="group-hover:underline after:absolute after:inset-0"
                     >
                       {g.title}

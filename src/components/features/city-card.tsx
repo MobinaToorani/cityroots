@@ -28,7 +28,7 @@ export function CityCard({ city, className }: { city: CitySummary; className?: s
           {city.name}
         </Link>
       </h3>
-      <p className="text-meta text-white/90">{city.placeCount} places</p>
+      <p className="text-meta text-white/90">{city.browseCount} places</p>
     </article>
   );
 }

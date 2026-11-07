@@ -25,7 +25,7 @@ export function SegmentedLinks({ label, items, className }: SegmentedLinksProps)
           aria-current={item.active ? "page" : undefined}
           scroll={false}
           className={cn(
-            "inline-flex h-8 items-center rounded-control px-4 text-meta font-semibold transition-colors duration-200",
+            "touch-target relative inline-flex h-8 items-center rounded-control px-4 text-meta font-semibold transition-colors duration-200",
             item.active ? "bg-ink text-on-ink" : "text-text-muted hover:text-text",
           )}
         >
