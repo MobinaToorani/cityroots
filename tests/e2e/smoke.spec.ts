@@ -8,7 +8,7 @@ test.describe("home", () => {
       "Free things to do, close to home.",
     );
     await expect(
-      page.getByRole("region", { name: "Pick a city" }).getByRole("link", { name: "Newmarket" }),
+      page.getByRole("region", { name: "Pick a city" }).getByRole("link", { name: /^Newmarket/ }),
     ).toBeVisible();
 
     await page.locator("select[name=city]").selectOption("newmarket");

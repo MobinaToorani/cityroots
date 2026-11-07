@@ -31,6 +31,8 @@
   --color-pick: #7d5e07;
   --color-pick-soft: rgba(125, 94, 7, 0.12);
   --color-ink: #12161c;
+  --color-sand: #efe9e0;
+  --color-sand-deep: #e4dccf;
   --color-on-ink: #ffffff;
   --color-focus: #17456e;
   --color-danger: #a8322c;
@@ -95,6 +97,8 @@
     --color-pick: #edc56e;
     --color-pick-soft: rgba(237, 197, 110, 0.14);
     --color-ink: #e9edf2;
+    --color-sand: #1a1815;
+    --color-sand-deep: #24211c;
     --color-on-ink: #0e1319;
     --color-focus: #8fc1ea;
     --color-danger: #f08a80;

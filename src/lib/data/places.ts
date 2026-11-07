@@ -455,3 +455,45 @@ export async function getGuideStops(
     throw new DataError(`Could not load guide stops in ${citySlug}`, { cause });
   }
 }
+
+export type CategorySample = { id: string; name: string; cityName: string };
+
+/**
+ * A few real places per category for the home page, picks first. The rest of the
+ * order changes daily, so no city or place is always the one shown.
+ */
+export async function listCategorySamples(
+  perCategory = 3,
+): Promise<Map<CategorySlug, CategorySample[]>> {
+  try {
+    const ranked = db()
+      .select({
+        id: places.id,
+        name: places.name,
+        cityName: sql<string>`${cities.name}`.as("city_name"),
+        category: sql<string>`${categories.slug}`.as("category"),
+        n: sql<number>`row_number() over (
+          partition by ${places.categoryId}
+          order by ${places.isPick} desc, md5(${places.id}::text || current_date::text)
+        )`.as("n"),
+      })
+      .from(places)
+      .innerJoin(cities, eq(cities.id, places.cityId))
+      .innerJoin(categories, eq(categories.id, places.categoryId))
+      .where(visible())
+      .as("ranked");
+    const rows = await db()
+      .select()
+      .from(ranked)
+      .where(sql`${ranked.n} <= ${perCategory}`)
+      .orderBy(ranked.category, ranked.n);
+    const out = new Map<CategorySlug, CategorySample[]>();
+    for (const r of rows) {
+      const slug = r.category as CategorySlug;
+      out.set(slug, [...(out.get(slug) ?? []), { id: r.id, name: r.name, cityName: r.cityName }]);
+    }
+    return out;
+  } catch (cause) {
+    throw new DataError("Could not load category samples", { cause });
+  }
+}

@@ -86,5 +86,93 @@
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Toronto_Waterfront,_CN_Tower_6277.jpg"
+  },
+  "/categories/physical.jpg": {
+    "sourceFile": "physical.jpg",
+    "title": "Grenadier Pond 2007 Toronto.jpg",
+    "artist": "Diego Torres Silvestre from Sao Paulo, Brazil",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AGrenadier_Pond_2007_Toronto.jpg"
+  },
+  "/categories/mental.jpg": {
+    "sourceFile": "mental.jpg",
+    "title": "Toronto-Music-Garden-June-2024.jpg",
+    "artist": "Acediscovery",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AToronto-Music-Garden-June-2024.jpg"
+  },
+  "/categories/social.jpg": {
+    "sourceFile": "social.jpg",
+    "title": "Chatting in a coffee shop (Unsplash).jpg",
+    "artist": "Nick Hillier nhillier",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File%3AChatting_in_a_coffee_shop_%28Unsplash%29.jpg"
+  },
+  "/categories/financial.jpg": {
+    "sourceFile": "financial.jpg",
+    "title": "Toronto Public Library - Fairview Branch interior 2023.jpg",
+    "artist": "Canmenwalker",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AToronto_Public_Library_-_Fairview_Branch_interior_2023.jpg"
+  },
+  "/categories/arts.jpg": {
+    "sourceFile": "arts.jpg",
+    "title": "Staircase spiral at Art Gallery of Ontario in 2009.jpg",
+    "artist": "bobistraveling",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AStaircase_spiral_at_Art_Gallery_of_Ontario_in_2009.jpg"
+  },
+  "/categories/dance-music.jpg": {
+    "sourceFile": "dance-music.jpg",
+    "title": "Temerty Foundation Stage, Toronto Ukrainian Festival 2025.jpg",
+    "artist": "Chicken4War",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ATemerty_Foundation_Stage%2C_Toronto_Ukrainian_Festival_2025.jpg"
+  },
+  "/categories/food.jpg": {
+    "sourceFile": "food.jpg",
+    "title": "Farm produce, Kensington Market, Toronto (I0003235).jpg",
+    "artist": "Archives of Ontario",
+    "license": "Open Government Licence - Ontario",
+    "licenseUrl": "https://www.ontario.ca/page/open-government-licence-ontario",
+    "source": "https://commons.wikimedia.org/wiki/File%3AFarm_produce%2C_Kensington_Market%2C_Toronto_%28I0003235%29.jpg"
+  },
+  "/categories/cafes.jpg": {
+    "sourceFile": "cafes.jpg",
+    "title": "Patrician cafe, King, near Sherbourne.jpg",
+    "artist": "marc falardeau from toronto",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3APatrician_cafe%2C_King%2C_near_Sherbourne.jpg"
+  },
+  "/categories/thrifting.jpg": {
+    "sourceFile": "thrifting.jpg",
+    "title": "Kensington thrift store shopping, Toronto (51351227).jpg",
+    "artist": "vincelaconte from Winston-Salem, NC, USA",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3AKensington_thrift_store_shopping%2C_Toronto_%2851351227%29.jpg"
+  },
+  "/categories/volunteer.jpg": {
+    "sourceFile": "volunteer.jpg",
+    "title": "People working a community garden (I0004490).jpg",
+    "artist": "Archives of Ontario",
+    "license": "Open Government Licence - Ontario",
+    "licenseUrl": "https://www.ontario.ca/page/open-government-licence-ontario",
+    "source": "https://commons.wikimedia.org/wiki/File%3APeople_working_a_community_garden_%28I0004490%29.jpg"
+  },
+  "/categories/events.jpg": {
+    "sourceFile": "events.jpg",
+    "title": "Distillery District Christmas Market (5257526487).jpg",
+    "artist": "Allen McGregor from Brampton, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File%3ADistillery_District_Christmas_Market_%285257526487%29.jpg"
   }
 }
