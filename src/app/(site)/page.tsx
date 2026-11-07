@@ -413,7 +413,49 @@ export default async function HomePage() {
           </Container>
         </section>
       )}
+
+      <PhotoCredits
+        photos={[
+          ...collage.map((c) => ({ subject: c.name, photo: c.photo })),
+          ...(featured ? [{ subject: featured.name, photo: featured.photo }] : []),
+          ...(landscape ? [{ subject: "Lake Wilcox, Richmond Hill", photo: landscape }] : []),
+          ...CATEGORIES.flatMap((c) => {
+            const p = photo(`/categories/${c.slug}.jpg`);
+            return p ? [{ subject: c.name, photo: p }] : [];
+          }),
+          ...guides.flatMap((g) => {
+            const p = photoOf.get(g.city);
+            return p ? [{ subject: g.title, photo: p }] : [];
+          }),
+        ]}
+      />
     </>
+  );
+}
+
+/** Attribution for every photo on the page, as their licences require. */
+function PhotoCredits({ photos }: { photos: { subject: string; photo: PhotoInfo }[] }) {
+  const seen = new Set<string>();
+  const unique = photos.filter(({ photo: p }) => !seen.has(p.src) && seen.add(p.src));
+  return (
+    <Container className="pt-16">
+      <details className="text-meta text-text-muted">
+        <summary className="inline-flex min-h-6 cursor-pointer items-center hover:text-text">
+          Photo credits
+        </summary>
+        <ul className="mt-3 grid gap-x-8 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
+          {unique.map(({ subject, photo: p }) => (
+            <li key={p.src}>
+              {subject}:{" "}
+              <a href={p.credit.source} className="underline hover:text-text" rel="noopener">
+                {p.credit.artist}
+              </a>
+              , {p.credit.license}
+            </li>
+          ))}
+        </ul>
+      </details>
+    </Container>
   );
 }
 
