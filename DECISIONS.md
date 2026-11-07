@@ -479,3 +479,19 @@ The owner asked for finished events to leave the site and for each category to s
 **Still `/explore?cat=`, not separate pages.** Filters, shared links, and working without JavaScript all stay. One category gets its look; a mix stays as cards, which now carry their category's colour and, for things you go and see, the serif. The map's narrow list also stays as cards. All of it is server-rendered, because Explore has about 1 KB of script budget left.
 
 **Thrift groups sort by name.** Within a group the chosen sort still applies, but a neighbourhood's place on the page does not change with it.
+
+## Palette and type (November 2026)
+
+The owner asked for a new palette, fonts, and theme, without naming a direction. This is the direction chosen, and it is easy to change because it all lives in tokens.
+
+**A community paper, not a lifestyle template.** Cream paper, forest green, and Fraunces is a very common template look, which the owner's brief warns against. The paper is now a cool white and the ink a blue-black.
+
+**Lake blue is the brand, so green means only Free.** The old brand green sat beside Free's green and blurred what green meant. Free, Local pick, and danger keep their colours.
+
+**Schibsted Grotesk for text, Newsreader for headlines.** Schibsted was drawn for a news publisher and stays clear at small sizes. Newsreader has a real italic, which the Arts and Cafes looks use, and an optical size axis, so it holds up from labels to page titles.
+
+**Category colours keep their hues and gain chroma,** since they now cover large areas. `tests/unit/palette.test.ts` still holds them to one lightness per theme, the hue gaps, and AA.
+
+**The theme still follows the device.** A manual light and dark switch needs client script, and Explore has about 1 KB of budget left.
+
+**No site-wide tabular numbers.** Schibsted Grotesk's tabular setting also widens commas, periods, and colons, which put visible gaps before punctuation in all running text.

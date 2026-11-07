@@ -6,7 +6,7 @@ import { Icon } from "@/components/ui/icon";
 import { homeCity } from "@/lib/client/stores";
 
 const selectClass =
-  "min-h-11 cursor-pointer appearance-none rounded-none border-0 border-b-2 border-white/70 bg-[length:0.7em] bg-[position:right_center] bg-no-repeat pr-[1em] pl-0.5 font-semibold text-white outline-none transition-colors [field-sizing:content] hover:border-white focus-visible:border-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&>option]:text-[#141412]";
+  "min-h-11 cursor-pointer appearance-none rounded-none border-0 border-b-2 border-white/70 bg-[length:0.7em] bg-[position:right_center] bg-no-repeat pr-[1em] pl-0.5 font-semibold text-white outline-none transition-colors [field-sizing:content] hover:border-white focus-visible:border-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&>option]:text-[#12161c]";
 
 const caret = {
   backgroundImage:

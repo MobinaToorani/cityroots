@@ -11,51 +11,51 @@
  */
 @theme static {
   --font-*: initial;
-  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
 
-  --color-bg: #f7f6f2;
+  --color-bg: #f5f6f7;
   --color-surface: rgba(255, 255, 255, 0.72);
   --color-surface-strong: rgba(255, 255, 255, 0.88);
   --color-surface-solid: #ffffff;
   --color-border-glass: rgba(255, 255, 255, 0.45);
-  --color-divider: #e6e3dc;
-  --color-text: #141412;
-  --color-text-muted: #5f5b54;
-  --color-primary: #1e4d36;
-  --color-primary-hover: #173f2c;
-  --color-primary-text: #1e4d36;
-  --color-accent: #3e7a56;
+  --color-divider: #dfe3e8;
+  --color-text: #12161c;
+  --color-text-muted: #525a65;
+  --color-primary: #17456e;
+  --color-primary-hover: #123858;
+  --color-primary-text: #17456e;
+  --color-accent: #2f6a9a;
   --color-free: #186b45;
   --color-free-soft: rgba(24, 107, 69, 0.12);
   --color-pick: #7d5e07;
   --color-pick-soft: rgba(125, 94, 7, 0.12);
-  --color-ink: #141412;
+  --color-ink: #12161c;
   --color-on-ink: #ffffff;
-  --color-focus: #1e4d36;
+  --color-focus: #17456e;
   --color-danger: #a8322c;
   --color-heart: #a8353e;
 
-  --color-cat-physical: #017069;
-  --color-cat-mental: #5e5696;
-  --color-cat-social: #366298;
-  --color-cat-financial: #626526;
-  --color-cat-arts: #784d85;
-  --color-cat-dance-music: #944250;
-  --color-cat-food: #934829;
-  --color-cat-cafes: #785a3b;
-  --color-cat-thrifting: #1d6a81;
-  --color-cat-volunteer: #456d3c;
-  --color-cat-events: #8b446f;
+  --color-cat-physical: #046963;
+  --color-cat-mental: #594e97;
+  --color-cat-social: #275b99;
+  --color-cat-financial: #5d6002;
+  --color-cat-arts: #754384;
+  --color-cat-dance-music: #8f3b4a;
+  --color-cat-food: #8e4120;
+  --color-cat-cafes: #804e00;
+  --color-cat-thrifting: #00657e;
+  --color-cat-volunteer: #336a26;
+  --color-cat-events: #863d6a;
 
   /* Three corners only: controls, cards, sheets. */
   --radius-control: 8px;
   --radius-card: 12px;
   --radius-modal: 16px;
 
-  --shadow-glass: 0 8px 32px rgba(20, 20, 18, 0.12);
-  --shadow-card: 0 1px 2px rgba(20, 20, 18, 0.05);
-  --shadow-lift: 0 10px 28px rgba(20, 20, 18, 0.12);
+  --shadow-glass: 0 8px 32px rgba(18, 22, 28, 0.12);
+  --shadow-card: 0 1px 2px rgba(18, 22, 28, 0.05);
+  --shadow-lift: 0 10px 28px rgba(18, 22, 28, 0.12);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -76,36 +76,36 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0c120e;
-    --color-surface: rgba(28, 38, 30, 0.55);
-    --color-surface-strong: rgba(28, 38, 30, 0.86);
-    --color-surface-solid: #151d17;
+    --color-bg: #0e1319;
+    --color-surface: rgba(27, 35, 46, 0.55);
+    --color-surface-strong: rgba(27, 35, 46, 0.86);
+    --color-surface-solid: #171e27;
     --color-border-glass: rgba(255, 255, 255, 0.08);
-    --color-divider: #233027;
-    --color-text: #edebe6;
-    --color-text-muted: #c4c0b7;
-    --color-primary-text: #8fcba7;
-    --color-accent: #8fcba7;
+    --color-divider: #27313d;
+    --color-text: #e9edf2;
+    --color-text-muted: #b9c1cc;
+    --color-primary-text: #8fc1ea;
+    --color-accent: #8fc1ea;
     --color-free: #76d19e;
     --color-free-soft: rgba(118, 209, 158, 0.14);
     --color-pick: #edc56e;
     --color-pick-soft: rgba(237, 197, 110, 0.14);
-    --color-ink: #edebe6;
-    --color-on-ink: #0c120e;
-    --color-focus: #8fcba7;
+    --color-ink: #e9edf2;
+    --color-on-ink: #0e1319;
+    --color-focus: #8fc1ea;
     --color-danger: #f08a80;
     --color-heart: #fb9797;
-    --color-cat-physical: #7ecfc7;
-    --color-cat-mental: #bab4f8;
-    --color-cat-social: #94c1fa;
-    --color-cat-financial: #bec387;
-    --color-cat-arts: #d8abe6;
-    --color-cat-dance-music: #f9a1ac;
-    --color-cat-food: #f7a788;
-    --color-cat-cafes: #d7b797;
-    --color-cat-thrifting: #86c9e1;
-    --color-cat-volunteer: #9ecd94;
-    --color-cat-events: #eea2cd;
+    --color-cat-physical: #78dcd2;
+    --color-cat-mental: #c4bfff;
+    --color-cat-social: #a2cbfe;
+    --color-cat-financial: #c9ce85;
+    --color-cat-arts: #e2b4f0;
+    --color-cat-dance-music: #feaeb7;
+    --color-cat-food: #fdb397;
+    --color-cat-cafes: #f1bc83;
+    --color-cat-thrifting: #7dd5f4;
+    --color-cat-volunteer: #a7d79c;
+    --color-cat-events: #f4afd6;
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
     --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-lift: 0 14px 40px rgba(0, 0, 0, 0.5);
@@ -128,7 +128,6 @@
     font-family: var(--font-sans);
     font-size: var(--text-body);
     line-height: var(--text-body--line-height);
-    font-variant-numeric: tabular-nums;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -156,7 +155,7 @@
   }
 
   ::selection {
-    background: var(--color-free-soft);
+    background: color-mix(in oklab, var(--color-accent) 22%, transparent);
   }
 }
 

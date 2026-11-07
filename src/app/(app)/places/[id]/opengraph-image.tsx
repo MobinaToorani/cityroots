@@ -22,7 +22,7 @@ export default async function Image(props: { params: Promise<{ id: string }> }) 
       cost: "Free",
       free: true,
       category: "Places",
-      accent: "#1e4d36",
+      accent: "#17456e",
     });
   }
   const category = categoryMeta(place.category);

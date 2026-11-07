@@ -1,20 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Instrument_Sans } from "next/font/google";
+import { Newsreader, Schibsted_Grotesk } from "next/font/google";
 import type { ReactNode } from "react";
 import { Analytics } from "@/components/features/analytics";
 import { SkipLink } from "@/components/ui/visually-hidden";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
-const instrument = Instrument_Sans({
+const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
-  variable: "--font-instrument",
+  variable: "--font-schibsted",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-newsreader",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
   // Display type never blocks or re-paints the largest contentful paint:
   // if the font is not ready almost immediately, the fallback serif stays.
   display: "optional",
@@ -34,14 +36,14 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F7F6F2" },
-    { media: "(prefers-color-scheme: dark)", color: "#0C120E" },
+    { media: "(prefers-color-scheme: light)", color: "#F5F6F7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0E1319" },
   ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-CA" className={`${instrument.variable} ${fraunces.variable}`}>
+    <html lang="en-CA" className={`${schibsted.variable} ${newsreader.variable}`}>
       <body className="min-h-dvh">
         <SkipLink />
         {children}

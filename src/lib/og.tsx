@@ -8,8 +8,8 @@ import sharp from "sharp";
 export const OG_SIZE = { width: 1200, height: 630 };
 export const OG_CONTENT_TYPE = "image/png";
 
-const INK = "#141412";
-const BG = "#f7f6f2";
+const INK = "#12161c";
+const BG = "#f5f6f7";
 const MUTED = "#5f5b54";
 const FREE = "#186b45";
 
@@ -19,9 +19,9 @@ let fonts: Promise<NonNullable<ConstructorParameters<typeof ImageResponse>[1]>["
 function loadFonts() {
   fonts ??= Promise.all(
     [
-      ["Fraunces", "Fraunces-500.ttf", 500],
-      ["Instrument Sans", "InstrumentSans-400.ttf", 400],
-      ["Instrument Sans", "InstrumentSans-600.ttf", 600],
+      ["Newsreader", "Newsreader-500.ttf", 500],
+      ["Schibsted Grotesk", "SchibstedGrotesk-400.ttf", 400],
+      ["Schibsted Grotesk", "SchibstedGrotesk-600.ttf", 600],
     ].map(async ([name, file, weight]) => ({
       name: name as string,
       data: await readFile(path.join(process.cwd(), "assets/fonts", file as string)),
@@ -53,7 +53,7 @@ function Wordmark({ color }: { color: string }) {
           width: 40,
           height: 40,
           borderRadius: 12,
-          background: "#1e4d36",
+          background: "#17456e",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -90,8 +90,8 @@ export async function photoCard(input: {
         height: "100%",
         display: "flex",
         position: "relative",
-        background: "#1e4d36",
-        fontFamily: "Instrument Sans",
+        background: "#17456e",
+        fontFamily: "Schibsted Grotesk",
       }}
     >
       {src && (
@@ -139,7 +139,7 @@ export async function photoCard(input: {
           </div>
           <div
             style={{
-              fontFamily: "Fraunces",
+              fontFamily: "Newsreader",
               fontSize: fitTitle(input.title),
               lineHeight: 1.05,
               color: "#ffffff",
@@ -174,7 +174,7 @@ export async function placeCard(input: {
         display: "flex",
         flexDirection: "column",
         background: BG,
-        fontFamily: "Instrument Sans",
+        fontFamily: "Schibsted Grotesk",
       }}
     >
       <div style={{ height: 18, background: input.accent, display: "flex" }} />
@@ -191,7 +191,7 @@ export async function placeCard(input: {
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div
             style={{
-              fontFamily: "Fraunces",
+              fontFamily: "Newsreader",
               fontSize: fitTitle(input.name),
               lineHeight: 1.05,
               color: INK,

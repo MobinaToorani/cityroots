@@ -110,8 +110,8 @@ export default function ExplorerMap({
         clusterRadius: 44,
         clusterMaxZoom: 13,
       });
-      const ink = dark ? "#EDEBE6" : "#141412";
-      const onInk = dark ? "#0C120E" : "#FFFFFF";
+      const ink = dark ? "#E9EDF2" : "#12161c";
+      const onInk = dark ? "#0E1319" : "#FFFFFF";
       map.addLayer({
         id: "clusters",
         type: "circle",

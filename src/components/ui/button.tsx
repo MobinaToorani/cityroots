@@ -14,7 +14,7 @@ const variants: Record<Variant, string> = {
   ink: "bg-ink text-on-ink hover:opacity-90",
   quiet: "quiet-link rounded-none px-0 text-primary-text active:translate-y-0",
   // On a darkened photo, in both themes.
-  photo: "bg-white text-[#141412] hover:bg-white/90",
+  photo: "bg-white text-[#12161c] hover:bg-white/90",
   "photo-outline": "border border-white/70 bg-black/30 text-white hover:bg-black/50",
 };
 
