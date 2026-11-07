@@ -449,3 +449,17 @@ Measured on a 390px phone and at 1280px before changing anything.
 **Undo keeps later edits.** It puts the stop back rather than restoring a snapshot. A toast with something to undo stays for 8 seconds, not 4.
 
 **Shared pieces.** `page-top` is the space above a title, `Notice` confirms what just happened, `BackLink` goes back up, and `iconButtonClasses` is every icon-only control at one size. "See" is the one verb for going to something.
+
+## Volunteering (November 2026)
+
+**A category, not a new kind of listing.** "Volunteer" is an eleventh category, so it appears in the Category menu, the home and city lists, search, and the submit form without new screens. Listings are `kind: program`, so they appear among free things to do.
+
+**Not in the Planner.** Almost every role needs signing up ahead, often with references or checks, so it cannot be a stop in a day planned on the spot.
+
+**The same source rule.** Each listing was read on its own live page on 2026-11-06, and its details come from that page. Left out: Volunteer Toronto, whose site refuses automated requests, so it could not be checked; Mackenzie Health, whose portal says applications are closed until March 2027; and Richmond Hill Food Bank, whose page shows no readable text. `innfromthecold.org` does not mention Newmarket on the pages checked, so it was left out too.
+
+**Listings point at organizations, not single openings.** Openings change weekly and we have no feed, so a listing says what kinds of roles exist and links to the live list. No start dates or "urgently needed" claims.
+
+**Colour.** Hue 140 is the only gap left that keeps 24 degrees from other categories and 14 from Free's green, so it sits close to Free. It appears only on a small icon.
+
+**Deploy before seeding.** A category row the running code does not know makes `categoryMeta` throw, so the code has to go live before production is seeded.

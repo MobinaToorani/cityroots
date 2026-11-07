@@ -685,6 +685,56 @@
       "seasonal": true,
       "seasonNote": "Open spring through fall — typically May to October",
       "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-volunteer-waterloo-region",
+      "name": "Volunteer Waterloo Region",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students",
+        "groups",
+        "newcomers"
+      ],
+      "cost": "free",
+      "address": "1454 King St E, Unit 3, Kitchener, ON N2G 2N7",
+      "website": "https://volunteerwr.ca/",
+      "description": "The region's volunteer centre lists openings with local organizations in Cambridge, Kitchener, and Waterloo.",
+      "highlights": [
+        "Youth, newcomer, group, and virtual roles",
+        "Short projects and ongoing commitments",
+        "Search by interest, skills, and schedule"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-volunteer-food-bank",
+      "name": "Cambridge Food Bank: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "food",
+        "students",
+        "groups"
+      ],
+      "cost": "free",
+      "address": "54 Ainslie St S, Cambridge, ON N1R 3K3",
+      "website": "https://cambridgefoodbank.org/",
+      "description": "Hundreds of people volunteer here each year. The food bank takes individuals, groups and corporate teams, students, and placements, and will guide you through the options.",
+      "highlights": [
+        "Individuals, groups, and students welcome",
+        "Internships and placements available",
+        "Message them to get started"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }

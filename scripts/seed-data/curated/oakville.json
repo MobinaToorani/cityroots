@@ -527,6 +527,75 @@
       "lastVerified": "2026-11-06",
       "costNote": "Admission is by donation.",
       "hours": "Tue-Sun 1pm-4:30pm; closed Mon"
+    },
+    {
+      "id": "oakville-volunteer-halton",
+      "name": "Volunteer Halton",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students"
+      ],
+      "cost": "free",
+      "website": "https://www.cdhalton.ca/i-want-to-volunteer",
+      "description": "Halton Region's volunteer centre, run by Community Development Halton. It sends people to VolunteerConnector to search local openings across the region.",
+      "highlights": [
+        "Search local openings on VolunteerConnector",
+        "Covers all of Halton Region"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-volunteer-halton-healthcare",
+      "name": "Halton Healthcare: Hospital Volunteers",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "health",
+        "students"
+      ],
+      "cost": "free",
+      "website": "https://www.haltonhealthcare.on.ca/volunteer",
+      "description": "More than 1,200 people volunteer across Halton Healthcare's three hospitals, in Oakville, Milton, and Halton Hills, helping patients and visitors.",
+      "highlights": [
+        "Must be 14 or older",
+        "At least six months' continuous commitment",
+        "Two references needed within 30 days of applying"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-volunteer-post-inn-village",
+      "name": "Post Inn Village: Volunteer with Seniors",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "seniors",
+        "students"
+      ],
+      "cost": "free",
+      "address": "203 Georgian Dr, Oakville, ON",
+      "website": "https://www.halton.ca/for-residents/older-adults/long-term-care-homes/volunteering-with-services-for-seniors",
+      "description": "Halton Region's long-term care home in Oakville takes volunteers for recreation programs like bingo, resident escorts, clerical work, entertainment, and pastoral or palliative care.",
+      "highlights": [
+        "40-hour commitment per placement",
+        "High school students can complete their required hours",
+        "Co-op, college, and university placements available",
+        "Contact: 905-825-6000 ext. 4040"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }
