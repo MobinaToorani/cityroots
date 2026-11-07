@@ -25,7 +25,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1",
+        "mb-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1",
         className,
       )}
     >
@@ -47,7 +47,7 @@ export function PageSection({
   ...heading
 }: Omit<SectionHeadingProps, "className"> & { children: ReactNode }) {
   return (
-    <section aria-labelledby={heading.id} className="pt-14">
+    <section aria-labelledby={heading.id} className="pt-16 sm:pt-24">
       <Container>
         <SectionHeading {...heading} />
         {children}
