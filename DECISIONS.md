@@ -434,7 +434,7 @@ Measured on a 390px phone and at 1280px before changing anything.
 
 **44px to tap, without bigger controls.** `touch-target` extends the tappable area of chips, small buttons, and footer links with a pseudo-element, so spacing and looks stay the same.
 
-**Guide links do not prefetch.** The two-column list put ten links in view, and their route code pushed `/guides` over the script budget.
+**Guide links and the logo do not prefetch.** The two-column list put ten links in view, and their route code pushed `/guides` over the script budget. The logo is on every page, so prefetching it added the home page's 8 KB everywhere.
 
 **The map sits above the page.** It is `z-10`. At `z-0`, any positioned element later in the page paints over it, and `touch-target` links in the footer did.
 

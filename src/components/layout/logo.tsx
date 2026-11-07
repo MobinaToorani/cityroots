@@ -24,6 +24,8 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
+      // On every page, so prefetching would add the home page's code to each one's script budget.
+      prefetch={false}
       className={cn(
         "touch-target relative inline-flex items-center gap-2.5 rounded-control",
         className,
