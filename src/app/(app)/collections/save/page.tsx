@@ -1,10 +1,8 @@
-import { ArrowLeft } from "lucide-react";
 import type { Metadata, Route } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Icon } from "@/components/ui/icon";
 import { requireUser } from "@/lib/auth/session";
 import { collectionsForPlace, countCollections } from "@/lib/data/collections";
 import { getPlaceCards } from "@/lib/data/places";
@@ -12,6 +10,7 @@ import { getMembership } from "@/lib/data/subscriptions";
 import { FREE_COLLECTION_LIMIT } from "@/lib/domain/subscription";
 import { saveToCollectionsAction } from "../actions";
 import { CreateCollectionForm } from "../create-collection-form";
+import { BackLink } from "@/components/ui/back-link";
 
 export const metadata: Metadata = { title: "Save a place", robots: { index: false } };
 
@@ -31,14 +30,8 @@ export default async function SavePlacePage(props: PageProps<"/collections/save"
   const back = `/places/${place.id}`;
 
   return (
-    <div className="page-frame reading pt-8">
-      <Link
-        href={back as Route}
-        className="mb-5 inline-flex items-center gap-1.5 text-meta font-semibold text-text-muted quiet-link"
-      >
-        <Icon icon={ArrowLeft} size={16} />
-        Back to {place.name}
-      </Link>
+    <div className="page-frame reading page-top">
+      <BackLink href={back as Route}>Back to {place.name}</BackLink>
       <h1 className="page-title">Save {place.name}</h1>
 
       {choices.length > 0 && (

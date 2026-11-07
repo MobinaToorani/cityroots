@@ -75,7 +75,7 @@ test.describe("events", () => {
 
   test("filters to free events in one city", async ({ page }) => {
     await page.goto("/events?city=richmond-hill&when=later");
-    await page.getByRole("link", { name: "Free only" }).click();
+    await page.getByRole("link", { name: "Free", exact: true }).click();
     await expect(page).toHaveURL(/city=richmond-hill/);
     await expect(page).toHaveURL(/cost=free/);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("What's on in Richmond Hill");

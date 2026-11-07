@@ -23,7 +23,7 @@ export default async function ClaimPage(props: PageProps<"/business/claim/[place
   const match = emailMatchesWebsite(user.email, place.sourceUrl);
 
   return (
-    <div className="pt-8">
+    <div className="page-top">
       <Container className="reading">
         {query.sent || pending ? (
           <EmptyState

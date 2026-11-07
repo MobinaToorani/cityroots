@@ -28,7 +28,7 @@ export function IssueKeyForm() {
             readOnly
             value={state.key}
             onFocus={(e) => e.currentTarget.select()}
-            className="h-11 w-full rounded-card border border-divider bg-surface-solid px-3 text-body"
+            className="h-11 w-full rounded-control border border-divider bg-surface-solid px-3 text-body"
           />
         </div>
       )}

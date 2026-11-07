@@ -417,3 +417,49 @@ The owner asked for a site that is consistent and does not read as machine-made.
 **No hover lift or photo zoom.** Cards answer with a border and shadow, ruled rows with an underline. Glass stays only over the map and on the mobile results sheet, as "Design direction" already said.
 
 **Copy.** Vague praise was removed from listings ("genuinely", "world-class", "one of the most..."). Specific, checkable claims stayed. Superlatives need a fact behind them.
+
+## Ergonomics and friction (November 2026)
+
+Measured on a 390px phone and at 1280px before changing anything.
+
+**One name per thing.** The nav says what the page's title says: "Things to do" and "What's on". Categories always use their full name with their icon, never a short name or a colour dot. "Free" is the same word on Explore and Events, and "Clear filters" is the one word for clearing.
+
+**Explore loads more only when asked.** Automatic loading kept pushing the footer away, 24 cards at a time. The button says how far along you are.
+
+**One search box on a page.** Explore's own box filters what you see, so the header's search steps aside there. Ctrl K still opens it.
+
+**A label on every card is no label.** "Local pick" is hidden when every card shown is a pick, which is the whole first page of the default order. The default sort is called "Free first" until there is a search to match.
+
+**The plan comes first in the Planner.** Changing a setting on a phone used to update a list below the fold. The header's picker is the one city control, as on Explore (the form gets a city field only without JavaScript), and interests are collapsed. Removing a stop can be undone, and the page says that edits are not kept without Pro.
+
+**44px to tap, without bigger controls.** `touch-target` extends the tappable area of chips, small buttons, and footer links with a pseudo-element, so spacing and looks stay the same.
+
+**Guide links and the logo do not prefetch.** The two-column list put ten links in view, and their route code pushed `/guides` over the script budget. The logo is on every page, so prefetching it added the home page's 8 KB everywhere.
+
+**The map sits above the page.** It is `z-10`. At `z-0`, any positioned element later in the page paints over it, and `touch-target` links in the footer did.
+
+**Counts match where the link goes.** A city's "See all" and free counts, and the count on its card, leave out events, because Explore's default view does. The full total still appears where the text says listings.
+
+**A menu says what it did.** An open filter menu covers the results on a phone, so multi-select menus end with "Show 12 places", which closes them.
+
+**One choice lights one control.** The Free toggle does not also light Budget. Budget still shows Free as ticked inside the menu.
+
+**An empty search gets search advice.** With only a search on, the page suggests a broader word. In a city, it also offers "Search all cities".
+
+**Undo keeps later edits.** It puts the stop back rather than restoring a snapshot. A toast with something to undo stays for 8 seconds, not 4.
+
+**Shared pieces.** `page-top` is the space above a title, `Notice` confirms what just happened, `BackLink` goes back up, and `iconButtonClasses` is every icon-only control at one size. "See" is the one verb for going to something.
+
+## Volunteering (November 2026)
+
+**A category, not a new kind of listing.** "Volunteer" is an eleventh category, so it appears in the Category menu, the home and city lists, search, and the submit form without new screens. Listings are `kind: program`, so they appear among free things to do.
+
+**Not in the Planner.** Almost every role needs signing up ahead, often with references or checks, so it cannot be a stop in a day planned on the spot.
+
+**The same source rule.** Each listing was read on its own live page on 2026-11-06, and its details come from that page. Left out: Volunteer Toronto, whose site refuses automated requests, so it could not be checked; Mackenzie Health, whose portal says applications are closed until March 2027; and Richmond Hill Food Bank, whose page shows no readable text. `innfromthecold.org` does not mention Newmarket on the pages checked, so it was left out too.
+
+**Listings point at organizations, not single openings.** Openings change weekly and we have no feed, so a listing says what kinds of roles exist and links to the live list. No start dates or "urgently needed" claims.
+
+**Colour.** Hue 140 is the only gap left that keeps 24 degrees from other categories and 14 from Free's green, so it sits close to Free. It appears only on a small icon.
+
+**Deploy before seeding.** A category row the running code does not know makes `categoryMeta` throw, so the code has to go live before production is seeded.

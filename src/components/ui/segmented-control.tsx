@@ -72,7 +72,7 @@ export function SegmentedControl<T extends string>({
       {options.map((option, i) => {
         const checked = option.value === value;
         const className = cn(
-          "relative z-10 inline-flex h-8 items-center rounded-control px-4 text-meta font-semibold transition-colors duration-200",
+          "relative touch-target z-10 inline-flex h-8 items-center rounded-control px-4 text-meta font-semibold transition-colors duration-200",
           checked ? "text-on-ink" : "text-text-muted hover:text-text",
           !indicator && checked && "bg-ink",
         );

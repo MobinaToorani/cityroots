@@ -17,6 +17,7 @@ import { logger } from "@/lib/logger";
 import { OpenNow } from "./open-now";
 import { SaveButton } from "./save-button";
 import { ShareButton } from "./share-button";
+import { iconButtonClasses } from "@/components/ui/button";
 
 /** Enough to decide on a place without leaving the list. A sheet on phones, a side panel above. */
 export function PlacePreviewPanel({ placeId }: { placeId: string }) {
@@ -89,7 +90,7 @@ export function PlacePreviewPanel({ placeId }: { placeId: string }) {
             type="button"
             onClick={() => dialog.current?.close()}
             aria-label="Close"
-            className="motion-press -mt-1 -mr-1 grid size-10 shrink-0 place-items-center rounded-control text-text-muted hover:bg-divider/60 hover:text-text"
+            className={iconButtonClasses("-mt-1 -mr-1")}
           >
             <Icon icon={X} />
           </button>

@@ -174,7 +174,10 @@ export function assemblePlan({
 /* ------------------------------------------------------------------ */
 
 export const BUDGET_CHOICES = [0, 10, 25, 50, 100] as const;
-export const PLANNER_INTERESTS = CATEGORY_SLUGS.filter((c) => c !== "financial");
+/** Volunteering takes signing up ahead, so it cannot be a stop in a day planned on the spot. */
+export const PLANNER_INTERESTS = CATEGORY_SLUGS.filter(
+  (c) => c !== "financial" && c !== "volunteer",
+);
 export const MAX_DAYS_AHEAD = 90;
 
 const isoDay = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Choose a day");

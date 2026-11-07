@@ -10,6 +10,7 @@ import { hasRole, requireUser } from "@/lib/auth/session";
 import { getMembership, type Membership } from "@/lib/data/subscriptions";
 import { periodForLookupKey } from "@/lib/domain/subscription";
 import { stripeConfigured } from "@/lib/stripe/client";
+import { Notice } from "@/components/ui/notice";
 
 export const metadata: Metadata = { title: "Your account", robots: { index: false } };
 
@@ -51,13 +52,9 @@ export default async function AccountPage(props: PageProps<"/account">) {
   }
 
   return (
-    <div className="page-frame reading pt-8">
+    <div className="page-frame reading page-top">
       <h1 className="page-title">Your account</h1>
-      {welcome && (
-        <p role="status" className="mt-4 rounded-card px-4 py-3 text-body card">
-          {welcome}
-        </p>
-      )}
+      {welcome && <Notice className="mt-4">{welcome}</Notice>}
       {query.billing === "error" && (
         <p role="alert" className="mt-4 rounded-card px-4 py-3 text-body card">
           The billing page did not open. Try again in a minute.

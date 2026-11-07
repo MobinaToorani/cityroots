@@ -20092,6 +20092,54 @@
    ],
    "endsAt": "2026-11-08T19:00:00.000Z",
    "neighborhood": "Yonge-Bay Corridor"
+  },
+  {
+   "id": "toronto-volunteer-daily-bread",
+   "name": "Daily Bread Food Bank: Volunteer",
+   "type": "program",
+   "category": "volunteer",
+   "tags": [
+    "volunteer",
+    "free",
+    "food"
+   ],
+   "cost": "free",
+   "address": "191 New Toronto St, Toronto, ON",
+   "website": "https://www.dailybread.ca/get-involved/volunteer/",
+   "description": "Sort donated food, pick orders for member food banks, or help prepare soups and casseroles for meal programs. Most shifts are at the warehouse in South Etobicoke.",
+   "highlights": [
+    "Weekday shifts of about three hours",
+    "Register, then book a first volunteer session",
+    "Minimum age is typically 18",
+    "Closer to home? Its Find a Food Bank page lists member agencies"
+   ],
+   "isRecommended": false,
+   "isFree": true,
+   "lastVerified": "2026-11-06"
+  },
+  {
+   "id": "toronto-volunteer-second-harvest",
+   "name": "Second Harvest: Volunteer",
+   "type": "program",
+   "category": "volunteer",
+   "tags": [
+    "volunteer",
+    "free",
+    "food",
+    "groups"
+   ],
+   "cost": "free",
+   "website": "https://www.secondharvest.ca/get-involved/volunteer",
+   "description": "Canada's food rescue charity takes volunteers for administration, events, and group food sorts, based at its Toronto headquarters or online.",
+   "highlights": [
+    "Group food sorts for 5 to 50 people",
+    "Summer lunch packing for kids' camps",
+    "Some admin roles are virtual",
+    "Event support volunteers must be 19 or older"
+   ],
+   "isRecommended": false,
+   "isFree": true,
+   "lastVerified": "2026-11-06"
   }
  ]
 }

@@ -65,7 +65,7 @@ test.describe("explorer with JavaScript", () => {
     await page.goto(`/explore?city=newmarket&view=map&place=${id}`);
     await expect(page.locator(".maplibregl-canvas")).toBeVisible();
     await expect(page.getByText(/on the map/)).toBeVisible();
-    await expect(page.getByRole("link", { name: "View details" })).toHaveAttribute(
+    await expect(page.getByRole("link", { name: "See details" })).toHaveAttribute(
       "href",
       `/places/${id}`,
     );
@@ -79,6 +79,109 @@ test.describe("explorer with JavaScript", () => {
     await expect(page).toHaveURL(/view=map/);
     await expect(page).toHaveURL(/cost=free/);
     await expect(page.locator(".maplibregl-canvas")).toBeVisible();
+  });
+});
+
+test.describe("list ergonomics", () => {
+  test("scrolling never loads more on its own, so the footer stays reachable", async ({ page }) => {
+    await page.goto("/explore");
+    const cards = page.getByRole("main").getByRole("article");
+    const first = await cards.count();
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+    await expect(page.getByRole("contentinfo")).toBeInViewport();
+    await page.waitForTimeout(800);
+    await expect(cards).toHaveCount(first);
+    await page.getByRole("button", { name: /Show \d+ more/ }).click();
+    await expect.poll(() => cards.count()).toBeGreaterThan(first);
+  });
+
+  test("Explore has one search box, and Ctrl K still opens the palette", async ({ page }) => {
+    await page.goto("/explore");
+    await expect(page.getByRole("banner").getByRole("link", { name: "Search" })).toHaveCount(0);
+    await page.keyboard.press("ControlOrMeta+k");
+    await expect(
+      page.getByRole("combobox", { name: "Search places, cities, and categories" }),
+    ).toBeFocused();
+  });
+});
+
+test.describe("on a phone", () => {
+  test.use({ viewport: { width: 390, height: 844 } });
+
+  test("Surprise me appears once, below the list", async ({ page }) => {
+    await page.goto("/explore?city=newmarket");
+    await expect(
+      page.getByRole("link", { name: "Surprise me" }).locator("visible=true"),
+    ).toHaveCount(1);
+  });
+
+  test("nothing from the page paints over the map, and the view switch is in reach", async ({
+    page,
+  }) => {
+    await page.goto("/explore?city=newmarket&view=map");
+    await expect(page.locator(".maplibregl-canvas")).toBeVisible();
+    const onTop = await page.evaluate(() => {
+      const link = [...document.querySelectorAll("footer a")].at(-1);
+      const box = link?.getBoundingClientRect();
+      if (!box) return null;
+      return link?.contains(
+        document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2),
+      );
+    });
+    expect(onTop).not.toBe(true);
+    await expect(
+      page.getByRole("radiogroup", { name: "View" }).or(page.getByRole("group", { name: "View" })),
+    ).toBeInViewport();
+  });
+
+  test("a filter menu says what the choice did, and closes", async ({ page }) => {
+    await page.goto("/explore?city=newmarket");
+    await page.locator("summary", { hasText: "Category" }).click();
+    await page.getByRole("link", { name: "Meet people" }).click();
+    await expect(page).toHaveURL(/cat=social/);
+    const show = page.getByRole("link", { name: /^Show \d+ places?$/ });
+    await expect(show).toBeVisible();
+    await show.click();
+    await expect(page.locator("details[open]")).toHaveCount(0);
+  });
+});
+
+test.describe("volunteering", () => {
+  test("the Category menu finds volunteer listings in a city", async ({ page }) => {
+    await page.goto("/explore?city=newmarket");
+    await page.locator("summary", { hasText: "Category" }).click();
+    await page.getByRole("link", { name: "Volunteer", exact: true }).click();
+    await expect(page).toHaveURL(/cat=volunteer/);
+    await expect(page.getByRole("main").getByRole("article")).toHaveCount(2);
+    await expect(page.getByRole("main")).toContainText("Newmarket Health Centre");
+  });
+});
+
+test.describe("what the words promise", () => {
+  test("the city page's counts are what its links open", async ({ page }) => {
+    await page.goto("/city/newmarket");
+    for (const name of [/^\d+ free places$/, /^See all \d+$/]) {
+      const link = page.getByRole("main").getByRole("link", { name });
+      const count = (await link.innerText()).match(/\d+/)?.[0];
+      await link.click();
+      await expect(page.getByRole("status").filter({ hasText: /places?/ })).toContainText(
+        `${count} place`,
+      );
+      await page.goBack();
+    }
+  });
+
+  test("Free lights one control, not two", async ({ page }) => {
+    await page.goto("/explore?city=newmarket&cost=free");
+    await expect(page.locator("summary", { hasText: "Budget" })).not.toContainText("1");
+  });
+
+  test("a search with no results can widen to every city", async ({ page }) => {
+    await page.goto("/explore?city=newmarket&q=zzzzqqqq");
+    await expect(page.getByText("Check the spelling")).toBeVisible();
+    await page.getByRole("link", { name: "Search all cities" }).click();
+    await expect(page).toHaveURL(/q=zzzzqqqq/);
+    await expect(page).not.toHaveURL(/city=/);
   });
 });
 

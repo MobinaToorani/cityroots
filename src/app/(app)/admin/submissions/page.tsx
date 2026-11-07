@@ -7,6 +7,7 @@ import { requireRole } from "@/lib/auth/session";
 import { listSubmissions, type ReviewStatus } from "@/lib/data/review";
 import { cn } from "@/lib/cn";
 import { CORRECTION_LABELS } from "@/lib/domain/submission";
+import { Notice } from "@/components/ui/notice";
 
 export const metadata: Metadata = { title: "Suggestions" };
 
@@ -38,11 +39,7 @@ export default async function SubmissionsPage(props: PageProps<"/admin/submissio
   return (
     <>
       <h1 className="page-title">Suggestions and corrections</h1>
-      {done && (
-        <p role="status" className="mt-3 text-body font-semibold">
-          {done}
-        </p>
-      )}
+      {done && <Notice className="mt-3">{done}</Notice>}
       <nav aria-label="Filter by status" className="mt-4 flex gap-4 border-b border-divider">
         {TABS.map((t) => (
           <Link

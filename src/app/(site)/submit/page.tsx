@@ -28,7 +28,7 @@ export default async function SubmitPage(props: PageProps<"/submit">) {
   ]);
 
   return (
-    <div className="page-frame pt-8">
+    <div className="page-frame page-top">
       <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
         <div>
           <h1 className="page-title">

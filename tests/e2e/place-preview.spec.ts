@@ -76,7 +76,7 @@ test.describe("place preview", () => {
     const dialog = page.getByRole("dialog");
     await dialog.getByRole("button", { name: "Save", exact: true }).click();
     await expect(dialog.getByRole("button", { name: "Saved" })).toBeVisible();
-    await dialog.getByRole("link", { name: "View saved" }).click();
+    await dialog.getByRole("link", { name: "See saved" }).click();
     await expect(page).toHaveURL(/\/saved/);
     await expect(dialog).toHaveCount(0);
   });

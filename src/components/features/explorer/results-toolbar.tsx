@@ -26,12 +26,27 @@ function surpriseQuery(state: ExploreState): string {
   return href.slice("/explore".length);
 }
 
+/** A random place that fits the current filters. Above the list on desktop, below it on phones. */
+export function SurpriseLink() {
+  const { state } = useExplorer();
+  return (
+    <a href={`/explore/surprise${surpriseQuery(state)}`} className={chipClasses(false)}>
+      <Icon icon={Dices} size={16} />
+      Surprise me
+    </a>
+  );
+}
+
 export function ResultsToolbar({ total }: { total: number }) {
   const { state, update } = useExplorer();
-  const sortLabel = SORT_OPTIONS.find((o) => o.value === state.sort)?.label ?? "Best match";
+  // With nothing searched there is nothing to match, so say what the order really is.
+  const options = SORT_OPTIONS.map((o) =>
+    o.value === "relevance" && !state.q ? { ...o, label: "Free first" } : o,
+  );
+  const sortLabel = options.find((o) => o.value === state.sort)?.label ?? options[0]?.label;
   return (
     // Positioned, so the sort menu spans this row on phones.
-    <div className="relative z-10 flex flex-wrap items-center justify-between gap-3">
+    <div className="relative z-10 flex flex-wrap items-center justify-between gap-2">
       <p className="text-body" role="status" aria-live="polite">
         <span className="font-semibold">{total}</span> {total === 1 ? "place" : "places"}
         {state.q && (
@@ -44,32 +59,33 @@ export function ResultsToolbar({ total }: { total: number }) {
       </p>
       <div className="flex flex-wrap items-center gap-2">
         {total > 1 && (
-          <a href={`/explore/surprise${surpriseQuery(state)}`} className={chipClasses(false)}>
-            <Icon icon={Dices} size={16} />
-            Surprise me
-          </a>
+          <div className="hidden sm:block">
+            <SurpriseLink />
+          </div>
         )}
-        <FilterDropdown
-          label="Sort results"
-          summary={
-            <>
-              <span className="text-text-muted">Sort:</span> {sortLabel}
-            </>
-          }
-          align="end"
-        >
-          {SORT_OPTIONS.map((o) => (
-            <FilterOption
-              key={o.value}
-              mode="single"
-              selected={state.sort === o.value}
-              href={exploreHref({ ...state, sort: o.value, page: 1, place: null })}
-              onSelect={() => void update({ sort: o.value })}
-            >
-              {o.label}
-            </FilterOption>
-          ))}
-        </FilterDropdown>
+        {total > 1 && (
+          <FilterDropdown
+            label="Sort results"
+            summary={
+              <>
+                <span className="sr-only text-text-muted sm:not-sr-only">Sort:</span> {sortLabel}
+              </>
+            }
+            align="end"
+          >
+            {options.map((o) => (
+              <FilterOption
+                key={o.value}
+                mode="single"
+                selected={state.sort === o.value}
+                href={exploreHref({ ...state, sort: o.value, page: 1, place: null })}
+                onSelect={() => void update({ sort: o.value })}
+              >
+                {o.label}
+              </FilterOption>
+            ))}
+          </FilterDropdown>
+        )}
         <SegmentedControl
           label="View"
           options={VIEW_OPTIONS}

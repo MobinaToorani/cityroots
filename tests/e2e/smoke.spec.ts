@@ -96,6 +96,13 @@ test.describe("without JavaScript", () => {
     await expect(page).toHaveURL(/cost=free/);
   });
 
+  test("the planner still lets you choose a city", async ({ page }) => {
+    await page.goto("/planner?city=newmarket&budget=25");
+    await page.getByLabel("City", { exact: true }).selectOption("waterloo");
+    await page.getByRole("button", { name: "Plan my day" }).click();
+    await expect(page).toHaveURL(/city=waterloo/);
+  });
+
   test("the home page question and the planner work", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("button", { name: "Go" }).click();

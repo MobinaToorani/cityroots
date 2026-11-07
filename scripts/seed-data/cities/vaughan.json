@@ -2004,6 +2004,57 @@
         "2026-12-17T23:30:00.000Z"
       ],
       "endsAt": "2026-12-17T23:30:00.000Z"
+    },
+    {
+      "id": "vaughan-volunteer-connect",
+      "name": "Volunteer Connect York Region",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students",
+        "groups"
+      ],
+      "cost": "free",
+      "website": "https://volunteerconnect.ca/",
+      "phone": "(289) 469-5346",
+      "description": "York Region's volunteer centre, formerly Volunteer Markham. Search its database of openings with non-profits in Vaughan, Markham, and Richmond Hill.",
+      "highlights": [
+        "Search roles by age, interest, or organization",
+        "Good for the 40 hours high school students need",
+        "Groups can volunteer too",
+        "Runs online, weekdays 9am to 5pm"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "vaughan-volunteer-maple-health-centre",
+      "name": "Maple Health Centre: Volunteer with Residents",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "seniors"
+      ],
+      "cost": "free",
+      "address": "10424 Keele St, Maple, ON L6A 2L1",
+      "website": "https://www.york.ca/newsroom/campaigns-projects/volunteering-long-term-care-home",
+      "phone": "1-877-464-9675",
+      "description": "York Region's long-term care home in Maple is looking for volunteers to join activities, outings, and mealtimes with residents. Speaking another language helps, so mention it.",
+      "highlights": [
+        "Weekly activities such as bingo, arts and crafts",
+        "Monthly outings in the community",
+        "One-to-one time with a resident",
+        "Help in the dining room or gift shop",
+        "Orientation and training provided"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }

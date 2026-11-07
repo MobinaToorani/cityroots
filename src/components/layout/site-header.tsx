@@ -1,4 +1,4 @@
-import { PaletteTrigger } from "@/components/features/palette-trigger";
+import { HeaderSearch } from "@/components/features/palette-trigger";
 import { listLiveCities } from "@/lib/data/cities";
 import { CityPicker } from "./city-picker";
 import { Logo } from "./logo";
@@ -13,12 +13,7 @@ export async function SiteHeader() {
         <Logo />
         <CityPicker cities={cities.map((c) => ({ slug: c.slug, name: c.name }))} />
         <div className="ml-auto flex items-center gap-1">
-          <div className="mr-2 hidden w-64 xl:block">
-            <PaletteTrigger />
-          </div>
-          <div className="xl:hidden">
-            <PaletteTrigger compact />
-          </div>
+          <HeaderSearch />
           <nav aria-label="Primary" className="hidden items-center gap-0.5 lg:flex">
             <PrimaryNavLinks variant="header" />
           </nav>

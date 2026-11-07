@@ -1527,6 +1527,55 @@
         "2026-12-04T23:00:00.000Z"
       ],
       "endsAt": "2026-12-04T23:00:00.000Z"
+    },
+    {
+      "id": "newmarket-volunteer-recreation-culture",
+      "name": "Town of Newmarket: Recreation and Culture Volunteers",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "arts",
+        "history"
+      ],
+      "cost": "free",
+      "website": "https://www.newmarket.ca/recreation-parks/jobs-volunteering/volunteer-recreation-culture",
+      "description": "Usher and take tickets at the NewRoads Performing Arts Centre and Old Town Hall, help with research and tours at the Elman W. Campbell Museum, or lead art gallery tours.",
+      "highlights": [
+        "Performing arts: ushers, tickets, concession, coat check",
+        "Museum: research, tours, exhibits, digitizing",
+        "Gallery docents must be 16 or older, with a clear Vulnerable Sector Check"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "newmarket-volunteer-health-centre",
+      "name": "Newmarket Health Centre: Volunteer with Residents",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "seniors"
+      ],
+      "cost": "free",
+      "address": "194 Eagle St, Newmarket, ON L3Y 1J6",
+      "website": "https://www.york.ca/newsroom/campaigns-projects/volunteering-long-term-care-home",
+      "phone": "1-877-464-9675",
+      "description": "York Region's long-term care home in Newmarket is looking for volunteers to join activities, outings, and mealtimes with residents. Speaking another language helps, so mention it.",
+      "highlights": [
+        "Weekly activities such as bingo, arts and crafts",
+        "Monthly outings in the community",
+        "One-to-one time with a resident",
+        "Help in the dining room or gift shop",
+        "Orientation and training provided"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }

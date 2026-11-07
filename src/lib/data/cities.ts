@@ -11,6 +11,10 @@ const published = eq(places.status, "published");
 const placeCount = sql<number>`count(${places.id}) filter (where ${published})::int`;
 const freeCount = sql<number>`count(${places.id}) filter (where ${published} and ${places.costBand} = 'free')::int`;
 
+const browsable = sql`${published} and ${places.kind} <> 'event'`;
+const browseCount = sql<number>`count(${places.id}) filter (where ${browsable})::int`;
+const browseFreeCount = sql<number>`count(${places.id}) filter (where ${browsable} and ${places.costBand} = 'free')::int`;
+
 const summaryColumns = {
   id: cities.id,
   slug: cities.slug,
@@ -20,6 +24,8 @@ const summaryColumns = {
   heroImage: cities.heroImage,
   placeCount,
   freeCount,
+  browseCount,
+  browseFreeCount,
 };
 
 export async function listLiveCities(): Promise<CitySummary[]> {

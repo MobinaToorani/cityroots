@@ -8,7 +8,14 @@ import type { Route } from "next";
  * A plain GET form that re-plans as soon as an answer changes. Without
  * JavaScript it still works, using the button the page puts in a noscript.
  */
-export function AutoSubmitForm({ children, ...props }: ComponentProps<"form">) {
+export function AutoSubmitForm({
+  children,
+  city,
+  ...props
+}: ComponentProps<"form"> & {
+  /** The site's city. With JavaScript the header's picker sets it, so the form has no field for it. */
+  city: string;
+}) {
   const router = useRouter();
   const [pending, start] = useTransition();
   return (
@@ -18,7 +25,7 @@ export function AutoSubmitForm({ children, ...props }: ComponentProps<"form">) {
       onChange={(e) => {
         const form = e.currentTarget;
         if (!form.checkValidity()) return;
-        const query = new URLSearchParams();
+        const query = new URLSearchParams({ city });
         new FormData(form).forEach((value, key) => query.append(key, String(value)));
         start(() => router.replace(`/planner?${query.toString()}` as Route, { scroll: false }));
       }}

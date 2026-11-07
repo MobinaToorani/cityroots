@@ -9,6 +9,7 @@ import { features } from "@/lib/env";
 import { SCOPE_LABELS } from "@/lib/domain/partner-keys";
 import { revokeKeyAction } from "../actions";
 import { IssueKeyForm } from "./issue-key-form";
+import { Notice } from "@/components/ui/notice";
 
 export const metadata: Metadata = { title: "Partner keys" };
 
@@ -31,9 +32,7 @@ export default async function PartnerKeysPage(props: PageProps<"/admin/partners"
         One key per organization. Partners are invoiced by email; nothing here charges anyone.
       </p>
       {query.done === "revoked" && (
-        <p role="status" className="mt-3 text-body font-semibold">
-          Key revoked. Requests with it now get a 401.
-        </p>
+        <Notice className="mt-3">Key revoked. Requests with it now get a 401.</Notice>
       )}
 
       <section aria-labelledby="keys" className="mt-8">

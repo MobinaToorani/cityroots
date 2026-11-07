@@ -116,10 +116,10 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
           <p className="mt-2 max-w-2xl text-base text-white/90 sm:text-lg">{city.tagline}</p>
           <div className="mt-5 flex flex-wrap gap-2">
             <ButtonLink href={exploreHref({ city: city.slug, cost: ["free"] })} variant="photo">
-              {city.freeCount} free things
+              {city.browseFreeCount} free places
             </ButtonLink>
             <ButtonLink href={exploreHref({ city: city.slug })} variant="photo-outline">
-              See all {city.placeCount}
+              See all {city.browseCount}
             </ButtonLink>
             <ButtonLink href={`/events?city=${city.slug}` as Route} variant="photo-outline">
               What&apos;s on
@@ -151,7 +151,7 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
               variant="quiet"
               className="text-meta"
             >
-              All events
+              See what&apos;s on
               <Icon icon={ArrowRight} size={16} />
             </ButtonLink>
           }
@@ -160,7 +160,7 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
         </PageSection>
       )}
 
-      <PageSection id="categories" title="Browse by type">
+      <PageSection id="categories" title="What are you up for?">
         <ul className="grid grid-cols-2 gap-x-6 lg:grid-cols-5">
           {categoryCounts
             .filter((c) => c.count > 0)
@@ -177,7 +177,7 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
       </PageSection>
 
       {guides.length > 0 && (
-        <PageSection id="city-guides" title="Days already planned">
+        <PageSection id="city-guides" title="Guides">
           <ul className="grid grid-cols-1 gap-x-12 lg:grid-cols-2">
             {guides.map((guide) => (
               <li key={guide.slug} className="group relative border-t border-divider py-3">

@@ -3,6 +3,7 @@
 import { Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "@/components/ui/icon";
 import { cn } from "@/lib/cn";
@@ -35,7 +36,7 @@ export function PaletteTrigger({
       aria-haspopup="dialog"
       aria-keyshortcuts="Meta+K Control+K"
       className={cn(
-        "motion-press inline-flex h-10 items-center gap-2 rounded-control text-meta font-semibold text-text-muted hover:text-text",
+        "motion-press touch-target relative inline-flex h-10 items-center gap-2 rounded-control text-meta font-semibold text-text-muted hover:text-text",
         compact
           ? "w-10 justify-center hover:bg-divider/60"
           : "w-full border border-divider bg-surface-solid/60 px-3.5",
@@ -50,6 +51,25 @@ export function PaletteTrigger({
         </kbd>
       )}
     </Link>
+  );
+}
+
+/**
+ * The header's search. Explore has its own search box for its results, so a second
+ * one there would only raise the question of which to use. Ctrl K still works.
+ */
+export function HeaderSearch() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/explore")) return null;
+  return (
+    <>
+      <div className="mr-2 hidden w-64 xl:block">
+        <PaletteTrigger />
+      </div>
+      <div className="xl:hidden">
+        <PaletteTrigger compact />
+      </div>
+    </>
   );
 }
 

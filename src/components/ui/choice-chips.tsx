@@ -1,12 +1,16 @@
 import { useId } from "react";
+import type { CategorySlug } from "@/lib/domain/categories";
+import { CategoryIcon } from "./category-icon";
 import { FieldMessages } from "./field-messages";
 import { cn } from "@/lib/cn";
 
 type ChoiceChipsProps = {
   legend: string;
   name: string;
-  options: readonly { value: string; label: string; accent?: string }[];
+  options: readonly { value: string; label: string; category?: CategorySlug }[];
   defaultValue?: string | readonly string[];
+  /** Equal widths on one line, for a short set of short labels like prices. */
+  even?: boolean;
   /** Checkboxes instead of radios, for picking any number. */
   multiple?: boolean;
   required?: boolean;
@@ -20,6 +24,7 @@ export function ChoiceChips({
   name,
   options,
   defaultValue,
+  even = false,
   multiple = false,
   required,
   description,
@@ -35,8 +40,10 @@ export function ChoiceChips({
       aria-describedby={ids || undefined}
       aria-invalid={error ? true : undefined}
     >
-      <legend className="mb-2 px-1 text-meta font-semibold">{legend}</legend>
-      <div className="flex flex-wrap gap-2">
+      <legend className="mb-2 text-meta font-semibold">{legend}</legend>
+      <div
+        className={even ? "grid max-w-sm auto-cols-fr grid-flow-col gap-2" : "flex flex-wrap gap-2"}
+      >
         {options.map((o) => (
           <label key={o.value} className="relative">
             <input
@@ -53,19 +60,14 @@ export function ChoiceChips({
             />
             <span
               className={cn(
-                "motion-press inline-flex h-9 cursor-pointer items-center gap-2 rounded-control border px-3.5 text-meta font-medium transition-colors duration-150",
+                "motion-press touch-target inline-flex h-9 cursor-pointer items-center gap-2 rounded-control border text-meta font-medium transition-colors duration-150",
+                even ? "w-full justify-center px-1" : "px-3.5",
                 "border-divider bg-surface-solid hover:border-text-muted",
-                "peer-checked:border-ink peer-checked:bg-ink peer-checked:text-on-ink",
+                "peer-checked:border-ink peer-checked:bg-ink peer-checked:text-on-ink peer-checked:[&_svg]:!text-on-ink",
                 "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-3 peer-focus-visible:outline-focus",
               )}
             >
-              {o.accent && (
-                <span
-                  aria-hidden="true"
-                  className="size-2 rounded-full"
-                  style={{ backgroundColor: o.accent }}
-                />
-              )}
+              {o.category && <CategoryIcon slug={o.category} size={16} />}
               {o.label}
             </span>
           </label>

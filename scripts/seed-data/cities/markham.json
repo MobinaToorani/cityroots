@@ -1280,6 +1280,54 @@
         "2026-11-07T20:00:00.000Z"
       ],
       "endsAt": "2026-11-07T20:00:00.000Z"
+    },
+    {
+      "id": "markham-volunteer-connect",
+      "name": "Volunteer Connect York Region",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students",
+        "groups"
+      ],
+      "cost": "free",
+      "website": "https://volunteerconnect.ca/",
+      "phone": "(289) 469-5346",
+      "description": "York Region's volunteer centre, formerly Volunteer Markham. Search its database of openings with non-profits in Markham, Richmond Hill, and Vaughan.",
+      "highlights": [
+        "Search roles by age, interest, or organization",
+        "Good for the 40 hours high school students need",
+        "Groups can volunteer too",
+        "Runs online, weekdays 9am to 5pm"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-volunteer-food-bank",
+      "name": "Markham Food Bank: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "food"
+      ],
+      "cost": "free",
+      "address": "190 Bullock Dr, Unit 11, Markham, ON",
+      "website": "https://markhamfoodbank.ca/how-you-can-help/",
+      "phone": "(905) 472-2437",
+      "description": "A registered charity giving food and basics to Markham residents, and always looking for volunteers. Use the volunteer application on its site.",
+      "highlights": [
+        "Apply online with the volunteer application",
+        "Volunteer hours are on its How You Can Help page"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }

@@ -2059,6 +2059,53 @@
         "2026-11-21T18:30:00.000Z"
       ],
       "endsAt": "2026-11-21T18:30:00.000Z"
+    },
+    {
+      "id": "waterloo-volunteer-waterloo-region",
+      "name": "Volunteer Waterloo Region",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students",
+        "groups",
+        "newcomers"
+      ],
+      "cost": "free",
+      "address": "1454 King St E, Unit 3, Kitchener, ON N2G 2N7",
+      "website": "https://volunteerwr.ca/",
+      "description": "The region's volunteer centre lists openings with local organizations in Waterloo, Kitchener, and Cambridge.",
+      "highlights": [
+        "Youth, newcomer, group, and virtual roles",
+        "Short projects and ongoing commitments",
+        "Search by interest, skills, and schedule"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "waterloo-volunteer-city",
+      "name": "City of Waterloo: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students"
+      ],
+      "cost": "free",
+      "website": "https://www.waterloo.ca/jobs-and-volunteering/volunteer-with-the-city-of-waterloo/find-volunteering-opportunities-and-resources/",
+      "description": "The city recruits for events, recreation programs, and its committees and boards. Openings change through the year, so check what is recruiting now.",
+      "highlights": [
+        "Minimum age is 14",
+        "Committees cover arts, heritage, and more",
+        "Aquatics volunteers need a Bronze Cross, and apply by session"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }

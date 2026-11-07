@@ -33,7 +33,10 @@ export function Toaster() {
       setCurrent((e as CustomEvent<Toast>).detail);
       setModal(document.querySelector("dialog[open]"));
       if (timer.current) clearTimeout(timer.current);
-      timer.current = setTimeout(() => setCurrent(null), 4000);
+      // Something to undo needs longer than something to read.
+      const action = (e as CustomEvent<Toast>).detail.action;
+      const ms = action && "onClick" in action ? 8000 : 4000;
+      timer.current = setTimeout(() => setCurrent(null), ms);
     };
     window.addEventListener(EVENT, onToast);
     return () => {
@@ -57,15 +60,18 @@ export function Toaster() {
             ("href" in current.action ? (
               <Link
                 href={current.action.href}
-                className="rounded-control px-2 py-1 underline underline-offset-4"
+                className="touch-target relative rounded-control px-2 py-1 underline underline-offset-4"
               >
                 {current.action.label}
               </Link>
             ) : (
               <button
                 type="button"
-                onClick={current.action.onClick}
-                className="rounded-control px-2 py-1 underline underline-offset-4"
+                onClick={() => {
+                  if (current.action && "onClick" in current.action) current.action.onClick();
+                  setCurrent(null);
+                }}
+                className="touch-target relative rounded-control px-2 py-1 underline underline-offset-4"
               >
                 {current.action.label}
               </button>

@@ -1,11 +1,12 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { homeCity } from "@/lib/client/stores";
 
 const selectClass =
-  "cursor-pointer appearance-none rounded-none border-0 border-b-2 border-white/70 bg-[length:0.7em] bg-[position:right_center] bg-no-repeat pr-[1em] pl-0.5 font-semibold text-white outline-none transition-colors [field-sizing:content] hover:border-white focus-visible:border-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&>option]:text-[#141412]";
+  "min-h-11 cursor-pointer appearance-none rounded-none border-0 border-b-2 border-white/70 bg-[length:0.7em] bg-[position:right_center] bg-no-repeat pr-[1em] pl-0.5 font-semibold text-white outline-none transition-colors [field-sizing:content] hover:border-white focus-visible:border-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&>option]:text-[#141412]";
 
 const caret = {
   backgroundImage:
@@ -58,13 +59,10 @@ export function HeroQuery({ cities }: { cities: { slug: string; name: string }[]
           </select>
         </label>
       </p>
-      <button
-        type="submit"
-        className="motion-press mt-5 inline-flex h-12 items-center gap-2 rounded-control bg-white px-6 font-semibold text-[#141412] transition-transform active:translate-y-px"
-      >
+      <Button type="submit" variant="photo" className="mt-5">
         Go
         <Icon icon={ArrowRight} size={16} />
-      </button>
+      </Button>
     </form>
   );
 }

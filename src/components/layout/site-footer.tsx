@@ -23,10 +23,14 @@ export function SiteFooter() {
           <p className="text-meta text-text-muted">No ads. Nobody pays for placement.</p>
         </div>
         <nav aria-label="Footer">
-          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-meta text-text-muted">
+          <ul className="flex flex-wrap gap-x-5 gap-y-3 text-meta text-text-muted">
             {LINKS.filter((l) => !l.show || l.show()).map((l) => (
               <li key={l.href}>
-                <Link className="hover:text-text" href={l.href} prefetch={false}>
+                <Link
+                  className="touch-target relative hover:text-text"
+                  href={l.href}
+                  prefetch={false}
+                >
                   {l.label}
                 </Link>
               </li>

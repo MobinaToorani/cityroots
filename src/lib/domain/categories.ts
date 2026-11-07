@@ -12,6 +12,7 @@ export const CATEGORY_SLUGS = [
   "food",
   "cafes",
   "thrifting",
+  "volunteer",
   "events",
 ] as const;
 
@@ -90,6 +91,13 @@ export const CATEGORIES: readonly CategoryMeta[] = [
     description: "Thrift stores, vintage, records, and swaps.",
   },
   {
+    slug: "volunteer",
+    name: "Volunteer",
+    shortName: "Volunteer",
+    accent: "#456d3c",
+    description: "Food banks, care homes, and community groups that need a hand.",
+  },
+  {
     slug: "events",
     name: "Festivals",
     shortName: "Festivals",
@@ -124,5 +132,6 @@ export const LEGACY_CATEGORY_MAP: Record<string, CategorySlug> = {
   cafes: "cafes",
   "cafes-spaces": "cafes",
   thrifting: "thrifting",
+  volunteer: "volunteer",
   events: "events",
 };

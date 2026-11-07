@@ -23,14 +23,14 @@ export type NavItem = {
 export const PRIMARY_NAV: readonly NavItem[] = [
   {
     href: "/explore",
-    label: "Explore",
+    label: "Things to do",
     icon: Compass,
     match: (p) => p.startsWith("/explore") || p.startsWith("/places/") || p.startsWith("/city/"),
     followsCity: true,
   },
   {
     href: "/events",
-    label: "Events",
+    label: "What's on",
     icon: CalendarDays,
     match: (p) => p.startsWith("/events"),
     followsCity: true,

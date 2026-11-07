@@ -1959,6 +1959,31 @@
         "2026-12-31T15:30:00.000Z"
       ],
       "endsAt": "2026-12-31T15:30:00.000Z"
+    },
+    {
+      "id": "richmond-hill-volunteer-connect",
+      "name": "Volunteer Connect York Region",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students",
+        "groups"
+      ],
+      "cost": "free",
+      "website": "https://volunteerconnect.ca/",
+      "phone": "(289) 469-5346",
+      "description": "York Region's volunteer centre, formerly Volunteer Markham. Search its database of openings with non-profits in Richmond Hill, Markham, and Vaughan.",
+      "highlights": [
+        "Search roles by age, interest, or organization",
+        "Good for the 40 hours high school students need",
+        "Groups can volunteer too",
+        "Runs online, weekdays 9am to 5pm"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }

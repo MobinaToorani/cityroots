@@ -10,14 +10,14 @@ export function SamplePlan({ day }: { day: SampleDay }) {
       {day.stops.map((stop) => (
         <li
           key={stop.place.id}
-          className="grid grid-cols-[3.75rem_minmax(0,1fr)_auto] items-baseline gap-3 px-4 py-3"
+          className="group relative grid grid-cols-[3.75rem_minmax(0,1fr)_auto] items-baseline gap-3 px-4 py-3"
         >
           <span className="text-meta font-semibold text-text-muted">{stop.time}</span>
           <span className="min-w-0">
             <span className="block text-meta text-text-muted">{stop.label}</span>
             <PlaceLink
               placeId={stop.place.id}
-              className="block truncate font-semibold hover:underline"
+              className="block truncate font-semibold group-hover:underline after:absolute after:inset-0"
             >
               {stop.place.name}
             </PlaceLink>

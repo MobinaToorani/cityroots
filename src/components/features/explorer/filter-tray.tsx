@@ -5,6 +5,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import { toggle, useExplorer } from "./explorer-state";
+import { buttonClasses } from "@/components/ui/button";
 import { chipClasses } from "@/components/ui/chip";
 import { FilterDropdown, FilterMenuFooter, FilterOption } from "@/components/ui/filter-dropdown";
 import { Icon } from "@/components/ui/icon";
@@ -31,8 +32,8 @@ const MENU_GROUP = "explore-filters";
  * its URL, so it works without JavaScript; with JavaScript a click updates
  * state optimistically.
  */
-export function FilterTray() {
-  const { state, update } = useExplorer();
+export function FilterTray({ total }: { total: number }) {
+  const { state, update, isPending } = useExplorer();
   const filters = activeFilterCount(state);
   const freeOnly = state.cost.length === 1 && state.cost[0] === "free";
 
@@ -43,17 +44,38 @@ export function FilterTray() {
     };
   }
 
-  function clearLink(patch: Partial<ExploreState>, label: string) {
-    const { href, onSelect } = option(patch);
+  /**
+   * An open menu covers the results on a phone, so its foot says what the choice
+   * did and closes the menu. Without JavaScript each choice reloads and closes it.
+   */
+  function menuFooter(clearPatch: Partial<ExploreState>, clearLabel: string, canClear: boolean) {
+    const clear = option(clearPatch);
     return (
       <FilterMenuFooter>
+        {canClear ? (
+          <Link
+            href={clear.href}
+            scroll={false}
+            onClick={inPlace(clear.onSelect)}
+            className="flex min-h-11 items-center px-2 text-meta font-semibold text-text-muted quiet-link"
+          >
+            {clearLabel}
+          </Link>
+        ) : (
+          <span />
+        )}
         <Link
-          href={href}
+          href={exploreHref(state)}
           scroll={false}
-          onClick={inPlace(onSelect)}
-          className="flex min-h-11 items-center px-2 text-meta font-semibold text-primary-text quiet-link"
+          onClick={(e) => {
+            e.preventDefault();
+            const menu = e.currentTarget.closest("details");
+            if (menu) menu.open = false;
+            menu?.querySelector("summary")?.focus();
+          }}
+          className={buttonClasses("primary", "sm")}
         >
-          {label}
+          {isPending ? "Updating" : `Show ${total} ${total === 1 ? "place" : "places"}`}
         </Link>
       </FilterMenuFooter>
     );
@@ -84,21 +106,22 @@ export function FilterTray() {
             <FilterOption
               key={c.slug}
               mode="multi"
-              accent={c.accent}
+              category={c.slug}
               selected={state.cat.includes(c.slug)}
               {...option({ cat: toggle(state.cat, c.slug) })}
             >
               {c.name}
             </FilterOption>
           ))}
-          {state.cat.length > 0 && clearLink({ cat: [] }, "Clear categories")}
+          {menuFooter({ cat: [] }, "Clear categories", state.cat.length > 0)}
         </FilterDropdown>
 
         <FilterDropdown
           name={MENU_GROUP}
           label="Budget"
-          summary={<Summary label="Budget" count={state.cost.length} />}
-          active={state.cost.length > 0}
+          // The Free toggle already shows that choice, so one tap does not light up two controls.
+          summary={<Summary label="Budget" count={freeOnly ? 0 : state.cost.length} />}
+          active={state.cost.length > 0 && !freeOnly}
         >
           {COST_BANDS.map((band) => (
             <FilterOption
@@ -111,7 +134,7 @@ export function FilterTray() {
               <span className="ml-2 text-meta font-normal text-text-muted">{COST_HINTS[band]}</span>
             </FilterOption>
           ))}
-          {state.cost.length > 0 && clearLink({ cost: [] }, "Clear budget")}
+          {menuFooter({ cost: [] }, "Clear budget", state.cost.length > 0)}
         </FilterDropdown>
 
         <Toggle active={state.picks} {...option({ picks: !state.picks })}>
@@ -128,8 +151,8 @@ export function FilterTray() {
             className="inline-flex h-9 items-center gap-1 px-2 text-meta font-semibold text-primary-text quiet-link"
           >
             <Icon icon={X} size={16} />
-            Clear all
-            <span className="sr-only"> filters ({filters} active)</span>
+            Clear filters
+            <span className="sr-only"> ({filters} active)</span>
           </Link>
         )}
       </div>
@@ -184,7 +207,7 @@ function SearchBox() {
   const [lastQ, setLastQ] = useState(state.q);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Follow outside changes, such as "Clear all".
+  // Follow outside changes, such as "Clear filters".
   if (lastQ !== state.q) {
     setLastQ(state.q);
     setValue(state.q);
@@ -229,7 +252,7 @@ function SearchBox() {
         type="search"
         value={value}
         onChange={(e) => schedule(e.target.value)}
-        placeholder="Try pool, jazz, or Kensington"
+        placeholder="Try pool, jazz, or market"
         autoComplete="off"
         enterKeyHint="search"
         className="h-12 w-0 min-w-0 flex-1 rounded-control border border-divider bg-surface-solid pr-4 pl-11 text-body outline-none placeholder:text-text-muted hover:border-text-muted focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus"
