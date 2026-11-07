@@ -495,3 +495,13 @@ The owner asked for a new palette, fonts, and theme, without naming a direction.
 **The theme still follows the device.** A manual light and dark switch needs client script, and Explore has about 1 KB of budget left.
 
 **No site-wide tabular numbers.** Schibsted Grotesk's tabular setting also widens commas, periods, and colons, which put visible gaps before punctuation in all running text.
+
+## Home page first glance (November 2026)
+
+The owner said the site felt claustrophobic and its point was not clear at first glance. The home page hero was a darkened photo with a headline and nothing that said what CityRoots is. Now:
+
+- The hero sits on the page's own paper: headline, one plain sentence saying what the site is (live counts, hand-checked, no ads), and the "Show me..." sentence in accent underlines. The photo is shown at full colour beside it instead of under a scrim.
+- A note pinned to the photo lists three real free events coming up, so the first screen shows the idea working rather than describing it.
+- Categories come second, each with its colour, icon, and one-line lede (shared with the category pages), on a solid band so the page has rhythm.
+- More air everywhere: `PageSection` spacing went from 3.5rem to 4rem/6rem, and the footer gap grew. The home week list shows six rows, not eight.
+- Feature flags are read at build time, so local Playwright runs need `FEATURE_PARTNERS=true FEATURE_BUSINESS=true` on the build too, as in CI.

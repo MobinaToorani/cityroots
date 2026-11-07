@@ -13,7 +13,7 @@ test.describe("home", () => {
 
     await page.locator("select[name=city]").selectOption("newmarket");
     await page.locator("select[name=when]").selectOption("anytime");
-    await page.getByRole("button", { name: "Go" }).click();
+    await page.getByRole("button", { name: "Find things to do" }).click();
     await expect(page).toHaveURL(/\/explore\?.*city=newmarket/);
     await expect(page).toHaveURL(/cost=free/);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Things to do in Newmarket");
@@ -105,7 +105,7 @@ test.describe("without JavaScript", () => {
 
   test("the home page question and the planner work", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("button", { name: "Go" }).click();
+    await page.getByRole("button", { name: "Find things to do" }).click();
     await expect(page).toHaveURL(/\/events\?when=weekend/);
     await page.goto("/planner?city=newmarket&budget=25");
     await expect(page.getByRole("list", { name: "Your day" })).toBeVisible();
