@@ -210,6 +210,11 @@
   }
 }
 
+/* A category's colour as a flat wash. Set --cat with categoryColour(). */
+@utility cat-tint {
+  background: color-mix(in oklab, var(--cat) 10%, var(--color-surface-solid));
+}
+
 /* Frosted glass. Use over photography or a colour field, never flat emptiness. */
 @utility glass {
   background: var(--color-surface);

@@ -4,9 +4,10 @@ import { db } from "@/lib/db/client";
 import { categories, cities, places } from "@/lib/db/schema";
 import type { CategorySlug } from "@/lib/domain/categories";
 import { DataError } from "@/lib/errors";
+import { notFinished } from "./listing-filters";
 import type { CategoryCount, CityDetail, CitySummary, SiteStats } from "./types";
 
-const published = eq(places.status, "published");
+const published = sql`${places.status} = 'published' and ${notFinished}`;
 
 const placeCount = sql<number>`count(${places.id}) filter (where ${published})::int`;
 const freeCount = sql<number>`count(${places.id}) filter (where ${published} and ${places.costBand} = 'free')::int`;
@@ -14,6 +15,14 @@ const freeCount = sql<number>`count(${places.id}) filter (where ${published} and
 const browsable = sql`${published} and ${places.kind} <> 'event'`;
 const browseCount = sql<number>`count(${places.id}) filter (where ${browsable})::int`;
 const browseFreeCount = sql<number>`count(${places.id}) filter (where ${browsable} and ${places.costBand} = 'free')::int`;
+
+/**
+ * A category's count is what its link opens: Explore leaves dated events out of a
+ * category, except Festivals, which is made of them.
+ */
+const inCategoryList = sql`${published} and (${places.kind} <> 'event' or ${categories.slug} = 'events')`;
+const categoryCount = sql<number>`count(${places.id}) filter (where ${inCategoryList})::int`;
+const categoryFreeCount = sql<number>`count(${places.id}) filter (where ${inCategoryList} and ${places.costBand} = 'free')::int`;
 
 const summaryColumns = {
   id: cities.id,
@@ -69,7 +78,7 @@ export async function getCategoryCounts(cityId?: string): Promise<CategoryCount[
       ? and(eq(places.categoryId, categories.id), eq(places.cityId, cityId))
       : eq(places.categoryId, categories.id);
     const rows = await db()
-      .select({ slug: categories.slug, count: placeCount, freeCount })
+      .select({ slug: categories.slug, count: categoryCount, freeCount: categoryFreeCount })
       .from(categories)
       .leftJoin(places, joinOn)
       .groupBy(categories.id)

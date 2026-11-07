@@ -463,3 +463,19 @@ Measured on a 390px phone and at 1280px before changing anything.
 **Colour.** Hue 140 is the only gap left that keeps 24 degrees from other categories and 14 from Free's green, so it sits close to Free. It appears only on a small icon.
 
 **Deploy before seeding.** A category row the running code does not know makes `categoryMeta` throw, so the code has to go live before production is seeded.
+
+## Finished events and category looks (November 2026)
+
+The owner asked for finished events to leave the site and for each category to stop looking cookie cutter. This replaces two earlier rules: that category colour is only a small indicator, and that every place is shown as the same card.
+
+**A finished event leaves everywhere, at once.** `notFinished` used to apply only to events with `occurrences`, so a curated event could outlive its dates in search and on its own page, and counts ignored it entirely. Now any event past `end_at` is out of lists, search, the map, the sitemap, Saved, its own page, and every count. It is hidden by the query, not deleted, so no job has to run on time for it to go. A seed marks dropped feed events `rejected`, and moves a yearly event's row to its next date, which brings it back.
+
+**Events with no date stay.** Six listings have only a season note ("Annual summer event"). Nothing says they are over, so they stay, and a poster says what the note says.
+
+**The weekly refresh is still the owner's switch.** It skips itself without a `DATABASE_URL` repository secret. Without it, nothing clutters, but new events stop arriving and yearly events stay hidden after they end, until someone seeds by hand.
+
+**Each category has a form that suits what people want from it**, chosen from the data it has. No category has photos, so none of them lean on one. Get moving is signposts, led by where. Calm and support is one quiet column with the phone number in reach. Meet people is a notice board. Money help is a directory led by what you get. Arts is wall labels. Music is a lineup of large names. Food is a menu with dotted leaders. Cafes lead with the one thing worth knowing. Thrift is grouped by neighbourhood, so you can visit a few at once. Volunteer ticks off what you would do. Festivals are posters led by the date, soonest first within each cost band, so "Free first" stays true.
+
+**Still `/explore?cat=`, not separate pages.** Filters, shared links, and working without JavaScript all stay. One category gets its look; a mix stays as cards, which now carry their category's colour and, for things you go and see, the serif. The map's narrow list also stays as cards. All of it is server-rendered, because Explore has about 1 KB of script budget left.
+
+**Thrift groups sort by name.** Within a group the chosen sort still applies, but a neighbourhood's place on the page does not change with it.

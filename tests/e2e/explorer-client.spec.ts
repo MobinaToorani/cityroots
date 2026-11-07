@@ -1,5 +1,14 @@
+import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
+import { CATEGORY_SLUGS, categoryMeta } from "../../src/lib/domain/categories";
 import { openMenu } from "./helpers";
+
+async function axe(page: import("@playwright/test").Page) {
+  const results = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
+    .analyze();
+  return results.violations.map((v) => `${v.id}: ${v.nodes.length} (${v.help})`);
+}
 
 test.describe("explorer with JavaScript", () => {
   test("filters update in place, without a full page load", async ({ page }) => {
@@ -143,6 +152,45 @@ test.describe("on a phone", () => {
     await expect(show).toBeVisible();
     await show.click();
     await expect(page.locator("details[open]")).toHaveCount(0);
+  });
+});
+
+test.describe("a category's own look", () => {
+  for (const slug of CATEGORY_SLUGS) {
+    test(`${slug} has its own form, passes axe, and can still open and save`, async ({ page }) => {
+      await page.goto(`/explore?cat=${slug}`);
+      await expect(page.locator(`[data-look="${slug}"]`)).toBeVisible();
+      await expect(page.getByRole("heading", { level: 1 })).toHaveText(categoryMeta(slug).name);
+      expect(await axe(page)).toEqual([]);
+
+      const first = page.locator(`[data-look="${slug}"] article`).first();
+      await first.getByRole("button", { name: /^Save / }).click();
+      await expect(first.getByRole("button", { name: /^Save / })).toHaveAttribute(
+        "aria-pressed",
+        "true",
+      );
+      await first.getByRole("heading").getByRole("link").click();
+      await expect(page).toHaveURL(/preview=/);
+    });
+  }
+
+  test("a mix of categories stays as cards", async ({ page }) => {
+    await page.goto("/explore?city=newmarket&cat=arts,food");
+    await expect(page.locator("[data-look]")).toHaveCount(0);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Things to do in Newmarket");
+  });
+
+  test("a city's category counts are what their links open", async ({ page }) => {
+    await page.goto("/city/newmarket");
+    const tile = page
+      .getByRole("region", { name: "What are you up for?" })
+      .getByRole("listitem")
+      .filter({ hasText: "Meet people" });
+    const count = (await tile.innerText()).match(/(\d+) places?/)?.[1];
+    await tile.getByRole("link").click();
+    await expect(page.getByRole("status").filter({ hasText: /places?/ })).toContainText(
+      `${count} place`,
+    );
   });
 });
 

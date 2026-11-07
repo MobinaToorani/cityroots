@@ -26,7 +26,9 @@ import type { CategorySlug } from "@/lib/domain/categories";
 import { defaultExploreState, validBbox, type ExploreState } from "@/lib/domain/explore-params";
 import { openStatus } from "@/lib/domain/hours";
 import { rank, type RankingSignals } from "@/lib/domain/ranking";
+import { compareCostBands } from "@/lib/domain/cost";
 import { DataError } from "@/lib/errors";
+import { notFinished } from "./listing-filters";
 import type { PlaceCard, PlaceDetail } from "./types";
 
 export const PAGE_SIZE = 24;
@@ -102,6 +104,8 @@ const cardColumns = {
   isPick: places.isPick,
   image: places.image,
   seasonNote: places.seasonNote,
+  phone: places.phone,
+  highlights: places.highlights,
   hours: places.hours,
 };
 
@@ -117,12 +121,6 @@ function toCard({
 }): PlaceCard {
   return { ...row, category: row.category as CategorySlug, weekly: hours?.weekly ?? null };
 }
-
-/** A feed event whose last showing has passed is no longer a thing you can do. */
-const notFinished = sql`not exists (
-  select 1 from ${events} e
-  where e.place_id = ${places.id} and e.occurrences is not null and e.end_at < now()
-)`;
 
 function visible(): SQL {
   return and(eq(places.status, "published"), eq(cities.status, "live"), notFinished) as SQL;
@@ -213,13 +211,38 @@ export async function queryPlaces(
       hideEvents && !state.q && state.cat.length === 0 && state.sort === "relevance";
     const isFreeResource = (r: { kind: string; costBand: string }) =>
       r.kind === "resource" && r.costBand === "free";
-    const ordered = plainBrowse
-      ? [
-          ...ranked.filter(({ row }) => row.costBand === "free" && !isFreeResource(row)),
-          ...ranked.filter(({ row }) => isFreeResource(row)),
-          ...ranked.filter(({ row }) => row.costBand !== "free"),
-        ]
-      : ranked;
+    // Festivals lead with their date, so each cost band runs soonest first. Undated ones follow.
+    const byDate =
+      state.cat.length === 1 && state.cat[0] === "events" && !state.q && state.sort === "relevance";
+    const starts = byDate
+      ? new Map(
+          (
+            await db()
+              .select({ placeId: events.placeId, startAt: events.startAt })
+              .from(events)
+              .where(
+                inArray(
+                  events.placeId,
+                  ranked.map(({ row }) => row.id),
+                ),
+              )
+          ).map((e) => [e.placeId, e.startAt.getTime()]),
+        )
+      : null;
+    const startOf = (id: string) => starts?.get(id) ?? Number.MAX_SAFE_INTEGER;
+    const ordered = starts
+      ? [...ranked].sort(
+          (a, b) =>
+            compareCostBands(a.row.costBand, b.row.costBand) ||
+            startOf(a.row.id) - startOf(b.row.id),
+        )
+      : plainBrowse
+        ? [
+            ...ranked.filter(({ row }) => row.costBand === "free" && !isFreeResource(row)),
+            ...ranked.filter(({ row }) => isFreeResource(row)),
+            ...ranked.filter(({ row }) => row.costBand !== "free"),
+          ]
+        : ranked;
     const end = state.page * PAGE_SIZE;
     return {
       items: ordered.slice(0, end).map(({ row }) =>
@@ -238,6 +261,8 @@ export async function queryPlaces(
           isPick: row.isPick,
           image: row.image,
           seasonNote: row.seasonNote,
+          phone: row.phone,
+          highlights: row.highlights,
           hours: row.hours,
         }),
       ),

@@ -1,13 +1,16 @@
 import { CostBadge, PickBadge } from "@/components/ui/badges";
 import { Card } from "@/components/ui/card";
-import { CategoryIcon } from "@/components/ui/category-icon";
+import { CategoryIcon, categoryColour } from "@/components/ui/category-icon";
 import type { PlaceCard as PlaceCardData } from "@/lib/data/types";
-import { categoryMeta } from "@/lib/domain/categories";
+import { categoryMeta, type CategorySlug } from "@/lib/domain/categories";
 import { whereLine } from "@/lib/domain/where";
 import { cn } from "@/lib/cn";
 import { OpenBadge } from "./open-badge";
 import { PlaceLink } from "./place-link";
 import { SaveButton } from "./save-button";
+
+/** Things you go and see are named in the serif; things you go and do, in the sans. */
+const SERIF_CATEGORIES = new Set<CategorySlug>(["arts", "dance-music", "events"]);
 
 type PlaceCardProps = {
   place: PlaceCardData;
@@ -30,12 +33,24 @@ export function PlaceCard({
   const Heading = headingLevel;
   const where = whereLine(place.neighborhood, showCity ? place.cityName : null);
   return (
-    <Card as="article" interactive className={cn("relative flex h-full flex-col p-4", className)}>
-      <p className="flex items-center gap-1.5 pr-8 text-meta text-text-muted">
+    <Card
+      as="article"
+      interactive
+      style={categoryColour(place.category)}
+      className={cn("relative flex h-full flex-col overflow-hidden p-4", className)}
+    >
+      <p className="-mx-4 -mt-4 mb-3 flex min-h-11 items-center gap-1.5 py-2 pr-12 pl-4 text-meta font-medium cat-tint">
         <CategoryIcon slug={place.category} size={16} />
         {categoryMeta(place.category).name}
       </p>
-      <Heading className="mt-1.5 pr-8 text-card font-semibold tracking-tight">
+      <Heading
+        className={cn(
+          "tracking-tight",
+          SERIF_CATEGORIES.has(place.category)
+            ? "font-display text-lg font-medium"
+            : "text-card font-semibold",
+        )}
+      >
         <PlaceLink placeId={place.id} className="after:absolute after:inset-0 after:rounded-card">
           {place.name}
         </PlaceLink>
@@ -49,7 +64,7 @@ export function PlaceCard({
         </div>
         {where && <p className="mt-0.5 truncate text-meta text-text-muted">{where}</p>}
       </div>
-      <div className="absolute top-1.5 right-1.5 z-10">
+      <div className="absolute top-0.5 right-1 z-10">
         <SaveButton placeId={place.id} placeName={place.name} />
       </div>
     </Card>

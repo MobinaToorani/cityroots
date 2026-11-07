@@ -1,10 +1,10 @@
 import "server-only";
-import { and, asc, eq, gte, type SQL } from "drizzle-orm";
+import { and, asc, eq, gte, inArray, type SQL } from "drizzle-orm";
 import { db } from "@/lib/db/client";
 import { categories, cities, events, places } from "@/lib/db/schema";
 import type { CategorySlug } from "@/lib/domain/categories";
 import { compareCostBands, type CostBand } from "@/lib/domain/cost";
-import { buildAgenda, type AgendaEntry } from "@/lib/domain/event-dates";
+import { buildAgenda, eventDateLabel, runsUntil, type AgendaEntry } from "@/lib/domain/event-dates";
 import { DataError } from "@/lib/errors";
 
 export type EventItem = {
@@ -93,4 +93,33 @@ export async function listThisWeek(
     }
   }
   return [...picked, ...dated.filter((e) => !picked.includes(e)), ...running].slice(0, limit);
+}
+
+/** When each listed event happens, in words, for the lists that lead with the date. */
+export async function listEventDateLabels(placeIds: string[]): Promise<Map<string, string>> {
+  if (placeIds.length === 0) return new Map();
+  try {
+    const rows = await db()
+      .select({
+        placeId: events.placeId,
+        startAt: events.startAt,
+        endAt: events.endAt,
+        precision: events.datePrecision,
+      })
+      .from(events)
+      .where(inArray(events.placeId, placeIds));
+    const now = new Date();
+    return new Map(
+      rows.flatMap((r) => {
+        if (!r.placeId) return [];
+        const running = r.precision === "day" && r.startAt < now;
+        const label = running
+          ? (runsUntil(r.endAt) ?? eventDateLabel(r.startAt, r.endAt, r.precision))
+          : eventDateLabel(r.startAt, r.endAt, r.precision);
+        return [[r.placeId, label] as const];
+      }),
+    );
+  } catch (cause) {
+    throw new DataError("Could not load event dates", { cause });
+  }
 }
