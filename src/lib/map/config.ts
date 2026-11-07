@@ -20,7 +20,7 @@ export function categoryColorExpression(): unknown[] {
     "match",
     ["get", "category"],
     ...CATEGORIES.flatMap((c) => [c.slug, c.accent]),
-    "#1E4D36",
+    "#17456E",
   ];
 }
 

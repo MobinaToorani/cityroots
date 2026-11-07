@@ -4,10 +4,10 @@ import { cn } from "@/lib/cn";
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" className={cn("size-8", className)}>
-      <rect width="32" height="32" rx="10" fill="#1E4D36" />
+      <rect width="32" height="32" rx="10" fill="#17456E" />
       <path
         d="M16 7c4.6 2.2 6.6 6 5.6 10.4-.7 3-2.8 5-5.6 5.6-2.8-.6-4.9-2.6-5.6-5.6C9.4 13 11.4 9.2 16 7Z"
-        fill="#8FCBA7"
+        fill="#8FC1EA"
       />
       <path
         d="M16 11v15m0-4-3.5 3.5M16 19l3.5 3.5"
