@@ -2,6 +2,7 @@ import {
   Coffee,
   Flower2,
   Footprints,
+  HandHeart,
   Music,
   Palette,
   PartyPopper,
@@ -25,6 +26,7 @@ export const CATEGORY_ICONS: Record<CategorySlug, LucideIcon> = {
   food: Utensils,
   cafes: Coffee,
   thrifting: Shirt,
+  volunteer: HandHeart,
   events: PartyPopper,
 };
 

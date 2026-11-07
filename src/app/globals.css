@@ -45,6 +45,7 @@
   --color-cat-food: #934829;
   --color-cat-cafes: #785a3b;
   --color-cat-thrifting: #1d6a81;
+  --color-cat-volunteer: #456d3c;
   --color-cat-events: #8b446f;
 
   /* Three corners only: controls, cards, sheets. */
@@ -103,6 +104,7 @@
     --color-cat-food: #f7a788;
     --color-cat-cafes: #d7b797;
     --color-cat-thrifting: #86c9e1;
+    --color-cat-volunteer: #9ecd94;
     --color-cat-events: #eea2cd;
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
     --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);

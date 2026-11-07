@@ -146,6 +146,17 @@ test.describe("on a phone", () => {
   });
 });
 
+test.describe("volunteering", () => {
+  test("the Category menu finds volunteer listings in a city", async ({ page }) => {
+    await page.goto("/explore?city=newmarket");
+    await page.locator("summary", { hasText: "Category" }).click();
+    await page.getByRole("link", { name: "Volunteer", exact: true }).click();
+    await expect(page).toHaveURL(/cat=volunteer/);
+    await expect(page.getByRole("main").getByRole("article")).toHaveCount(2);
+    await expect(page.getByRole("main")).toContainText("Newmarket Health Centre");
+  });
+});
+
 test.describe("what the words promise", () => {
   test("the city page's counts are what its links open", async ({ page }) => {
     await page.goto("/city/newmarket");

@@ -135,6 +135,54 @@
     { "id": "double-take", "name": "Double Take Thrift Store", "type": "place", "category": "thrifting", "tags": ["thrift", "cheap", "charity", "clothing"], "cost": "low", "address": "310 Gerrard St E", "lat": 43.6636, "lng": -79.3683, "website": "https://ysm.ca/", "description": "A low-priced thrift store run by Yonge Street Mission, with proceeds going to its programs.", "highlights": ["Very low prices", "Supports community programs", "Clothing and housewares"] },
     { "id": "value-village-bloor", "name": "Value Village, Bloor", "type": "place", "category": "thrifting", "tags": ["thrift", "clothing", "housewares", "cheap"], "cost": "low", "address": "924 Bloor St W", "lat": 43.6617, "lng": -79.4294, "website": "https://stores.savers.com/on/toronto/valuevillage-thrift-store-1036.html", "description": "A big, reliable thrift store near Ossington station.", "highlights": ["Huge selection", "Near Ossington station", "Housewares too"] },
     { "id": "free-noon-concerts", "name": "Free Concerts at the Opera House", "type": "program", "category": "dance-music", "tags": ["free concert", "classical", "lunch", "indoors"], "cost": "free", "address": "145 Queen St W", "lat": 43.6506, "lng": -79.3859, "website": "https://www.coc.ca/plan-your-visit/free-concert-series", "description": "Free noon-hour concerts in the glass lobby of the Four Seasons Centre, usually on weekdays.", "hours": "Mon-Fri noon-1pm", "highlights": ["Free", "Noon-hour shows", "Stunning glass lobby"], "isRecommended": true, "seasonal": true, "seasonNote": "Runs fall to spring. Check the schedule." },
-    { "id": "rex-hotel", "name": "The Rex Hotel Jazz & Blues Bar", "type": "place", "category": "dance-music", "tags": ["jazz", "live music", "bar", "date"], "cost": "low", "costNote": "Many sets are free or a small cover.", "address": "194 Queen St W", "lat": 43.6502, "lng": -79.3884, "website": "https://www.therex.ca/", "description": "Toronto's long-running jazz bar, with live sets most days of the week.", "highlights": ["Live music most days", "Small cover or none", "Downtown"], "isRecommended": true }
+    { "id": "rex-hotel", "name": "The Rex Hotel Jazz & Blues Bar", "type": "place", "category": "dance-music", "tags": ["jazz", "live music", "bar", "date"], "cost": "low", "costNote": "Many sets are free or a small cover.", "address": "194 Queen St W", "lat": 43.6502, "lng": -79.3884, "website": "https://www.therex.ca/", "description": "Toronto's long-running jazz bar, with live sets most days of the week.", "highlights": ["Live music most days", "Small cover or none", "Downtown"], "isRecommended": true },
+    {
+      "id": "toronto-volunteer-daily-bread",
+      "name": "Daily Bread Food Bank: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "food"
+      ],
+      "cost": "free",
+      "address": "191 New Toronto St, Toronto, ON",
+      "website": "https://www.dailybread.ca/get-involved/volunteer/",
+      "description": "Sort donated food, pick orders for member food banks, or help prepare soups and casseroles for meal programs. Most shifts are at the warehouse in South Etobicoke.",
+      "highlights": [
+        "Weekday shifts of about three hours",
+        "Register, then book a first volunteer session",
+        "Minimum age is typically 18",
+        "Closer to home? Its Find a Food Bank page lists member agencies"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "toronto-volunteer-second-harvest",
+      "name": "Second Harvest: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "food",
+        "groups"
+      ],
+      "cost": "free",
+      "website": "https://www.secondharvest.ca/get-involved/volunteer",
+      "description": "Canada's food rescue charity takes volunteers for administration, events, and group food sorts, based at its Toronto headquarters or online.",
+      "highlights": [
+        "Group food sorts for 5 to 50 people",
+        "Summer lunch packing for kids' camps",
+        "Some admin roles are virtual",
+        "Event support volunteers must be 19 or older"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    }
   ]
 }

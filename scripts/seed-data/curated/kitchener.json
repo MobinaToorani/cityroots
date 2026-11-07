@@ -951,6 +951,104 @@
       "isFree": false,
       "isRecommended": true,
       "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-volunteer-waterloo-region",
+      "name": "Volunteer Waterloo Region",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "students",
+        "groups",
+        "newcomers"
+      ],
+      "cost": "free",
+      "address": "1454 King St E, Unit 3, Kitchener, ON N2G 2N7",
+      "website": "https://volunteerwr.ca/",
+      "description": "The region's volunteer centre lists openings with local organizations. Kitchener's own volunteer page sends people here for longer-term roles.",
+      "highlights": [
+        "Youth, newcomer, group, and virtual roles",
+        "Short projects and ongoing commitments",
+        "Search by interest, skills, and schedule"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-volunteer-food-bank",
+      "name": "The Food Bank of Waterloo Region: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "food",
+        "students",
+        "groups"
+      ],
+      "cost": "free",
+      "address": "50 Alpine Court, Kitchener, ON N2E 2M7",
+      "website": "https://www.thefoodbank.ca/volunteer/",
+      "description": "Sort food, pack hampers, help at events, or drive deliveries to partner agencies. Sign up for only the shifts that suit you, first come, first served.",
+      "highlights": [
+        "Warehouse volunteers from age 15",
+        "Event volunteers from 16",
+        "Driver assistants from 18, drivers from 21",
+        "Groups welcome",
+        "Staff can help with hours needed for school"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-volunteer-working-centre",
+      "name": "The Working Centre: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "food",
+        "community"
+      ],
+      "cost": "free",
+      "website": "https://www.theworkingcentre.org/get-involved/volunteer/",
+      "description": "Join over 400 volunteers across more than 30 community projects, from serving meals at St. John's Kitchen to cooking at Maurita's Kitchen.",
+      "highlights": [
+        "St. John's Kitchen: daily, 8:30am to 9pm",
+        "Maurita's Kitchen: weekdays, 9am to 4pm",
+        "Email volunteer@theworkingcentre.org"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-volunteer-city",
+      "name": "City of Kitchener: Volunteer",
+      "type": "program",
+      "category": "volunteer",
+      "tags": [
+        "volunteer",
+        "free",
+        "outdoors",
+        "students"
+      ],
+      "cost": "free",
+      "website": "https://www.kitchener.ca/volunteer",
+      "description": "Help run a neighbourhood outdoor rink this winter, organize a community clean-up, or see the city's other current openings, including youth roles.",
+      "highlights": [
+        "Winter rink coordinators wanted, no experience needed",
+        "Youth opportunities listed",
+        "Community clean-ups you can organize yourself"
+      ],
+      "isRecommended": false,
+      "isFree": true,
+      "lastVerified": "2026-11-06"
     }
   ]
 }
