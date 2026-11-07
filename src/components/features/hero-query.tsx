@@ -60,7 +60,7 @@ export function HeroQuery({ cities }: { cities: { slug: string; name: string }[]
       </p>
       <button
         type="submit"
-        className="motion-press mt-5 inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 font-semibold text-[#141412] transition-transform hover:-translate-y-0.5 active:translate-y-px"
+        className="motion-press mt-5 inline-flex h-12 items-center gap-2 rounded-control bg-white px-6 font-semibold text-[#141412] transition-transform active:translate-y-px"
       >
         Go
         <Icon icon={ArrowRight} size={16} />

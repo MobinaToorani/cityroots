@@ -5,12 +5,13 @@ import { COST_LABELS, type CostBand } from "@/lib/domain/cost";
 import { cn } from "@/lib/cn";
 import { Icon } from "./icon";
 
+/** Cost as plain text. Free is the one coloured label on the site. */
 export function CostBadge({ band, className }: { band: CostBand; className?: string }) {
   return (
     <span
       className={cn(
-        "inline-flex h-6 items-center rounded-full px-2.5 text-meta font-semibold",
-        band === "free" ? "bg-free-soft text-free" : "bg-divider/70 text-text",
+        "text-meta whitespace-nowrap",
+        band === "free" ? "font-semibold text-free" : "font-medium text-text-muted",
         className,
       )}
     >
@@ -36,10 +37,7 @@ export function CategoryTag({ slug, className }: { slug: CategorySlug; className
 export function PickBadge({ className }: { className?: string }) {
   return (
     <span
-      className={cn(
-        "inline-flex h-6 items-center gap-1 rounded-full bg-pick-soft px-2.5 text-meta font-semibold text-pick",
-        className,
-      )}
+      className={cn("inline-flex items-center gap-1 text-meta font-semibold text-pick", className)}
     >
       <Icon icon={Star} size={16} fill="currentColor" />
       Local pick

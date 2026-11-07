@@ -49,3 +49,9 @@ export const TYPICAL_SPEND: Record<CostBand, number> = {
   moderate: 30,
   varies: 15,
 };
+
+/** The line under the cost badge. For free places, "$0" would only repeat the badge. */
+export function costNote(band: CostBand, priceNote: string | null): string | null {
+  if (priceNote) return priceNote;
+  return band === "free" ? null : COST_HINTS[band];
+}

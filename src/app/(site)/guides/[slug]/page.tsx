@@ -120,7 +120,7 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
             />
           </>
         )}
-        <Container className="max-w-3xl">
+        <Container className="reading">
           <p className="mb-3 text-meta font-semibold text-white/90">
             <Link href="/guides" className="quiet-link">
               Guides
@@ -130,12 +130,12 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
           <h1 className="font-display text-display font-medium tracking-tight text-white">
             {guide.title}
           </h1>
-          <ul className="mt-5 flex flex-wrap gap-2">
-            <li className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-meta font-semibold glass-strong">
-              <Icon icon={Wallet} size={16} className="text-free" />
+          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1">
+            <li className="inline-flex items-center gap-1.5 text-meta font-semibold text-white">
+              <Icon icon={Wallet} size={16} />
               {budgetLabel(guide.budget)}
             </li>
-            <li className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-meta font-semibold glass-strong">
+            <li className="inline-flex items-center gap-1.5 text-meta font-semibold text-white">
               <Icon icon={CalendarDays} size={16} />
               {SEASON_LABELS[guide.season]}
             </li>
@@ -144,7 +144,7 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
         {hero && <PhotoCredit photo={hero} className="absolute right-4 bottom-3 text-white/80" />}
       </header>
 
-      <Container className="max-w-3xl pt-10 pb-8">
+      <Container className="reading pt-8">
         <p className="text-meta text-text-muted">
           By CityRoots curators. Updated{" "}
           <time dateTime={guide.updatedAt}>{dateFormat.format(new Date(guide.updatedAt))}</time>.
@@ -154,7 +154,7 @@ export default async function GuidePage(props: PageProps<"/guides/[slug]">) {
           <Body components={{ Stop }} />
         </div>
 
-        <section aria-labelledby="next" className="mt-16 rounded-[var(--radius-card)] p-6 glass">
+        <section aria-labelledby="next" className="mt-16 rounded-card p-6 card">
           <h2 id="next" className="text-card font-semibold">
             Keep going in {city.name}
           </h2>

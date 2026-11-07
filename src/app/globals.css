@@ -5,6 +5,9 @@
  * Light values are the default; dark values follow the OS setting.
  * Text tokens are tuned to keep 4.5:1 on glass with a black photo behind it
  * (see DECISIONS.md, "Contrast on glass").
+ * Category colors share one lightness per theme, with evenly spaced hues. Green,
+ * amber, and red are kept back to mean Free, Local pick, and errors
+ * (tests/unit/palette.test.ts holds this in place).
  */
 @theme static {
   --font-*: initial;
@@ -23,28 +26,31 @@
   --color-primary-hover: #173f2c;
   --color-primary-text: #1e4d36;
   --color-accent: #3e7a56;
-  --color-free: #176b3c;
-  --color-free-soft: rgba(30, 122, 70, 0.12);
-  --color-pick: #8a5a0b;
-  --color-pick-soft: rgba(176, 116, 20, 0.12);
+  --color-free: #186b45;
+  --color-free-soft: rgba(24, 107, 69, 0.12);
+  --color-pick: #7d5e07;
+  --color-pick-soft: rgba(125, 94, 7, 0.12);
   --color-ink: #141412;
   --color-on-ink: #ffffff;
   --color-focus: #1e4d36;
   --color-danger: #a8322c;
+  --color-heart: #a8353e;
 
-  --color-cat-physical: #0e7a5f;
-  --color-cat-mental: #5e56a8;
-  --color-cat-social: #1d6fa5;
-  --color-cat-financial: #b07414;
-  --color-cat-arts: #7c4fb8;
-  --color-cat-dance-music: #c2453f;
-  --color-cat-food: #c25e1e;
-  --color-cat-cafes: #6b5f4e;
-  --color-cat-thrifting: #0e7a8a;
-  --color-cat-events: #b03e76;
+  --color-cat-physical: #017069;
+  --color-cat-mental: #5e5696;
+  --color-cat-social: #366298;
+  --color-cat-financial: #626526;
+  --color-cat-arts: #784d85;
+  --color-cat-dance-music: #944250;
+  --color-cat-food: #934829;
+  --color-cat-cafes: #785a3b;
+  --color-cat-thrifting: #1d6a81;
+  --color-cat-events: #8b446f;
 
-  --radius-card: 16px;
-  --radius-modal: 24px;
+  /* Three corners only: controls, cards, sheets. */
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --radius-modal: 16px;
 
   --shadow-glass: 0 8px 32px rgba(20, 20, 18, 0.12);
   --shadow-card: 0 1px 2px rgba(20, 20, 18, 0.05);
@@ -52,9 +58,12 @@
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* Display is for titles on a photo. Every other page opens with page size. */
   --text-display: clamp(2.5rem, 1.9rem + 2.6vw, 4rem);
   --text-display--line-height: 1.1;
-  --text-section: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  --text-page: clamp(2rem, 1.75rem + 1.2vw, 2.75rem);
+  --text-page--line-height: 1.12;
+  --text-section: clamp(1.5rem, 1.35rem + 0.7vw, 1.875rem);
   --text-section--line-height: 1.2;
   --text-card: 1.0625rem;
   --text-card--line-height: 1.35;
@@ -76,14 +85,25 @@
     --color-text-muted: #c4c0b7;
     --color-primary-text: #8fcba7;
     --color-accent: #8fcba7;
-    --color-free: #6fd39a;
-    --color-free-soft: rgba(111, 211, 154, 0.14);
-    --color-pick: #f0c36b;
-    --color-pick-soft: rgba(240, 195, 107, 0.14);
+    --color-free: #76d19e;
+    --color-free-soft: rgba(118, 209, 158, 0.14);
+    --color-pick: #edc56e;
+    --color-pick-soft: rgba(237, 197, 110, 0.14);
     --color-ink: #edebe6;
     --color-on-ink: #0c120e;
     --color-focus: #8fcba7;
     --color-danger: #f08a80;
+    --color-heart: #fb9797;
+    --color-cat-physical: #7ecfc7;
+    --color-cat-mental: #bab4f8;
+    --color-cat-social: #94c1fa;
+    --color-cat-financial: #bec387;
+    --color-cat-arts: #d8abe6;
+    --color-cat-dance-music: #f9a1ac;
+    --color-cat-food: #f7a788;
+    --color-cat-cafes: #d7b797;
+    --color-cat-thrifting: #86c9e1;
+    --color-cat-events: #eea2cd;
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
     --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-lift: 0 14px 40px rgba(0, 0, 0, 0.5);
@@ -111,8 +131,7 @@
   }
 
   h1,
-  h2,
-  h3 {
+  h2 {
     text-wrap: balance;
   }
 
@@ -137,6 +156,32 @@
   ::selection {
     background: var(--color-free-soft);
   }
+}
+
+/* The one page width. The header, footer, and every page share these edges. */
+@utility page-frame {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (min-width: 40rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Long text and forms keep a readable measure, still starting at the page's left edge. */
+@utility reading {
+  & > * {
+    max-width: 52rem;
+  }
+}
+
+@utility page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-page);
+  line-height: var(--text-page--line-height);
+  font-weight: 500;
+  letter-spacing: -0.025em;
 }
 
 /* Frosted glass. Use over photography or a colour field, never flat emptiness. */
@@ -254,6 +299,50 @@
 
 @media (prefers-reduced-motion: reduce) {
   .palette[open] {
+    animation: none;
+  }
+}
+
+/* Place preview: a sheet from the bottom on phones, a side panel from md up. */
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.place-preview {
+  width: 100%;
+  max-width: 100%;
+  max-height: 88dvh;
+  margin: auto 0 0;
+  border-radius: var(--radius-modal) var(--radius-modal) 0 0;
+}
+
+.place-preview[open] {
+  animation: sheet-up 220ms var(--ease-out-expo) both;
+}
+
+@media (min-width: 48rem) {
+  .place-preview {
+    width: 460px;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0 0 0 auto;
+    border-radius: var(--radius-modal) 0 0 var(--radius-modal);
+  }
+
+  .place-preview[open] {
+    animation-name: panel-in;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .place-preview[open] {
     animation: none;
   }
 }

@@ -23,8 +23,8 @@ export default async function ClaimPage(props: PageProps<"/business/claim/[place
   const match = emailMatchesWebsite(user.email, place.sourceUrl);
 
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-2xl">
+    <div className="pt-8">
+      <Container className="reading">
         {query.sent || pending ? (
           <EmptyState
             icon={CircleCheck}
@@ -56,7 +56,7 @@ export default async function ClaimPage(props: PageProps<"/business/claim/[place
         ) : (
           <>
             <p className="text-meta font-semibold text-primary-text">Claim a listing</p>
-            <h1 className="mt-2 font-display text-section font-medium tracking-tight">
+            <h1 className="mt-2 page-title">
               {place.name}, {place.cityName}
             </h1>
             <Card className="mt-5 p-4 text-body">

@@ -38,7 +38,7 @@ export default async function ClaimsPage(props: PageProps<"/admin/claims">) {
 
   return (
     <>
-      <h1 className="text-section font-semibold tracking-tight">Listing claims</h1>
+      <h1 className="page-title">Listing claims</h1>
       <p className="mt-2 text-body text-text-muted">
         Confirm the person runs the place before verifying: a matching email domain, or a call to
         the number on the listing. Verifying never changes ranking or Picks.

@@ -4,18 +4,30 @@
   "province": "Ontario",
   "country": "Canada",
   "tagline": "Waterfront trails, independent culture, and a library system that punches above its weight",
-  "heroDescription": "Oakville sits on Lake Ontario between Toronto and Hamilton — a town that takes its parks, arts, and public spaces seriously. Bronte Creek Provincial Park, the Oakville waterfront trail, two excellent art galleries, and a genuinely strong public library system make it one of the most resource-rich communities in the GTA for people who know where to look.",
+  "heroDescription": "Oakville sits on Lake Ontario between Toronto and Hamilton — a town that takes its parks, arts, and public spaces seriously. Bronte Creek Provincial Park, the Oakville waterfront trail, two public art galleries, and a strong library system are all free to use.",
   "lat": 43.4675,
   "lng": -79.6877,
-  "contributors": ["CityRoots Community"],
-  "lastUpdated": "2026-06-06",
+  "contributors": [
+    "CityRoots Community",
+    "Public library calendars",
+    "Statistics Canada Open Licence"
+  ],
+  "lastUpdated": "2026-11-06",
   "places": [
     {
       "id": "oakville-bronte-creek-park",
       "name": "Bronte Creek Provincial Park",
       "type": "place",
       "category": "physical",
-      "tags": ["provincial park", "trails", "nature", "outdoors", "camping", "family", "swimming"],
+      "tags": [
+        "provincial park",
+        "trails",
+        "nature",
+        "outdoors",
+        "camping",
+        "family",
+        "swimming"
+      ],
       "cost": "low",
       "costNote": "Vehicle permit $22/day; pedestrians and cyclists free",
       "address": "1219 Burloak Dr, Oakville, ON L6M 4J3",
@@ -23,8 +35,7 @@
       "lat": 43.4329,
       "lng": -79.7547,
       "website": "https://www.ontarioparks.ca/park/brontecreek",
-      "hours": "Open year-round; gates close at 10pm",
-      "description": "A full Ontario provincial park within Oakville's borders — rare for a GTA suburb. Twelve kilometres of trails through deep ravine forest, a heritage homestead, splash pad, outdoor pool, picnic areas, and overnight camping. The creek valley makes it feel genuinely wild despite the surrounding suburbs.",
+      "description": "A full Ontario provincial park within Oakville's borders — rare for a GTA suburb. Twelve kilometres of trails through deep ravine forest, a heritage homestead, splash pad, outdoor pool, picnic areas, and overnight camping. The creek valley makes it feel wild despite the surrounding suburbs.",
       "highlights": [
         "12km of trails through ravine, forest, and meadow",
         "Outdoor pool and splash pad open in summer",
@@ -35,22 +46,30 @@
       "why": "This is a full provincial park inside a suburb. In peak summer it gets busy — go on a weekday morning for the trails at their best.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-05-30"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-waterfront-trail",
       "name": "Oakville Waterfront Trail",
       "type": "place",
       "category": "physical",
-      "tags": ["waterfront", "trail", "lake", "walking", "cycling", "free", "year-round"],
+      "tags": [
+        "waterfront",
+        "trail",
+        "lake",
+        "walking",
+        "cycling",
+        "free",
+        "year-round"
+      ],
       "cost": "free",
       "address": "Lakeside Park, Navy St, Oakville, ON L6J 2Y7",
       "neighborhood": "Downtown Oakville",
       "lat": 43.4596,
       "lng": -79.6814,
-      "website": "https://www.oakville.ca/parks-trails",
+      "website": "https://www.oakville.ca/parks-recreation-culture/parks-gardens-trails/trails/",
       "hours": "Open year-round",
-      "description": "Oakville's signature public amenity — a paved multi-use trail running along the Lake Ontario waterfront through downtown and Bronte Harbour. Flat, scenic, and completely free. Best in the morning when the harbour is quiet.",
+      "description": "A paved multi-use trail running along the Lake Ontario waterfront through downtown and Bronte Harbour. Flat, scenic, and completely free. Best in the morning when the harbour is quiet.",
       "highlights": [
         "Paved lakefront trail from Bronte Harbour to Coronation Park",
         "Views of Lake Ontario throughout",
@@ -61,20 +80,28 @@
       "why": "Early morning along the Oakville waterfront is one of the best free experiences in Halton Region. Go before 9am.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-coronation-park",
       "name": "Coronation Park",
       "type": "place",
       "category": "physical",
-      "tags": ["park", "lake", "outdoors", "free", "picnic", "trail", "year-round"],
+      "tags": [
+        "park",
+        "lake",
+        "outdoors",
+        "free",
+        "picnic",
+        "trail",
+        "year-round"
+      ],
       "cost": "free",
       "address": "2 West Shore Blvd, Oakville, ON L6K 3W4",
       "neighborhood": "West Oakville",
       "lat": 43.4491,
       "lng": -79.7108,
-      "website": "https://www.oakville.ca/parks-trails",
+      "website": "https://www.oakville.ca/parks-recreation-culture/parks-gardens-trails/parks/",
       "hours": "Open year-round",
       "description": "A large lakefront park in west Oakville with mature tree cover, picnic areas, a beach, boat launch, and water's edge walking paths. Quieter than the downtown waterfront and often overlooked by visitors.",
       "highlights": [
@@ -86,22 +113,29 @@
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-public-library",
       "name": "Oakville Public Library — Central Branch",
       "type": "resource",
       "category": "mental",
-      "tags": ["free", "library", "programs", "quiet", "wifi", "digital", "study"],
+      "tags": [
+        "free",
+        "library",
+        "programs",
+        "quiet",
+        "wifi",
+        "digital",
+        "study"
+      ],
       "cost": "free",
       "address": "120 Navy St, Oakville, ON L6J 2Z4",
       "neighborhood": "Downtown Oakville",
       "lat": 43.4588,
       "lng": -79.6758,
       "website": "https://www.opl.ca",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–6pm, Sun 1pm–5pm",
-      "description": "Oakville's central library branch is genuinely excellent — a spacious, modern facility with a strong programming calendar, digital resources, comfortable study areas, and a children's section that's among the best in Halton. Free membership for all Oakville residents.",
+      "description": "Oakville's central library branch is a spacious, modern facility with a strong programming calendar, digital resources, comfortable study areas, and a children's section that's among the best in Halton. Free membership for all Oakville residents.",
       "highlights": [
         "Free library card with full digital access — Libby, Kanopy, LinkedIn Learning",
         "Strong adult and youth programming calendar",
@@ -112,21 +146,27 @@
       "why": "The Oakville library's programming calendar is unusually strong for a town this size. Check the events page before assuming you have to pay for a workshop.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-25"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-galleries",
       "name": "Oakville Galleries",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["art", "gallery", "free", "contemporary", "exhibitions", "community"],
+      "tags": [
+        "art",
+        "gallery",
+        "free",
+        "contemporary",
+        "exhibitions",
+        "community"
+      ],
       "cost": "free",
       "address": "1306 Lakeshore Rd E, Oakville, ON L6J 1L6",
       "neighborhood": "Gairloch Gardens",
       "lat": 43.4569,
       "lng": -79.6593,
       "website": "https://www.oakvillegalleries.com",
-      "hours": "Wed–Sun 12pm–5pm; closed Mon–Tue",
       "description": "Two gallery spaces presenting Canadian and international contemporary art — one in the historic Gairloch Gardens estate, one in Centennial Square. Free admission, thoughtful curatorial program, and a beautiful lakeside setting make this one of the best free cultural experiences in Halton.",
       "highlights": [
         "Two exhibition spaces in distinct heritage and contemporary settings",
@@ -135,17 +175,24 @@
         "Gairloch estate setting with lakeside gardens",
         "Artist talks and programming throughout the year"
       ],
-      "why": "Free, unhurried, genuinely good art — and the Gairloch Gardens location is beautiful in summer.",
+      "why": "Free, unhurried, good art — and the Gairloch Gardens location is beautiful in summer.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-centre-performing-arts",
       "name": "Oakville Centre for the Performing Arts",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["theatre", "music", "dance", "community", "performances", "arts"],
+      "tags": [
+        "theatre",
+        "music",
+        "dance",
+        "community",
+        "performances",
+        "arts"
+      ],
       "cost": "moderate",
       "costNote": "Tickets $25–$80 depending on show; community pricing available",
       "address": "130 Navy St, Oakville, ON L6J 2Z4",
@@ -153,7 +200,6 @@
       "lat": 43.4593,
       "lng": -79.6753,
       "website": "https://www.oakvillecentre.ca",
-      "hours": "Box office Tue–Sat 12pm–6pm and on show nights",
       "description": "Oakville's main performing arts venue presenting professional theatre, dance, music, and comedy throughout the season. Adjacent to the central library in the downtown core.",
       "highlights": [
         "Professional touring productions across theatre, dance, and music",
@@ -164,22 +210,29 @@
       ],
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-sixteen-mile-sports",
       "name": "Sixteen Mile Sports Complex",
       "type": "place",
       "category": "physical",
-      "tags": ["fitness", "pool", "ice", "gym", "community", "programs", "family"],
+      "tags": [
+        "fitness",
+        "pool",
+        "ice",
+        "gym",
+        "community",
+        "programs",
+        "family"
+      ],
       "cost": "low",
       "costNote": "Drop-in from $4–$7; Oakville recreation passes available",
       "address": "3070 Neyagawa Blvd, Oakville, ON L6H 7L9",
       "neighborhood": "Joshua Creek",
       "lat": 43.4786,
       "lng": -79.7395,
-      "website": "https://www.oakville.ca/recreation",
-      "hours": "Mon–Fri 5:30am–10:30pm, Sat–Sun 7am–9pm",
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/community-centres/",
       "description": "Oakville's largest recreation complex — two pools, four NHL ice pads, a full fitness centre, gymnasiums, and a track. One of the better-equipped public recreation facilities in Halton Region.",
       "highlights": [
         "Two pools: lap and leisure with waterslide",
@@ -190,93 +243,21 @@
       ],
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-ymca",
-      "name": "YMCA of Hamilton/Burlington/Brantford — Oakville",
-      "type": "place",
-      "category": "physical",
-      "tags": ["fitness", "pool", "gym", "community", "affordable", "programs", "family"],
-      "cost": "moderate",
-      "costNote": "Membership from $50/month; financial assistance available through Sharing the Y",
-      "address": "410 Rebecca St, Oakville, ON L6K 1K5",
-      "neighborhood": "Central Oakville",
-      "lat": 43.4564,
-      "lng": -79.6893,
-      "website": "https://ymcahbb.ca/locations/oakville",
-      "hours": "Mon–Fri 5:30am–10pm, Sat–Sun 7am–8pm",
-      "description": "A well-equipped YMCA in central Oakville with pool, fitness centre, and group fitness classes. The Sharing the Y program provides subsidized access for households that can't afford full membership — no one is turned away for inability to pay.",
-      "highlights": [
-        "Indoor pool with lap and recreational swims",
-        "Fitness centre and group fitness classes",
-        "Youth and family programming",
-        "Sharing the Y financial assistance — sliding-scale fees",
-        "Central Oakville location accessible by transit"
-      ],
-      "why": "If cost is a barrier, the Sharing the Y program is genuine and straightforward to apply for.",
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-salvation-army-thrift",
-      "name": "Salvation Army Thrift Store — Oakville",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "affordable", "clothing", "housewares"],
-      "cost": "low",
-      "costNote": "Clothing from $2; housewares from $1",
-      "address": "399 Kerr St, Oakville, ON L6K 3B6",
-      "neighborhood": "Kerr Village",
-      "lat": 43.4516,
-      "lng": -79.6918,
-      "website": "https://www.thriftstore.ca",
-      "hours": "Mon–Sat 9am–8pm, Sun 11am–6pm",
-      "description": "A well-located Salvation Army thrift store in Kerr Village — the independent shopping district of Oakville. Good clothing selection, housewares, and books at low prices.",
-      "highlights": [
-        "Large clothing section with regular new arrivals",
-        "Housewares, books, and décor",
-        "Colour-tag sale system for extra savings",
-        "Kerr Village location — walkable with independent restaurants nearby",
-        "Proceeds support Salvation Army community programs"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-value-village",
-      "name": "Value Village — Oakville",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "clothing", "affordable", "vintage", "housewares"],
-      "cost": "low",
-      "costNote": "Clothing $5–$20; housewares from $2",
-      "address": "2501 Third Line, Oakville, ON L6M 5A9",
-      "neighborhood": "Palermo",
-      "lat": 43.4823,
-      "lng": -79.7612,
-      "website": "https://www.valuevillage.com",
-      "hours": "Mon–Sat 9am–9pm, Sun 10am–8pm",
-      "description": "A large Value Village in north Oakville with a well-stocked clothing section and frequent new arrivals. Tag colour sale days offer additional discounts.",
-      "highlights": [
-        "Large clothing section with strong turnover",
-        "Housewares, décor, and furniture",
-        "Tag colour sale days",
-        "Accessible by car with ample parking",
-        "Good vintage and secondhand finds for dedicated thrifters"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-kerr-village",
       "name": "Kerr Village",
       "type": "place",
       "category": "social",
-      "tags": ["neighbourhood", "independent", "food", "shops", "community", "walkable"],
+      "tags": [
+        "neighbourhood",
+        "independent",
+        "food",
+        "shops",
+        "community",
+        "walkable"
+      ],
       "cost": "free",
       "costNote": "Free to explore; food and shopping at own cost",
       "address": "Kerr St, Oakville, ON L6K 3B6",
@@ -284,25 +265,32 @@
       "lat": 43.4522,
       "lng": -79.6919,
       "website": "https://www.kerrvillage.ca",
-      "description": "Oakville's independent main street district — a compact neighbourhood of locally owned restaurants, shops, and services that feels genuinely distinct from the chain-heavy mall strips. Best explored on foot over a couple of hours.",
+      "description": "Oakville's independent main street district — a compact neighbourhood of locally owned restaurants, shops, and services that feels distinct from the chain-heavy mall strips. Best explored on foot over a couple of hours.",
       "highlights": [
         "Dense concentration of independent restaurants and cafes",
         "Local shops and specialty food stores",
         "Near the waterfront — easy to combine with a lake walk",
         "Farmers' market and community events throughout the summer",
-        "No chain stores — genuinely local"
+        "No chain stores — local"
       ],
       "why": "If you're in Oakville, Kerr Village is worth the trip over the downtown waterfront for food — the independent restaurants are a cut above.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-downtown-farmers-market",
       "name": "Downtown Oakville Farmers' Market",
       "type": "event",
       "category": "food-culture",
-      "tags": ["farmers market", "local food", "seasonal", "thursday", "free", "community"],
+      "tags": [
+        "farmers market",
+        "local food",
+        "seasonal",
+        "thursday",
+        "free",
+        "community"
+      ],
       "cost": "free",
       "costNote": "Free to attend; food and produce at vendor prices",
       "address": "Centennial Square, 120 Navy St, Oakville, ON",
@@ -310,7 +298,6 @@
       "lat": 43.459,
       "lng": -79.6757,
       "website": "https://www.oakvillefarmersmarket.ca",
-      "hours": "Thursdays 8am–1pm, May through October",
       "description": "Oakville's main farmers' market, held Thursday mornings in Centennial Square in the heart of downtown. Local produce, baked goods, cheese, honey, and artisan vendors from Halton Region farms.",
       "highlights": [
         "Local produce direct from Halton Region farms",
@@ -324,73 +311,31 @@
       "isFree": true,
       "seasonal": true,
       "seasonNote": "Thursdays May through October",
-      "lastVerified": "2026-05-28"
-    },
-    {
-      "id": "oakville-community-dance",
-      "name": "Oakville School of Dance",
-      "type": "place",
-      "category": "dance-music",
-      "tags": ["dance", "classes", "community", "adult", "kids", "beginners", "ballet", "jazz"],
-      "cost": "moderate",
-      "costNote": "Classes from $100–$180 per session depending on program",
-      "address": "1011 Upper Middle Rd E, Oakville, ON L6H 4L2",
-      "neighborhood": "River Oaks",
-      "lat": 43.4855,
-      "lng": -79.6987,
-      "website": "https://www.oakvillescathofdance.com",
-      "hours": "Mon–Fri 3:30pm–9pm, Sat 9am–5pm",
-      "description": "A well-established community dance school offering classes across ballet, jazz, contemporary, and hip hop for all ages. Adult beginner programs run each fall and winter session.",
-      "highlights": [
-        "Programs from age 3 through adult",
-        "Adult beginner classes with no prior experience required",
-        "RAD-certified instruction in classical ballet",
-        "Annual performance opportunity for all students",
-        "Trial classes available before committing to a session"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-music-school",
-      "name": "Oakville Music School",
-      "type": "place",
-      "category": "dance-music",
-      "tags": ["music", "lessons", "piano", "guitar", "voice", "community", "adult", "kids"],
-      "cost": "moderate",
-      "costNote": "Lessons from $90–$140/month (30-min weekly lessons)",
-      "address": "1174 Invicta Dr, Oakville, ON L6H 4M2",
-      "neighborhood": "River Oaks",
-      "lat": 43.486,
-      "lng": -79.7052,
-      "website": "https://www.oakvillemusicschool.ca",
-      "description": "A community music school offering private and group lessons in piano, guitar, voice, violin, and drums. Adult beginner programs available year-round.",
-      "highlights": [
-        "Private and group lessons in multiple instruments",
-        "Adult beginner programs — no prior experience required",
-        "Piano, guitar, voice, violin, drums, and more",
-        "Flexible scheduling including evening and weekend lessons",
-        "Annual student recitals for performance experience"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-sixteen-mile-creek-trail",
       "name": "Sixteen Mile Creek Trail",
       "type": "place",
       "category": "physical",
-      "tags": ["outdoors", "trails", "nature", "free", "walking", "cycling", "creek", "year-round"],
+      "tags": [
+        "outdoors",
+        "trails",
+        "nature",
+        "free",
+        "walking",
+        "cycling",
+        "creek",
+        "year-round"
+      ],
       "cost": "free",
       "address": "Sixteen Mile Creek Trail, Oakville, ON",
       "neighborhood": "Multiple — central to east Oakville",
       "lat": 43.4653,
       "lng": -79.7135,
-      "website": "https://www.oakville.ca/parks-trails",
+      "website": "https://www.oakville.ca/parks-recreation-culture/parks-gardens-trails/trails/",
       "hours": "Open year-round",
-      "description": "A linear trail network following Sixteen Mile Creek through forested ravines in central Oakville — one of the most scenic free trails in Halton Region. Connects multiple neighbourhoods and parks.",
+      "description": "A linear trail network following Sixteen Mile Creek through forested ravines in central Oakville. Connects multiple neighbourhoods and parks.",
       "highlights": [
         "Forested ravine trail through central Oakville",
         "Multi-use — walking, running, and cycling",
@@ -400,88 +345,27 @@
       ],
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-28"
-    },
-    {
-      "id": "oakville-halton-employment",
-      "name": "Halton Employment Services — Oakville",
-      "type": "resource",
-      "category": "financial",
-      "tags": ["employment", "free", "resume", "career", "newcomer", "programs"],
-      "cost": "free",
-      "address": "3425 Harvester Rd, Burlington, ON (serves Oakville)",
-      "neighborhood": "Citywide",
-      "website": "https://www.halton.ca/For-Residents/Employment-and-Business/Employment-Services",
-      "hours": "Mon–Fri 8:30am–4:30pm",
-      "description": "Free employment support services for Oakville and Halton Region residents — resume and cover letter help, job search coaching, interview preparation, and connections to local employers. Newcomer-specific support available.",
-      "highlights": [
-        "Free one-on-one resume and career coaching",
-        "Job search workshops and networking events",
-        "Newcomer employment programs",
-        "Local employer connections and job board",
-        "Free skills assessments and labour market information"
-      ],
-      "why": "One of the most underused free resources in Halton — the one-on-one coaching is more useful than any paid career service.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-halton-financial-support",
-      "name": "Halton Region Financial Support Programs",
-      "type": "resource",
-      "category": "financial",
-      "tags": ["financial assistance", "free", "benefits", "housing", "support", "emergency"],
-      "cost": "free",
-      "address": "1151 Bronte Rd, Oakville, ON L6M 3L1",
-      "neighborhood": "Bronte",
-      "website": "https://www.halton.ca/For-Residents/Social-and-Community-Services",
-      "hours": "Mon–Fri 8:30am–4:30pm",
-      "description": "Halton Region's hub for Ontario Works, emergency financial assistance, housing support, and connections to community services for Oakville residents in financial hardship.",
-      "highlights": [
-        "Ontario Works income and employment support",
-        "Emergency assistance for housing, food, and utilities",
-        "Housing support and rental subsidy programs",
-        "Connections to food banks and community resources",
-        "Newcomer and family-specific programs"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-newcomer-centre",
-      "name": "Oakville Newcomer Connections",
-      "type": "program",
-      "category": "social",
-      "tags": ["newcomer", "settlement", "free", "language", "community", "support"],
-      "cost": "free",
-      "address": "Various locations across Oakville",
-      "neighborhood": "Citywide",
-      "website": "https://www.oakville.ca/residents/new-to-oakville.html",
-      "description": "Free settlement and integration support for newcomers to Oakville — English language classes, system navigation, community connections, and employment support through local agencies and the Town of Oakville.",
-      "highlights": [
-        "Free English language programs and conversation circles",
-        "Orientation to Canadian systems — healthcare, schools, transit",
-        "Community connections and peer support groups",
-        "Youth newcomer programs",
-        "Employment and credential recognition support"
-      ],
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-recreation-programs",
       "name": "Town of Oakville Recreation Programs",
       "type": "program",
       "category": "physical",
-      "tags": ["programs", "swimming", "skating", "fitness", "affordable", "family", "seniors"],
+      "tags": [
+        "programs",
+        "swimming",
+        "skating",
+        "fitness",
+        "affordable",
+        "family",
+        "seniors"
+      ],
       "cost": "low",
       "costNote": "Programs from $25/session; financial assistance through Access Oakville",
       "address": "Multiple facilities across Oakville",
       "neighborhood": "Citywide",
-      "website": "https://www.oakville.ca/recreation",
+      "website": "https://www.oakville.ca/parks-recreation-culture/",
       "description": "Town of Oakville recreation programs running across multiple facilities — swimming lessons, skating, fitness, arts, and senior programs. The Access Oakville program provides subsidized access for qualifying residents.",
       "highlights": [
         "Swimming lessons and public swims at multiple pools",
@@ -493,172 +377,7 @@
       "why": "Apply for Access Oakville before registering — it can reduce program fees significantly for eligible residents.",
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-cafe-espresso",
-      "name": "Independent Cafes — Downtown Oakville",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["cafe", "coffee", "independent", "quiet", "work", "wifi", "waterfront"],
-      "cost": "low",
-      "costNote": "Coffee $3–$6; light food $7–$14",
-      "address": "Lakeshore Rd E, Downtown Oakville, ON",
-      "neighborhood": "Downtown Oakville",
-      "lat": 43.4585,
-      "lng": -79.6767,
-      "description": "Downtown Oakville's Lakeshore Road has a handful of independent cafes within walking distance of the waterfront and galleries — quieter and more considered than chain options, with comfortable space for reading or working.",
-      "highlights": [
-        "Independent, locally owned — not chains",
-        "Comfortable seating and working-friendly atmosphere",
-        "Walking distance to Oakville Galleries and waterfront trail",
-        "Good for a longer stay without pressure to turn tables",
-        "Quieter on weekday mornings"
-      ],
-      "why": "Combine a morning coffee in downtown Oakville with the farmers' market (Thursdays) and the galleries — all in a 10-minute walk.",
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-mental-health-programs",
-      "name": "Halton Community Mental Health Programs",
-      "type": "resource",
-      "category": "mental",
-      "tags": ["mental health", "free", "programs", "support", "community", "wellness"],
-      "cost": "free",
-      "address": "Oakville, ON (multiple locations)",
-      "neighborhood": "Citywide",
-      "website": "https://www.cmha-yr.on.ca",
-      "description": "Free community mental health programs for Oakville and Halton residents — group programs, peer support, self-management workshops, and mental health navigation through CMHA Halton Region.",
-      "highlights": [
-        "Free group mental health programs",
-        "Peer support and recovery-focused programming",
-        "Mental health navigation and system connections",
-        "Programs for youth, adults, and older adults",
-        "No referral required for most programs"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-ribfest",
-      "name": "Oakville Ribfest",
-      "type": "event",
-      "category": "events",
-      "tags": ["festival", "free", "summer", "food", "community", "annual", "live music"],
-      "cost": "free",
-      "costNote": "Free admission; food at vendor prices",
-      "address": "Coronation Park, 2 West Shore Blvd, Oakville, ON",
-      "neighborhood": "West Oakville",
-      "lat": 43.4491,
-      "lng": -79.7108,
-      "website": "https://www.oakvilleribfest.ca",
-      "hours": "Late June/early July — check website for dates",
-      "description": "One of the largest free community festivals in Halton Region — three days of live music, food, and community events at Coronation Park. Free admission, lakefront setting, and draws tens of thousands over the long weekend.",
-      "highlights": [
-        "Free admission throughout",
-        "Live music across multiple stages",
-        "Lakefront park setting at Coronation Park",
-        "Community organizations and family activities",
-        "One of Halton's most attended annual events"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual — late June or early July long weekend",
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-community-garden",
-      "name": "Oakville Community Gardens",
-      "type": "place",
-      "category": "food-culture",
-      "tags": ["community garden", "growing", "food", "social", "free", "outdoor"],
-      "cost": "free",
-      "costNote": "Free to visit; plot rental from $40/season for plot holders",
-      "address": "Multiple locations across Oakville",
-      "neighborhood": "Citywide",
-      "website": "https://www.oakville.ca/residents/parks/community-gardens.html",
-      "description": "A network of community gardens across Oakville — open to visit and observe, with plot rentals available for residents who want to grow their own food. The gardens are social spaces as much as agricultural ones.",
-      "highlights": [
-        "Multiple locations across Oakville neighbourhoods",
-        "Open to visit and walk through",
-        "Affordable plot rental for residents who want to grow food",
-        "Community gathering and social space",
-        "Connects residents with local food growing"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "oakville-bouldering-gym",
-      "name": "Stone Factory Climbing — Oakville",
-      "type": "place",
-      "category": "physical",
-      "tags": [
-        "bouldering",
-        "climbing",
-        "fitness",
-        "beginner friendly",
-        "social",
-        "vibe check",
-        "local favourite"
-      ],
-      "cost": "moderate",
-      "costNote": "Day pass ~$22; shoe rental $5; monthly membership ~$65",
-      "address": "North Oakville industrial area, Oakville, ON",
-      "neighborhood": "North Oakville",
-      "lat": 43.4961,
-      "lng": -79.7244,
-      "hours": "Mon–Fri 6am–11pm, Sat–Sun 8am–10pm",
-      "description": "An indoor bouldering gym in Oakville that's attracted a loyal community of climbers ranging from total beginners to competitive athletes. The social atmosphere is the main draw — people here genuinely want to see you succeed on a problem.",
-      "highlights": [
-        "Bouldering walls — all grades from total beginner to advanced",
-        "Intro lesson included with first visit",
-        "Routes are regularly reset — always something new",
-        "Community socials and comp nights a few times a year",
-        "Open long hours — works before or after a standard work day"
-      ],
-      "why": "Oakville needed a gym like this. The community vibe here is the best part — complete strangers will spend 20 minutes helping you figure out a problem. Genuinely the most social fitness space in town.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "oakville-kerr-village-vintage",
-      "name": "Kerr Village Vintage & Indie Shopping",
-      "type": "place",
-      "category": "thrifting",
-      "tags": [
-        "vintage",
-        "indie",
-        "thrift",
-        "secondhand",
-        "local favourite",
-        "aesthetic",
-        "walkable"
-      ],
-      "cost": "low",
-      "costNote": "Items $10–$60 depending on shop and piece",
-      "address": "Kerr St, Oakville, ON L6K",
-      "neighborhood": "Kerr Village",
-      "lat": 43.4522,
-      "lng": -79.6919,
-      "hours": "Most shops Tue–Sun 11am–6pm",
-      "description": "Kerr Village has a small but solid concentration of independent vintage and secondhand shops mixed in with the restaurants and cafés. Not a huge selection, but curated — each shop has a personality and the owners know their inventory. Best as part of a Kerr Village afternoon.",
-      "highlights": [
-        "Small selection of curated vintage mixed with regular thrift",
-        "Distinct shops with different aesthetics — browse a few",
-        "Walkable cluster — no need to drive between stops",
-        "Combines perfectly with coffee and a lake walk",
-        "Salvation Army on Kerr St for bulk thrift when you want volume"
-      ],
-      "why": "Kerr Village vintage shops are the kind of places where you don't find something every visit, but when you do it's good. The neighbourhood walk is worth it regardless.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "oakville-bronte-harbour-aesthetic",
@@ -680,9 +399,9 @@
       "lat": 43.4062,
       "lng": -79.7217,
       "hours": "Open year-round",
-      "description": "Bronte Harbour is one of the most photogenic spots in Halton Region — a working harbour with sailboats, a lighthouse, a boardwalk, and Lake Ontario views. Sunrise here is legitimately stunning and costs nothing. The harbour-side path is peaceful enough that you'll question why you ever pay for a wellness retreat.",
+      "description": "Bronte Harbour is a working harbour with sailboats, a lighthouse, a boardwalk, and Lake Ontario views. Go for sunrise. It costs nothing. The harbour-side path is peaceful enough that you'll question why you ever pay for a wellness retreat.",
       "highlights": [
-        "Working harbour with sailboats and a lighthouse — very photogenic",
+        "Working harbour with sailboats and a lighthouse",
         "Sunrise and golden hour light here is exceptional",
         "Boardwalk along the water's edge",
         "Connects to the Waterfront Trail east and west",
@@ -691,172 +410,1925 @@
       "why": "Bronte Harbour at golden hour looks like a postcard and it's completely free. Go at 6am on a summer morning and you'll have the boardwalk almost to yourself. Bring a camera.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-11-06",
+      "website": "https://www.oakville.ca/parks-recreation-culture/parks-gardens-trails/harbours/"
     },
     {
-      "id": "oakville-indie-bookshop",
-      "name": "The Book Shelf — Independent Books",
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "oakville-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "oakville-kids-help-phone",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "oakville-connexontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "211 Ontario",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "oakville-211-ontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Community Volunteer Income Tax Program",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "oakville-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "ROCK Crisis Line",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://rockonline.ca",
+      "phone": "905-878-9785",
+      "description": "Reach Out Centre for Kids runs a crisis line for children and youth, 17 and under, in Halton.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "oakville-rock-crisis-line",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Food for Life",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://foodforlife.ca",
+      "description": "Moves fresh food to neighbours and community programs across Halton and Hamilton.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "oakville-food-for-life",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Oakville Museum",
       "type": "place",
-      "category": "cafes-spaces",
-      "tags": [
-        "bookshop",
-        "indie",
-        "local favourite",
-        "aesthetic",
-        "hidden gem",
-        "cozy",
-        "slow morning"
-      ],
-      "cost": "low",
-      "costNote": "Free to browse; books $15–$35",
-      "address": "Lakeshore Rd E, Downtown Oakville, ON",
-      "neighborhood": "Downtown Oakville",
-      "lat": 43.4589,
-      "lng": -79.6765,
-      "hours": "Mon–Sat 10am–6pm, Sun 12pm–5pm",
-      "description": "A small independent bookshop in downtown Oakville with a carefully curated selection, genuine staff recommendations (actual stickers on books with actual opinions), and the kind of quiet that makes you want to stay for an hour. The staff picks section alone is better than most bestseller lists.",
-      "highlights": [
-        "Curated selection — not trying to stock everything, just good things",
-        "Staff picks with handwritten notes that are actually worth reading",
-        "Local and Canadian authors get prominent placement",
-        "Quiet and unhurried — not a tourist experience",
-        "Walking distance from the galleries, waterfront, and farmers market"
-      ],
-      "why": "Independent bookshops are rare and this one is genuinely good. The staff picks section has led me to more books I loved than any algorithm. Worth the trip even if you're buying online later.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
+      "category": "arts",
+      "cost": "free",
+      "website": "https://www.oakville.ca/parks-recreation-culture/arts-culture/oakville-museum/",
+      "address": "8 Navy St, Oakville",
+      "description": "The Town's museum at Erchless Estate, on the harbour.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "oakville-oakville-museum",
+      "lastVerified": "2026-11-06",
+      "costNote": "Admission is by donation.",
+      "hours": "Tue-Sun 1pm-4:30pm; closed Mon"
     },
     {
-      "id": "oakville-outdoor-cinema",
-      "name": "Movies Under the Stars — Oakville",
-      "type": "event",
-      "category": "events",
+      "id": "oakville-facility-central-library",
+      "name": "Central Library",
+      "type": "place",
+      "category": "cafes",
       "tags": [
-        "outdoor cinema",
-        "free",
-        "summer",
-        "community",
-        "date spot",
-        "aesthetic",
-        "tiktok spot"
+        "library or archives"
       ],
       "cost": "free",
-      "costNote": "Free admission; bring your own snacks or buy from vendors",
-      "address": "Centennial Square / Coronation Park, Oakville, ON",
-      "neighborhood": "Downtown Oakville / West Oakville",
-      "lat": 43.4591,
-      "lng": -79.6757,
-      "description": "Seasonal outdoor movie screenings hosted by the Town of Oakville at Centennial Square or Coronation Park. Bring a blanket, bring snacks, watch a movie under the sky. Free admission and consistently good film selections.",
-      "highlights": [
-        "Free outdoor film screenings on summer evenings",
-        "Mix of recent films and classics depending on the season",
-        "Bring a blanket and stake out your spot early",
-        "Families and couples mix freely — welcoming atmosphere",
-        "Sunset start time — golden hour into film is the full experience"
-      ],
-      "why": "Outdoor cinema is one of those things that sounds basic but is genuinely lovely in practice. Oakville's version is well-organized and the park settings work perfectly. Good first date format.",
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Summer — check oakville.ca events calendar for screening dates",
-      "lastVerified": "2026-06-06"
+      "address": "120 Navy St, Oakville",
+      "lat": 43.44396512,
+      "lng": -79.67071596,
+      "website": "https://www.opl.ca",
+      "description": "A public library branch in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "oakville-plant-shop",
-      "name": "Greenhouse & Independent Plant Shops",
+      "id": "oakville-facility-glen-abbey-branch-library",
+      "name": "Glen Abbey Branch Library",
       "type": "place",
+      "category": "cafes",
+      "tags": [
+        "library or archives"
+      ],
+      "cost": "free",
+      "address": "1415 Third Line, Oakville",
+      "lat": 43.43580437,
+      "lng": -79.73912003,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/community-centres/",
+      "description": "A public library branch in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-facility-iroquois-ridge-branch-library",
+      "name": "Iroquois Ridge Branch Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "library or archives"
+      ],
+      "cost": "free",
+      "address": "1051 Glenashton Dr, Oakville",
+      "lat": 43.48814249,
+      "lng": -79.70074005,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/community-centres/",
+      "description": "A public library branch in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-facility-joshuas-creek-arenas",
+      "name": "Joshua's Creek Arenas",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "arena"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "1663 Service Rd North, Oakville",
+      "lat": 43.491724,
+      "lng": -79.675534,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/community-centres/",
+      "description": "An arena with public skating in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-facility-kinoak-arena",
+      "name": "Kinoak Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "arena"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "363 Warminster Dr, Oakville",
+      "lat": 43.419801,
+      "lng": -79.699932,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/arenas-ice/",
+      "description": "An arena with public skating in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-facility-lions-pool",
+      "name": "Lions Pool",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "pool"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in fee. Check the schedule.",
+      "address": "159 Felan Ave, Oakville",
+      "lat": 43.43933955,
+      "lng": -79.67893084,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/community-centres/",
+      "description": "A public pool in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-facility-maple-grove-arena",
+      "name": "Maple Grove Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "arena"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "2237 Devon Rd, Oakville",
+      "lat": 43.479079,
+      "lng": -79.643757,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/arenas-ice/",
+      "description": "An arena with public skating in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-facility-queen-elizabeth-park-community-centre-pool",
+      "name": "Queen Elizabeth Park Community Centre Pool",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "pool"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in fee. Check the schedule.",
+      "address": "2302 Bridge Road, Oakville",
+      "lat": 43.40494896,
+      "lng": -79.71973298,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/community-centres/",
+      "description": "A public pool in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-facility-river-oaks-arena",
+      "name": "River Oaks Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "arena"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "2400 Sixth, Oakville",
+      "lat": 43.47102976,
+      "lng": -79.72451312,
+      "website": "https://www.oakville.ca/parks-recreation-culture/facilities-rentals/facility-locations/community-centres/",
+      "description": "An arena with public skating in Oakville. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "oakville-event-painting-the-night-forest-seniors-social-club-central-branch",
+      "name": "Painting the night forest: Seniors' Social Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17528537",
+      "description": "A free program at Central Branch, part of Oakville Public Library. Ages: Older Adult (55+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-06T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-3d-printing-workshop-for-seniors-glen-abbey-branch",
+      "name": "3D Printing Workshop for Seniors",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17740469",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Older Adult (55+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-06T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-family-storytime-sixteen-mile-branch",
+      "name": "Family Storytime",
+      "type": "event",
       "category": "social",
       "tags": [
-        "plants",
-        "houseplants",
-        "aesthetic",
-        "local favourite",
-        "instagram worthy",
-        "indie",
-        "slow living"
-      ],
-      "cost": "low",
-      "costNote": "Small starter plants $6–$18; larger specimens $30–$100",
-      "address": "Oakville, ON (Kerr Village & North Oakville)",
-      "neighborhood": "Kerr Village / North Oakville",
-      "lat": 43.456,
-      "lng": -79.693,
-      "hours": "Varies by shop — typically Tue–Sun 10am–6pm",
-      "description": "Oakville has a couple of independent plant shops worth seeking out — not the big-box garden centre, but genuine houseplant specialists who carry uncommon varieties and actually know how to help you keep things alive. The Kerr Village area and a few garden-adjacent shops in north Oakville are the best hunting ground.",
-      "highlights": [
-        "Uncommon houseplant varieties: aroids, hoyas, peperomias",
-        "Knowledgeable staff — real care advice, not guesses",
-        "Propagation cuttings available at lower prices",
-        "Beautiful to browse even without buying",
-        "Follow them on Instagram for new arrivals and rare drops"
-      ],
-      "why": "If you're in the 'I'm going to become a plant person' phase of your 20s, Oakville's independent plant shops will accelerate that significantly. Way better selection than any garden centre.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "oakville-sixteen-mile-graffiti",
-      "name": "Sixteen Mile Creek Trail Art",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": [
-        "street art",
-        "murals",
-        "free",
-        "outdoors",
-        "instagram worthy",
-        "content creator spot",
-        "underrated"
+        "Oakville Public Library"
       ],
       "cost": "free",
-      "address": "Sixteen Mile Creek Trail, Oakville, ON",
-      "neighborhood": "Central Oakville",
-      "lat": 43.4653,
-      "lng": -79.7135,
-      "hours": "Open year-round",
-      "description": "The Sixteen Mile Creek Trail corridor has accumulated informal murals and commissioned art pieces on the bridge underpasses and retaining walls — the kind that looks genuinely good when framed against the ravine vegetation. Worth a detour on the trail.",
-      "highlights": [
-        "Large-scale murals on trail underpass walls",
-        "Natural ravine backdrop makes for strong photography",
-        "Self-guided — no tour needed, just walk the trail",
-        "Changes over time as pieces are updated or added",
-        "Best light mid-morning on the west-facing underpasses"
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17412927",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Preschool (1-4). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:30:00.000Z",
+        "2026-11-07T15:30:00.000Z",
+        "2026-11-09T15:30:00.000Z",
+        "2026-11-11T15:30:00.000Z",
+        "2026-11-13T15:30:00.000Z",
+        "2026-11-14T15:30:00.000Z",
+        "2026-11-16T15:30:00.000Z",
+        "2026-11-18T15:30:00.000Z",
+        "2026-11-20T15:30:00.000Z",
+        "2026-11-21T15:30:00.000Z",
+        "2026-11-23T15:30:00.000Z",
+        "2026-11-25T15:30:00.000Z",
+        "2026-11-27T15:30:00.000Z",
+        "2026-11-28T15:30:00.000Z",
+        "2026-11-30T15:30:00.000Z",
+        "2026-12-02T15:30:00.000Z",
+        "2026-12-04T15:30:00.000Z",
+        "2026-12-05T15:30:00.000Z",
+        "2026-12-07T15:30:00.000Z",
+        "2026-12-09T15:30:00.000Z",
+        "2026-12-11T15:30:00.000Z",
+        "2026-12-12T15:30:00.000Z",
+        "2026-12-14T15:30:00.000Z",
+        "2026-12-16T15:30:00.000Z",
+        "2026-12-18T15:30:00.000Z",
+        "2026-12-19T15:30:00.000Z",
+        "2026-12-23T15:30:00.000Z",
+        "2026-12-28T15:30:00.000Z",
+        "2026-12-30T15:30:00.000Z"
       ],
-      "why": "Trail murals sound like a consolation prize but Oakville's underpass art along Sixteen Mile Creek is actually good. The ravine vegetation as a backdrop makes the pieces look significantly better than they would anywhere else.",
-      "isFree": true,
-      "lastVerified": "2026-06-06"
+      "endsAt": "2026-12-30T15:30:00.000Z"
     },
     {
-      "id": "oakville-korean-hot-pot",
-      "name": "Hot Pot & Korean BBQ — North Oakville",
-      "type": "place",
-      "category": "food-culture",
+      "id": "oakville-event-stay-play-sixteen-mile-branch",
+      "name": "Stay & Play",
+      "type": "event",
+      "category": "social",
       "tags": [
-        "hot pot",
-        "korean bbq",
-        "asian",
-        "group dining",
-        "social",
-        "local favourite",
-        "vibe check"
+        "Oakville Public Library"
       ],
-      "cost": "moderate",
-      "costNote": "Hot pot per person $25–$35 all-in; KBBQ similar",
-      "address": "Dundas St E / Upper Middle Rd area, Oakville, ON",
-      "neighborhood": "North Oakville",
-      "lat": 43.4831,
-      "lng": -79.7102,
-      "hours": "Most spots open 11:30am–10pm; weekends until 11pm",
-      "description": "North Oakville's commercial strips have developed a growing cluster of hot pot and Korean BBQ spots that have become a genuine go-to for the town's younger crowd. The hot pot format in particular — everyone cooks their own at the table over two hours — is hard to replicate at home and is one of the best group meal formats going.",
-      "highlights": [
-        "Table-side cooking — the meal is an activity, not just food",
-        "Hot pot broth options: spicy mala, tomato, mushroom",
-        "Korean BBQ for the tabletop grill experience",
-        "Good for groups of 4+ — the format rewards more people",
-        "Weekend evenings fill up fast — reserve in advance"
+      "cost": "free",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17412941",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Baby (0-1). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T16:00:00.000Z",
+        "2026-11-07T16:00:00.000Z",
+        "2026-11-09T16:00:00.000Z",
+        "2026-11-11T16:00:00.000Z",
+        "2026-11-13T16:00:00.000Z",
+        "2026-11-14T16:00:00.000Z",
+        "2026-11-16T16:00:00.000Z",
+        "2026-11-18T16:00:00.000Z",
+        "2026-11-20T16:00:00.000Z",
+        "2026-11-21T16:00:00.000Z",
+        "2026-11-23T16:00:00.000Z",
+        "2026-11-25T16:00:00.000Z",
+        "2026-11-27T16:00:00.000Z",
+        "2026-11-28T16:00:00.000Z",
+        "2026-11-30T16:00:00.000Z",
+        "2026-12-02T16:00:00.000Z",
+        "2026-12-04T16:00:00.000Z",
+        "2026-12-05T16:00:00.000Z",
+        "2026-12-07T16:00:00.000Z",
+        "2026-12-09T16:00:00.000Z",
+        "2026-12-11T16:00:00.000Z",
+        "2026-12-12T16:00:00.000Z",
+        "2026-12-14T16:00:00.000Z",
+        "2026-12-16T16:00:00.000Z",
+        "2026-12-18T16:00:00.000Z",
+        "2026-12-19T16:00:00.000Z",
+        "2026-12-23T16:00:00.000Z",
+        "2026-12-28T16:00:00.000Z",
+        "2026-12-30T16:00:00.000Z"
       ],
-      "why": "Hot pot is the best group dinner format and Oakville has spots that do it properly now. Budget two hours, wear layers (it gets warm), and come hungry. Easily one of the best social meals you can have in the suburbs.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
+      "endsAt": "2026-12-30T16:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-steam-play-glen-abbey-branch",
+      "name": "STEAM Play",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17464612",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: School Age (5-8). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T21:00:00.000Z",
+        "2026-11-10T20:30:00.000Z",
+        "2026-11-13T21:00:00.000Z",
+        "2026-11-17T20:30:00.000Z",
+        "2026-11-20T21:00:00.000Z",
+        "2026-11-24T20:30:00.000Z",
+        "2026-11-27T21:00:00.000Z",
+        "2026-12-04T21:00:00.000Z",
+        "2026-12-08T20:30:00.000Z",
+        "2026-12-11T21:00:00.000Z",
+        "2026-12-15T20:30:00.000Z",
+        "2026-12-18T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-18T21:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-reading-wonders-sixteen-mile-branch",
+      "name": "Reading Wonders",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17819623",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: School Age (5-8). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T21:00:00.000Z",
+        "2026-11-10T21:00:00.000Z",
+        "2026-11-24T21:00:00.000Z",
+        "2026-12-01T21:00:00.000Z",
+        "2026-12-08T21:00:00.000Z",
+        "2026-12-15T21:00:00.000Z",
+        "2026-12-22T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-22T21:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-sewing-workshop-fabric-bookmarks-sixteen-mile-branch",
+      "name": "Sewing Workshop: Fabric Bookmarks",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17740570",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-pathways-to-wellness-white-oaks-branch",
+      "name": "Pathways to Wellness",
+      "type": "event",
+      "category": "mental",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "White Oaks Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16677378",
+      "description": "A free program at White Oaks Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-07T15:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-create-construct-central-branch",
+      "name": "Create & Construct",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17819637",
+      "description": "A free program at Central Branch, part of Oakville Public Library. Ages: School Age (5-8). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-07T15:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-urdu-storytime-glen-abbey-branch",
+      "name": "Urdu Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17493873",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Preschool (1-4). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:30:00.000Z",
+        "2026-12-12T19:30:00.000Z"
+      ],
+      "endsAt": "2026-12-12T19:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-meditation-mondays-central-branch",
+      "name": "Meditation Mondays",
+      "type": "event",
+      "category": "mental",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17095195",
+      "description": "A free program at Central Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T15:00:00.000Z",
+        "2026-11-16T15:00:00.000Z",
+        "2026-11-23T15:00:00.000Z",
+        "2026-11-30T15:00:00.000Z",
+        "2026-12-14T15:00:00.000Z",
+        "2026-12-21T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-21T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-lego-robotics-sixteen-mile-branch",
+      "name": "LEGO Robotics",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17414363",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: School Age (5-8). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T22:00:00.000Z",
+        "2026-11-16T22:00:00.000Z",
+        "2026-11-23T22:00:00.000Z",
+        "2026-11-30T22:00:00.000Z",
+        "2026-12-07T22:00:00.000Z"
+      ],
+      "endsAt": "2026-12-07T22:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-american-sign-language-course-beginner-level-iroquois-ridge-branch",
+      "name": "American Sign Language course: Beginner Level",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17432765",
+      "description": "A program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z",
+        "2026-11-16T23:30:00.000Z",
+        "2026-11-23T23:30:00.000Z",
+        "2026-11-30T23:30:00.000Z",
+        "2026-12-07T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-07T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-laser-cutting-workshop-wooden-coasters-glen-abbey-branch",
+      "name": "Laser Cutting Workshop: Wooden Coasters",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766522",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-09T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-english-conversation-circle-glen-abbey-branch",
+      "name": "English Conversation Circle",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17256160",
+      "description": "A free program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:45:00.000Z",
+        "2026-11-16T23:45:00.000Z",
+        "2026-11-23T23:45:00.000Z",
+        "2026-11-30T23:45:00.000Z",
+        "2026-12-07T23:45:00.000Z",
+        "2026-12-14T23:45:00.000Z"
+      ],
+      "endsAt": "2026-12-14T23:45:00.000Z"
+    },
+    {
+      "id": "oakville-event-inkjet-printer-orientation-epson-p7570-sixteen-mile-branch",
+      "name": "Inkjet Printer Orientation: Epson P7570",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766529",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T00:30:00.000Z",
+        "2026-11-19T00:30:00.000Z",
+        "2026-12-18T00:30:00.000Z"
+      ],
+      "endsAt": "2026-12-18T00:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-adobe-indesign-workshop-recipe-cards-glen-abbey-branch",
+      "name": "Adobe InDesign Workshop: Recipe Cards",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766572",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-10T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-babytime-iroquois-ridge-branch",
+      "name": "Babytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16105493",
+      "description": "A program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Baby (0-1). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T16:00:00.000Z",
+        "2026-11-11T16:00:00.000Z",
+        "2026-11-17T16:00:00.000Z",
+        "2026-11-18T16:00:00.000Z",
+        "2026-11-24T16:00:00.000Z",
+        "2026-11-25T16:00:00.000Z",
+        "2026-12-01T16:00:00.000Z",
+        "2026-12-02T16:00:00.000Z",
+        "2026-12-08T16:00:00.000Z",
+        "2026-12-09T16:00:00.000Z",
+        "2026-12-15T16:00:00.000Z",
+        "2026-12-16T16:00:00.000Z",
+        "2026-12-22T16:00:00.000Z",
+        "2026-12-23T16:00:00.000Z",
+        "2026-12-29T16:00:00.000Z",
+        "2026-12-30T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-30T16:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-preschool-exploration-station-white-oaks-branch",
+      "name": "Preschool Exploration Station",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "White Oaks Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16178366",
+      "description": "A program at White Oaks Branch, part of Oakville Public Library. Ages: Preschool (1-4). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T16:00:00.000Z",
+        "2026-11-17T16:00:00.000Z",
+        "2026-11-24T16:00:00.000Z",
+        "2026-12-01T16:00:00.000Z",
+        "2026-12-08T16:00:00.000Z",
+        "2026-12-15T16:00:00.000Z",
+        "2026-12-22T16:00:00.000Z",
+        "2026-12-29T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-29T16:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-stay-play-connect-iroquois-ridge-branch",
+      "name": "Stay, Play, & Connect",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16844013",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Baby (0-1). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T16:30:00.000Z",
+        "2026-11-18T16:30:00.000Z",
+        "2026-11-24T16:30:00.000Z",
+        "2026-12-08T16:30:00.000Z"
+      ],
+      "endsAt": "2026-12-08T16:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-tales-tunes-sixteen-mile-branch",
+      "name": "Tales & Tunes",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17412643",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Baby (0-1). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T18:30:00.000Z",
+        "2026-11-12T18:30:00.000Z",
+        "2026-11-17T18:30:00.000Z",
+        "2026-11-19T18:30:00.000Z",
+        "2026-11-24T18:30:00.000Z",
+        "2026-11-26T18:30:00.000Z",
+        "2026-12-01T18:30:00.000Z",
+        "2026-12-08T18:30:00.000Z",
+        "2026-12-10T18:30:00.000Z",
+        "2026-12-15T18:30:00.000Z",
+        "2026-12-17T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-17T18:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-homework-health-white-oaks-branch",
+      "name": "Homework Health",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "White Oaks Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16154559",
+      "description": "A free program at White Oaks Branch, part of Oakville Public Library. Ages: Teen (13-17). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T20:00:00.000Z",
+        "2026-11-12T20:00:00.000Z",
+        "2026-11-17T20:00:00.000Z",
+        "2026-11-19T20:00:00.000Z",
+        "2026-11-24T20:00:00.000Z",
+        "2026-11-26T20:00:00.000Z",
+        "2026-12-01T20:00:00.000Z",
+        "2026-12-03T20:00:00.000Z",
+        "2026-12-08T20:00:00.000Z",
+        "2026-12-10T20:00:00.000Z"
+      ],
+      "endsAt": "2026-12-10T20:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-steam-tween-lab-glen-abbey-branch",
+      "name": "STEAM Tween Lab",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17443773",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Tween (9-12). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T22:00:00.000Z",
+        "2026-11-17T22:00:00.000Z",
+        "2026-11-24T22:00:00.000Z",
+        "2026-12-08T22:00:00.000Z",
+        "2026-12-15T22:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T22:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-leaps-in-literacy-white-oaks-branch",
+      "name": "Leaps in Literacy",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "White Oaks Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16583495",
+      "description": "A free program at White Oaks Branch, part of Oakville Public Library. Ages: School Age (5-8). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T22:15:00.000Z",
+        "2026-11-12T22:15:00.000Z",
+        "2026-11-17T22:15:00.000Z",
+        "2026-11-19T22:15:00.000Z",
+        "2026-11-24T22:15:00.000Z",
+        "2026-11-26T22:15:00.000Z",
+        "2026-12-01T22:15:00.000Z",
+        "2026-12-03T22:15:00.000Z",
+        "2026-12-08T22:15:00.000Z",
+        "2026-12-10T22:15:00.000Z"
+      ],
+      "endsAt": "2026-12-10T22:15:00.000Z"
+    },
+    {
+      "id": "oakville-event-queer-peers-iroquois-ridge-branch",
+      "name": "Queer Peers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17348214",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Teen (13-17). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:30:00.000Z",
+        "2026-12-08T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-08T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-sewing-workshop-book-or-ebook-pouch-sixteen-mile-branch",
+      "name": "Sewing Workshop: Book or eBook Pouch",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766594",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-10T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-citizenship-information-session-glen-abbey-branch",
+      "name": "Citizenship Information Session",
+      "type": "event",
+      "category": "financial",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17681552",
+      "description": "A free program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-11T00:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-video-digitization-orientation-glen-abbey-branch",
+      "name": "Video Digitization Orientation",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766607",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T15:00:00.000Z",
+        "2026-12-16T00:30:00.000Z"
+      ],
+      "endsAt": "2026-12-16T00:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-preschool-discovery-lab-central-branch",
+      "name": "Preschool Discovery Lab",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16128898",
+      "description": "A program at Central Branch, part of Oakville Public Library. Ages: Preschool (1-4). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T16:00:00.000Z",
+        "2026-11-18T16:00:00.000Z",
+        "2026-11-25T16:00:00.000Z",
+        "2026-12-02T16:00:00.000Z",
+        "2026-12-09T16:00:00.000Z",
+        "2026-12-16T16:00:00.000Z",
+        "2026-12-23T16:00:00.000Z",
+        "2026-12-30T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-30T16:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-art-for-adults-sixteen-mile-branch",
+      "name": "Art for Adults",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17412707",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T19:00:00.000Z",
+        "2026-12-09T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T19:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-social-skills-friendships-and-relationships-glen-abbey-branch",
+      "name": "Social Skills: Friendships and Relationships",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16985710",
+      "description": "A free program at Glen Abbey Branch, part of Oakville Public Library. Ages: All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T21:30:00.000Z",
+        "2026-11-18T21:30:00.000Z",
+        "2026-11-25T21:30:00.000Z",
+        "2026-12-02T21:30:00.000Z"
+      ],
+      "endsAt": "2026-12-02T21:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-intermediate-computer-training-iroquois-ridge-branch",
+      "name": "Intermediate Computer Training",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17432927",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T22:30:00.000Z",
+        "2026-11-18T22:30:00.000Z",
+        "2026-11-25T22:30:00.000Z",
+        "2026-12-02T22:30:00.000Z"
+      ],
+      "endsAt": "2026-12-02T22:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-youth-library-leaders-glen-abbey-branch",
+      "name": "Youth Library Leaders",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17355238",
+      "description": "A free program at Glen Abbey Branch, part of Oakville Public Library. Ages: Teen (13-17). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:00:00.000Z",
+        "2026-12-09T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T23:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-intermediate-french-conversation-circle-woodside-branch",
+      "name": "Intermediate French Conversation Circle",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Woodside Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17256145",
+      "description": "A free program at Woodside Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-02T23:30:00.000Z",
+        "2026-12-09T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-09T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-meditation-sessions-central-branch",
+      "name": "Meditation Sessions",
+      "type": "event",
+      "category": "mental",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17252200",
+      "description": "A free program at Central Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-09T23:30:00.000Z",
+        "2026-12-16T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-16T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-3d-design-workshop-charms-and-trinkets-glen-abbey-branch",
+      "name": "3D Design Workshop: Charms and Trinkets",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766610",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-11T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-serger-orientation-sixteen-mile-branch",
+      "name": "Serger Orientation",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766684",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T00:30:00.000Z",
+        "2026-12-02T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-02T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-little-artists-community-location",
+      "name": "Little Artists",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Community Location Library, Oakville",
+      "website": "https://opl.libnet.info/event/17401362",
+      "description": "A program at Community Location, part of Oakville Public Library. Ages: School Age (5-8). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T21:00:00.000Z",
+        "2026-11-26T21:00:00.000Z",
+        "2026-12-17T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T21:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-tween-book-hub-sixteen-mile-branch",
+      "name": "Tween Book Hub",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17412805",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Tween (9-12). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T21:00:00.000Z",
+        "2026-11-19T21:00:00.000Z",
+        "2026-11-26T21:00:00.000Z",
+        "2026-12-10T21:00:00.000Z",
+        "2026-12-17T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T21:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-teen-creator-studio-sixteen-mile-branch",
+      "name": "Teen Creator Studio",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17412810",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Teen (13-17). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-speak-your-soul-community-open-mic-night-iroquois-ridge-branch",
+      "name": "Speak Your Soul: Community Open Mic Night",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17438794",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-an-evening-with-aaron-jensen-central-branch",
+      "name": "An evening with Aaron Jensen",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17690949",
+      "description": "A free program at Central Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-cricut-orientation-sixteen-mile-branch",
+      "name": "Cricut Orientation",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766708",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z",
+        "2026-11-20T00:30:00.000Z",
+        "2026-12-08T00:30:00.000Z"
+      ],
+      "endsAt": "2026-12-08T00:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-trivia-night-at-the-library-glen-abbey-branch",
+      "name": "Trivia Night at the Library",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17240561",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T00:00:00.000Z",
+        "2026-12-11T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-11T00:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-historical-fiction-book-club-the-hazelbourne-ladies-central-branch",
+      "name": "Historical Fiction Book Club: The Hazelbourne Ladies",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16592990",
+      "description": "A free program at Central Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-video-editing-workshop-intro-to-adobe-premiere-glen-abbey-branch",
+      "name": "Video Editing Workshop: Intro to Adobe Premiere",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17766712",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-printer-cutter-orientation-sixteen-mile-branch",
+      "name": "Printer/Cutter Orientation",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774207",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T19:00:00.000Z",
+        "2026-12-04T00:30:00.000Z"
+      ],
+      "endsAt": "2026-12-04T00:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-halton-writers-network-woodside-branch",
+      "name": "Halton Writer's Network",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Woodside Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/15298147",
+      "description": "A free program at Woodside Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-maker-meetup-sixteen-mile-branch",
+      "name": "Maker Meetup",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774086",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T16:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-queer-adult-hangout-iroquois-ridge-branch",
+      "name": "Queer Adult Hangout",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17656981",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T19:00:00.000Z",
+        "2026-12-12T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-12T19:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-arabic-storytime-iroquois-ridge-branch",
+      "name": "Arabic Storytime جلسة لقراءة قصص أطفال باللغة العربية",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17427805",
+      "description": "A program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Preschool (1-4). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T20:00:00.000Z",
+        "2026-12-12T20:00:00.000Z"
+      ],
+      "endsAt": "2026-12-12T20:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-thermal-bookbinder-orientation-sixteen-mile-branch",
+      "name": "Thermal Bookbinder Orientation",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774388",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-17T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-cricut-workshop-custom-3d-letters-glen-abbey-branch",
+      "name": "Cricut Workshop: Custom 3D Letters",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774327",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-17T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-author-visit-with-christy-jordan-fenton-sixteen-mile-branch",
+      "name": "Author Visit with Christy Jordan-Fenton",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17711245",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Tween (9-12). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-17T23:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-adult-book-club-vera-wongs-guide-to-snooping-glen-abbey-branch",
+      "name": "Adult Book Club : Vera Wong's Guide to Snooping",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16641923",
+      "description": "A free program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-18T00:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-laser-cutter-orientation-glen-abbey-branch",
+      "name": "Laser Cutter Orientation",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774435",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T00:30:00.000Z",
+        "2026-12-11T00:30:00.000Z"
+      ],
+      "endsAt": "2026-12-11T00:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-cricut-workshop-greeting-cards-sixteen-mile-branch",
+      "name": "Cricut Workshop: Greeting Cards",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774511",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-18T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-laser-cutting-workshop-wood-ornaments-glen-abbey-branch",
+      "name": "Laser Cutting Workshop: Wood Ornaments",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774538",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-18T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-cookbook-club-iroquois-ridge-branch",
+      "name": "Cookbook Club",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17436856",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T00:00:00.000Z",
+        "2026-12-17T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-photo-and-film-scanner-orientation-glen-abbey-branch",
+      "name": "Photo and Film Scanner Orientation",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774578",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T15:00:00.000Z",
+        "2026-12-03T00:30:00.000Z"
+      ],
+      "endsAt": "2026-12-03T00:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-adult-book-club-sixteen-mile-branch",
+      "name": "Adult Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/16811017",
+      "description": "A free program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-estate-planning-with-lawyer-sharon-d-davis-central-branch",
+      "name": "Estate Planning with Lawyer Sharon D. Davis",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17267094",
+      "description": "A free program at Central Branch, part of Oakville Public Library. Ages: Older Adult (55+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-countdown-to-kindergarten-iroquois-ridge-branch",
+      "name": "Countdown to Kindergarten",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17443620",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Preschool (1-4). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T15:00:00.000Z",
+        "2026-11-27T15:00:00.000Z",
+        "2026-12-11T15:00:00.000Z",
+        "2026-12-18T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-18T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-3d-design-workshop-digital-pottery-glen-abbey-branch",
+      "name": "3D Design Workshop: Digital Pottery",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Glen Abbey Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774636",
+      "description": "A program at Glen Abbey Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-sewing-workshop-for-teens-scrunchies-sixteen-mile-branch",
+      "name": "Sewing Workshop for Teens: Scrunchies",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774649",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Teen (13-17). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-puzzle-exchange-central-branch",
+      "name": "Puzzle Exchange",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Central Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17448957",
+      "description": "A program at Central Branch, part of Oakville Public Library. Ages: Tween (9-12), Teen (13-17), School Age (5-8), Older Adult (55+), Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T19:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-diwali-writing-workshop-iroquois-ridge-branch",
+      "name": "Diwali Writing Workshop",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "free",
+      "address": "Iroquois Ridge Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17622496",
+      "description": "A free program at Iroquois Ridge Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T19:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-adobe-photoshop-workshop-custom-ereader-lock-screen-sixteen-mile-branc",
+      "name": "Adobe Photoshop Workshop: Custom eReader Lock Screen",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17774734",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-24T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-24T15:00:00.000Z"
+    },
+    {
+      "id": "oakville-event-print-and-cut-workshop-custom-bumper-stickers-sixteen-mile-branch",
+      "name": "Print and Cut Workshop: Custom Bumper Stickers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17810594",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-24T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-24T23:30:00.000Z"
+    },
+    {
+      "id": "oakville-event-bookbinding-workshop-hand-stitched-journals-sixteen-mile-branch",
+      "name": "Bookbinding Workshop: Hand-Stitched Journals",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Oakville Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Sixteen Mile Branch Library, Oakville",
+      "website": "https://opl.libnet.info/event/17787436",
+      "description": "A program at Sixteen Mile Branch, part of Oakville Public Library. Ages: Adult (18+). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-25T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-25T15:00:00.000Z"
     }
   ]
 }

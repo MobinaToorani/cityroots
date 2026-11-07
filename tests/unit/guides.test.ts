@@ -1,17 +1,18 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { GUIDES } from "@/content/guides";
+import { slugify } from "@/lib/domain/copy";
 import { guideMetaSchema } from "@/lib/domain/guides";
 
 const body = (slug: string) =>
   readFileSync(path.resolve(import.meta.dirname, `../../src/content/guides/${slug}.mdx`), "utf8");
 
 describe("guides", () => {
-  it("launches with six guides in six different cities", () => {
-    expect(GUIDES).toHaveLength(6);
-    expect(new Set(GUIDES.map((g) => g.city)).size).toBe(6);
-    expect(new Set(GUIDES.map((g) => g.slug)).size).toBe(6);
+  it("gives every city one guide", () => {
+    const cities = readdirSync(path.resolve(import.meta.dirname, "../../scripts/seed-data/cities"));
+    expect(new Set(GUIDES.map((g) => g.city)).size).toBe(cities.length);
+    expect(new Set(GUIDES.map((g) => g.slug)).size).toBe(GUIDES.length);
   });
 
   for (const guide of GUIDES) {
@@ -26,6 +27,17 @@ describe("guides", () => {
           (m) => m[1],
         );
         expect(inBody).toEqual(guide.stops);
+      });
+
+      it("only stops at places that are still listed", () => {
+        const city = JSON.parse(
+          readFileSync(
+            path.resolve(import.meta.dirname, `../../scripts/seed-data/cities/${guide.city}.json`),
+            "utf8",
+          ),
+        ) as { places: { name: string }[] };
+        const slugs = new Set(city.places.map((p) => slugify(p.name)));
+        expect(guide.stops.filter((s) => !slugs.has(s))).toEqual([]);
       });
 
       it("keeps free guides free in its own words", () => {

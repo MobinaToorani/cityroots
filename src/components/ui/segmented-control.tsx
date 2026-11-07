@@ -18,7 +18,7 @@ type SegmentedControlProps<T extends string> = {
 };
 
 /**
- * Pill segmented control with a matte-black active segment that slides
+ * Segmented control with a matte-black active segment that slides
  * between options. Radio-group semantics with arrow-key navigation.
  */
 export function SegmentedControl<T extends string>({
@@ -58,21 +58,21 @@ export function SegmentedControl<T extends string>({
       aria-label={label}
       onKeyDown={onKeyDown}
       className={cn(
-        "relative inline-flex rounded-full border border-divider bg-surface-solid p-0.5",
+        "relative inline-flex rounded-control border border-divider bg-surface-solid p-0.5",
         className,
       )}
     >
       {indicator && (
         <span
           aria-hidden="true"
-          className="absolute top-0.5 bottom-0.5 rounded-full bg-ink transition-[left,width] duration-250 ease-[var(--ease-out-expo)]"
+          className="absolute top-0.5 bottom-0.5 rounded-control bg-ink transition-[left,width] duration-250 ease-[var(--ease-out-expo)]"
           style={{ left: indicator.left, width: indicator.width }}
         />
       )}
       {options.map((option, i) => {
         const checked = option.value === value;
         const className = cn(
-          "relative z-10 inline-flex h-8 items-center rounded-full px-4 text-meta font-semibold transition-colors duration-200",
+          "relative z-10 inline-flex h-8 items-center rounded-control px-4 text-meta font-semibold transition-colors duration-200",
           checked ? "text-on-ink" : "text-text-muted hover:text-text",
           !indicator && checked && "bg-ink",
         );

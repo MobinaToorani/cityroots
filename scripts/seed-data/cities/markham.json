@@ -4,18 +4,30 @@
   "province": "Ontario",
   "country": "Canada",
   "tagline": "Canada's most diverse city, with trails, culture, and community to match",
-  "heroDescription": "Markham is one of Canada's most culturally rich cities — home to the Rouge National Urban Park, the historic Unionville village, the largest indoor Asian mall in North America, and a network of community centres that genuinely serves everyone. Free options here are plentiful if you know where to look.",
+  "heroDescription": "Markham is home to the Rouge National Urban Park, the historic Unionville village, the largest indoor Asian mall in North America, and a network of community centres. Free options here are plentiful if you know where to look.",
   "lat": 43.8561,
   "lng": -79.337,
-  "contributors": ["CityRoots Community"],
-  "lastUpdated": "2026-06-06",
+  "contributors": [
+    "CityRoots Community",
+    "Public library calendars",
+    "Statistics Canada Open Licence"
+  ],
+  "lastUpdated": "2026-11-06",
   "places": [
     {
       "id": "markham-rouge-national-urban-park",
       "name": "Rouge National Urban Park",
       "type": "place",
       "category": "physical",
-      "tags": ["outdoors", "trails", "nature", "free", "hiking", "birdwatching", "year-round"],
+      "tags": [
+        "outdoors",
+        "trails",
+        "nature",
+        "free",
+        "hiking",
+        "birdwatching",
+        "year-round"
+      ],
       "cost": "free",
       "address": "Reesor Road, Markham, ON",
       "neighborhood": "Rouge",
@@ -31,7 +43,7 @@
         "Glen Rouge campground (Scarborough side) for overnight stays",
         "Accessible trail loops near Reesor Road trailhead"
       ],
-      "why": "One of the most underrated outdoor spaces in the GTA — national park quality without leaving the city.",
+      "why": "National park trails without leaving the city.",
       "isRecommended": true,
       "isFree": true,
       "lastVerified": "2026-05-30"
@@ -41,14 +53,21 @@
       "name": "Unionville Main Street",
       "type": "place",
       "category": "social",
-      "tags": ["historic", "walking", "community", "free", "shops", "seasonal"],
+      "tags": [
+        "historic",
+        "walking",
+        "community",
+        "free",
+        "shops",
+        "seasonal"
+      ],
       "cost": "free",
       "address": "Main Street, Unionville, Markham, ON",
       "neighborhood": "Unionville",
       "lat": 43.8693,
       "lng": -79.309,
-      "website": "https://www.unionvillebia.ca",
-      "description": "A perfectly preserved 19th-century village main street within Markham — heritage storefronts, independent shops, riverside walkways along Toogood Pond, and a genuine small-town atmosphere twenty minutes from downtown Toronto.",
+      "website": "https://www.markhammuseum.ca/about-city-markham/news/news-releases/city-markham-announces-start-main-street-unionville-restoration",
+      "description": "A perfectly preserved 19th-century village main street within Markham — heritage storefronts, independent shops, riverside walkways along Toogood Pond, and a genuine small-town atmosphere twenty minutes from downtown Toronto. The City is restoring the street, so check for construction before you go.",
       "highlights": [
         "Heritage storefronts dating to the 1800s",
         "Toogood Pond walkway along the waterway",
@@ -59,14 +78,22 @@
       "why": "The kind of main street most cities have paved over. Best on a weekday morning before it gets busy.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-toogood-pond-park",
       "name": "Toogood Pond Park",
       "type": "place",
       "category": "physical",
-      "tags": ["outdoors", "pond", "trails", "free", "walking", "skating", "picnic"],
+      "tags": [
+        "outdoors",
+        "pond",
+        "trails",
+        "free",
+        "walking",
+        "skating",
+        "picnic"
+      ],
       "cost": "free",
       "address": "Toogood Pond Park, Unionville, Markham, ON",
       "neighborhood": "Unionville",
@@ -84,21 +111,28 @@
       ],
       "isRecommended": false,
       "isFree": true,
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-public-library-central",
       "name": "Markham Public Library",
       "type": "resource",
       "category": "mental",
-      "tags": ["free", "reading", "programs", "quiet", "wifi", "community", "digital"],
+      "tags": [
+        "free",
+        "reading",
+        "programs",
+        "quiet",
+        "wifi",
+        "community",
+        "digital"
+      ],
       "cost": "free",
       "address": "6031 Highway 7, Markham, ON L3P 3A7",
       "neighborhood": "Markham Village",
       "lat": 43.8788,
       "lng": -79.2981,
       "website": "https://www.markhamlibrary.ca",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–5pm, Sun 1pm–5pm",
       "description": "Markham's central library branch with an extensive collection, free digital resources, and regular community programming in English, Cantonese, Mandarin, and other languages reflecting Markham's diversity.",
       "highlights": [
         "Free library card with digital access — Libby, Kanopy, LinkedIn Learning",
@@ -110,14 +144,21 @@
       "why": "Markham's library system is multilingual by design — one of the few in York Region that actively reflects who's actually using it.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-25"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-aaniin-community-centre",
       "name": "Aaniin Community Centre & Library",
       "type": "place",
       "category": "physical",
-      "tags": ["fitness", "pool", "community", "programs", "gym", "family"],
+      "tags": [
+        "fitness",
+        "pool",
+        "community",
+        "programs",
+        "gym",
+        "family"
+      ],
       "cost": "low",
       "costNote": "Drop-in from $4–$6; annual memberships available",
       "address": "5665 14th Ave, Markham, ON L3S 3K5",
@@ -125,7 +166,6 @@
       "lat": 43.8614,
       "lng": -79.2688,
       "website": "https://www.markham.ca/aaniin",
-      "hours": "Mon–Fri 6am–10pm, Sat–Sun 7am–9pm",
       "description": "One of Markham's newest and most comprehensive community centres — indoor pool, fitness centre, gymnasium, walking track, and a full library branch under one roof. Serves the rapidly growing Cornell neighbourhood.",
       "highlights": [
         "Indoor leisure pool with lap lanes and recreational area",
@@ -136,22 +176,29 @@
       ],
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-angus-glen-community-centre",
       "name": "Angus Glen Community Centre",
       "type": "place",
       "category": "physical",
-      "tags": ["fitness", "pool", "ice", "gym", "community", "programs", "family"],
+      "tags": [
+        "fitness",
+        "pool",
+        "ice",
+        "gym",
+        "community",
+        "programs",
+        "family"
+      ],
       "cost": "low",
       "costNote": "Drop-in from $4–$7; recreation membership from $30/month",
       "address": "3990 Major Mackenzie Dr E, Markham, ON L6C 1P8",
       "neighborhood": "Angus Glen",
       "lat": 43.8864,
       "lng": -79.3156,
-      "website": "https://www.markham.ca/angus-glen",
-      "hours": "Mon–Fri 6am–10:30pm, Sat–Sun 7am–10pm",
+      "website": "https://www.york.ca/yorkregion/facilities/angus-glen-community-centre",
       "description": "Markham's largest recreation facility — two NHL-size ice pads, an indoor pool, fitness centre, gymnasium, and squash courts. Home to multiple hockey and figure skating programs.",
       "highlights": [
         "Two NHL-size ice surfaces — public skating sessions daily",
@@ -162,22 +209,28 @@
       ],
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-varley-art-gallery",
       "name": "Varley Art Gallery of Markham",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["art", "gallery", "free", "community", "exhibitions", "history"],
+      "tags": [
+        "art",
+        "gallery",
+        "free",
+        "community",
+        "exhibitions",
+        "history"
+      ],
       "cost": "free",
       "address": "216 Main St, Unionville, Markham, ON L3R 2H1",
       "neighborhood": "Unionville",
       "lat": 43.8695,
       "lng": -79.3085,
       "website": "https://www.varleyartgallery.ca",
-      "hours": "Tue–Sun 10am–5pm, closed Monday",
-      "description": "A public art gallery on Unionville's main street dedicated to Frederick Varley (one of the Group of Seven) and contemporary Canadian art. Free admission makes this one of the most accessible art experiences in York Region.",
+      "description": "A public art gallery on Unionville's main street dedicated to Frederick Varley (one of the Group of Seven) and contemporary Canadian art. Admission is free.",
       "highlights": [
         "Permanent collection featuring Frederick Varley's work",
         "Rotating exhibitions of Canadian contemporary art",
@@ -188,14 +241,21 @@
       "why": "Free gallery with genuine curatorial quality — not a tourist attraction, a real art space.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-flato-theatre",
       "name": "Flato Markham Theatre",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["theatre", "performances", "music", "dance", "community", "family"],
+      "tags": [
+        "theatre",
+        "performances",
+        "music",
+        "dance",
+        "community",
+        "family"
+      ],
       "cost": "moderate",
       "costNote": "Tickets $25–$75 depending on show; community nights sometimes available",
       "address": "171 Town Centre Blvd, Markham, ON L3R 8G5",
@@ -203,7 +263,6 @@
       "lat": 43.8558,
       "lng": -79.3373,
       "website": "https://www.flatomarkhamtheatre.ca",
-      "hours": "Box office: Tue–Sat 12pm–6pm and on show nights",
       "description": "Markham's premiere performing arts venue — a 540-seat theatre hosting professional theatre, dance, music, comedy, and community productions throughout the year.",
       "highlights": [
         "Professional touring shows — theatre, dance, music, comedy",
@@ -214,21 +273,28 @@
       ],
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-museum",
       "name": "Markham Museum",
       "type": "place",
       "category": "mental",
-      "tags": ["history", "heritage", "museum", "family", "outdoors", "seasonal"],
+      "tags": [
+        "history",
+        "heritage",
+        "museum",
+        "family",
+        "outdoors",
+        "seasonal"
+      ],
       "cost": "low",
       "costNote": "Adults $8, youth $5, children under 5 free; lower in off-season",
       "address": "9350 Hwy 48, Markham, ON L6E 0B1",
       "neighborhood": "Markham Village",
       "lat": 43.878,
       "lng": -79.2985,
-      "website": "https://www.markham.ca/museum",
+      "website": "https://markhammuseum.ca",
       "hours": "Seasonal — check website for current hours",
       "description": "An open-air living history museum with over 30 authentic heritage buildings relocated from across York Region. Costumed interpreters demonstrate early Ontario farm and village life throughout the season.",
       "highlights": [
@@ -240,49 +306,28 @@
       ],
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "markham-pacific-mall",
-      "name": "Pacific Mall",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["asian", "food", "shopping", "community", "indoors", "culture"],
-      "cost": "free",
-      "costNote": "Free to enter; food and shopping at your own cost",
-      "address": "4300 Steeles Ave E, Markham, ON L3R 0L5",
-      "neighborhood": "Milliken",
-      "lat": 43.8207,
-      "lng": -79.2987,
-      "website": "https://www.pacificmall.ca",
-      "hours": "Mon–Sun 11am–7pm",
-      "description": "The largest indoor Asian shopping centre in North America — over 500 shops, food stalls, and restaurants under one roof. As much a cultural landmark as a shopping destination, with authentic bubble tea, dim sum, and specialty foods you won't find elsewhere.",
-      "highlights": [
-        "500+ shops spanning fashion, electronics, food, and specialty goods",
-        "Authentic bubble tea, dim sum, Hong Kong-style cafes, and more",
-        "One of the few places in the GTA to find niche East Asian ingredients and goods",
-        "Connected to Market Village for even more variety",
-        "Cultural hub for Markham's East Asian community"
-      ],
-      "why": "Worth a visit even if you don't need to buy anything — the food hall alone is remarkable.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-unionville-farmers-market",
-      "name": "Unionville Farmers' Market",
+      "name": "Unionville Stiver Mill Farmers Market",
       "type": "event",
       "category": "food-culture",
-      "tags": ["farmers market", "local food", "seasonal", "saturday", "free", "community"],
+      "tags": [
+        "farmers market",
+        "local food",
+        "seasonal",
+        "saturday",
+        "free",
+        "community"
+      ],
       "cost": "free",
       "costNote": "Free to attend; food and produce at vendors' prices",
       "address": "Main Street, Unionville, Markham, ON",
       "neighborhood": "Unionville",
       "lat": 43.8693,
       "lng": -79.309,
-      "website": "https://www.unionvillebia.ca",
-      "hours": "Saturdays 8am–1pm, June through October",
+      "website": "https://www.york.ca/yorkregion/facilities/unionville-stiver-mill-farmers-market",
       "description": "A weekly Saturday market on historic Unionville Main Street — local produce, baked goods, preserves, honey, and artisan goods from York Region and surrounding farms.",
       "highlights": [
         "Fresh local produce direct from York Region farms",
@@ -294,98 +339,29 @@
       "isRecommended": false,
       "isFree": true,
       "seasonal": true,
-      "seasonNote": "Saturdays June through October only",
-      "lastVerified": "2026-05-28"
-    },
-    {
-      "id": "markham-milliken-mills-library",
-      "name": "Milliken Mills Library",
-      "type": "resource",
-      "category": "mental",
-      "tags": ["free", "library", "quiet", "wifi", "programs", "study"],
-      "cost": "free",
-      "address": "7600 Kennedy Rd, Markham, ON L3R 9S5",
-      "neighborhood": "Milliken",
-      "lat": 43.8225,
-      "lng": -79.3016,
-      "website": "https://www.markhamlibrary.ca",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–5pm, Sun 1pm–5pm",
-      "description": "A branch library serving Markham's Milliken community — near Pacific Mall and a strong resource for the area's diverse population. Multilingual collection and culturally responsive programming.",
-      "highlights": [
-        "Large Cantonese and Mandarin language collection",
-        "Free digital resources — Libby, Kanopy, language learning apps",
-        "Quiet study areas and free WiFi",
-        "Community programs in multiple languages",
-        "Close to Pacific Mall — easy to combine in one trip"
-      ],
-      "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "markham-salvation-army-thrift",
-      "name": "Salvation Army Thrift Store",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "affordable", "clothing", "housewares"],
-      "cost": "low",
-      "costNote": "Clothing from $2; housewares and books from $1",
-      "address": "8751 Woodbine Ave, Markham, ON L3R 0J2",
-      "neighborhood": "Royal Orchard",
-      "lat": 43.858,
-      "lng": -79.3564,
-      "website": "https://www.thriftstore.ca",
-      "hours": "Mon–Sat 9am–8pm, Sun 11am–6pm",
-      "description": "A well-stocked Salvation Army thrift location with rotating inventory of clothing, books, housewares, and furniture. Part of a social enterprise that funds community programs.",
-      "highlights": [
-        "Large rotating inventory of clothing for all ages",
-        "Books, media, and housewares at low prices",
-        "Colour-tag sale system for extra savings",
-        "Furniture section with regular new arrivals",
-        "Proceeds support Salvation Army community programs"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "markham-value-village-steeles",
-      "name": "Value Village",
-      "type": "place",
-      "category": "thrifting",
-      "tags": ["thrift", "secondhand", "clothing", "affordable", "vintage", "housewares"],
-      "cost": "low",
-      "costNote": "Clothing $5–$20; housewares and décor from $2",
-      "address": "8201 Kennedy Rd, Markham, ON L3R 5S5",
-      "neighborhood": "Milliken",
-      "lat": 43.8196,
-      "lng": -79.2956,
-      "website": "https://www.valuevillage.com",
-      "hours": "Mon–Sat 9am–9pm, Sun 10am–8pm",
-      "description": "A large Value Village near Pacific Mall — great for clothing, housewares, and the occasional vintage find. The Milliken location serves a diverse community and often has interesting international items mixed into the inventory.",
-      "highlights": [
-        "Large clothing section with frequent new arrivals",
-        "Housewares, décor, and small furniture",
-        "Tag colour sale days for deeper discounts",
-        "Convenient location near Pacific Mall for a combined outing",
-        "Active donation processing — inventory turns over quickly"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "seasonNote": "Sundays from June to October, 9am to 2pm. Check this year's dates.",
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "markham-bob-hunter-park",
       "name": "Bob Hunter Memorial Park",
       "type": "place",
       "category": "physical",
-      "tags": ["outdoors", "trails", "nature", "free", "walking", "cycling", "wetlands"],
+      "tags": [
+        "outdoors",
+        "trails",
+        "nature",
+        "free",
+        "walking",
+        "cycling",
+        "wetlands"
+      ],
       "cost": "free",
       "address": "Donald Cousens Pkwy, Markham, ON",
       "neighborhood": "Cornell",
       "lat": 43.8527,
       "lng": -79.2601,
-      "website": "https://www.markham.ca/parks",
+      "website": "https://www.pc.gc.ca/en/pn-np/on/rouge",
       "hours": "Open year-round",
       "description": "A large natural park with walking and cycling trails through meadows and wetland habitat in east Markham. Named for the Greenpeace co-founder who lived in Markham. Peaceful and undervisited.",
       "highlights": [
@@ -400,113 +376,19 @@
       "lastVerified": "2026-05-20"
     },
     {
-      "id": "markham-dance-studio-district",
-      "name": "Markham School of Dance",
-      "type": "place",
-      "category": "dance-music",
-      "tags": ["dance", "classes", "community", "beginners", "adult", "kids"],
-      "cost": "moderate",
-      "costNote": "Classes from $80–$150/month depending on program",
-      "address": "377 Church St, Markham, ON L6B 1A1",
-      "neighborhood": "Markham Village",
-      "lat": 43.878,
-      "lng": -79.2618,
-      "website": "https://www.markhamschoolofdance.com",
-      "hours": "Mon–Fri 3pm–9pm, Sat 9am–5pm",
-      "description": "An established community dance school offering classes in ballet, jazz, hip hop, and contemporary for all ages and skill levels. Adult beginner programs are offered each fall and winter.",
-      "highlights": [
-        "Programs for ages 3 to adult",
-        "Adult beginner classes in ballet, jazz, and contemporary",
-        "Annual recital and performance opportunities",
-        "RAD and ADAPT-certified instruction",
-        "Trial classes available before committing to a session"
-      ],
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-15"
-    },
-    {
-      "id": "markham-ymca-pan-am",
-      "name": "YMCA of Greater Toronto — Markham",
-      "type": "place",
-      "category": "physical",
-      "tags": ["fitness", "pool", "gym", "community", "affordable", "programs"],
-      "cost": "moderate",
-      "costNote": "Membership from $45/month; financial assistance available",
-      "address": "16 Esna Park Dr, Markham, ON L3R 5X1",
-      "neighborhood": "Enterprise",
-      "lat": 43.8481,
-      "lng": -79.3447,
-      "website": "https://www.ymcagta.org/locations/markham",
-      "hours": "Mon–Fri 5:30am–10pm, Sat–Sun 7am–8pm",
-      "description": "A full YMCA facility with pool, fitness centre, group fitness classes, and youth and family programming. The Y offers subsidized memberships for those who qualify — no one is turned away for inability to pay.",
-      "highlights": [
-        "Indoor pool with lap swimming and recreational swims",
-        "Full fitness centre and group fitness classes",
-        "Childcare and family programs",
-        "Financial assistance program — sliding scale fees available",
-        "Youth programs, camps, and community events"
-      ],
-      "why": "If cost is a barrier, the Y's financial assistance program is real and worth applying for.",
-      "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
-    },
-    {
-      "id": "markham-employment-hub",
-      "name": "Markham Employment & Business Centre",
-      "type": "resource",
-      "category": "financial",
-      "tags": ["employment", "free", "resume", "career", "newcomer", "programs"],
-      "cost": "free",
-      "address": "101 Town Centre Blvd, Markham, ON L3R 9W3",
-      "neighborhood": "Town Centre",
-      "lat": 43.856,
-      "lng": -79.3367,
-      "website": "https://www.markham.ca/employment",
-      "hours": "Mon–Fri 8:30am–4:30pm",
-      "description": "A free municipal employment service offering job search support, resume help, interview prep, and connections to local employers. Particularly useful for newcomers to Canada navigating the local job market.",
-      "highlights": [
-        "Free resume and cover letter review",
-        "One-on-one career counselling appointments",
-        "Job board with local Markham employers",
-        "Newcomer-specific programs and labour market information",
-        "Workshops on interviewing, networking, and job searching"
-      ],
-      "why": "Underused by people who need it most. The one-on-one appointments are worth booking.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-25"
-    },
-    {
-      "id": "markham-newcomer-programs",
-      "name": "Markham Newcomer Settlement Programs",
-      "type": "program",
-      "category": "social",
-      "tags": ["newcomer", "settlement", "free", "language", "community", "support"],
-      "cost": "free",
-      "address": "Various locations across Markham",
-      "neighborhood": "Citywide",
-      "website": "https://www.newcanadians.ca/markham",
-      "description": "A network of free settlement services for newcomers to Markham and York Region — language support, system navigation, community connection, and cultural programming delivered by local agencies.",
-      "highlights": [
-        "Free English language conversation circles",
-        "Newcomer orientation to Canadian systems (healthcare, education, banking)",
-        "Cultural community connections and peer support",
-        "Youth and senior-specific newcomer programs",
-        "Delivered in multiple languages across Markham locations"
-      ],
-      "why": "Markham has one of Canada's highest newcomer populations — these programs are built to the scale of that need.",
-      "isRecommended": true,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
-    },
-    {
       "id": "markham-recreation-programs",
       "name": "Markham Recreation Programs",
       "type": "program",
       "category": "physical",
-      "tags": ["programs", "fitness", "swimming", "skating", "affordable", "family", "seniors"],
+      "tags": [
+        "programs",
+        "fitness",
+        "swimming",
+        "skating",
+        "affordable",
+        "family",
+        "seniors"
+      ],
       "cost": "low",
       "costNote": "Registered programs from $25 per session; financial assistance available",
       "address": "Multiple community centres across Markham",
@@ -523,349 +405,881 @@
       "why": "The financial assistance program is real — apply early as spots fill quickly.",
       "isRecommended": false,
       "isFree": false,
-      "lastVerified": "2026-05-20"
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "markham-town-centre-library",
-      "name": "Markham Town Centre Library",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["library", "quiet", "study", "free", "wifi", "coworking"],
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
       "cost": "free",
-      "address": "Markham Civic Centre, 101 Town Centre Blvd, Markham, ON",
-      "neighborhood": "Town Centre",
-      "lat": 43.856,
-      "lng": -79.3367,
-      "website": "https://www.markhamlibrary.ca",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–5pm, Sun 1pm–5pm",
-      "description": "Located inside the Markham Civic Centre — a bright, well-resourced library branch with study areas, meeting rooms, free WiFi, and a welcoming atmosphere for remote work or quiet focus.",
-      "highlights": [
-        "Free WiFi and power outlets throughout",
-        "Study carrels and quiet reading areas",
-        "Meeting rooms available for community use",
-        "Adjacent to Markham Civic Centre park and amenities",
-        "On YRT bus routes — accessible without a car"
-      ],
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": true,
-      "lastVerified": "2026-05-20"
+      "hours": "Open 24 hours",
+      "id": "markham-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "markham-unionville-festival",
-      "name": "Unionville Festival",
-      "type": "event",
-      "category": "arts-crafts",
-      "tags": ["festival", "free", "arts", "music", "community", "annual", "summer"],
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
       "cost": "free",
-      "address": "Main Street, Unionville, Markham, ON",
-      "neighborhood": "Unionville",
-      "lat": 43.8693,
-      "lng": -79.309,
-      "website": "https://www.unionvillefestival.com",
-      "hours": "Annual — typically second weekend of June",
-      "description": "York Region's largest outdoor arts and cultural festival, held annually on Unionville Main Street. Two days of live music, visual arts, crafts, food, and community celebration along the heritage streetscape.",
-      "highlights": [
-        "Live music across multiple stages — local and regional acts",
-        "Juried visual art and craft fair with 200+ artists",
-        "Free admission to the entire festival",
-        "Children's activities and family programming",
-        "Heritage village setting makes this unlike any other festival in the region"
-      ],
-      "why": "One of the best free annual events in York Region. The combination of heritage setting and arts quality is hard to beat.",
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual — second weekend of June",
-      "lastVerified": "2026-05-28"
-    },
-    {
-      "id": "markham-cafe-central-park",
-      "name": "Cafe at the Civic Centre",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["cafe", "coffee", "quiet", "affordable", "wifi", "community"],
-      "cost": "low",
-      "costNote": "Coffee $3–$5, light meals $8–$12",
-      "address": "101 Town Centre Blvd, Markham, ON L3R 9W3",
-      "neighborhood": "Town Centre",
-      "lat": 43.8558,
-      "lng": -79.337,
-      "description": "A low-key cafe within the Markham Civic Centre complex — good for a quiet coffee before or after the library, with a view of the adjacent park. Used mostly by locals and staff, which keeps it calm.",
-      "highlights": [
-        "Quiet atmosphere — mostly regulars, not tourists",
-        "Adjacent to library and Civic Centre park",
-        "Good for a quick working session",
-        "Accessible via transit",
-        "Reasonable prices relative to chain cafes nearby"
-      ],
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "isFree": false,
-      "lastVerified": "2026-05-20"
+      "hours": "Open 24 hours",
+      "id": "markham-kids-help-phone",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "markham-unionville-festival",
-      "name": "Unionville Festival",
-      "type": "event",
-      "category": "events",
-      "tags": ["festival", "free", "summer", "arts", "community", "annual", "heritage", "live music"],
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
       "cost": "free",
-      "costNote": "Free admission; vendor food and crafts at own cost",
-      "address": "Main St Unionville, Markham, ON L3R 2G7",
-      "neighborhood": "Unionville",
-      "lat": 43.8667,
-      "lng": -79.3082,
-      "website": "https://www.unionvillefestival.com",
-      "hours": "Annual — late May to early June, check website for dates",
-      "description": "One of the largest free outdoor arts and cultural festivals in York Region, held annually along historic Main Street Unionville. Three days of live music, visual arts, craft vendors, and community programming. Free to attend throughout.",
-      "highlights": [
-        "Free admission for all three days",
-        "Live performances on outdoor stages along Main Street",
-        "Juried arts and craft vendors",
-        "Historic Unionville village setting",
-        "Food vendors and community programming throughout"
-      ],
-      "why": "Main Street Unionville is already worth a visit — the festival makes it exceptional. Free, outdoors, and genuinely well-curated.",
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual — late May to early June",
-      "lastVerified": "2026-05-20"
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "markham-connexontario",
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "markham-pacific-mall-anime",
-      "name": "Anime & Game Shops — Pacific Mall",
-      "type": "place",
+      "name": "211 Ontario",
+      "type": "resource",
       "category": "social",
+      "cost": "free",
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "markham-211-ontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Community Volunteer Income Tax Program",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "markham-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "York Region crisis line (310-COPE)",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://yssn.ca",
+      "phone": "1-855-310-2673",
+      "description": "Free crisis support for York Region residents by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "markham-york-region-crisis-line-310-cope",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Markham Food Bank",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.markhamfoodbank.ca",
+      "description": "The food bank serving Markham. Its site has current hours and how to get help.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "markham-markham-food-bank",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Markham Santa Claus Parade",
+      "type": "event",
+      "category": "social",
+      "cost": "free",
+      "website": "https://www.markham.ca/about-city-markham/events/markham-santa-claus-parade",
+      "description": "The City's yearly holiday parade. Free to watch.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "seasonal": true,
+      "seasonNote": "November",
+      "id": "markham-markham-santa-claus-parade",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-pacific-mall",
+      "name": "Pacific Mall",
+      "type": "place",
+      "category": "cafes-spaces",
       "tags": [
-        "anime",
-        "gaming",
-        "figures",
-        "manga",
         "asian",
-        "local favourite",
-        "hidden gem",
-        "tiktok spot"
+        "food",
+        "shopping",
+        "community",
+        "indoors",
+        "culture"
       ],
-      "cost": "low",
-      "costNote": "Free to browse; merch $5–$200 depending on item",
-      "address": "4300 Steeles Ave E, Markham, ON L3R 0L5",
+      "cost": "free",
+      "costNote": "Free to enter; food and shopping at your own cost",
+      "address": "4300 Steeles Ave E, Markham",
       "neighborhood": "Milliken",
       "lat": 43.8207,
       "lng": -79.2987,
-      "website": "https://www.pacificmall.ca",
-      "hours": "Mon–Sun 11am–7pm",
-      "description": "Inside Pacific Mall, several shops specialize in anime figures, manga, TCG cards, imported games, and Japanese/Korean pop culture merchandise — at prices that are genuinely competitive with online retailers. The selection of imported figures alone makes this worth the trip.",
+      "website": "https://pacificmalltoronto.ca",
+      "description": "The largest indoor Asian shopping centre in North America — over 500 shops, food stalls, and restaurants under one roof. As much a cultural landmark as a shopping destination, with authentic bubble tea, dim sum, and specialty foods you won't find elsewhere.",
       "highlights": [
-        "Anime figures and collectibles at competitive prices",
-        "Manga in English, Traditional Chinese, and Japanese",
-        "TCG cards — Yu-Gi-Oh!, Pokémon, and more",
-        "Imported snacks and blind box figures",
-        "Staff who actually know the fandoms — good for recs"
+        "500+ shops spanning fashion, electronics, food, and specialty goods",
+        "Authentic bubble tea, dim sum, Hong Kong-style cafes, and more",
+        "One of the few places in the GTA to find niche East Asian ingredients and goods",
+        "Connected to Market Village for even more variety",
+        "Cultural hub for Markham's East Asian community"
       ],
-      "why": "Spent an hour in here budgeting $20 for snacks and left $80 lighter with a Nendoroid I didn't know I needed. The figure selection here rivals dedicated shops in downtown Toronto.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "markham-night-market",
-      "name": "Markham Night Market",
-      "type": "event",
-      "category": "events",
-      "tags": [
-        "night market",
-        "asian",
-        "food",
-        "free",
-        "tiktok spot",
-        "viral",
-        "summer",
-        "community"
-      ],
-      "cost": "free",
-      "costNote": "Free to attend; food and goods at vendor prices ($5–$15 per item)",
-      "address": "Markham Fairgrounds / Pacific Mall area, Markham, ON",
-      "neighborhood": "Milliken / Town Centre",
-      "lat": 43.845,
-      "lng": -79.3317,
-      "description": "Markham's seasonal Asian-style night market is one of the best in the GTA — stinky tofu, Hong Kong egg waffles, skewers, Taiwanese sausages, bubble tea, and vendor stalls under lights. The closest thing in the GTA to a real night market experience outside of an actual Asian city.",
-      "highlights": [
-        "Authentic street food: stinky tofu, egg waffles, scallion pancakes",
-        "Live entertainment and cultural performances",
-        "Local artisan vendors and imported goods",
-        "Evening hours — best after dark when the lights come on",
-        "Huge draw — come early or expect crowds"
-      ],
-      "why": "This is the real night market experience. The stinky tofu smell will hit you from the parking lot and you'll buy it anyway. Summer in Markham doesn't feel complete without a visit.",
+      "why": "Worth a visit even if you don't need to buy anything — the food hall alone is worth the trip.",
       "isRecommended": true,
       "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Summer weekends — check Markham events calendar for dates",
-      "lastVerified": "2026-06-06"
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "markham-hk-cafe",
-      "name": "Hong Kong–Style Café Row",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": [
-        "hong kong cafe",
-        "cha chaan teng",
-        "asian",
-        "aesthetic",
-        "local favourite",
-        "food-culture",
-        "tiktok spot"
-      ],
-      "cost": "low",
-      "costNote": "Milk tea $3–$5; full meal $10–$16",
-      "address": "Steeles Ave E & Kennedy Rd area, Markham, ON",
-      "neighborhood": "Milliken",
-      "lat": 43.8218,
-      "lng": -79.3002,
-      "hours": "Most spots open 7am–9pm daily",
-      "description": "The Milliken area of Markham has a cluster of authentic Hong Kong–style cha chaan teng (tea restaurants) — condensed milk toast, silky milk tea, pineapple buns, and HK-style breakfast sets at prices that make every brunch spot in Toronto look absurd.",
-      "highlights": [
-        "Authentic HK milk tea — better than anything you'll get at a trendy spot",
-        "Butter-and-condensed-milk toast: simple, perfect, $4",
-        "Full breakfast sets for under $12",
-        "Morning rush is fast and efficient — in and out in 30 minutes",
-        "Genuinely authentic — the clientele doesn't lie"
-      ],
-      "why": "A proper cha chaan teng breakfast is one of the best meals you can eat in the GTA and it costs you $10. The milk tea alone will ruin every other milk tea you've ever had.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
-    },
-    {
-      "id": "markham-bouldering-cornell",
-      "name": "Rockhouse Climbing — Markham",
+      "id": "markham-facility-armadale-community-centre",
+      "name": "Armadale Community Centre",
       "type": "place",
       "category": "physical",
       "tags": [
-        "bouldering",
-        "climbing",
-        "fitness",
-        "beginner friendly",
-        "social",
-        "vibe check",
-        "underrated"
+        "York Region facility directory"
       ],
-      "cost": "moderate",
-      "costNote": "Day pass ~$22; shoe rental $5; monthly ~$65",
-      "address": "Markham, ON (Hwy 7 / Warden area)",
-      "neighborhood": "Town Centre",
-      "lat": 43.856,
-      "lng": -79.3374,
-      "hours": "Mon–Fri 6am–11pm, Sat–Sun 8am–10pm",
-      "description": "An indoor climbing gym serving Markham's growing young professional and student crowd. Bouldering-only setup means no complicated harness systems — just show up and climb. The community here tends to be diverse and genuinely welcoming.",
-      "highlights": [
-        "Bouldering only — accessible for first-timers",
-        "Routes span v0 beginner through advanced problems",
-        "Diverse, friendly community — not a gatekeeping vibe",
-        "Staff-led intro sessions for brand-new climbers",
-        "Open late so it works post-work"
-      ],
-      "why": "Markham doesn't have many good social fitness options that aren't team sports. This fills that gap perfectly. First time on the wall is humbling; by session three you're hooked.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "2401 Denison Street, Markham",
+      "website": "https://www.york.ca/yorkregion/facilities/armadale-community-centre",
+      "phone": "905-474-1007",
+      "description": "A community centre in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "markham-vintage-pacific-mall",
-      "name": "Thrift & Vintage Finds — Milliken Area",
+      "id": "markham-facility-centennial-community-centre",
+      "name": "Centennial Community Centre",
       "type": "place",
-      "category": "thrifting",
+      "category": "physical",
       "tags": [
-        "thrift",
-        "vintage",
-        "secondhand",
-        "asian imports",
-        "hidden gem",
-        "local favourite",
-        "thrift flip"
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "8600 McCowan Road, Markham",
+      "website": "https://www.york.ca/yorkregion/facilities/centennial-community-centre",
+      "phone": "905-470-3590",
+      "description": "A community centre in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-facility-crosby-community-centre",
+      "name": "Crosby Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "210 Main Unionville Street, Markham",
+      "website": "https://www.york.ca/yorkregion/facilities/crosby-community-centre",
+      "phone": "905-944-3777",
+      "description": "A community centre in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-facility-main-street-markham-farmers-market",
+      "name": "Main Street Markham Farmers Market",
+      "type": "place",
+      "category": "food",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to browse.",
+      "address": "132 Robinson Street, Markham",
+      "website": "https://www.york.ca/yorkregion/facilities/main-street-markham-farmers-market",
+      "description": "A farmers' market in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-facility-markham-village-community-centre",
+      "name": "Markham Village Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "6041 Highway 7, Markham",
+      "lat": 43.8733205,
+      "lng": -79.2586723,
+      "website": "https://www.york.ca/yorkregion/facilities/markham-village-community-centre",
+      "phone": "905-470-3590",
+      "description": "A community centre in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-facility-mount-joy-community-centre",
+      "name": "Mount Joy Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "6140 16th Avenue, Markham",
+      "lat": 43.89301868,
+      "lng": -79.2602546,
+      "website": "https://www.york.ca/yorkregion/facilities/mount-joy-community-centre",
+      "phone": "905-470-3590",
+      "description": "A community centre in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-facility-rj-clatworthy-arena",
+      "name": "R.J. Clatworthy Arena",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
       ],
       "cost": "low",
-      "costNote": "Secondhand items typically $3–$25; imported goods vary",
-      "address": "Kennedy Rd & Steeles Ave area, Markham, ON",
-      "neighborhood": "Milliken",
-      "lat": 43.822,
-      "lng": -79.3006,
-      "description": "The Milliken area around Pacific Mall has a cluster of discount and secondhand shops carrying everything from vintage clothing to imported Korean and Japanese goods at below-retail prices. The combination of culturally diverse donations and active resale community makes the finds here different from anywhere else in York Region.",
-      "highlights": [
-        "Unusual finds: imported Asian goods mixed into standard thrift inventory",
-        "Korean and Japanese brand clothing shows up regularly",
-        "Prices are lower than Talize or Value Village in many cases",
-        "Near Pacific Mall — easy to combine into a full afternoon",
-        "Turns over fast — weekly visits reward regular shoppers"
-      ],
-      "why": "The thrift ecosystem around Pacific Mall is genuinely distinct. Found a vintage Japanese track jacket here for $8. The diversity of donations in this area creates inventory you just don't see elsewhere in the suburbs.",
-      "isFree": false,
-      "lastVerified": "2026-06-06"
+      "costNote": "Check the skating schedule.",
+      "address": "2400 John Street, Markham",
+      "lat": 43.82365749,
+      "lng": -79.36858846,
+      "website": "https://www.york.ca/yorkregion/facilities/rj-clatworthy-arena",
+      "phone": "905-944-3800",
+      "description": "An arena with public skating in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "markham-unionville-mural-walk",
-      "name": "Unionville Mural & Public Art Walk",
+      "id": "markham-facility-thornhill-community-centre",
+      "name": "Thornhill Community Centre",
       "type": "place",
-      "category": "arts-crafts",
+      "category": "physical",
       "tags": [
-        "murals",
-        "street art",
-        "free",
-        "content creator spot",
-        "aesthetic",
-        "instagram worthy",
-        "walking"
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "7755 Bayview Avenue, Markham",
+      "lat": 43.819927,
+      "lng": -79.39939255,
+      "website": "https://www.york.ca/yorkregion/facilities/thornhill-community-centre",
+      "phone": "905-944-3800",
+      "description": "A community centre in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-facility-victoria-square-community-centre",
+      "name": "Victoria Square Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "York Region facility directory"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "2929 Elgin Mills Road East, Markham",
+      "lat": 43.9030695,
+      "lng": -79.3740592,
+      "website": "https://www.york.ca/yorkregion/facilities/victoria-square-community-centre",
+      "phone": "905-887-2798",
+      "description": "A community centre in Markham. The linked page has its address and phone number; call ahead for hours.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "markham-event-storytime-cornell-branch",
+      "name": "Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
       ],
       "cost": "free",
-      "address": "Main St & laneways, Unionville, Markham, ON",
-      "neighborhood": "Unionville",
-      "lat": 43.8693,
-      "lng": -79.309,
-      "description": "Unionville's heritage main street has accumulated a quietly impressive collection of murals and public art in the laneways and on building exteriors. Combined with the streetscape itself, it makes for one of the most photogenic 30-minute walks in the GTA — all free.",
-      "highlights": [
-        "Large-scale murals in the laneways off Main Street",
-        "Heritage storefronts provide a backdrop unlike anywhere else nearby",
-        "Best light on west-facing walls in the afternoon",
-        "New pieces added periodically through the BIA's public art program",
-        "Combine with Toogood Pond for a 45-minute loop"
+      "address": "Cornell Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/694992cb4be11d3d00d95e3e",
+      "description": "A free program at Cornell Branch, part of Markham Public Library. Ages: Birth to Five. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:30:00.000Z",
+        "2026-11-11T16:00:00.000Z",
+        "2026-11-13T16:00:00.000Z",
+        "2026-11-14T15:30:00.000Z",
+        "2026-11-18T16:00:00.000Z",
+        "2026-11-20T16:00:00.000Z",
+        "2026-11-21T15:30:00.000Z",
+        "2026-11-28T15:30:00.000Z",
+        "2026-12-05T15:30:00.000Z",
+        "2026-12-12T15:30:00.000Z",
+        "2026-12-18T16:00:00.000Z",
+        "2026-12-19T15:30:00.000Z",
+        "2026-12-23T16:00:00.000Z",
+        "2026-12-30T16:00:00.000Z",
+        "2027-01-02T15:30:00.000Z"
       ],
-      "why": "The laneways off Main Street Unionville are genuinely one of the best free photography spots in York Region. The combination of heritage brick and modern murals is actually striking.",
-      "isFree": true,
-      "lastVerified": "2026-06-06"
+      "endsAt": "2027-01-02T15:30:00.000Z"
     },
     {
-      "id": "markham-dim-sum-crawl",
-      "name": "Dim Sum Crawl — Highway 7 Corridor",
-      "type": "place",
-      "category": "food-culture",
+      "id": "markham-event-mini-makers-unionville-branch",
+      "name": "Mini-Makers",
+      "type": "event",
+      "category": "arts",
       "tags": [
-        "dim sum",
-        "chinese",
-        "cantonese",
-        "local favourite",
-        "brunch",
-        "group dining",
-        "viral"
+        "Markham Public Library"
       ],
-      "cost": "low",
-      "costNote": "Dim sum per person $15–$25 depending on how much you order",
-      "address": "Highway 7, Markham, ON",
-      "neighborhood": "Town Centre",
-      "lat": 43.856,
-      "lng": -79.337,
-      "hours": "Most spots open 9am–2:30pm for dim sum service",
-      "description": "Markham's Highway 7 corridor is genuinely one of the best dim sum destinations in Canada. Multiple full-service dim sum restaurants operating simultaneously, with cart service, order sheets, and portions of har gow, siu mai, and lo mai gai that will reset your expectations permanently.",
-      "highlights": [
-        "Multiple dim sum restaurants within a 2km stretch — pick your crowd size",
-        "Cart-service and order-sheet formats both available depending on spot",
-        "Har gow, siu mai, turnip cake, egg tarts — the classics done properly",
-        "Weekend mornings are busy — arrive before 10:30am or expect a wait",
-        "Per-person cost is genuinely reasonable for the quality"
+      "cost": "free",
+      "address": "Unionville Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/68fbe20064ad59251cb9d9a8",
+      "description": "A free program at Unionville Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T16:00:00.000Z",
+        "2026-11-14T16:00:00.000Z"
       ],
-      "why": "If you haven't had proper dim sum in Markham yet, I don't know what you're doing. This corridor has restaurants that would be considered elite anywhere in the world. Weekend brunch sorted.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-06"
+      "endsAt": "2026-11-14T16:00:00.000Z"
+    },
+    {
+      "id": "markham-event-blind-bag-trading-day-cornell-branch",
+      "name": "Blind Bag Trading Day",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Cornell Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6ad0e22b2b40e729fed28a40",
+      "description": "A free program at Cornell Branch, part of Markham Public Library. Ages: All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T19:00:00.000Z"
+    },
+    {
+      "id": "markham-event-introduction-to-cricut-cornell-branch",
+      "name": "Introduction to Cricut",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Cornell Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6a6b71793f18b57d5231f626",
+      "description": "A free program at Cornell Branch, part of Markham Public Library. Ages: All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:30:00.000Z"
+      ],
+      "endsAt": "2026-11-07T19:30:00.000Z"
+    },
+    {
+      "id": "markham-event-homeschoolers-weekly-meet-up-angus-glen-angus-glen-branch",
+      "name": "Homeschoolers Weekly Meet-Up @ Angus Glen",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Angus Glen Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6aaae32f4b3b060030843532",
+      "description": "A free program at Angus Glen Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-09T15:30:00.000Z"
+    },
+    {
+      "id": "markham-event-plain-tea-and-murukku-aaniin-branch",
+      "name": "Plain Tea and Murukku",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Aaniin Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/69954cb98089f23c675c6544",
+      "description": "A free program at Aaniin Branch, part of Markham Public Library. Ages: Older Adult. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-09T23:00:00.000Z"
+    },
+    {
+      "id": "markham-event-earlyon-drop-in-cornell-branch",
+      "name": "EarlyON Drop-in",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Cornell Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6aa09faabf3cbd1d443fe356",
+      "description": "A free program at Cornell Branch, part of Markham Public Library. Ages: Birth to Five. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T14:30:00.000Z",
+        "2026-11-11T18:00:00.000Z",
+        "2026-11-17T14:30:00.000Z",
+        "2026-11-18T18:00:00.000Z",
+        "2026-11-24T14:30:00.000Z",
+        "2026-11-25T18:00:00.000Z",
+        "2026-12-01T14:30:00.000Z",
+        "2026-12-02T18:00:00.000Z",
+        "2026-12-08T14:30:00.000Z",
+        "2026-12-09T18:00:00.000Z",
+        "2026-12-15T14:30:00.000Z",
+        "2026-12-16T18:00:00.000Z",
+        "2027-01-05T14:30:00.000Z"
+      ],
+      "endsAt": "2027-01-05T14:30:00.000Z"
+    },
+    {
+      "id": "markham-event-crime-prevention-york-regional-police-information-session-thornhill-vi",
+      "name": "Crime Prevention: York Regional Police Information Session",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Thornhill Village Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6a7c78c03f18f80030ba9c78",
+      "description": "A free program at Thornhill Village Branch, part of Markham Public Library. Ages: Adult. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-10T19:00:00.000Z"
+    },
+    {
+      "id": "markham-event-steam-drop-in-thornhill-comm-ctr-branch",
+      "name": "STEAM Drop-In",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Thornhill Comm. Ctr. Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/692dbdf9d923da4200b317af",
+      "description": "A free program at Thornhill Comm. Ctr. Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-02T23:30:00.000Z",
+        "2026-12-09T23:30:00.000Z",
+        "2026-12-16T23:30:00.000Z",
+        "2026-12-23T23:30:00.000Z",
+        "2026-12-30T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-30T23:30:00.000Z"
+    },
+    {
+      "id": "markham-event-baby-books-thornhill-village-branch",
+      "name": "Baby & Books",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Thornhill Village Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/69274b3f44d0e96d007b8764",
+      "description": "A free program at Thornhill Village Branch, part of Markham Public Library. Ages: Infants (0 to 12 months). Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T15:30:00.000Z",
+        "2026-11-20T15:30:00.000Z",
+        "2026-11-27T15:30:00.000Z",
+        "2026-12-04T15:30:00.000Z",
+        "2026-12-11T15:30:00.000Z",
+        "2026-12-18T15:30:00.000Z",
+        "2026-12-25T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-25T15:30:00.000Z"
+    },
+    {
+      "id": "markham-event-alzheimers-society-york-region-active-living-joy-in-art-angus-glen-bra",
+      "name": "Alzheimers Society York Region Active Living - Joy in Art",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Angus Glen Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6a72597ccca66c2f00a838a3",
+      "description": "A free program at Angus Glen Branch, part of Markham Public Library. Ages: Adult, Older Adult. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-13T15:30:00.000Z"
+    },
+    {
+      "id": "markham-event-blind-bag-trading-day-aaniin-library-aaniin-branch",
+      "name": "Blind Bag Trading Day @ Aaniin Library",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Aaniin Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6ace7a109dbc2b002c8e54bc",
+      "description": "A free program at Aaniin Branch, part of Markham Public Library. Ages: All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-14T15:30:00.000Z"
+    },
+    {
+      "id": "markham-event-kids-reading-challenge-meet-up-thornhill-village-branch",
+      "name": "Kids Reading Challenge Meet-Up",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Thornhill Village Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6ab1438e825ea713bf675173",
+      "description": "A free program at Thornhill Village Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T16:00:00.000Z"
+    },
+    {
+      "id": "markham-event-pa-day-crafts-at-unionville-unionville-branch",
+      "name": "PA Day Crafts at Unionville",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Unionville Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6ab2e0b2129d8e0031f44b32",
+      "description": "A free program at Unionville Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T16:00:00.000Z"
+    },
+    {
+      "id": "markham-event-chess-meet-up-for-children-drop-in-milliken-mills-branch",
+      "name": "Chess Meet Up for Children (drop-in)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Milliken Mills Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6a6280a67b79214226aac989",
+      "description": "A free program at Milliken Mills Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T18:30:00.000Z",
+        "2026-12-13T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-13T18:30:00.000Z"
+    },
+    {
+      "id": "markham-event-chess-meet-up-for-teens-adult-drop-in-see-details-milliken-mills-branc",
+      "name": "Chess Meet up for Teens/Adult (drop-in, see details)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Milliken Mills Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6a627fe2a41369ab2c6842a6",
+      "description": "A free program at Milliken Mills Branch, part of Markham Public Library. Ages: Adult, Youth. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T19:30:00.000Z",
+        "2026-12-13T19:30:00.000Z"
+      ],
+      "endsAt": "2026-12-13T19:30:00.000Z"
+    },
+    {
+      "id": "markham-event-weaving-together-thornhill-village-branch",
+      "name": "Weaving Together",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Thornhill Village Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6a6a66247b79214226ac36a8",
+      "description": "A free program at Thornhill Village Branch, part of Markham Public Library. Ages: Adult. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-01T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T19:00:00.000Z"
+    },
+    {
+      "id": "markham-event-winter-break-activities-markham-village-branch-markham-village-branch",
+      "name": "Winter Break Activities | Markham Village branch",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Markham Village Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6abe667ae06996003a8073a9",
+      "description": "A free program at Markham Village Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-22T16:00:00.000Z",
+        "2026-12-23T16:00:00.000Z",
+        "2026-12-29T16:00:00.000Z",
+        "2026-12-30T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-30T16:00:00.000Z"
+    },
+    {
+      "id": "markham-event-winter-break-activities-unionville-library-unionville-branch",
+      "name": "Winter Break Activities | Unionville Library",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Unionville Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6ae90857f9d28050ccb0b353",
+      "description": "A free program at Unionville Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-22T16:00:00.000Z",
+        "2026-12-28T16:00:00.000Z",
+        "2026-12-29T16:00:00.000Z",
+        "2026-12-30T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-30T16:00:00.000Z"
+    },
+    {
+      "id": "markham-event-winter-break-fun-thornhill-village-branch",
+      "name": "Winter Break Fun",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Thornhill Village Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6ae6527b5ea4c386b3ec1d2b",
+      "description": "A free program at Thornhill Village Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-12-22T19:00:00.000Z",
+        "2026-12-23T16:00:00.000Z",
+        "2026-12-30T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-30T16:00:00.000Z"
+    },
+    {
+      "id": "markham-event-math-club-grade-2-students-milliken-mills-branch",
+      "name": "Math Club: Grade 2 students",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Milliken Mills Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6aecba55198b996a80aa2b06",
+      "description": "A free program at Milliken Mills Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2027-01-05T22:30:00.000Z"
+      ],
+      "endsAt": "2027-01-05T22:30:00.000Z"
+    },
+    {
+      "id": "markham-event-storytime-angus-glen-branch",
+      "name": "Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Angus Glen Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/68fbd37875911f28001a2368",
+      "description": "A free program at Angus Glen Branch, part of Markham Public Library. Ages: Birth to Five. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:30:00.000Z",
+        "2026-11-10T15:30:00.000Z",
+        "2026-11-13T15:30:00.000Z",
+        "2026-11-14T15:30:00.000Z",
+        "2026-11-17T15:30:00.000Z",
+        "2026-11-20T15:30:00.000Z",
+        "2026-11-21T15:30:00.000Z",
+        "2026-11-24T15:30:00.000Z",
+        "2026-11-27T15:30:00.000Z",
+        "2026-11-28T15:30:00.000Z",
+        "2026-12-05T15:30:00.000Z",
+        "2026-12-08T15:30:00.000Z",
+        "2026-12-11T15:30:00.000Z",
+        "2026-12-12T15:30:00.000Z",
+        "2026-12-15T15:30:00.000Z",
+        "2026-12-18T15:30:00.000Z",
+        "2026-12-19T15:30:00.000Z",
+        "2026-12-22T15:30:00.000Z",
+        "2026-12-29T15:30:00.000Z",
+        "2027-01-02T15:30:00.000Z",
+        "2027-01-05T15:30:00.000Z"
+      ],
+      "endsAt": "2027-01-05T15:30:00.000Z"
+    },
+    {
+      "id": "markham-event-mini-makers-angus-glen-branch",
+      "name": "Mini-Makers",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Angus Glen Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/68fbd36ee647c8ff0c3872a3",
+      "description": "A free program at Angus Glen Branch, part of Markham Public Library. Ages: Children. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T16:00:00.000Z",
+        "2026-11-28T16:00:00.000Z",
+        "2026-12-05T16:00:00.000Z",
+        "2026-12-12T16:00:00.000Z",
+        "2026-12-19T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-19T16:00:00.000Z"
+    },
+    {
+      "id": "markham-event-blind-bag-trading-day-milliken-mills-branch",
+      "name": "Blind Bag Trading Day",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Markham Public Library"
+      ],
+      "cost": "free",
+      "address": "Milliken Mills Branch Library, Markham",
+      "website": "https://markham.bibliocommons.com/events/6ace7154377296003a4bb1d4",
+      "description": "A free program at Milliken Mills Branch, part of Markham Public Library. Ages: All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T20:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T20:00:00.000Z"
     }
   ]
 }

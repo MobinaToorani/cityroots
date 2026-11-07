@@ -4,7 +4,6 @@ import Link from "next/link";
 import { EventRow } from "@/components/features/event-row";
 import { RememberCity } from "@/components/layout/city-picker";
 import { ButtonLink } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { ChipLink } from "@/components/ui/chip";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Icon } from "@/components/ui/icon";
@@ -69,11 +68,9 @@ export default async function EventsPage(props: PageProps<"/events">) {
       compareCostBands(get(a).costBand, get(b).costBand);
 
   return (
-    <div className="mx-auto max-w-[1000px] px-4 pt-6 sm:px-6">
+    <div className="page-frame pt-8">
       <RememberCity slug={city} clearWhenEmpty />
-      <h1 className="mb-4 text-section font-semibold tracking-tight">
-        {cityName ? `What's on in ${cityName}` : "What's on"}
-      </h1>
+      <h1 className="mb-4 page-title">{cityName ? `What's on in ${cityName}` : "What's on"}</h1>
 
       <div role="group" aria-label="When" className="mb-6 flex flex-wrap items-center gap-2">
         {EVENT_WHEN.map((w) => (
@@ -113,7 +110,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
               <h2 id={`d-${day.key}`} className="mb-2 text-card font-semibold">
                 {day.label}
               </h2>
-              <Card as="ul" className="divide-y divide-divider overflow-hidden">
+              <ul className="divide-y divide-divider border-t border-divider">
                 {day.entries.map(({ event, at, timed }) => (
                   <li key={event.id}>
                     <EventRow
@@ -123,7 +120,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
                     />
                   </li>
                 ))}
-              </Card>
+              </ul>
             </section>
           ))}
 
@@ -138,7 +135,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
                   className="transition-transform duration-200 group-open:rotate-180"
                 />
               </summary>
-              <Card as="ul" className="mt-2 divide-y divide-divider overflow-hidden">
+              <ul className="mt-2 divide-y divide-divider border-t border-divider">
                 {[...running].sort(freeFirst((e) => e.event)).map(({ event }) => (
                   <li key={event.id}>
                     <EventRow
@@ -148,7 +145,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
                     />
                   </li>
                 ))}
-              </Card>
+              </ul>
             </details>
           )}
 
@@ -157,7 +154,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
               <h2 id="seasonal" className="mb-2 text-card font-semibold">
                 {when === "later" ? "Usually later in the year" : "In season"}
               </h2>
-              <Card as="ul" className="divide-y divide-divider overflow-hidden">
+              <ul className="divide-y divide-divider border-t border-divider">
                 {[...seasonal].sort(freeFirst((e) => e)).map((event) => (
                   <li key={event.id}>
                     <EventRow
@@ -170,7 +167,7 @@ export default async function EventsPage(props: PageProps<"/events">) {
                     />
                   </li>
                 ))}
-              </Card>
+              </ul>
             </section>
           )}
 

@@ -15,7 +15,7 @@ export default async function AdminPage() {
   ]);
   return (
     <>
-      <h1 className="text-section font-semibold tracking-tight">Waiting for review</h1>
+      <h1 className="page-title">Waiting for review</h1>
       <dl className="mt-6 divide-y divide-divider border-y border-divider">
         <Row
           label="Suggestions and corrections"

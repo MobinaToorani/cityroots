@@ -19,7 +19,7 @@ export function AdminNav({ items }: { items: readonly Item[] }) {
             href={item.href}
             aria-current={current ? "page" : undefined}
             className={cn(
-              "inline-flex h-9 items-center rounded-full border px-3.5 text-meta font-medium",
+              "inline-flex h-9 items-center rounded-control border px-3.5 text-meta font-medium",
               current
                 ? "border-ink bg-ink text-on-ink"
                 : "border-divider bg-surface-solid hover:border-text-muted",

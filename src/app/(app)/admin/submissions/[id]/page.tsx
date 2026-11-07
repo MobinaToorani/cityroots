@@ -37,13 +37,13 @@ export default async function SubmissionPage(props: PageProps<"/admin/submission
       >
         Back to the queue
       </Link>
-      <h1 className="mt-3 text-section font-semibold tracking-tight">
+      <h1 className="mt-3 page-title">
         {submission.type === "new_place"
           ? `Suggested: ${str(p.name) ?? "Unnamed place"}`
           : `Correction to ${submission.placeName ?? "a listing"}`}
       </h1>
 
-      <section aria-labelledby="sent" className="mt-6 rounded-2xl px-5 py-4 glass">
+      <section aria-labelledby="sent" className="mt-6 rounded-card px-5 py-4 card">
         <h2 id="sent" className="text-card font-semibold">
           What they sent
         </h2>

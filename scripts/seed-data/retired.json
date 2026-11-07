@@ -1,0 +1,1640 @@
+[
+ {
+  "city": "burlington",
+  "id": "burlington-farmers-market",
+  "name": "Burlington Farmers' Market",
+  "reason": "no working source found"
+ },
+ {
+  "city": "burlington",
+  "id": "burlington-newcomer-connections",
+  "name": "Burlington Newcomer Connections",
+  "reason": "no working source found"
+ },
+ {
+  "city": "burlington",
+  "id": "burlington-halton-employment",
+  "name": "Halton Employment Services — Burlington",
+  "reason": "no working source found"
+ },
+ {
+  "city": "burlington",
+  "id": "burlington-halton-financial-support",
+  "name": "Halton Region Financial Support Programs",
+  "reason": "no working source found"
+ },
+ {
+  "city": "burlington",
+  "id": "burlington-downtown-cafes",
+  "name": "Independent Cafes — Downtown Burlington",
+  "reason": "no source found"
+ },
+ {
+  "city": "burlington",
+  "id": "burlington-kerncliff-park",
+  "name": "Kerncliff Park",
+  "reason": "no source found"
+ },
+ {
+  "city": "burlington",
+  "id": "burlington-salvation-army-thrift",
+  "name": "Salvation Army Thrift Store — Burlington",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "burlington",
+  "id": "burlington-value-village",
+  "name": "Value Village — Burlington",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "cambridge",
+  "id": "cambridge-sculpture-garden",
+  "name": "Cambridge Sculpture Walk",
+  "reason": "no working source found"
+ },
+ {
+  "city": "cambridge",
+  "id": "cambridge-cpha-counselling",
+  "name": "Cambridge-North Dumfries Community Health Centre",
+  "reason": "no working source found"
+ },
+ {
+  "city": "cambridge",
+  "id": "cambridge-doors-open",
+  "name": "Doors Open Cambridge",
+  "reason": "no working source found"
+ },
+ {
+  "city": "cambridge",
+  "id": "cambridge-galt-neighbourhood-centre",
+  "name": "Galt Neighbourhood Centre",
+  "reason": "no working source found"
+ },
+ {
+  "city": "cambridge",
+  "id": "cambridge-mill-race-festival",
+  "name": "Mill Race Folk Music Festival",
+  "reason": "no working source found"
+ },
+ {
+  "city": "cambridge",
+  "id": "cambridge-stray-dog-coffee",
+  "name": "Stray Dog Coffee",
+  "reason": "no working source found"
+ },
+ {
+  "city": "kitchener",
+  "id": "kitchener-small-business-centre",
+  "name": "Waterloo Region Small Business Centre",
+  "reason": "no working source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-pacific-mall-anime",
+  "name": "Anime & Game Shops — Pacific Mall",
+  "reason": "no working source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-cafe-central-park",
+  "name": "Cafe at the Civic Centre",
+  "reason": "no source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-dim-sum-crawl",
+  "name": "Dim Sum Crawl — Highway 7 Corridor",
+  "reason": "no source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-hk-cafe",
+  "name": "Hong Kong–Style Café Row",
+  "reason": "no source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-employment-hub",
+  "name": "Markham Employment & Business Centre",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "markham",
+  "id": "markham-newcomer-programs",
+  "name": "Markham Newcomer Settlement Programs",
+  "reason": "no working source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-night-market",
+  "name": "Markham Night Market",
+  "reason": "no source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-dance-studio-district",
+  "name": "Markham School of Dance",
+  "reason": "no working source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-town-centre-library",
+  "name": "Markham Town Centre Library",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "markham",
+  "id": "markham-milliken-mills-library",
+  "name": "Milliken Mills Library",
+  "reason": "no working source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-bouldering-cornell",
+  "name": "Rockhouse Climbing — Markham",
+  "reason": "no source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-salvation-army-thrift",
+  "name": "Salvation Army Thrift Store",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "markham",
+  "id": "markham-vintage-pacific-mall",
+  "name": "Thrift & Vintage Finds — Milliken Area",
+  "reason": "no source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-unionville-festival",
+  "name": "Unionville Festival",
+  "reason": "no working source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-unionville-mural-walk",
+  "name": "Unionville Mural & Public Art Walk",
+  "reason": "no source found"
+ },
+ {
+  "city": "markham",
+  "id": "markham-value-village-steeles",
+  "name": "Value Village",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "markham",
+  "id": "markham-ymca-pan-am",
+  "name": "YMCA of Greater Toronto — Markham",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-adult-literacy",
+  "name": "Adult Literacy York Region",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-allegra-dance",
+  "name": "Allegra School of Dance",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-art-in-park",
+  "name": "Art in the Park — Fairy Lake (Summer Event)",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-breadcrumbs-pastry",
+  "name": "Breadcrumbs Bakery & Café",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-mindfulness-studio",
+  "name": "Breathing Space Meditation Centre",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-canada-day",
+  "name": "Canada Day at Riverwalk Commons",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-diabetes-clothesline",
+  "name": "Canadian Diabetes Society Clothesline",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-reading-group",
+  "name": "Community Book Clubs at Newmarket Library",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-hip-hop-class",
+  "name": "Community Hip-Hop Fundamentals",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-community-living",
+  "name": "Community Living York South",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-community-living-thrift",
+  "name": "Community Living York South Thrift Shoppe",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-screen-print",
+  "name": "Community Screen Print Nights",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-tax-clinic",
+  "name": "Community Volunteer Income Tax Program",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-woodworking-workshop",
+  "name": "Community Woodworking Workshop",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-culture-coffee",
+  "name": "Culture Coffee & Craft",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-dance-smart",
+  "name": "Dance Smart Studio",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-davis-diner",
+  "name": "Davis Drive Diner",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-distress-centre",
+  "name": "Distress Centre York Region",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-doors-open",
+  "name": "Doors Open Newmarket",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-pottery-studio",
+  "name": "Earth & Kiln Community Pottery",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-el-camino-mexican",
+  "name": "El Camino Mexican Grill",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "epoch-coffee-newmarket",
+  "name": "Epoch Coffee",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-disc-golf",
+  "name": "Fairy Lake Disc Golf (Informal Course)",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-fairy-lake-kayak",
+  "name": "Fairy Lake Paddle Launch",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-fit4less",
+  "name": "Fit4Less Newmarket",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-yoga-in-park",
+  "name": "Free Outdoor Yoga at Fairy Lake",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-good-earth-cafe",
+  "name": "Good Earth Coffeehouse",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-goodwill",
+  "name": "Goodwill Newmarket",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-grief-support",
+  "name": "Grief Support Group — Southlake Area",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-restore",
+  "name": "Habitat for Humanity ReStore — York",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-restore-habitat",
+  "name": "Habitat for Humanity York ReStore",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-habesha-ethiopian",
+  "name": "House of Habesha Ethiopian Restaurant",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-jerusalem-grill",
+  "name": "Jerusalem Middle Eastern Grill",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-library-digital-hub",
+  "name": "Library Digital Learning Hub",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-lions-park",
+  "name": "Lions Park",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "main-street-newmarket",
+  "name": "Main Street Historic District",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-main-kitchen-bar",
+  "name": "Main Street Kitchen & Bar",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-live-music-series",
+  "name": "Main Street Live Music Series",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-mural-arts-trail",
+  "name": "Main Street Mural Trail",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-open-mic-scene",
+  "name": "Main Street Open Mic Circuit",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-mill-pond-park",
+  "name": "Mill Pond Park",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-music-together",
+  "name": "Music Together Newmarket",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-aquafit-programs",
+  "name": "Newmarket Aquafit Drop-In",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-artworks-gallery",
+  "name": "Newmarket Artworks — Town Hall Gallery",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-badminton-club",
+  "name": "Newmarket Badminton Club",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-brewing-company",
+  "name": "Newmarket Brewing Company",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-community-choir",
+  "name": "Newmarket Community Choir",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-concert-band",
+  "name": "Newmarket Community Concert Band",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-cultural-centre",
+  "name": "Newmarket Cultural Centre",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-volleyball-dropin",
+  "name": "Newmarket Drop-In Volleyball",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-era-centre",
+  "name": "Newmarket Era Centre",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-friendship-circle",
+  "name": "Newmarket International Friendship Club",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-jazz-blues-festival",
+  "name": "Newmarket Jazz & Blues Festival",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-library-makerspace",
+  "name": "Newmarket Library Maker Space",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-mens-shed",
+  "name": "Newmarket Men's Shed",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-minor-baseball",
+  "name": "Newmarket Minor Baseball",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-newcomers-centre",
+  "name": "Newmarket Newcomers Services",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-night-market-pop",
+  "name": "Newmarket Night Market (Seasonal Pop-Up)",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-outdoor-pool",
+  "name": "Newmarket Outdoor Pool",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-lacrosse-club",
+  "name": "Newmarket Panthers Lacrosse",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-photography-club",
+  "name": "Newmarket Photography Club",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-popup-vintage-market",
+  "name": "Newmarket Pop-Up Vintage Market",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-ribfest",
+  "name": "Newmarket Ribfest",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-running-club",
+  "name": "Newmarket Running Club",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-seniors-programs",
+  "name": "Newmarket Seniors Programs",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-skate-park",
+  "name": "Newmarket Skate Park",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-toastmasters",
+  "name": "Newmarket Toastmasters",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-trail-network",
+  "name": "Newmarket Trail Network",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-outdoor-sketching",
+  "name": "Newmarket Urban Sketchers",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-watercolour-society",
+  "name": "Newmarket Watercolour Society",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-winter-market",
+  "name": "Newmarket Winter Market",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-yoga-collective",
+  "name": "Newmarket Yoga Collective",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-youth-choir",
+  "name": "Newmarket Youth Choir",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-osmow-shawarma",
+  "name": "Osmow's Shawarma",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-food-bank",
+  "name": "Our Daily Bread Food Bank",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-peer-support",
+  "name": "Peer Support York Region",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-perk-page",
+  "name": "Perk & Page",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-pho-kim",
+  "name": "Pho Kim Vietnamese Restaurant",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "pho-99-newmarket",
+  "name": "Phở 99 Vietnamese Restaurant",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-pickering-bend-trail",
+  "name": "Pickering Bend Trail Loop",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-pressed-coffee",
+  "name": "Pressed Coffee Bar",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-riverwalk-running-path",
+  "name": "Riverwalk Commons River Path",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-riverwalk-skating",
+  "name": "Riverwalk Commons Skating",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-saffron-persian",
+  "name": "Saffron Persian Kitchen",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-salsa-social",
+  "name": "Salsa & Bachata Social Dancing",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-salvation-army-programs",
+  "name": "Salvation Army Newmarket Community Programs",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-sea-salt-fish-chips",
+  "name": "Sea Salt Fish & Chips",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-vintage-mainst",
+  "name": "Second Chapter Vintage",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-continuing-education",
+  "name": "Seneca Newmarket Campus — Continuing Education",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-service-ontario",
+  "name": "ServiceOntario Centre — Newmarket",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-siam-thai",
+  "name": "Siam Thai Kitchen",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "soundcheck-music-newmarket",
+  "name": "Soundcheck Music — Open Mic Nights",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "spectrum-of-hope-thrift",
+  "name": "Spectrum of Hope Thrift Store",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-steep-tea-house",
+  "name": "Steep Tea House",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-stitch-chat",
+  "name": "Stitch & Chat — Community Knitting Circle",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-play-studio-arts",
+  "name": "Studio Arts Newmarket",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-drum-circle",
+  "name": "Summer Drum Circle at Fairy Lake",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-bouldering-gym",
+  "name": "Summit Climbing — Newmarket",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-indie-cafe-mainst",
+  "name": "The Belfry Café",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-breadsmith-bakery",
+  "name": "The Breadsmith Artisan Bakery",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-commons-cowork",
+  "name": "The Commons — Community Co-working",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-cork-wine-bar",
+  "name": "The Cork Wine Bar",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-harvest-table",
+  "name": "The Harvest Table",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "the-old-firehall-community-arts",
+  "name": "The Old Firehall — Community Arts Hub",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-art-studio-main",
+  "name": "The Studio on Main — Mixed Media Art",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-workshop-coworking",
+  "name": "The Workshop Coworking Space",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-value-village",
+  "name": "Value Village — Newmarket",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-vintage-thread",
+  "name": "Vintage Thread Consignment",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-ymca-employment",
+  "name": "YMCA Employment Services Newmarket",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-harmony-chorus",
+  "name": "York Harmony Barbershop Chorus",
+  "reason": "no source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-york-arts-council",
+  "name": "York Region Arts Council",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "york-region-community-services",
+  "name": "York Region Community Services Hub",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-financial-literacy",
+  "name": "York Region Financial Empowerment Programs",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-york-region-forest",
+  "name": "York Region Forest — Bogarttown Tract",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-mental-health-walkin",
+  "name": "York Region Mental Health Walk-In Clinic",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-minor-hockey",
+  "name": "York Region Minor Hockey Association",
+  "reason": "no working source found"
+ },
+ {
+  "city": "newmarket",
+  "id": "newmarket-rent-bank",
+  "name": "York Region Rent Bank",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-plant-shop",
+  "name": "Greenhouse & Independent Plant Shops",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-mental-health-programs",
+  "name": "Halton Community Mental Health Programs",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-halton-employment",
+  "name": "Halton Employment Services — Oakville",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-halton-financial-support",
+  "name": "Halton Region Financial Support Programs",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-korean-hot-pot",
+  "name": "Hot Pot & Korean BBQ — North Oakville",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-cafe-espresso",
+  "name": "Independent Cafes — Downtown Oakville",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-kerr-village-vintage",
+  "name": "Kerr Village Vintage & Indie Shopping",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-outdoor-cinema",
+  "name": "Movies Under the Stars — Oakville",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-community-garden",
+  "name": "Oakville Community Gardens",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-music-school",
+  "name": "Oakville Music School",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-newcomer-centre",
+  "name": "Oakville Newcomer Connections",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-ribfest",
+  "name": "Oakville Ribfest",
+  "reason": "link failed (0)"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-community-dance",
+  "name": "Oakville School of Dance",
+  "reason": "no working source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-salvation-army-thrift",
+  "name": "Salvation Army Thrift Store — Oakville",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-sixteen-mile-graffiti",
+  "name": "Sixteen Mile Creek Trail Art",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-bouldering-gym",
+  "name": "Stone Factory Climbing — Oakville",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-indie-bookshop",
+  "name": "The Book Shelf — Independent Books",
+  "reason": "no source found"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-value-village",
+  "name": "Value Village — Oakville",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "oakville",
+  "id": "oakville-ymca",
+  "name": "YMCA of Hamilton/Burlington/Brantford — Oakville",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-atelier-coffee",
+  "name": "Atelier Coffee & Studio",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-bouldering",
+  "name": "Basecamp Climbing — Richmond Hill",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-bhangra-dance",
+  "name": "Bhangra & Bollywood Dance Academy",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-bubble-tea-row",
+  "name": "Bubble Tea Row — Times Square Plaza",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "cafe-1842",
+  "name": "Café 1842",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-canada-day-mill-pond",
+  "name": "Canada Day Celebration at Mill Pond",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-church-rummage",
+  "name": "Community Church Rummage & Garage Sales",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "community-living-york-south",
+  "name": "Community Living York South",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-craft-circle",
+  "name": "Community Stitch & Craft Circle",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-free-tax-clinic",
+  "name": "Community Volunteer Income Tax Program",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-therapeutic-art",
+  "name": "Creative Healing Art Therapy Studio",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-dog-park-community",
+  "name": "Dog Park Community — Lake Wilcox Off-Leash Area",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-outdoor-skating",
+  "name": "Free Outdoor Skating — Richmond Hill Rinks",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-free-tennis-courts",
+  "name": "Free Tennis Courts — Richmond Hill Parks",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-garden-tea-house",
+  "name": "Garden Tea House",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-goodwill-langstaff",
+  "name": "Goodwill Thrift Store — Langstaff",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-grief-support",
+  "name": "Grief & Loss Support Group — Richmond Hill",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-guitar-collective",
+  "name": "Guitar & Ukulele Collective",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "heritage-square-food-hall",
+  "name": "Heritage Square Food Hall",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-gospel-choir",
+  "name": "Hope Community Gospel Choir",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-hotpot-strip",
+  "name": "Hotpot Alley — Times Square Area",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-housing-help",
+  "name": "Housing Help Centre — York Region",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-kpop-dance-studio",
+  "name": "K-Pop & Contemporary Dance Studio",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-korean-bbq-strip",
+  "name": "Korean BBQ Strip — Highway 7 East",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-english-language-programs",
+  "name": "LINC — Language Instruction for Newcomers",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-levant-cafe",
+  "name": "Levant Café & Bakery",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-kids-consignment",
+  "name": "Little Sprouts Kids Consignment",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-plant-shop",
+  "name": "Local Roots Plant Co.",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-lunar-new-year-festival",
+  "name": "Lunar New Year Festival — Richmond Hill",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-lantern-festival",
+  "name": "Mid-Autumn Lantern Festival at Mill Pond",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-mindful-yoga",
+  "name": "Mindful Living Yoga & Wellness Centre",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-movies-under-stars",
+  "name": "Movies Under the Stars",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-music-together-rh",
+  "name": "Music Together York Region",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-micro-enterprise-support",
+  "name": "Newcomer Micro-Enterprise Support Program",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-oak-ridges-swap",
+  "name": "Oak Ridges Community Swap Shop",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-disc-golf-oak-ridges",
+  "name": "Oak Ridges Disc Golf Course",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-moraine-trail-network",
+  "name": "Oak Ridges Moraine Trail Network",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "markham-stouffville-hospital-wellness",
+  "name": "Oak Valley Health — Community Mental Health",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-open-mic-night",
+  "name": "Open Mic Night — Local Venues",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-persian-supermarket",
+  "name": "Persian Supermarket & Bakery — Yonge Corridor",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "press-coffee-richmond-hill",
+  "name": "Press Coffee",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-antique-market",
+  "name": "Richmond Hill Antique & Collectibles Market",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-mosaic-project",
+  "name": "Richmond Hill Community Mosaic Project",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-farmers-market",
+  "name": "Richmond Hill Farmers' Market",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-holiday-market",
+  "name": "Richmond Hill Holiday Market",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-multicultural-festival",
+  "name": "Richmond Hill Multicultural Festival",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-newcomer-hub",
+  "name": "Richmond Hill Newcomer Hub",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-piano-academy",
+  "name": "Richmond Hill Piano Academy",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-printmaking-workshop",
+  "name": "Richmond Hill Printmaking Workshops",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-spring-art-show",
+  "name": "Richmond Hill Spring Art Show",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-mural-trail",
+  "name": "Richmond Hill Street Mural Walk",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-winter-farmers-market",
+  "name": "Richmond Hill Winter Farmers' Market",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-board-game-cafe",
+  "name": "Roll & Brew — Board Game Café",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "roots-studio-ceramics",
+  "name": "Roots Studio — Community Ceramics",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-salsa-sundays",
+  "name": "Salsa Sundays — Social Dance Night",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-salvation-army-thrift",
+  "name": "Salvation Army Thrift Store — Richmond Hill",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-sketch-night",
+  "name": "Sketch Night — Richmond Hill",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-drop-in-centre",
+  "name": "Southlake Community Health Centre",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-teastea-cafe",
+  "name": "Tea&Tea — Times Square Plaza",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-breathing-room",
+  "name": "The Breathing Room — Meditation & Mindfulness",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-the-common-cowork",
+  "name": "The Common — Co-Working & Creative Space",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-nature-therapy-walks",
+  "name": "Therapeutic Nature Walk Program",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-urban-roots-vintage",
+  "name": "Urban Roots Vintage & Resale",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-pho-strip",
+  "name": "Vietnamese Pho & Noodle Strip — Yonge Corridor",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "richmond-hill-vintage-exchange",
+  "name": "Vintage Exchange RH",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "viva-dance-studios",
+  "name": "Viva Dance Studios",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-walk-in-counselling",
+  "name": "Walk-In Counselling Clinic — York Region",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-weekend-dim-sum",
+  "name": "Weekend Dim Sum — Highway 7 East",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "ymca-richmond-hill",
+  "name": "YMCA of Greater Toronto — Richmond Hill",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "york-region-employment-centre",
+  "name": "York Region Employment Centre",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-york-region-financial-support",
+  "name": "York Region Financial Assistance Programs",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-york-food-network",
+  "name": "York Region Food Network",
+  "reason": "no working source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-peer-support-network",
+  "name": "York Region Peer Support Network",
+  "reason": "no source found"
+ },
+ {
+  "city": "richmond-hill",
+  "id": "rh-youth-zone",
+  "name": "Youth Zone Richmond Hill",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-bouldering-gym",
+  "name": "Beta Boulders — Vaughan",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-disc-golf-boyd",
+  "name": "Boyd Conservation Disc Golf",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-coffee-culture-woodbridge",
+  "name": "Café culture in Woodbridge",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-recreation-programs",
+  "name": "City of Vaughan Recreation Programs",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-vintage-concord",
+  "name": "Concord Vintage Market",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-dance-vaughan",
+  "name": "Dance Vaughan",
+  "reason": "no working source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-humber-arboretum",
+  "name": "Humber Arboretum",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-woodbridge-italian-bakery",
+  "name": "Italian Bakery Row — Woodbridge",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-kleinburg-mural-trail",
+  "name": "Kleinburg Village Art Walk",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-craft-beer-local",
+  "name": "Local Brewery Taproom — Vaughan",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-mackenzie-health-wellness",
+  "name": "Mackenzie Health Wellness Programs",
+  "reason": "no working source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-maple-community-centre",
+  "name": "Maple Community Centre",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-mcmichael-gallery",
+  "name": "McMichael Canadian Art Collection",
+  "reason": "closed for a rebuild until 2029"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-ontario-works-newcomer",
+  "name": "Newcomer Centre of Peel — Vaughan",
+  "reason": "no working source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-mills-pop-culture",
+  "name": "Pop Culture & Geek Shops — Vaughan Mills",
+  "reason": "no working source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-salvation-army-woodbridge",
+  "name": "Salvation Army Thrift Store — Woodbridge",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-thornhill-community-centre",
+  "name": "Thornhill Community Centre",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-value-village-maple",
+  "name": "Value Village — Maple",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-canada-day-festival",
+  "name": "Vaughan Canada Day Festival",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-employment-centre",
+  "name": "Vaughan Employment Centre",
+  "reason": "no working source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-night-market-event",
+  "name": "Vaughan Night Market (Pop-Up)",
+  "reason": "no source found"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-emily-carr-secondary",
+  "name": "Vaughan Public Art Trail",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "vaughan",
+  "id": "vaughan-sports-dome",
+  "name": "Vaughan Sports Dome",
+  "reason": "details could not be confirmed"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-columbia-lake-trail",
+  "name": "Columbia Lake & Trail Area (UW Campus)",
+  "reason": "no working source found"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-kw-symphony-community",
+  "name": "KW Symphony — Free and Community Events",
+  "reason": "no working source found"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-mary-allen-garden",
+  "name": "Mary Allen Neighbourhood / Community Programming",
+  "reason": "no working source found"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-smile-tiger-coffee",
+  "name": "Smile Tiger Coffee",
+  "reason": "no working source found"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-uptown-jazz-festival",
+  "name": "Uptown Waterloo Jazz Festival",
+  "reason": "no working source found"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-waterloo-brewing",
+  "name": "Waterloo Brewing Taproom",
+  "reason": "no working source found"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-busker-carnival",
+  "name": "Waterloo Busker Carnival",
+  "reason": "no working source found"
+ },
+ {
+  "city": "waterloo",
+  "id": "waterloo-farmers-market",
+  "name": "Waterloo Farmers' Market",
+  "reason": "no working source found"
+ }
+]

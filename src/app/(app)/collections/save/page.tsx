@@ -31,7 +31,7 @@ export default async function SavePlacePage(props: PageProps<"/collections/save"
   const back = `/places/${place.id}`;
 
   return (
-    <div className="mx-auto max-w-xl px-5 pt-4 sm:px-8 lg:pt-8">
+    <div className="page-frame reading pt-8">
       <Link
         href={back as Route}
         className="mb-5 inline-flex items-center gap-1.5 text-meta font-semibold text-text-muted quiet-link"
@@ -39,7 +39,7 @@ export default async function SavePlacePage(props: PageProps<"/collections/save"
         <Icon icon={ArrowLeft} size={16} />
         Back to {place.name}
       </Link>
-      <h1 className="text-section font-semibold tracking-tight">Save {place.name}</h1>
+      <h1 className="page-title">Save {place.name}</h1>
 
       {choices.length > 0 && (
         <Card as="form" action={saveToCollectionsAction} className="mt-6 grid gap-4 p-5">
@@ -50,7 +50,7 @@ export default async function SavePlacePage(props: PageProps<"/collections/save"
             {choices.map((c) => (
               <label
                 key={c.id}
-                className="flex min-h-11 items-center gap-3 rounded-2xl border border-divider bg-surface-solid/70 px-3.5"
+                className="flex min-h-11 items-center gap-3 rounded-card border border-divider bg-surface-solid/70 px-3.5"
               >
                 <input
                   type="checkbox"

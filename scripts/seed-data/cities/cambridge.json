@@ -4,26 +4,39 @@
   "province": "Ontario",
   "country": "Canada",
   "tagline": "Three historic downtowns along the Grand and Speed rivers, and 900 acres of protected urban nature reserve",
-  "heroDescription": "Cambridge was formed in 1973 from three distinct former towns — Galt, Preston, and Hespeler — each with its own historic core and character. The Galt district is the most striking: a riverside neighbourhood of Victorian limestone buildings along the Speed River that has become one of Ontario's best-preserved heritage townscapes. The Grand River and Speed River meet here, and the trail network along both waterways is extensive and free. Cambridge is also home to the Rare Charitable Research Reserve, 900 acres of protected urban watershed land that functions as a genuine nature reserve embedded in the city. The Cambridge Butterfly Conservatory is one of the few tropical butterfly gardens in Canada. Film crews use Galt regularly for its period streetscapes. It's a city that rewards slowing down.",
+  "heroDescription": "Cambridge was formed in 1973 from three distinct former towns — Galt, Preston, and Hespeler — each with its own historic core and character. The Galt district is the most striking: a riverside neighbourhood of Victorian limestone buildings along the Grand River. The Grand River and Speed River meet here, and the trail network along both waterways is extensive and free. Cambridge is also home to the Rare Charitable Research Reserve, 900 acres of protected urban watershed land that functions as a genuine nature reserve embedded in the city. The Cambridge Butterfly Conservatory is one of the few tropical butterfly gardens in Canada. Film crews use Galt regularly for its period streetscapes. It's a city that rewards slowing down.",
   "lat": 43.3601,
   "lng": -80.3124,
-  "contributors": ["CityRoots Community"],
-  "lastUpdated": "2026-06-29",
+  "contributors": [
+    "CityRoots Community",
+    "Public library calendars",
+    "Statistics Canada Open Licence"
+  ],
+  "lastUpdated": "2026-11-06",
   "places": [
     {
       "id": "cambridge-rare-reserve",
       "name": "Rare Charitable Research Reserve",
       "type": "place",
       "category": "physical",
-      "tags": ["nature reserve", "trails", "free", "birding", "wetlands", "urban nature", "niche", "year-round"],
+      "tags": [
+        "nature reserve",
+        "trails",
+        "free",
+        "birding",
+        "wetlands",
+        "urban nature",
+        "niche",
+        "year-round"
+      ],
       "cost": "free",
       "address": "1 Bobolink Rd, Cambridge, ON N1T 2J1",
       "neighborhood": "South Cambridge",
       "lat": 43.3789,
       "lng": -80.3584,
-      "website": "https://www.rarecharity.ca",
+      "website": "https://raresites.org",
       "hours": "Open year-round; parking lot gate hours vary seasonally",
-      "description": "One of the most remarkable free natural spaces in Ontario — 900 acres of protected urban watershed land embedded within Cambridge. Rare is a charitable research reserve managing Carolinian forest, wetlands, meadows, and Grand River floodplain. A network of unpaved trails runs through the property. The biodiversity is exceptional by any measure: over 200 bird species recorded, rare plant communities, and one of the only urban old-growth forest patches in southern Ontario. This is not a manicured park — it functions as a genuine nature reserve that happens to be within the city.",
+      "description": "A free natural space with 900 acres of protected urban watershed land embedded within Cambridge. Rare is a charitable research reserve managing Carolinian forest, wetlands, meadows, and Grand River floodplain. A network of unpaved trails runs through the property. The biodiversity is exceptional by any measure: over 200 bird species recorded, rare plant communities, and one of the only urban old-growth forest patches in southern Ontario. This is not a manicured park — it functions as a genuine nature reserve that happens to be within the city.",
       "highlights": [
         "900 acres of protected natural land within the city — one of the largest urban reserves in Ontario",
         "Over 200 bird species recorded — exceptional for spring migration (warblers, shorebirds, raptors)",
@@ -34,23 +47,30 @@
       "why": "Spring migration at Rare (late April to late May) is one of the best birding experiences available within 90 minutes of Toronto. Arrive at first light for the peak activity. Trail conditions can be muddy — wear appropriate footwear. Dogs must be leashed.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-butterfly-conservatory",
       "name": "Cambridge Butterfly Conservatory",
       "type": "place",
       "category": "physical",
-      "tags": ["butterfly", "conservatory", "tropical", "family", "seasonal", "nature", "indoor"],
+      "tags": [
+        "butterfly",
+        "conservatory",
+        "tropical",
+        "family",
+        "seasonal",
+        "nature",
+        "indoor"
+      ],
       "cost": "low",
       "costNote": "Adult admission ~$14–16; children $8–10; family rates available",
       "address": "2500 Kossuth Rd, Cambridge, ON N3H 4R7",
       "neighborhood": "North Dumfries",
       "lat": 43.3914,
-      "lng": -80.3640,
+      "lng": -80.364,
       "website": "https://www.cambridgebutterfly.com",
-      "hours": "Daily 10am–5pm; extended summer hours; closed select holidays",
-      "description": "One of Canada's few tropical butterfly conservatories — a large glass-enclosed greenhouse filled with over 2,000 free-flying tropical butterflies from Central and South America, Africa, and Asia. The climate inside is warm and humid year-round, making it particularly appealing in the colder months. The Koi pond, waterfalls, and exotic plants add to the setting. A genuinely unusual experience for the region.",
+      "description": "One of Canada's few tropical butterfly conservatories — a large glass-enclosed greenhouse filled with over 2,000 free-flying tropical butterflies from Central and South America, Africa, and Asia. The climate inside is warm and humid year-round, making it particularly appealing in the colder months. The Koi pond, waterfalls, and exotic plants add to the setting. An unusual experience for the region.",
       "highlights": [
         "2,000+ free-flying tropical butterflies in a fully enclosed tropical greenhouse",
         "Warm year-round — ideal for winter visits when outdoor options are limited",
@@ -61,20 +81,29 @@
       "why": "Late winter visits (January to March) when you need tropical warmth are particularly worthwhile — the conservatory is less crowded and the contrast with outside is more dramatic. Go at opening time to see butterflies at their most active.",
       "isFree": false,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-riverside-park",
       "name": "Riverside Park",
       "type": "place",
       "category": "physical",
-      "tags": ["park", "river", "trails", "free", "year-round", "family", "picnic", "Grand River"],
+      "tags": [
+        "park",
+        "river",
+        "trails",
+        "free",
+        "year-round",
+        "family",
+        "picnic",
+        "Grand River"
+      ],
       "cost": "free",
       "address": "Riverside Park Rd, Cambridge, ON N1R 7V4",
       "neighborhood": "Preston",
       "lat": 43.3683,
       "lng": -80.3184,
-      "website": "https://www.cambridge.ca/parks",
+      "website": "https://www.cambridge.ca/recreation-culture/parks-trails-conservation/parks/",
       "hours": "Open year-round",
       "description": "A large riverside park in the Preston area of Cambridge along the Grand River. The park has picnic areas, a bandshell used for free summer concerts, sports fields, and walking trails along the river's edge. The Grand River is wide and scenic through this stretch. Quieter than downtown Galt green spaces, with more room to spread out. The Mill Race Folk Music Festival takes place in this park annually.",
       "highlights": [
@@ -87,20 +116,29 @@
       "why": "This is the park most Cambridge residents think of for summer afternoons — quiet on weekday mornings, animated on summer weekends. The riverside trail heading south from the park is the most scenic stretch.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-grand-river-paddling",
       "name": "Grand River Paddling — Cambridge Access Points",
       "type": "place",
       "category": "physical",
-      "tags": ["paddling", "canoe", "kayak", "Grand River", "outdoor", "low-cost", "seasonal", "nature"],
+      "tags": [
+        "paddling",
+        "canoe",
+        "kayak",
+        "Grand River",
+        "outdoor",
+        "low-cost",
+        "seasonal",
+        "nature"
+      ],
       "cost": "low",
       "costNote": "Public launch points free; canoe/kayak rentals available from local outfitters",
       "address": "Various launch points: Soper Park, Cambridge, ON",
       "neighborhood": "Multiple",
-      "lat": 43.3640,
-      "lng": -80.3210,
+      "lat": 43.364,
+      "lng": -80.321,
       "website": "https://www.grandriver.ca",
       "hours": "Seasonal — spring ice-out through October",
       "description": "The Grand River through Cambridge offers some of the most accessible flatwater paddling in the Region. Multiple free public launch points — including Soper Park and near the Speed River confluence — allow canoe and kayak access without a fee. The river through central Cambridge passes limestone bridges, heritage mill buildings, and the Galt historic district. Rentals available from local outfitters if you don't own a boat.",
@@ -116,22 +154,28 @@
       "isRecommended": false,
       "seasonal": true,
       "seasonNote": "Best spring through fall; river conditions vary with rainfall",
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-public-library",
       "name": "Cambridge Public Library — Main Branch",
       "type": "place",
       "category": "mental",
-      "tags": ["library", "free", "reading", "digital resources", "quiet space", "programming"],
+      "tags": [
+        "library",
+        "free",
+        "reading",
+        "digital resources",
+        "quiet space",
+        "programming"
+      ],
       "cost": "free",
       "address": "1 North Square, Cambridge, ON N1S 2K6",
       "neighborhood": "Downtown Galt",
       "lat": 43.3605,
       "lng": -80.3087,
-      "website": "https://www.cambridgelibraries.ca",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–6pm, Sun 1–5pm",
-      "description": "The main branch of the Cambridge library system, located in the historic downtown Galt core. Well-resourced with a strong local history collection on the Galt-Preston-Hespeler districts, digital resources, regular free programming, and a quiet reading environment. The Galt location means it's easily combined with a visit to Cambridge Galleries or the Sculpture Garden nearby.",
+      "website": "https://cambridgepl.ca",
+      "description": "The main branch of the Cambridge library system, located in the historic downtown Galt core. It has a strong local history collection on the Galt-Preston-Hespeler districts, digital resources, regular free programming, and a quiet reading environment. The Galt location means it's easily combined with a visit to Cambridge Galleries or the Sculpture Garden nearby.",
       "highlights": [
         "Free access to books, digital resources, streaming, and databases",
         "Local history collection covering Galt, Preston, and Hespeler",
@@ -142,48 +186,28 @@
       "why": "The local history room has photographic and archival collections on the Cambridge/Galt/Preston/Hespeler communities that are not digitized elsewhere — worth visiting for anyone interested in regional history.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "cambridge-cpha-counselling",
-      "name": "Cambridge-North Dumfries Community Health Centre",
-      "type": "resource",
-      "category": "mental",
-      "tags": ["mental health", "counselling", "free", "community health", "low-income", "primary care"],
-      "cost": "free",
-      "address": "95 Fountain St N, Cambridge, ON N3H 4R6",
-      "neighborhood": "Preston",
-      "lat": 43.3795,
-      "lng": -80.3480,
-      "website": "https://www.cndchc.ca",
-      "hours": "Mon–Fri 8:30am–5pm; extended hours available",
-      "description": "A community health centre serving Cambridge and North Dumfries, providing primary care and mental health services to residents regardless of ability to pay. Mental health programs include counselling and social work support. CHCs operate on a patient-centred, sliding-scale model and prioritize serving people who face barriers to standard healthcare. No OHIP card required for all services.",
-      "highlights": [
-        "Mental health counselling and social work support at no cost",
-        "Primary care clinic for residents without a family doctor",
-        "Services available regardless of insurance or immigration status",
-        "Sliding-scale and free mental health programming",
-        "Community programs addressing social determinants of health"
-      ],
-      "why": "This is one of the most genuinely accessible healthcare and mental health resources in Cambridge. If you're without a family doctor or facing financial barriers to counselling, this is the place to start.",
-      "isFree": true,
-      "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-galleries",
-      "name": "Cambridge Galleries",
+      "name": "Cambridge Art Galleries",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["gallery", "free", "contemporary art", "public", "exhibitions", "downtown Galt"],
+      "tags": [
+        "gallery",
+        "free",
+        "contemporary art",
+        "public",
+        "exhibitions",
+        "downtown Galt"
+      ],
       "cost": "free",
       "address": "1 North Square, Cambridge, ON N1S 2K6",
       "neighborhood": "Downtown Galt",
       "lat": 43.3606,
       "lng": -80.3127,
-      "website": "https://www.cambridgegalleries.ca",
-      "hours": "Tue–Sat 11am–5pm; closed Sun–Mon",
-      "description": "Cambridge's free public art gallery, presenting rotating contemporary exhibitions in a beautiful heritage building in the downtown Galt core. The Main Gallery and Library Gallery rotate exhibitions throughout the year, with a focus on contemporary Canadian art and craft. Free admission, consistent programming quality, and a central location make this one of the most accessible arts resources in the city. The building shares space with the main library branch.",
+      "website": "https://cambridgepl.ca/cambridge-art-galleries",
+      "description": "Cambridge's free public art gallery, presenting rotating contemporary exhibitions in a beautiful heritage building in the downtown Galt core. The Main Gallery and Library Gallery rotate exhibitions throughout the year, with a focus on contemporary Canadian art and craft. Free admission, consistent programming quality, and a central location make this an easy arts outing. The building shares space with the main library branch.",
       "highlights": [
         "Free admission to all exhibitions year-round",
         "Rotating contemporary Canadian art in a heritage Galt building",
@@ -194,75 +218,29 @@
       "why": "Cambridge Galleries is seriously undervisited for the quality of its programming. Check the exhibition calendar — the shows are selected well. The gift shop has original works at much lower prices than urban galleries.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "cambridge-mcdougall-cottage",
-      "name": "McDougall Cottage Historic Site",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": ["heritage", "historic site", "Scottish heritage", "free", "craft", "museum", "niche"],
-      "cost": "free",
-      "address": "126 Water St N, Cambridge, ON N1R 3C4",
-      "neighborhood": "Downtown Galt",
-      "lat": 43.3609,
-      "lng": -80.3075,
-      "website": "https://www.cambridge.ca/mcdougallcottage",
-      "hours": "Seasonal — typically spring through fall; check website for hours",
-      "description": "A pre-Confederation cottage built in the 1850s and one of the few surviving examples of early Scottish settler architecture in Cambridge (then Galt). The site interprets the Scottish Highland immigrant community that shaped Galt's early identity — a different heritage lens than the German-Mennonite focus of Kitchener-Waterloo. Inside: period furnishings, weaving demonstrations, and historical exhibits on the Galt settlement. Free and genuinely informative.",
-      "highlights": [
-        "Pre-Confederation cottage built circa 1850 — one of Cambridge's oldest surviving structures",
-        "Interprets the Scottish Highland immigrant community that shaped early Galt",
-        "Weaving and textile craft demonstrations in season",
-        "Period furnishings and historical exhibits on life in 1850s Galt",
-        "Set in a riverside location near the Speed River"
-      ],
-      "why": "This is the complement to Joseph Schneider Haus in Kitchener — together they tell the story of the Region's two founding heritage streams. Visit on a day when weaving demonstrations are scheduled.",
-      "isFree": true,
-      "isRecommended": false,
-      "seasonal": true,
-      "seasonNote": "Open spring through fall — typically May to October",
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "cambridge-sculpture-garden",
-      "name": "Cambridge Sculpture Walk",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": ["public art", "sculpture", "free", "outdoor", "walking", "heritage core", "year-round"],
-      "cost": "free",
-      "address": "Downtown Galt, Main St and Water St area, Cambridge, ON",
-      "neighborhood": "Downtown Galt",
-      "lat": 43.3612,
-      "lng": -80.3128,
-      "website": "https://www.cambridge.ca",
-      "hours": "Outdoor, open year-round",
-      "description": "A collection of public sculptures and installations distributed through the downtown Galt heritage core and along the Speed River waterway. The sculptures are rotated periodically by the city and Cambridge Galleries, providing changing outdoor art without any admission cost. The walking circuit through the Galt stone-building core passes heritage architecture, riverside views, and artwork simultaneously — a genuinely good free hour.",
-      "highlights": [
-        "Rotating public sculptures in heritage downtown Galt",
-        "Walking circuit connects Speed River waterway and heritage streetscape",
-        "Free and accessible year-round — no need to plan around gallery hours",
-        "Curated with involvement from Cambridge Galleries",
-        "A natural starting point for exploring the Galt stone heritage district"
-      ],
-      "why": "The walk works best as part of a wider Galt circuit: start at the library/gallery, walk the sculpture route along Water St and the Speed River, and finish with coffee at The Cambridge Mill. Allow 90 minutes.",
-      "isFree": true,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-hamilton-family-theatre",
-      "name": "Hamilton Family Theatre Cambridge",
+      "name": "Hamilton Family Theatre",
       "type": "place",
       "category": "dance-music",
-      "tags": ["theatre", "live performance", "community", "dance", "music", "drama", "varies"],
+      "tags": [
+        "theatre",
+        "live performance",
+        "community",
+        "dance",
+        "music",
+        "drama",
+        "varies"
+      ],
       "cost": "varies",
       "costNote": "Tickets typically $20–45; student and community rates available",
       "address": "1 Main St, Cambridge, ON N1R 8J1",
       "neighborhood": "Downtown Galt",
       "lat": 43.3621,
       "lng": -80.3133,
-      "website": "https://hamiltonarts.ca",
+      "website": "https://www.draytonentertainment.com",
       "hours": "Box office and performance schedule varies — see website",
       "description": "Cambridge's main performing arts venue — a mid-sized theatre in the downtown Galt core presenting professional and community theatre productions, dance performances, touring music acts, and the Cambridge Symphony Orchestra. The venue has good acoustics and a comfortable layout. Student and community rush pricing available. The best option in Cambridge for a proper live performance evening.",
       "highlights": [
@@ -275,14 +253,22 @@
       "why": "The Hamilton Family Theatre is walkable from the Galt heritage core — plan dinner at The Cambridge Mill or a nearby restaurant before an evening show. Check for student rush tickets available day-of.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-live-in-the-park",
       "name": "Live in the Park — Free Summer Concerts",
       "type": "program",
       "category": "dance-music",
-      "tags": ["free concerts", "summer", "outdoor", "community", "family", "annual", "music"],
+      "tags": [
+        "free concerts",
+        "summer",
+        "outdoor",
+        "community",
+        "family",
+        "annual",
+        "music"
+      ],
       "cost": "free",
       "address": "Riverside Park, Cambridge, ON N1R 7V4",
       "neighborhood": "Preston",
@@ -290,7 +276,7 @@
       "lng": -80.3184,
       "website": "https://www.cambridge.ca/events",
       "hours": "Summer evenings; typically Thursday or Sunday evenings in July and August",
-      "description": "A free outdoor summer concert series held at Riverside Park's bandshell in Cambridge. Local and regional performers play to an open-air audience on warm summer evenings. No admission, no tickets — bring a chair or blanket and settle in. One of the most accessible free live music experiences in the city during summer months.",
+      "description": "A free outdoor summer concert series held at Riverside Park's bandshell in Cambridge. Local and regional performers play to an open-air audience on warm summer evenings. No admission, no tickets — bring a chair or blanket and settle in. Free live music in the city during the summer.",
       "highlights": [
         "Entirely free — no tickets, no admission",
         "Range of genres across the summer series",
@@ -298,72 +284,96 @@
         "Family-friendly atmosphere with food vendors often present",
         "Runs multiple times through July and August"
       ],
-      "why": "This is a genuinely local event — not a large-scale production, but real music in a park setting without any cost. Check the City of Cambridge events calendar in June for the summer schedule.",
+      "why": "This is a local event — not a large-scale production, but real music in a park setting without any cost. Check the City of Cambridge events calendar in June for the summer schedule.",
       "isFree": true,
       "isRecommended": false,
       "seasonal": true,
       "seasonNote": "Summer only — July and August",
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-farmers-market",
       "name": "Cambridge Farmers' Market",
       "type": "place",
       "category": "food-culture",
-      "tags": ["market", "local food", "produce", "baking", "Saturday", "year-round", "Galt"],
+      "tags": [
+        "market",
+        "local food",
+        "produce",
+        "baking",
+        "Saturday",
+        "year-round",
+        "Galt"
+      ],
       "cost": "low",
       "costNote": "Free to attend; purchases vary",
       "address": "Cambridge Market Square, 46 Dickson St, Cambridge, ON N1R 7A6",
       "neighborhood": "Downtown Galt",
       "lat": 43.3627,
-      "lng": -80.3150,
-      "website": "https://www.cambridge.ca/market",
-      "hours": "Year-round: Saturday 6:30am–1pm; some seasonal weekday dates",
+      "lng": -80.315,
+      "website": "https://www.cambridge.ca/recreation-culture/farmers-market/",
       "description": "A year-round farmers' market in downtown Galt with a mix of produce, baking, meat, cheese, and specialty vendors. The Saturday morning market has a long history in the Galt community and draws a loyal regular crowd. The indoor-outdoor format expands in summer. Less polished than the Kitchener Market but arguably more authentic in character — fewer tourists, more neighbourhood regulars.",
       "highlights": [
         "Year-round Saturday morning market in the historic Galt core",
         "Local produce, meats, fresh baking, and specialty food vendors",
         "Long-standing community market with neighbourhood regulars",
         "Indoor-outdoor format expands significantly in warmer months",
-        "Walkable from Cambridge Galleries and the Speed River waterway"
+        "Walkable from Cambridge Galleries and the Grand River waterway"
       ],
-      "why": "Early arrivals (before 8am) get the best selection of fresh bread and produce. The parking is easier than at Kitchener Market. A Saturday morning here followed by a walk along the Speed River is the best Cambridge introduction.",
+      "why": "Early arrivals (before 8am) get the best selection of fresh bread and produce. The parking is easier than at Kitchener Market. A Saturday morning here followed by a walk along the Grand River is the best Cambridge introduction.",
       "isFree": false,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-gaslight-district",
       "name": "The Gaslight District",
       "type": "place",
       "category": "food-culture",
-      "tags": ["food", "restaurant", "heritage", "community", "culture", "patios", "varies"],
+      "tags": [
+        "food",
+        "restaurant",
+        "heritage",
+        "community",
+        "culture",
+        "patios",
+        "varies"
+      ],
       "cost": "varies",
       "address": "1 Grand Ave S, Cambridge, ON N1S 2L3",
       "neighborhood": "Downtown Galt",
       "lat": 43.3614,
-      "lng": -80.3160,
-      "website": "https://www.thegaslightdistrict.com",
+      "lng": -80.316,
+      "website": "https://www.gaslightdistrict.ca",
       "hours": "Varies by venue — food and beverage open daily",
-      "description": "A mixed-use development in the historic Galt core that has brought restaurants, patios, and community programming to a series of revitalized heritage buildings near the Speed River. The district hosts a mix of food and drink options, outdoor events, and community markets throughout the year. The heritage industrial architecture — stone walls, exposed brick, river views — makes it one of the more atmospheric food and drink destinations in the Region.",
+      "description": "A mixed-use development in the historic Galt core that has brought restaurants, patios, and community programming to a series of revitalized heritage buildings near the Grand River. The district hosts a mix of food and drink options, outdoor events, and community markets throughout the year. The heritage industrial architecture — stone walls, exposed brick, river views — makes it one of the more atmospheric food and drink destinations in the Region.",
       "highlights": [
         "Multiple restaurants and food vendors in a heritage riverside setting",
-        "Outdoor patios with Speed River views in warm months",
+        "Outdoor patios with Grand River views in warm months",
         "Regular community events and weekend programming",
         "Accessible from downtown Galt on foot",
-        "Heritage stone and brick architecture that feels genuinely distinct from suburban alternatives"
+        "Heritage stone and brick architecture that feels distinct from suburban alternatives"
       ],
-      "why": "The patios along the Speed River in summer are the main draw. Weekday lunches are quieter — weekends draw larger crowds for the atmosphere. Check their events calendar for pop-up markets and live programming.",
+      "why": "The patios along the Grand River in summer are the main draw. Weekday lunches are quieter — weekends draw larger crowds for the atmosphere. Check their events calendar for pop-up markets and live programming.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-mill",
       "name": "The Cambridge Mill",
       "type": "place",
       "category": "cafes-spaces",
-      "tags": ["heritage", "riverside", "restaurant", "cafe", "brunch", "architecture", "niche", "moderate"],
+      "tags": [
+        "heritage",
+        "riverside",
+        "restaurant",
+        "cafe",
+        "brunch",
+        "architecture",
+        "niche",
+        "moderate"
+      ],
       "cost": "moderate",
       "costNote": "Brunch and lunch $18–30; dinner higher; reservations recommended",
       "address": "130 Water St N, Cambridge, ON N1R 3C4",
@@ -372,10 +382,10 @@
       "lng": -80.3143,
       "website": "https://www.cambridgemill.ca",
       "hours": "Wed–Sun for brunch and lunch; dinner service Fri–Sat; check website",
-      "description": "A restaurant and event space set in a beautifully restored 1830s stone grist mill directly on the Speed River in the heart of old Galt. The mill building — stone walls, timber beams, heritage machinery — is genuinely beautiful and one of the best-preserved heritage industrial spaces in Ontario. The food is contemporary Canadian. Expensive for a regular visit but one of the most architecturally distinctive dining experiences in the Region.",
+      "description": "A restaurant and event space set in a beautifully restored 1830s stone grist mill directly on the Grand River in the heart of old Galt. The mill building — stone walls, timber beams, heritage machinery — is beautiful. The food is contemporary Canadian. Expensive for a regular visit, but the building is the draw.",
       "highlights": [
         "Occupies an 1830s stone grist mill — one of the best heritage interiors in the Region",
-        "Set directly on the Speed River in the Galt historic district",
+        "Set directly on the Grand River in the Galt historic district",
         "Brunch menu is the most accessible price point",
         "Exceptional setting for a meal that doubles as an architectural visit",
         "Film crews regularly use the exterior for period productions"
@@ -383,47 +393,28 @@
       "why": "The Sunday brunch is more affordable than dinner and lets you experience the interior without the full dinner price. Make a reservation well in advance on weekends — the waterside tables book out fast.",
       "isFree": false,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "cambridge-stray-dog-coffee",
-      "name": "Stray Dog Coffee",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["coffee", "cafe", "local", "low-cost", "neighbourhood", "workspace"],
-      "cost": "low",
-      "address": "Cambridge, ON",
-      "neighborhood": "Cambridge",
-      "lat": 43.3601,
-      "lng": -80.3124,
-      "website": "https://www.straydogcoffee.ca",
-      "hours": "Mon–Fri 7am–5pm, Sat–Sun 8am–4pm",
-      "description": "A local independent coffee shop in Cambridge with a neighbourhood feel. Good espresso, relaxed atmosphere, and comfortable seating. One of the few independent cafe anchors outside of the Galt heritage core. A genuine third place for regulars in the area.",
-      "highlights": [
-        "Independent local cafe with a relaxed, neighbourhood atmosphere",
-        "Good espresso and drip coffee program",
-        "Comfortable seating for working or meeting",
-        "Outside the tourist circuit — more of a local regular spot",
-        "Consistent quality without the heritage-district pricing"
-      ],
-      "why": "This is the everyday local coffee option for Cambridge residents. Good for a quiet morning work session away from the busier Galt district.",
-      "isFree": false,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-mcc-thrift",
       "name": "MCC Thrift Store — Cambridge",
       "type": "place",
       "category": "thrifting",
-      "tags": ["thrift", "secondhand", "books", "clothing", "housewares", "low-cost", "Mennonite"],
+      "tags": [
+        "thrift",
+        "secondhand",
+        "books",
+        "clothing",
+        "housewares",
+        "low-cost",
+        "Mennonite"
+      ],
       "cost": "low",
       "address": "Cambridge, ON",
       "neighborhood": "Cambridge",
       "lat": 43.3601,
       "lng": -80.3124,
       "website": "https://www.mcccanada.ca/thrift",
-      "hours": "Mon–Sat 9am–5pm",
       "description": "The Cambridge branch of the Mennonite Central Committee thrift network. Consistently well-sorted, with good books, clothing, and housewares sections. Same quality standard as the Kitchener and Waterloo locations. Proceeds support international MCC programs. A reliable thrift stop worth visiting on its own merits.",
       "highlights": [
         "Well-curated stock with books, clothing, and kitchenware highlights",
@@ -435,21 +426,28 @@
       "why": "If you're visiting on a Saturday, pair this with a stop at the Cambridge Farmers' Market nearby. The housewares and kitchen sections are particularly worth checking.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-habitat-restore",
       "name": "Habitat for Humanity ReStore — Cambridge",
       "type": "place",
       "category": "thrifting",
-      "tags": ["thrift", "building materials", "hardware", "furniture", "home goods", "low-cost", "sustainability"],
+      "tags": [
+        "thrift",
+        "building materials",
+        "hardware",
+        "furniture",
+        "home goods",
+        "low-cost",
+        "sustainability"
+      ],
       "cost": "low",
       "address": "Cambridge, ON",
       "neighborhood": "Cambridge",
       "lat": 43.3601,
       "lng": -80.3124,
-      "website": "https://www.habitatwaterloo.ca/restore",
-      "hours": "Mon–Sat 9am–5pm",
+      "website": "https://www.habitatwr.ca",
       "description": "The Cambridge location of the Habitat for Humanity ReStore — a thrift store specializing in building materials, furniture, appliances, and home goods donated by homeowners and contractors. Excellent for hardware, lighting, doors, and home improvement materials at very low prices. Proceeds fund local Habitat homebuilds.",
       "highlights": [
         "Building materials: doors, windows, cabinets, lighting at low prices",
@@ -461,103 +459,27 @@
       "why": "Check the ReStore before buying new hardware or home furnishings. Inventory varies but the prices are hard to beat for functional items. Contractors sometimes donate full lots of surplus material.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "cambridge-mill-race-festival",
-      "name": "Mill Race Folk Music Festival",
-      "type": "event",
-      "category": "events",
-      "tags": ["folk music", "festival", "free", "community", "annual", "September", "outdoor", "niche"],
-      "cost": "free",
-      "address": "Riverside Park, Cambridge, ON N1R 7V4",
-      "neighborhood": "Preston",
-      "lat": 43.3683,
-      "lng": -80.3184,
-      "website": "https://www.millrace.ca",
-      "hours": "Annual September event — typically Labour Day weekend; check website",
-      "description": "One of Ontario's best and most underrated folk music festivals — a long-running annual event in Riverside Park that brings in Canadian and international folk, roots, and traditional music artists over a September weekend. The vast majority of the festival is free with some optional workshops and ticketed indoor shows. The outdoor main stage on the riverbank is one of the most pleasant festival settings in the Region.",
-      "highlights": [
-        "One of Ontario's longest-running folk music festivals — consistently excellent programming",
-        "Outdoor main stage at Riverside Park is largely free",
-        "Canadian and international folk, roots, bluegrass, Celtic, and world music",
-        "Optional workshops and indoor concerts available (ticketed)",
-        "Intimate community atmosphere — not a large commercial festival"
-      ],
-      "why": "This festival is genuinely one of the best free outdoor music events in the Region and is chronically underattended by people outside the folk community. The programming is serious and the setting is perfect. Labour Day weekend — mark the calendar.",
-      "isRecommended": true,
-      "isFree": true,
-      "seasonal": true,
-      "seasonNote": "Annual Labour Day weekend in September",
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "cambridge-doors-open",
-      "name": "Doors Open Cambridge",
-      "type": "event",
-      "category": "events",
-      "tags": ["heritage", "architecture", "free", "annual", "self-guided", "community", "niche"],
-      "cost": "free",
-      "address": "Various heritage sites across Cambridge",
-      "neighborhood": "Citywide",
-      "lat": 43.3606,
-      "lng": -80.3127,
-      "website": "https://www.cambridge.ca",
-      "hours": "Annual one-day event — typically spring or early summer; check website",
-      "description": "Cambridge's participation in the province-wide Doors Open Ontario program — a free annual event where significant heritage and architectural sites open their doors to the public. Cambridge's heritage building stock (particularly the limestone Galt core) makes this one of the more interesting Doors Open events in southwestern Ontario. Buildings typically closed to the public become accessible for one day. Free, self-guided.",
-      "highlights": [
-        "Free access to heritage and architectural sites typically closed to the public",
-        "The Galt limestone heritage district is among the best Doors Open destinations in southwestern Ontario",
-        "Self-guided format — visit at your own pace",
-        "Includes historic industrial, civic, religious, and residential buildings",
-        "Part of Doors Open Ontario — well-organized province-wide program"
-      ],
-      "why": "Cambridge's Doors Open is legitimately one of the province's better iterations of this program because the heritage building stock here is so strong. Check which specific buildings are on the list each year — some years include the mill buildings and factories that are otherwise off-limits.",
-      "isFree": true,
-      "isRecommended": false,
-      "seasonal": true,
-      "seasonNote": "Annual — typically spring or early summer",
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "cambridge-galt-neighbourhood-centre",
-      "name": "Galt Neighbourhood Centre",
-      "type": "place",
-      "category": "social",
-      "tags": ["community centre", "social programs", "free", "all ages", "drop-in", "events"],
-      "cost": "free",
-      "address": "Downtown Galt, Cambridge, ON",
-      "neighborhood": "Downtown Galt",
-      "lat": 43.3610,
-      "lng": -80.3130,
-      "website": "https://www.cambridge.ca/community",
-      "hours": "Varies by program — see Cambridge city website",
-      "description": "A community centre serving the Downtown Galt neighbourhood with drop-in programming, community events, social support connections, and accessible gathering spaces. Part of the City of Cambridge's network of neighbourhood community centres. Good entry point for new residents trying to connect with community programming and local services.",
-      "highlights": [
-        "Drop-in community programming and events",
-        "Connection to city social services and programs",
-        "Community gathering space accessible to all",
-        "Programs for families, seniors, youth, and newcomers",
-        "Neighbourhood hub for information on local events and services"
-      ],
-      "why": "New to Cambridge? This is a good first stop to understand what's available locally. The staff typically know the full landscape of community programming in the area.",
-      "isFree": true,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "cambridge-community-legal-aid",
       "name": "Community Legal Aid — Cambridge",
       "type": "resource",
       "category": "financial",
-      "tags": ["legal aid", "free", "tenant rights", "financial", "social assistance", "low-income"],
+      "tags": [
+        "legal aid",
+        "free",
+        "tenant rights",
+        "financial",
+        "social assistance",
+        "low-income"
+      ],
       "cost": "free",
       "address": "Cambridge, ON",
       "neighborhood": "Cambridge",
       "lat": 43.3601,
       "lng": -80.3124,
       "website": "https://www.wrcls.ca",
-      "hours": "Mon–Fri 9am–5pm; intake hours vary",
       "description": "Free legal services for low-income residents of Cambridge through the Waterloo Region Community Legal Services network. Covers housing and tenant law, social assistance appeals, employment insurance, and other legal matters affecting people with lower incomes. Intake through the WRCLS central office. No referral required — contact directly.",
       "highlights": [
         "Free legal advice and representation for qualifying residents",
@@ -569,7 +491,1938 @@
       "why": "Start with a phone call to determine if your situation falls within their mandate. Waiting times can vary — call early in the week and explain the urgency of your matter.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "cambridge-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "cambridge-kids-help-phone",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "cambridge-connexontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "211 Ontario",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "cambridge-211-ontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Community Volunteer Income Tax Program",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "cambridge-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Here 24/7",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://here247.ca",
+      "phone": "1-844-437-3247",
+      "description": "Free mental health and addiction crisis support for Waterloo Wellington, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "cambridge-here-24-7",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "The Food Bank of Waterloo Region",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.thefoodbank.ca",
+      "description": "Finds food support near you across Kitchener, Waterloo, and Cambridge through partner agencies.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "cambridge-the-food-bank-of-waterloo-region",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Cambridge Centre for the Arts",
+      "type": "place",
+      "category": "arts",
+      "cost": "varies",
+      "website": "https://www.cambridge.ca/recreation-culture/cambridge-centre-for-the-arts/",
+      "address": "60 Dickson St, Cambridge",
+      "description": "The City's arts centre with classes, a gallery, and a shop.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "costNote": "Gallery is free. Classes have fees.",
+      "id": "cambridge-cambridge-centre-for-the-arts",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Cambridge Summer Live",
+      "type": "event",
+      "category": "dance-music",
+      "cost": "free",
+      "website": "https://www.cambridge.ca/recreation-culture/events-festivals/cambridge-summer-live/",
+      "description": "Free summer concerts from the City of Cambridge.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "seasonal": true,
+      "seasonNote": "Summer",
+      "id": "cambridge-cambridge-summer-live",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Public skating",
+      "type": "program",
+      "category": "physical",
+      "cost": "low",
+      "website": "https://www.cambridge.ca/recreation-culture/sports/public-skating/",
+      "description": "Public skating times at City arenas in Cambridge.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "costNote": "Check the City's fee list.",
+      "id": "cambridge-public-skating",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Goose on the Grand",
+      "type": "event",
+      "category": "social",
+      "cost": "free",
+      "website": "https://www.cambridge.ca/recreation-culture/events-festivals/goose-on-the-grand/",
+      "description": "A City of Cambridge event on the Grand River.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "seasonal": true,
+      "seasonNote": "Check the City's site for dates",
+      "id": "cambridge-goose-on-the-grand",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-mcdougall-cottage",
+      "name": "McDougall Cottage Historic Site",
+      "type": "place",
+      "category": "arts-crafts",
+      "tags": [
+        "heritage",
+        "historic site",
+        "Scottish heritage",
+        "free",
+        "craft",
+        "museum",
+        "niche"
+      ],
+      "cost": "free",
+      "address": "89 Grand Ave S, Cambridge",
+      "neighborhood": "Downtown Galt",
+      "lat": 43.3609,
+      "lng": -80.3075,
+      "website": "https://www.regionofwaterloomuseums.ca/learn/learn-about-our-museums/",
+      "description": "A pre-Confederation cottage built in the 1850s and one of the few surviving examples of early Scottish settler architecture in Cambridge (then Galt). The site interprets the Scottish Highland immigrant community that shaped Galt's early identity — a different heritage lens than the German-Mennonite focus of Kitchener-Waterloo. Inside: period furnishings, weaving demonstrations, and historical exhibits on the Galt settlement. Free and informative.",
+      "highlights": [
+        "Pre-Confederation cottage built circa 1850 — one of Cambridge's oldest surviving structures",
+        "Interprets the Scottish Highland immigrant community that shaped early Galt",
+        "Weaving and textile craft demonstrations in season",
+        "Period furnishings and historical exhibits on life in 1850s Galt",
+        "Set in a riverside location near the Grand River"
+      ],
+      "why": "This is the complement to Joseph Schneider Haus in Kitchener — together they tell the story of the Region's two founding heritage streams. Visit on a day when weaving demonstrations are scheduled.",
+      "isFree": true,
+      "isRecommended": false,
+      "seasonal": true,
+      "seasonNote": "Open spring through fall — typically May to October",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-facility-clemens-mill-library",
+      "name": "Clemens Mill Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "library or archives"
+      ],
+      "cost": "free",
+      "lat": 43.3600536,
+      "lng": -80.3123023,
+      "website": "https://cambridgepl.ca",
+      "description": "A public library branch in Cambridge. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-facility-queens-square-library",
+      "name": "Queen's Square Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "library or archives"
+      ],
+      "cost": "free",
+      "address": "1 North Square, Cambridge",
+      "lat": 43.35946404,
+      "lng": -80.31801405,
+      "website": "https://cambridgepl.ca",
+      "description": "A public library branch in Cambridge. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-facility-ed-newland-pool",
+      "name": "Ed Newland Pool",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "pool"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in fee. Check the schedule.",
+      "address": "515 William St, Cambridge",
+      "lat": 43.39878755,
+      "lng": -80.35877829,
+      "website": "https://www.cambridge.ca/recreation-culture/pools-aquatics/",
+      "description": "A public pool in Cambridge. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-facility-george-hancock",
+      "name": "George Hancock",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "pool"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in fee. Check the schedule.",
+      "address": "115 Glenmorris St, Cambridge",
+      "lat": 43.34729,
+      "lng": -80.321642,
+      "website": "https://www.cambridge.ca/recreation-culture/pools-aquatics/",
+      "description": "A public pool in Cambridge. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-facility-john-dolson-centre-pool",
+      "name": "John Dolson Centre Pool",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "pool"
+      ],
+      "cost": "low",
+      "costNote": "Drop-in fee. Check the schedule.",
+      "address": "212 South St, Cambridge",
+      "lat": 43.353568,
+      "lng": -80.295468,
+      "website": "https://www.cambridge.ca/recreation-culture/pools-aquatics/",
+      "description": "A public pool in Cambridge. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "cambridge-event-next-in-fibre-fibreworks-2026-cambridge-public-library-queens-square",
+      "name": "Next In Fibre: Fibreworks 2026",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "1 North Square, Cambridge",
+      "website": "https://explorewaterloo.ca/event/next-in-fibre-fibreworks-2026/2026-11-06/",
+      "description": "At Cambridge Public Library, Queen's Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T05:00:00.000Z",
+        "2026-11-07T05:00:00.000Z",
+        "2026-11-08T05:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T05:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-sensory-break-clemens-mill",
+      "name": "Sensory Break",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Clemens Mill Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17439086",
+      "description": "A program at Clemens Mill, part of Cambridge Public Library. Ages: Kids - All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:00:00.000Z",
+        "2026-11-13T15:00:00.000Z",
+        "2026-11-20T15:00:00.000Z",
+        "2026-11-27T15:00:00.000Z",
+        "2026-12-04T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-04T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-totstime-queens-square",
+      "name": "Totstime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17385143",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Preschoolers, Babies. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:00:00.000Z",
+        "2026-11-11T15:00:00.000Z",
+        "2026-11-13T15:00:00.000Z",
+        "2026-11-18T15:00:00.000Z",
+        "2026-11-20T15:00:00.000Z",
+        "2026-11-25T15:00:00.000Z",
+        "2026-11-27T15:00:00.000Z",
+        "2026-12-02T15:00:00.000Z",
+        "2026-12-04T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-04T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-when-daylight-comes-the-canadians-on-d-day-old-post-office",
+      "name": "When Daylight Comes: the Canadians on D-Day",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17643285",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Everyone Welcome. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:00:00.000Z",
+        "2026-11-07T14:30:00.000Z",
+        "2026-11-08T18:00:00.000Z",
+        "2026-11-09T15:00:00.000Z",
+        "2026-11-10T15:00:00.000Z",
+        "2026-11-11T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-community-desk-hospice-waterloo-region-queens-square",
+      "name": "Community Desk: Hospice Waterloo Region",
+      "type": "event",
+      "category": "mental",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17752801",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Everyone Welcome. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:00:00.000Z",
+        "2026-11-20T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-shake-rattle-and-read-hespeler",
+      "name": "Shake, Rattle, and Read",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Hespeler Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17480178",
+      "description": "A program at Hespeler, part of Cambridge Public Library. Ages: Preschoolers, Babies. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:30:00.000Z",
+        "2026-11-13T15:30:00.000Z",
+        "2026-11-20T15:30:00.000Z",
+        "2026-11-27T15:30:00.000Z",
+        "2026-12-04T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-04T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-beginner-loom-weaving-class-queens-square",
+      "name": "Beginner Loom Weaving Class",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17558299",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-06T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-explore-on-the-floor-preston",
+      "name": "Explore on the Floor",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17456029",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Kids - All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:30:00.000Z",
+        "2026-11-13T15:30:00.000Z",
+        "2026-11-20T15:30:00.000Z",
+        "2026-11-27T15:30:00.000Z",
+        "2026-12-04T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-04T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-kinder-prep-queens-square",
+      "name": "Kinder Prep",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17385171",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Preschoolers. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T16:15:00.000Z",
+        "2026-11-13T16:15:00.000Z",
+        "2026-11-20T16:15:00.000Z",
+        "2026-11-27T16:15:00.000Z",
+        "2026-12-04T16:15:00.000Z"
+      ],
+      "endsAt": "2026-12-04T16:15:00.000Z"
+    },
+    {
+      "id": "cambridge-event-community-desk-extend-a-family-queens-square",
+      "name": "Community Desk: Extend-A-Family",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/16256581",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Tweens, Teens, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T18:00:00.000Z",
+        "2026-11-20T18:00:00.000Z",
+        "2026-12-04T18:00:00.000Z"
+      ],
+      "endsAt": "2026-12-04T18:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-tween-nerf-night-queens-square",
+      "name": "Tween Nerf Night",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17465405",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Tweens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-06T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-53rd-annual-cambridge-sports-awards-celebration-preston-auditorium",
+      "name": "53rd Annual Cambridge Sports Awards Celebration",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$22.63",
+      "address": "1458 Hamilton Street, Cambridge",
+      "website": "https://explorewaterloo.ca/event/53rd-annual-cambridge-sports-awards-celebration/",
+      "description": "At Preston Auditorium. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-06T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-adult-clay-building-workshop-charcuterie-board-play-with-clay",
+      "name": "Adult Clay Building Workshop - Charcuterie Board",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$40.00",
+      "address": "10 Water St. N, Cambridge",
+      "website": "https://explorewaterloo.ca/event/adult-clay-building-workshop-charcuterie-board/",
+      "description": "At Play with Clay. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-06T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-friday-night-trivia-harry-potter-and-the-chamber-of-secrets-evo-kitche",
+      "name": "Friday Night Trivia – Harry Potter and The Chamber of Secrets",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "31 Water Street S., Cambridge",
+      "website": "https://explorewaterloo.ca/event/friday-night-trivia-harry-potter-and-the-chamber-of-secrets/",
+      "description": "At EVO Kitchen & Bar. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T00:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-english-conversation-circle-preston",
+      "name": "English Conversation Circle",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/16986139",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:00:00.000Z",
+        "2026-11-14T15:00:00.000Z",
+        "2026-11-21T15:00:00.000Z",
+        "2026-11-28T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-28T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-introduction-to-sublimation-old-post-office",
+      "name": "Introduction to Sublimation",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17463703",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Teens, Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-07T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-celebrate-diwali-queens-square",
+      "name": "Celebrate Diwali",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17716830",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Everyone Welcome. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T19:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-feel-soul-good-a-celebration-of-the-kings-of-rnb-soul-the-underwing",
+      "name": "Feel Soul Good | A Celebration of The Kings of RnB & Soul",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "58 Grand Ave S., Cambridge",
+      "website": "https://explorewaterloo.ca/event/feel-soul-good-a-celebration-of-the-kings-of-rnb-soul/",
+      "description": "At The Underwing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-toronto-maple-leafs-vs-montreal-canadiens-gaslight-district",
+      "name": "Toronto Maple Leafs vs. Montreal Canadiens",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "64 Grand Ave. S, Cambridge",
+      "website": "https://explorewaterloo.ca/event/toronto-maple-leafs-vs-montreal-canadiens/",
+      "description": "At Gaslight District. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-the-sling-sisters-live-at-evo-kitchen-evo-kitchen-bar",
+      "name": "The SLING SISTERS Live at EVO Kitchen",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$21.69",
+      "address": "31 Water Street S., Cambridge",
+      "website": "https://explorewaterloo.ca/event/the-sling-sisters-live-at-evo-kitchen/",
+      "description": "At EVO Kitchen & Bar. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T01:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-cheechos-18th-birthday-celebration-cambridge-butterfly-conservatory",
+      "name": "Cheecho's 18th Birthday Celebration!",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "2500 Kossuth Road, Cambridge",
+      "website": "https://explorewaterloo.ca/event/cheechos-18th-birthday-celebration/",
+      "description": "At Cambridge Butterfly Conservatory. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-sunday-storytime-hespeler",
+      "name": "Sunday Storytime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Hespeler Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17537282",
+      "description": "A program at Hespeler, part of Cambridge Public Library. Ages: Kids - All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T19:00:00.000Z",
+        "2026-11-15T19:00:00.000Z",
+        "2026-11-22T19:00:00.000Z",
+        "2026-11-29T19:00:00.000Z",
+        "2026-12-06T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-06T19:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-time-for-twos-and-threes-queens-square",
+      "name": "Time for Twos and Threes",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17484586",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Preschoolers. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T15:00:00.000Z",
+        "2026-11-16T15:00:00.000Z",
+        "2026-11-23T15:00:00.000Z",
+        "2026-11-30T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-30T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-stories-and-stretches-preston",
+      "name": "Stories and Stretches",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17455700",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Kids - All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T15:30:00.000Z",
+        "2026-11-16T15:30:00.000Z",
+        "2026-11-23T15:30:00.000Z",
+        "2026-11-30T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-30T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-prestons-lost-wwii-soldiers-preston",
+      "name": "Preston's Lost WWII Soldiers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17563858",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-09T19:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-after-school-gaming-clemens-mill",
+      "name": "After School Gaming",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Clemens Mill Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17486263",
+      "description": "A program at Clemens Mill, part of Cambridge Public Library. Ages: Tweens, Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T21:00:00.000Z",
+        "2026-11-16T21:00:00.000Z",
+        "2026-11-23T21:00:00.000Z",
+        "2026-11-30T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-30T21:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-drama-club-preston",
+      "name": "Drama Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17486391",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Tweens, School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T21:00:00.000Z",
+        "2026-11-16T21:00:00.000Z",
+        "2026-11-23T21:00:00.000Z",
+        "2026-11-30T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-30T21:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-knit-n-chat-meet-up-queens-square",
+      "name": "Knit 'n' Chat Meet-up",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/16511426",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:00:00.000Z",
+        "2026-11-16T23:00:00.000Z",
+        "2026-11-23T23:00:00.000Z",
+        "2026-11-30T23:00:00.000Z",
+        "2026-12-07T23:00:00.000Z",
+        "2026-12-14T23:00:00.000Z",
+        "2026-12-21T23:00:00.000Z",
+        "2026-12-28T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-28T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-french-film-screening-better-days-des-jours-meilleurs-preston",
+      "name": "French Film Screening - Better Days / Des jours meilleurs",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17486582",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Teens, Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-09T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-author-evening-old-post-office",
+      "name": "Author Evening",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17510925",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Teens, Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-09T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-gone-too-soon-paint-night-at-ernies-ernies-cookhouse",
+      "name": "Gone Too Soon Paint Night at Ernie's!",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$45.00",
+      "address": "7 Queen St W., Cambridge",
+      "website": "https://explorewaterloo.ca/event/gone-too-soon-paint-night-at-ernies/",
+      "description": "At Ernie's Cookhouse. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-09T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-community-desk-kitchener-waterloo-multicultural-centre-queens-square",
+      "name": "Community Desk: Kitchener-Waterloo Multicultural Centre",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/16623660",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T14:30:00.000Z",
+        "2026-11-11T14:30:00.000Z",
+        "2026-11-12T14:30:00.000Z",
+        "2026-11-17T14:30:00.000Z",
+        "2026-11-19T14:30:00.000Z",
+        "2026-11-24T14:30:00.000Z",
+        "2026-11-25T14:30:00.000Z",
+        "2026-11-26T14:30:00.000Z",
+        "2026-12-01T14:30:00.000Z",
+        "2026-12-03T14:30:00.000Z",
+        "2026-12-08T14:30:00.000Z",
+        "2026-12-09T14:30:00.000Z",
+        "2026-12-10T14:30:00.000Z",
+        "2026-12-15T14:30:00.000Z",
+        "2026-12-17T14:30:00.000Z",
+        "2026-12-22T14:30:00.000Z",
+        "2026-12-29T14:30:00.000Z",
+        "2026-12-30T14:30:00.000Z",
+        "2026-12-31T14:30:00.000Z"
+      ],
+      "endsAt": "2026-12-31T14:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-mahjong-morning-queens-square",
+      "name": "Mahjong Morning",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17137863",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T14:45:00.000Z",
+        "2026-11-17T14:45:00.000Z",
+        "2026-11-24T14:45:00.000Z",
+        "2026-12-01T14:45:00.000Z",
+        "2026-12-08T14:45:00.000Z",
+        "2026-12-15T14:45:00.000Z"
+      ],
+      "endsAt": "2026-12-15T14:45:00.000Z"
+    },
+    {
+      "id": "cambridge-event-preschool-picassos-queens-square",
+      "name": "Preschool Picassos",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17479925",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Kids - All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:00:00.000Z",
+        "2026-11-17T15:00:00.000Z",
+        "2026-11-24T15:00:00.000Z",
+        "2026-12-01T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-tiny-tots-social-club-the-mini-bounce",
+      "name": "Tiny Tots Social Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "634 King Street East, Cambridge",
+      "website": "https://explorewaterloo.ca/event/tiny-tots-social-club/",
+      "description": "At The Mini Bounce. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:00:00.000Z",
+        "2026-11-17T15:00:00.000Z",
+        "2026-11-24T15:00:00.000Z",
+        "2026-12-01T15:00:00.000Z",
+        "2026-12-08T15:00:00.000Z",
+        "2026-12-15T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-digitize-your-family-memories-old-post-office",
+      "name": "Digitize Your Family Memories",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17486352",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-10T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-french-story-and-playtime-old-post-office",
+      "name": "French Story and Playtime",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17558330",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Preschoolers, Babies. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:30:00.000Z",
+        "2026-11-17T15:30:00.000Z",
+        "2026-11-24T15:30:00.000Z",
+        "2026-12-01T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-01T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-music-n-motion-hespeler",
+      "name": "Music 'n' Motion",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Hespeler Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17487796",
+      "description": "A program at Hespeler, part of Cambridge Public Library. Ages: Kids - All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:30:00.000Z",
+        "2026-11-17T15:30:00.000Z",
+        "2026-11-24T15:30:00.000Z",
+        "2026-12-01T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-01T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-the-imagination-station-clemens-mill",
+      "name": "The Imagination Station",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Clemens Mill Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17372100",
+      "description": "A program at Clemens Mill, part of Cambridge Public Library. Ages: Preschoolers. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T16:00:00.000Z",
+        "2026-11-17T16:00:00.000Z",
+        "2026-11-24T16:00:00.000Z",
+        "2026-12-01T16:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T16:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-baby-and-me-hespeler",
+      "name": "Baby and Me",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Hespeler Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17441188",
+      "description": "A program at Hespeler, part of Cambridge Public Library. Ages: Babies. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T19:00:00.000Z",
+        "2026-11-17T19:00:00.000Z",
+        "2026-11-24T19:00:00.000Z",
+        "2026-12-01T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T19:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-reading-buddies-clemens-mill",
+      "name": "Reading Buddies",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Clemens Mill Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17510065",
+      "description": "A program at Clemens Mill, part of Cambridge Public Library. Ages: Teens, School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T21:00:00.000Z",
+        "2026-11-17T21:00:00.000Z",
+        "2026-11-24T21:00:00.000Z",
+        "2026-12-01T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T21:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-discover-ology-preston",
+      "name": "Discover-ology",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17455770",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Tweens, School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T21:00:00.000Z",
+        "2026-11-17T21:00:00.000Z",
+        "2026-11-24T21:00:00.000Z",
+        "2026-12-01T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T21:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-galt-chess-club-queens-square",
+      "name": "Galt Chess Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17368181",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:00:00.000Z",
+        "2026-11-17T23:00:00.000Z",
+        "2026-11-24T23:00:00.000Z",
+        "2026-12-01T23:00:00.000Z",
+        "2026-12-08T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-08T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-dungeons-dragons-beginner-adventurers-clemens-mill",
+      "name": "Dungeons & Dragons: Beginner Adventurers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Clemens Mill Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17464289",
+      "description": "A program at Clemens Mill, part of Cambridge Public Library. Ages: Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:00:00.000Z",
+        "2026-11-17T23:00:00.000Z",
+        "2026-11-24T23:00:00.000Z",
+        "2026-12-01T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-simple-machines-old-post-office",
+      "name": "Simple Machines",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17564328",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:00:00.000Z",
+        "2026-11-17T23:00:00.000Z",
+        "2026-11-24T23:00:00.000Z",
+        "2026-12-01T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-01T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-adult-clay-building-workshop-garlic-keeper-play-with-clay",
+      "name": "Adult Clay Building Workshop - Garlic Keeper",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$40.00",
+      "address": "10 Water St. N, Cambridge",
+      "website": "https://explorewaterloo.ca/event/adult-clay-building-workshop-garlic-keeper/",
+      "description": "At Play with Clay. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:00:00.000Z",
+        "2026-11-13T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-teen-hangout-gaming-music-making-and-more-old-post-office",
+      "name": "Teen Hangout - Gaming, music making, and more...",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17156884",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:30:00.000Z",
+        "2026-11-17T23:30:00.000Z",
+        "2026-11-24T23:30:00.000Z",
+        "2026-12-01T23:30:00.000Z",
+        "2026-12-15T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-15T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-ukulele-meet-up-old-post-office",
+      "name": "Ukulele Meet-Up",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17002019",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Teens, Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:30:00.000Z",
+        "2026-11-17T23:30:00.000Z",
+        "2026-11-24T23:30:00.000Z",
+        "2026-12-01T23:30:00.000Z",
+        "2026-12-08T23:30:00.000Z",
+        "2026-12-22T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-22T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-line-dancing-at-evo-kitchen-and-bar-evo-kitchen-bar",
+      "name": "Line Dancing at EVO Kitchen and Bar",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$10.00",
+      "address": "31 Water Street S., Cambridge",
+      "website": "https://explorewaterloo.ca/event/line-dancing-at-evo-kitchen-and-bar/",
+      "description": "At EVO Kitchen & Bar. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-10T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-pyjama-tales-hespeler",
+      "name": "Pyjama Tales",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Hespeler Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17327242",
+      "description": "A program at Hespeler, part of Cambridge Public Library. Ages: Kids - All Ages. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T00:00:00.000Z",
+        "2026-11-18T00:00:00.000Z",
+        "2026-11-25T00:00:00.000Z",
+        "2026-12-02T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-02T00:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-toronto-maple-leafs-vs-colorado-avalanche-gaslight-district",
+      "name": "Toronto Maple Leafs vs. Colorado Avalanche",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "64 Grand Ave. S, Cambridge",
+      "website": "https://explorewaterloo.ca/event/toronto-maple-leafs-vs-colorado-avalanche/",
+      "description": "At Gaslight District. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-11T00:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-time-of-remembrance-reception-queens-square",
+      "name": "Time of Remembrance Reception",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17565985",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Everyone Welcome. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T14:30:00.000Z"
+      ],
+      "endsAt": "2026-11-11T14:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-hespeler-knitting-circle-hespeler",
+      "name": "Hespeler Knitting Circle",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Hespeler Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17117086",
+      "description": "A program at Hespeler, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T15:30:00.000Z",
+        "2026-11-18T15:30:00.000Z",
+        "2026-11-25T15:30:00.000Z",
+        "2026-12-02T15:30:00.000Z",
+        "2026-12-09T15:30:00.000Z",
+        "2026-12-16T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-16T15:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-ultimate-makers-clemens-mill",
+      "name": "Ultimate Makers",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Clemens Mill Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17512735",
+      "description": "A program at Clemens Mill, part of Cambridge Public Library. Ages: Tweens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T18:30:00.000Z",
+        "2026-11-18T18:30:00.000Z",
+        "2026-11-25T18:30:00.000Z",
+        "2026-12-02T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-02T18:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-hespeler-book-club-hespeler",
+      "name": "Hespeler Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Hespeler Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17001215",
+      "description": "A program at Hespeler, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T19:00:00.000Z",
+        "2026-12-09T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-09T19:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-prestons-lost-wwi-soldiers-preston",
+      "name": "Preston's Lost WWI Soldiers",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17563852",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-11T19:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-craft-club-preston",
+      "name": "Craft Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17486370",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Tweens, School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T21:00:00.000Z",
+        "2026-11-18T21:00:00.000Z",
+        "2026-11-25T21:00:00.000Z",
+        "2026-12-02T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-02T21:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-spectrum-cambridge-transgender-peer-support-group-queens-square",
+      "name": "SPECTRUM Cambridge Transgender Peer Support Group",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17428785",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:00:00.000Z",
+        "2026-11-18T23:00:00.000Z",
+        "2026-11-25T23:00:00.000Z",
+        "2026-12-02T23:00:00.000Z",
+        "2026-12-09T23:00:00.000Z",
+        "2026-12-16T23:00:00.000Z",
+        "2026-12-23T23:00:00.000Z",
+        "2026-12-30T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-30T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-fibre-arts-meet-up-old-post-office",
+      "name": "Fibre Arts Meet-Up",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17056779",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Teens, Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-02T23:30:00.000Z",
+        "2026-12-09T23:30:00.000Z",
+        "2026-12-16T23:30:00.000Z",
+        "2026-12-23T23:30:00.000Z",
+        "2026-12-30T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-30T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-the-yuck-lab-queens-square",
+      "name": "The Yuck Lab",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17537427",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z",
+        "2026-12-02T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-02T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-wednesday-trivia-evo-kitchen-bar",
+      "name": "Wednesday Trivia",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "31 Water Street S., Cambridge",
+      "website": "https://explorewaterloo.ca/event/wednesday-trivia/",
+      "description": "At EVO Kitchen & Bar. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T00:00:00.000Z",
+        "2026-11-19T00:00:00.000Z",
+        "2026-11-26T00:00:00.000Z",
+        "2026-12-03T00:00:00.000Z",
+        "2026-12-10T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-10T00:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-introduction-to-sewing-old-post-office",
+      "name": "Introduction to Sewing",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17463693",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T20:00:00.000Z"
+      ],
+      "endsAt": "2026-11-12T20:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-archaeology-lab-old-post-office",
+      "name": "Archaeology Lab",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17510275",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T21:00:00.000Z",
+        "2026-11-19T21:00:00.000Z",
+        "2026-11-26T21:00:00.000Z",
+        "2026-12-03T21:00:00.000Z"
+      ],
+      "endsAt": "2026-12-03T21:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-teen-craft-night-preston",
+      "name": "Teen Craft Night",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Preston Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17537679",
+      "description": "A program at Preston, part of Cambridge Public Library. Ages: Teens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T21:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T21:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-tapas-trivia-in-support-of-cmha-waterloo-wellington-little-mushroom-di",
+      "name": "Tapas & Trivia in support of CMHA Waterloo Wellington",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "131 Sheldon Drive, Unit 17, Cambridge",
+      "website": "https://explorewaterloo.ca/event/tapas-trivia-in-support-of-cmha-waterloo-wellington/",
+      "description": "At Little Mushroom Dining Lounge. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-draw-paint-create-queens-square",
+      "name": "Draw, Paint, Create",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Queen's Square Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/17486438",
+      "description": "A program at Queen's Square, part of Cambridge Public Library. Ages: Tweens, School-Aged. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z",
+        "2026-11-19T23:30:00.000Z",
+        "2026-11-26T23:30:00.000Z",
+        "2026-12-03T23:30:00.000Z"
+      ],
+      "endsAt": "2026-12-03T23:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-musical-bingo-british-bangers-evo-kitchen-bar",
+      "name": "Musical Bingo – British Bangers",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "31 Water Street S., Cambridge",
+      "website": "https://explorewaterloo.ca/event/musical-bingo-british-bangers/",
+      "description": "At EVO Kitchen & Bar. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T00:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-raptors-on-the-big-screen-gaslight-district",
+      "name": "Raptors on The Big Screen",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "64 Grand Ave. S, Cambridge",
+      "website": "https://explorewaterloo.ca/event/raptors-on-the-big-screen/",
+      "description": "At Gaslight District. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T00:00:00.000Z",
+        "2026-11-18T00:30:00.000Z",
+        "2026-11-19T00:30:00.000Z",
+        "2026-11-21T00:30:00.000Z",
+        "2026-11-28T00:30:00.000Z"
+      ],
+      "endsAt": "2026-11-28T00:30:00.000Z"
+    },
+    {
+      "id": "cambridge-event-old-post-office-book-club-old-post-office",
+      "name": "Old Post Office Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Cambridge Public Library"
+      ],
+      "cost": "varies",
+      "costNote": "May have a fee. Check the listing.",
+      "address": "Old Post Office Library, Cambridge",
+      "website": "https://ideaexchange.libnet.info/event/16890347",
+      "description": "A program at Old Post Office, part of Cambridge Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T15:00:00.000Z",
+        "2026-12-11T15:00:00.000Z"
+      ],
+      "endsAt": "2026-12-11T15:00:00.000Z"
+    },
+    {
+      "id": "cambridge-event-fiddlestix-dance-party-at-the-cambridge-newfoundland-club-cambridge-ne",
+      "name": "Fiddlestix Dance Party at the Cambridge Newfoundland Club",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$25.00",
+      "address": "1500 Dunbar Rd., Cambridge",
+      "website": "https://explorewaterloo.ca/event/fiddlestix-dance-party-at-the-cambridge-newfoundland-club/",
+      "description": "At Cambridge Newfoundland Club. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T00:00:00.000Z"
     }
   ]
 }

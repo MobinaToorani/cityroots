@@ -9,7 +9,7 @@ export async function SiteHeader() {
   const cities = await listLiveCities().catch(() => []);
   return (
     <header className="sticky top-0 z-40 border-b border-divider bg-bg/95 backdrop-blur-md">
-      <div className="relative mx-auto flex h-16 max-w-[1400px] items-center gap-2 px-4 sm:gap-3 sm:px-6">
+      <div className="relative page-frame flex h-16 items-center gap-2 sm:gap-3">
         <Logo />
         <CityPicker cities={cities.map((c) => ({ slug: c.slug, name: c.name }))} />
         <div className="ml-auto flex items-center gap-1">

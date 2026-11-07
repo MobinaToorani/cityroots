@@ -3,27 +3,40 @@
   "cityName": "Waterloo",
   "province": "Ontario",
   "country": "Canada",
-  "tagline": "University town, tech hub, and home to one of Ontario's best jazz rooms and a world-class physics institute open to the public",
-  "heroDescription": "Waterloo sits immediately north of Kitchener and is home to two major universities — the University of Waterloo and Wilfrid Laurier — along with the Perimeter Institute for Theoretical Physics, one of the world's leading independent physics research centres. Uptown Waterloo is the city's walkable commercial core along King Street: a dense strip of independent coffee shops, restaurants, the Canadian Clay and Glass Gallery, and the Jazz Room. Waterloo Park is the city's main green anchor, with Silver Lake and a long-established waterfowl area. The startup ecosystem centred on the Communitech Hub has made Waterloo one of Canada's most talked-about tech cities — but the best of it for everyday life is quieter: a Friday night jazz set, a free public lecture at Perimeter, or a Saturday morning at one of Ontario's less-known farmers' markets.",
+  "tagline": "University town, tech hub, and home to a jazz room and a physics institute with free public lectures",
+  "heroDescription": "Waterloo sits immediately north of Kitchener and is home to two major universities — the University of Waterloo and Wilfrid Laurier — along with the Perimeter Institute for Theoretical Physics, one of the world's leading independent physics research centres. Uptown Waterloo is the city's walkable commercial core along King Street: a dense strip of independent coffee shops, restaurants, the Canadian Clay and Glass Gallery, and the Jazz Room. Waterloo Park is the city's main green anchor, with Silver Lake and a long-established waterfowl area. The startup ecosystem centred on the Communitech Hub has made Waterloo a tech city. For everyday life, the best of it is quieter: a Friday night jazz set, a free public lecture at Perimeter, or a Saturday morning at one of Ontario's less-known farmers' markets.",
   "lat": 43.4643,
   "lng": -80.5204,
-  "contributors": ["CityRoots Community"],
-  "lastUpdated": "2026-06-29",
+  "contributors": [
+    "CityRoots Community",
+    "Public library calendars",
+    "Statistics Canada Open Licence"
+  ],
+  "lastUpdated": "2026-11-06",
   "places": [
     {
       "id": "waterloo-waterloo-park",
       "name": "Waterloo Park",
       "type": "place",
       "category": "physical",
-      "tags": ["park", "lake", "trails", "free", "year-round", "wildlife", "family", "waterfowl"],
+      "tags": [
+        "park",
+        "lake",
+        "trails",
+        "free",
+        "year-round",
+        "wildlife",
+        "family",
+        "waterfowl"
+      ],
       "cost": "free",
       "address": "50 Young St W, Waterloo, ON N2L 3R6",
       "neighborhood": "Uptown Waterloo",
       "lat": 43.4671,
       "lng": -80.5337,
-      "website": "https://www.waterloo.ca/parks",
+      "website": "https://www.waterloo.ca/parks-and-trails/waterloo-park/",
       "hours": "Open year-round",
-      "description": "Waterloo's main urban park — 40 hectares of open space anchored by Silver Lake, a long-running waterfowl and wildlife area that has operated since the late 1800s. The park has trails, picnic areas, a splash pad, a bandshell used for free summer concerts, and the Waterloo Park Wildlife Area where ducks, geese, and peacocks roam freely. One of the most pleasant free park experiences in Waterloo Region.",
+      "description": "Waterloo's main urban park — 40 hectares of open space anchored by Silver Lake, a long-running waterfowl and wildlife area that has operated since the late 1800s. The park has trails, picnic areas, a splash pad, a bandshell used for free summer concerts, and the Waterloo Park Wildlife Area where ducks, geese, and peacocks roam freely. A pleasant free park.",
       "highlights": [
         "Silver Lake and wildlife area with free-roaming waterfowl and peacocks",
         "Paved trail system connecting multiple park sections",
@@ -34,49 +47,31 @@
       "why": "The peacocks that roam the park are a legitimately unusual thing for a mid-sized Canadian city. Early morning in late spring is the best time — before the park fills and when the lake mist is still up.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "waterloo-columbia-lake-trail",
-      "name": "Columbia Lake & Trail Area (UW Campus)",
-      "type": "place",
-      "category": "physical",
-      "tags": ["trail", "lake", "nature", "free", "walking", "birding", "university", "year-round"],
-      "cost": "free",
-      "address": "Columbia St W, Waterloo, ON (University of Waterloo south campus)",
-      "neighborhood": "Columbia Hills",
-      "lat": 43.4702,
-      "lng": -80.5527,
-      "website": "https://uwaterloo.ca/sustainability",
-      "hours": "Open year-round",
-      "description": "A natural lake and adjacent trail network on the south campus of the University of Waterloo, open to the public. Columbia Lake supports wetland habitat, migratory birds, and an ecologically managed naturalized shoreline. The loop trail around the lake is about 2km and connects to the broader UW trail system. Far quieter than Waterloo Park and barely known outside the university community.",
-      "highlights": [
-        "2km loop trail around Columbia Lake — quiet and well-maintained",
-        "Wetland habitat supporting significant bird populations, especially in spring and fall migration",
-        "Connected to UW campus trail network for longer walks",
-        "Open to the public year-round with no admission",
-        "Good for an early morning walk with almost no crowds on weekdays"
-      ],
-      "why": "This is one of the most underused natural spaces in the city. Spring migration in May brings an impressive variety of warblers and shorebirds. The trail is best on weekday mornings.",
-      "isFree": true,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-rim-park",
       "name": "RIM Park",
       "type": "place",
       "category": "physical",
-      "tags": ["sports complex", "ice rink", "trails", "golf", "family", "recreation", "low-cost"],
+      "tags": [
+        "sports complex",
+        "ice rink",
+        "trails",
+        "golf",
+        "family",
+        "recreation",
+        "low-cost"
+      ],
       "cost": "low",
       "costNote": "Trail network free; skating and fitness facilities from ~$4–8 drop-in; golf additional",
       "address": "2001 University Ave E, Waterloo, ON N2K 4K4",
       "neighborhood": "Lakeshore North",
       "lat": 43.5171,
       "lng": -80.5261,
-      "website": "https://www.waterloo.ca/rimpark",
+      "website": "https://www.waterloo.ca/recreation-and-sports/find-a-community-or-rec-centre/rim-park/",
       "hours": "Facility hours vary by program — see website",
-      "description": "A large multi-use recreation complex in north Waterloo combining a sports arena, fitness centre, and an extensive trail network. The surrounding trail system runs along the Grand River corridor and through natural green spaces in the north end. The golf course is one of the most accessible in the Region. Good anchor for active programming in a part of the city that can feel suburban.",
+      "description": "A large multi-use recreation complex in north Waterloo combining a sports arena, fitness centre, and an extensive trail network. The surrounding trail system runs along the Grand River corridor and through natural green spaces in the north end. Good anchor for active programming in a part of the city that can feel suburban.",
       "highlights": [
         "Extensive trail network through north Waterloo and along the Grand River",
         "Ice arena with public skating and hockey",
@@ -87,22 +82,28 @@
       "why": "The trails north of RIM Park along the Grand River are the least-used and most peaceful in Waterloo Region. Take the trail heading east from the park for the best river views.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-public-library",
       "name": "Waterloo Public Library",
       "type": "place",
       "category": "mental",
-      "tags": ["library", "free", "reading", "programming", "digital resources", "quiet space"],
+      "tags": [
+        "library",
+        "free",
+        "reading",
+        "programming",
+        "digital resources",
+        "quiet space"
+      ],
       "cost": "free",
       "address": "35 Albert St, Waterloo, ON N2L 5E2",
       "neighborhood": "Uptown Waterloo",
       "lat": 43.4624,
       "lng": -80.5133,
       "website": "https://www.wpl.ca",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–6pm, Sun 1–5pm",
-      "description": "A well-resourced public library in Uptown Waterloo with an active programming schedule, good digital resources, and a comfortable reading environment. The location in the heart of Uptown makes it a natural stop in any Waterloo visit. Free digital library access, local history collections, and regular community talks make it more than a book-lending service.",
+      "description": "A public library in Uptown Waterloo with an active programming schedule, good digital resources, and a comfortable reading environment. The location in the heart of Uptown makes it a natural stop in any Waterloo visit. Free digital library access, local history collections, and regular community talks make it more than a book-lending service.",
       "highlights": [
         "Central Uptown location — easy to reach on foot or by transit",
         "Free digital resources: eBooks, audiobooks, streaming, databases",
@@ -113,24 +114,32 @@
       "why": "The library's local history collection on Waterloo Region is notably strong. The programming calendar is worth checking — community talks and author events are regularly scheduled and free.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-perimeter-institute",
       "name": "Perimeter Institute — Public Lectures",
       "type": "program",
       "category": "mental",
-      "tags": ["science", "physics", "free lectures", "public", "niche", "intellectual", "world-class"],
+      "tags": [
+        "science",
+        "physics",
+        "free lectures",
+        "public",
+        "niche",
+        "intellectual",
+        "physics"
+      ],
       "cost": "free",
       "address": "31 Caroline St N, Waterloo, ON N2L 2Y5",
       "neighborhood": "Uptown Waterloo",
       "lat": 43.4707,
-      "lng": -80.5380,
-      "website": "https://www.perimeterinstitute.ca/public-lectures",
+      "lng": -80.538,
+      "website": "https://perimeterinstitute.ca/outreach/general-public",
       "hours": "Public lectures typically Wednesday evenings; schedule varies — see website",
-      "description": "The Perimeter Institute for Theoretical Physics is one of the world's leading independent physics research institutes — and it offers a free public lecture series open to anyone. The Perimeter Public Lecture Series brings world-class physicists, cosmologists, and science communicators to Waterloo to speak on topics from black holes to quantum computing to the nature of time. The lectures are designed to be accessible to non-specialists. Attending a Perimeter lecture is one of the most genuinely uncommon free experiences available in any mid-sized Canadian city.",
+      "description": "The Perimeter Institute for Theoretical Physics is one of the world's leading independent physics research institutes — and it offers a free public lecture series open to anyone. The Perimeter Public Lecture Series brings physicists, cosmologists, and science communicators to Waterloo to speak on topics from black holes to quantum computing to the nature of time. The lectures are designed to be accessible to non-specialists. Free lectures from a leading physics institute are uncommon in a city this size.",
       "highlights": [
-        "Free public lectures by world-class physicists and science communicators",
+        "Free public lectures by physicists and science communicators",
         "Topics span cosmology, quantum mechanics, particle physics, and the history of science",
         "Accessible to non-specialists — no physics background required",
         "The PI building itself is architecturally significant and beautiful",
@@ -139,22 +148,30 @@
       "why": "Reserve a seat online in advance — popular lectures fill up. If you can't make it in person, the PIRSA archive at pirsa.org has recordings of thousands of past lectures. The in-person experience in that building is worth the trip.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-uptown-waterloo",
       "name": "Uptown Waterloo",
       "type": "place",
       "category": "social",
-      "tags": ["neighbourhood", "walkable", "community", "free", "independent shops", "patios", "year-round"],
+      "tags": [
+        "neighbourhood",
+        "walkable",
+        "community",
+        "free",
+        "independent shops",
+        "patios",
+        "year-round"
+      ],
       "cost": "free",
       "address": "King St N, Waterloo, ON N2J 2X8",
       "neighborhood": "Uptown Waterloo",
       "lat": 43.4641,
-      "lng": -80.5200,
-      "website": "https://www.uptownwaterloo.ca",
+      "lng": -80.52,
+      "website": "https://www.uptownwaterloobia.com",
       "hours": "Outdoor public space open year-round",
-      "description": "Waterloo's main commercial and social corridor — a compact walkable strip along King Street connecting the Public Square to the edges of Waterloo Park. The density of independent restaurants, coffee shops, galleries, and patios makes it one of the most genuinely livable small urban strips in southwestern Ontario. Outdoor patios in summer, the Public Square as a gathering point, and the proximity of the Jazz Room and Clay and Glass Gallery make it a place worth spending an afternoon.",
+      "description": "Waterloo's main commercial and social corridor — a compact walkable strip along King Street connecting the Public Square to the edges of Waterloo Park. The density of independent restaurants, coffee shops, galleries, and patios makes it an easy place to spend an evening. Outdoor patios in summer, the Public Square as a gathering point, and the proximity of the Jazz Room and Clay and Glass Gallery make it a place worth spending an afternoon.",
       "highlights": [
         "Waterloo Public Square — a central public space with seasonal programming",
         "Dense concentration of independent restaurants and cafes within walking distance",
@@ -165,48 +182,28 @@
       "why": "The Public Square hosts free outdoor events in summer. Uptown is busiest on Friday and Saturday evenings — weekday afternoons have the best cafe atmosphere without the crowds.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "waterloo-mary-allen-garden",
-      "name": "Mary Allen Neighbourhood / Community Programming",
-      "type": "program",
-      "category": "social",
-      "tags": ["community", "neighbourhood", "social", "free", "local", "events", "programming"],
-      "cost": "free",
-      "address": "Mary Allen neighbourhood, Waterloo, ON",
-      "neighborhood": "Mary Allen",
-      "lat": 43.4590,
-      "lng": -80.5085,
-      "website": "https://www.waterloo.ca/community",
-      "hours": "Varies by programming",
-      "description": "The Mary Allen neighbourhood in central Waterloo is one of the more active community areas in the city, with a neighbourhood association running programming for residents including clean-ups, community events, street festivals, and social gatherings. The neighbourhood has a strong walk-to-everything character with a mix of renters, families, and long-term residents. A good example of the community-organized side of Waterloo that doesn't get the same attention as the tech sector.",
-      "highlights": [
-        "Active neighbourhood association with year-round programming",
-        "Community events, block parties, and seasonal gatherings",
-        "One of the more diverse and socially engaged neighbourhoods in the city",
-        "Within walking distance of Uptown Waterloo and the library",
-        "Community garden and shared green space programming"
-      ],
-      "why": "Check the City of Waterloo neighbourhood programming page and the Mary Allen Neighbourhood Association calendar for current events. Summer programming is the most active.",
-      "isFree": true,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-community-legal-services",
       "name": "Waterloo Region Community Legal Services",
       "type": "resource",
       "category": "financial",
-      "tags": ["legal aid", "free", "legal services", "tenants rights", "social assistance", "low-income"],
+      "tags": [
+        "legal aid",
+        "free",
+        "legal services",
+        "tenants rights",
+        "social assistance",
+        "low-income"
+      ],
       "cost": "free",
       "address": "151 Frederick St, Kitchener, ON N2H 2M2",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4522,
-      "lng": -80.4870,
+      "lng": -80.487,
       "website": "https://www.wrcls.ca",
-      "hours": "Mon–Fri 9am–5pm; intake hours vary",
-      "description": "A community legal clinic providing free legal services to low-income residents of Waterloo Region in areas including housing/tenant rights, social assistance (Ontario Works, ODSP), employment insurance, immigration, and human rights. One of the most important financial safety-net resources in the Region, serving clients regardless of immigration status in many areas.",
+      "description": "A community legal clinic providing free legal services to low-income residents of Waterloo Region in areas including housing/tenant rights, social assistance (Ontario Works, ODSP), employment insurance, immigration, and human rights. A financial safety-net resource, serving clients regardless of immigration status in many areas.",
       "highlights": [
         "Free legal advice and representation for qualifying low-income residents",
         "Housing and tenant law — evictions, maintenance, rent disputes",
@@ -217,21 +214,27 @@
       "why": "Call the intake line first to determine if your matter falls within their service area. The clinic is busiest near the start and end of the month — midweek mornings tend to have shorter wait times.",
       "isFree": true,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-uw-art-gallery",
       "name": "University of Waterloo Art Gallery",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["gallery", "free", "university", "contemporary art", "public", "exhibitions"],
+      "tags": [
+        "gallery",
+        "free",
+        "university",
+        "contemporary art",
+        "public",
+        "exhibitions"
+      ],
       "cost": "free",
       "address": "East Campus Hall, University of Waterloo, Waterloo, ON N2L 3G1",
       "neighborhood": "University",
       "lat": 43.4724,
-      "lng": -80.5450,
-      "website": "https://uwaterloo.ca/art-gallery",
-      "hours": "Mon–Fri 10am–5pm, Sat 12–4pm; closed Sundays and university holidays",
+      "lng": -80.545,
+      "website": "https://uwag.uwaterloo.ca",
       "description": "A free public art gallery on the University of Waterloo campus presenting contemporary Canadian and international art. Exhibitions rotate regularly and the quality is consistently high for a university gallery. Public programming includes artist talks, workshops, and guided tours. Admission is free — campus parking has fees, but the gallery is easily reached by transit or cycling.",
       "highlights": [
         "Free admission — public welcome regardless of university affiliation",
@@ -243,22 +246,30 @@
       "why": "This gallery is consistently undervisited by people who don't have a connection to UW. The exhibitions are on par with much larger urban institutions. Go on a weekday afternoon for a quiet experience.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-canadian-clay-glass-gallery",
       "name": "Canadian Clay and Glass Gallery",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["gallery", "ceramics", "glass", "craft", "low-cost", "Canadian art", "niche", "exhibitions"],
-      "cost": "low",
-      "costNote": "Adult admission ~$5; free on select community days",
+      "tags": [
+        "gallery",
+        "ceramics",
+        "glass",
+        "craft",
+        "low-cost",
+        "Canadian art",
+        "niche",
+        "exhibitions"
+      ],
+      "cost": "free",
       "address": "25 Caroline St N, Waterloo, ON N2L 2Y5",
       "neighborhood": "Uptown Waterloo",
       "lat": 43.4629,
       "lng": -80.5209,
-      "website": "https://www.canadianclayglass.ca",
-      "hours": "Tue–Sun 10am–5pm; closed Mondays",
+      "website": "https://theclayandglass.ca",
+      "hours": "Tue-Fri 11am-6pm; Sat 10am-5pm; Sun 1pm-5pm; closed Mon",
       "description": "One of Canada's only public galleries dedicated exclusively to contemporary ceramic and glass art. Located in a beautiful building in Uptown Waterloo adjacent to Perimeter Institute. The gallery presents rotating exhibitions by Canadian artists working in clay and glass, along with a permanent collection that is among the finest of its kind in the country. The gift shop is excellent for purchasing functional art. Admission is modest and occasionally free.",
       "highlights": [
         "Canada's primary public gallery dedicated to ceramic and glass art",
@@ -267,23 +278,32 @@
         "Gift shop with functional ceramics and glass from Canadian artists",
         "Free admission on select community days — check website for schedule"
       ],
-      "why": "This is one of the most distinctive galleries in Ontario in terms of focus and collection depth. The gift shop is worth visiting even if you don't pay for the exhibition — functional pieces by Canadian artists start at accessible prices.",
+      "why": "The focus on ceramics and glass is what sets it apart. The gift shop is worth visiting even if you don't pay for the exhibition — functional pieces by Canadian artists start at accessible prices.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-button-factory-arts",
       "name": "Button Factory Arts",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["arts centre", "studios", "programming", "community", "workshops", "niche", "free", "low-cost"],
+      "tags": [
+        "arts centre",
+        "studios",
+        "programming",
+        "community",
+        "workshops",
+        "niche",
+        "free",
+        "low-cost"
+      ],
       "cost": "varies",
       "costNote": "Gallery and events free or low-cost; some workshops have fees",
       "address": "Waterloo, ON",
       "neighborhood": "Waterloo",
       "lat": 43.4641,
-      "lng": -80.5200,
+      "lng": -80.52,
       "website": "https://www.buttonfactoryarts.ca",
       "hours": "Varies by event — see website",
       "description": "A multi-disciplinary arts organization in Waterloo running artist studios, exhibitions, and public events. The Button Factory supports emerging artists with affordable studio space and presents a programme of community-facing exhibitions, performances, and events throughout the year. Many events are free or low-cost and open to the public. One of the more grassroots arts spaces in the Region.",
@@ -297,21 +317,29 @@
       "why": "Follow their events calendar — shows and open studio events are where the real value is. Programming can be uneven in volume but reliably interesting when it happens.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-jazz-room",
       "name": "The Jazz Room",
       "type": "place",
       "category": "dance-music",
-      "tags": ["jazz", "live music", "intimate venue", "low-cost", "niche", "weekly", "uptown"],
+      "tags": [
+        "jazz",
+        "live music",
+        "intimate venue",
+        "low-cost",
+        "niche",
+        "weekly",
+        "uptown"
+      ],
       "cost": "low",
       "costNote": "Cover typically $10–20 per show; some free or PWYC events",
       "address": "116 King St W, Waterloo, ON N2L 1B8",
       "neighborhood": "Uptown Waterloo",
       "lat": 43.4643,
       "lng": -80.5202,
-      "website": "https://www.thejazzroom.ca",
+      "website": "https://www.kwjazzroom.com",
       "hours": "Shows typically Friday and Saturday evenings; occasional weeknight programming",
       "description": "The best dedicated jazz venue in Waterloo Region — a 100-seat room in Uptown Waterloo presenting local, regional, and national jazz artists with consistent programming on Friday and Saturday nights. The room is intimate enough that every seat is close to the stage. Covers are modest. This is the kind of jazz room that cities twice Waterloo's size often can't sustain — worth supporting and worth attending.",
       "highlights": [
@@ -324,75 +352,29 @@
       "why": "The Friday late set (second set around 9pm) is typically the best of the night — the room is full, the band is warmed up, and the energy is right. Book online or show up early — the room is small.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "waterloo-kw-symphony-community",
-      "name": "KW Symphony — Free and Community Events",
-      "type": "program",
-      "category": "dance-music",
-      "tags": ["symphony", "classical music", "free concerts", "community", "annual", "low-cost"],
-      "cost": "varies",
-      "costNote": "Some free community concerts; ticketed mainstage events at CITS",
-      "address": "Various community venues, Waterloo Region",
-      "neighborhood": "Region-wide",
-      "lat": 43.4488,
-      "lng": -80.5057,
-      "website": "https://www.kwsymphony.ca",
-      "hours": "Community concerts vary by event; see website",
-      "description": "The Kitchener-Waterloo Symphony runs free and low-cost community concerts throughout the year in addition to its mainstage season at Centre in the Square. The free community series brings orchestral performances to parks, community centres, and outdoor venues across the Region. The Discovery Concerts and family programming offer a lower-barrier entry point to the full orchestra experience.",
-      "highlights": [
-        "Free outdoor concerts in parks and community spaces throughout summer",
-        "Family and education programs at accessible prices",
-        "Discovery Concerts and community series in Waterloo venues",
-        "Rush and pay-what-you-can tickets available for some mainstage events",
-        "One of Ontario's strongest regional symphony orchestras"
-      ],
-      "why": "The free summer outdoor concerts are the easiest entry point. Check the KW Symphony calendar in June for the summer community concert schedule — dates are announced annually.",
-      "isFree": false,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "waterloo-farmers-market",
-      "name": "Waterloo Farmers' Market",
-      "type": "place",
-      "category": "food-culture",
-      "tags": ["market", "local food", "Mennonite", "produce", "baking", "Saturday", "year-round"],
-      "cost": "low",
-      "costNote": "Free to browse; purchases vary",
-      "address": "1001 Heritage Dr, Waterloo, ON N2V 1N2",
-      "neighborhood": "Lakeshore North",
-      "lat": 43.5054,
-      "lng": -80.4949,
-      "website": "https://www.waterloomarket.ca",
-      "hours": "Year-round: Saturday 7am–2pm",
-      "description": "A year-round indoor farmers' market in north Waterloo with a strong base of Mennonite vendors selling fresh produce, baked goods, cheese, meats, and preserves. Less famous than the Kitchener Market but with a more relaxed atmosphere and often better prices. The Old Order Mennonite vendors selling fresh-baked bread and pies are the highlight. Open Saturday mornings year-round.",
-      "highlights": [
-        "Year-round indoor market with strong Mennonite vendor base",
-        "Old Order Mennonite baked goods: fresh bread, pies, and preserves",
-        "Local produce, cheese, meats, and seasonal items",
-        "Less crowded than the Kitchener Market — easier to shop at a relaxed pace",
-        "Affordable prices, especially for fresh produce and baking"
-      ],
-      "why": "The Mennonite bakers sell out by mid-morning — arrive before 9am for the best selection of fresh bread and pies. This market is the best-kept secret of the Waterloo Region market scene.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-vincenzos",
       "name": "Vincenzo's",
       "type": "place",
       "category": "food-culture",
-      "tags": ["specialty grocer", "Italian", "deli", "cheese", "local", "niche", "food culture", "institution"],
+      "tags": [
+        "specialty grocer",
+        "Italian",
+        "deli",
+        "cheese",
+        "local",
+        "niche",
+        "food culture",
+        "institution"
+      ],
       "cost": "low",
       "address": "150 Caroline St N, Waterloo, ON N2L 2X2",
       "neighborhood": "Uptown Waterloo",
       "lat": 43.4633,
-      "lng": -80.5190,
-      "website": "https://www.vincenzos.com",
-      "hours": "Mon–Fri 9am–7pm, Sat 9am–6pm, Sun 10am–4pm",
+      "lng": -80.519,
+      "website": "https://www.vincenzos.ca",
       "description": "A Waterloo institution since 1967 — a specialty Italian grocery and deli in Uptown. Vincenzo's carries imported Italian pantry goods, a substantial fresh cheese and charcuterie counter, fresh pasta, specialty oils and vinegars, and a wine section with unusual selections. The deli counter is the best in the Region for Italian cured meats and fresh-made sandwiches. A landmark food culture stop that has somehow survived the arrival of big-box grocery.",
       "highlights": [
         "Specialty Italian grocery with extensive imported pantry goods",
@@ -404,73 +386,28 @@
       "why": "The deli counter makes one of the better Italian sandwiches available in the Region — order at the counter and eat on a nearby Uptown bench. The cheese selection is worth a visit on its own.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "waterloo-smile-tiger-coffee",
-      "name": "Smile Tiger Coffee",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["coffee", "specialty", "roaster", "cafe", "workspace", "uptown", "low-cost"],
-      "cost": "low",
-      "address": "Uptown Waterloo, ON",
-      "neighborhood": "Uptown Waterloo",
-      "lat": 43.4643,
-      "lng": -80.5208,
-      "website": "https://www.smiletiger.ca",
-      "hours": "Mon–Fri 7am–6pm, Sat 8am–5pm, Sun 9am–4pm",
-      "description": "One of the most beloved coffee spots in the Region — a specialty roaster and cafe in Uptown Waterloo known for well-calibrated espresso, thoughtfully sourced beans, and a welcoming atmosphere that attracts a mix of students, locals, and remote workers. The flat white and seasonal filter offerings are consistently excellent. A genuine anchor of the Uptown daytime economy.",
-      "highlights": [
-        "In-house roasting with rotating single-origin offerings",
-        "Consistently excellent espresso — one of the better flat whites in the Region",
-        "Good seating for working or lingering",
-        "Welcoming to students and remote workers",
-        "Central Uptown location — 2 minutes from the Jazz Room and Clay and Glass Gallery"
-      ],
-      "why": "Weekday mid-mornings are the sweet spot — busy enough to feel alive, not so crowded that seating is difficult. The seasonal pourover selections change monthly and are worth asking about.",
-      "isRecommended": true,
-      "isFree": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "waterloo-waterloo-brewing",
-      "name": "Waterloo Brewing Taproom",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["brewery", "taproom", "local beer", "Ontario", "daytime space", "tours"],
-      "cost": "low",
-      "address": "500 Victoria St N, Waterloo, ON N2L 3C8",
-      "neighborhood": "North Waterloo",
-      "lat": 43.4742,
-      "lng": -80.5163,
-      "website": "https://www.waterloobrewing.ca",
-      "hours": "Varies — check website for taproom hours and tour schedule",
-      "description": "Waterloo Brewing is one of Ontario's oldest craft breweries, established in 1984 as a pioneer of the province's brewing revival. The taproom and brewery tours offer a look at the production side alongside a full range of Waterloo beers on draft. A more laid-back venue than the Uptown bar scene — good for a late afternoon pint. Brewery tours run on a schedule; check the website.",
-      "highlights": [
-        "One of Ontario's oldest craft breweries — founded 1984",
-        "Full taproom with rotating and core Waterloo beers on draft",
-        "Brewery tours available — see the production side up close",
-        "Relaxed atmosphere outside the Uptown core",
-        "Seasonal limited releases often available only at the taproom"
-      ],
-      "why": "The taproom is the only place to get the small-batch and seasonal releases not available in stores. Call ahead for tour times as they book in advance.",
-      "isFree": false,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "waterloo-mcc-thrift-waterloo",
       "name": "MCC Thrift Store — Waterloo",
       "type": "place",
       "category": "thrifting",
-      "tags": ["thrift", "secondhand", "books", "clothing", "kitchenware", "low-cost", "Mennonite"],
+      "tags": [
+        "thrift",
+        "secondhand",
+        "books",
+        "clothing",
+        "kitchenware",
+        "low-cost",
+        "Mennonite"
+      ],
       "cost": "low",
       "address": "Waterloo, ON",
       "neighborhood": "Waterloo",
-      "lat": 43.4640,
-      "lng": -80.5250,
+      "lat": 43.464,
+      "lng": -80.525,
       "website": "https://www.mcccanada.ca/thrift",
-      "hours": "Mon–Sat 9am–5pm",
       "description": "The Waterloo branch of the Mennonite Central Committee thrift network — consistently well-curated, with strong books, clothing, and housewares sections. Proceeds support international relief and development. One of the best routine thrift stops in the city for quality over volume.",
       "highlights": [
         "Reliable stock rotation — worth visiting every few weeks",
@@ -482,63 +419,1646 @@
       "why": "Check the sale days — MCC Thrift often runs colour-tag discount days where already-low prices drop further. The staff here are consistent about quality control.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
-      "id": "waterloo-uptown-jazz-festival",
-      "name": "Uptown Waterloo Jazz Festival",
-      "type": "event",
-      "category": "events",
-      "tags": ["jazz", "free", "outdoor", "festival", "summer", "annual", "music"],
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
       "cost": "free",
-      "address": "Waterloo Public Square and Uptown venues, Waterloo, ON",
-      "neighborhood": "Uptown Waterloo",
-      "lat": 43.4641,
-      "lng": -80.5200,
-      "website": "https://www.uptownwaterloo.ca",
-      "hours": "Annual summer festival — typically July; check website for dates",
-      "description": "An annual outdoor jazz festival centred on the Waterloo Public Square and Uptown venues in summer. Free outdoor stages run throughout the festival with a mix of local, regional, and national jazz acts. A genuinely community-oriented event that celebrates Waterloo's jazz culture. The Jazz Room and surrounding Uptown businesses typically run programming in parallel.",
-      "highlights": [
-        "Free outdoor stages in the Public Square and along the Uptown corridor",
-        "Local, regional, and national jazz performers across multiple days",
-        "Programming across multiple outdoor and indoor venues",
-        "Accessible all-ages atmosphere — daytime and evening programming",
-        "Pairs naturally with a walk through Waterloo Park or dinner in Uptown"
-      ],
-      "why": "The free outdoor stages are where most of the value is. Arrive during set changeovers to get good positioning for the next act. Evening sets as the sun goes down in the square are the festival highlight.",
-      "isFree": true,
-      "isRecommended": true,
-      "seasonal": true,
-      "seasonNote": "Annual summer event, typically July",
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "waterloo-busker-carnival",
-      "name": "Waterloo Busker Carnival",
-      "type": "event",
-      "category": "events",
-      "tags": ["buskers", "street performance", "free", "family", "summer", "outdoor", "annual"],
-      "cost": "free",
-      "address": "Uptown Waterloo, King St N, Waterloo, ON",
-      "neighborhood": "Uptown Waterloo",
-      "lat": 43.4641,
-      "lng": -80.5200,
-      "website": "https://www.uptownwaterloo.ca",
-      "hours": "Annual summer event — typically August; check website for dates",
-      "description": "An annual free outdoor busker festival in Uptown Waterloo with street performers, circus acts, comedians, and musicians taking over the King Street corridor over a summer weekend. One of the better free community events in the Region — genuinely entertaining across age groups. The tips-based format means attending is free even if performers deserve support.",
-      "highlights": [
-        "Free outdoor festival across multiple Uptown stages and street pitches",
-        "Circus acts, comedy, acrobatics, live music, and magic",
-        "All-ages programming spanning the full day and evening",
-        "Vibrant street atmosphere with patio seating and food vendors",
-        "Entirely free to attend — performers pass a hat after each show"
-      ],
-      "why": "The evening shows as it gets dark are typically the most polished — performers save their best acts for the later crowds. Arrive around 7pm for the best combination of energy and variety.",
-      "isFree": true,
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
       "isRecommended": false,
-      "seasonal": true,
-      "seasonNote": "Annual summer event, typically August",
-      "lastVerified": "2026-06-15"
+      "hours": "Open 24 hours",
+      "id": "waterloo-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "waterloo-kids-help-phone",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "waterloo-connexontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "211 Ontario",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "waterloo-211-ontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Community Volunteer Income Tax Program",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "waterloo-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Here 24/7",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://here247.ca",
+      "phone": "1-844-437-3247",
+      "description": "Free mental health and addiction crisis support for Waterloo Wellington, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "waterloo-here-24-7",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "The Food Bank of Waterloo Region",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.thefoodbank.ca",
+      "description": "Finds food support near you across Kitchener, Waterloo, and Cambridge through partner agencies.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "waterloo-the-food-bank-of-waterloo-region",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Find a community or rec centre",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://www.waterloo.ca/recreation-and-sports/find-a-community-or-rec-centre/",
+      "description": "The City's list of community and recreation centres in Waterloo, with hours.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "waterloo-find-a-community-or-rec-centre",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Public skating",
+      "type": "program",
+      "category": "physical",
+      "cost": "low",
+      "website": "https://www.waterloo.ca/recreation-and-sports/skating-rinks-and-arenas/public-skating/",
+      "description": "Public skating times at City arenas in Waterloo.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "costNote": "Check the City's fee list.",
+      "id": "waterloo-public-skating",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Help paying for recreation",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.waterloo.ca/recreation-and-sports/apply-for-financial-and-inclusion-support/",
+      "description": "City support with recreation fees if cost is a barrier.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "waterloo-help-paying-for-recreation",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "waterloo-event-majestic-tiles-mahjong-club-john-m-harper-branch",
+      "name": "Majestic Tiles (Mahjong) Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17114674",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T15:30:00.000Z",
+        "2026-11-23T15:30:00.000Z",
+        "2026-11-24T23:00:00.000Z",
+        "2026-12-07T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-07T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-byo-craft-social-club-albert-mccormick-community-centre",
+      "name": "BYO Craft Social Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Albert McCormick Community Centre Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17314789",
+      "description": "A free program at Albert McCormick Community Centre, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T19:30:00.000Z",
+        "2026-11-20T19:30:00.000Z",
+        "2026-12-04T19:30:00.000Z"
+      ],
+      "endsAt": "2026-12-04T19:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-drop-in-tech-connect-main-library",
+      "name": "Drop-In Tech Connect",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17714668",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T19:30:00.000Z"
+      ],
+      "endsAt": "2026-11-06T19:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-tech-connect-appointment-main-library",
+      "name": "Tech Connect Appointment",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17714693",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T20:30:00.000Z",
+        "2026-11-09T15:00:00.000Z",
+        "2026-11-09T16:00:00.000Z",
+        "2026-11-09T20:00:00.000Z",
+        "2026-11-11T19:00:00.000Z",
+        "2026-11-12T23:00:00.000Z",
+        "2026-11-13T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-2026-national-bank-field-hockey-canada-u-sports-championship-presented",
+      "name": "2026 National Bank Field Hockey Canada U SPORTS Championship Presented by Farm Mutual Re",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "220 Columbia St W., Waterloo",
+      "website": "https://explorewaterloo.ca/event/2026-national-bank-field-hockey-canada-u-sports-championship-presented-by-farm-mutual-re-2/",
+      "description": "At Warrior Field, Waterloo. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T21:00:00.000Z",
+        "2026-11-07T19:00:00.000Z",
+        "2026-11-08T17:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T17:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-live-music-at-revive-karaoke-revive-karaoke",
+      "name": "Live Music at Revive Karaoke",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$14.33",
+      "address": "28 King Street North, Waterloo",
+      "website": "https://explorewaterloo.ca/event/live-music-at-revive-karaoke/",
+      "description": "At Revive Karaoke. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T01:30:00.000Z"
+      ],
+      "endsAt": "2026-11-07T01:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-a-very-merry-market-rim-park-forbes-hall",
+      "name": "A Very Merry Market",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$5.00",
+      "address": "2001 University Ave E, Waterloo",
+      "website": "https://explorewaterloo.ca/event/a-very-merry-market/",
+      "description": "At RIM Park - Forbes Hall. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T15:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-merry-bright-craft-market-conestoga-banquet-hall-waterloo",
+      "name": "Merry & Bright Craft Market",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "617 King St N., Waterloo",
+      "website": "https://explorewaterloo.ca/event/merry-bright-craft-market/",
+      "description": "At Conestoga Banquet Hall, Waterloo. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T15:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-saturday-stories-eastside-branch",
+      "name": "Saturday Stories",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17161304",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Families, Early Learning. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T15:30:00.000Z",
+        "2026-11-21T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-21T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-reading-buddies-main-library",
+      "name": "Reading Buddies",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17161355",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:00:00.000Z",
+        "2026-11-14T19:00:00.000Z",
+        "2026-11-21T19:00:00.000Z",
+        "2026-11-28T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-28T19:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-celebrate-deepavali-rim-park",
+      "name": "Celebrate Deepavali",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "RIM Park Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17686238",
+      "description": "A free program at RIM Park, part of Waterloo Public Library. Ages: Everyone Welcome. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T19:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-ac-dc-and-guns-n-roses-double-tribute-night-maxwells-concerts-events",
+      "name": "AC/DC and Guns N Roses Double Tribute Night",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$22.60",
+      "address": "35 University Ave E, Unit 2, Waterloo",
+      "website": "https://explorewaterloo.ca/event/ac-dc-and-guns-n-roses-double-tribute-night/",
+      "description": "At Maxwell's Concerts & Events. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-theres-no-place-like-space-kids-event-smartizen-early-education-academ",
+      "name": "There’s No Place Like Space - Kids Event",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "370 University Avenue East, Waterloo",
+      "website": "https://explorewaterloo.ca/event/theres-no-place-like-space-kids-event/",
+      "description": "At Smartizen - Early Education Academy. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T15:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-drag-bingo-brunch-hosted-by-crystal-quartz-abe-erb-waterloo-abe-erb-up",
+      "name": "Drag Bingo Brunch Hosted by Crystal Quartz - Abe Erb - Waterloo",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "15 King Street South, Waterloo",
+      "website": "https://explorewaterloo.ca/event/drag-bingo-brunch-hosted-by-crystal-quartz-abe-erb-waterloo/",
+      "description": "At ABE ERB - Uptown Waterloo. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T17:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T17:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-laurier-guest-artist-series-jully-black-wilfrid-laurier-university-the",
+      "name": "Laurier Guest Artist Series: Jully Black",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "75 University Ave W, Waterloo",
+      "website": "https://explorewaterloo.ca/event/laurier-guest-artist-series-jully-black/",
+      "description": "At Wilfrid Laurier University - Theatre Auditorium. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-09T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-ones-exploring-senses-eastside-branch",
+      "name": "Ones Exploring Senses",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17183338",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Early Learning. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T15:30:00.000Z",
+        "2026-11-16T15:30:00.000Z",
+        "2026-11-23T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-23T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-explore-play-learn-john-m-harper-branch",
+      "name": "Explore Play Learn",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17242222",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Early Learning. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T15:30:00.000Z",
+        "2026-11-16T15:30:00.000Z",
+        "2026-12-14T15:30:00.000Z",
+        "2026-12-21T15:30:00.000Z",
+        "2027-01-04T15:30:00.000Z"
+      ],
+      "endsAt": "2027-01-04T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-art-and-stem-club-eastside-branch",
+      "name": "Art and STEM Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17162638",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T21:00:00.000Z",
+        "2026-11-16T21:00:00.000Z",
+        "2026-11-23T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-23T21:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-tween-after-school-hangout-albert-mccormick-community-centre",
+      "name": "Tween After School Hangout",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Albert McCormick Community Centre Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17321379",
+      "description": "A free program at Albert McCormick Community Centre, part of Waterloo Public Library. Ages: Tweens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-09T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-09T21:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-esq-fall-stem-explorers-club-eastside-branch",
+      "name": "ESQ Fall STEM Explorers Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17186050",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T00:00:00.000Z",
+        "2026-11-17T00:00:00.000Z",
+        "2026-11-24T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-region-of-waterloo-waste-info-pop-up-john-m-harper-branch",
+      "name": "Region of Waterloo Waste Info Pop-Up",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17486784",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Everyone Welcome. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-10T15:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-seniors-social-club-john-m-harper-branch",
+      "name": "Seniors Social Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17118184",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Older Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T15:30:00.000Z",
+        "2026-12-01T15:30:00.000Z",
+        "2026-12-08T15:30:00.000Z",
+        "2026-12-15T15:30:00.000Z",
+        "2026-12-22T15:30:00.000Z",
+        "2026-12-29T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-29T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-picturebook-book-club-main-library",
+      "name": "Picturebook Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17180998",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Early Learning. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T16:30:00.000Z",
+        "2026-12-01T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-01T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-chess-club-john-m-harper-branch",
+      "name": "Chess Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17192195",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Everyone Welcome. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:00:00.000Z",
+        "2026-12-15T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T23:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-beginner-line-dancing-class-remix-swing",
+      "name": "Beginner Line Dancing Class",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$28.25",
+      "address": "92 King Street South, Waterloo",
+      "website": "https://explorewaterloo.ca/event/beginner-line-dancing-class/2026-11-10/",
+      "description": "At Remix Swing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:00:00.000Z",
+        "2026-11-17T23:00:00.000Z",
+        "2026-11-24T23:00:00.000Z",
+        "2026-12-01T23:00:00.000Z",
+        "2026-12-08T23:00:00.000Z",
+        "2026-12-15T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T23:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-life-admin-night-main-library",
+      "name": "Life Admin Night",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17473171",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-10T23:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-dog-mic-stand-up-comedy-revive-karaoke",
+      "name": "Dog Mic: Stand Up Comedy",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "28B King Street North, Waterloo",
+      "website": "https://explorewaterloo.ca/event/dog-mic-stand-up-comedy/2026-11-10/",
+      "description": "At Revive Karaoke. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T01:00:00.000Z",
+        "2026-11-18T01:00:00.000Z",
+        "2026-11-25T01:00:00.000Z",
+        "2026-12-02T01:00:00.000Z",
+        "2026-12-09T01:00:00.000Z",
+        "2026-12-16T01:00:00.000Z",
+        "2026-12-23T01:00:00.000Z"
+      ],
+      "endsAt": "2026-12-23T01:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-crafting-with-creativebug-needle-felting-eastside-branch",
+      "name": "Crafting with Creativebug: Needle Felting",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17192311",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T19:30:00.000Z",
+        "2026-11-18T19:30:00.000Z"
+      ],
+      "endsAt": "2026-11-18T19:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-tech-tinker-lab-john-m-harper-branch",
+      "name": "Tech Tinker Lab",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17192635",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Tweens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-11T21:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-lets-play-dungeons-and-dragons-eastside-branch",
+      "name": "Let's Play: Dungeons and Dragons",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17186512",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Tweens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-11T23:30:00.000Z",
+        "2026-11-18T23:30:00.000Z",
+        "2026-11-25T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-25T23:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-learn-create-play-albert-mccormick-community-centre",
+      "name": "Learn Create Play",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Albert McCormick Community Centre Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17183721",
+      "description": "A free program at Albert McCormick Community Centre, part of Waterloo Public Library. Ages: Early Learning. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T15:30:00.000Z",
+        "2026-11-19T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-19T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-discovering-dance-main-library",
+      "name": "Discovering Dance",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17472728",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Early Learning. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-detecting-ai-in-media-eastside-branch",
+      "name": "Detecting AI in Media",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17776580",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T19:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T19:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-painting-beyond-the-brush-john-m-harper-branch",
+      "name": "Painting: Beyond the Brush",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17186543",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-12T21:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-tween-pride-social-eastside-branch",
+      "name": "Tween Pride Social",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17115409",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Tweens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-number-ninjas-albert-mccormick-community-centre",
+      "name": "Number Ninjas",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Albert McCormick Community Centre Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17156874",
+      "description": "A free program at Albert McCormick Community Centre, part of Waterloo Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:30:00.000Z",
+        "2026-11-19T23:30:00.000Z",
+        "2026-11-26T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-26T23:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-2slgbtqia-reading-circle-main-library",
+      "name": "2SLGBTQIA+ Reading Circle",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17115683",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T00:00:00.000Z",
+        "2026-12-04T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-04T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-conversemos-en-espa-ol-lets-chat-in-spanish-john-m-harper-branch",
+      "name": "Conversemos en Español - Let's Chat in Spanish",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17157874",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T00:00:00.000Z",
+        "2026-11-20T00:00:00.000Z",
+        "2026-11-27T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-27T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-alan-cross-uncharted-maxwells-concerts-events",
+      "name": "Alan Cross: UNCHARTED",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$30.00",
+      "address": "35 University Ave E, Unit 2, Waterloo",
+      "website": "https://explorewaterloo.ca/event/alan-cross-uncharted/",
+      "description": "At Maxwell's Concerts & Events. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-computer-basics-albert-mccormick-community-centre",
+      "name": "Computer Basics",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Albert McCormick Community Centre Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17402493",
+      "description": "A free program at Albert McCormick Community Centre, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-13T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-live-music-at-stockyards-chandler-berardi-stockyards-brewing",
+      "name": "🎶 LIVE MUSIC AT STOCKYARDS 🎶 CHANDLER BERARDI",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "25 Benjamin Rd, Waterloo",
+      "website": "https://explorewaterloo.ca/event/%f0%9f%8e%b6-live-music-at-stockyards-%f0%9f%8e%b6-chandler-berardi/",
+      "description": "At Stockyards Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-13T23:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-restorative-gong-yoga-sound-and-stillness-circle-lavender-lane-wellnes",
+      "name": "restorative gong yoga · sound and stillness circle",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$30.00",
+      "address": "215 Toman Dr., Waterloo",
+      "website": "https://explorewaterloo.ca/event/restorative-gong-yoga-%c2%b7-sound-and-stillness-circle/",
+      "description": "At Lavender Lane Wellness Centre. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-valdy-concert-supported-by-kaleb-hikele-emmanuel-united-church",
+      "name": "Valdy Concert supported by Kaleb Hikele",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$25.00",
+      "address": "22 Bridgeport Rd West, Waterloo",
+      "website": "https://explorewaterloo.ca/event/valdy-concert-supported-by-kaleb-hikele/",
+      "description": "At Emmanuel United Church. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T00:30:00.000Z"
+      ],
+      "endsAt": "2026-11-14T00:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-macram-a-plant-hanger-main-library",
+      "name": "Macramé a Plant Hanger",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17192318",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T15:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-special-saturday-stories-with-delano-brown-eastside-branch",
+      "name": "Special Saturday Stories with Delano Brown",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17192806",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Families, Early Learning. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T15:30:00.000Z"
+      ],
+      "endsAt": "2026-11-14T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-chinese-social-club-john-m-harper-branch",
+      "name": "Chinese Social Club 滑铁卢图书馆华人俱乐部",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17157914",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T18:30:00.000Z",
+        "2026-12-12T18:30:00.000Z"
+      ],
+      "endsAt": "2026-12-12T18:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-drama-llamas-albert-mccormick-community-centre",
+      "name": "Drama Llamas",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Albert McCormick Community Centre Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17183525",
+      "description": "A free program at Albert McCormick Community Centre, part of Waterloo Public Library. Ages: Kids. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T19:30:00.000Z"
+      ],
+      "endsAt": "2026-11-14T19:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-chinese-family-storytime-john-m-harper-branch",
+      "name": "Chinese Family Storytime 中文故事时间",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17157967",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T21:00:00.000Z",
+        "2026-12-12T20:30:00.000Z"
+      ],
+      "endsAt": "2026-12-12T20:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-midnight-run-comedy-show-midnight-run-cafe",
+      "name": "Midnight Run Comedy Show",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$10.98",
+      "address": "84D King Street North, Waterloo",
+      "website": "https://explorewaterloo.ca/event/midnight-run-comedy-show/",
+      "description": "At Midnight Run Cafe. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T00:30:00.000Z"
+      ],
+      "endsAt": "2026-11-15T00:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-too-many-zooz-maxwells-concerts-events",
+      "name": "Too Many Zooz",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$26.50",
+      "address": "35 University Ave E, Unit 2, Waterloo",
+      "website": "https://explorewaterloo.ca/event/too-many-zooz/",
+      "description": "At Maxwell's Concerts & Events. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T00:30:00.000Z"
+      ],
+      "endsAt": "2026-11-15T00:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-20s-30s-book-club-john-m-harper-branch",
+      "name": "20s & 30s Book Club",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17117881",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Adults - 20s & 30s. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T00:00:00.000Z",
+        "2026-12-15T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-knitting-and-crochet-club-main-library",
+      "name": "Knitting and Crochet Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17160349",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T00:00:00.000Z",
+        "2026-12-01T00:00:00.000Z",
+        "2026-12-15T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-a2r-womens-health-tech-forum-accelerator-centre",
+      "name": "A2R Women's Health Tech Forum",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$46.50",
+      "address": "295 Hagey Blvd., Waterloo",
+      "website": "https://explorewaterloo.ca/event/a2r-womens-health-tech-forum/",
+      "description": "At Accelerator Centre. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T22:30:00.000Z"
+      ],
+      "endsAt": "2026-11-17T22:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-creative-art-studio-john-m-harper-branch",
+      "name": "Creative Art Studio",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17162683",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Older Adults, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T23:00:00.000Z",
+        "2026-12-29T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-29T23:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-open-mic-poetry-night-main-library",
+      "name": "Open Mic Poetry Night",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17118826",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-17T23:00:00.000Z",
+        "2026-12-15T23:00:00.000Z"
+      ],
+      "endsAt": "2026-12-15T23:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-a-discussion-with-will-ferguson-and-greg-rhyno-eastside-branch",
+      "name": "A Discussion with Will Ferguson and Greg Rhyno",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17192944",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-18T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-brews-brains-trivia-night-stockyards-brewing",
+      "name": "BREWS & BRAINS - Trivia night!",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "25 Benjamin Rd, Waterloo",
+      "website": "https://explorewaterloo.ca/event/brews-brains-trivia-night/",
+      "description": "At Stockyards Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-18T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-hand-lettering-basics-block-letters-john-m-harper-branch",
+      "name": "Hand Lettering Basics: Block Letters",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17192984",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Tweens. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-18T21:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-paint-pour-acrylic-pour-workshop-create-pour-with-ellie-stockyards-bre",
+      "name": "PAINT & POUR! - Acrylic Pour Workshop CREATE & POUR WITH ELLIE",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$45.00",
+      "address": "25 Benjamin Rd, Waterloo",
+      "website": "https://explorewaterloo.ca/event/paint-pour-acrylic-pour-workshop-create-pour-with-ellie-2/",
+      "description": "At Stockyards Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-18T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-18T23:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-living-with-loss-peer-support-group-main-library",
+      "name": "Living with Loss Peer Support Group",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17157840",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T00:00:00.000Z",
+        "2026-12-17T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-lego-block-party-main-library",
+      "name": "LEGO Block Party",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Main Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17193025",
+      "description": "A free program at Main Library, part of Waterloo Public Library. Ages: Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-19T23:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-a-discussion-with-trevor-clare-eastside-branch",
+      "name": "A Discussion with Trevor Clare",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "Eastside Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17523280",
+      "description": "A free program at Eastside Branch, part of Waterloo Public Library. Ages: Older Adults, Adults - 20s & 30s, Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-rgd-trivia-night-waterloo-branding-edition-duke-of-wellington-waterloo",
+      "name": "RGD Trivia Night - Waterloo: Branding Edition",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$15.00",
+      "address": "100 King St S, Waterloo",
+      "website": "https://explorewaterloo.ca/event/rgd-trivia-night-waterloo-branding-edition/",
+      "description": "At Duke of Wellington Waterloo. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-english-corner-john-m-harper-branch",
+      "name": "English Corner",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17115850",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Adults. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T15:30:00.000Z",
+        "2026-12-04T15:30:00.000Z"
+      ],
+      "endsAt": "2026-12-04T15:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-live-music-at-stockyards-lee-watson-stockyards-brewing",
+      "name": "🎶 LIVE MUSIC AT STOCKYARDS 🎶 Lee Watson",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "25 Benjamin Rd, Waterloo",
+      "website": "https://explorewaterloo.ca/event/%f0%9f%8e%b6-live-music-at-stockyards-%f0%9f%8e%b6-lee-watson/",
+      "description": "At Stockyards Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-20T23:30:00.000Z"
+    },
+    {
+      "id": "waterloo-event-ill-scarlett-maxwells-concerts-events",
+      "name": "Ill Scarlett",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$33.90",
+      "address": "35 University Ave E, Unit 2, Waterloo",
+      "website": "https://explorewaterloo.ca/event/ill-scarlett/",
+      "description": "At Maxwell's Concerts & Events. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T00:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-line-dance-party-remix-swing",
+      "name": "Line Dance Party",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "92 King Street South, Waterloo",
+      "website": "https://explorewaterloo.ca/event/line-dance-party/",
+      "description": "At Remix Swing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T01:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-kwlt-presents-rent-9-princess-street-east",
+      "name": "KWLT Presents RENT",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$25.00",
+      "address": "9 Princess Street East, Waterloo",
+      "website": "https://explorewaterloo.ca/event/kwlt-presents-rent/2026-11-20/",
+      "description": "At 9 Princess Street East. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T01:00:00.000Z",
+        "2026-11-21T19:00:00.000Z",
+        "2026-11-22T01:00:00.000Z",
+        "2026-11-22T19:00:00.000Z",
+        "2026-11-28T01:00:00.000Z",
+        "2026-11-28T19:00:00.000Z",
+        "2026-11-29T01:00:00.000Z",
+        "2026-11-29T19:00:00.000Z",
+        "2026-12-05T01:00:00.000Z",
+        "2026-12-05T19:00:00.000Z",
+        "2026-12-06T01:00:00.000Z",
+        "2026-12-06T19:00:00.000Z"
+      ],
+      "endsAt": "2026-12-06T19:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-wii-20th-birthday-party-vector-space",
+      "name": "Wii 20th Birthday Party",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "187 King St S Unit 106, Waterloo",
+      "website": "https://explorewaterloo.ca/event/wii-20th-birthday-party/",
+      "description": "At Vector Space. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T18:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T18:00:00.000Z"
+    },
+    {
+      "id": "waterloo-event-family-lego-club-john-m-harper-branch",
+      "name": "Family LEGO Club",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Waterloo Public Library"
+      ],
+      "cost": "free",
+      "address": "John M. Harper Branch Library, Waterloo",
+      "website": "https://wpl.libnet.info/event/17193118",
+      "description": "A free program at John M. Harper Branch, part of Waterloo Public Library. Ages: Families. Some programs ask you to register, so check first.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T18:30:00.000Z"
+      ],
+      "endsAt": "2026-11-21T18:30:00.000Z"
     }
   ]
 }

@@ -107,6 +107,10 @@ function optionalClean(value: string | undefined): string | null {
   return value ? cleanCopy(value) : null;
 }
 
+const retired = JSON.parse(
+  readFileSync(path.join("scripts", "seed-data", "retired.json"), "utf8"),
+) as { city: string; id: string }[];
+
 async function main() {
   const db = scriptDatabase();
   console.log(`Seeding ${describeTarget()}`);
@@ -158,10 +162,28 @@ async function main() {
     if (dropped.length > 0)
       console.log(`  ${citySlug}: merged duplicate ids ${dropped.join(", ")}`);
 
+    // Runs before the inserts, because a real place can take over a retired listing's name.
+    const listed = new Set(kept.map((p) => stableId(`place/${citySlug}/${p.id}`)));
+    // Listings that failed verification. Hidden rather than deleted, so anyone who saved one
+    // keeps the record, and their slug is freed for a real place of the same name.
+    const retiring = retired
+      .filter((r) => r.city === citySlug)
+      .map((r) => stableId(`place/${citySlug}/${r.id}`))
+      .filter((id) => !listed.has(id));
+    for (const id of retiring) {
+      await db.delete(events).where(eq(events.placeId, id));
+      await db
+        .update(places)
+        .set({ status: "rejected", slug: `retired-${id}` })
+        .where(eq(places.id, id));
+    }
+    if (retiring.length > 0) console.log(`  ${citySlug}: retired ${retiring.length} listings`);
     const usedSlugs = new Set<string>();
     const keptIds = new Set<string>();
     for (const p of kept) {
-      let slug = slugify(p.name);
+      // Feed events come and go, so a counter would hand their slugs from one row to another
+      // between runs and break the unique index. Their ids never change.
+      let slug = slugify(p.occurrences ? p.id : p.name);
       for (let n = 2; usedSlugs.has(slug); n++) slug = `${slugify(p.name)}-${n}`;
       usedSlugs.add(slug);
 

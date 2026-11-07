@@ -78,7 +78,7 @@ export function FilterDropdown({
         role="group"
         aria-label={label}
         className={cn(
-          "menu-panel absolute inset-x-0 top-full z-40 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto overscroll-contain rounded-2xl border border-divider bg-surface-solid p-1.5 shadow-[var(--shadow-lift)]",
+          "menu-panel absolute inset-x-0 top-full z-40 mt-2 max-h-[min(60vh,26rem)] overflow-y-auto overscroll-contain rounded-card border border-divider bg-surface-solid p-1.5 shadow-[var(--shadow-lift)]",
           "sm:inset-x-auto sm:w-72",
           align === "end" ? "sm:right-0" : "sm:left-0",
         )}
@@ -126,7 +126,7 @@ export function FilterOption({
       scroll={false}
       aria-current={selected ? "true" : undefined}
       className={cn(
-        "flex min-h-11 items-center gap-3 rounded-xl px-3 py-2 text-body outline-none hover:bg-bg focus-visible:bg-bg focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus",
+        "flex min-h-11 items-center gap-3 rounded-card px-3 py-2 text-body outline-none hover:bg-bg focus-visible:bg-bg focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus",
         selected && "font-semibold",
       )}
     >

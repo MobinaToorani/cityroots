@@ -11,7 +11,13 @@ type SegmentedLinksProps = {
 /** Server-rendered segmented control where each segment is a URL. Works without JavaScript. */
 export function SegmentedLinks({ label, items, className }: SegmentedLinksProps) {
   return (
-    <nav aria-label={label} className={cn("inline-flex rounded-full p-1 glass", className)}>
+    <nav
+      aria-label={label}
+      className={cn(
+        "inline-flex rounded-control border border-divider bg-surface-solid p-0.5",
+        className,
+      )}
+    >
       {items.map((item) => (
         <Link
           key={item.href}
@@ -19,7 +25,7 @@ export function SegmentedLinks({ label, items, className }: SegmentedLinksProps)
           aria-current={item.active ? "page" : undefined}
           scroll={false}
           className={cn(
-            "inline-flex h-9 items-center rounded-full px-4 text-meta font-semibold transition-colors duration-200",
+            "inline-flex h-8 items-center rounded-control px-4 text-meta font-semibold transition-colors duration-200",
             item.active ? "bg-ink text-on-ink" : "text-text-muted hover:text-text",
           )}
         >

@@ -1,0 +1,31 @@
+name: Refresh city listings
+
+# Calendars for the other nine cities go stale within weeks, the same as Toronto's.
+# Turn this on by adding a DATABASE_URL repository secret; until then it skips itself.
+on:
+  schedule:
+    - cron: "0 10 * * 1" # Mondays, an hour after the Toronto refresh
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.DATABASE_URL != ''
+      - uses: actions/setup-node@v4
+        if: env.DATABASE_URL != ''
+        with:
+          node-version: 22
+      - if: env.DATABASE_URL != ''
+        run: npm ci
+      - if: env.DATABASE_URL != ''
+        run: npm run data:cities
+      - if: env.DATABASE_URL != ''
+        run: |
+          for city in burlington cambridge kitchener markham newmarket oakville richmond-hill vaughan waterloo; do
+            npx tsx scripts/seed.ts --city="$city"
+          done

@@ -63,4 +63,7 @@ export type PlaceDetail = PlaceCard & {
   tips: { id: string; body: string; createdAt: Date }[];
 };
 
+/** The place as the preview panel gets it, without the community tips. */
+export type PlacePreview = Omit<PlaceDetail, "tips">;
+
 export type SiteStats = { cities: number; places: number; freeShare: number };

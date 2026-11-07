@@ -2,9 +2,9 @@
 
 import { ArrowRight, X } from "lucide-react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { useExplorer } from "./explorer-state";
+import { PlaceLink } from "../place-link";
 import { CategoryTag, CostBadge, PickBadge } from "@/components/ui/badges";
 import { Icon } from "@/components/ui/icon";
 import type { MapPoint } from "@/lib/data/places";
@@ -37,7 +37,7 @@ export function MapPane({ points }: { points: MapPoint[] }) {
     <div className="relative h-full overflow-hidden lg:rounded-[var(--radius-modal)]">
       <a
         href="#results"
-        className="sr-only z-20 rounded-full bg-ink px-4 py-2 font-semibold text-on-ink focus:not-sr-only focus:absolute focus:top-3 focus:left-3"
+        className="sr-only z-20 rounded-control bg-ink px-4 py-2 font-semibold text-on-ink focus:not-sr-only focus:absolute focus:top-3 focus:left-3"
       >
         Skip the map, go to results
       </a>
@@ -51,7 +51,7 @@ export function MapPane({ points }: { points: MapPoint[] }) {
       />
 
       <div className="pointer-events-none absolute top-3 left-3 flex flex-wrap gap-2">
-        <span className="pointer-events-auto inline-flex h-9 items-center gap-1.5 rounded-full px-3.5 text-meta glass-strong">
+        <span className="pointer-events-auto inline-flex h-9 items-center gap-1.5 rounded-control px-3.5 text-meta glass-strong">
           <span className="font-semibold">{points.length}</span> on the map,
           <span className="font-semibold text-free">{free} free</span>
         </span>
@@ -59,7 +59,7 @@ export function MapPane({ points }: { points: MapPoint[] }) {
           <button
             type="button"
             onClick={() => void update({ bbox: null })}
-            className="motion-press pointer-events-auto inline-flex h-9 items-center gap-1.5 rounded-full px-3.5 text-meta font-semibold glass-strong active:translate-y-px"
+            className="motion-press pointer-events-auto inline-flex h-9 items-center gap-1.5 rounded-control px-3.5 text-meta font-semibold glass-strong active:translate-y-px"
           >
             <Icon icon={X} size={16} />
             Show results everywhere
@@ -75,7 +75,7 @@ export function MapPane({ points }: { points: MapPoint[] }) {
           onKeyDown={(e) => {
             if (e.key === "Escape") void setShallow({ place: null });
           }}
-          className="sheet-up absolute inset-x-3 bottom-[calc(10rem+env(safe-area-inset-bottom))] z-10 rounded-[var(--radius-card)] p-4 glass-strong lg:right-auto lg:bottom-3 lg:left-3 lg:w-[360px]"
+          className="sheet-up absolute inset-x-3 bottom-[calc(10rem+env(safe-area-inset-bottom))] z-10 rounded-card p-4 glass-strong lg:right-auto lg:bottom-3 lg:left-3 lg:w-[360px]"
         >
           <div className="flex items-start justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2">
@@ -87,21 +87,21 @@ export function MapPane({ points }: { points: MapPoint[] }) {
               type="button"
               onClick={() => void setShallow({ place: null })}
               aria-label="Close place card"
-              className="-m-1 grid size-8 shrink-0 place-items-center rounded-full hover:bg-divider/60"
+              className="-m-1 grid size-8 shrink-0 place-items-center rounded-control hover:bg-divider/60"
             >
               <Icon icon={X} size={16} />
             </button>
           </div>
           <h2 className="mt-2 text-card font-semibold tracking-tight">{selected.name}</h2>
           <p className="mt-1 line-clamp-2 text-body text-text-muted">{selected.summary}</p>
-          <Link
+          <PlaceLink
             ref={cardLink}
-            href={`/places/${selected.id}`}
+            placeId={selected.id}
             className="mt-3 inline-flex items-center gap-1.5 font-semibold text-primary-text quiet-link"
           >
             View details
             <Icon icon={ArrowRight} size={16} />
-          </Link>
+          </PlaceLink>
         </div>
       )}
     </div>

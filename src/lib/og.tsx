@@ -9,9 +9,9 @@ export const OG_SIZE = { width: 1200, height: 630 };
 export const OG_CONTENT_TYPE = "image/png";
 
 const INK = "#141412";
-const BG = "#f4f2ed";
+const BG = "#f7f6f2";
 const MUTED = "#5f5b54";
-const FREE = "#176b3c";
+const FREE = "#186b45";
 
 let fonts: Promise<NonNullable<ConstructorParameters<typeof ImageResponse>[1]>["fonts"]> | null =
   null;

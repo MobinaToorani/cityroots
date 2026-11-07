@@ -60,7 +60,7 @@ export function LoadMore({ remaining, pageSize }: LoadMoreProps) {
       <button
         type="submit"
         disabled={isPending}
-        className="motion-press h-11 rounded-full border border-divider bg-surface-solid px-6 font-semibold hover:border-text-muted/50 active:translate-y-px disabled:opacity-60"
+        className="motion-press h-11 rounded-control border border-divider bg-surface-solid px-6 font-semibold hover:border-text-muted/50 active:translate-y-px disabled:opacity-60"
       >
         {isPending ? "Loading more" : `Show ${Math.min(pageSize, remaining)} more`}
       </button>

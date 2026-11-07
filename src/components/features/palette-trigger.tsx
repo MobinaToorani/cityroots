@@ -35,7 +35,7 @@ export function PaletteTrigger({
       aria-haspopup="dialog"
       aria-keyshortcuts="Meta+K Control+K"
       className={cn(
-        "motion-press inline-flex h-10 items-center gap-2 rounded-full text-meta font-semibold text-text-muted hover:text-text",
+        "motion-press inline-flex h-10 items-center gap-2 rounded-control text-meta font-semibold text-text-muted hover:text-text",
         compact
           ? "w-10 justify-center hover:bg-divider/60"
           : "w-full border border-divider bg-surface-solid/60 px-3.5",

@@ -26,7 +26,7 @@ export default async function PartnerKeysPage(props: PageProps<"/admin/partners"
 
   return (
     <>
-      <h1 className="text-section font-semibold tracking-tight">Partner keys</h1>
+      <h1 className="page-title">Partner keys</h1>
       <p className="mt-2 text-body text-text-muted">
         One key per organization. Partners are invoiced by email; nothing here charges anyone.
       </p>

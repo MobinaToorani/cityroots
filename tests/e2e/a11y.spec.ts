@@ -40,6 +40,7 @@ for (const { name, path } of PAGES) {
 test("place detail has no WCAG 2.2 AA violations", async ({ page }) => {
   await page.goto("/explore?city=burlington");
   await page.locator("main article a").first().click();
+  await page.getByRole("dialog").getByRole("link", { name: "See full details" }).click();
   await page.waitForURL(/\/places\//);
   // Audit the settled page, not the moment of the route swap.
   await expect(page).toHaveTitle(/\| CityRoots$/);

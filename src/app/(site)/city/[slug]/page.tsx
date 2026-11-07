@@ -4,18 +4,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guidesForCity } from "@/content/guides";
 import { CategoryTile } from "@/components/features/category-tile";
-import { EventCard } from "@/components/features/event-card";
 import { JsonLd } from "@/components/features/json-ld";
 import { Photo, PhotoCredit } from "@/components/features/photo";
 import { PlaceCard } from "@/components/features/place-card";
+import { WeekList } from "@/components/features/week-list";
 import { RememberCity } from "@/components/layout/city-picker";
 import { ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
-import { Container, SectionHeading } from "@/components/ui/section";
+import { Container, PageSection } from "@/components/ui/section";
 import { getCategoryCounts, getCityBySlug, listLiveCities } from "@/lib/data/cities";
 import { listThisWeek } from "@/lib/data/events";
 import { listPicks } from "@/lib/data/places";
-import { showingDay } from "@/lib/domain/event-dates";
 import { exploreHref } from "@/lib/domain/explore-params";
 import { photo } from "@/lib/photos";
 import { absoluteUrl } from "@/lib/site";
@@ -50,11 +49,13 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
   const city = await getCityBySlug(slug);
   if (!city) notFound();
 
-  const [picks, week, categoryCounts] = await Promise.all([
+  const [allPicks, week, categoryCounts] = await Promise.all([
     listPicks(city.slug, 6),
     listThisWeek(8, city.slug),
     getCategoryCounts(city.id),
   ]);
+  // Six or three, so the three-column grid never ends on a gap.
+  const picks = allPicks.slice(0, allPicks.length >= 6 ? 6 : allPicks.length >= 3 ? 3 : undefined);
   const hero = photo(city.heroImage);
   const guides = guidesForCity(city.slug);
 
@@ -114,24 +115,13 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
           </h1>
           <p className="mt-2 max-w-2xl text-base text-white/90 sm:text-lg">{city.tagline}</p>
           <div className="mt-5 flex flex-wrap gap-2">
-            <Link
-              href={exploreHref({ city: city.slug, cost: ["free"] })}
-              className="motion-press inline-flex h-11 items-center rounded-full bg-white px-5 font-semibold text-[#141412] transition-transform hover:-translate-y-0.5 active:translate-y-px"
-            >
+            <ButtonLink href={exploreHref({ city: city.slug, cost: ["free"] })} variant="photo">
               {city.freeCount} free things
-            </Link>
-            <ButtonLink
-              href={exploreHref({ city: city.slug })}
-              variant="secondary"
-              className="glass-strong"
-            >
+            </ButtonLink>
+            <ButtonLink href={exploreHref({ city: city.slug })} variant="photo-outline">
               See all {city.placeCount}
             </ButtonLink>
-            <ButtonLink
-              href={`/events?city=${city.slug}` as Route}
-              variant="secondary"
-              className="glass-strong"
-            >
+            <ButtonLink href={`/events?city=${city.slug}` as Route} variant="photo-outline">
               What&apos;s on
             </ButtonLink>
           </div>
@@ -140,92 +130,70 @@ export default async function CityPage(props: PageProps<"/city/[slug]">) {
       </section>
 
       {picks.length > 0 && (
-        <section aria-labelledby="picks" className="pt-10">
-          <Container>
-            <SectionHeading id="picks" title="Start with these" className="mb-4" />
-            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {picks.map((place) => (
-                <li key={place.id}>
-                  <PlaceCard place={place} />
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </section>
+        <PageSection id="picks" title="Start with these">
+          <ul className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
+            {picks.map((place) => (
+              <li key={place.id}>
+                <PlaceCard place={place} showPick={false} />
+              </li>
+            ))}
+          </ul>
+        </PageSection>
       )}
 
       {week.length > 0 && (
-        <section aria-labelledby="events-title" className="pt-12">
-          <Container>
-            <SectionHeading
-              id="events-title"
-              title="On this week"
-              className="mb-4"
-              action={
-                <ButtonLink
-                  href={`/events?city=${city.slug}` as Route}
-                  variant="secondary"
-                  size="sm"
-                >
-                  All events
-                  <Icon icon={ArrowRight} size={16} />
-                </ButtonLink>
-              }
-            />
-          </Container>
-          <div className="no-scrollbar overflow-x-auto">
-            <ul className="flex w-max snap-x snap-mandatory gap-3 px-5 pb-2 sm:px-8 xl:px-[max(2rem,calc((100vw-1200px)/2+2rem))]">
-              {week.map(({ event, at, timed }) => (
-                <li key={event.id} className="w-[72vw] max-w-[280px] shrink-0 snap-start">
-                  <EventCard
-                    event={event}
-                    when={timed ? showingDay(at) : "This week"}
-                    showCity={false}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <PageSection
+          id="events-title"
+          title="On this week"
+          action={
+            <ButtonLink
+              href={`/events?city=${city.slug}` as Route}
+              variant="quiet"
+              className="text-meta"
+            >
+              All events
+              <Icon icon={ArrowRight} size={16} />
+            </ButtonLink>
+          }
+        >
+          <WeekList items={week} showCity={false} />
+        </PageSection>
       )}
 
-      <section aria-labelledby="categories" className="pt-12">
-        <Container>
-          <SectionHeading id="categories" title="Browse by type" className="mb-4" />
-          <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
-            {categoryCounts
-              .filter((c) => c.count > 0)
-              .map((c) => (
-                <li key={c.slug}>
-                  <CategoryTile
-                    slug={c.slug}
-                    count={c.count}
-                    href={exploreHref({ city: city.slug, cat: [c.slug] })}
-                  />
-                </li>
-              ))}
-          </ul>
-        </Container>
-      </section>
+      <PageSection id="categories" title="Browse by type">
+        <ul className="grid grid-cols-2 gap-x-6 lg:grid-cols-5">
+          {categoryCounts
+            .filter((c) => c.count > 0)
+            .map((c) => (
+              <li key={c.slug}>
+                <CategoryTile
+                  slug={c.slug}
+                  count={c.count}
+                  href={exploreHref({ city: city.slug, cat: [c.slug] })}
+                />
+              </li>
+            ))}
+        </ul>
+      </PageSection>
 
       {guides.length > 0 && (
-        <section aria-labelledby="city-guides" className="pt-12">
-          <Container>
-            <SectionHeading id="city-guides" title="Days already planned" className="mb-4" />
-            <ul className="grid gap-2">
-              {guides.map((guide) => (
-                <li key={guide.slug}>
+        <PageSection id="city-guides" title="Days already planned">
+          <ul className="grid grid-cols-1 gap-x-12 lg:grid-cols-2">
+            {guides.map((guide) => (
+              <li key={guide.slug} className="group relative border-t border-divider py-3">
+                <h3 className="font-semibold tracking-tight">
                   <Link
                     href={`/guides/${guide.slug}` as Route}
-                    className="font-semibold text-primary-text quiet-link"
+                    className="group-hover:underline after:absolute after:inset-0"
                   >
                     {guide.title}
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </section>
+                </h3>
+                <p className="mt-0.5 text-meta text-text-muted">{guide.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </PageSection>
       )}
     </>
   );

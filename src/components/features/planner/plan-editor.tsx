@@ -2,7 +2,6 @@
 
 import { GOALS, goal } from "@/lib/analytics";
 import { ArrowDown, ArrowUp, Bookmark, RefreshCw, Trash2 } from "lucide-react";
-import Link from "next/link";
 import { useActionState, useState } from "react";
 import { savePlanAction, type SavePlanState } from "@/app/(app)/planner/actions";
 import { CategoryTag, CostBadge } from "@/components/ui/badges";
@@ -15,6 +14,7 @@ import { SLOT_TIMES, timeLabel, type SlotKey } from "@/lib/domain/plan-slots";
 import type { CategorySlug } from "@/lib/domain/categories";
 import type { CostBand } from "@/lib/domain/cost";
 import { cn } from "@/lib/cn";
+import { PlaceLink } from "@/components/features/place-link";
 
 export type EditorPlace = {
   id: string;
@@ -152,9 +152,9 @@ export function PlanEditor({
                   <div className="min-w-0">
                     <p className="text-meta font-semibold text-text-muted">{stop.label}</p>
                     <h3 className="text-card font-semibold">
-                      <Link href={`/places/${place.id}`} className="hover:underline">
+                      <PlaceLink placeId={place.id} className="hover:underline">
                         {place.name}
-                      </Link>
+                      </PlaceLink>
                     </h3>
                     <div className="mt-1.5 flex flex-wrap items-center gap-2 text-meta text-text-muted">
                       <CategoryTag slug={place.category} />
@@ -260,7 +260,7 @@ function StopButton({
       title={label}
       disabled={disabled}
       onClick={onClick}
-      className="grid size-10 place-items-center rounded-full text-text-muted transition-colors hover:bg-divider/60 hover:text-text disabled:opacity-35"
+      className="grid size-10 place-items-center rounded-control text-text-muted transition-colors hover:bg-divider/60 hover:text-text disabled:opacity-35"
     >
       <Icon icon={icon} size={16} />
     </button>

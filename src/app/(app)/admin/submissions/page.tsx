@@ -37,7 +37,7 @@ export default async function SubmissionsPage(props: PageProps<"/admin/submissio
 
   return (
     <>
-      <h1 className="text-section font-semibold tracking-tight">Suggestions and corrections</h1>
+      <h1 className="page-title">Suggestions and corrections</h1>
       {done && (
         <p role="status" className="mt-3 text-body font-semibold">
           {done}

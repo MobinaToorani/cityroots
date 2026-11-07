@@ -53,7 +53,10 @@ export function SavedList() {
         </EmptyState>
       ) : (
         <>
-          <ul aria-busy={missing.length > 0} className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <ul
+            aria-busy={missing.length > 0}
+            className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2 xl:grid-cols-3"
+          >
             {list.map((place) => (
               <li key={place.id}>
                 <PlaceCard place={place} showCity headingLevel="h2" />

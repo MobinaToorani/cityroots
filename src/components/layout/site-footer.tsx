@@ -17,7 +17,7 @@ const LINKS: { href: Route; label: string; show?: () => boolean }[] = [
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-divider pt-8 pb-28 lg:pb-8">
-      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-x-8 gap-y-4 px-5 sm:px-6">
+      <div className="page-frame flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
           <Logo />
           <p className="text-meta text-text-muted">No ads. Nobody pays for placement.</p>

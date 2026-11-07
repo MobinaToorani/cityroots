@@ -36,6 +36,7 @@ test.describe("submit", () => {
   test("place pages link to a correction form for that place", async ({ page }) => {
     await page.goto("/explore?city=vaughan");
     await page.locator("main article a").first().click();
+    await page.getByRole("dialog").getByRole("link", { name: "See full details" }).click();
     await page.waitForURL(/\/places\//);
     const name = (await page.getByRole("heading", { level: 1 }).textContent()) ?? "";
     await page.getByRole("link", { name: "Suggest a correction" }).click();

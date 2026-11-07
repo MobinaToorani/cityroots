@@ -33,16 +33,14 @@ export default async function SignInPage(props: PageProps<"/signin">) {
   return (
     <div className="flex min-h-[90svh] items-center justify-center px-5 pt-10 pb-16">
       <Card className="w-full max-w-md rounded-[var(--radius-modal)] p-6 sm:p-8">
-        <h1 className="font-display text-section font-medium tracking-tight">
-          Sign in to CityRoots
-        </h1>
+        <h1 className="page-title">Sign in to CityRoots</h1>
         <p className="mt-2 text-body text-text-muted">
           You do not need an account to browse. Sign in to save places and manage your plan.
         </p>
         {errorMessage && (
           <p
             role="alert"
-            className="mt-4 rounded-2xl bg-danger/10 px-4 py-3 text-meta font-medium text-danger"
+            className="mt-4 rounded-card bg-danger/10 px-4 py-3 text-meta font-medium text-danger"
           >
             {errorMessage}
           </p>

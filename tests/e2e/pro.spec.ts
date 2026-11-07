@@ -14,6 +14,7 @@ async function openFirstPlace(page: Page, city = "oakville") {
   const first = page.locator("main article :is(h2, h3) a").first();
   const name = (await first.textContent())?.trim() ?? "";
   await first.click();
+  await page.getByRole("dialog").getByRole("link", { name: "See full details" }).click();
   await expect(page.getByRole("heading", { level: 1, name })).toBeVisible();
   return name;
 }
@@ -60,6 +61,7 @@ test.describe("collections", () => {
     const second = page.locator("main article").nth(1);
     const secondName = (await second.locator(":is(h2, h3) a").textContent())?.trim() ?? "";
     await second.locator(":is(h2, h3) a").click();
+    await page.getByRole("dialog").getByRole("link", { name: "See full details" }).click();
     await page.waitForURL(/\/places\//);
     await page.getByRole("link", { name: "Add to a collection" }).click();
     const saveDialog = page.getByRole("dialog", { name: "Save to a collection" });

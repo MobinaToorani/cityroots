@@ -4,26 +4,39 @@
   "province": "Ontario",
   "country": "Canada",
   "tagline": "Victoria Park, a downtown arts corridor, and North America's largest Bavarian heritage festival",
-  "heroDescription": "Kitchener sits at the heart of Waterloo Region — a mid-sized Ontario city that grew from German-Mennonite immigrant roots and industrial manufacturing into one of Canada's most culturally layered communities. The downtown core has seen real renewal around the Kitchener Market and Queen Street corridor: arts venues, the region's main performing arts centre, and an award-winning central library all within walking distance of each other. Victoria Park is one of Ontario's finest urban parks. Every October the city becomes the site of North America's largest Bavarian festival. The Iron Horse Trail connects Kitchener to Waterloo and Cambridge, and the Grand River Conservation Authority maintains natural areas within easy reach of the urban core.",
+  "heroDescription": "Kitchener sits at the heart of Waterloo Region — a mid-sized Ontario city that grew from German-Mennonite immigrant roots and industrial manufacturing. The downtown core has seen real renewal around the Kitchener Market and Queen Street corridor: arts venues, the region's main performing arts centre, and an award-winning central library all within walking distance of each other. Every October the city becomes the site of North America's largest Bavarian festival. The Iron Horse Trail connects Kitchener to Waterloo and Cambridge, and the Grand River Conservation Authority maintains natural areas within easy reach of the urban core.",
   "lat": 43.4516,
   "lng": -80.4925,
-  "contributors": ["CityRoots Community"],
-  "lastUpdated": "2026-06-29",
+  "contributors": [
+    "CityRoots Community",
+    "Public library calendars",
+    "Statistics Canada Open Licence"
+  ],
+  "lastUpdated": "2026-11-06",
   "places": [
     {
       "id": "kitchener-victoria-park",
       "name": "Victoria Park",
       "type": "place",
       "category": "physical",
-      "tags": ["park", "lake", "trails", "free", "year-round", "picnic", "outdoor", "fountain"],
+      "tags": [
+        "park",
+        "lake",
+        "trails",
+        "free",
+        "year-round",
+        "picnic",
+        "outdoor",
+        "fountain"
+      ],
       "cost": "free",
       "address": "Park St, Kitchener, ON N2H 1Z9",
       "neighborhood": "Victoria Hills",
       "lat": 43.4494,
       "lng": -80.5017,
-      "website": "https://www.kitchener.ca/parks",
+      "website": "https://www.kitchener.ca/parks-and-trails/parks/victoria-park/",
       "hours": "Open year-round",
-      "description": "Kitchener's signature urban park — 15 hectares anchored by a spring-fed lake with a lighted fountain, mature tree canopy, and a loop trail around the water. The bandshell hosts free summer concerts. The splash pad, picnic shelters, and landscaped gardens make it the city's main public gathering space year-round. Central and genuinely beautiful.",
+      "description": "Kitchener's main urban park: 15 hectares anchored by a spring-fed lake with a lighted fountain, mature tree canopy, and a loop trail around the water. The bandshell hosts free summer concerts. The splash pad, picnic shelters, and landscaped gardens make it the city's main public gathering space year-round. Central and beautiful.",
       "highlights": [
         "1.2km lake loop trail shaded by mature trees",
         "Bandshell with free summer concerts and community events",
@@ -34,20 +47,29 @@
       "why": "Victoria Park is most worth visiting in early morning before the day fills in. The lake fountain runs spring through fall, and the autumn colour is exceptional. The park is also the gathering point for Oktoberfest events and the Christkindl Market setup.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-iron-horse-trail",
       "name": "Iron Horse Trail",
       "type": "place",
       "category": "physical",
-      "tags": ["trail", "cycling", "walking", "free", "year-round", "paved", "multi-use", "grand river"],
+      "tags": [
+        "trail",
+        "cycling",
+        "walking",
+        "free",
+        "year-round",
+        "paved",
+        "multi-use",
+        "grand river"
+      ],
       "cost": "free",
       "address": "Victoria St N trailhead, Kitchener, ON",
       "neighborhood": "Downtown Kitchener",
-      "lat": 43.4620,
-      "lng": -80.5100,
-      "website": "https://www.kitchener.ca/trails",
+      "lat": 43.462,
+      "lng": -80.51,
+      "website": "https://www.kitchener.ca/parks-and-trails/trails/",
       "hours": "Open year-round",
       "description": "A paved multi-use trail that forms the spine of the Waterloo Region trail network, running roughly 30km from uptown Waterloo through Kitchener to Cambridge. The Kitchener section passes through the downtown core and connects to Victoria Park. The trail follows old railway corridors — flat, accessible, and completely free. One of the best ways to move between the three cities without a car.",
       "highlights": [
@@ -60,22 +82,31 @@
       "why": "The Kitchener-to-Cambridge stretch through the Grand River valley is the quietest and most scenic section. If you start in DTK heading south, you'll hit a proper river trail within 3km.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-huron-natural-area",
       "name": "Huron Natural Area",
       "type": "place",
       "category": "physical",
-      "tags": ["nature", "trails", "free", "year-round", "wildlife", "birding", "wetlands", "forest"],
+      "tags": [
+        "nature",
+        "trails",
+        "free",
+        "year-round",
+        "wildlife",
+        "birding",
+        "wetlands",
+        "forest"
+      ],
       "cost": "free",
       "address": "Fischer-Hallman Rd area, Kitchener, ON",
       "neighborhood": "Huron Park",
       "lat": 43.4227,
       "lng": -80.5421,
-      "website": "https://www.kitchener.ca/parks",
+      "website": "https://www.kitchener.ca/parks-and-trails/parks/huron-natural-area/",
       "hours": "Open year-round",
-      "description": "A 43-hectare natural area in southwest Kitchener managed jointly by the city and the Grand River Conservation Authority. The site protects a mix of Carolinian forest, wetlands, and meadow — rare within a suburban area. Unpaved trails wind through the property. Very few people outside the immediate neighbourhood know this exists. One of the most ecologically rich free spaces in the urban core.",
+      "description": "A 43-hectare natural area in southwest Kitchener managed jointly by the city and the Grand River Conservation Authority. The site protects a mix of Carolinian forest, wetlands, and meadow — rare within a suburban area. Unpaved trails wind through the property. Very few people outside the immediate neighbourhood know this exists. A free natural space in the urban core.",
       "highlights": [
         "43 hectares of Carolinian forest, wetland, and meadow",
         "Excellent birding — particularly during spring migration",
@@ -86,19 +117,26 @@
       "why": "Best visited in May for spring wildflowers and migrating songbirds. The trail entrances are not well-signed from the road — look for the park entrance off Huron Rd.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-chicopee-ski",
       "name": "Chicopee Ski & Summer Resort",
       "type": "place",
       "category": "physical",
-      "tags": ["skiing", "snowboarding", "mountain biking", "outdoor", "family", "seasonal"],
+      "tags": [
+        "skiing",
+        "snowboarding",
+        "mountain biking",
+        "outdoor",
+        "family",
+        "seasonal"
+      ],
       "cost": "low",
       "costNote": "Day passes ~$30–45 depending on season and age; equipment rental available",
       "address": "396 Morrison Rd, Kitchener, ON N2A 3M1",
       "neighborhood": "Chicopee",
-      "lat": 43.4780,
+      "lat": 43.478,
       "lng": -80.4545,
       "website": "https://chicopee.ca",
       "hours": "Seasonal — winter ski and summer bike park; check website for schedule",
@@ -115,22 +153,29 @@
       "isRecommended": false,
       "seasonal": true,
       "seasonNote": "Ski season typically December to March; mountain biking May to October",
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-central-library",
       "name": "Kitchener Public Library — Central Branch",
       "type": "place",
       "category": "mental",
-      "tags": ["library", "free", "makerspace", "digital media", "reading", "programming", "year-round"],
+      "tags": [
+        "library",
+        "free",
+        "makerspace",
+        "digital media",
+        "reading",
+        "programming",
+        "year-round"
+      ],
       "cost": "free",
       "address": "85 Queen St N, Kitchener, ON N2H 2H1",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4527,
       "lng": -80.4956,
       "website": "https://www.kpl.org",
-      "hours": "Mon–Thu 9am–9pm, Fri–Sat 9am–6pm, Sun 1–5pm",
-      "description": "An award-winning central library that opened in 2014 and remains one of the best public library buildings in Ontario. The collection is broad, but the real draw is The Studio — a full makerspace with laser cutters, 3D printers, sewing machines, and audio/video recording equipment, all free with a library card. The digital media lab, quiet reading floors, and regular free programming round out one of the most resource-rich public buildings in the Region.",
+      "description": "An award-winning central library that opened in 2014 and remains one of the best public library buildings in Ontario. The collection is broad, but the real draw is The Studio — a full makerspace with laser cutters, 3D printers, sewing machines, and audio/video recording equipment, all free with a library card. The digital media lab, quiet reading floors, and regular free programming round it out.",
       "highlights": [
         "The Studio makerspace: laser cutters, 3D printers, electronics, sewing — all free with library card",
         "Digital media lab with professional recording and editing equipment",
@@ -141,14 +186,22 @@
       "why": "The Studio is what sets this library apart. Booking is required for equipment use — reserve slots online a few days ahead, especially for the laser cutter which fills up fast.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-kw-counselling",
       "name": "KW Counselling Services",
       "type": "resource",
       "category": "mental",
-      "tags": ["counselling", "therapy", "mental health", "sliding scale", "walk-in", "free", "low-cost"],
+      "tags": [
+        "counselling",
+        "therapy",
+        "mental health",
+        "sliding scale",
+        "walk-in",
+        "free",
+        "low-cost"
+      ],
       "cost": "varies",
       "costNote": "Walk-in counselling free; ongoing sessions on sliding scale based on income",
       "address": "480 Charles St E, Kitchener, ON N2G 4K6",
@@ -156,8 +209,7 @@
       "lat": 43.4489,
       "lng": -80.4862,
       "website": "https://www.kwcounselling.com",
-      "hours": "Mon–Fri 9am–5pm; walk-in hours vary — check website",
-      "description": "A non-profit community counselling organization that has served Waterloo Region since the 1970s. Offers individual, couple, and family therapy on a sliding scale. Walk-in counselling sessions are available during specified hours without an appointment. One of the most accessible mental health resources in the Region — not widely publicized but genuinely available to people who need it.",
+      "description": "A non-profit community counselling organization that has served Waterloo Region since the 1970s. Offers individual, couple, and family therapy on a sliding scale. Walk-in counselling sessions are available during specified hours without an appointment. Not widely publicized, but available to people who need it.",
       "highlights": [
         "Walk-in counselling sessions — no appointment required during walk-in hours",
         "Sliding-scale fees based on income, down to $0 for those who qualify",
@@ -165,17 +217,24 @@
         "Specialized programs for grief, trauma, anxiety, and relationship issues",
         "Serving the community for over 50 years — stable, community-rooted organization"
       ],
-      "why": "Walk-in sessions are first-come, first-served and fill up — arrive early if attending during walk-in hours. The sliding scale makes this one of the most financially accessible therapy options in the Region.",
+      "why": "Walk-in sessions are first-come, first-served and fill up — arrive early if attending during walk-in hours. The sliding scale keeps the cost down.",
       "isFree": false,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-working-centre-stjohns",
       "name": "St. John's Kitchen — The Working Centre",
       "type": "place",
       "category": "social",
-      "tags": ["community meal", "drop-in", "free", "community", "social services", "all welcome"],
+      "tags": [
+        "community meal",
+        "drop-in",
+        "free",
+        "community",
+        "social services",
+        "all welcome"
+      ],
       "cost": "free",
       "address": "97 Victoria St N, Kitchener, ON N2H 5C3",
       "neighborhood": "Downtown Kitchener",
@@ -183,7 +242,7 @@
       "lng": -80.4891,
       "website": "https://www.theworkingcentre.org",
       "hours": "Kitchen open most mornings — check website for current meal times",
-      "description": "The Working Centre is a Kitchener institution operating since the 1980s, offering services to people who are unemployed, unhoused, or marginalized. St. John's Kitchen serves free community meals daily and operates as a genuine drop-in gathering place open to anyone in the community. The ethos is deliberately non-institutional — people come, eat, talk, and use the space. One of the most genuine expressions of community in the Region.",
+      "description": "The Working Centre is a Kitchener institution operating since the 1980s, offering services to people who are unemployed, unhoused, or marginalized. St. John's Kitchen serves free community meals daily and operates as a genuine drop-in gathering place open to anyone in the community. The ethos is deliberately non-institutional — people come, eat, talk, and use the space.",
       "highlights": [
         "Free community meals served most mornings — open to anyone",
         "Drop-in space with no requirements for entry",
@@ -194,22 +253,28 @@
       "why": "The meal is free and the space is open and welcoming. This isn't just a social services organization — it functions as a genuine community hub where a very wide cross-section of Kitchener passes through.",
       "isFree": true,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-rockway-centre",
       "name": "Rockway Centre",
       "type": "place",
       "category": "social",
-      "tags": ["community centre", "fitness", "pool", "programs", "low-cost", "all ages"],
+      "tags": [
+        "community centre",
+        "fitness",
+        "pool",
+        "programs",
+        "low-cost",
+        "all ages"
+      ],
       "cost": "low",
       "costNote": "Drop-in fitness ~$5–8; pool admission ~$3–5; subsidized memberships available",
       "address": "1405 King St E, Kitchener, ON N2G 2N7",
       "neighborhood": "Rockway",
-      "lat": 43.4350,
-      "lng": -80.4820,
-      "website": "https://www.kitchener.ca/rockway",
-      "hours": "Mon–Fri 7am–9pm, Sat–Sun 8am–6pm",
+      "lat": 43.435,
+      "lng": -80.482,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/rockway-centre/",
       "description": "A community recreation centre in east Kitchener originally built for seniors programming but now open to all ages. Has a pool, fitness area, gymnasium, and a full schedule of registered and drop-in programs. Affordable by any standard and one of the quieter community centres in the city — less busy than the downtown recreation facilities.",
       "highlights": [
         "Indoor pool with lane swimming and aquafit classes",
@@ -221,14 +286,21 @@
       "why": "Lane swimming here is significantly cheaper than private gyms and rarely crowded on weekday mornings. Ask about the financial assistance program for memberships if cost is a barrier.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-house-of-friendship",
       "name": "House of Friendship",
       "type": "resource",
       "category": "social",
-      "tags": ["social services", "community programs", "food bank", "housing", "addiction recovery", "free"],
+      "tags": [
+        "social services",
+        "community programs",
+        "food bank",
+        "housing",
+        "addiction recovery",
+        "free"
+      ],
       "cost": "free",
       "address": "Office: 100 Margaret Ave, Kitchener, ON N2H 4H1",
       "neighborhood": "Downtown Kitchener",
@@ -247,21 +319,27 @@
       "why": "House of Friendship operates across multiple sites. Their meal programs and food hampers require no referral — contact them directly or walk in during service hours.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-working-centre-employment",
       "name": "The Working Centre — Employment Hub",
       "type": "resource",
       "category": "financial",
-      "tags": ["employment", "job search", "resume help", "free", "computer access", "career"],
+      "tags": [
+        "employment",
+        "job search",
+        "resume help",
+        "free",
+        "computer access",
+        "career"
+      ],
       "cost": "free",
       "address": "43 Queen St S, Kitchener, ON N2G 1V7",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4479,
       "lng": -80.4943,
       "website": "https://www.theworkingcentre.org",
-      "hours": "Mon–Fri 9am–5pm",
       "description": "The Working Centre's employment support hub in downtown Kitchener. Free computer access, resume and cover letter workshops, job boards, and one-on-one employment advising. One of the more respected community employment services in southwestern Ontario. No referral required — walk in during business hours.",
       "highlights": [
         "Free computer and internet access for job searching",
@@ -273,47 +351,27 @@
       "why": "Walk-in, no appointment needed. The advisors here know the local job market well and can make introductions that online job boards can't.",
       "isFree": true,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "kitchener-small-business-centre",
-      "name": "Waterloo Region Small Business Centre",
-      "type": "resource",
-      "category": "financial",
-      "tags": ["small business", "startup", "free consulting", "workshops", "financial", "entrepreneurship"],
-      "cost": "free",
-      "address": "67 erb St W, Kitchener, ON",
-      "neighborhood": "Downtown Kitchener",
-      "lat": 43.4505,
-      "lng": -80.5000,
-      "website": "https://www.wrsbdc.com",
-      "hours": "Mon–Fri 9am–5pm",
-      "description": "Funded by the provincial government and the Region of Waterloo, the Small Business Centre provides free one-on-one consulting, business plan review, and startup workshops for anyone starting or growing a business in Waterloo Region. Services are genuinely free — not a sales funnel for paid services. A useful first stop for anyone with a business idea who doesn't know where to begin.",
-      "highlights": [
-        "Free one-on-one business consulting with experienced advisors",
-        "Business plan review and financial projections support",
-        "Free startup workshops and webinars throughout the year",
-        "Connections to funding programs and grants",
-        "No business idea too early-stage — they work with people at the idea phase"
-      ],
-      "why": "Book a free advisory session online. The consultants are particularly helpful for navigating business registration, HST, and accessing startup grants specific to Ontario.",
-      "isFree": true,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-kw-art-gallery",
       "name": "KW Art Gallery (KWAG)",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["gallery", "free", "contemporary art", "exhibitions", "public", "year-round"],
+      "tags": [
+        "gallery",
+        "free",
+        "contemporary art",
+        "exhibitions",
+        "public",
+        "year-round"
+      ],
       "cost": "free",
       "address": "101 Queen St N, Kitchener, ON N2H 6P7",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4512,
-      "lng": -80.4960,
+      "lng": -80.496,
       "website": "https://www.kwag.ca",
-      "hours": "Tue–Sat 10am–5pm (Thu until 9pm); closed Sun–Mon",
       "description": "The main public contemporary art gallery for Waterloo Region. Admission is free. The gallery presents rotating exhibitions by Canadian and international artists, with a particular focus on contemporary and emerging work. The permanent collection includes pieces by important Canadian artists. Public programming, artist talks, and educational events are free and open to anyone.",
       "highlights": [
         "Free admission to all exhibitions",
@@ -325,14 +383,22 @@
       "why": "The Thursday evening hours (until 9pm) are the best time to visit — quieter than weekends, and the gallery often hosts artist talks or events on Thursday evenings.",
       "isRecommended": true,
       "isFree": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-themuseum",
       "name": "THEMUSEUM",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["museum", "interactive", "cultural", "science", "design", "family", "low-cost"],
+      "tags": [
+        "museum",
+        "interactive",
+        "cultural",
+        "science",
+        "design",
+        "family",
+        "low-cost"
+      ],
       "cost": "low",
       "costNote": "Adult admission ~$10–12; family rates available",
       "address": "10 King St W, Kitchener, ON N2G 1A3",
@@ -340,10 +406,9 @@
       "lat": 43.4509,
       "lng": -80.4978,
       "website": "https://www.themuseum.ca",
-      "hours": "Tue–Sun 10am–5pm; closed Mondays",
-      "description": "An interactive cultural museum in downtown Kitchener presenting rotating exhibitions on science, culture, technology, and design. The hands-on format makes it work for adults as well as families. Programming swings between serious design shows and playful interactive installations. One of the most distinctive cultural institutions in the Region — consistently underrated.",
+      "description": "An interactive cultural museum in downtown Kitchener presenting rotating exhibitions on science, culture, technology, and design. The hands-on format makes it work for adults as well as families. Programming swings between serious design shows and playful interactive installations. Easy to overlook, and worth the visit.",
       "highlights": [
-        "Rotating exhibitions that are genuinely varied in subject and format",
+        "Rotating exhibitions that are varied in subject and format",
         "Strongly interactive — not just vitrines and labels",
         "Programming has covered design, technology, psychology, and pop culture",
         "Central DTK location — easy to pair with a market visit",
@@ -352,41 +417,21 @@
       "why": "The quality of exhibitions varies — check what's on before going. Their design and technology shows tend to be the strongest. Member pricing makes repeat visits affordable.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "kitchener-joseph-schneider-haus",
-      "name": "Joseph Schneider Haus National Historic Site",
-      "type": "place",
-      "category": "arts-crafts",
-      "tags": ["heritage", "historic site", "Mennonite", "German", "free", "museum", "niche"],
-      "cost": "low",
-      "costNote": "Admission ~$4–6; free for children under 5",
-      "address": "466 Queen St S, Kitchener, ON N2G 1W7",
-      "neighborhood": "South Kitchener",
-      "lat": 43.4344,
-      "lng": -80.5093,
-      "website": "https://www.region.waterloo.on.ca/josephschneiderhaus",
-      "hours": "Wed–Sun 10am–5pm; seasonal hours — check website",
-      "description": "A National Historic Site preserving the 1816 home of Joseph Schneider, one of the Region's founding German-Mennonite settlers. The costumed interpretation, heritage bread baking in a wood-fired oven, and period kitchen garden give a genuine sense of the community's origins — not a sanitized heritage experience. The building is the oldest surviving structure in Kitchener. Undervisited and worth two hours.",
-      "highlights": [
-        "Oldest surviving structure in Kitchener — built 1816",
-        "Costumed interpretation of early 19th-century German-Mennonite homestead life",
-        "Heritage bread baking in a wood-fired outdoor oven (seasonal)",
-        "Kitchen garden with period-accurate plantings",
-        "Hands-on craft and cooking demonstrations in season"
-      ],
-      "why": "Come on a day when the bread-baking demonstration is running — the schedule is posted on the website. The staff here are genuinely knowledgeable and the site doesn't feel like a tourist attraction.",
-      "isFree": false,
-      "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-waterloo-region-museum",
       "name": "Waterloo Region Museum",
       "type": "place",
       "category": "arts-crafts",
-      "tags": ["museum", "regional history", "heritage", "exhibits", "low-cost", "family"],
+      "tags": [
+        "museum",
+        "regional history",
+        "heritage",
+        "exhibits",
+        "low-cost",
+        "family"
+      ],
       "cost": "low",
       "costNote": "Adult admission ~$8–10; family passes available",
       "address": "10 Huron Rd, Kitchener, ON N2P 2R7",
@@ -394,7 +439,6 @@
       "lat": 43.4432,
       "lng": -80.5063,
       "website": "https://www.waterlooregionmuseum.ca",
-      "hours": "Daily 10am–5pm; extended hours in summer",
       "description": "The main regional history museum for Waterloo Region, located adjacent to the Doon Heritage Village living history site. The museum covers Indigenous history, German settlement, industrial development, and the Region's evolution from agriculture to tech hub. The adjacent Heritage Village has costumed interpreters in a recreated 1914 village — included with museum admission in season.",
       "highlights": [
         "Comprehensive regional history from pre-contact to present day",
@@ -406,22 +450,29 @@
       "why": "The Heritage Village is the main draw in warmer months. Go on a weekday in summer when the interpreters are active and the crowds are lighter than weekends.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-centre-in-the-square",
       "name": "Centre in the Square",
       "type": "place",
       "category": "dance-music",
-      "tags": ["performing arts", "symphony", "concerts", "theatre", "dance", "live performance"],
+      "tags": [
+        "performing arts",
+        "symphony",
+        "concerts",
+        "theatre",
+        "dance",
+        "live performance"
+      ],
       "cost": "varies",
       "address": "101 Queen St N, Kitchener, ON N2H 6P7",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4488,
       "lng": -80.5057,
-      "website": "https://www.citsquare.com",
+      "website": "https://centreinthesquare.com",
       "hours": "Box office hours vary; performances year-round",
-      "description": "The Region's main performing arts centre — a 2,047-seat hall with excellent acoustics hosting the Kitchener-Waterloo Symphony, touring Broadway productions, national music acts, comedy, and more. The hall is genuinely well-designed: clear sightlines, good sound, and close enough to the stage even from upper levels. Rush tickets and subscription packages make it far more affordable than it looks.",
+      "description": "The Region's main performing arts centre — a 2,047-seat hall with excellent acoustics hosting the Kitchener-Waterloo Symphony, touring Broadway productions, national music acts, comedy, and more. The hall is well-designed: clear sightlines, good sound, and close enough to the stage even from upper levels. Rush tickets and subscription packages make it far more affordable than it looks.",
       "highlights": [
         "Home of the Kitchener-Waterloo Symphony Orchestra",
         "National and international touring acts across music, theatre, comedy, and dance",
@@ -432,20 +483,29 @@
       "why": "Check the CITS calendar early in the season — the KW Symphony subscription packages offer significant discounts over single-ticket prices. Day-of rush tickets can be very cheap for unfilled seats.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-registry-theatre",
       "name": "Registry Theatre",
       "type": "place",
       "category": "dance-music",
-      "tags": ["live music", "jazz", "world music", "folk", "intimate venue", "theatre", "low-cost", "niche"],
+      "tags": [
+        "live music",
+        "jazz",
+        "world music",
+        "folk",
+        "intimate venue",
+        "theatre",
+        "low-cost",
+        "niche"
+      ],
       "cost": "low",
       "costNote": "Most shows $15–25; some free community events",
       "address": "122 Frederick St, Kitchener, ON N2H 2M4",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4516,
-      "lng": -80.4880,
+      "lng": -80.488,
       "website": "https://www.registrytheatre.com",
       "hours": "Performance schedule varies — check website",
       "description": "A 200-seat black box theatre inside a beautifully converted 1924 registry building in downtown Kitchener. The most intimate major performance venue in the Region. Programming spans world music, jazz, folk, experimental theatre, community film series, and spoken word. Ticket prices are consistently lower than larger venues. The physical space — exposed brick, vaulted ceiling — makes any show better.",
@@ -459,22 +519,31 @@
       "why": "The Registry is the best live music venue in Kitchener for intimate shows. The building itself is worth experiencing — check the calendar and go to whatever looks interesting, the programming quality is consistently high.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-market",
       "name": "Kitchener Market",
       "type": "place",
       "category": "food-culture",
-      "tags": ["market", "local food", "Mennonite", "produce", "bread", "cheese", "community", "Saturday"],
+      "tags": [
+        "market",
+        "local food",
+        "Mennonite",
+        "produce",
+        "bread",
+        "cheese",
+        "community",
+        "Saturday"
+      ],
       "cost": "low",
       "address": "300 King St E, Kitchener, ON N2G 0A4",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4511,
       "lng": -80.4869,
       "website": "https://www.kitchenermarket.ca",
-      "hours": "Year-round: Saturday 7am–2pm; May–Oct also Tue and Thu 7am–2pm",
-      "description": "One of the oldest and best public markets in Ontario — operating continuously since 1869. The indoor market hall on King St E carries produce, Mennonite baked goods (shoofly pie, paska bread, maple syrup butter tarts), artisan cheese, smoked meats, fresh pasta, and a strong roster of ethnic food vendors. The Saturday morning market is a genuine community event, not a tourist market. Busy by 9am, so arrive early.",
+      "hours": "Sat 7am-2pm, outdoors only",
+      "description": "A fire damaged the market building on July 12, 2026. The Saturday farmers' market continues outdoors, and the market's site has the latest news on the building and vendors.",
       "highlights": [
         "Operating continuously since 1869 — one of Ontario's oldest markets",
         "Mennonite vendors selling baked goods, preserves, and heritage foods unavailable elsewhere",
@@ -485,22 +554,29 @@
       "why": "The Mennonite bakers sell out of shoofly pie and fresh bread by 10am on Saturdays. Arrive at 7am for the best selection. Park on a side street or take transit — parking fills up quickly.",
       "isRecommended": true,
       "isFree": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-concordia-club",
       "name": "Concordia Club",
       "type": "place",
       "category": "food-culture",
-      "tags": ["German heritage", "cultural club", "dining", "community", "niche", "schnitzel", "Oktoberfest"],
+      "tags": [
+        "German heritage",
+        "cultural club",
+        "dining",
+        "community",
+        "niche",
+        "schnitzel",
+        "Oktoberfest"
+      ],
       "cost": "low",
       "address": "429 Ottawa St S, Kitchener, ON N2M 3P8",
       "neighborhood": "Westmount",
       "lat": 43.4299,
       "lng": -80.5014,
       "website": "https://www.concordiaclub.ca",
-      "hours": "Restaurant open Tue–Sun from 11am; check website for Biergarten hours",
-      "description": "A German-Canadian cultural club founded in 1873 and one of the oldest in Canada. Open to the public for dining — schnitzel, sauerbraten, bratwurst, and German-style beers in a club dining room and outdoor Biergarten. The Concordia runs Oktoberfest events and German-Canadian cultural programming throughout the year. This is the kind of place that embodies why Kitchener's cultural identity is genuinely distinct from other Ontario cities.",
+      "description": "A German-Canadian cultural club founded in 1873 and one of the oldest in Canada. Open to the public for dining — schnitzel, sauerbraten, bratwurst, and German-style beers in a club dining room and outdoor Biergarten. The Concordia runs Oktoberfest events and German-Canadian cultural programming throughout the year. A good place to see what sets Kitchener's culture apart.",
       "highlights": [
         "Traditional German-Canadian kitchen: schnitzel, bratwurst, sauerbraten at accessible prices",
         "Outdoor Biergarten open in warm months",
@@ -511,22 +587,29 @@
       "why": "The Biergarten on a summer evening is a Kitchener institution. Go on a weekend when the kitchen is at full capacity. The schnitzel is the right call.",
       "isFree": false,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-matter-of-taste",
       "name": "Matter of Taste Coffee Roasters",
       "type": "place",
       "category": "cafes-spaces",
-      "tags": ["coffee", "specialty", "cafe", "roaster", "workspace", "free wifi", "DTK"],
+      "tags": [
+        "coffee",
+        "specialty",
+        "cafe",
+        "roaster",
+        "workspace",
+        "free wifi",
+        "DTK"
+      ],
       "cost": "low",
       "address": "King St area, Downtown Kitchener, ON",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4505,
       "lng": -80.4965,
       "website": "https://www.matteroftaste.ca",
-      "hours": "Mon–Fri 7am–6pm, Sat–Sun 8am–5pm",
-      "description": "A specialty coffee roaster and cafe in the downtown Kitchener corridor. Known for carefully sourced single-origin coffees and seasonal espresso menus. Functions as one of the better daytime working environments in the DTK area — decent seating, good light, and genuinely excellent coffee. One of the anchors of the independent coffee scene in the Region.",
+      "description": "A specialty coffee roaster and cafe in the downtown Kitchener corridor. Known for carefully sourced single-origin coffees and seasonal espresso menus. Functions as one of the better daytime working environments in the DTK area — decent seating, good light, and excellent coffee. One of the anchors of the independent coffee scene in the Region.",
       "highlights": [
         "In-house roasting with single-origin and seasonal espresso offerings",
         "Good seating for work or lingering",
@@ -537,47 +620,29 @@
       "why": "This is the specialty coffee option in Kitchener for people who care about sourcing and roast quality. Weekday mornings are calm; Saturday post-market gets busy.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
-    },
-    {
-      "id": "kitchener-abe-erb-brewing",
-      "name": "Abe Erb Brewing Company",
-      "type": "place",
-      "category": "cafes-spaces",
-      "tags": ["brewery", "local beer", "gastropub", "daytime space", "market district", "niche"],
-      "cost": "low",
-      "address": "King St E area, Kitchener, ON",
-      "neighborhood": "Kitchener Market District",
-      "lat": 43.4511,
-      "lng": -80.4882,
-      "website": "https://www.abeerb.com",
-      "hours": "Sun–Thu 11am–11pm, Fri–Sat 11am–midnight",
-      "description": "A brewpub in the Kitchener Market district with a large, airy interior and an all-local beer program. Named after one of the Region's early settlers, Abe Erb produces well-crafted lagers, ales, and seasonal beers on site. Functions as a daytime third-place as much as an evening spot — good for working through an afternoon or unwinding after the Saturday market.",
-      "highlights": [
-        "All beers brewed in-house — rotating seasonal taps alongside core range",
-        "Large interior space with good natural light",
-        "Kitchen serving pub food with some regional ingredients",
-        "Walking distance from the Kitchener Market and DTK cultural venues",
-        "Quieter on weekday afternoons — a genuine workspace alternative"
-      ],
-      "why": "The post-Saturday-market crowd makes weekend afternoons here lively. Weekday lunches are calm. The lager is the house strength.",
-      "isFree": false,
-      "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-mcc-thrift",
       "name": "MCC Thrift Store — Kitchener",
       "type": "place",
       "category": "thrifting",
-      "tags": ["thrift", "secondhand", "books", "clothing", "furniture", "kitchenware", "low-cost", "Mennonite"],
+      "tags": [
+        "thrift",
+        "secondhand",
+        "books",
+        "clothing",
+        "furniture",
+        "kitchenware",
+        "low-cost",
+        "Mennonite"
+      ],
       "cost": "low",
       "address": "King St area, Kitchener, ON",
       "neighborhood": "Kitchener",
       "lat": 43.4457,
       "lng": -80.5006,
       "website": "https://www.mcccanada.ca/thrift",
-      "hours": "Mon–Sat 9am–5pm (hours vary by location)",
       "description": "Run by Mennonite Central Committee, MCC Thrift stores are consistently among the best-curated thrift stores in Ontario. The Kitchener location has a strong selection of books, kitchenware, furniture, and clothing, with proceeds supporting international development and relief work. The Mennonite heritage of sorting and care shows in the quality of merchandise. Worth visiting over commercial chains.",
       "highlights": [
         "One of the best-curated thrift stores in the Region — strong books and kitchenware sections",
@@ -589,21 +654,28 @@
       "why": "The book section at MCC Thrift is legitimately excellent — better than most charity shops. Go on a weekday when it's been freshly restocked.",
       "isFree": false,
       "isRecommended": true,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-habitat-restore",
       "name": "Habitat for Humanity ReStore — Kitchener-Waterloo",
       "type": "place",
       "category": "thrifting",
-      "tags": ["thrift", "building materials", "hardware", "furniture", "home goods", "low-cost", "sustainability"],
+      "tags": [
+        "thrift",
+        "building materials",
+        "hardware",
+        "furniture",
+        "home goods",
+        "low-cost",
+        "sustainability"
+      ],
       "cost": "low",
       "address": "Kitchener, ON",
       "neighborhood": "Kitchener",
-      "lat": 43.4380,
-      "lng": -80.4700,
-      "website": "https://www.habitatkw.ca/restore",
-      "hours": "Mon–Sat 9am–5pm",
+      "lat": 43.438,
+      "lng": -80.47,
+      "website": "https://www.habitatwr.ca",
       "description": "A thrift store specializing in building materials, appliances, furniture, lighting, doors, windows, and home goods donated by homeowners, contractors, and retailers. Prices are very low and proceeds support local Habitat for Humanity homebuilds. The best source in the Region for hardware and home improvement items on a budget. Worth visiting before buying new.",
       "highlights": [
         "Building materials: doors, windows, cabinets, flooring, fixtures at low prices",
@@ -615,14 +687,23 @@
       "why": "If you're doing any home renovation, check the ReStore before buying new. The inventory rotates constantly — call ahead if you're looking for something specific.",
       "isFree": false,
       "isRecommended": false,
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-oktoberfest",
       "name": "Kitchener-Waterloo Oktoberfest",
       "type": "event",
       "category": "events",
-      "tags": ["festival", "Bavarian", "German heritage", "beer", "music", "parade", "October", "annual"],
+      "tags": [
+        "festival",
+        "Bavarian",
+        "German heritage",
+        "beer",
+        "music",
+        "parade",
+        "October",
+        "annual"
+      ],
       "cost": "varies",
       "costNote": "Thanksgiving Day Parade is free; Festhallen tickets $10–40; some events free",
       "address": "Various venues across Kitchener-Waterloo",
@@ -631,7 +712,7 @@
       "lng": -80.5017,
       "website": "https://www.oktoberfest.ca",
       "hours": "Nine days in October, typically spanning the Thanksgiving weekend",
-      "description": "North America's largest Bavarian heritage festival, running since 1969. The nine-day festival encompasses traditional beer Festhallen (beer halls with live oompah bands), a massive Thanksgiving Day Parade, heritage food events, community dances, and free outdoor programming. The Parade is genuinely excellent and costs nothing. The Festhallen require tickets but offer something you genuinely cannot experience elsewhere in North America.",
+      "description": "North America's largest Bavarian heritage festival, running since 1969. The nine-day festival encompasses traditional beer Festhallen (beer halls with live oompah bands), a massive Thanksgiving Day Parade, heritage food events, community dances, and free outdoor programming. The Parade is excellent and costs nothing. The Festhallen require tickets but offer something you cannot experience elsewhere in North America.",
       "highlights": [
         "North America's largest Bavarian heritage festival outside Munich",
         "Thanksgiving Day Parade: one of Canada's largest — free along the route",
@@ -639,26 +720,32 @@
         "Nine days of programming across multiple venues — free and ticketed events",
         "The festival reflects the genuine German-Mennonite cultural roots of the city"
       ],
-      "why": "The Parade on Thanksgiving Monday is free, accessible, and genuinely worth attending. The Festhallen fill up fast — get tickets early if you want the full experience. Evening Festhallen on Thursday and Friday are less crowded than the weekend.",
+      "why": "The Parade on Thanksgiving Monday is free, accessible, and worth attending. The Festhallen fill up fast — get tickets early if you want the full experience. Evening Festhallen on Thursday and Friday are less crowded than the weekend.",
       "isRecommended": true,
       "isFree": false,
       "seasonal": true,
       "seasonNote": "Held annually in October, spanning the Canadian Thanksgiving weekend",
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-11-06"
     },
     {
       "id": "kitchener-christkindl-market",
       "name": "Kitchener Christkindl Market",
       "type": "event",
       "category": "events",
-      "tags": ["Christmas market", "German heritage", "free", "seasonal", "artisan", "food", "December"],
+      "tags": [
+        "Christmas market",
+        "German heritage",
+        "free",
+        "seasonal",
+        "artisan",
+        "food",
+        "December"
+      ],
       "cost": "free",
-      "address": "Kitchener Market, 300 King St E, Kitchener, ON N2G 0A4",
       "neighborhood": "Downtown Kitchener",
       "lat": 43.4511,
       "lng": -80.4869,
-      "website": "https://www.christkindl.ca",
-      "hours": "Weekends in late November and December; check website for exact dates",
+      "website": "https://www.kitchener.ca/arts-culture-and-events/events/christkindl-market/",
       "description": "A traditional German Christmas market held in and around the Kitchener Market building in the weeks before Christmas. Free to attend. One of the better Canadian versions of a Christkindlmarkt — fitting for a city with deep German heritage. Artisan and small-business vendors, food vendors selling German classics (glühwein, bratwurst, stollen), and outdoor lighting make this a genuine seasonal event rather than a commercial pop-up.",
       "highlights": [
         "Free admission — walk through without spending anything",
@@ -667,12 +754,1940 @@
         "Outdoor lighting displays and festive streetscape in DTK",
         "Reflects the city's German heritage in a tangible way"
       ],
-      "why": "Weekday evenings here are the best time to visit — less crowded than weekends and the lighting is at its best after dark. The glühwein is genuinely good.",
+      "why": "Weekday evenings here are the best time to visit — less crowded than weekends and the lighting is at its best after dark. The glühwein is good.",
       "isFree": true,
       "isRecommended": false,
       "seasonal": true,
-      "seasonNote": "Runs weekends in late November and December annually",
-      "lastVerified": "2026-06-15"
+      "seasonNote": "December 3 to 13, 2026",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "9-8-8 Suicide Crisis Helpline",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://988.ca",
+      "phone": "988",
+      "description": "Call or text any time, day or night, if you or someone you know is thinking about suicide. Free and confidential across Canada.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "kitchener-9-8-8-suicide-crisis-helpline",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Kids Help Phone",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://kidshelpphone.ca",
+      "phone": "1-800-668-6868",
+      "description": "Free, confidential support for young people by phone or text, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "kitchener-kids-help-phone",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "ConnexOntario",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://www.connexontario.ca",
+      "phone": "1-866-531-2600",
+      "description": "Free help finding mental health, addiction, and gambling services in Ontario.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "kitchener-connexontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "211 Ontario",
+      "type": "resource",
+      "category": "social",
+      "cost": "free",
+      "website": "https://211ontario.ca",
+      "phone": "211",
+      "description": "Call or text 211 to find local services: housing, food, legal help, newcomer support, and more. Free and confidential.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "kitchener-211-ontario",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Community Volunteer Income Tax Program",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program.html",
+      "description": "Volunteers do simple tax returns for free if your income is modest. The federal site lists clinics near you.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "kitchener-community-volunteer-income-tax-program",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Here 24/7",
+      "type": "resource",
+      "category": "mental",
+      "cost": "free",
+      "website": "https://here247.ca",
+      "phone": "1-844-437-3247",
+      "description": "Free mental health and addiction crisis support for Waterloo Wellington, any time.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "hours": "Open 24 hours",
+      "id": "kitchener-here-24-7",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "The Food Bank of Waterloo Region",
+      "type": "resource",
+      "category": "financial",
+      "cost": "free",
+      "website": "https://www.thefoodbank.ca",
+      "description": "Finds food support near you across Kitchener, Waterloo, and Cambridge through partner agencies.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "kitchener-the-food-bank-of-waterloo-region",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "Free or nearly free recreation",
+      "type": "program",
+      "category": "physical",
+      "cost": "free",
+      "website": "https://www.kitchener.ca/recreation-and-sports/free-or-nearly-free/",
+      "description": "The City's own list of free and low-cost activities in Kitchener.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "kitchener-free-or-nearly-free-recreation",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "name": "RBJ Schlegel Park",
+      "type": "place",
+      "category": "physical",
+      "cost": "free",
+      "website": "https://www.kitchener.ca/parks-and-trails/parks/rbj-schlegel-park/",
+      "description": "A large City park with sports fields, a splash pad, and the Cowan Recreation Centre.",
+      "tags": [],
+      "highlights": [],
+      "isRecommended": false,
+      "id": "kitchener-rbj-schlegel-park",
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-abe-erb-brewing",
+      "name": "Abe Erb Brewing Company",
+      "type": "place",
+      "category": "cafes-spaces",
+      "tags": [
+        "brewery",
+        "local beer",
+        "gastropub",
+        "daytime space",
+        "market district",
+        "niche"
+      ],
+      "cost": "low",
+      "address": "King St E area, Kitchener, ON",
+      "neighborhood": "Kitchener Market District",
+      "lat": 43.4511,
+      "lng": -80.4882,
+      "website": "https://www.abeerb.com",
+      "description": "A brewpub in the Kitchener Market district with a large, airy interior and an all-local beer program. Named after one of the Region's early settlers, Abe Erb produces well-crafted lagers, ales, and seasonal beers on site. Functions as a daytime third-place as much as an evening spot — good for working through an afternoon or unwinding after the Saturday market.",
+      "highlights": [
+        "All beers brewed in-house — rotating seasonal taps alongside core range",
+        "Large interior space with good natural light",
+        "Kitchen serving pub food with some regional ingredients",
+        "Walking distance from the Kitchener Market and DTK cultural venues",
+        "Quieter on weekday afternoons — a genuine workspace alternative"
+      ],
+      "why": "The post-Saturday-market crowd makes weekend afternoons here lively. Weekday lunches are calm. The lager is the house strength.",
+      "isFree": false,
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-joseph-schneider-haus",
+      "name": "Schneider Haus National Historic Site",
+      "type": "place",
+      "category": "arts-crafts",
+      "tags": [
+        "heritage",
+        "historic site",
+        "Mennonite",
+        "German",
+        "free",
+        "museum",
+        "niche"
+      ],
+      "cost": "low",
+      "costNote": "Admission ~$4–6; free for children under 5",
+      "address": "466 Queen St S, Kitchener",
+      "neighborhood": "South Kitchener",
+      "lat": 43.4344,
+      "lng": -80.5093,
+      "website": "https://www.regionofwaterloomuseums.ca/learn/learn-about-our-museums/learn-about-schneider-haus-national-historic-site/",
+      "description": "A National Historic Site preserving the 1816 home of Joseph Schneider, one of the Region's founding German-Mennonite settlers. The costumed interpretation, heritage bread baking in a wood-fired oven, and period kitchen garden give a genuine sense of the community's origins — not a sanitized heritage experience. The building is the oldest surviving structure in Kitchener. Undervisited and worth two hours.",
+      "highlights": [
+        "Oldest surviving structure in Kitchener — built 1816",
+        "Costumed interpretation of early 19th-century German-Mennonite homestead life",
+        "Heritage bread baking in a wood-fired outdoor oven (seasonal)",
+        "Kitchen garden with period-accurate plantings",
+        "Hands-on craft and cooking demonstrations in season"
+      ],
+      "why": "Come on a day when the bread-baking demonstration is running — the schedule is posted on the website. The staff here are knowledgeable and the site doesn't feel like a tourist attraction.",
+      "isFree": false,
+      "isRecommended": true,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-country-hills-community-library",
+      "name": "Country Hills Community Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "library or archives"
+      ],
+      "cost": "free",
+      "address": "1500 Block Line Road, Kitchener",
+      "lat": 43.42021148,
+      "lng": -80.46689679,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A public library branch in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-forest-heights-community-library",
+      "name": "Forest Heights Community Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "library or archives"
+      ],
+      "cost": "free",
+      "address": "251 Fischer Road, Kitchener",
+      "lat": 43.42626194,
+      "lng": -80.52329882,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A public library branch in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-pioneer-park-community-library",
+      "name": "Pioneer Park Community Library",
+      "type": "place",
+      "category": "cafes",
+      "tags": [
+        "library or archives"
+      ],
+      "cost": "free",
+      "address": "150 Pioneer Drive, Kitchener",
+      "lat": 43.39408231,
+      "lng": -80.43738416,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A public library branch in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-activa-sportsplex",
+      "name": "Activa Sportsplex",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "arena"
+      ],
+      "cost": "low",
+      "costNote": "Check the skating schedule.",
+      "address": "135 Lennox Lewis Way, Kitchener",
+      "lat": 43.42221448,
+      "lng": -80.47126306,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "An arena with public skating in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-bridgeport-community-centre",
+      "name": "Bridgeport Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "20 Tyson Dr, Kitchener",
+      "lat": 43.48269568,
+      "lng": -80.47782926,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-centreville-chicopee-community-centre",
+      "name": "Centreville Chicopee Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "141 Morgan Ave, Kitchener",
+      "lat": 43.42862835,
+      "lng": -80.42976806,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-chandler-mowat-community-centre",
+      "name": "Chandler Mowat Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "222 Chandler Dr, Kitchener",
+      "lat": 43.42266933,
+      "lng": -80.50010251,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-doon-pioneer-park-community-centre",
+      "name": "Doon Pioneer Park Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "150 Pioneer Dr, Kitchener",
+      "lat": 43.39436844,
+      "lng": -80.43703299,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-downtown-community-centre",
+      "name": "Downtown Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "35 Weber St W, Kitchener",
+      "lat": 43.4521572,
+      "lng": -80.4894957,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-kingsdale-community-centre",
+      "name": "Kingsdale Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "72 Wilson Ave, Kitchener",
+      "lat": 43.42947107,
+      "lng": -80.45900764,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-mill-courtland-community-centre",
+      "name": "Mill Courtland Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "216 Mill St, Kitchener",
+      "lat": 43.43835533,
+      "lng": -80.48730332,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-stanley-park-community-centre",
+      "name": "Stanley Park Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "505 Franklin St N, Kitchener",
+      "lat": 43.44813749,
+      "lng": -80.44915826,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-victoria-hills-community-centre",
+      "name": "Victoria Hills Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "10 Chopin Dr, Kitchener",
+      "lat": 43.4438767,
+      "lng": -80.52345051,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-facility-williamsburg-community-centre",
+      "name": "Williamsburg Community Centre",
+      "type": "place",
+      "category": "physical",
+      "tags": [
+        "community centre"
+      ],
+      "cost": "varies",
+      "costNote": "Free to visit. Programs vary.",
+      "address": "1187 Hallman Rd, Kitchener",
+      "lat": 43.40523002,
+      "lng": -80.50169216,
+      "website": "https://www.kitchener.ca/recreation-and-sports/community-centres/",
+      "description": "A community centre in Kitchener. Hours and programs are on the linked page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06"
+    },
+    {
+      "id": "kitchener-event-kitchener-rangers-vs-north-bay-battalion-the-kitchener-memorial-audito",
+      "name": "Kitchener Rangers vs North Bay Battalion",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "400 East Avenue, Kitchener",
+      "website": "https://explorewaterloo.ca/event/kitchener-rangers-vs-north-bay-battalion/",
+      "description": "At The Kitchener Memorial Auditorium. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-06T05:00:00.000Z"
+      ],
+      "endsAt": "2026-11-06T05:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-kitchener-fall-drink-fest-bingemans-marshall-hall",
+      "name": "Kitchener Fall Drink Fest",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "425 Bingemans Centre Dr, Kitchener",
+      "website": "https://explorewaterloo.ca/event/kitchener-fall-drink-fest/",
+      "description": "At Bingemans Marshall Hall. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-07T21:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-candlelight-vivaldis-four-seasons-the-st-matthews-centre",
+      "name": "Candlelight: Vivaldi's Four Seasons",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "54 Benton Street, Kitchener",
+      "website": "https://explorewaterloo.ca/event/candlelight-vivaldis-four-seasons/",
+      "description": "At The St. Matthews Centre. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-07T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-07T23:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-kpl-present-chris-murphy-kitchener-public-library",
+      "name": "KPL Present Chris Murphy",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "85 Queen Street North, Kitchener",
+      "website": "https://explorewaterloo.ca/event/kpl-present-chris-murphy/",
+      "description": "At Kitchener Public Library. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-together-were-boisterous-comedy-show-twb-co-operative-brewing",
+      "name": "Together We're Boisterous Comedy Show",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$11 – $33",
+      "address": "300 Mill St, Unit 1, Kitchener",
+      "website": "https://explorewaterloo.ca/event/together-were-boisterous-comedy-show/",
+      "description": "At TWB Co-operative Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-yuk-yuks-on-tour-kingpin-bowling-lounge",
+      "name": "Yuk Yuks on Tour",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$15.00",
+      "address": "425 Bingemans Centre Dr, Kitchener",
+      "website": "https://explorewaterloo.ca/event/yuk-yuks-on-tour/",
+      "description": "At Kingpin Bowling Lounge. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-rusty-nail-comedy-friday-featuring-graham-chittenden-twh-social",
+      "name": "Rusty Nail Comedy Friday Featuring Graham Chittenden",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$22.63",
+      "address": "1 King St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/rusty-nail-comedy-friday-featuring-graham-chittenden/",
+      "description": "At TWH Social. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T00:30:00.000Z"
+      ],
+      "endsAt": "2026-11-08T00:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-smile-90s-rock-guests-sticky-brant-station-at-dallas-nightclub-dallas-",
+      "name": "SMILE (90's Rock) + Guests - STICKY & Brant Station at DALLAS Nightclub",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "312 King Street West, Kitchener",
+      "website": "https://explorewaterloo.ca/event/smile-90s-rock-guests-sticky-brant-station-at-dallas-nightclub/",
+      "description": "At Dallas Night Club. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T01:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-2026-tree-of-the-year-celebration-king-edward-public-school",
+      "name": "2026 Tree of the Year Celebration",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "709 King St W., Kitchener",
+      "website": "https://explorewaterloo.ca/event/2026-tree-of-the-year-celebration/",
+      "description": "At King Edward Public School. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T15:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-k-pop-dreamworld-the-ultimate-k-pop-tribute-experience-centre-in-the-s",
+      "name": "K-Pop Dreamworld: The Ultimate K-Pop Tribute Experience",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/k-pop-dreamworld-the-ultimate-k-pop-tribute-experience/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T18:00:00.000Z"
+      ],
+      "endsAt": "2026-11-08T18:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-the-da-vinci-dialogues-ft-professor-chris-nightman-themuseum",
+      "name": "The da Vinci Dialogues ft. Professor Chris Nightman",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "10 King Street West, Kitchener",
+      "website": "https://explorewaterloo.ca/event/the-da-vinci-dialogues-ft-professor-chris-nightman/",
+      "description": "At THEMUSEUM. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-08T18:30:00.000Z"
+      ],
+      "endsAt": "2026-11-08T18:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-trivia-name-game-boathouse-dtk",
+      "name": "Trivia - Name Game",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "57 Jubilee Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/trivia-name-game/",
+      "description": "At Boathouse DTK. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-10T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-spectrum-queer-professional-social-mixer-series-twb-brewing",
+      "name": "Spectrum Queer Professional Social Mixer Series",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "300 Mill Street #1, Kitchener",
+      "website": "https://explorewaterloo.ca/event/spectrum-queer-professional-social-mixer-series/2026-11-10/",
+      "description": "At TWB Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-10T22:30:00.000Z",
+        "2026-12-08T22:30:00.000Z"
+      ],
+      "endsAt": "2026-12-08T22:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-euchre-night-twb-twb-co-operative-brewing",
+      "name": "Euchre Night @ TWB",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "300 Mill St, Unit 1, Kitchener, ON, Kitchener",
+      "website": "https://explorewaterloo.ca/event/euchre-night-twb/",
+      "description": "At TWB Co-operative Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T00:00:00.000Z",
+        "2026-11-19T00:00:00.000Z",
+        "2026-11-26T00:00:00.000Z",
+        "2026-12-03T00:00:00.000Z",
+        "2026-12-10T00:00:00.000Z",
+        "2026-12-17T00:00:00.000Z"
+      ],
+      "endsAt": "2026-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-canadians-connected-kitchener-waterloo-catalyst-commons",
+      "name": "Canadians Connected: Kitchener-Waterloo",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "137 Glasgow St #210, Kitchener",
+      "website": "https://explorewaterloo.ca/event/canadians-connected-kitchener-waterloo/",
+      "description": "At Catalyst Commons. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-impact-film-festival-iff-2026-festival-dinner-at-apollo-cinema-apollo-",
+      "name": "Impact Film Festival (IFF) 2026 - Festival & Dinner at Apollo Cinema",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "141 Ontario Street North, Kitchener",
+      "website": "https://explorewaterloo.ca/event/impact-film-festival-iff-2026-festival-dinner-at-apollo-cinema/",
+      "description": "At Apollo Cinema. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-12T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-12T23:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-darts-night-twb-twb-co-operative-brewing",
+      "name": "Darts Night @ TWB",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "300 Mill St, Unit 1, Kitchener, ON, Kitchener",
+      "website": "https://explorewaterloo.ca/event/darts-night-twb/",
+      "description": "At TWB Co-operative Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-kitchener-rangers-vs-barrie-colts-the-kitchener-memorial-auditorium",
+      "name": "Kitchener Rangers vs Barrie Colts",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "400 East Avenue, Kitchener",
+      "website": "https://explorewaterloo.ca/event/kitchener-rangers-vs-barrie-colts/",
+      "description": "At The Kitchener Memorial Auditorium. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-13T05:00:00.000Z"
+      ],
+      "endsAt": "2026-11-13T05:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-bloody-berlin-walking-tour-schneider-haus-national-historic-site",
+      "name": "Bloody Berlin Walking Tour",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$33.85",
+      "address": "466 Queen Street South, Kitchener",
+      "website": "https://explorewaterloo.ca/event/bloody-berlin-walking-tour/2026-11-13/",
+      "description": "At Schneider Haus National Historic Site. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-classic-albums-live-billy-joel-the-stranger-centre-in-the-square",
+      "name": "Classic Albums Live: Billy Joel – The Stranger",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen St N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/classic-albums-live-billy-joel-the-stranger/",
+      "description": "At Centre In The Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T01:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-winter-wreath-workshop-ken-seiling-waterloo-region-museum",
+      "name": "Winter Wreath Workshop",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "10 Huron Road, Kitchener",
+      "website": "https://explorewaterloo.ca/event/winter-wreath-workshop/",
+      "description": "At Ken Seiling Waterloo Region Museum. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T18:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T18:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-destiny-boxing-presents-fight-for-a-cause-catalyst137",
+      "name": "Destiny Boxing Presents Fight for a Cause",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "137 Glasgow Street, Kitchener",
+      "website": "https://explorewaterloo.ca/event/destiny-boxing-presents-fight-for-a-cause/",
+      "description": "At Catalyst137. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-14T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-14T23:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-benedict-sheehans-ukrainian-war-requiem-the-national-tour-the-st-mathe",
+      "name": "Benedict Sheehan’s ‘Ukrainian War Requiem’ — The National Tour",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "54 Benton St, Kitchener",
+      "website": "https://explorewaterloo.ca/event/benedict-sheehans-ukrainian-war-requiem-the-national-tour/",
+      "description": "At The St. Mathews Centre. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-15T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-rusty-nail-comedy-friday-featuring-marc-hallworth-twh-social",
+      "name": "Rusty Nail Comedy Friday Featuring Marc Hallworth",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$22.63",
+      "address": "1 King St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/rusty-nail-comedy-friday-featuring-marc-hallworth/",
+      "description": "At TWH Social. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T00:30:00.000Z"
+      ],
+      "endsAt": "2026-11-15T00:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-brass-transit-the-musical-legacy-of-chicago-centre-in-the-square",
+      "name": "Brass Transit: The Musical Legacy of Chicago",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen St N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/brass-transit-the-musical-legacy-of-chicago/",
+      "description": "At Centre In The Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-15T01:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-raise-the-roar-bar-takeover-tour-the-canadian-brewhouse-the-canadian-b",
+      "name": "Raise the Roar Bar Takeover Tour - The Canadian Brewhouse",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "2960 Kingsway Drive #Unit P004, Kitchener",
+      "website": "https://explorewaterloo.ca/event/raise-the-roar-bar-takeover-tour-the-canadian-brewhouse/",
+      "description": "At The Canadian Brewhouse (Kitchener). Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T13:00:00.000Z"
+      ],
+      "endsAt": "2026-11-15T13:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-the-da-vinci-dialogues-ft-virginia-eichhorn-and-panelists-themuseum",
+      "name": "The da Vinci Dialogues ft. Virginia Eichhorn and Panelists",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "10 King Street West, Kitchener",
+      "website": "https://explorewaterloo.ca/event/the-da-vinci-dialogues-ft-virginia-eichhorn-and-panelists/",
+      "description": "At THEMUSEUM. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T18:30:00.000Z"
+      ],
+      "endsAt": "2026-11-15T18:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-kitchener-rangers-vs-ottawa-67s-the-kitchener-memorial-auditorium",
+      "name": "Kitchener Rangers vs Ottawa 67's",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "400 East Avenue, Kitchener",
+      "website": "https://explorewaterloo.ca/event/kitchener-rangers-vs-ottawa-67s/",
+      "description": "At The Kitchener Memorial Auditorium. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-15T19:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-live-music-weekends-mandippal-boathouse-dtk",
+      "name": "Live Music Weekends - Mandippal!",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "57 Jubilee Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/live-music-weekends-mandippal/",
+      "description": "At Boathouse DTK. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T20:00:00.000Z"
+      ],
+      "endsAt": "2026-11-15T20:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-drag-lab-open-stage-aok-craft-beer-arcade",
+      "name": "Drag Lab: Open Stage",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "165 King Street West #Unit B03, Kitchener",
+      "website": "https://explorewaterloo.ca/event/drag-lab-open-stage/",
+      "description": "At AOK Craft Beer + Arcade. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-15T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-15T23:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-ballets-jazz-montr-al-dance-me-the-music-of-leonard-cohen-centre-in-th",
+      "name": "Ballets Jazz Montréal Dance Me: The Music of Leonard Cohen",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen St N., Kitchener",
+      "website": "https://explorewaterloo.ca/event/ballets-jazz-montreal-dance-me-the-music-of-leonard-cohen/",
+      "description": "At Centre In The Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-19T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-19T01:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-90s-paint-trivia-night-in-kitchener-twb-co-operative-brewing",
+      "name": "90s Paint & Trivia Night in Kitchener",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "300 Mill St, Unit 1, Kitchener",
+      "website": "https://explorewaterloo.ca/event/90s-paint-trivia-night-in-kitchener/",
+      "description": "At TWB Co-operative Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-back-in-2010-trivia-night-twb-co-operative-brewing",
+      "name": "Back in 2010 Trivia Night",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "300 Mill St, Unit 1, Kitchener",
+      "website": "https://explorewaterloo.ca/event/back-in-2010-trivia-night/",
+      "description": "At TWB Co-operative Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-itzhak-perlman-in-recital-presented-by-centre-in-the-square-centre-in-",
+      "name": "Itzhak Perlman in Recital Presented by Centre In The Square",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen St. N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/itzhak-perlman-in-recital-presented-by-centre-in-the-square/",
+      "description": "At Centre In The Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-fall-show-sale-the-corner-studio-the-corner-studio",
+      "name": "Fall Show + Sale - The Corner Studio",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "141 Whitney Place, Kitchener, ON, Kitchener",
+      "website": "https://explorewaterloo.ca/event/fall-show-sale-the-corner-studio/",
+      "description": "At The Corner Studio. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T15:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-globe-studios-fall-show-sale-globe-studios",
+      "name": "Globe Studios Fall Show & Sale",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "141 Whitney Pl., Kitchener, Kitchener",
+      "website": "https://explorewaterloo.ca/event/globe-studios-fall-show-sale/",
+      "description": "At Globe Studios. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T21:00:00.000Z",
+        "2026-11-21T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T15:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-wonderfully-made-holiday-market-catalyst-137",
+      "name": "Wonderfully Made Holiday Market",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "137 Glasgow Street, Kitchener",
+      "website": "https://explorewaterloo.ca/event/wonderfully-made-holiday-market/",
+      "description": "At Catalyst 137. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T22:00:00.000Z",
+        "2026-11-21T15:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T15:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-gift-of-lights-opening-night-bingemans-gift-of-lights",
+      "name": "Gift of Lights Opening Night",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "425 Bingemans Center Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/gift-of-lights-opening-night/",
+      "description": "At Bingemans Gift of Lights. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T23:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-zendala-christmas-ornament-workshop-twb-co-operative-brewing",
+      "name": "Zendala Christmas Ornament Workshop",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$45.00",
+      "address": "300 Mill St, Unit 1, Kitchener",
+      "website": "https://explorewaterloo.ca/event/zendala-christmas-ornament-workshop/",
+      "description": "At TWB Co-operative Brewing. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-20T23:00:00.000Z"
+      ],
+      "endsAt": "2026-11-20T23:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-dylan-handlsohn-breaking-dad-centre-in-the-square",
+      "name": "Dylan Handlsohn: Breaking Dad",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/dylan-handlsohn-breaking-dad/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-rusty-nail-comedy-friday-featuring-jon-dore-twh-social",
+      "name": "Rusty Nail Comedy Friday Featuring Jon Dore",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$33.28",
+      "address": "1 King St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/rusty-nail-comedy-friday-featuring-jon-dore/",
+      "description": "At TWH Social. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T00:30:00.000Z"
+      ],
+      "endsAt": "2026-11-21T00:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-15firstdates-kitchener-singles-mixer-age-35-the-rabbid-fox",
+      "name": "15FirstDates Kitchener Singles Mixer (age 35+)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$12.19",
+      "address": "123 Pioneer Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/15firstdates-kitchener-singles-mixer-age-35/",
+      "description": "At The Rabbid Fox. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T01:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-dwayne-gretzky-centre-in-the-square",
+      "name": "Dwayne Gretzky",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/dwayne-gretzky/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T01:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-holiday-maker-market-kwartzlab",
+      "name": "Holiday Maker Market",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "145 Bedford Rd, Kitchener",
+      "website": "https://explorewaterloo.ca/event/holiday-maker-market/",
+      "description": "At Kwartzlab. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T16:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-bag-charm-chain-workshop-paper-march",
+      "name": "Bag Charm Chain Workshop",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$49.64",
+      "address": "132 Ahrens Street West, Kitchener",
+      "website": "https://explorewaterloo.ca/event/bag-charm-chain-workshop/",
+      "description": "At Paper Marché. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T18:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T18:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-tis-the-season-to-sparkle-christmas-show-community-christian-reformed-",
+      "name": "Tis the Season to Sparkle' Christmas Show",
+      "type": "event",
+      "category": "events",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "1275 Bleams Road, Kitchener",
+      "website": "https://explorewaterloo.ca/event/tis-the-season-to-sparkle-christmas-show/",
+      "description": "At Community Christian Reformed Church. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T19:00:00.000Z"
+      ],
+      "endsAt": "2026-11-21T19:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-speed-dating-beyond-small-talk-midtown-yoga",
+      "name": "Speed Dating Beyond Small Talk",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "663 Belmont Ave W., Kitchener",
+      "website": "https://explorewaterloo.ca/event/speed-dating-beyond-small-talk/",
+      "description": "At Midtown Yoga. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T22:30:00.000Z"
+      ],
+      "endsAt": "2026-11-21T22:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-yuk-yuks-50th-anniversary-spectacular-centre-in-the-square",
+      "name": "Yuk Yuk's 50th Anniversary Spectacular",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/yuk-yuks-50th-anniversary-spectacular/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T22:30:00.000Z"
+      ],
+      "endsAt": "2026-11-21T22:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-international-womens-entrepreneurship-day-soiree-yoni-mudra-art-galler",
+      "name": "International Women's Entrepreneurship Day Soiree",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$50.00",
+      "address": "241 Duke Street, Kitchener",
+      "website": "https://explorewaterloo.ca/event/international-womens-entrepreneurship-day-soiree/",
+      "description": "At Yoni Mudra Art Gallery. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-21T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-21T23:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-barenaked-ladies-centre-in-the-square",
+      "name": "Barenaked Ladies",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/barenaked-ladies/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T01:00:00.000Z",
+        "2026-11-23T01:00:00.000Z"
+      ],
+      "endsAt": "2026-11-23T01:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-yuk-yuks-50th-anniversary-spectacular-evening-show-centre-in-the-squar",
+      "name": "Yuk Yuk's 50th Anniversary Spectacular - Evening Show",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/yuk-yuks-50th-anniversary-spectacular-evening-show/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T01:30:00.000Z"
+      ],
+      "endsAt": "2026-11-22T01:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-comedy-night-at-boathouse-dtk-boathouse-dtk",
+      "name": "Comedy Night at Boathouse DTK!",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$33.28",
+      "address": "57 Jubilee Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/comedy-night-at-boathouse-dtk/",
+      "description": "At Boathouse DTK. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T02:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T02:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-speed-dating-ages-27-42-kitchener-waterloo-abe-erb-downtown-kitchener",
+      "name": "Speed Dating | Ages 27-42 | Kitchener-Waterloo",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$11.98",
+      "address": "151 Charles Street West, Kitchener",
+      "website": "https://explorewaterloo.ca/event/speed-dating-ages-27-42-kitchener-waterloo/",
+      "description": "At ABE ERB - Downtown Kitchener. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T18:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T18:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-in-conversation-with-cbcs-bob-mcdonald-themuseum",
+      "name": "In Conversation with CBC’s Bob McDonald",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "10 King Street West, Kitchener",
+      "website": "https://explorewaterloo.ca/event/in-conversation-with-cbcs-bob-mcdonald/",
+      "description": "At THEMUSEUM. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T19:30:00.000Z"
+      ],
+      "endsAt": "2026-11-22T19:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-live-music-weekends-johanna-daze-boathouse-dtk",
+      "name": "Live Music Weekends - Johanna Daze",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "57 Jubilee Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/live-music-weekends-johanna-daze/",
+      "description": "At Boathouse DTK. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T20:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T20:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-gift-of-lights-walk-night-for-facs-bingemans-gift-of-lights",
+      "name": "Gift of Lights Walk Night for FACS",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "425 Bingemans Center Drive, Kitchener, ON, Kitchener",
+      "website": "https://explorewaterloo.ca/event/gift-of-lights-walk-night-for-facs/",
+      "description": "At Bingemans Gift of Lights. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-22T22:00:00.000Z"
+      ],
+      "endsAt": "2026-11-22T22:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-trivia-landmarks-locations-boathouse-dtk",
+      "name": "Trivia - Landmarks & Locations",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "57 Jubilee Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/trivia-landmarks-locations/",
+      "description": "At Boathouse DTK. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-24T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-priyanka-live-at-the-conrad-centre-conrad-centre-for-the-performing-ar",
+      "name": "Priyanka - Live at the Conrad Centre",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$31.00",
+      "address": "36 King St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/priyanka-live-at-the-conrad-centre/",
+      "description": "At Conrad Centre for the Performing Arts. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-25T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-25T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-the-people-vs-pain-kitchener-the-registry-theatre",
+      "name": "THE PEOPLE vs. PAIN (Kitchener)",
+      "type": "event",
+      "category": "social",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "122 Frederick Street, Kitchener",
+      "website": "https://explorewaterloo.ca/event/the-people-vs-pain-kitchener/",
+      "description": "At The Registry Theatre. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-25T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-25T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-a-christmas-story-the-musical-centre-in-the-square",
+      "name": "A Christmas Story - The Musical",
+      "type": "event",
+      "category": "dance-music",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/a-christmas-story-the-musical/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-tannery-holiday-market-tannery-event-centre",
+      "name": "Tannery Holiday Market",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "151 Charles St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/tannery-holiday-market/",
+      "description": "At Tannery Event Centre. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T16:00:00.000Z"
+      ],
+      "endsAt": "2026-11-26T16:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-digimillennials-presents-good-evening-comedy-kw-famous-creative-cafe",
+      "name": "Digimillennials Presents: Good Evening, Comedy",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$19.56",
+      "address": "741 King St W, Unit 116, Kitchener",
+      "website": "https://explorewaterloo.ca/event/digimillennials-presents-good-evening-comedy/",
+      "description": "At KW Famous Creative Cafe. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-26T23:30:00.000Z"
+      ],
+      "endsAt": "2026-11-26T23:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-cirque-musica-holiday-wonderland-centre-in-the-square",
+      "name": "Cirque Musica: Holiday Wonderland",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen Street N, Kitchener",
+      "website": "https://explorewaterloo.ca/event/cirque-musica-holiday-wonderland/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-27T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-27T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-wannabe-live-at-the-conrad-centre-conrad-centre-for-the-performing-art",
+      "name": "Wannabe - Live at the Conrad Centre!",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "36 King St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/wannabe-live-at-the-conrad-centre/",
+      "description": "At Conrad Centre for the Performing Arts. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-27T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-27T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-rusty-nail-comedy-friday-featuring-mark-forward-twh-social",
+      "name": "Rusty Nail Comedy Friday Featuring Mark Forward",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$20.00",
+      "address": "1 King St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/rusty-nail-comedy-friday-featuring-mark-forward/",
+      "description": "At TWH Social. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-27T02:00:00.000Z"
+      ],
+      "endsAt": "2026-11-27T02:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-kitchener-rangers-vs-windsor-spitfires-the-kitchener-memorial-auditori",
+      "name": "Kitchener Rangers vs Windsor Spitfires",
+      "type": "event",
+      "category": "physical",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "400 East Avenue, Kitchener",
+      "website": "https://explorewaterloo.ca/event/kitchener-rangers-vs-windsor-spitfires/",
+      "description": "At The Kitchener Memorial Auditorium. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-28T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-28T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-matt-weidinger-live-at-the-conrad-centre-conrad-centre-for-the-perform",
+      "name": "Matt Weidinger - Live at the Conrad Centre",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "moderate",
+      "costNote": "$35.00",
+      "address": "36 King St W, Kitchener",
+      "website": "https://explorewaterloo.ca/event/matt-weidinger-live-at-the-conrad-centre/",
+      "description": "At Conrad Centre for the Performing Arts. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-28T00:00:00.000Z"
+      ],
+      "endsAt": "2026-11-28T00:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-orangeman-dallas-dallas-night-club",
+      "name": "Orangeman @ Dallas",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "low",
+      "costNote": "$9.27",
+      "address": "312 King Street West, Kitchener",
+      "website": "https://explorewaterloo.ca/event/orangeman-dallas/",
+      "description": "At Dallas Night Club. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-28T05:00:00.000Z"
+      ],
+      "endsAt": "2026-11-28T05:00:00.000Z"
+    },
+    {
+      "id": "kitchener-event-trinity-village-festive-market-trinity-village",
+      "name": "Trinity Village Festive Market",
+      "type": "event",
+      "category": "food",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "free",
+      "address": "2727 Kingsway Drive, Kitchener",
+      "website": "https://explorewaterloo.ca/event/trinity-village-festive-market/",
+      "description": "At Trinity Village. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-28T14:30:00.000Z"
+      ],
+      "endsAt": "2026-11-28T14:30:00.000Z"
+    },
+    {
+      "id": "kitchener-event-cinderella-at-centre-in-the-square-centre-in-the-square",
+      "name": "Cinderella at Centre in the Square",
+      "type": "event",
+      "category": "arts",
+      "tags": [
+        "Explore Waterloo"
+      ],
+      "cost": "varies",
+      "costNote": "Check the event page for prices.",
+      "address": "101 Queen St N, Kitchener, ON N2H 6P7, Kitchener",
+      "website": "https://explorewaterloo.ca/event/cinderella-at-centre-in-the-square/",
+      "description": "At Centre in the Square. Details and any changes are on the event page.",
+      "highlights": [],
+      "isRecommended": false,
+      "lastVerified": "2026-11-06",
+      "occurrences": [
+        "2026-11-29T21:00:00.000Z"
+      ],
+      "endsAt": "2026-11-29T21:00:00.000Z"
     }
   ]
 }

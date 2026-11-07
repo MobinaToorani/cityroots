@@ -232,7 +232,7 @@ function SearchBox() {
         placeholder="Try pool, jazz, or Kensington"
         autoComplete="off"
         enterKeyHint="search"
-        className="h-12 w-0 min-w-0 flex-1 rounded-full border border-divider bg-surface-solid pr-4 pl-11 text-body outline-none placeholder:text-text-muted hover:border-text-muted focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus"
+        className="h-12 w-0 min-w-0 flex-1 rounded-control border border-divider bg-surface-solid pr-4 pl-11 text-body outline-none placeholder:text-text-muted hover:border-text-muted focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus"
       />
     </form>
   );

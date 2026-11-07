@@ -1,6 +1,5 @@
 import { CalendarDays, Clock } from "lucide-react";
 import type { Metadata, Route } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { deletePlanAction } from "@/app/(app)/planner/actions";
 import { CategoryTag, CostBadge } from "@/components/ui/badges";
@@ -13,6 +12,7 @@ import { getPlanByShareId } from "@/lib/data/planner";
 import { exploreHref } from "@/lib/domain/explore-params";
 import { dayLabel, timeLabel } from "@/lib/domain/planner";
 import { absoluteUrl } from "@/lib/site";
+import { PlaceLink } from "@/components/features/place-link";
 
 function money(n: number): string {
   return `$${n}`;
@@ -42,15 +42,15 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
   const shareUrl = absoluteUrl(`/plans/${plan.shareId}`);
 
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-3xl">
+    <div className="pt-8">
+      <Container className="reading">
         {isOwner && query.saved && (
-          <p role="status" className="mb-6 rounded-2xl px-4 py-3 text-body glass-strong">
+          <p role="status" className="mb-6 rounded-card px-4 py-3 text-body card">
             Plan saved. Anyone with the link below can see it.
           </p>
         )}
         <p className="text-meta font-semibold text-primary-text">A CityRoots day plan</p>
-        <h1 className="mt-1 font-display text-display font-medium tracking-tight">{plan.title}</h1>
+        <h1 className="mt-1 page-title">{plan.title}</h1>
         <p className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-body text-text-muted">
           <span className="inline-flex items-center gap-1.5">
             <Icon icon={CalendarDays} size={16} />
@@ -73,9 +73,9 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
                 <div className="min-w-0">
                   <p className="text-meta font-semibold text-text-muted">{stop.slot}</p>
                   <h2 className="text-card font-semibold">
-                    <Link href={`/places/${stop.place.id}`} className="quiet-link">
+                    <PlaceLink placeId={stop.place.id} className="quiet-link">
                       {stop.place.name}
-                    </Link>
+                    </PlaceLink>
                   </h2>
                   <p className="mt-1 line-clamp-2 text-body text-text-muted">
                     {stop.place.summary}
@@ -111,7 +111,7 @@ export default async function SharedPlanPage(props: PageProps<"/plans/[shareId]"
                 id="plan-link"
                 readOnly
                 value={shareUrl}
-                className="h-11 rounded-full border border-divider bg-surface-solid px-4 text-body"
+                className="h-11 rounded-control border border-divider bg-surface-solid px-4 text-body"
               />
             </div>
             <div className="flex flex-wrap items-center gap-2">
