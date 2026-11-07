@@ -1,6 +1,7 @@
 /**
  * Category metadata. The database `categories` table is seeded from this list;
- * accent colours are design tokens and only ever used as small indicators.
+ * accent colours are design tokens: small indicators anywhere, and the wash, rules,
+ * and blocks that give a category's own page its look.
  */
 export const CATEGORY_SLUGS = [
   "physical",

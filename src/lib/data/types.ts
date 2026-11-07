@@ -45,13 +45,14 @@ export type PlaceCard = {
   isPick: boolean;
   image: string | null;
   seasonNote: string | null;
+  phone: string | null;
+  highlights: string[];
   /** Reliable weekly schedule, when there is one. Drives "Open now". */
   weekly: WeeklyHours | null;
 };
 
 export type PlaceDetail = PlaceCard & {
   description: string;
-  highlights: string[];
   tags: string[];
   curatorNote: string | null;
   address: string | null;

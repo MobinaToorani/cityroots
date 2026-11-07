@@ -6,6 +6,7 @@ import { CATEGORIES, type CategorySlug } from "@/lib/domain/categories";
 import { compareCostBands, type CostBand } from "@/lib/domain/cost";
 import { fuzzyScore } from "@/lib/domain/fuzzy";
 import { DataError } from "@/lib/errors";
+import { notFinished } from "./listing-filters";
 
 export type SearchHit =
   | { kind: "city"; slug: string; name: string; detail: string }
@@ -47,7 +48,7 @@ export async function searchEverything(query: string): Promise<SearchResults> {
         .from(places)
         .innerJoin(cities, eq(cities.id, places.cityId))
         .innerJoin(categories, eq(categories.id, places.categoryId))
-        .where(and(eq(places.status, "published"), eq(cities.status, "live"))),
+        .where(and(eq(places.status, "published"), eq(cities.status, "live"), notFinished)),
     ]);
 
     const top = <T>(
