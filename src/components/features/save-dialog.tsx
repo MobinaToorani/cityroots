@@ -94,7 +94,7 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
       onClick={(e) => {
         if (e.target === dialog.current) dialog.current.close();
       }}
-      className="palette m-auto w-[min(440px,calc(100vw-1.5rem))] rounded-[var(--radius-modal)] p-0 text-text glass-strong backdrop:bg-black/40 backdrop:backdrop-blur-sm"
+      className="palette m-auto w-[min(440px,calc(100vw-1.5rem))] rounded-[var(--radius-modal)] p-0 text-text card backdrop:bg-black/40 backdrop:backdrop-blur-sm"
     >
       <div className="flex items-start justify-between gap-4 p-5 pb-3">
         <div className="min-w-0">
@@ -107,7 +107,7 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
           type="button"
           onClick={() => dialog.current?.close()}
           aria-label="Close"
-          className="grid size-9 shrink-0 place-items-center rounded-full text-text-muted hover:bg-divider/60 hover:text-text"
+          className="grid size-9 shrink-0 place-items-center rounded-control text-text-muted hover:bg-divider/60 hover:text-text"
         >
           <Icon icon={X} />
         </button>
@@ -125,8 +125,8 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
         ) : !state ? (
           <div aria-busy="true" className="grid gap-2">
             <span className="sr-only">Loading your collections</span>
-            <div className="h-11 rounded-2xl bg-divider/60" />
-            <div className="h-11 rounded-2xl bg-divider/40" />
+            <div className="h-11 rounded-card bg-divider/60" />
+            <div className="h-11 rounded-card bg-divider/40" />
           </div>
         ) : !state.signedIn ? (
           <div className="grid gap-4">
@@ -146,7 +146,7 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
                     <li key={c.id}>
                       <label
                         className={cn(
-                          "flex min-h-11 cursor-pointer items-center gap-3 rounded-2xl border px-3.5 py-2 transition-colors",
+                          "flex min-h-11 cursor-pointer items-center gap-3 rounded-card border px-3.5 py-2 transition-colors",
                           c.hasPlace
                             ? "border-primary-text/40 bg-free-soft"
                             : "border-divider bg-surface-solid/70 hover:border-text-muted",
@@ -201,7 +201,7 @@ export function SaveDialog({ placeId, placeName, onClose }: Props) {
                   onChange={(e) => setNewTitle(e.target.value)}
                   placeholder="New collection, like Rainy days"
                   maxLength={80}
-                  className="h-11 min-w-0 flex-1 rounded-full border border-divider bg-surface-solid px-4 text-body placeholder:text-text-muted"
+                  className="h-11 min-w-0 flex-1 rounded-control border border-divider bg-surface-solid px-4 text-body placeholder:text-text-muted"
                 />
                 <Button type="submit" variant="secondary" disabled={pending || !newTitle.trim()}>
                   <Icon icon={Plus} size={16} />

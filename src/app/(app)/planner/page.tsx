@@ -89,14 +89,14 @@ export default async function PlannerPage(props: PageProps<"/planner">) {
   const city = cities.find((c) => c.slug === params.city) ?? cities[0];
 
   return (
-    <div className="mx-auto max-w-3xl px-4 pt-6 sm:px-6">
+    <div className="page-frame reading pt-8">
       <RememberCity slug={city?.slug ?? null} />
       {query.deleted && (
         <p role="status" className="mb-4 text-body font-semibold">
           Plan deleted.
         </p>
       )}
-      <h1 className="mb-4 text-section font-semibold tracking-tight">Plan a day</h1>
+      <h1 className="mb-4 page-title">Plan a day</h1>
       {city && (
         <>
           <PlannerForm cities={cities} params={{ ...params, city: city.slug }} today={today} />
@@ -225,7 +225,7 @@ function PlannerForm({
         action="/planner"
         className="grid gap-4"
       >
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
           <SelectField
             label="City"
             name="city"
@@ -288,7 +288,7 @@ function SavedPlans({ plans }: { plans: PlanSummary[] }) {
             >
               <Link
                 href={`/plans/${p.shareId}` as Route}
-                className="font-semibold after:absolute after:inset-0 after:rounded-[var(--radius-card)]"
+                className="font-semibold after:absolute after:inset-0 after:rounded-card"
               >
                 {p.title}
               </Link>

@@ -189,7 +189,7 @@ export function CommandPalette() {
         onClick={(e) => {
           if (e.target === dialog.current) dialog.current.close();
         }}
-        className="palette m-auto mt-[12vh] w-[min(640px,calc(100vw-1.5rem))] rounded-[var(--radius-modal)] p-0 text-text glass-strong backdrop:bg-black/40 backdrop:backdrop-blur-sm"
+        className="palette m-auto mt-[12vh] w-[min(640px,calc(100vw-1.5rem))] rounded-[var(--radius-modal)] p-0 text-text card backdrop:bg-black/40 backdrop:backdrop-blur-sm"
       >
         <div className="flex items-center gap-3 border-b border-divider px-4">
           <Icon icon={Search} className="shrink-0 text-text-muted" />
@@ -212,7 +212,7 @@ export function CommandPalette() {
             type="button"
             onClick={() => dialog.current?.close()}
             aria-label="Close search"
-            className="grid size-8 shrink-0 place-items-center rounded-full hover:bg-divider/60"
+            className="grid size-8 shrink-0 place-items-center rounded-control hover:bg-divider/60"
           >
             <Icon icon={X} size={16} />
           </button>
@@ -241,7 +241,7 @@ export function CommandPalette() {
                         onPointerMove={() => setActive(flat.indexOf(option))}
                         onClick={() => choose(option)}
                         className={cn(
-                          "flex cursor-pointer items-center gap-3 rounded-2xl px-3 py-2.5",
+                          "flex cursor-pointer items-center gap-3 rounded-card px-3 py-2.5",
                           isActive && "bg-divider/70 ring-1 ring-divider",
                         )}
                       >

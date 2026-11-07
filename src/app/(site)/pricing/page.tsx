@@ -41,14 +41,12 @@ export default async function PricingPage(props: PageProps<"/pricing">) {
   const payments = stripeConfigured();
 
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-4xl">
-        <h1 className="font-display text-display font-medium tracking-tight">
-          Everything is free. Pro keeps your plans.
-        </h1>
+    <div className="pt-8">
+      <Container className="reading">
+        <h1 className="page-title">Everything is free. Pro keeps your plans.</h1>
 
         {notice && (
-          <p role="status" className="mt-6 rounded-2xl px-4 py-3 text-body glass-strong">
+          <p role="status" className="mt-6 rounded-card px-4 py-3 text-body card">
             {notice}
           </p>
         )}

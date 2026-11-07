@@ -23,12 +23,10 @@ export default function PartnersPage() {
   const curl = `curl -H "Authorization: Bearer cr_live_..." "${absoluteUrl("/api/v1/places?city=newmarket&cost=free&per_page=20")}"`;
 
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-3xl">
+    <div className="pt-8">
+      <Container className="reading">
         <p className="text-meta font-semibold text-primary-text">Partner program</p>
-        <h1 className="mt-2 font-display text-display font-medium tracking-tight">
-          Put free things to do on your own site.
-        </h1>
+        <h1 className="mt-2 page-title">Put free things to do on your own site.</h1>
         <p className="mt-6 text-lg text-text-muted">
           Libraries, municipalities, business improvement areas, campus student unions, and tourism
           offices can show CityRoots listings to the people they serve. The listings stay current
@@ -48,7 +46,7 @@ export default function PartnersPage() {
             category or cost, and set how many to show. Every listing links back to its full page on
             CityRoots.
           </p>
-          <div className="mt-5 overflow-hidden rounded-[var(--radius-card)] border border-divider bg-surface-solid">
+          <div className="mt-5 overflow-hidden rounded-card border border-divider bg-surface-solid">
             <iframe
               src="/embed/newmarket?cost=free&limit=5"
               title="Example widget: free things to do in Newmarket"
@@ -64,7 +62,7 @@ export default function PartnersPage() {
             readOnly
             rows={4}
             value={snippet}
-            className="mt-1 w-full rounded-2xl border border-divider bg-surface-solid p-3 text-meta text-text"
+            className="mt-1 w-full rounded-card border border-divider bg-surface-solid p-3 text-meta text-text"
           />
           <p className="mt-2 text-meta">
             Options: <code>cat</code> (for example <code>arts,food</code>), <code>cost</code> (
@@ -99,7 +97,7 @@ export default function PartnersPage() {
             readOnly
             rows={3}
             value={curl}
-            className="mt-1 w-full rounded-2xl border border-divider bg-surface-solid p-3 text-meta text-text"
+            className="mt-1 w-full rounded-card border border-divider bg-surface-solid p-3 text-meta text-text"
           />
           <p className="mt-2 text-meta">
             Listings are licensed CC BY 4.0. Every response includes the attribution to show.
@@ -138,7 +136,7 @@ export default function PartnersPage() {
 function Block({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section aria-labelledby={id} className="mt-16 text-body text-text-muted">
-      <h2 id={id} className="mb-3 text-section font-semibold tracking-tight text-text">
+      <h2 id={id} className="mb-3 font-display text-section font-medium tracking-tight text-text">
         {title}
       </h2>
       {children}

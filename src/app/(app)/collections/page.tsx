@@ -23,8 +23,8 @@ export default async function CollectionsPage(props: PageProps<"/collections">) 
   const atLimit = !membership.pro && list.length >= FREE_COLLECTION_LIMIT;
 
   return (
-    <div className="mx-auto max-w-3xl px-5 pt-4 sm:px-8 lg:pt-8">
-      <h1 className="text-section font-semibold tracking-tight">Your collections</h1>
+    <div className="page-frame reading pt-8">
+      <h1 className="page-title">Your collections</h1>
       <p className="mt-2 text-body text-text-muted">
         Keep places together for a weekend, a visit, or a rainy day. Collections are private until
         you share one.
@@ -36,14 +36,14 @@ export default async function CollectionsPage(props: PageProps<"/collections">) 
       )}
 
       {list.length > 0 ? (
-        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-6 grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
           {list.map((c) => (
             <li key={c.id}>
               <Card as="article" interactive className="relative grid gap-1 p-5">
                 <h2 className="text-card font-semibold">
                   <Link
                     href={`/collections/${c.id}`}
-                    className="after:absolute after:inset-0 after:rounded-[var(--radius-card)]"
+                    className="after:absolute after:inset-0 after:rounded-card"
                   >
                     {c.title}
                   </Link>

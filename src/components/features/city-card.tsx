@@ -9,17 +9,12 @@ export function CityCard({ city, className }: { city: CitySummary; className?: s
   return (
     <article
       className={cn(
-        "motion-lift group relative isolate flex aspect-[3/2] flex-col justify-end overflow-hidden rounded-[var(--radius-card)] bg-primary p-3 transition-[transform,box-shadow] duration-200 ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]",
+        "group relative isolate flex aspect-[3/2] flex-col justify-end overflow-hidden rounded-card bg-primary p-3",
         className,
       )}
     >
       {image && (
-        <Photo
-          photo={image}
-          alt=""
-          sizes="(min-width: 1024px) 240px, 50vw"
-          className="-z-20 transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.04]"
-        />
+        <Photo photo={image} alt="" sizes="(min-width: 1024px) 240px, 50vw" className="-z-20" />
       )}
       <div
         aria-hidden="true"
@@ -28,7 +23,7 @@ export function CityCard({ city, className }: { city: CitySummary; className?: s
       <h3 className="text-card font-semibold tracking-tight text-white">
         <Link
           href={`/city/${city.slug}`}
-          className="after:absolute after:inset-0 after:rounded-[var(--radius-card)]"
+          className="group-hover:underline after:absolute after:inset-0 after:rounded-card"
         >
           {city.name}
         </Link>

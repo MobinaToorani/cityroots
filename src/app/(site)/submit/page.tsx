@@ -28,10 +28,10 @@ export default async function SubmitPage(props: PageProps<"/submit">) {
   ]);
 
   return (
-    <div className="px-5 pt-10 pb-8 sm:px-8">
-      <div className="mx-auto grid max-w-[1100px] gap-8 lg:grid-cols-[1.5fr_1fr]">
+    <div className="page-frame pt-8">
+      <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
         <div>
-          <h1 className="font-display text-section font-medium tracking-tight">
+          <h1 className="page-title">
             {isCorrection ? "Suggest a correction" : "Suggest a place"}
           </h1>
           <p className="mt-2 max-w-xl text-body text-text-muted">

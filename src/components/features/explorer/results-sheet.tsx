@@ -95,7 +95,7 @@ export function ResultsSheet({ children }: { children: ReactNode }) {
       >
         <span aria-hidden="true" className="h-1.5 w-12 rounded-full bg-text-muted/50" />
       </button>
-      <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain px-4 pb-32 lg:overflow-visible lg:px-0 lg:pb-0">
+      <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain px-5 pb-32 lg:overflow-visible lg:px-0 lg:pb-0">
         {children}
       </div>
     </div>

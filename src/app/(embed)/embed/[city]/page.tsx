@@ -49,7 +49,7 @@ export default async function EmbedCityPage(props: PageProps<"/embed/[city]">) {
           {shown.map((p) => (
             <li
               key={p.id}
-              className="grid gap-1 rounded-2xl border border-divider bg-surface-solid px-4 py-3"
+              className="grid gap-1 rounded-card border border-divider bg-surface-solid px-4 py-3"
             >
               <div className="flex items-start justify-between gap-3">
                 <a
@@ -76,7 +76,7 @@ export default async function EmbedCityPage(props: PageProps<"/embed/[city]">) {
           ))}
         </ul>
       ) : (
-        <p className="rounded-2xl border border-divider bg-surface-solid px-4 py-6 text-center text-body">
+        <p className="rounded-card border border-divider bg-surface-solid px-4 py-6 text-center text-body">
           Nothing matches here yet.{" "}
           <a
             href={absoluteUrl(`/city/${city.slug}`)}

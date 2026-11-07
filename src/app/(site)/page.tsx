@@ -2,18 +2,17 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { CategoryTile } from "@/components/features/category-tile";
 import { CityCard } from "@/components/features/city-card";
-import { EventCard } from "@/components/features/event-card";
 import { HeroQuery } from "@/components/features/hero-query";
 import { Photo, PhotoCredit } from "@/components/features/photo";
+import { WeekList } from "@/components/features/week-list";
 import { SamplePlan } from "@/components/features/planner/sample-plan";
 import { ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
-import { Container, SectionHeading } from "@/components/ui/section";
+import { Container, PageSection } from "@/components/ui/section";
 import { listLiveCities } from "@/lib/data/cities";
 import { listThisWeek } from "@/lib/data/events";
 import { sampleDay } from "@/lib/data/sample-day";
 import { CATEGORIES } from "@/lib/domain/categories";
-import { showingDay } from "@/lib/domain/event-dates";
 import { exploreHref } from "@/lib/domain/explore-params";
 import { photo } from "@/lib/photos";
 
@@ -25,7 +24,7 @@ export default async function HomePage() {
   const [cities, day, week] = await Promise.all([
     listLiveCities(),
     sampleDay(SAMPLE_CITY.slug),
-    listThisWeek(10),
+    listThisWeek(8),
   ]);
   const hero = photo("/home/hero.jpg");
 
@@ -57,57 +56,39 @@ export default async function HomePage() {
       </section>
 
       {week.length > 0 && (
-        <section aria-labelledby="this-week" className="pt-12">
-          <Container>
-            <SectionHeading
-              id="this-week"
-              title="On this week"
-              className="mb-4"
-              action={
-                <ButtonLink href="/events" variant="secondary" size="sm">
-                  All events
-                  <Icon icon={ArrowRight} size={16} />
-                </ButtonLink>
-              }
-            />
-          </Container>
-          <div className="no-scrollbar overflow-x-auto">
-            <ul className="flex w-max snap-x snap-mandatory gap-3 px-5 pb-2 sm:px-8 xl:px-[max(2rem,calc((100vw-1200px)/2+2rem))]">
-              {week.map(({ event, at, timed }) => (
-                <li key={event.id} className="w-[72vw] max-w-[280px] shrink-0 snap-start">
-                  <EventCard event={event} when={timed ? showingDay(at) : "This week"} />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <PageSection
+          id="this-week"
+          title="On this week"
+          action={
+            <ButtonLink href="/events" variant="quiet" className="text-meta">
+              All events
+              <Icon icon={ArrowRight} size={16} />
+            </ButtonLink>
+          }
+        >
+          <WeekList items={week} />
+        </PageSection>
       )}
 
-      <section aria-labelledby="browse" className="pt-12">
-        <Container>
-          <SectionHeading id="browse" title="What are you up for?" className="mb-4" />
-          <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
-            {CATEGORIES.map((c) => (
-              <li key={c.slug}>
-                <CategoryTile slug={c.slug} href={exploreHref({ cat: [c.slug] })} />
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
+      <PageSection id="cities" title="Pick a city">
+        <ul className="grid grid-cols-2 gap-3 lg:grid-cols-5">
+          {cities.map((city) => (
+            <li key={city.id}>
+              <CityCard city={city} />
+            </li>
+          ))}
+        </ul>
+      </PageSection>
 
-      <section aria-labelledby="cities" className="pt-12">
-        <Container>
-          <SectionHeading id="cities" title="Pick a city" className="mb-4" />
-          <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
-            {cities.map((city) => (
-              <li key={city.id}>
-                <CityCard city={city} />
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
+      <PageSection id="browse" title="What are you up for?">
+        <ul className="grid grid-cols-2 gap-x-6 lg:grid-cols-5">
+          {CATEGORIES.map((c) => (
+            <li key={c.slug}>
+              <CategoryTile slug={c.slug} href={exploreHref({ cat: [c.slug] })} />
+            </li>
+          ))}
+        </ul>
+      </PageSection>
 
       {day.stops.length > 0 && (
         <section aria-labelledby="planner-title" className="pt-14">

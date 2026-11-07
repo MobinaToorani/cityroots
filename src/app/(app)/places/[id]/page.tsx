@@ -30,9 +30,10 @@ import { Icon } from "@/components/ui/icon";
 import { getPlace, listPrerenderedPlaceIds, listSimilarPlaces } from "@/lib/data/places";
 import type { PlaceDetail } from "@/lib/data/types";
 import { categoryMeta } from "@/lib/domain/categories";
-import { COST_HINTS, COST_LABELS } from "@/lib/domain/cost";
+import { COST_LABELS, costNote } from "@/lib/domain/cost";
 import { exploreHref } from "@/lib/domain/explore-params";
 import { features } from "@/lib/env";
+import { mapsUrl } from "@/lib/domain/maps";
 import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -62,14 +63,6 @@ function schemaType(place: PlaceDetail): string {
   return "TouristAttraction";
 }
 
-function mapsUrl(place: PlaceDetail): string {
-  const query =
-    place.lat && place.lng
-      ? `${place.lat},${place.lng}`
-      : `${place.name}, ${place.address ?? place.cityName}`;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-}
-
 function formatDate(iso: string): string {
   return new Intl.DateTimeFormat("en-CA", {
     month: "long",
@@ -85,9 +78,10 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
   const similar = await listSimilarPlaces(place, 3);
   const category = categoryMeta(place.category);
   const a11y = place.accessibility;
+  const price = costNote(place.costBand, place.priceNote);
 
   return (
-    <article className="mx-auto max-w-[1100px] px-5 pt-4 sm:px-8 lg:pt-8">
+    <article className="page-frame pt-8">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -123,21 +117,15 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
       </Link>
 
       <header>
-        <div className="flex items-start gap-4">
-          <CategoryIcon slug={place.category} className="size-12 [&_svg]:size-6" />
-          <div className="min-w-0">
-            <p className="text-meta text-text-muted">
-              {category.name}
-              {place.neighborhood ? `, ${place.neighborhood}` : ""}
-            </p>
-            <h1 className="font-display text-[clamp(1.75rem,1.4rem+1.6vw,2.5rem)] leading-tight font-medium tracking-tight">
-              {place.name}
-            </h1>
-          </div>
-        </div>
+        <p className="flex items-center gap-1.5 text-meta text-text-muted">
+          <CategoryIcon slug={place.category} size={16} />
+          {category.name}
+          {place.neighborhood ? `, ${place.neighborhood}` : ""}
+        </p>
+        <h1 className="mt-1 page-title">{place.name}</h1>
         <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
-          <CostBadge band={place.costBand} className="h-7 px-3 text-body" />
-          <span className="text-body">{place.priceNote ?? COST_HINTS[place.costBand]}</span>
+          <CostBadge band={place.costBand} className="text-body" />
+          {price && <span className="text-body">{price}</span>}
           {place.isPick && <PickBadge />}
         </div>
         <div className="mt-5 flex flex-wrap items-center gap-2">
@@ -264,7 +252,7 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
           </Card>
           {place.lastVerifiedAt && (
             <p className="text-meta text-text-muted">
-              Details checked {formatDate(place.lastVerifiedAt)}.
+              Source checked {formatDate(place.lastVerifiedAt)}.
             </p>
           )}
           {place.ownerConfirmed && (
@@ -298,7 +286,7 @@ export default async function PlacePage(props: PageProps<"/places/[id]">) {
           More like this in {place.cityName}
         </h2>
         {similar.length > 0 ? (
-          <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-3 grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
             {similar.map((p) => (
               <li key={p.id}>
                 <PlaceCard place={p} />

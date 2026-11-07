@@ -25,7 +25,7 @@ function FormError({ state }: { state: SubmitState }) {
     <p
       role="alert"
       tabIndex={-1}
-      className="rounded-2xl bg-danger/10 px-4 py-3 text-meta font-medium text-danger outline-none"
+      className="rounded-card bg-danger/10 px-4 py-3 text-meta font-medium text-danger outline-none"
     >
       {state.message}
     </p>

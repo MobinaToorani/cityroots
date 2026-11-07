@@ -54,7 +54,7 @@ export function PrimaryNavLinks({ variant }: { variant: "tab" | "header" }) {
         prefetch={item.prefetch ?? undefined}
         aria-current={active ? "page" : undefined}
         className={cn(
-          "inline-flex h-10 items-center rounded-full px-3.5 text-meta font-semibold transition-colors duration-200",
+          "inline-flex h-10 items-center rounded-control px-3.5 text-meta font-semibold transition-colors duration-200",
           active ? "bg-ink text-on-ink" : "text-text hover:bg-divider/60",
         )}
       >

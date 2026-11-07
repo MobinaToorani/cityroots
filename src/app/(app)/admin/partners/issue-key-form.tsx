@@ -14,7 +14,7 @@ export function IssueKeyForm() {
   return (
     <div className="grid gap-5">
       {state.status === "issued" && state.key && (
-        <div role="status" className="grid gap-2 rounded-2xl px-5 py-4 glass-strong">
+        <div role="status" className="grid gap-2 rounded-card px-5 py-4 card">
           <p className="font-semibold">Key for {state.orgName}</p>
           <p className="text-meta text-text-muted">
             Copy it now and send it to the partner securely. It is not stored and cannot be shown
@@ -28,7 +28,7 @@ export function IssueKeyForm() {
             readOnly
             value={state.key}
             onFocus={(e) => e.currentTarget.select()}
-            className="h-11 w-full rounded-xl border border-divider bg-surface-solid px-3 text-body"
+            className="h-11 w-full rounded-card border border-divider bg-surface-solid px-3 text-body"
           />
         </div>
       )}

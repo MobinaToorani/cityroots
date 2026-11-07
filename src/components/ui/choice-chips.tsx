@@ -53,7 +53,7 @@ export function ChoiceChips({
             />
             <span
               className={cn(
-                "motion-press inline-flex h-9 cursor-pointer items-center gap-2 rounded-full border px-3.5 text-meta font-medium transition-colors duration-150",
+                "motion-press inline-flex h-9 cursor-pointer items-center gap-2 rounded-control border px-3.5 text-meta font-medium transition-colors duration-150",
                 "border-divider bg-surface-solid hover:border-text-muted",
                 "peer-checked:border-ink peer-checked:bg-ink peer-checked:text-on-ink",
                 "peer-focus-visible:outline-2 peer-focus-visible:outline-offset-3 peer-focus-visible:outline-focus",

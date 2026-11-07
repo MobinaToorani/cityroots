@@ -26,11 +26,11 @@ export function EmptyState({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-md justify-items-center gap-3 rounded-[var(--radius-card)] px-6 py-10 text-center card",
+        "mx-auto grid max-w-md justify-items-center gap-3 rounded-card px-6 py-10 text-center card",
         className,
       )}
     >
-      <span className="grid size-11 place-items-center rounded-full bg-free-soft text-free">
+      <span className="grid size-11 place-items-center rounded-control bg-free-soft text-free">
         <Icon icon={icon} />
       </span>
       <Heading className="text-card font-semibold">{title}</Heading>

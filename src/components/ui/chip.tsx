@@ -4,7 +4,7 @@ import type { Route } from "next";
 import { cn } from "@/lib/cn";
 
 const chipBase =
-  "motion-press inline-flex h-9 shrink-0 items-center gap-2 rounded-full px-3.5 text-meta font-medium whitespace-nowrap transition-[background-color,color,transform] duration-150 ease-[var(--ease-out-expo)] active:translate-y-px";
+  "motion-press inline-flex h-9 shrink-0 items-center gap-2 rounded-control px-3.5 text-meta font-medium whitespace-nowrap transition-[background-color,color,transform] duration-150 ease-[var(--ease-out-expo)] active:translate-y-px";
 
 export function chipClasses(active: boolean, className?: string) {
   return cn(

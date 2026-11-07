@@ -51,20 +51,20 @@ export default async function AccountPage(props: PageProps<"/account">) {
   }
 
   return (
-    <div className="mx-auto max-w-2xl px-5 pt-4 sm:px-8 lg:pt-8">
-      <h1 className="text-section font-semibold tracking-tight">Your account</h1>
+    <div className="page-frame reading pt-8">
+      <h1 className="page-title">Your account</h1>
       {welcome && (
-        <p role="status" className="mt-4 rounded-2xl px-4 py-3 text-body glass-strong">
+        <p role="status" className="mt-4 rounded-card px-4 py-3 text-body card">
           {welcome}
         </p>
       )}
       {query.billing === "error" && (
-        <p role="alert" className="mt-4 rounded-2xl px-4 py-3 text-body glass-strong">
+        <p role="alert" className="mt-4 rounded-card px-4 py-3 text-body card">
           The billing page did not open. Try again in a minute.
         </p>
       )}
       <Card className="mt-6 grid gap-5 p-6">
-        <dl className="grid gap-4 sm:grid-cols-2">
+        <dl className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
           <div>
             <dt className="text-meta text-text-muted">Email</dt>
             <dd className="font-semibold break-all">{user.email}</dd>
@@ -101,7 +101,10 @@ export default async function AccountPage(props: PageProps<"/account">) {
         </div>
       </Card>
 
-      <nav aria-label="Your things" className="mt-6 grid gap-3 sm:grid-cols-2">
+      <nav
+        aria-label="Your things"
+        className="mt-6 grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2"
+      >
         <AccountLink href="/collections" icon={Bookmark} title="Collections">
           Places you saved
         </AccountLink>
@@ -133,10 +136,7 @@ function AccountLink({
     <Card interactive className="relative flex items-center gap-3 p-4">
       <Icon icon={icon} className="shrink-0 text-primary-text" />
       <div>
-        <Link
-          href={href}
-          className="font-semibold after:absolute after:inset-0 after:rounded-[var(--radius-card)]"
-        >
+        <Link href={href} className="font-semibold after:absolute after:inset-0 after:rounded-card">
           {title}
         </Link>
         <p className="text-meta text-text-muted">{children}</p>

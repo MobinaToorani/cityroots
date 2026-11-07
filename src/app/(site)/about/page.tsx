@@ -18,11 +18,9 @@ export const metadata: Metadata = {
 export default async function AboutPage() {
   const stats = await getSiteStats();
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-3xl">
-        <h1 className="font-display text-display font-medium tracking-tight">
-          Your city has more to offer than you think.
-        </h1>
+    <div className="pt-8">
+      <Container className="reading">
+        <h1 className="page-title">Your city has more to offer than you think.</h1>
         <p className="mt-6 text-lg text-text-muted">
           CityRoots lists {stats.places} places, programs, and events across {stats.cities} Ontario
           cities. {stats.freeShare}% of them cost nothing. Every listing says what it costs, and the
@@ -31,8 +29,8 @@ export default async function AboutPage() {
 
         <Block id="model" title="How we make money">
           <p>
-            The rule is simple: <strong>pay for tools, never for placement.</strong> There are no
-            ads, and no business, partner, or subscriber can buy a better spot.
+            You can pay for tools, but <strong>never for placement.</strong> There are no ads, and
+            no business, partner, or subscriber can buy a better spot.
           </p>
           <ul className="mt-4 grid gap-3">
             <Item title="CityRoots Pro, for people">
@@ -83,6 +81,17 @@ export default async function AboutPage() {
               target="_blank"
             >
               Open Government Licence &ndash; Toronto
+            </a>
+            . In the other cities, event dates come from public library, municipal, and tourism
+            calendars, and each one links back to its source. Some facility details come from
+            Statistics Canada&apos;s open databases under the{" "}
+            <a
+              className="text-primary-text quiet-link"
+              href="https://www.statcan.gc.ca/en/reference/licence"
+              rel="license noopener"
+              target="_blank"
+            >
+              Statistics Canada Open Licence
             </a>
             .
           </p>
@@ -137,7 +146,7 @@ export default async function AboutPage() {
 function Block({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section aria-labelledby={id} className="mt-14 scroll-mt-28 text-body">
-      <h2 id={id} className="mb-3 text-section font-semibold tracking-tight">
+      <h2 id={id} className="mb-3 font-display text-section font-medium tracking-tight">
         {title}
       </h2>
       {children}

@@ -26,12 +26,10 @@ export default async function BusinessPage(props: PageProps<"/business">) {
     : [];
 
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-3xl">
+    <div className="pt-8">
+      <Container className="reading">
         <p className="text-meta font-semibold text-primary-text">For places on CityRoots</p>
-        <h1 className="mt-2 font-display text-display font-medium tracking-tight">
-          Claim your listing. It is free.
-        </h1>
+        <h1 className="mt-2 page-title">Claim your listing. It is free.</h1>
         <p className="mt-6 text-lg text-text-muted">
           If you run a place, program, or event listed here, claim it to keep the details right:
           your hours, what things cost, accessibility, and your website. A curator checks every
@@ -46,7 +44,7 @@ export default async function BusinessPage(props: PageProps<"/business">) {
             method="get"
             action="/business"
             role="search"
-            className="mt-3 flex max-w-xl items-center gap-2 rounded-full p-1.5 pl-5 glass-strong"
+            className="mt-3 flex max-w-xl items-center gap-2 rounded-control p-1.5 pl-5 card"
           >
             <Icon icon={Search} className="shrink-0 text-text-muted" />
             <label htmlFor="business-search" className="sr-only">
@@ -62,7 +60,7 @@ export default async function BusinessPage(props: PageProps<"/business">) {
             />
             <button
               type="submit"
-              className="h-11 shrink-0 rounded-full bg-primary px-5 font-semibold text-white hover:bg-primary-hover"
+              className="h-11 shrink-0 rounded-control bg-primary px-5 font-semibold text-white hover:bg-primary-hover"
             >
               Search
             </button>
@@ -148,7 +146,7 @@ export default async function BusinessPage(props: PageProps<"/business">) {
 function Block({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section aria-labelledby={id} className="mt-14 text-body text-text-muted">
-      <h2 id={id} className="mb-3 text-section font-semibold tracking-tight text-text">
+      <h2 id={id} className="mb-3 font-display text-section font-medium tracking-tight text-text">
         {title}
       </h2>
       {children}

@@ -22,9 +22,9 @@ export function LegalPage({
   children: ReactNode;
 }) {
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-3xl">
-        <h1 className="font-display text-display font-medium tracking-tight">{title}</h1>
+    <div className="pt-8">
+      <Container className="reading">
+        <h1 className="page-title">{title}</h1>
         <p className="mt-3 text-meta text-text-muted">
           Last updated <time dateTime={updated}>{updatedFormat.format(new Date(updated))}</time>
         </p>
@@ -48,7 +48,7 @@ export function LegalSection({
 }) {
   return (
     <section aria-labelledby={id} className="scroll-mt-28 [&>p+p]:mt-3">
-      <h2 id={id} className="mb-3 text-section font-semibold tracking-tight">
+      <h2 id={id} className="mb-3 font-display text-section font-medium tracking-tight">
         {title}
       </h2>
       {children}

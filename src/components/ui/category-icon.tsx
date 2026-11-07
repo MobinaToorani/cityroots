@@ -28,16 +28,22 @@ export const CATEGORY_ICONS: Record<CategorySlug, LucideIcon> = {
   events: PartyPopper,
 };
 
-/** A soft tile in the category's colour, so a list can be scanned by type at a glance. */
-export function CategoryIcon({ slug, className }: { slug: CategorySlug; className?: string }) {
-  const color = `var(--color-cat-${slug})`;
+/** The category's line icon in its colour, so a list can be scanned by type at a glance. */
+export function CategoryIcon({
+  slug,
+  size = 20,
+  className,
+}: {
+  slug: CategorySlug;
+  size?: 16 | 20;
+  className?: string;
+}) {
   return (
-    <span
-      aria-hidden="true"
-      className={cn("grid size-10 shrink-0 place-items-center rounded-xl", className)}
-      style={{ color, backgroundColor: `color-mix(in srgb, ${color} 12%, transparent)` }}
-    >
-      <Icon icon={CATEGORY_ICONS[slug]} />
-    </span>
+    <Icon
+      icon={CATEGORY_ICONS[slug]}
+      size={size}
+      className={cn("shrink-0", className)}
+      style={{ color: `var(--color-cat-${slug})` }}
+    />
   );
 }

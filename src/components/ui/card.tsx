@@ -5,7 +5,7 @@ type CardProps<T extends ElementType> = {
   as?: T;
   /** Frosted surface. Only for cards that sit on top of a photo or map. */
   overPhoto?: boolean;
-  /** Lifts on hover. Use when the whole card is a link. */
+  /** Answers to hover. Use when the whole card is a link. */
   interactive?: boolean;
 } & Omit<ComponentProps<T>, "as">;
 
@@ -21,9 +21,9 @@ export function Card<T extends ElementType = "div">({
     <Component
       className={cn(
         overPhoto ? "glass-strong" : "card",
-        "rounded-[var(--radius-card)]",
+        "rounded-card",
         interactive &&
-          "motion-lift transition-[transform,box-shadow,border-color] duration-200 ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:border-text-muted/40 hover:shadow-[var(--shadow-lift)]",
+          "transition-[box-shadow,border-color] duration-200 ease-[var(--ease-out-expo)] hover:border-text-muted/40 hover:shadow-[var(--shadow-lift)]",
         className,
       )}
       {...props}

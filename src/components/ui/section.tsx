@@ -2,9 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 export function Container({ children, className }: { children: ReactNode; className?: string }) {
-  return (
-    <div className={cn("mx-auto w-full max-w-[1200px] px-5 sm:px-8", className)}>{children}</div>
-  );
+  return <div className={cn("page-frame", className)}>{children}</div>;
 }
 
 type SectionHeadingProps = {
@@ -25,15 +23,35 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <div className={cn("mb-6 flex flex-wrap items-end justify-between gap-4", className)}>
+    <div
+      className={cn(
+        "mb-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1",
+        className,
+      )}
+    >
       <div className="max-w-2xl">
         {eyebrow && <p className="mb-1 text-meta font-semibold text-primary-text">{eyebrow}</p>}
-        <h2 id={id} className="text-section font-semibold tracking-tight">
+        <h2 id={id} className="font-display text-section font-medium tracking-tight">
           {title}
         </h2>
         {description && <p className="mt-2 text-body text-text-muted">{description}</p>}
       </div>
       {action}
     </div>
+  );
+}
+
+/** One band of a page: the same spacing, edges, and heading every time. */
+export function PageSection({
+  children,
+  ...heading
+}: Omit<SectionHeadingProps, "className"> & { children: ReactNode }) {
+  return (
+    <section aria-labelledby={heading.id} className="pt-14">
+      <Container>
+        <SectionHeading {...heading} />
+        {children}
+      </Container>
+    </section>
   );
 }

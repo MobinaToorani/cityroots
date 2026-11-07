@@ -19,47 +19,38 @@ export const metadata: Metadata = {
 export default async function GuidesPage() {
   const cities = new Map((await listLiveCities()).map((c) => [c.slug, c]));
   return (
-    <div className="pt-10 pb-8">
-      <Container className="max-w-4xl">
-        <h1 className="font-display text-display font-medium tracking-tight">
-          A day out, already planned.
-        </h1>
-        <ol className="mt-8 divide-y divide-divider border-y border-divider">
+    <div className="pt-8">
+      <Container>
+        <h1 className="page-title">A day out, already planned.</h1>
+        <ol className="mt-8 grid grid-cols-1 gap-x-12 lg:grid-cols-2">
           {GUIDES.map((g, i) => {
             const city = cities.get(g.city);
             const hero = photo(city?.heroImage ?? null);
             return (
-              <li key={g.slug} className="relative grid gap-4 py-6 sm:grid-cols-[12rem_1fr]">
-                <div>
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-primary">
-                    {hero && (
-                      <Photo
-                        photo={hero}
-                        alt=""
-                        sizes="(min-width: 640px) 12rem, 100vw"
-                        // On phones the first photo fills the screen and is the LCP.
-                        preload={i === 0}
-                      />
-                    )}
-                  </div>
-                  {hero && (
-                    <PhotoCredit photo={hero} className="relative z-10 mt-1 text-text-muted" />
-                  )}
+              <li
+                key={g.slug}
+                className="group relative grid grid-cols-[6.5rem_minmax(0,1fr)] gap-4 border-t border-divider py-5 sm:grid-cols-[9rem_minmax(0,1fr)]"
+              >
+                <div className="relative aspect-[4/3] self-start overflow-hidden rounded-card bg-primary">
+                  {hero && <Photo photo={hero} alt="" sizes="9rem" preload={i === 0} />}
                 </div>
-                <div>
-                  <p className="text-meta font-semibold text-text-muted">
+                <div className="min-w-0">
+                  <p className="text-meta text-text-muted">
                     {city?.name}, {budgetLabel(g.budget).toLowerCase()},{" "}
                     {SEASON_LABELS[g.season].toLowerCase()}
                   </p>
-                  <h2 className="mt-1 text-card font-semibold">
+                  <h2 className="mt-0.5 text-card font-semibold tracking-tight">
                     <Link
                       href={`/guides/${g.slug}` as Route}
-                      className="after:absolute after:inset-0 hover:underline"
+                      className="group-hover:underline after:absolute after:inset-0"
                     >
                       {g.title}
                     </Link>
                   </h2>
-                  <p className="mt-2 text-body text-text-muted">{g.summary}</p>
+                  <p className="mt-1 text-meta text-text-muted">{g.summary}</p>
+                  {hero && (
+                    <PhotoCredit photo={hero} className="relative z-10 mt-2 text-text-muted" />
+                  )}
                 </div>
               </li>
             );

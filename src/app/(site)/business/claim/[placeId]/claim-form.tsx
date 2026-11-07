@@ -32,10 +32,7 @@ export function ClaimForm({ placeId }: { placeId: string }) {
     <form action={action} className="grid gap-6">
       <input type="hidden" name="placeId" value={placeId} />
       {state.status === "error" && state.message && (
-        <p
-          role="alert"
-          className="rounded-2xl px-4 py-3 text-body font-semibold text-danger glass-strong"
-        >
+        <p role="alert" className="rounded-card px-4 py-3 text-body font-semibold text-danger card">
           {state.message}
         </p>
       )}

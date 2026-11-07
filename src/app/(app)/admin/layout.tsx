@@ -21,7 +21,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
       : []),
   ];
   return (
-    <div className="mx-auto max-w-4xl px-5 pt-4 sm:px-8 lg:pt-8">
+    <div className="page-frame reading pt-8">
       <p className="mb-3 text-meta font-semibold text-primary-text">CityRoots admin</p>
       <AdminNav items={items} />
       <div className="mt-6">{children}</div>

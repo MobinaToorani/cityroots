@@ -38,11 +38,11 @@ export function SaveButton({ placeId, placeName, variant = "icon", className }: 
       aria-pressed={saved}
       aria-label={variant === "icon" ? `Save ${placeName}` : undefined}
       className={cn(
-        "motion-press relative z-10 inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors duration-200",
+        "motion-press relative z-10 inline-flex items-center justify-center gap-2 rounded-control font-semibold transition-colors duration-200",
         variant === "icon"
           ? "size-10 text-text-muted hover:bg-bg hover:text-text"
           : "h-11 border border-divider bg-surface-solid px-5 text-body hover:border-text-muted/50",
-        saved && "text-[#c2453f] hover:text-[#c2453f]",
+        saved && "text-heart hover:text-heart",
         className,
       )}
     >

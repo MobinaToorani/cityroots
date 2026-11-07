@@ -87,7 +87,7 @@ test.describe("without JavaScript", () => {
   test.use({ javaScriptEnabled: false });
 
   test("explorer filters, search, and load more all work", async ({ page }) => {
-    await page.goto("/explore?city=newmarket");
+    await page.goto("/explore?city=toronto");
     await expect(page.locator("main article")).toHaveCount(24);
     await page.getByRole("button", { name: /Show \d+ more/ }).click();
     await expect(page).toHaveURL(/page=2/);
@@ -119,6 +119,7 @@ test.describe("place detail", () => {
       .locator("#picks ~ * article a, section[aria-labelledby=picks] article a")
       .first()
       .click();
+    await page.getByRole("dialog").getByRole("link", { name: "See full details" }).click();
     await expect(page).toHaveURL(/\/places\/[0-9a-f-]{36}$/);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await expect(

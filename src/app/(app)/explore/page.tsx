@@ -53,9 +53,7 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
   const city = cities.find((c) => c.slug === state.city) ?? null;
 
   const header = (
-    <h1 className="mb-4 text-section font-semibold tracking-tight">
-      {city ? `Things to do in ${city.name}` : "Things to do"}
-    </h1>
+    <h1 className="mb-4 page-title">{city ? `Things to do in ${city.name}` : "Things to do"}</h1>
   );
 
   const results = (
@@ -107,7 +105,7 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
     <ExplorerProvider>
       <RememberCity slug={state.city} clearWhenEmpty />
       {isMap ? (
-        <div className="mx-auto max-w-[1600px] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-6 lg:px-6 lg:pt-6">
+        <div className="lg:page-frame lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-6 lg:px-8 lg:pt-8">
           <ResultsSheet>
             {header}
             <div className="relative z-20">
@@ -120,7 +118,7 @@ export default async function ExplorePage(props: PageProps<"/explore">) {
           </div>
         </div>
       ) : (
-        <div className="mx-auto max-w-[1400px] px-4 pt-6 sm:px-6">
+        <div className="page-frame pt-8">
           {header}
           {/* Above the result cards, so an open filter menu is never painted under them. */}
           <div className="relative z-20 mb-5">

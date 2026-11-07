@@ -7,9 +7,18 @@ import { toast } from "@/components/ui/toaster";
 import { logger } from "@/lib/logger";
 
 /** The phone's own share sheet where there is one, otherwise copies the link. */
-export function ShareButton({ title, label = "Share" }: { title: string; label?: string }) {
+export function ShareButton({
+  title,
+  label = "Share",
+  path,
+}: {
+  title: string;
+  label?: string;
+  /** What to share, when it is not the page this button is on. */
+  path?: string;
+}) {
   async function onClick() {
-    const url = window.location.href;
+    const url = path ? new URL(path, window.location.origin).href : window.location.href;
     if (navigator.share) {
       try {
         await navigator.share({ title, url });

@@ -30,7 +30,7 @@ export async function listLiveCities(): Promise<CitySummary[]> {
       .leftJoin(places, eq(places.cityId, cities.id))
       .where(eq(cities.status, "live"))
       .groupBy(cities.id)
-      .orderBy(sql`count(${places.id}) desc`, asc(cities.name));
+      .orderBy(asc(cities.name));
   } catch (cause) {
     throw new DataError("Could not load cities", { cause });
   }

@@ -44,10 +44,7 @@ export function PlaceEditForm({
     <form action={formAction} className="grid gap-4">
       <input type="hidden" name="submissionId" value={submissionId} />
       {state.status === "error" && state.message && (
-        <p
-          role="alert"
-          className="rounded-2xl px-4 py-3 text-body font-semibold text-danger glass-strong"
-        >
+        <p role="alert" className="rounded-card px-4 py-3 text-body font-semibold text-danger card">
           {state.message}
         </p>
       )}
@@ -59,7 +56,7 @@ export function PlaceEditForm({
         defaultValue={v.name}
         error={e.name}
       />
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
         <SelectField
           name="citySlug"
           label="City"
@@ -120,7 +117,7 @@ export function PlaceEditForm({
         defaultValue={v.description}
         error={e.description}
       />
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
         <TextField
           name="neighborhood"
           label="Neighborhood"
@@ -144,7 +141,7 @@ export function PlaceEditForm({
         defaultValue={v.hoursText}
         error={e.hoursText}
       />
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2">
         <TextField
           name="sourceUrl"
           type="url"

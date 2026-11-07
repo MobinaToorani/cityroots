@@ -18,6 +18,7 @@ import {
   renameCollectionAction,
   setCollectionVisibilityAction,
 } from "../actions";
+import { PlaceLink } from "@/components/features/place-link";
 
 export async function generateMetadata(props: PageProps<"/collections/[id]">): Promise<Metadata> {
   const { id } = await props.params;
@@ -40,13 +41,13 @@ export default async function CollectionPage(props: PageProps<"/collections/[id]
 
 function PublicView({ collection }: { collection: CollectionDetail }) {
   return (
-    <div className="mx-auto max-w-[1100px] px-5 pt-4 sm:px-8 lg:pt-8">
+    <div className="page-frame pt-8">
       <p className="text-meta font-semibold text-primary-text">
         A collection by {collection.ownerName ?? "a CityRoots member"}
       </p>
-      <h1 className="mt-1 text-section font-semibold tracking-tight">{collection.title}</h1>
+      <h1 className="mt-1 page-title">{collection.title}</h1>
       {collection.items.length > 0 ? (
-        <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-6 grid grid-cols-1 gap-3 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
           {collection.items.map(({ place, note }) => (
             <li key={place.id} className="grid gap-2">
               <PlaceCard place={place} showCity />
@@ -83,7 +84,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
   const shareUrl = absoluteUrl(`/collections/${collection.id}`);
   const last = collection.items.length - 1;
   return (
-    <div className="mx-auto max-w-3xl px-5 pt-4 sm:px-8 lg:pt-8">
+    <div className="page-frame reading pt-8">
       <Link
         href="/collections"
         className="mb-5 inline-flex items-center gap-1.5 text-meta font-semibold text-text-muted quiet-link"
@@ -91,7 +92,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
         <Icon icon={ArrowLeft} size={16} />
         All collections
       </Link>
-      <h1 className="text-section font-semibold tracking-tight">{collection.title}</h1>
+      <h1 className="page-title">{collection.title}</h1>
       <p className="mt-1 flex items-center gap-3 text-meta text-text-muted">
         <span>
           {collection.items.length} {collection.items.length === 1 ? "place" : "places"}
@@ -114,9 +115,9 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
                       <CostBadge band={place.costBand} />
                     </div>
                     <h2 className="mt-2 text-card font-semibold">
-                      <Link href={`/places/${place.id}`} className="quiet-link">
+                      <PlaceLink placeId={place.id} className="quiet-link">
                         {place.name}
-                      </Link>
+                      </PlaceLink>
                     </h2>
                     <p className="text-meta text-text-muted">
                       {[place.neighborhood, place.cityName].filter(Boolean).join(", ")}
@@ -218,7 +219,7 @@ function OwnerView({ collection }: { collection: CollectionDetail }) {
                   id="share-url"
                   readOnly
                   value={shareUrl}
-                  className="h-11 rounded-full border border-divider bg-surface-solid px-4 text-body"
+                  className="h-11 rounded-control border border-divider bg-surface-solid px-4 text-body"
                 />
               </div>
             )}
@@ -262,7 +263,7 @@ function IconButton({
       value={intent}
       aria-label={label}
       disabled={disabled}
-      className="grid size-9 place-items-center rounded-full text-text-muted transition-colors hover:bg-divider/60 hover:text-text disabled:opacity-35"
+      className="grid size-9 place-items-center rounded-control text-text-muted transition-colors hover:bg-divider/60 hover:text-text disabled:opacity-35"
     >
       <Icon icon={icon} size={16} />
     </button>
