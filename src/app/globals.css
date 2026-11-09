@@ -2,7 +2,7 @@
 
 /*
  * CityRoots design tokens.
- * Light values are the default; dark values follow the OS setting.
+ * Light only, on warm paper rather than stark white (see DECISIONS.md, "Light only").
  * Text tokens are tuned to keep 4.5:1 on glass with a black photo behind it
  * (see DECISIONS.md, "Contrast on glass").
  * Category colors share one lightness per theme, with evenly spaced hues. Green,
@@ -14,26 +14,28 @@
   --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
 
-  --color-bg: #f5f6f7;
-  --color-surface: rgba(255, 255, 255, 0.72);
-  --color-surface-strong: rgba(255, 255, 255, 0.88);
-  --color-surface-solid: #ffffff;
-  --color-border-glass: rgba(255, 255, 255, 0.45);
-  --color-divider: #dfe3e8;
-  --color-text: #12161c;
-  --color-text-muted: #525a65;
+  --color-bg: #f7f4ef;
+  --color-surface: rgba(255, 253, 249, 0.74);
+  --color-surface-strong: rgba(255, 253, 249, 0.9);
+  --color-surface-solid: #fffdf9;
+  --color-border-glass: rgba(255, 253, 249, 0.5);
+  --color-divider: #e8e2d8;
+  --color-text: #1c1b18;
+  --color-text-muted: #5b564e;
   --color-primary: #17456e;
   --color-primary-hover: #123858;
   --color-primary-text: #17456e;
   --color-accent: #2f6a9a;
   --color-free: #186b45;
   --color-free-soft: rgba(24, 107, 69, 0.12);
-  --color-pick: #7d5e07;
-  --color-pick-soft: rgba(125, 94, 7, 0.12);
-  --color-ink: #12161c;
-  --color-sand: #efe9e0;
-  --color-sand-deep: #e4dccf;
-  --color-on-ink: #ffffff;
+  --color-pick: #765804;
+  --color-pick-soft: rgba(118, 88, 4, 0.12);
+  --color-ink: #1f2226;
+  /* Deep lake: the one dark field (footer, feature cards), kin to the brand blue. */
+  --color-deep: #1a3247;
+  --color-sand: #f0e9de;
+  --color-sand-deep: #e6ddcf;
+  --color-on-ink: #fffdf9;
   --color-focus: #17456e;
   --color-danger: #a8322c;
   --color-heart: #a8353e;
@@ -55,9 +57,11 @@
   --radius-card: 12px;
   --radius-modal: 16px;
 
-  --shadow-glass: 0 8px 32px rgba(18, 22, 28, 0.12);
-  --shadow-card: 0 1px 2px rgba(18, 22, 28, 0.05);
-  --shadow-lift: 0 10px 28px rgba(18, 22, 28, 0.12);
+  /* Shadows are tinted warm so they sit on the paper instead of greying it. */
+  --shadow-glass: 0 8px 32px rgba(58, 44, 24, 0.1);
+  --shadow-card: 0 1px 2px rgba(58, 44, 24, 0.04), 0 2px 8px rgba(58, 44, 24, 0.03);
+  --shadow-lift: 0 2px 4px rgba(58, 44, 24, 0.04), 0 14px 32px -6px rgba(58, 44, 24, 0.14);
+  --shadow-control: 0 1px 2px rgba(58, 44, 24, 0.06);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -80,53 +84,14 @@
   --text-meta--line-height: 1.45;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0e1319;
-    --color-surface: rgba(27, 35, 46, 0.55);
-    --color-surface-strong: rgba(27, 35, 46, 0.86);
-    --color-surface-solid: #171e27;
-    --color-border-glass: rgba(255, 255, 255, 0.08);
-    --color-divider: #27313d;
-    --color-text: #e9edf2;
-    --color-text-muted: #b9c1cc;
-    --color-primary-text: #8fc1ea;
-    --color-accent: #8fc1ea;
-    --color-free: #76d19e;
-    --color-free-soft: rgba(118, 209, 158, 0.14);
-    --color-pick: #edc56e;
-    --color-pick-soft: rgba(237, 197, 110, 0.14);
-    --color-ink: #e9edf2;
-    --color-sand: #1a1815;
-    --color-sand-deep: #24211c;
-    --color-on-ink: #0e1319;
-    --color-focus: #8fc1ea;
-    --color-danger: #f08a80;
-    --color-heart: #fb9797;
-    --color-cat-physical: #78dcd2;
-    --color-cat-mental: #c4bfff;
-    --color-cat-social: #a2cbfe;
-    --color-cat-financial: #c9ce85;
-    --color-cat-arts: #e2b4f0;
-    --color-cat-dance-music: #feaeb7;
-    --color-cat-food: #fdb397;
-    --color-cat-cafes: #f1bc83;
-    --color-cat-thrifting: #7dd5f4;
-    --color-cat-volunteer: #a7d79c;
-    --color-cat-events: #f4afd6;
-    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-lift: 0 14px 40px rgba(0, 0, 0, 0.5);
-  }
-}
-
 @layer base {
   :root {
-    color-scheme: light dark;
+    color-scheme: light;
   }
 
   html {
     -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
   }
 
@@ -245,6 +210,39 @@
   background: var(--color-surface-solid);
   border: 1px solid var(--color-divider);
   box-shadow: var(--shadow-card);
+}
+
+/* A whole-card link rises a hair on hover; the warm shadow does most of the work. */
+.motion-lift {
+  transition:
+    transform 320ms var(--ease-out-expo),
+    box-shadow 320ms var(--ease-out-expo),
+    border-color 320ms var(--ease-out-expo),
+    background-color 320ms var(--ease-out-expo);
+}
+
+.motion-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.motion-lift:active {
+  transform: translateY(-1px);
+}
+
+/* A photo inside a hovered card drifts in slightly. Put on the photo's clipping box. */
+.photo-zoom img {
+  transition: transform 700ms var(--ease-out-expo);
+}
+
+.group:hover .photo-zoom img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .photo-zoom img {
+    transform: none;
+  }
 }
 
 @utility quiet-link {
@@ -396,8 +394,23 @@
   animation: heart-pop 260ms var(--ease-out-expo);
 }
 
-/* Menus and toasts arrive with a short rise. */
-details[open] > .menu-panel,
+/* Menus drop open from their button; toasts arrive with a short rise. */
+@keyframes menu-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+details[open] > .menu-panel {
+  transform-origin: top;
+  animation: menu-pop 200ms var(--ease-out-expo) both;
+}
+
 .toast {
   animation: sheet-up 160ms var(--ease-out-expo) both;
 }

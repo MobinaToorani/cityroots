@@ -1,10 +1,7 @@
 import { CATEGORIES } from "@/lib/domain/categories";
 
 /** OpenFreeMap: free vector tiles with no API key or billing (see DECISIONS.md). */
-export const MAP_STYLES = {
-  light: "https://tiles.openfreemap.org/styles/positron",
-  dark: "https://tiles.openfreemap.org/styles/dark",
-} as const;
+export const MAP_STYLE = "https://tiles.openfreemap.org/styles/positron";
 
 export const MAP_FONT = ["Noto Sans Bold"];
 

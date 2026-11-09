@@ -40,8 +40,8 @@ export function SaveButton({ placeId, placeName, variant = "icon", className }: 
       className={cn(
         "motion-press touch-target relative z-10 inline-flex items-center justify-center gap-2 rounded-control font-semibold transition-colors duration-200",
         variant === "icon"
-          ? "size-10 text-text-muted hover:bg-bg hover:text-text"
-          : "h-11 border border-divider bg-surface-solid px-5 text-body hover:border-text-muted/50",
+          ? "size-10 text-text-muted hover:bg-sand hover:text-heart"
+          : "h-11 border border-divider bg-surface-solid px-5 text-body hover:border-text-muted/40 hover:bg-sand/60",
         saved && "text-heart hover:text-heart",
         className,
       )}

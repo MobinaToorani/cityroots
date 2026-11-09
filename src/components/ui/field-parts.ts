@@ -3,9 +3,11 @@ import { cn } from "@/lib/cn";
 /** Shared styling and aria wiring for form fields. */
 export function fieldControlClasses(error?: string, extra?: string) {
   return cn(
-    "peer w-full rounded-control border bg-surface-solid px-4 text-body text-text transition-colors outline-none",
-    "focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus",
-    error ? "border-danger" : "border-divider hover:border-text-muted",
+    "peer w-full rounded-control border bg-surface-solid px-4 text-body text-text shadow-[var(--shadow-control)] transition-[border-color,box-shadow] duration-200 outline-none",
+    "focus-visible:outline-none focus-visible:ring-4",
+    error
+      ? "border-danger focus-visible:ring-danger/15"
+      : "border-divider hover:border-text-muted/60 focus-visible:border-primary focus-visible:ring-primary/15",
     extra,
   );
 }

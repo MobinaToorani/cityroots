@@ -3,9 +3,7 @@ import { describe, expect, it } from "vitest";
 import { CATEGORIES } from "@/lib/domain/categories";
 
 const css = readFileSync("src/app/globals.css", "utf8");
-const darkStart = css.indexOf("@media (prefers-color-scheme: dark)");
-const light = css.slice(0, darkStart);
-const dark = css.slice(darkStart, css.indexOf("@layer base"));
+const light = css.slice(0, css.indexOf("@layer base"));
 
 function token(block: string, name: string): string {
   const match = new RegExp(`--color-${name}: (#[0-9a-f]{6});`).exec(block);
@@ -47,22 +45,36 @@ const hueGap = (a: number, b: number) => Math.min(Math.abs(a - b), 360 - Math.ab
 const slugs = CATEGORIES.map((c) => c.slug);
 
 describe("palette", () => {
-  it("keeps category colors readable on every surface, in both themes", () => {
+  it("keeps category colors readable on every surface", () => {
     for (const slug of slugs) {
-      const inLight = token(light, `cat-${slug}`);
-      const inDark = token(dark, `cat-${slug}`);
-      expect(contrast(inLight, token(light, "bg")), slug).toBeGreaterThanOrEqual(4.5);
-      expect(contrast(inLight, token(light, "surface-solid")), slug).toBeGreaterThanOrEqual(4.5);
-      expect(contrast(inDark, token(dark, "bg")), slug).toBeGreaterThanOrEqual(4.5);
-      expect(contrast(inDark, token(dark, "surface-solid")), slug).toBeGreaterThanOrEqual(4.5);
+      const colour = token(light, `cat-${slug}`);
+      for (const surface of ["bg", "surface-solid", "sand"]) {
+        expect(
+          contrast(colour, token(light, surface)),
+          `${slug} on ${surface}`,
+        ).toBeGreaterThanOrEqual(4.5);
+      }
     }
   });
 
-  it("gives the categories one lightness, so no tile shouts over the others", () => {
-    for (const block of [light, dark]) {
-      const values = slugs.map((slug) => oklch(token(block, `cat-${slug}`)).lightness);
-      expect(Math.max(...values) - Math.min(...values)).toBeLessThan(0.02);
+  it("keeps body and muted text readable on paper, cards, and sand", () => {
+    for (const text of ["text", "text-muted", "primary-text", "free", "pick", "danger"]) {
+      for (const surface of ["bg", "surface-solid", "sand", "sand-deep"]) {
+        expect(
+          contrast(token(light, text), token(light, surface)),
+          `${text} on ${surface}`,
+        ).toBeGreaterThanOrEqual(4.5);
+      }
     }
+  });
+
+  it("keeps white text readable on the deep field", () => {
+    expect(contrast("#ffffff", token(light, "deep"))).toBeGreaterThanOrEqual(7);
+  });
+
+  it("gives the categories one lightness, so no tile shouts over the others", () => {
+    const values = slugs.map((slug) => oklch(token(light, `cat-${slug}`)).lightness);
+    expect(Math.max(...values) - Math.min(...values)).toBeLessThan(0.02);
   });
 
   it("keeps categories apart from each other", () => {

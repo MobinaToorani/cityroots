@@ -39,7 +39,7 @@ export function EventRow({
     </>
   );
   return (
-    <article className="group @container relative">
+    <article className="group @container relative isolate before:absolute before:-inset-x-3 before:inset-y-0 before:-z-10 before:rounded-control before:transition-colors before:duration-200 hover:before:bg-sand/60">
       <div className="grid grid-cols-[5.5rem_minmax(0,1fr)_auto] items-baseline gap-x-3 py-3 @3xl:grid-cols-[6.5rem_minmax(0,3fr)_minmax(0,2fr)_5.5rem] @3xl:gap-x-6">
         <p className="text-meta font-semibold">
           {when}

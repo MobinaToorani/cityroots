@@ -26,7 +26,9 @@ export function SegmentedLinks({ label, items, className }: SegmentedLinksProps)
           scroll={false}
           className={cn(
             "touch-target relative inline-flex h-8 items-center rounded-control px-4 text-meta font-semibold transition-colors duration-200",
-            item.active ? "bg-ink text-on-ink" : "text-text-muted hover:text-text",
+            item.active
+              ? "bg-ink text-on-ink shadow-[var(--shadow-control)]"
+              : "text-text-muted hover:bg-sand/60 hover:text-text",
           )}
         >
           {item.label}

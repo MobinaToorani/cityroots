@@ -72,7 +72,7 @@ Month-precision events always display as "Usually in June" or "Usually May to Oc
 
 **Hero text sits on a scrim, not glass.** Headline text on photos sits over a black gradient of at least 60% where the text is, which keeps white text at 7:1 or higher over any photo.
 
-**Dark mode follows the OS.** There is no toggle yet, since the spec does not ask for one. In dark mode, active controls invert (light pill, dark text) rather than staying matte black on a near-black background, where the active state would disappear.
+**Light only (superseded the dark theme in November 2026).** See "Light only, on warm paper" below.
 
 **Theme tokens are always emitted (`@theme static`).** Category accents are referenced from inline styles, which Tailwind cannot see, so without `static` it dropped them.
 
@@ -492,7 +492,7 @@ The owner asked for a new palette, fonts, and theme, without naming a direction.
 
 **Category colours keep their hues and gain chroma,** since they now cover large areas. `tests/unit/palette.test.ts` still holds them to one lightness per theme, the hue gaps, and AA.
 
-**The theme still follows the device.** A manual light and dark switch needs client script, and Explore has about 1 KB of budget left.
+**The theme still follows the device.** Superseded: the site is light only now (see "Light only, on warm paper").
 
 **No site-wide tabular numbers.** Schibsted Grotesk's tabular setting also widens commas, periods, and colons, which put visible gaps before punctuation in all running text.
 
@@ -517,3 +517,13 @@ The owner shared a reference layout (a city portal shot) and asked for the home 
 - This week as ticket rows on sand, guides as a 2x2 list with round photos, and the sample day as a dark card beside the plan.
 - Site footer is dark in both themes, with a suggest-a-place card, link columns, and a large wordmark.
 - The rounded "see all" links (`PillLink`) and round arrows (`CircleArrow`) come from the reference. Use them for section-level moves, not as status badges.
+
+## Light only, on warm paper (November 2026)
+
+The owner said the dark-mode colours did not work together and asked for light mode only, but "not a jarring light", with every component as smooth and interactive as it can be.
+
+- **No dark theme.** The `prefers-color-scheme: dark` block is gone, `color-scheme` is `light`, the map always uses Positron, and `tests/unit/palette.test.ts` checks light tokens only (now including text on sand and white on `deep`).
+- **Warm paper instead of cool white.** Page `#f7f4ef`, cards `#fffdf9`, warm dividers and text, so the page and the sand bands read as one family rather than grey beside beige. Lake blue stays the brand; Local pick amber darkened a step to keep AA on `sand-deep`.
+- **One dark field, and it is blue.** The footer and the sample-day card use `--color-deep` (`#1a3247`, deep lake) instead of near-black, so the darkest colour on the site is kin to the brand blue. Map clusters use the brand blue too.
+- **Shadows are tinted warm** (`--shadow-card`, `--shadow-lift`, new `--shadow-control`) so they don't grey the paper.
+- **Motion lives in shared pieces.** `.motion-lift` (cards rise 3px with a softer, deeper shadow) on `Card interactive`, home category cards, city links, tickets, and city prints; `.photo-zoom` lets a photo drift in on hover; menus drop open with `menu-pop`; buttons and chips hover to `sand` (secondary) or lift (primary, ink); fields get a soft focus ring with a blue border; `PillLink` fills with ink on hover and `CircleArrow` turns 45 degrees. Reduced motion turns all of it off.

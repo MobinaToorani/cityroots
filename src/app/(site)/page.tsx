@@ -176,8 +176,11 @@ export default async function HomePage() {
               const image = photo(`/categories/${c.slug}.jpg`);
               const count = countOf.get(c.slug) ?? 0;
               return (
-                <li key={c.slug} className="flex gap-4 rounded-card p-3 card">
-                  <div className="relative aspect-[4/3] w-28 shrink-0 self-start overflow-hidden rounded-control bg-sand sm:w-36">
+                <li
+                  key={c.slug}
+                  className="group motion-lift flex gap-4 rounded-card p-3 card hover:border-text-muted/30"
+                >
+                  <div className="photo-zoom relative aspect-[4/3] w-28 shrink-0 self-start overflow-hidden rounded-control bg-sand sm:w-36">
                     {image && (
                       <Photo photo={image} alt="" sizes="(min-width: 640px) 144px, 112px" />
                     )}
@@ -233,9 +236,9 @@ export default async function HomePage() {
                   <li key={city.id}>
                     <Link
                       href={`/city/${city.slug}`}
-                      className="group flex items-center gap-3 rounded-card border border-divider px-3 py-2 transition-colors hover:border-text-muted sm:pl-2"
+                      className="group motion-lift flex items-center gap-3 rounded-card border border-divider bg-surface-solid px-3 py-2 hover:border-text-muted/30 sm:pl-2"
                     >
-                      <span className="hidden size-10 shrink-0 place-items-center rounded-control bg-sand text-text sm:grid">
+                      <span className="hidden size-10 shrink-0 place-items-center rounded-control bg-sand text-text transition-colors duration-300 group-hover:bg-primary group-hover:text-white sm:grid">
                         <Icon icon={MapPin} size={16} />
                       </span>
                       <span className="min-w-0 flex-1">
@@ -281,9 +284,9 @@ export default async function HomePage() {
                   return (
                     <li
                       key={event.id}
-                      className="group relative grid grid-cols-[4.5rem_minmax(0,1fr)_auto] items-center gap-3 rounded-card bg-surface-solid p-2 pr-3 shadow-[var(--shadow-card)] sm:grid-cols-[7rem_minmax(0,2fr)_8rem_minmax(0,1.3fr)_auto] sm:gap-6"
+                      className="group motion-lift relative grid grid-cols-[4.5rem_minmax(0,1fr)_auto] items-center gap-3 rounded-card bg-surface-solid p-2 pr-3 shadow-[var(--shadow-card)] sm:grid-cols-[7rem_minmax(0,2fr)_8rem_minmax(0,1.3fr)_auto] sm:gap-6"
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden rounded-control bg-sand">
+                      <div className="photo-zoom relative aspect-[4/3] overflow-hidden rounded-control bg-sand">
                         {image && <Photo photo={image} alt="" sizes="112px" />}
                       </div>
                       <div className="min-w-0">
@@ -352,7 +355,7 @@ export default async function HomePage() {
                 const image = photoOf.get(guide.city);
                 return (
                   <li key={guide.slug} className="group relative flex gap-5">
-                    <div className="relative size-20 shrink-0 overflow-hidden rounded-full bg-sand sm:size-24">
+                    <div className="photo-zoom relative size-20 shrink-0 overflow-hidden rounded-full bg-sand ring-1 ring-divider sm:size-24">
                       {image && <Photo photo={image} alt="" sizes="96px" />}
                     </div>
                     <div className="min-w-0">
@@ -385,7 +388,7 @@ export default async function HomePage() {
       {day.stops.length > 0 && (
         <section aria-labelledby="planner-title" className="pt-20 sm:pt-28">
           <Container className="grid gap-3 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">
-            <div className="flex flex-col items-center justify-center rounded-modal bg-[#12161c] px-6 py-12 text-center text-white ring-1 ring-white/10 sm:px-12 sm:py-16">
+            <div className="flex flex-col items-center justify-center rounded-modal bg-deep px-6 py-12 text-center text-white sm:px-12 sm:py-16">
               <p className="rounded-full bg-white/10 px-3 py-1 text-meta font-semibold">
                 Sample day
               </p>
@@ -487,7 +490,7 @@ function CityPrint({
     <Link
       href={`/city/${city.slug}`}
       className={cn(
-        "group relative isolate flex flex-col justify-end overflow-hidden rounded-card bg-primary p-4 text-white",
+        "group motion-lift relative isolate flex flex-col justify-end overflow-hidden rounded-card bg-primary p-4 text-white hover:z-10",
         className,
       )}
     >
@@ -495,7 +498,7 @@ function CityPrint({
         photo={city.photo}
         alt=""
         sizes={sizes}
-        className="-z-20 transition-transform duration-700 group-hover:scale-[1.03]"
+        className="-z-20 transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-105"
       />
       <span
         aria-hidden="true"
@@ -506,7 +509,7 @@ function CityPrint({
         <span className="font-display text-xl leading-tight font-medium sm:text-2xl">
           {city.name}
         </span>
-        <CircleArrow className="border-white/50 bg-black/20 group-hover:bg-white group-hover:text-[#12161c]" />
+        <CircleArrow className="border-white/50 bg-black/20 group-hover:bg-white group-hover:text-text" />
       </span>
     </Link>
   );

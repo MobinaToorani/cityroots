@@ -55,7 +55,7 @@ export function PrimaryNavLinks({ variant }: { variant: "tab" | "header" }) {
         aria-current={active ? "page" : undefined}
         className={cn(
           "inline-flex h-10 items-center rounded-control px-3.5 text-meta font-semibold transition-colors duration-200",
-          active ? "bg-ink text-on-ink" : "text-text hover:bg-divider/60",
+          active ? "bg-ink text-on-ink shadow-[var(--shadow-control)]" : "text-text hover:bg-sand",
         )}
       >
         {item.label}

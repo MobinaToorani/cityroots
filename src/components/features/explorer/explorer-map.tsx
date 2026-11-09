@@ -12,7 +12,7 @@ import {
   categoryColorExpression,
   DEFAULT_BOUNDS,
   MAP_FONT,
-  MAP_STYLES,
+  MAP_STYLE,
   roundBbox,
 } from "@/lib/map/config";
 
@@ -82,10 +82,9 @@ export default function ExplorerMap({
 
   useEffect(() => {
     if (!container.current) return;
-    const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const map = new maplibregl.Map({
       container: container.current,
-      style: dark ? MAP_STYLES.dark : MAP_STYLES.light,
+      style: MAP_STYLE,
       bounds: initialBbox
         ? [
             [initialBbox[0], initialBbox[1]],
@@ -110,8 +109,8 @@ export default function ExplorerMap({
         clusterRadius: 44,
         clusterMaxZoom: 13,
       });
-      const ink = dark ? "#E9EDF2" : "#12161c";
-      const onInk = dark ? "#0E1319" : "#FFFFFF";
+      const ink = "#17456e";
+      const onInk = "#fffdf9";
       map.addLayer({
         id: "clusters",
         type: "circle",
@@ -121,7 +120,7 @@ export default function ExplorerMap({
           "circle-color": ink,
           "circle-radius": ["step", ["get", "point_count"], 16, 10, 20, 40, 26],
           "circle-stroke-width": 3,
-          "circle-stroke-color": dark ? "rgba(12,18,14,0.6)" : "rgba(255,255,255,0.7)",
+          "circle-stroke-color": "rgba(255,253,249,0.75)",
         },
       });
       map.addLayer({

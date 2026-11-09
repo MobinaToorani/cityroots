@@ -38,7 +38,7 @@ export function PaletteTrigger({
       className={cn(
         "motion-press touch-target relative inline-flex h-10 items-center gap-2 rounded-control text-meta font-semibold text-text-muted hover:text-text",
         compact
-          ? "w-10 justify-center hover:bg-divider/60"
+          ? "w-10 justify-center hover:bg-sand"
           : "w-full border border-divider bg-surface-solid/60 px-3.5",
         className,
       )}

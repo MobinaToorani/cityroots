@@ -115,7 +115,7 @@ export function PlacePreviewPanel({ placeId }: { placeId: string }) {
             <Link
               href={`/places/${placeId}`}
               prefetch={false}
-              className="motion-press flex h-11 items-center justify-center gap-1.5 rounded-control font-semibold text-primary-text hover:bg-bg"
+              className="motion-press flex h-11 items-center justify-center gap-1.5 rounded-control font-semibold text-primary-text transition-colors hover:bg-sand/60"
             >
               See full details
               <Icon icon={ArrowRight} size={16} />

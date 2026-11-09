@@ -22,8 +22,7 @@ export function Card<T extends ElementType = "div">({
       className={cn(
         overPhoto ? "glass-strong" : "card",
         "rounded-card",
-        interactive &&
-          "transition-[box-shadow,border-color] duration-200 ease-[var(--ease-out-expo)] hover:border-text-muted/40 hover:shadow-[var(--shadow-lift)]",
+        interactive && "motion-lift hover:border-text-muted/30",
         className,
       )}
       {...props}

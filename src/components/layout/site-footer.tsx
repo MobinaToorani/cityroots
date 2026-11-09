@@ -36,23 +36,23 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
 ];
 
 /**
- * Dark in both themes, so the page ends firmly. Fixed colours rather than tokens,
- * because the ink token flips to light in dark mode.
+ * Deep lake blue, so the page ends firmly without dropping to black against the
+ * warm paper.
  */
 export function SiteFooter() {
   return (
-    <footer className="mt-24 bg-[#0b0f14] pb-24 text-white sm:mt-32 lg:pb-0">
+    <footer className="mt-24 bg-deep pb-24 text-white sm:mt-32 lg:pb-0">
       <div className="page-frame pt-12 sm:pt-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-          <div className="max-w-sm rounded-card bg-white p-5 text-[#12161c]">
+          <div className="max-w-sm rounded-card bg-surface-solid p-5 text-text shadow-[var(--shadow-lift)]">
             <p className="font-semibold tracking-tight">Know a free spot we&apos;re missing?</p>
-            <p className="mt-1 text-meta text-[#525a65]">
+            <p className="mt-1 text-meta text-text-muted">
               Tell us and we&apos;ll check it. No ads, and nobody pays for placement.
             </p>
             <Link
               href="/submit"
               prefetch={false}
-              className="touch-target relative mt-4 inline-flex h-9 items-center gap-1.5 rounded-full border border-[#12161c]/20 px-4 text-meta font-semibold hover:border-[#12161c]"
+              className="touch-target relative mt-4 inline-flex h-9 items-center gap-1.5 rounded-full border border-text/20 px-4 text-meta font-semibold transition-colors duration-200 hover:border-text hover:bg-text hover:text-surface-solid"
             >
               Suggest a place
               <Icon icon={ArrowUpRight} size={16} />
@@ -68,7 +68,7 @@ export function SiteFooter() {
                     .map((l) => (
                       <li key={l.href}>
                         <Link
-                          className="touch-target relative text-white/90 hover:text-white hover:underline"
+                          className="touch-target relative text-white/85 transition-colors duration-200 hover:text-white hover:underline"
                           href={l.href}
                           prefetch={false}
                         >
@@ -89,7 +89,7 @@ export function SiteFooter() {
           className="mt-14 flex items-center gap-[0.18em] text-[clamp(3.5rem,1rem+12vw,11rem)] leading-none font-medium tracking-tight sm:mt-20"
         >
           <LogoMark className="size-[0.8em] shrink-0" />
-          <span className="font-display text-[#f4efe6]">CityRoots</span>
+          <span className="font-display text-sand">CityRoots</span>
         </Link>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-white/15 py-6 text-meta text-white/65">

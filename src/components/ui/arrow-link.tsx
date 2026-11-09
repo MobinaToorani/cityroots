@@ -11,7 +11,7 @@ export function CircleArrow({ className }: { className?: string }) {
     <span
       aria-hidden="true"
       className={cn(
-        "grid size-8 shrink-0 place-items-center rounded-full border border-current/25 transition-colors",
+        "grid size-8 shrink-0 place-items-center rounded-full border border-current/25 transition-[background-color,color,border-color,transform] duration-300 ease-[var(--ease-out-expo)] group-hover:rotate-45",
         className,
       )}
     >
@@ -34,7 +34,7 @@ export function PillLink({
     <Link
       href={href}
       className={cn(
-        "touch-target relative inline-flex h-9 items-center gap-1.5 rounded-full border border-divider bg-surface-solid px-4 text-meta font-semibold whitespace-nowrap transition-colors hover:border-text-muted",
+        "touch-target relative inline-flex h-9 items-center gap-1.5 rounded-full border border-divider bg-surface-solid px-4 text-meta font-semibold whitespace-nowrap shadow-[var(--shadow-control)] transition-colors duration-200 hover:border-ink hover:bg-ink hover:text-on-ink",
         className,
       )}
     >

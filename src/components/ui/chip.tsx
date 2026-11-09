@@ -4,14 +4,14 @@ import type { Route } from "next";
 import { cn } from "@/lib/cn";
 
 const chipBase =
-  "motion-press relative touch-target inline-flex h-9 shrink-0 items-center gap-2 rounded-control px-3.5 text-meta font-medium whitespace-nowrap transition-[background-color,color,transform] duration-150 ease-[var(--ease-out-expo)] active:translate-y-px";
+  "motion-press relative touch-target inline-flex h-9 shrink-0 items-center gap-2 rounded-control px-3.5 text-meta font-medium whitespace-nowrap transition-[background-color,color,border-color,box-shadow,transform] duration-200 ease-[var(--ease-out-expo)] active:translate-y-px";
 
 export function chipClasses(active: boolean, className?: string) {
   return cn(
     chipBase,
     active
-      ? "bg-ink text-on-ink"
-      : "border border-divider bg-surface-solid text-text hover:border-text-muted/50",
+      ? "bg-ink text-on-ink shadow-[var(--shadow-control)]"
+      : "border border-divider bg-surface-solid text-text hover:border-text-muted/40 hover:bg-sand/60",
     className,
   );
 }

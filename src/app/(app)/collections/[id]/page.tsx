@@ -253,7 +253,7 @@ function IconButton({
       value={intent}
       aria-label={label}
       disabled={disabled}
-      className="grid size-9 place-items-center rounded-control text-text-muted transition-colors hover:bg-divider/60 hover:text-text disabled:opacity-35"
+      className="grid size-9 place-items-center rounded-control text-text-muted transition-colors hover:bg-sand hover:text-text disabled:opacity-35"
     >
       <Icon icon={icon} size={16} />
     </button>
